@@ -22,12 +22,15 @@ public:
 	bool RemoveStr( std::wstring &str ,std::wstring word=L"")
 	{
 		StringList::iterator iter;
+		if (m_sl.empty()){
+			return true;
+		}
 		for(iter=m_sl.begin();iter!=m_sl.end();iter++)
 		{
 			std::wstring removalStr=(*iter)+word;
 			int pos1=str.find(removalStr.c_str());
 			if (pos1!=0)	{
-				return false;
+				continue;
 			}
 			else
 			{
@@ -35,6 +38,7 @@ public:
 				return true;
 			}
 		}
+		return false;
 	}
 	StringList m_sl;
 	std::wstring m_word;

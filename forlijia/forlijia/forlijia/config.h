@@ -8,6 +8,13 @@ private:
 public:
 	static config* getinstance()
 	{
+		static bool isload=false;
+		if (!isload)
+		{	
+			TheConfig.load();
+		isload=true;
+		}
+
 		return &TheConfig;
 	}
 	void save();
