@@ -5,13 +5,13 @@ StringList::StringList(void)
 {
 }
 
-StringList::StringList( std::string context )
+StringList::StringList( std::wstring context )
 {
 	m_stringlist.clear();
-	std::stringstream oss; 
+	std::wstringstream oss; 
 	oss<<context;
-	string temp;
-	while (getline(oss,temp,';'))
+	wstring temp;
+	while (getline(oss,temp,L';'))
 	{
 		m_stringlist.push_back(temp);
 	}
@@ -20,16 +20,16 @@ StringList::StringList( std::string context )
 StringList::~StringList(void)
 {
 }
-std::string StringList::get_context()
+std::wstring StringList::get_context()
 {
-	std::ostringstream oss; 
+	std::wostringstream oss; 
 	for (iterator iter=m_stringlist.begin();iter!=m_stringlist.end();iter++)
 	{
 		oss<<(*iter)<<";";
 	}
 	return oss.str();
 }
-std::ofstream& operator<<(ofstream& out,StringList& sl)
+std::wofstream& operator<<(wofstream& out,StringList& sl)
 {
  
 	out<<sl.m_stringlist.size()<<std::endl;
@@ -41,14 +41,14 @@ std::ofstream& operator<<(ofstream& out,StringList& sl)
 	return out;
 }
 
-std::ifstream& operator>>(ifstream& in,StringList& sl)
+std::wifstream& operator>>(wifstream& in,StringList& sl)
 {
 	sl.m_stringlist.clear();
 	int size=0;
 	in>>size;
 	for (int i=0;i<size;i++)
 	{
-		std::string str;
+		std::wstring str;
 		in>>str;
 		sl.m_stringlist.push_back(str);
 	}

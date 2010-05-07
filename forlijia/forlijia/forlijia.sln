@@ -3,6 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "forlijia", "forlijia\forlijia.vcproj", "{751277DC-003C-4209-B666-EE78549392E7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcproj", "{17C91B6C-1B8A-48BB-B934-3CB80E059986}"
+	ProjectSection(ProjectDependencies) = postProject
+		{751277DC-003C-4209-B666-EE78549392E7} = {751277DC-003C-4209-B666-EE78549392E7}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -13,6 +18,10 @@ Global
 		{751277DC-003C-4209-B666-EE78549392E7}.Debug|Win32.Build.0 = Debug|Win32
 		{751277DC-003C-4209-B666-EE78549392E7}.Release|Win32.ActiveCfg = Release|Win32
 		{751277DC-003C-4209-B666-EE78549392E7}.Release|Win32.Build.0 = Release|Win32
+		{17C91B6C-1B8A-48BB-B934-3CB80E059986}.Debug|Win32.ActiveCfg = Debug|Win32
+		{17C91B6C-1B8A-48BB-B934-3CB80E059986}.Debug|Win32.Build.0 = Debug|Win32
+		{17C91B6C-1B8A-48BB-B934-3CB80E059986}.Release|Win32.ActiveCfg = Release|Win32
+		{17C91B6C-1B8A-48BB-B934-3CB80E059986}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

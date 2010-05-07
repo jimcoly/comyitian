@@ -2,7 +2,7 @@
 #include "config.h"
 #include "utitily.h"
 
-#define CONFIGFILENAME "config.txt"
+#define CONFIGFILENAME L"config.txt"
 config config::TheConfig;
 config::config(void)
 {
@@ -14,8 +14,8 @@ config::~config(void)
 
 void config::save()
 {
-	std::string filename=getrunpath()+CONFIGFILENAME;
-	std::ofstream ofs(filename.c_str());
+	std::wstring filename=getrunpath()+CONFIGFILENAME;
+	std::wofstream ofs(filename.c_str());
 	if (ofs)
 	{
 		ofs<<shenglist;
@@ -29,15 +29,15 @@ void config::save()
 	}
 	else
 	{
-		MessageBox(NULL,"saveÊ§°Ü","Ê§°Ü",MB_OK);
+		MessageBox(NULL,L"saveÊ§°Ü",L"Ê§°Ü",MB_OK);
 	}
 
 }
 
 void config::load()
 {
-	std::string filename=getrunpath()+CONFIGFILENAME;
-	std::ifstream ifs(filename.c_str());
+	std::wstring filename=getrunpath()+CONFIGFILENAME;
+	std::wifstream ifs(filename.c_str());
 	if (ifs)
 	{
 		ifs>>shenglist;

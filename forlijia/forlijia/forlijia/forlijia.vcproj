@@ -21,7 +21,7 @@
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="1"
 			UseOfMFC="1"
-			CharacterSet="0"
+			CharacterSet="1"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
@@ -194,6 +194,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\FilterWords.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\forlijia.cpp"
 				>
 			</File>
@@ -229,6 +233,10 @@
 				RelativePath=".\StringList.cpp"
 				>
 			</File>
+			<File
+				RelativePath=".\utitily .cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -237,6 +245,10 @@
 			>
 			<File
 				RelativePath=".\config.h"
+				>
+			</File>
+			<File
+				RelativePath=".\FilterWords.h"
 				>
 			</File>
 			<File
