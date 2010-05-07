@@ -43,6 +43,7 @@ std::ofstream& operator<<(ofstream& out,StringList& sl)
 
 std::ifstream& operator>>(ifstream& in,StringList& sl)
 {
+	sl.m_stringlist.clear();
 	int size=0;
 	in>>size;
 	for (int i=0;i<size;i++)

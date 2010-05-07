@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include "forlijia.h"
 #include "forlijiaDlg.h"
+#include "onfigurationDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -62,6 +63,7 @@ BEGIN_MESSAGE_MAP(CforlijiaDlg, CDialog)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	//}}AFX_MSG_MAP
+	ON_BN_CLICKED(IDC_BUTTON_CONFIG, &CforlijiaDlg::OnBnClickedButtonConfig)
 END_MESSAGE_MAP()
 
 
@@ -148,3 +150,10 @@ HCURSOR CforlijiaDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+void CforlijiaDlg::OnBnClickedButtonConfig()
+{
+	// TODO: Add your control notification handler code here
+	ConfigurationDlg dlg;
+	dlg.DoModal();
+}

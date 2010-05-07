@@ -5,19 +5,19 @@ class config
 private:
 	config(void);
 	~config(void);
-
+public:
 	static config* getinstance()
 	{
 		return &TheConfig;
 	}
-	void save(std::string filefullname);
-	void load(std::string filefullname);
+	void save();
+	void load();
 public:
 	StringList shenglist;
 	StringList shilist;
 	StringList dijishilist;
 	StringList qulist;
-	StringList qianlist;
+	StringList xianlist;
 	StringList zhenlist;
 	StringList addresskeywordlist;
 private:
