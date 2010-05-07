@@ -29,11 +29,11 @@ std::string StringList::get_context()
 	}
 	return oss.str();
 }
-std::ofstream& StringList::operator<<( ofstream& out )
+std::ofstream& operator<<(ofstream& out,StringList& sl)
 {
  
-	out<<m_stringlist.size()<<std::endl;
-	for (iterator iter=m_stringlist.begin();iter!=m_stringlist.end();iter++)
+	out<<sl.m_stringlist.size()<<std::endl;
+	for (StringList::iterator iter=sl.m_stringlist.begin();iter!=sl.m_stringlist.end();iter++)
 	{
 		out<<(*iter)<<" ";
 	}
@@ -41,7 +41,7 @@ std::ofstream& StringList::operator<<( ofstream& out )
 	return out;
 }
 
-std::ifstream& StringList::operator>>( ifstream& in )
+std::ifstream& operator>>(ifstream& in,StringList& sl)
 {
 	int size=0;
 	in>>size;
@@ -49,6 +49,7 @@ std::ifstream& StringList::operator>>( ifstream& in )
 	{
 		std::string str;
 		in>>str;
+		sl.m_stringlist.push_back(str);
 	}
 	return in;
 }

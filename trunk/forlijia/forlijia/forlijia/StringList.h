@@ -15,8 +15,8 @@ public:
 	typedef vector<std::string> stringvec;
 	typedef stringvec::iterator iterator;
 public:
-	std::ofstream& operator<<(ofstream& out);
-	std::ifstream& operator>>(ifstream& in);
+	friend std::ofstream& operator<<(ofstream& out,StringList& sl);
+	friend std::ifstream& operator>>(ifstream& in,StringList& sl);
 private:
 	stringvec m_stringlist;
 };

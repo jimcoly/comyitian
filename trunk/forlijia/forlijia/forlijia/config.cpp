@@ -1,17 +1,17 @@
 #include "StdAfx.h"
 #include "config.h"
-
+#include "utitily.h"
 config::config(void)
 {
 }
-#include "utitily.h"
+
 config::~config(void)
 {
 }
 
 void config::save( std::string filefullname )
 {
-	std::ifstream ifs(getrunpath());
+	std::ifstream ifs(getrunpath().c_str());
 	if (ifs)
 	{
 		ifs>>shenglist;
