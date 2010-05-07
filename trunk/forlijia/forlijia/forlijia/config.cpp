@@ -18,6 +18,8 @@ void config::save()
 	std::wofstream ofs(filename.c_str());
 	if (ofs)
 	{
+		ofs.imbue(locale("chs")); 
+
 		ofs<<shenglist;
 		ofs<<shilist;
 		ofs<<dijishilist;
@@ -40,6 +42,7 @@ void config::load()
 	std::wifstream ifs(filename.c_str());
 	if (ifs)
 	{
+		ifs.imbue(locale("chs")); 
 		ifs>>shenglist;
 		ifs>>shilist;
 		ifs>>dijishilist;

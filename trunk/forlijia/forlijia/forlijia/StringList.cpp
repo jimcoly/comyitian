@@ -25,7 +25,7 @@ std::wstring StringList::get_context()
 	std::wostringstream oss; 
 	for (iterator iter=m_stringlist.begin();iter!=m_stringlist.end();iter++)
 	{
-		oss<<(*iter)<<";";
+		oss<<(*iter)<<L";";
 	}
 	return oss.str();
 }
@@ -35,7 +35,7 @@ std::wofstream& operator<<(wofstream& out,StringList& sl)
 	out<<sl.m_stringlist.size()<<std::endl;
 	for (StringList::iterator iter=sl.m_stringlist.begin();iter!=sl.m_stringlist.end();iter++)
 	{
-		out<<(*iter)<<" ";
+		out<<(*iter)<<L" ";
 	}
 	out<<std::endl;
 	return out;

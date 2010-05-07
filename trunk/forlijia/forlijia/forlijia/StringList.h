@@ -21,6 +21,11 @@ public:
 	iterator end()
 	{
 		return m_stringlist.end();
+
+	}
+	bool empty()
+	{
+		return	m_stringlist.empty();
 	}
 public:
 	friend std::wofstream& operator<<(wofstream& out,StringList& sl);

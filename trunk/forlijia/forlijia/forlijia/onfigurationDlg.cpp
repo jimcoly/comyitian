@@ -40,7 +40,6 @@ BOOL ConfigurationDlg::OnInitDialog()
 
 	// TODO:  Add extra initialization here
 	config *theConfig=config::getinstance();
-	theConfig->load();
 	SetDlgItemText(IDC_EDIT_sheng,theConfig->shenglist.get_context().c_str());
 	SetDlgItemText(IDC_EDIT_shi,theConfig->shilist.get_context().c_str());
 	SetDlgItemText(IDC_EDIT_dijishi,theConfig->dijishilist.get_context().c_str());
