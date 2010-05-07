@@ -8,15 +8,23 @@ class StringList
 {
 public:
 	StringList(void);
-	StringList(std::string context);
+	StringList(std::wstring context);
 	~StringList(void);
 public:
-	std::string get_context();
-	typedef vector<std::string> stringvec;
+	std::wstring get_context();
+	typedef vector<std::wstring> stringvec;
 	typedef stringvec::iterator iterator;
+	iterator begin()
+	{
+		return m_stringlist.begin();
+	}
+	iterator end()
+	{
+		return m_stringlist.end();
+	}
 public:
-	friend std::ofstream& operator<<(ofstream& out,StringList& sl);
-	friend std::ifstream& operator>>(ifstream& in,StringList& sl);
-private:
+	friend std::wofstream& operator<<(wofstream& out,StringList& sl);
+	friend std::wifstream& operator>>(wifstream& in,StringList& sl);
+public:
 	stringvec m_stringlist;
 };
