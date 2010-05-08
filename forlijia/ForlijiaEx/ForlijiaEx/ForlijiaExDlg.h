@@ -6,6 +6,7 @@
 #include <list>
 #include <set>
 #include "..\AddressW\AddressData.h"
+#include <map>
 
 class CForlijiaExDlgAutoProxy;
 
@@ -51,4 +52,5 @@ public:
 	typedef std::set<AddressData> addressDataList;
 	addressDataList m_addressList;
 
+	afx_msg void OnBnClickedButtonsave();
 };

@@ -49,7 +49,7 @@ BOOL ConfigurationDlg::OnInitDialog()
 	SetDlgItemText(IDC_EDIT_xian,theConfig->xianlist.get_context().c_str());
 	SetDlgItemText(IDC_EDIT_zhen,theConfig->zhenlist.get_context().c_str());
 	SetDlgItemText(IDC_EDIT3_addresskeyword,theConfig->addresskeywordlist.get_context().c_str());
-
+	SetDlgItemText(IDC_EDIT_num,theConfig->numlist.get_context().c_str());
 	return TRUE;  // return TRUE unless you set the focus to a control
 	// EXCEPTION: OCX Property Pages should return FALSE
 }
@@ -59,7 +59,7 @@ void ConfigurationDlg::OnClose()
 {
 	// TODO: Add your message handler code here and/or call default
 	config *theConfig=config::getinstance();
-	CString sheng,shi,dijishi,qu,xian,zhen,addresskeword;
+	CString sheng,shi,dijishi,qu,xian,zhen,addresskeword,num;
 	GetDlgItemText(IDC_EDIT_sheng,sheng);
 	GetDlgItemText(IDC_EDIT_shi,shi);
 	GetDlgItemText(IDC_EDIT_dijishi,dijishi);
@@ -67,6 +67,7 @@ void ConfigurationDlg::OnClose()
 	GetDlgItemText(IDC_EDIT_xian,xian);
 	GetDlgItemText(IDC_EDIT_zhen,zhen);
 	GetDlgItemText(IDC_EDIT3_addresskeyword,addresskeword);
+	GetDlgItemText(IDC_EDIT_num,num);
 
 	theConfig->shenglist	=StringList(	sheng.GetString());
 	theConfig->shilist	=StringList(	shi.GetString());
@@ -74,7 +75,8 @@ void ConfigurationDlg::OnClose()
 	theConfig->qulist	=StringList(	qu.GetString());
 	theConfig->xianlist	=StringList(	xian.GetString());
 	theConfig->zhenlist	=StringList(	zhen.GetString());
-	theConfig->	   addresskeywordlist=StringList(	addresskeword.GetString());
+	theConfig->addresskeywordlist=StringList(	addresskeword.GetString());
+	theConfig->numlist=StringList(num.GetString());
 	theConfig->save();
 	CDialogEx::OnClose();
 }

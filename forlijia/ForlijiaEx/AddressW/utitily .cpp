@@ -1,6 +1,7 @@
 
-#include "utitily.h"
+
 #include "stdafx.h"
+#include "utitily.h"
 #include <string>
 std::wstring getrunpath()
 {

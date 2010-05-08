@@ -1,11 +1,11 @@
 #include "filterwords.h"
 #pragma once
 
-class FilterAddressHeader
+class FilterAddress
 {
 public:
-	FilterAddressHeader(void);
-	~FilterAddressHeader(void);
+	FilterAddress(void);
+	~FilterAddress(void);
 
 public:
 	bool process(std::wstring &str);
@@ -15,4 +15,5 @@ private:
 	FilterWords *m_quFilter;
 	FilterWords *m_xianFilter;
 	FilterWords *m_zhenFilter;
+	NumFilterWords *m_hao;
 };
