@@ -4,15 +4,15 @@
 
 #include "stdafx.h"
 #include <sstream>
+#include <fstream> 
 #include "ForlijiaEx.h"
 #include "ForlijiaExDlg.h"
 #include "DlgProxy.h"
 #include "afxdialogex.h"
 #include "ConfigurationDlg.h"
-#include "..\AddressW\utitily.h"
-#include <string>
-#include <fstream>
-#include<iostream>
+#include "..\AddressW\utitily.h" 
+#include <algorithm>
+
 
 using namespace std;
 
@@ -88,6 +88,7 @@ BEGIN_MESSAGE_MAP(CForlijiaExDlg, CDialogEx)
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BUTTON_config, &CForlijiaExDlg::OnBnClickedButtonconfig)
 	ON_BN_CLICKED(IDC_BUTTON_LOAD, &CForlijiaExDlg::OnBnClickedButtonLoad)
+	ON_BN_CLICKED(IDC_BUTTON_save, &CForlijiaExDlg::OnBnClickedButtonsave)
 END_MESSAGE_MAP()
 
 
@@ -222,25 +223,86 @@ void CForlijiaExDlg::OnBnClickedButtonconfig()
 	ConfigurationDlg dlg;
 	dlg.DoModal();
 }
+std::string WChar2Ansi( LPCWSTR pwszSrc )
+{
+	int nLen = WideCharToMultiByte(CP_ACP, 0, pwszSrc, -1, NULL, 0, NULL, NULL);
 
+	if (nLen<= 0) return std::string("");
 
+	char* pszDst = new char[nLen];
+	if (NULL == pszDst) return std::string("");
+
+	WideCharToMultiByte(CP_ACP, 0, pwszSrc, -1, pszDst, nLen, NULL, NULL);
+	pszDst[nLen -1] = 0;
+
+	std::string strTemp(pszDst);
+	delete [] pszDst;
+
+	return strTemp;
+}
+
+std::wstring Ansi2Wchar( std::string str )
+{
+	int nLen = (int)str.size(); 
+	if (nLen==0)
+	{
+		return std::wstring();
+	}
+	int nwLen = MultiByteToWideChar(CP_ACP, 0, str.c_str(), nLen, NULL, 0);
+	WCHAR *temp = new WCHAR[nwLen + 1];
+	MultiByteToWideChar(CP_ACP, 0, str.c_str(), nLen, temp, nwLen);
+	temp[nwLen] = 0;
+
+	std::wstring wStrTemp(temp);
+	delete [] temp;
+	return wStrTemp;
+}
 void CForlijiaExDlg::OnBnClickedButtonLoad()
 {
 	// TODO: Add your control notification handler code here
 	std::wstring filename=getrunpath()+DATAFILENAME;
-	std::wifstream ifs(filename.c_str());
+	std::ifstream ifs(WChar2Ansi(filename.c_str()));
 	if (ifs)
 	{
+		m_addressList.clear();
 		ifs.imbue(locale("chs")); 
-		wstring temp;
+		string temp;
 		while(getline(ifs,temp))
 		{
 			std::wstringstream ss;
-			//ss<<temp;
-			//AddressData data;
-			/*ss>>data;*/
-			m_addressList.insert(AddressData());
+			//ss.imbue(locale("chs"));
+			ss<<Ansi2Wchar(temp);
+			AddressData data;
+			ss>>data;
+			if(data.isvalid)
+			{
+			m_addressList.insert(data);
+			}
+
+
 		}
+
 		ifs.close();
 	} 
+}
+
+
+void CForlijiaExDlg::OnBnClickedButtonsave()
+{
+	// TODO: Add your control notification handler code here
+	std::wstring filename=getrunpath()+L"chengdudata.txt";
+	std::wofstream ofs(filename.c_str());
+	if (ofs)
+	{
+		ofs.imbue(locale("chs")); 
+		//for (auto iter = m_addressList.begin(); iter != m_addressList.end(); ++iter) {
+		//	ofs<<(*iter);
+		//}
+		for_each(m_addressList.begin(),m_addressList.end(),[&ofs](const AddressData &data){ofs<<data;});
+		ofs.close();
+	}
+	else
+	{
+		::MessageBox(NULL,L"saveÊ§°Ü",L"Ê§°Ü",MB_OK);
+	}
 }

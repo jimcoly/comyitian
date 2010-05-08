@@ -27,6 +27,7 @@ public:
 	StringList xianlist;
 	StringList zhenlist;
 	StringList addresskeywordlist;
+	StringList numlist;
 private:
 	static config TheConfig;
 };

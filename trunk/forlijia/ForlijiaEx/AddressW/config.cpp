@@ -27,6 +27,7 @@ void config::save()
 		ofs<<xianlist;
 		ofs<<zhenlist;
 		ofs<<addresskeywordlist;
+		ofs<<numlist;
 		ofs.close();
 	}
 	else
@@ -50,6 +51,7 @@ void config::load()
 		ifs>>xianlist;
 		ifs>>zhenlist;
 		ifs>>addresskeywordlist;
+		ifs>>numlist;
 		ifs.close();
 	} 
 }

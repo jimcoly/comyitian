@@ -2,7 +2,7 @@
 #include "FilterAddress.h"
 #include "config.h"
 
-FilterAddressHeader::FilterAddressHeader(void)
+FilterAddress::FilterAddress(void)
 {
 	config *theConfig=config::getinstance();
 	m_shengFilter=new FilterWords(theConfig->shenglist,L"省");
@@ -10,18 +10,20 @@ FilterAddressHeader::FilterAddressHeader(void)
 	m_quFilter=new FilterWords(theConfig->qulist,L"区");
 	m_xianFilter=new FilterWords(theConfig->xianlist,L"县");
 	m_zhenFilter=new FilterWords(theConfig->zhenlist,L"镇");
+	m_hao=new NumFilterWords(theConfig->numlist);
 }
 
-FilterAddressHeader::~FilterAddressHeader(void)
+FilterAddress::~FilterAddress(void)
 {
 	delete		m_shengFilter;
 	delete		m_shiFilter;
 	delete		m_quFilter;
 	delete		m_xianFilter;
 	delete		m_zhenFilter;
+	delete		m_hao;
 }
 
-bool FilterAddressHeader::process( std::wstring &str )
+bool FilterAddress::process( std::wstring &str )
 {
 	if (!m_shengFilter->process(str)){
 		return false;
@@ -35,6 +37,6 @@ bool FilterAddressHeader::process( std::wstring &str )
 		m_xianFilter->process(str);
 		m_zhenFilter->process(str);
 	}
-
+	m_hao->process(str);
 	return true;
 }
