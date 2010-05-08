@@ -1,0 +1,17 @@
+REGEDIT
+; This .REG file may be used by your SETUP program.
+;   If a SETUP program is not available, the entries below will be
+;   registered in your InitInstance automatically with a call to
+;   CWinApp::RegisterShellFileTypes and COleObjectFactory::UpdateRegistryAll.
+
+
+HKEY_CLASSES_ROOT\ForlijiaEx.Application = ForlijiaEx Application
+
+
+HKEY_CLASSES_ROOT\ForlijiaEx.Application\CLSID = {61541EFC-E048-43E7-BDAF-21B8B1BEABED}
+
+HKEY_CLASSES_ROOT\CLSID\{61541EFC-E048-43E7-BDAF-21B8B1BEABED} = ForlijiaEx Application
+HKEY_CLASSES_ROOT\CLSID\{61541EFC-E048-43E7-BDAF-21B8B1BEABED}\ProgId = ForlijiaEx.Application
+
+
+HKEY_CLASSES_ROOT\CLSID\{61541EFC-E048-43E7-BDAF-21B8B1BEABED}\LocalServer32 = ForlijiaEx.EXE

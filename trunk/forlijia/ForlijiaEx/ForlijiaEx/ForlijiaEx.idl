@@ -1,0 +1,29 @@
+// ForlijiaEx.idl : type library source for ForlijiaEx.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (ForlijiaEx.tlb).
+
+[ uuid(13302C75-C8FF-4BA3-91A1-51C93557B6AE), version(1.0) ]
+library ForlijiaEx
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	//  Primary dispatch interface for CForlijiaExDoc
+	
+	[ uuid(46362D4D-4B19-4B41-9309-A0E840F52358) ]
+	dispinterface IForlijiaEx
+	{
+		properties:
+			
+		methods:
+	};
+
+	//  Class information for CForlijiaExDoc
+	
+	[ uuid(61541EFC-E048-43E7-BDAF-21B8B1BEABED) ]
+	coclass ForlijiaEx
+	{
+		[default] dispinterface IForlijiaEx;
+	};
+};
