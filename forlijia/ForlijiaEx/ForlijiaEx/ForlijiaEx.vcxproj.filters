@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ExcelW">
+      <UniqueIdentifier>{3a0d4a79-eed9-4a04-bb83-b4b3932def70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AddressW">
+      <UniqueIdentifier>{04c5336d-6cc3-4d18-ae5b-a5bd664f1dc0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="ForlijiaEx.reg" />
+    <None Include="res\ForlijiaEx.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\ForlijiaEx.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ForlijiaEx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ForlijiaExDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgProxy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExcelW\CApplication.h">
+      <Filter>ExcelW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExcelW\CRange.h">
+      <Filter>ExcelW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExcelW\CWorkbook.h">
+      <Filter>ExcelW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExcelW\CWorkbooks.h">
+      <Filter>ExcelW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExcelW\CWorksheet.h">
+      <Filter>ExcelW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExcelW\CWorksheets.h">
+      <Filter>ExcelW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExcelW\ExcelWrapper.h">
+      <Filter>ExcelW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AddressW\AddressData.h">
+      <Filter>AddressW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AddressW\config.h">
+      <Filter>AddressW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AddressW\FilterAddress.h">
+      <Filter>AddressW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AddressW\FilterWords.h">
+      <Filter>AddressW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AddressW\StringList.h">
+      <Filter>AddressW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\AddressW\utitily.h">
+      <Filter>AddressW</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigurationDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ForlijiaEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ForlijiaExDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgProxy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExcelW\ExcelWrapper.cpp">
+      <Filter>ExcelW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AddressW\AddressData.cpp">
+      <Filter>AddressW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AddressW\config.cpp">
+      <Filter>AddressW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AddressW\FilterAddress.cpp">
+      <Filter>AddressW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AddressW\FilterWords.cpp">
+      <Filter>AddressW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AddressW\StringList.cpp">
+      <Filter>AddressW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\AddressW\utitily .cpp">
+      <Filter>AddressW</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigurationDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="ForlijiaEx.idl">
+      <Filter>Source Files</Filter>
+    </Midl>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ForlijiaEx.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
