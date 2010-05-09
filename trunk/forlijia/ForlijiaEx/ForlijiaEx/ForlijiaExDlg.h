@@ -49,8 +49,7 @@ public:
 	afx_msg void OnBnClickedButtonconfig();
 	afx_msg void OnBnClickedButtonLoad();
 public:
-	typedef std::set<AddressData> addressDataList;
-	addressDataList m_addressList;
+
 
 	afx_msg void OnBnClickedButtonsave();
 };

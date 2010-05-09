@@ -91,6 +91,12 @@
     <ClInclude Include="ConfigurationDlg.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MatchAddress.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataCenter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ForlijiaEx.cpp">
@@ -127,6 +133,12 @@
       <Filter>AddressW</Filter>
     </ClCompile>
     <ClCompile Include="ConfigurationDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MatchAddress.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataCenter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
