@@ -89,12 +89,12 @@ bool StreetData::operator!=( const StreetData& d ) const
 
 std::wostream& operator<<( wostream& output,const StreetData& ad )
 {
-	output<<ad.m_address<<L" "<<ad.m_begin<<L" "<<ad.m_end<<L" "<<ad.m_jiou<<std::endl;
+	output<<ad.m_begin<<L" "<<ad.m_end<<L" "<<ad.m_jiou<<L" "<<ad.m_address<<std::endl;
 	return output;
 }	
 std::wistream& operator>>( wistream& input,StreetData& ad )
 {
-	input>>ad.m_address>>ad.m_begin>>ad.m_end>>ad.m_jiou;
+	input>>ad.m_begin>>ad.m_end>>ad.m_jiou>>ad.m_address;
 	return input;
 }
 //////////////////////////////////////////////////////////////////////////
