@@ -5,6 +5,17 @@ using namespace std;
 class StreetData
 {	
 public:
+	StreetData(){}
+	StreetData(std::wstring address,std::wstring jiou,int begin,int end)
+		:m_address(address),m_jiou(jiou),m_begin(begin),m_end(end)
+	{
+
+	}
+	~StreetData()
+	{
+
+	}
+public:
 	bool operator>(const StreetData& d)const;
 	bool operator<(const StreetData& d)const;
 	bool operator==(const StreetData& d)const;
@@ -19,6 +30,16 @@ public:
 };
 class PortData
 {
+public:
+	PortData(){}
+	PortData(	std::wstring otherPorts,
+	std::wstring UninstallPorts,
+	std::wstring Release)
+	:m_otherPorts(otherPorts),m_UninstallPorts(UninstallPorts),m_Release(Release)
+	{
+
+	}
+	~PortData(){}
 public:
 	bool operator==(const PortData& d)const;
 	bool operator!=(const PortData& d)const;

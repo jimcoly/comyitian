@@ -7,6 +7,7 @@
 #include <set>
 #include "..\AddressW\AddressData.h"
 #include <map>
+#include "DataCenter.h"
 
 class CForlijiaExDlgAutoProxy;
 
@@ -52,4 +53,10 @@ public:
 
 
 	afx_msg void OnBnClickedButtonsave();
+	afx_msg void OnBnClickedButtonslect();
+	DataCenter m_dataCenter;
+
+	typedef std::map<StreetData,PortData> addressDataList;
+	addressDataList m_mmmaddressList;
+	addressDataList m_addaddressList;
 };

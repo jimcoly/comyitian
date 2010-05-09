@@ -12,6 +12,7 @@
 #include "ConfigurationDlg.h"
 #include "..\AddressW\utitily.h" 
 #include <algorithm>
+#include "..\ExcelW\ExcelWrapper.h"
 
 
 using namespace std;
@@ -29,13 +30,13 @@ class CAboutDlg : public CDialogEx
 public:
 	CAboutDlg();
 
-// Dialog Data
+	// Dialog Data
 	enum { IDD = IDD_ABOUTBOX };
 
-	protected:
+protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV support
 
-// Implementation
+	// Implementation
 protected:
 	DECLARE_MESSAGE_MAP()
 };
@@ -89,6 +90,7 @@ BEGIN_MESSAGE_MAP(CForlijiaExDlg, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON_config, &CForlijiaExDlg::OnBnClickedButtonconfig)
 	ON_BN_CLICKED(IDC_BUTTON_LOAD, &CForlijiaExDlg::OnBnClickedButtonLoad)
 	ON_BN_CLICKED(IDC_BUTTON_save, &CForlijiaExDlg::OnBnClickedButtonsave)
+	ON_BN_CLICKED(IDC_BUTTON_slect, &CForlijiaExDlg::OnBnClickedButtonslect)
 END_MESSAGE_MAP()
 
 
@@ -260,12 +262,72 @@ std::wstring Ansi2Wchar( std::string str )
 void CForlijiaExDlg::OnBnClickedButtonLoad()
 {
 	// TODO: Add your control notification handler code here
-
+	m_dataCenter.Load();
 }
 
 
 void CForlijiaExDlg::OnBnClickedButtonsave()
 {
 	// TODO: Add your control notification handler code here
+	for (auto iter=m_addaddressList.begin();iter!=m_addaddressList.end();iter++)
+	{
+		m_dataCenter.Insert(iter->first,iter->second);
 
+	}
+	m_dataCenter.Save();
+}
+
+
+void CForlijiaExDlg::OnBnClickedButtonslect()
+{
+	// TODO: Add your control notification handler code here
+	WCHAR Filter[]=L"excel(*.xls)|*.xls||";
+	CFileDialog dlgOpen(TRUE,0,0,OFN_HIDEREADONLY|OFN_FILEMUSTEXIST,(LPCTSTR)Filter,NULL);
+	if(dlgOpen.DoModal()==IDOK)
+	{
+		CString filePathname=dlgOpen.GetPathName();
+		ExcelWrapper::InitExcel();
+		ExcelWrapper::ShowExcel(false);
+		ExcelWrapper ew;
+		int count1=0;
+		if (ew.Open(filePathname))
+		{
+			m_mmmaddressList.clear();
+			ew.LoadSheet(1);
+			int dizhi=6;
+			int waifu=1;
+			int release=2;
+			int unrelease=3;
+			int row=ew.GetRowCount();
+			int count1=row-3;
+			for(int i=3;i<row;i++)
+			{ 
+				CString saddress,swaifu,srelease,sunrealse;
+				saddress=ew.GetCell(i,dizhi);
+				swaifu=ew.GetCell(i,waifu);
+				srelease=ew.GetCell(i,release);
+				sunrealse=ew.GetCell(i,unrelease);
+				StreetData sdata(saddress.GetString(),L"нч",0,0);
+				PortData pdata(swaifu.GetString(),sunrealse.GetString(),srelease.GetString());
+				m_mmmaddressList.insert(std::make_pair(sdata,pdata));
+				
+			}
+			ExcelWrapper::ReleaseExcel();
+		}
+
+		for (auto iter=m_mmmaddressList.begin();iter!=m_mmmaddressList.end();iter++)
+		{
+			if (m_dataCenter.check(iter->first))
+			{
+				m_addaddressList.insert(std::make_pair(iter->first,iter->second));
+			}
+			
+		}
+		SetDlgItemInt(IDC_STATIC_totalcount,count1);
+		SetDlgItemInt(IDC_STATIC_addcount,m_addaddressList.size());
+	}
+	else 
+	{
+		return ;
+	}
 }
