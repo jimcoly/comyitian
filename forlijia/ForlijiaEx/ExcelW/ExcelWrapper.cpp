@@ -147,14 +147,14 @@ bool ExcelWrapper::Open( CString fileName )
 		vFalse((short)FALSE),
 		vOpt((long)DISP_E_PARAMNOTFOUND, VT_ERROR);
 	m_Books = ExcelApp.get_Workbooks(); 
-	m_Books = m_Books.Open(fileName,vOpt,
+	m_Book = m_Books.Open(fileName,vOpt,
 		vOpt,vOpt,vOpt,vOpt,vOpt,vOpt,vOpt,vOpt,vOpt,vOpt,
 		vOpt,vOpt,vOpt);
 	if (!m_Books)
 	{
 		return false;
 	}
-	m_Sheets = ExcelApp.get_Worksheets();
+	m_Sheets = ExcelApp.get_Worksheets(); 
 	return true;
 }
 
@@ -190,7 +190,7 @@ bool ExcelWrapper::LoadSheet( int iIndex )
 int ExcelWrapper::GetRowCount()
 {
 	CRange oRange=m_Sheet.get_UsedRange();//得到使用的
-	CRange RowRange=oRange.get_Columns();//得到列
+	CRange RowRange=oRange.get_Rows();//得到列
 
 	int cout=RowRange.get_Count();//得到列数量
 	oRange.DetachDispatch();

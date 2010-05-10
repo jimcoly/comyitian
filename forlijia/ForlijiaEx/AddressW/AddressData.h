@@ -42,6 +42,10 @@ public:
 	std::wstring Release)
 	:m_otherPorts(otherPorts),m_UninstallPorts(UninstallPorts),m_Release(Release)
 	{
+		if (m_otherPorts.empty())
+		{
+			m_otherPorts=L"null";
+		}
 
 	}
 	~PortData(){}
@@ -53,14 +57,7 @@ public:
 		}
 		return false;
 	}
-	bool IsCity()
-	{
-		if (m_otherPorts==L"NULL")
-		{
-			return true;
-		}
-		return false;
-	}
+	bool IsCity();
 	bool operator==(const PortData& d)const;
 	bool operator!=(const PortData& d)const;
 	friend std::wostream&   operator<<(std::wostream&   output,const PortData& ad); 

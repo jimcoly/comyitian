@@ -13,6 +13,8 @@
 #include "..\AddressW\utitily.h" 
 #include <algorithm>
 #include "..\ExcelW\ExcelWrapper.h"
+#include "exlDistribution.h"
+#include "..\AddressW\FilterAddress.h"
 
 
 using namespace std;
@@ -279,27 +281,34 @@ void CForlijiaExDlg::OnBnClickedButtonsave()
 
 
 void CForlijiaExDlg::OnBnClickedButtonslect()
-{
+{		
+	FilterAddress fa;
 	// TODO: Add your control notification handler code here
 	WCHAR Filter[]=L"excel(*.xls)|*.xls||";
 	CFileDialog dlgOpen(TRUE,0,0,OFN_HIDEREADONLY|OFN_FILEMUSTEXIST,(LPCTSTR)Filter,NULL);
 	if(dlgOpen.DoModal()==IDOK)
 	{
 		CString filePathname=dlgOpen.GetPathName();
-		exlDistrubution ed;
+		ExlDistribution ed;
 		if (!ed.Open(filePathname.GetString()))
 		{
 			MessageBox(L"打开失败");
 		}
-		addressDataList getdataList=ed.get_data_list();
-		for (auto iter=getdataList.begin();iter!=getdataList.end();iter++)
+		addressDataList getdataList=ed.get_sep_list();
+		for (addressDataList::iterator iter=getdataList.begin();iter!=getdataList.end();iter++)
 		{
-			if (m_dataCenter.check(iter->first) &&　iter->second.IsCity())
+			std::wstring addressstr=iter->first.m_address;
+			fa.process(addressstr);
+			if (!m_dataCenter.IsOther(iter->second.m_UninstallPorts) 
+				&& !m_dataCenter.IsTiaojian(addressstr)
+				&& m_dataCenter.check(iter->first) )
 			{
-				m_addaddressList.insert(std::make_pair(iter->first,iter->second));
+				StreetData sd(addressstr);
+				m_addaddressList.insert(std::make_pair(sd,iter->second));
 			}
 		}
-		SetDlgItemInt(IDC_STATIC_totalcount,count1);
+
+		SetDlgItemInt(IDC_STATIC_totalcount,getdataList.size());
 		SetDlgItemInt(IDC_STATIC_addcount,m_addaddressList.size());
 	}
 	else 
@@ -314,7 +323,7 @@ void CForlijiaExDlg::Process()
 	if(dlgOpen.DoModal()==IDOK)
 	{
 		CString filePathname=dlgOpen.GetPathName();
-		exlDistrubution ed;
+		ExlDistribution ed;
 		if (!ed.Open(filePathname.GetString()))
 		{
 			MessageBox(L"打开失败");
