@@ -40,3 +40,19 @@ bool FilterAddress::process( std::wstring &str )
 	m_hao->process(str);
 	return true;
 }
+
+bool FilterAddress::process_get_num( std::wstring &str,int &num )
+{
+	return false;
+}
+
+bool FilterAddress::just_filter_sheng_and_Num( std::wstring &str )
+{
+	if (!m_shengFilter->process(str)){
+		return false;
+	}//省是必须的 
+
+ 
+	m_hao->process(str);
+	return true;
+}
