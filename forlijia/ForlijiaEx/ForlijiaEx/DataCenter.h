@@ -18,6 +18,8 @@ public:
 	//int check(AddressData data,AddressData *olddata);
 	bool check(StreetData sdata);
 	void Insert(StreetData sdata,PortData pdata);
+
+	PortData process(std::string address);
 public:
 	typedef std::map<StreetData,PortData> addressDataList;
 	addressDataList m_addressList;

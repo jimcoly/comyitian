@@ -11,6 +11,11 @@ public:
 	{
 
 	}
+	StreetData(std::wstring address)
+		:m_address(address),m_jiou(L"нч"),m_begin(0),m_end(0)
+	{
+
+	}
 	~StreetData()
 	{
 
@@ -41,6 +46,21 @@ public:
 	}
 	~PortData(){}
 public:
+	bool Empty(){
+		if (m_otherPorts.empty()&&m_Release.empty()&&m_UninstallPorts.empty())
+		{
+			return true;
+		}
+		return false;
+	}
+	bool IsCity()
+	{
+		if (m_otherPorts==L"NULL")
+		{
+			return true;
+		}
+		return false;
+	}
 	bool operator==(const PortData& d)const;
 	bool operator!=(const PortData& d)const;
 	friend std::wostream&   operator<<(std::wostream&   output,const PortData& ad); 

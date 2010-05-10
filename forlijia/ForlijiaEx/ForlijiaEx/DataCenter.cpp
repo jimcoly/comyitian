@@ -103,6 +103,11 @@ void DataCenter::Insert( StreetData sdata,PortData pdata )
 {
 	m_addressList.insert(std::make_pair(sdata,pdata));
 }
+
+PortData DataCenter::process( std::string address )
+{
+	
+}
 //
 //
 //

@@ -286,45 +286,51 @@ void CForlijiaExDlg::OnBnClickedButtonslect()
 	if(dlgOpen.DoModal()==IDOK)
 	{
 		CString filePathname=dlgOpen.GetPathName();
-		ExcelWrapper::InitExcel();
-		ExcelWrapper::ShowExcel(false);
-		ExcelWrapper ew;
-		int count1=0;
-		if (ew.Open(filePathname))
+		exlDistrubution ed;
+		if (!ed.Open(filePathname.GetString()))
 		{
-			m_mmmaddressList.clear();
-			ew.LoadSheet(1);
-			int dizhi=6;
-			int waifu=1;
-			int release=2;
-			int unrelease=3;
-			int row=ew.GetRowCount();
-			int count1=row-3;
-			for(int i=3;i<row;i++)
-			{ 
-				CString saddress,swaifu,srelease,sunrealse;
-				saddress=ew.GetCell(i,dizhi);
-				swaifu=ew.GetCell(i,waifu);
-				srelease=ew.GetCell(i,release);
-				sunrealse=ew.GetCell(i,unrelease);
-				StreetData sdata(saddress.GetString(),L"无",0,0);
-				PortData pdata(swaifu.GetString(),sunrealse.GetString(),srelease.GetString());
-				m_mmmaddressList.insert(std::make_pair(sdata,pdata));
-				
-			}
-			ExcelWrapper::ReleaseExcel();
+			MessageBox(L"打开失败");
 		}
-
-		for (auto iter=m_mmmaddressList.begin();iter!=m_mmmaddressList.end();iter++)
+		addressDataList getdataList=ed.get_data_list();
+		for (auto iter=getdataList.begin();iter!=getdataList.end();iter++)
 		{
-			if (m_dataCenter.check(iter->first))
+			if (m_dataCenter.check(iter->first) &&　iter->second.IsCity())
 			{
 				m_addaddressList.insert(std::make_pair(iter->first,iter->second));
 			}
-			
 		}
 		SetDlgItemInt(IDC_STATIC_totalcount,count1);
 		SetDlgItemInt(IDC_STATIC_addcount,m_addaddressList.size());
+	}
+	else 
+	{
+		return ;
+	}
+}
+void CForlijiaExDlg::Process()
+{
+	WCHAR Filter[]=L"excel(*.xls)|*.xls||";
+	CFileDialog dlgOpen(TRUE,0,0,OFN_HIDEREADONLY|OFN_FILEMUSTEXIST,(LPCTSTR)Filter,NULL);
+	if(dlgOpen.DoModal()==IDOK)
+	{
+		CString filePathname=dlgOpen.GetPathName();
+		exlDistrubution ed;
+		if (!ed.Open(filePathname.GetString()))
+		{
+			MessageBox(L"打开失败");
+		}
+		addressDataList getdataList=ed.get_data_list();
+		if (!ed.check_Port_is_empty(getdataList))
+		{
+			MessageBox(L"已经有数据");
+		}
+		else
+		{
+			for (auto iter=getdataList.begin();iter!=getdataList.end();iter++)
+			{
+
+			}
+		}
 	}
 	else 
 	{
