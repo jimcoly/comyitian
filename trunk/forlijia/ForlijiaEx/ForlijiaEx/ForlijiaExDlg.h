@@ -54,6 +54,7 @@ public:
 
 	afx_msg void OnBnClickedButtonsave();
 	afx_msg void OnBnClickedButtonslect();
+	void Process();
 	DataCenter m_dataCenter;
 
 	typedef std::map<StreetData,PortData> addressDataList;

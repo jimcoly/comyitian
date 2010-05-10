@@ -1,23 +1,25 @@
+#include "StdAfx.h"
 #include "exlDistribution.h"
-#define ADDRESSCOlUMN 6
-#define OTHERPORTCOLUMN 1
-#define RELEASECOLUMN 2
+
+#define ADDRESSCOlUMN 11
+#define OTHERPORTCOLUMN 2
+#define RELEASECOLUMN 4
 #define UNRELEASECOLMN 3
 #define SHEETNUM 1
 bool ExlDistribution::Open( std::wstring filename )
 {
 	ExcelWrapper::InitExcel();
-	ExcelWrapper::ShowExcel(false);
-	ExcelWrapper ew;
-	if(ew.Open(filename.c_str())
+	ExcelWrapper::ShowExcel(TRUE);
+
+	if(m_ew.Open(filename.c_str()))
 	{	
 		m_ew.LoadSheet(SHEETNUM); 
-		m_isopen=false;
+		m_isopen=true;
 		return true;
 	}
 	return false;
 }
-addressDataList ExlDistribution::get_data_list()
+ExlDistribution::addressDataList ExlDistribution::get_data_list()
 {
 	addressDataList datalist;
 	if (!m_isopen){
@@ -25,20 +27,39 @@ addressDataList ExlDistribution::get_data_list()
 	} 
 
 	int row=m_ew.GetRowCount(); 
-	for(int i=3;i<row+3 /*上面有三行*/;i++)
+	for(int i=3;i<row;i++)
 	{ 
 		CString saddress,swaifu,srelease,sunrealse;
 		saddress=m_ew.GetCell(i,ADDRESSCOlUMN);
 		swaifu=m_ew.GetCell(i,OTHERPORTCOLUMN);
 		srelease=m_ew.GetCell(i,RELEASECOLUMN);
-		sunrealse=m_ew.GetCell(i,SHEETNUM);
+		sunrealse=m_ew.GetCell(i,UNRELEASECOLMN);
 		StreetData sdata(saddress.GetString());//
 		PortData pdata(swaifu.GetString(),sunrealse.GetString(),srelease.GetString());
 		datalist.insert(std::make_pair(sdata,pdata));
 	}
 	return datalist;
 }
-bool ExlDistribution::set_data_port( const std::list<PortData> &pdatalist)
+ExlDistribution::addressDataList ExlDistribution::get_sep_list()
+{
+	addressDataList datalist;
+	if (!m_isopen){
+		return datalist;
+	} 
+	int row=m_ew.GetRowCount(); 
+	for(int i=1;i<row;i++)
+	{ 
+		CString saddress,swaifu,srelease,sunrealse;
+		saddress=m_ew.GetCell(i,8); 
+		sunrealse=m_ew.GetCell(i,2);
+
+		StreetData sdata(saddress.GetString());//
+		PortData pdata(swaifu.GetString(),sunrealse.GetString(),srelease.GetString());
+		datalist.insert(std::make_pair(sdata,pdata));
+	}
+	return datalist;
+}
+bool ExlDistribution::set_data_port(  std::list<PortData> &pdatalist)
 {
 	if (!m_isopen){
 		return false;
@@ -46,9 +67,10 @@ bool ExlDistribution::set_data_port( const std::list<PortData> &pdatalist)
 	int row=m_ew.GetRowCount(); 
 	if(pdatalist.size()!=row-3)
 	{
-		return false
+		return false;
 	}
-	for(int i=4,auto iter=pdatalist.begin();pdatalist.end();iter++,i++)
+	int i=4;
+	for(auto iter=pdatalist.begin();iter!=pdatalist.end();iter++,i++)
 	{ 
 		CString swaifu,srelease,sunrealse; 
 		if (iter->IsCity()){
@@ -56,13 +78,13 @@ bool ExlDistribution::set_data_port( const std::list<PortData> &pdatalist)
 		}
 		else
 		{
-			swaifu=iter->m_otherPorts;
+			swaifu=iter->m_otherPorts.c_str();
 		}
-		srelease=iter->m_Release;
-		sunrealse=iter->m_UninstallPorts
+		srelease=iter->m_Release.c_str();
+		sunrealse=iter->m_UninstallPorts.c_str();
 		m_ew.SetCell(i,OTHERPORTCOLUMN,swaifu);
-		m_ew.GetCell(i,RELEASECOLUMN,srelease);
-		m_ew.GetCell(i,UNRELEASECOLMN,sunrealse);
+		m_ew.SetCell(i,RELEASECOLUMN,srelease);
+		m_ew.SetCell(i,UNRELEASECOLMN,sunrealse);
 	}
 	return true;
 }
@@ -75,7 +97,7 @@ void ExlDistribution::Close()
 
 bool ExlDistribution::check_Port_is_empty(addressDataList &datalist)
 {
-	for (auto iter=datalist.begin();iter=datalist.end();iter++)
+	for (auto iter=datalist.begin();iter!=datalist.end();iter++)
 	{
 		if (!iter->second.Empty())
 		{

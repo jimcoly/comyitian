@@ -89,7 +89,7 @@ bool StreetData::operator!=( const StreetData& d ) const
 
 std::wostream& operator<<( wostream& output,const StreetData& ad )
 {
-	output<<ad.m_begin<<L" "<<ad.m_end<<L" "<<ad.m_jiou<<L" "<<ad.m_address<<std::endl;
+	output<<ad.m_begin<<L" "<<ad.m_end<<L" "<<ad.m_jiou<<L" "<<ad.m_address;
 	return output;
 }	
 std::wistream& operator>>( wistream& input,StreetData& ad )
@@ -111,14 +111,39 @@ bool PortData::operator!=( const PortData& d ) const
 {
 	return !(*this==d);
 }	
+
+bool PortData::IsCity()
+{
+	if (m_otherPorts==std::wstring(L"null"))
+	{
+		return true;
+	}
+	return false;
+}
 std::wostream& operator<<( wostream& output,const PortData& ad )
 {
-	output<<ad.m_otherPorts<<L" "<<ad.m_UninstallPorts<<L" "<<ad.m_Release<<std::endl;
+	output<<ad.m_otherPorts<<L" "<<ad.m_UninstallPorts<<L" "<<ad.m_Release;
 	return output;
 }
 
 std::wistream& operator>>( wistream& input,PortData& ad )
 {
 	input>>ad.m_otherPorts>>ad.m_UninstallPorts>>ad.m_Release;
+	if (ad.m_Release.find(L"发行站")!=std::wstring::npos)
+	{	 
+		WCHAR chr1=ad.m_Release.at(0);
+		WCHAR chr3=ad.m_Release.at(2);
+		ad.m_Release.clear();
+		ad.m_Release+=chr1;
+		ad.m_Release+=chr3;
+	}
+	if (ad.m_UninstallPorts.find(L"发行站")!=std::wstring::npos)
+	{	 
+		WCHAR chr1=ad.m_UninstallPorts.at(0);
+		WCHAR chr3=ad.m_UninstallPorts.at(2);
+		ad.m_UninstallPorts.clear();
+		ad.m_UninstallPorts+=chr1;
+		ad.m_UninstallPorts+=chr3;
+	}
 	return input;
 }

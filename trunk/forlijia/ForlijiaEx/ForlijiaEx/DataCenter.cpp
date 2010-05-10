@@ -20,53 +20,8 @@ DataCenter::~DataCenter(void)
 
 void DataCenter::Load()
 {	
-	{
-
-	
-	m_addressList.clear();
-	std::wstring filename=getrunpath()+DATAFILENAME;
-	std::wifstream ifs(filename.c_str());
-	if (ifs)
-	{
-		ifs.imbue(locale("chs")); 
-		wstring temp;
-		while(getline(ifs,temp))
-		{
-			std::wstringstream ss;
-			ss.imbue(locale("chs")); 
-			StreetData sdata;
-			PortData pdata;
-			ss>>pdata>>sdata;
- 
-			m_addressList.insert(std::make_pair(sdata,pdata));
- 
-		}
-		ifs.close();
-	} 
-}
-	{
-
-
-	m_otherDataList.clear();
-	std::wstring filename=getrunpath()+OTHERFILENAME;
-	std::wifstream ifs(filename.c_str());
-	if (ifs)
-	{
-		ifs.imbue(locale("chs")); 
-		wstring temp;
-		while(getline(ifs,temp))
-		{
-			std::wstringstream ss;
-			ss.imbue(locale("chs")); 
-			std::wstring str;
-			PortData pdata;
-			ss>>str>>pdata;
-
-			m_otherDataList.insert(std::make_pair(str,pdata));
-
-		}
-		ifs.close();
-	} 	}
+	LoadChengduData();
+	LoadOtherData();
 }
 
 void DataCenter::Save()
@@ -92,7 +47,7 @@ void DataCenter::Save()
 bool DataCenter::check( StreetData sdata )
 {
 	auto iter=m_addressList.find(sdata);
-	if (iter!=m_addressList.end())
+	if (iter==m_addressList.end())
 	{
 		return true;
 	}
@@ -106,7 +61,83 @@ void DataCenter::Insert( StreetData sdata,PortData pdata )
 
 PortData DataCenter::process( std::string address )
 {
-	
+	return PortData();
+}
+
+void DataCenter::LoadChengduData()
+{
+	m_addressList.clear();
+	std::wstring filename=getrunpath()+DATAFILENAME;
+	std::wifstream ifs(filename.c_str());
+	if (ifs)
+	{
+		ifs.imbue(locale("chs")); 
+		wstring temp;
+		while(getline(ifs,temp))
+		{
+			std::wstringstream ss;
+			ss.imbue(locale("chs")); 
+			ss<<temp;
+			StreetData sdata;
+			PortData pdata;
+			ss>>pdata>>sdata;
+
+			m_addressList.insert(std::make_pair(sdata,pdata));
+
+		}
+		ifs.close();
+	}
+}
+
+void DataCenter::LoadOtherData()
+{
+	m_otherDataList.clear();
+	std::wstring filename=getrunpath()+OTHERFILENAME;
+	std::wifstream ifs(filename.c_str());
+	if (ifs)
+	{
+		ifs.imbue(locale("chs")); 
+		wstring temp;
+		while(getline(ifs,temp))
+		{
+			std::wstringstream ss;
+			ss.imbue(locale("chs"));
+			ss<<temp;
+			std::wstring str;
+			PortData pdata;
+			ss>>str>>pdata;
+
+			m_otherDataList.insert(std::make_pair(str,pdata));
+
+		}
+		ifs.close();
+	}
+}
+WCHAR *chengqu[12]={L"成1",L"成2",L"锦1",L"锦2",L"金1",L"金2",L"武1",L"武2",L"武3",L"青1",L"青2",L"花"};
+
+bool DataCenter::IsOther( std::wstring unrelease )
+{
+	bool result=true;
+	for(int i=0;i<12;i++)
+	{
+		if(unrelease==chengqu[i])
+		{
+			result=false;
+		}
+	}
+	return result;
+
+}
+bool DataCenter::IsTiaojian(std::wstring address)
+{
+	for (auto iter=m_otherDataList.begin();iter!=m_otherDataList.end();iter++)
+	{
+		if (address.find(iter->first)!=std::wstring::npos)
+		{
+			return true;
+		}
+	}
+	return false;
 }
 //
 //
