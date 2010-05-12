@@ -157,6 +157,10 @@ bool ExcelWrapper::Open( CString fileName )
 	m_Sheets = ExcelApp.get_Worksheets(); 
 	return true;
 }
+void ExcelWrapper::Close()
+{  
+	 m_Books.Close(); 
+}
 
 int ExcelWrapper::GetSheetCount()
 {

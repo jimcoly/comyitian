@@ -11,6 +11,8 @@ public:
 	bool process(std::wstring &str);
 	bool process_get_num(std::wstring &str,int &num);
 	bool just_filter_sheng_and_Num(std::wstring &str);
+
+
 private:
 	FilterWords *m_shengFilter;
 	FilterWords *m_shiFilter;

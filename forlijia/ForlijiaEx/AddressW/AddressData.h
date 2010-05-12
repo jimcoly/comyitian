@@ -50,13 +50,7 @@ public:
 	}
 	~PortData(){}
 public:
-	bool Empty(){
-		if (m_otherPorts.empty()&&m_Release.empty()&&m_UninstallPorts.empty())
-		{
-			return true;
-		}
-		return false;
-	}
+	bool Empty();
 	bool IsCity();
 	bool operator==(const PortData& d)const;
 	bool operator!=(const PortData& d)const;

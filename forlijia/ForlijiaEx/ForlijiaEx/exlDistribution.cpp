@@ -19,9 +19,10 @@ bool ExlDistribution::Open( std::wstring filename )
 	}
 	return false;
 }
-ExlDistribution::addressDataList ExlDistribution::get_data_list()
+
+ExlDistribution::addressDataListexl ExlDistribution::get_data_list()
 {
-	addressDataList datalist;
+	addressDataListexl datalist;
 	if (!m_isopen){
 		return datalist;
 	} 
@@ -36,7 +37,8 @@ ExlDistribution::addressDataList ExlDistribution::get_data_list()
 		sunrealse=m_ew.GetCell(i,UNRELEASECOLMN);
 		StreetData sdata(saddress.GetString());//
 		PortData pdata(swaifu.GetString(),sunrealse.GetString(),srelease.GetString());
-		datalist.insert(std::make_pair(sdata,pdata));
+		exldata ed={sdata,pdata};
+		datalist.push_back(ed);
 	}
 	return datalist;
 }
@@ -47,14 +49,14 @@ ExlDistribution::addressDataList ExlDistribution::get_sep_list()
 		return datalist;
 	} 
 	int row=m_ew.GetRowCount(); 
-	for(int i=1;i<row;i++)
+	for(int i=2;i<row;i++)
 	{ 
 		CString saddress,swaifu,srelease,sunrealse;
 		saddress=m_ew.GetCell(i,8); 
 		sunrealse=m_ew.GetCell(i,2);
 
 		StreetData sdata(saddress.GetString());//
-		PortData pdata(swaifu.GetString(),sunrealse.GetString(),srelease.GetString());
+		PortData pdata(swaifu.GetString(),sunrealse.GetString(),sunrealse.GetString());
 		datalist.insert(std::make_pair(sdata,pdata));
 	}
 	return datalist;
@@ -69,7 +71,7 @@ bool ExlDistribution::set_data_port(  std::list<PortData> &pdatalist)
 	{
 		return false;
 	}
-	int i=4;
+	int i=3;
 	for(auto iter=pdatalist.begin();iter!=pdatalist.end();iter++,i++)
 	{ 
 		CString swaifu,srelease,sunrealse; 
@@ -79,6 +81,10 @@ bool ExlDistribution::set_data_port(  std::list<PortData> &pdatalist)
 		else
 		{
 			swaifu=iter->m_otherPorts.c_str();
+			if(swaifu==L"NULL")
+			{
+				swaifu=L"";
+			}
 		}
 		srelease=iter->m_Release.c_str();
 		sunrealse=iter->m_UninstallPorts.c_str();
@@ -89,17 +95,23 @@ bool ExlDistribution::set_data_port(  std::list<PortData> &pdatalist)
 	return true;
 }
 
-
+void ExlDistribution::Save_And_Close()
+{
+	m_ew.Save(L"c:\\new.xls");
+	m_ew.Close();
+	ExcelWrapper::ReleaseExcel();
+}
 void ExlDistribution::Close()
 {
+	m_ew.Close();
 	ExcelWrapper::ReleaseExcel();
 }
 
-bool ExlDistribution::check_Port_is_empty(addressDataList &datalist)
+bool ExlDistribution::check_Port_is_empty(addressDataListexl &datalist)
 {
 	for (auto iter=datalist.begin();iter!=datalist.end();iter++)
 	{
-		if (!iter->second.Empty())
+		if (!iter->pd.Empty())
 		{
 			return false;
 		}

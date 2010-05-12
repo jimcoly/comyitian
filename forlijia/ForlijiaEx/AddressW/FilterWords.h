@@ -60,7 +60,7 @@ public:
 		for( iter=str.begin();iter!=str.end();iter++,pos++)
 		{
 			WCHAR chr=*iter;
-			bool s=(chr>48/*L'0'-1*/ && chr<58 /*L'9'+1*/) ;
+			bool s=(chr>47/*L'0'-1*/ && chr<58 /*L'9'+1*/) ;
 			if(s) 
 			{
 				numcount++;
