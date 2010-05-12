@@ -8,6 +8,7 @@
 #include "..\AddressW\AddressData.h"
 #include <map>
 #include "DataCenter.h"
+#include "exlDistribution.h"
 
 class CForlijiaExDlgAutoProxy;
 
@@ -50,14 +51,18 @@ public:
 	afx_msg void OnBnClickedButtonconfig();
 	afx_msg void OnBnClickedButtonLoad();
 public:
-
+	typedef std::map<StreetData,PortData> addressDataList;
 
 	afx_msg void OnBnClickedButtonsave();
 	afx_msg void OnBnClickedButtonslect();
 	void Process();
+
+	std::list<PortData> _Process( ExlDistribution::addressDataListexl &getdataList );
 	DataCenter m_dataCenter;
 
-	typedef std::map<StreetData,PortData> addressDataList;
+
 	addressDataList m_mmmaddressList;
 	addressDataList m_addaddressList;
+	afx_msg void OnBnClickedButtonProcess();
+	afx_msg void OnBnClickedButtontest();
 };

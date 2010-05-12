@@ -18,6 +18,7 @@ public:
 public:	
 
 	bool Open(CString fileName);
+	void Close();
 public:
 	bool Create();
 	void Save(CString fileName);
@@ -32,6 +33,7 @@ public:
 	void SetCell(int iRow, int iColumn,CString valuestr);
 	int GetRowCount();
 	int GetColumnCount();
+
 private:
 	static CApplication ExcelApp;
 	CWorkbook m_Book;

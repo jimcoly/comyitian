@@ -6,6 +6,8 @@
 #include <fstream>
 #include "..\AddressW\utitily.h"
 #include <algorithm>
+#include "..\AddressW\FilterAddress.h"
+#include "..\AddressW\config.h"
 
 #define  DATAFILENAME L"chengdudata.txt"
 #define  OTHERFILENAME L"otherdata.txt"
@@ -59,11 +61,49 @@ void DataCenter::Insert( StreetData sdata,PortData pdata )
 	m_addressList.insert(std::make_pair(sdata,pdata));
 }
 
-PortData DataCenter::process( std::string address )
+PortData DataCenter::process( std::wstring address )
 {
+	PortData pd;
+	static FilterAddress fa;
+	fa.process(address);
+
+	std::set<std::wstring> aset=getKeyAddress(address);
+	for (auto iter=aset.begin();iter!=aset.end();iter++)
+	{
+		for (auto iter1=m_addressList.begin();iter1!=m_addressList.end();iter1++)
+		{
+			if (iter1->first.m_address.find(*iter)!=std::wstring::npos)
+			{
+				pd=iter1->second;
+				return pd;
+			}
+		}
+
+	}
 	return PortData();
 }
-
+std::set<std::wstring> DataCenter::getKeyAddress(std::wstring orgaddress)
+{
+	config *theconfig=config::getinstance();
+	StringList keywordList=theconfig->addresskeywordlist;
+	std::set<std::wstring> keySet;
+	for (auto iter=keywordList.begin();iter!=keywordList.end();iter++)
+	{
+		size_t pos=orgaddress.find(*iter);
+		if(pos!=std::wstring::npos)
+		{
+			std::wstring str=orgaddress.substr(0,pos+1);
+			keySet.insert(str);
+			break;
+		}
+		else if (orgaddress.size()<5)
+		{
+			keySet.insert(orgaddress);
+			break;
+		}
+	}
+	return keySet;
+}
 void DataCenter::LoadChengduData()
 {
 	m_addressList.clear();
@@ -73,17 +113,22 @@ void DataCenter::LoadChengduData()
 	{
 		ifs.imbue(locale("chs")); 
 		wstring temp;
+		int i=0;
 		while(getline(ifs,temp))
 		{
 			std::wstringstream ss;
-			ss.imbue(locale("chs")); 
+			//ss.imbue(locale("chs")); 
 			ss<<temp;
 			StreetData sdata;
 			PortData pdata;
 			ss>>pdata>>sdata;
 
 			m_addressList.insert(std::make_pair(sdata,pdata));
-
+			i++;
+			if (i>2000)
+			{
+				int t=0;
+			}
 		}
 		ifs.close();
 	}
@@ -115,6 +160,7 @@ void DataCenter::LoadOtherData()
 }
 WCHAR *chengqu[12]={L"成1",L"成2",L"锦1",L"锦2",L"金1",L"金2",L"武1",L"武2",L"武3",L"青1",L"青2",L"花"};
 
+
 bool DataCenter::IsOther( std::wstring unrelease )
 {
 	bool result=true;
@@ -134,6 +180,18 @@ bool DataCenter::IsTiaojian(std::wstring address)
 	{
 		if (address.find(iter->first)!=std::wstring::npos)
 		{
+			return true;
+		}
+	}
+	return false;
+}
+bool DataCenter::Tiaojian(std::wstring address,PortData& pdata)
+{
+	for (auto iter=m_otherDataList.begin();iter!=m_otherDataList.end();iter++)
+	{
+		if (address.find(iter->first)!=std::wstring::npos)
+		{
+			pdata=iter->second;
 			return true;
 		}
 	}

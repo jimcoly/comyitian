@@ -120,9 +120,20 @@ bool PortData::IsCity()
 	}
 	return false;
 }
+
+bool PortData::Empty()
+{
+	if ((m_otherPorts.empty() || m_otherPorts==std::wstring(L"null") )
+		&&m_Release.empty()&&m_UninstallPorts.empty())
+	{
+		return true;
+	}
+	return false;
+}
 std::wostream& operator<<( wostream& output,const PortData& ad )
 {
 	output<<ad.m_otherPorts<<L" "<<ad.m_UninstallPorts<<L" "<<ad.m_Release;
+
 	return output;
 }
 
@@ -145,5 +156,6 @@ std::wistream& operator>>( wistream& input,PortData& ad )
 		ad.m_UninstallPorts+=chr1;
 		ad.m_UninstallPorts+=chr3;
 	}
+		//ad.m_Release=ad.m_UninstallPorts;
 	return input;
 }

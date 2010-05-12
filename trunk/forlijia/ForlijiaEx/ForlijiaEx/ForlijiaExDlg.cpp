@@ -93,6 +93,8 @@ BEGIN_MESSAGE_MAP(CForlijiaExDlg, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON_LOAD, &CForlijiaExDlg::OnBnClickedButtonLoad)
 	ON_BN_CLICKED(IDC_BUTTON_save, &CForlijiaExDlg::OnBnClickedButtonsave)
 	ON_BN_CLICKED(IDC_BUTTON_slect, &CForlijiaExDlg::OnBnClickedButtonslect)
+	ON_BN_CLICKED(IDC_BUTTON_Process, &CForlijiaExDlg::OnBnClickedButtonProcess)
+	ON_BN_CLICKED(IDC_BUTTON_test, &CForlijiaExDlg::OnBnClickedButtontest)
 END_MESSAGE_MAP()
 
 
@@ -298,15 +300,16 @@ void CForlijiaExDlg::OnBnClickedButtonslect()
 		for (addressDataList::iterator iter=getdataList.begin();iter!=getdataList.end();iter++)
 		{
 			std::wstring addressstr=iter->first.m_address;
-			fa.process(addressstr);
+			fa.just_filter_sheng_and_Num(addressstr);	
+			StreetData sd(addressstr);
 			if (!m_dataCenter.IsOther(iter->second.m_UninstallPorts) 
 				&& !m_dataCenter.IsTiaojian(addressstr)
-				&& m_dataCenter.check(iter->first) )
+				&& m_dataCenter.check(sd) )
 			{
-				StreetData sd(addressstr);
 				m_addaddressList.insert(std::make_pair(sd,iter->second));
 			}
 		}
+		ed.Close();
 
 		SetDlgItemInt(IDC_STATIC_totalcount,getdataList.size());
 		SetDlgItemInt(IDC_STATIC_addcount,m_addaddressList.size());
@@ -327,22 +330,92 @@ void CForlijiaExDlg::Process()
 		if (!ed.Open(filePathname.GetString()))
 		{
 			MessageBox(L"打开失败");
+			return;
 		}
-		addressDataList getdataList=ed.get_data_list();
+		ExlDistribution::addressDataListexl getdataList=ed.get_data_list();
 		if (!ed.check_Port_is_empty(getdataList))
 		{
 			MessageBox(L"已经有数据");
+			return;
 		}
 		else
 		{
-			for (auto iter=getdataList.begin();iter!=getdataList.end();iter++)
-			{
-
-			}
+			std::list<PortData> pset=_Process(getdataList);
+			ed.set_data_port(pset);
 		}
+		
+		ed.Save_And_Close();
 	}
 	else 
 	{
 		return ;
 	}
+}
+std::list<PortData> CForlijiaExDlg::_Process( ExlDistribution::addressDataListexl &getdataList )
+{
+	std::list<PortData> portdataList;
+	for (auto iter=getdataList.begin();iter!=getdataList.end();iter++)
+	{
+		PortData pdata;
+		//外敷处理
+		if(m_dataCenter.Tiaojian(iter->sd.m_address,pdata))
+		{
+			//continue;
+		}
+		else
+		{
+			pdata=m_dataCenter.process(iter->sd.m_address);
+		}
+		portdataList.push_back(pdata);
+	}
+	return portdataList;
+}
+void CForlijiaExDlg::OnBnClickedButtonProcess()
+{
+	// TODO: Add your control notification handler code here
+
+	Process();
+}
+
+
+
+void CForlijiaExDlg::OnBnClickedButtontest()
+{
+	// TODO: Add your control notification handler code here
+	std::wstring str1=L"成都市城区通锦路";
+	std::wstring str2=L"四川省成都市武侯区四川大学望江校区财务处";
+	std::wstring str3=L"四川省成都市金牛区蜀汉路520号天河馨城4栋1单元1302室";
+	std::wstring str4=L"四川省成都市金牛区荷花池市场东1区C排29号";
+	std::wstring str5=L"四川省成都市成华区荷花池市场童装市场2期B做 临街30号";
+	std::wstring str6=L"四川省成都市锦江区静居寺帕丽湾1栋1单元305";
+	std::wstring str7=L"四川省成都市锦江区东大街澳龙名城 10栋1单元3305";
+	std::wstring str8=L"四川省成都市青羊区通惠门路锦都花园2栋1单元603";
+	std::wstring str9=L"四川省成都市青羊区家园南街成都花园上层3栋3单元903";
+	std::wstring str10=L"四川省成都市青羊区通惠门路锦都花园2栋1单元603";
+	std::wstring str11=L"四川省成都市金牛区站西桥西街16号3单元31";
+
+	ExlDistribution::addressDataListexl getdataList;
+	ExlDistribution::exldata ed1={StreetData(str1),PortData()};
+	getdataList.push_back(ed1);
+	ExlDistribution::exldata ed2={StreetData(str2),PortData()};
+	getdataList.push_back(ed2);
+	ExlDistribution::exldata ed3={StreetData(str3),PortData()};
+	getdataList.push_back(ed3);
+	ExlDistribution::exldata ed4={StreetData(str4),PortData()};
+	getdataList.push_back(ed4);
+	ExlDistribution::exldata ed5={StreetData(str5),PortData()};
+	getdataList.push_back(ed5);
+	ExlDistribution::exldata ed6={StreetData(str6),PortData()};
+	getdataList.push_back(ed6);
+	ExlDistribution::exldata ed7={StreetData(str7),PortData()};
+	getdataList.push_back(ed7);
+	ExlDistribution::exldata ed8={StreetData(str8),PortData()};
+	getdataList.push_back(ed8);
+	ExlDistribution::exldata ed9={StreetData(str9),PortData()};
+	getdataList.push_back(ed9);
+	ExlDistribution::exldata ed10={StreetData(str10),PortData()};
+	getdataList.push_back(ed10);
+	ExlDistribution::exldata ed11={StreetData(str11),PortData()};
+	getdataList.push_back(ed11);
+	_Process(getdataList);
 }

@@ -2,6 +2,7 @@
 #include "..\AddressW\AddressData.h"
 
 #include <map>
+#include <set>
 
 
 
@@ -22,8 +23,10 @@ public:
 	bool check(StreetData sdata);
 	void Insert(StreetData sdata,PortData pdata);
 	bool IsOther(std::wstring unrelease);
-	PortData process(std::string address);
+	PortData process(std::wstring address);
 	bool IsTiaojian(std::wstring address);
+	bool Tiaojian(std::wstring address,PortData& pdata);
+	std::set<std::wstring> getKeyAddress(std::wstring orgaddress);
 public:
 	typedef std::map<StreetData,PortData> addressDataList;
 	addressDataList m_addressList;
