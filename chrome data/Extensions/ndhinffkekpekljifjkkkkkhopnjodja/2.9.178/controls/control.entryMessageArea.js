@@ -1,0 +1,2 @@
+(function(){var c=devhd.pkg("control");var a=c.BaseControl.prototype;var b=c.createClass("EntryMessageAreaControl",c.BaseControl);b.setReader=function(d){this.reader=d};b.setEntryId=function(d){this.entryId=d};b.destroy=function(){this.reader=null;a.destroy.call(this)};b.display=function(){var d=this.reader.lookupEntry(this.entryId);this.part.innerHTML=d.getContentOrSummary();
+var e=this;this.bind(this.part,"click",function(){e.reader.flagEntry(e.entryId,"feedly.dismissed")})};b.onClose=function(){this.reader.flagEntry(this.entryId,"feedly.dismissed")}})();

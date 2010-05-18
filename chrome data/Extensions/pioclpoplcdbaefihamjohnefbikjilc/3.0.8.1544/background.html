@@ -1,0 +1,22 @@
+<html>
+	<head>
+    <script type="text/javascript" src="libs/json2.js"></script>
+    <script type="text/javascript" src="libs/Logger/Logger.js"></script>
+    <script type="text/javascript" src="libs/Logger/ChromeExtensionLoggerImpl.js"></script>
+    <script type="text/javascript" src="libs/LocalStore.js"></script>
+    <script type="text/javascript">
+      var RELEASED = true;
+      // these are essential for things to work as other pages need acccess to these facilities via this page
+      var LOG = LoggerImplFactory.getChromeExtensionLogger(Logger.LOG_LEVEL_ERROR);
+      var LOCAL_STORE = new LocalStore(null, new LocalStore.HTML5_LOCALSTORAGE_IMPL(localStorage));
+      function showIntro() {
+        if (!LOCAL_STORE.get("introShown")) {
+          chrome.tabs.create({url: chrome.i18n.getMessage("introPageUrl"), selected: true});
+          LOCAL_STORE.put("introShown", "true");
+        }
+      }
+    </script>
+	</head>
+	<body onload="showIntro();">
+	</body>
+</html>

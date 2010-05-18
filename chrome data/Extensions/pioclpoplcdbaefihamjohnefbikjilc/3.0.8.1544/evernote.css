@@ -1,0 +1,264 @@
+body {
+    background: white;
+    color: black;
+    font-family: sans-serif;
+    font-size: 10pt;
+    min-width: 500px;
+    width: 500px;
+    font-family: arial, helvetica, sans-serif;
+    line-height: 1.5;
+    padding: 0px;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: bold;
+    display: inline;
+}
+
+.description {
+    color: #696969;
+    font-size: 10px;
+}
+
+body.popup {
+    width: 200px;
+}
+
+div.dialog,div.view {
+    display: none;
+}
+
+input.disabled {
+    border: none;
+}
+
+select.notebookSelect {
+    max-width: 100px;
+}
+
+.noteThumbnail {
+    width: 160px !important;
+}
+
+.noteThumbnail img {
+    width: 160px;
+    height: 120px;
+    border: 1px solid #3697b4;;
+}
+
+a, a:active, a:hover, a:visited {
+    color: #7ebe40;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.paddedVertical {
+  margin: 4px 0px;
+}
+.paddedHorizontal {
+  margin: 0px 4px;
+}
+.padded {
+  margin: 4px;
+}
+
+/**
+ * Errors
+ */
+input[type=text].error,input[type=password].error,textarea.error {
+    color: red;
+}
+
+div.errorMessage {
+    color: red;
+    font-style: italic;
+    font-size: 11px;
+}
+
+/**
+ * Views
+ */
+.view {
+    background-color: #edf6f7;
+    -webkit-border-radius: 4px;
+    padding: 10px;
+}
+
+.view h2 {
+    margin-top: 0px;
+}
+
+.view *+h2 {
+    margin-top: auto;
+}
+
+/**
+ * Header
+ */
+#header {
+    height: 40px;
+    color: #696969;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+#headerLogo {
+    height: 30px;
+    float: left;
+}
+
+#headerUser {
+    height: 30px;
+    float: right;
+    line-height: 30px;
+    color: #696969;
+}
+
+#headerUser a:active,#headerUser a:hover,#headerUser a:visited {
+  font-weight: bold;
+}
+
+/**
+ * General forms
+ */
+form {
+    padding: 0px;
+    margin: 0px;
+}
+
+/**
+ * General form tables
+ */
+table.formTable {
+    width: 100%;
+}
+
+table.formTable tr td {
+    text-align: right;
+    padding: 4px 4px 4px 0px;
+}
+
+table.formTable tr td+td {
+    text-align: left;
+    padding: 4px 0px;
+}
+
+table.formTable input[type=text],table.formTable input[type=password] {
+    min-width: 200px;
+    width: 200px;
+}
+
+/**
+ * Compact form table
+ */
+table.compactFormTable {
+    width: 100%;
+}
+
+table.compactFormTable tr td+td {
+    padding-left: 20px;
+}
+
+table.compactFormTable tr.separator td,table.compactFormTable tr.separator td
+    {
+    border-top: 1px solid #8dccd9;
+}
+
+table.compactFormTable tr.firstRow td {
+    padding-top: 4px;
+}
+
+table.compactFormTable tr td label {
+    color: #696969;
+    font-size: 10px;
+    font-weight: bold;
+    display: block;
+}
+
+table.compactFormTable tr td input[type=checkbox]+label {
+    display: inline;
+}
+
+table.compactFormTable tr td input[type=text],table.compactFormTable tr td input[type=password],table.compactFormTable tr td textarea,table.compactFormTable tr td select
+    {
+    width: 100%;
+    min-width: 100%;
+}
+
+table.compactFormTable tr.actionControlRow td {
+    padding-top: 8px;
+}
+
+/**
+ * Neat form table
+ */
+table.neatFormTable {
+    width: 100%;
+}
+
+table.neatFormTable tr td {
+    text-align: left;
+    font-size: 10px;
+    color: #696969;
+    font-weight: bold;
+    padding: 8px 0px;
+    margin: 0px;
+    vertical-align: top;
+}
+
+table.neatFormTable tr+tr td {
+    padding-top: 0px;
+}
+
+table.neatFormTable tr.separator td {
+    padding-top: 8px;
+}
+
+table.neatFormTable tr td+td {
+    font-size: auto;
+    color: auto;
+    font-weight: auto;
+}
+
+table.neatFormTable tr td+td+td {
+    padding-left: 10px;
+}
+
+table.neatFormTable tr td label {
+    font-size: 11px;
+    line-height: 18px;
+    vertical-align: baseline;
+    display: block;
+}
+
+table.neatFormTable tr td input[type=text],table.neatFormTable tr td input[type=password],table.neatFormTable tr td textarea,table.neatFormTable tr td select
+    {
+    min-width: 100%;
+    width: 100%;
+}
+
+table.neatFormTable tr.separator td {
+    border-top: 1px solid #8dccd9;
+}
+
+table.neatFormTable tr.actionControlRow td {
+    padding-top: 8px;
+}
+
+table.neatFormTable a,
+table.neatFormTable a:active,
+table.neatFormTable a:hover,
+table.neatFormTable a:visited {
+  color: #3697b4;
+  font-size: 12px !important;
+  text-decoration: none;
+  font-weight: normal;
+}
+table.neatFormTable a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,24 @@
+.dropStyle {
+  border: thin solid black;
+  background-color:white;
+  color:black;
+  position:absolute;
+  cursor:default;
+  text-align:left;
+}
+.item {
+}
+.focus {
+  background-color:navy;
+  color:white;
+}
+
+.item[aria-disabled="true"] {
+  color: grey;
+}
+.offscreen {
+   position: absolute;
+  left: -9000px;
+  width: 0;
+  overflow: hidden;
+}

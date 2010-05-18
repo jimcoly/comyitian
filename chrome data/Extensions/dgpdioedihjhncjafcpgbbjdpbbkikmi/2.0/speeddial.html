@@ -1,0 +1,176 @@
+<!--
+/**********************************************************************
+*  Copyright (C) 2010 by Josorek@gmail.com
+*  All rights reserved.
+*
+**********************************************************************/
+-->
+<html>
+	<script type="text/javascript" src="tween.js"></script>
+
+	<title>Speed Dial</title>
+    <link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8rc3.custom.css" />
+    <link rel="stylesheet" href="css/ui-lightness/menu/fg.menu.css" />
+    <link rel="stylesheet" href="css/ui-lightness/theme/ui.all.css" />
+    <link rel="stylesheet" href="style.css" />
+	<script type="text/javascript" src="jquery/jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="jquery/jquery-ui-1.8rc3.custom.min.js"></script>
+	<script type="text/javascript" src="jquery/fg.menu.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="tree.js"></script>
+    <body onload="prepare()">  
+
+		<img id="main-bg" style="display:none"></img>
+		<div id="context-text" class="hidden"></div>
+
+		<div id="main"></div>
+			<div id="bookmarksBar"></div>
+			<div id="bookmarksTree"></div>
+			<div id="header">
+				<div id="options-button" onclick="openOptions();return false;">
+					<div id="options-button-inline"></div>
+				</div>
+			</div>
+			<div id="search"></div>
+			<div id="dials"></div>
+
+			<div id="closedTabsBar"></div>
+			<div id="options" style="padding-left:7px">
+				<div style="float:left;clear:both;margin-top:23px;maring-left:10px;">
+					<u><font style="font-size:19px">Options:</font></u>
+				</div>
+
+				<div style="float:left;clear:both;margin-top:11px;maring-left:10px;margin-bottom:3px;">
+					<u>Number of Dials:</u>
+				</div>
+				<div style="float:left;clear:both;margin-top:3px;maring-left:10px;">
+					Rows:
+					<select id="selectRows" onchange="dialsNumberChanged(event, 0);" style="margin-right:10px">
+					    <option value="1">1
+						<option value="2">2
+						<option value="3">3
+						<option value="4">4
+						<option value="5">5
+						<option value="6">6
+						<option value="7">7
+						<option value="8">8
+						<option value="9">9
+
+					</select>
+					Columns:
+					<select id="selectCols" onchange="dialsNumberChanged(event, 1);">
+						<option value="3">3
+						<option value="4">4
+						<option value="5">5
+						<option value="6">6
+						<option value="7">7
+						<option value="8">8
+						<option value="9">9
+					</select>
+				</div>
+				<div style="float:left;clear:both;margin-top:13px;maring-left:10px;">
+					 Dials Distance: <div id="slider" style="width:200px;margin-top:4px"></div>
+				</div>
+				<div style="float:left;clear:both;margin-top:18px;maring-left:10px;">
+					<u>Background Image:</u>
+				</div>
+					<div style="float:left;clear:both;margin-top:3px;">
+						<input id="optionsTextBoxBGImage" type="text" value="" style="width:240px">
+						<input type="button" value="Set" onclick="saveBackgroundImage();">
+						<input type="button" value="Clear" onclick="clearBackgroundImage();">
+					</div>
+					<div style="float:left;clear:both;font-size:10px;margin-top:0px;">
+						Example: http://desktop-world.info/wp-content/uploads/2009/01/another_world_by_mondref.jpg<bR>
+						Soon we'll support local background image, sorry for that.
+					</div>
+				<div style="float:left;clear:both;margin-top:13px;maring-left:10px;">
+					<u>Themes:</u>
+				</div>
+				<div id="themesContainer" style="float:left;clear:both;margin-top:13px;maring-left:10px;">
+					<div id="themes" class="white" onclick="setTheme(0);"><div class="overlay"></div></div>
+					<div id="themes" class="blue" onclick="setTheme(1);"><div class="overlay"></div></div>
+					<div id="themes" class="red" onclick="setTheme(2);"><div class="overlay"></div></div>
+					<div id="themes" class="green" onclick="setTheme(3);"><div class="overlay"></div></div>
+					<div id="themes" class="orange" onclick="setTheme(4);"><div class="overlay"></div></div>
+					<div id="themes" class="purple" onclick="setTheme(5);"><div class="overlay"></div></div>
+					<div id="themes" class="black" onclick="setTheme(6);"><div class="overlay"></div></div>
+				</div>
+
+				<div style="float:left;clear:both;margin-top:32px;maring-left:10px;">
+					<div class="divCheckBox">
+						<input id="displaySearchBoxCheckBox" type="checkbox" onclick="toggleSearch()">Display Search Box
+					</div>
+					<div class="divCheckBox">
+						<input id="displayBBCheckBox" type="checkbox" onclick="toggleBB()">Display Bookmarks Bar
+					</div>
+					<div class="divCheckBox">
+						<input id="displayRCCheckBox" type="checkbox" onclick="toggleRC()">Display Recently Closed Bar
+					</div>
+
+					<div class="divCheckBox">
+						<input id="displayTitleCheckBox" type="checkbox" onclick="toggleTitle()">Display Page Title
+					</div>
+					
+					<div class="divCheckBox">
+						<input id="displayOptionsCheckBox" type="checkbox" onclick="toggleOptions()">Display the Options Button<br>
+						<div style="float:left;clear:both;font-size:10px;margin-left:23px;">
+							You can always open the options page from "Extensions -> Speed Dial -> Options"
+						</div>
+					</div>
+					<div class="divCheckBox" style="margin-top:15px">
+						<input id="displayPageIconCheckBox" type="checkbox" onclick="togglePageIcon()">I finished set my dials, I dont want to see the address bar icon (<img src="icons/16.png" width="10" height="10"></img>) anymore!<br>
+						<div style="float:left;clear:both;font-size:10px;margin-left:23px;">
+							You can always add new thumbnails by pressing [ALT+A] on any web page, and [CTRL+T] to open the Speed Dial page.
+						</div>
+					</div>
+
+					<div class="divCheckBox" style="margin-top:15px">
+						Thumbnail Refresh: 
+						<select id="dialRefreshMode" onchange="onDialRefrehsModeChanged(event);" style="margin-right:10px">
+							<option value="0">No Refresh
+							<option value="1">Refresh every 6 hours
+							<option value="2">Refresh every 24 hours
+							<option value="3">Refresh every visit
+						</select>
+					</div>
+					<div class="divCheckBox" style="margin-top:15px">
+						Add page shortcut: 
+						<select id="addPageShortcut" onchange="onAddPageShortcutChanged(event);" style="margin-right:10px">
+							<option value="0">No Shortcut
+							<option value="1">Alt + q
+							<option value="2">Alt + a
+							<option value="3">Alt + s
+							<option value="4">Alt + r
+						</select>
+					</div>
+				</div>
+				<div style="float:left;clear:both;margin-top:23px;maring-left:10px;">
+						<input type="button" value="Save and Close" onclick="openOptions();">
+				</div>
+			</div>
+		</div>
+		<div id="menu-dial">
+			<div class="row" onmousedown="menuClick(0)">Open in new tab</div>
+			<div class="row" onmousedown="menuClick(1)">Open in new window</div>
+			<div class="separator"></div>
+			<div class="row" onmousedown="menuClick(2)">Edit Dial</div>
+			<div class="separator"></div>
+			<div class="row" onmousedown="menuClick(3)">Remove Dial</div>
+		</div>
+		<div id="edit-dial-dialog" title="Edit Dial" style="display:none">
+				<div>
+					<label for="name">Title</label>
+					<input type="text" name="name" id="edit-dial-title" class="text ui-widget-content ui-corner-all" />
+					<label for="email">URL</label>
+					<input type="text" name="email" id="edit-dial-url" value="" class="text ui-widget-content ui-corner-all" />
+					<label for="email">Dial Image URL:</label>
+					<input type="text" name="thumbnail" id="edit-dial-thumbnail" value="" class="text ui-widget-content ui-corner-all" />
+					<span>Predefined Logos:</span>
+					<select id="edit-dail-select-logos">
+					  <option value="">Select Logo</option>
+					</select>
+				</div>
+		</div>
+   </body>
+
+</html>

@@ -1,0 +1,24 @@
+var i18n = {
+
+	/* notifications */
+	'Save complete':
+	'保存完毕',
+
+	'Both [Label] and [Script] can not be empty':
+	'[标题] 和 [脚本] 都是必填项目',
+
+	'All settings will be reset, except user defined strokes, proceed?':
+	'除了自定义手势之外，其他所有项目都将被重置，继续吗？',
+
+	'Remove user defined stroke: "%"?':
+	'确认删除自定义手势“%”吗？',
+
+	'"%" already exists, overwrite?':
+	'覆盖已经存在的“%”吗？',
+
+	'[%] has been assigned to "%", overwrite?':
+	'[%] 目前分配给了“%”，确认覆盖当前配置吗？',
+
+	/* long paragraphes */
+
+}

@@ -1,0 +1,315 @@
+<html>
+	<head>
+		<title>IE Tab</title>
+		<link type="text/css" href="/options/custom.css" rel="stylesheet"/>		
+		<link type="text/css" href="/options/options.css" rel="stylesheet"/>
+		<script type="text/javascript" src="/options/core.js"></script>
+		<script type="text/javascript" src="/options/ui.js"></script>
+		<script src="chromelib.js"></script>
+		<script src="prefs.js"></script>			
+		<style>
+			#title {
+				float:left;
+				top:40px;
+				margin-left:10px;
+				text-align:center;
+				font-family:arial;
+				font-size:28px;
+				color:#2f0e17;
+				font-weight:normal;
+			}
+			#logo {
+				float:left;
+			}
+		</style>
+		<script>	
+			const OPTIONS_PAGE = true
+			const PAGE=0
+			const SITE=1
+			
+			function tableH(tableId,prefName,addbtn,removebtn,clearbtn){
+				this.addbtn=addbtn
+				this.removebtn=removebtn
+				this.clearbtn=clearbtn;
+				this.tableId=tableId
+				this.tableClass=tableId
+				this.prefName=prefName
+				this.varName=tableId
+			}
+			
+			tableH.prototype = {
+				refreshList : function(){
+					window[this.varName]=prefs[this.prefName]
+					this.refreshTable()				
+				},
+				refreshTable : function(){
+					var removebtn=this.removebtn;
+					var varName=this.varName
+					function enableHostAtIndex(e){
+						e.stopPropagation()
+						var index=this.parentNode.parentNode.getAttribute('index');
+						var enabled=this.checked
+						window[varName][index].enabled=enabled
+						select('#applyBtn').disabled=false
+					}
+					function d(e){
+						$(this).toggleClass('selected')
+						if ($('.selected').size() > 0)
+							removebtn.disabled=false
+						else
+							removebtn=true				
+					}			
+					var table = $('#'+this.tableId)
+					$('tbody',table).html('')
+					var v=window[this.varName]
+					if (v.length > 0)
+						this.clearbtn.disabled=false
+					else
+						this.clearbtn.disabled=true
+					this.removebtn.disabled=true
+					for (var i=0,length=v.length;i<length;i++){
+						var checked=v[i].enabled ? 'checked':''
+						$('<tr index="'+i+'"><td class="tt"><input type="checkbox" '+checked+'/></td><td class="host">'+(window[this.varName][i].host != null ? window[this.varName][i].host : window[this.varName][i].page)+'</td>'+'<td class="host">'+window[this.varName][i].description+'</td>'+'</tr>').appendTo(table)
+					}
+					$('table.'+this.tableClass+' tbody > tr').click(d).find('input').click(enableHostAtIndex)
+				},
+				remove : function(){
+					var v=window[this.varName]
+					var indexes=[]
+					$('.selected').each(function(i){
+						indexes.push(this.getAttribute('index'))
+					})
+					for (var i=0,length=indexes.length;i<length;i++)
+						delete v[indexes[i]]
+					var newlist=[]
+					for (var i=0,length=v.length;i<length;i++){
+						var wl=v[i]
+						if (wl != null)
+							newlist.push(wl)
+					}
+					window[this.varName]=newlist;
+					select('#applyBtn').disabled=false
+					this.refreshTable()				
+				},
+				_clear : function(){
+					window[this.varName]=[]
+					select('#applyBtn').disabled=false
+					this.refreshTable()				
+				},
+				add : function(){
+					window.addEventListener('keyup',esc)
+					select("#editBox").style.display="block"
+					select("#editTitle").innerText=listType==PAGE ? 'Page URL' : 'Website name (e.g www.google.com)'
+					select("#addEditOkbtn").disabled=true
+					select("#addressBox").focus()
+				}
+			}
+			
+			function apply(){
+				prefs.applyForm()
+				prefs['data.sitesList']=null; // workaround the problem of unchanged siteslist on this form while on other form the user already changed the list
+				prefs['data.sitesList']=sitesList
+				prefs['data.pagesList']=null
+				prefs['data.pagesList']=pagesList
+				tempSitesMap={}
+				tempPagesMap={}
+			}
+			
+			function esc(e){
+				if (e.keyCode == 27)
+					cancelAddEdit()
+			}
+			
+			function enter(e){
+				if (e.keyCode == 13)
+					okAddEdit()
+			}			
+			
+			function editBoxKey(){
+				select('#labelHostExists').style.display='none'
+				select('#labelPageExists').style.display='none'
+				select('#labelPageInvalid').style.display='none'
+				if (select("#addressBox").value.length == 0){
+					select('#addEditOkbtn').disabled=true
+					window.removeEventListener('keyup',enter)
+				}else{
+					select('#addEditOkbtn').disabled=false
+					window.addEventListener('keyup',enter)
+				}
+			}
+			
+			function cancelAddEdit(){
+				select("#addressBox").value=""
+				select("#editBox").style.display="none"
+				select('#labelPageExists').style.display='none'
+				select('#labelPageInvalid').style.display='none'
+				select('#labelHostExists').style.display='none'
+				if (listType == PAGE)
+					select("#addPage").focus()
+				else
+					select("#addSite").focus()
+			}
+			
+			var tempSitesMap={}
+			var tempPagesMap={}
+			function okAddEdit(){
+				var bg=chrome.extension.getBackgroundPage()
+				var map = listType == PAGE ? bg.pagesMap : bg.sitesMap;
+				var tempMap = listType == PAGE ? tempPagesMap : tempSitesMap
+				var list = listType == PAGE ? pagesList : sitesList;
+				var description = select("#descriptionBox").value
+				if (listType == PAGE){
+					var address=select("#addressBox").value
+					var fullAddress=/^(http|https|ftp|file):\/\/(.*)?\/(.*)$/
+					if(!(fullAddress.test(address))){
+						select('#labelPageInvalid').style.display='inline'
+						return;
+					}
+				}else{
+					try{
+						var address=bg.getHost(select("#addressBox").value)
+					}catch(e){
+						var address=select("#addressBox").value
+					}
+				}
+				if(map[address] != null || tempMap[address] != null){
+					if (listType == PAGE)
+						select('#labelPageExists').style.display="inline"
+					else if (listType == SITE)
+						select('#labelHostExists').style.display="inline"
+					return
+				}
+				tempMap[address]={}
+				if (listType == PAGE)
+					list.push({page:address,enabled:true,description:description})
+				else
+					list.push({host:address,enabled:true,description:description})
+				select('#labelHostExists').style.display='none'
+				select('#labelPageExists').style.display='none'
+				select('#labelPageInvalid').style.display='none'
+				select("#addressBox").value="" 
+				select("#descriptionBox").value=""
+				select("#editBox").style.display="none"
+				select("#addPage").focus()
+				sitesListTable.refreshTable()
+				pagesListTable.refreshTable()
+				select('#applyBtn').disabled=false;
+			}
+			
+			var sitesList=prefs['data.sitesList']
+			var pagesList=prefs['data.pagesList']				
+			var	sitesListTable
+			var pagesListTable
+		</script>
+		
+		<script type="text/javascript">		
+			$(function(){
+				sitesListTable=new tableH('sitesList','data.sitesList',select('#addSite'),select('#removeSite'),select('#clearSites'))
+				pagesListTable=new tableH('pagesList','data.pagesList',select('#addPage'),select('#removePage'),select('#clearPages'))
+				prefs.bind(sitesListTable,'data.sitesList',sitesListTable.refreshList)							
+				prefs.bind(pagesListTable,'data.pagesList',pagesListTable.refreshList)	
+				
+				prefs.bindForm(select('#applyBtn'),select('#okBtn'))
+				sitesListTable.refreshTable()			
+				pagesListTable.refreshTable()
+				$("#tabs").tabs().bind('tabsselect',function(event,ui){
+					prefs['options.selectedTab']=ui.index
+				}).tabs('select',prefs['options.selectedTab'])
+			});
+		</script>		
+	</head>
+	<body>
+		<div onclick="cancelAddEdit()" id="editBox" style="display:none;top:0px;left:0px;width:100%;height:100%;position:fixed;background-color:rgba(0,0,0,0.75);z-index:1">
+			<div onclick="event.stopPropagation()" style="background: rgb(82,105,147);-webkit-border-radius: 7px;-webkit-box-shadow: 1px 5px 10px rgba(250,250,250,0.6);border:1px solid black;position:relative;width:450px;margin:auto;top:30%;height:180px;">
+				<label id="editTitle" style="color:white;font-size:12px;top:10px;position:relative;padding-left:10px"></label>
+				<input onkeyup="editBoxKey()" onchange="editBoxKey()" spellcheck="false" id="addressBox" type="text" style="height:20px;position:relative;top:14px;width:94%;margin-left:10px">
+				<label style="color:white;font-size:12px;top:25px;position:relative;padding-left:10px">Description</label>
+				<input spellcheck="true" id="descriptionBox" type="text" style="height:20px;position:relative;top:30px;width:94%;margin-left:10px">				
+				<br>
+				<div style="font-size:10px;display:inline-block;position:relative;vertical-alight:bottom;left:8px;top:45px;">
+				<button id="addEditOkbtn" style="font-size:12px;" onclick="okAddEdit()">OK</button>
+				<button style="font-size:12px;" onclick="cancelAddEdit()">Cancel</button>
+				<label id="labelHostExists" style="display:none;padding-left:20px;font-size:14px;color:white">Website already added</label>
+				<label id="labelPageExists" style="display:none;padding-left:20px;font-size:14px;color:white">Page already added</label>
+				<br><label id="labelPageInvalid" style="display:none;padding-left:20px;font-size:14px;color:white">Invalid format<br>Examples: http://www.time.com/*obama* , http://www.techcrunch.com/ </label>
+				</div>
+			</div>
+		</div>	
+		<div style="width:80%;margin:auto;position:relative;top:40px;height:70%;padding:2px;">
+			<div>
+			  <img id="logo" src="icons/icon32.png" width="32" height="32">
+			  <div id="title">IE Tab Classic<font style="font-size:13px">- Settings</font></div>
+			</div>
+			<div style="margin-top:45px">
+				<div id="tabs" style="height:100%">
+					<ul>
+						<li><a href="#settings">Settings</a></li>
+						<li><a href="#sites">Web Sites</a></li>			
+						<li><a href="#pages">Pages</a></li>
+					</ul>			
+					<div id="sites">
+						<div style="border:1px solid rgba(150,150,150,0.25);width:100%;height:50%;overflow:auto">
+						<table class="sitesList" style="overflow:hidden" id='sitesList'>
+							<thead>
+								<tr>
+									<th width="20%">Auto Load</th>
+									<th width="40%">Website</th>
+									<th width="40%">Title</th>
+								</tr>
+							</thead>
+						</table>
+						</div>
+						<button style="position:relative;top:4px;font-size:11px" id="addSite" onclick="listType=SITE;sitesListTable.add()">Add</button>
+						<button style="position:relative;top:4px;font-size:11px" id="removeSite" onclick="sitesListTable.remove()">Remove</button>
+						<button style="position:relative;top:4px;font-size:11px" id="clearSites" onclick="sitesListTable._clear()">Clear</button>
+						<br>
+						<span style="position:relative;top:4px;left:3px;font-size:11px">* You can add websites directly from the address bar icon (see settings tab)</span>
+						<br><br><hr>
+					</div>
+					<div id="pages">
+						<div style="border:1px solid rgba(150,150,150,0.25);width:100%;height:45%;overflow:auto">
+						<table class="pagesList" style="overflow:hidden" id='pagesList'>
+							<thead>
+								<tr>
+									<th width="20%">Auto Load</th>
+									<th width="40%">Page</th>
+									<th width="40%">Description</th>
+								</tr>
+							</thead>
+						</table>
+						</div>
+						<button style="position:relative;top:4px;font-size:11px" id="addPage" onclick="listType=PAGE;pagesListTable.add(PAGE)">Add</button>
+						<button style="position:relative;top:4px;font-size:11px" id="removePage" onclick="pagesListTable.remove()">Remove</button>
+						<button style="position:relative;top:4px;font-size:11px" id="clearPages" onclick="pagesListTable._clear()">Clear</button>
+						<br>
+						<br>
+						<span style="position:relative;top:4px;left:3px;font-size:12px">Examples
+						<br><span style="position:relative;top:4px;left:3px;font-size:12px">http://green.yahoo.com/blog/the_conscious_consumer
+						<br><span style="position:relative;top:4px;left:0px;font-size:12px">http://*.yahoo.com/blog/*
+						<br><br><hr>
+					</div>					
+					<div id="settings">					
+						<form>
+							<input class='_pref_' name='general_autoLoading' type="checkbox">Enable IE auto loading<br>
+							<br>
+							Address bar icon behaviour:<br>
+							<input class="_pref_" value="1" name="pageAction_1click" type="radio">Switch between IE and Chrome
+							<br>
+							<input class="_pref_" value="0" name="pageAction_1click" type="radio">Popup menu
+							<br>
+							<br>
+							<hr>
+							<label style="padding-left:6px">Other settings are coming soon...</label>
+						</form>
+					</div>
+					<div style="position:absolute;top:100%;display:inline-block;padding-left:20px;">
+						<button style="margin-left:4px;height:24px;font-size:14px;" id="okBtn" onclick="apply();window.close()">OK</button>
+						<button style="height:24px;font-size:14px;" onclick="window.close()">Cancel</button>
+						<button style="height:24px;font-size:14px;" id="applyBtn" onclick="apply()">Apply</button>
+						<!--button style="height:24px;font-size:14px;" onclick="prefs.reset(function(name){return name != 'data.sitesList'})">Default Settings</button-->
+					</div>					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

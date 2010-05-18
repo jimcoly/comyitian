@@ -1,0 +1,248 @@
+{
+   "1Password": {
+      "message": "1Password"
+   },
+   "About___": {
+      "message": "Teave LastPassi kohta..."
+   },
+   "Actionproper": {
+      "message": "Toiming"
+   },
+   "Add_Field": {
+      "message": "Lisa v\u00E4li"
+   },
+   "Add_New_Site": {
+      "message": "Lisa uus sait"
+   },
+   "Add_Profile": {
+      "message": "Lisa profiil"
+   },
+   "Add_Secure_Note": {
+      "message": "Lisa turvaline m\u00E4rkus"
+   },
+   "Add_Site": {
+      "message": "Lisa sait"
+   },
+   "Address_1": {
+      "message": "Aadress 1"
+   },
+   "Address_2": {
+      "message": "Aadress 2"
+   },
+   "Address_3": {
+      "message": "Aadress 3"
+   },
+   "Alt": {
+      "message": "Alt"
+   },
+   "An_Update_is_Available__Would_you_like_to_install_": {
+      "message": "Uuendus on saadaval. Kas soovite installida?"
+   },
+   "April": {
+      "message": "Aprill"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_secure_note_": {
+      "message": "Kas soovite kindlasti kustutada selle turvalise m\u00E4rkuse?"
+   },
+   "August": {
+      "message": "August"
+   },
+   "AutoFill": {
+      "message": "T\u00E4ida autom."
+   },
+   "AutoLogin": {
+      "message": "Logi sisse autom."
+   },
+   "Birthday": {
+      "message": "S\u00FCnnip\u00E4ev"
+   },
+   "Blog": {
+      "message": "Ajaveeb"
+   },
+   "Cancel": {
+      "message": "Loobu"
+   },
+   "Check_For_Updates": {
+      "message": "Vaata uuendusi"
+   },
+   "Close": {
+      "message": "Sulge"
+   },
+   "Collapse_All": {
+      "message": "Ahenda k\u00F5ik"
+   },
+   "Company": {
+      "message": "Ettev\u00F5te"
+   },
+   "Copy": {
+      "message": "Kopeeri"
+   },
+   "Copy_Password": {
+      "message": "Kopeeri parool"
+   },
+   "Copy_Username": {
+      "message": "Kopeeri kasutajanimi"
+   },
+   "Country": {
+      "message": "Riik"
+   },
+   "County": {
+      "message": "Vald"
+   },
+   "Ctrl": {
+      "message": "Ctrl"
+   },
+   "December": {
+      "message": "Detsember"
+   },
+   "Edit": {
+      "message": "Muuda"
+   },
+   "Email": {
+      "message": "E-post"
+   },
+   "Expand_All": {
+      "message": "Laienda k\u00F5ik"
+   },
+   "Export_To": {
+      "message": "Ekspordi"
+   },
+   "Favorite": {
+      "message": "Lemmik"
+   },
+   "February": {
+      "message": "Veebruar"
+   },
+   "Feedback": {
+      "message": "Tagasiside"
+   },
+   "Female": {
+      "message": "Naine"
+   },
+   "Gender": {
+      "message": "Sugu"
+   },
+   "Help___": {
+      "message": "Abi..."
+   },
+   "History": {
+      "message": "Ajalugu"
+   },
+   "January": {
+      "message": "Jaanuar"
+   },
+   "July": {
+      "message": "Juuli"
+   },
+   "June": {
+      "message": "Juuni"
+   },
+   "KeePass": {
+      "message": "KeePass"
+   },
+   "Language": {
+      "message": "Keel"
+   },
+   "LastPass": {
+      "message": "LastPass"
+   },
+   "Login": {
+      "message": "Logi sisse"
+   },
+   "Logoff": {
+      "message": "Logi v\u00E4lja"
+   },
+   "MSI_PasswordKeeper": {
+      "message": "MSI PasswordKeeper"
+   },
+   "Male": {
+      "message": "Mees"
+   },
+   "March": {
+      "message": "M\u00E4rts"
+   },
+   "May": {
+      "message": "Mai"
+   },
+   "More": {
+      "message": "Veel"
+   },
+   "Mr": {
+      "message": "Hr"
+   },
+   "Mrs": {
+      "message": "Pr"
+   },
+   "Ms": {
+      "message": "Prl"
+   },
+   "MyPasswordSafe": {
+      "message": "MyPasswordSafe"
+   },
+   "My_LastPass_Vault": {
+      "message": "Minu LastPassi hoidla"
+   },
+   "Nameproper": {
+      "message": "Name"
+   },
+   "Notes": {
+      "message": "M\u00E4rkused"
+   },
+   "November": {
+      "message": "November"
+   },
+   "OK": {
+      "message": "OK"
+   },
+   "October": {
+      "message": "Oktoober"
+   },
+   "Open_My_LastPass_Vault": {
+      "message": "Ava Minu LastPassi hoidla"
+   },
+   "Password": {
+      "message": "Parool"
+   },
+   "Password_Agent": {
+      "message": "Password Agent"
+   },
+   "Password_Keeper": {
+      "message": "Password Keeper"
+   },
+   "Password_Safe": {
+      "message": "Password Safe"
+   },
+   "Profile": {
+      "message": "Profiil"
+   },
+   "Remember_Email": {
+      "message": "Pea e-posti aadress meeles"
+   },
+   "Remember_Password": {
+      "message": "Pea parool meeles"
+   },
+   "RoboForm": {
+      "message": "RoboForm"
+   },
+   "Search": {
+      "message": "Otsi"
+   },
+   "Secure_Notes": {
+      "message": "Turvalised m\u00E4rkused"
+   },
+   "Security": {
+      "message": "Turvalisus"
+   },
+   "September": {
+      "message": "September"
+   },
+   "State___Province": {
+      "message": "Maakond/provints"
+   },
+   "_none_": {
+      "message": "(pole)"
+   },
+   "dummy": {
+      "message": "dummy, leave this here so we don't mess up the trailing comma"
+   }
+}

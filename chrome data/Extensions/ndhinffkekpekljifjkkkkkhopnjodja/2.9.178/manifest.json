@@ -1,0 +1,45 @@
+{
+   "background_page": "gc-background.htm",
+   "browser_action": {
+      "default_icon": "gc-feedly.png",
+      "name": "Feedly"
+   },
+   "content_scripts": [ {
+      "css": [  ],
+      "js": [ "extension/chromeOnLogin.js" ],
+      "matches": [ "http://www.google.com/reader/view/feedly" ],
+      "run_at": "document_start"
+   }, {
+      "css": [  ],
+      "js": [ "extension/chromeOnLogout.js" ],
+      "matches": [ "http://www.google.com/reader/feedly.logout" ],
+      "run_at": "document_start"
+   }, {
+      "css": [  ],
+      "js": [ "extension/chromeLogin.js" ],
+      "matches": [ "https://*.google.com/*continue=http%3A%2F%2Fwww.google.com%2Freader%2Fview%2Ffeedly" ],
+      "run_at": "document_end"
+   }, {
+      "css": [  ],
+      "js": [ "scripts/version.js", "extension/chromeOnBeforeHome.js" ],
+      "matches": [ "http://www.feedly.com/dev", "http://www.feedly.com/home" ],
+      "run_at": "document_start"
+   }, {
+      "css": [  ],
+      "js": [ "js/10101_gc-all_5146.js" ],
+      "matches": [ "http://www.feedly.com/dev", "http://www.feedly.com/home" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Feedly organizes your favorite sources in a magazine-like start page.",
+   "icons": {
+      "128": "feedly-128.png",
+      "16": "feedly-16.png",
+      "32": "feedly-32.png",
+      "48": "feedly-48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC+NvNN2i26wtX/a5soQkoDLTNcuQy2pe++2JzlY9D9gdmkcnXr6RvVd3VswtJg6hlkf6Gfl96VPEwuN5jO1XUWEhUzn98PLz1fvffb0aOWdw5FWsitp6STLLYPNchiwZ+tsJhLS9fWu4nggeQnEgdgqh3pmgUjxAXu0kKQeOKk7QIDAQAB",
+   "name": "Feedly",
+   "permissions": [ "tabs", "http://*.google.com/", "https://*.google.com/", "http://*/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "2.9.178"
+}

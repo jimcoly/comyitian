@@ -1,0 +1,166 @@
+{
+   "direction": {
+      "message": "ltr"
+   },
+   "locale": {
+      "message": "pl"
+   },
+   "qs_about_close_button": {
+      "message": "Zamknij"
+   },
+   "qs_about_copy": {
+      "message": "&copy;2009 Google"
+   },
+   "qs_about_explanation": {
+      "message": "Po klikni\u0119ciu wyniku wyszukiwania Google rozszerzenie Quick Scroll mo\u017Ce si\u0119 pojawi\u0107 w prawym g\u00F3rnym rogu strony, wy\u015Bwietlaj\u0105c co najmniej jeden fragment strony, kt\u00F3ry odpowiada Twojemu zapytaniu. Klikni\u0119cie tekstu spowoduje przeniesienie do tej cz\u0119\u015Bci strony."
+   },
+   "qs_about_explanation2": {
+      "message": "Rozszerzenie Quick Scroll pojawia si\u0119 tylko w\u00F3wczas, gdy mo\u017Ce by\u0107 przydatne. Mo\u017Cna je zminimalizowa\u0107, klikaj\u0105c przycisk minimalizowania widoczny w prawym g\u00F3rnym rogu."
+   },
+   "qs_about_footer_about_google": {
+      "message": "\u003Ca href=\"http://www.google.com/intl/$1/about.html\"\u003EWszystko o Google\u003C/a\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_footer_privacy_policy": {
+      "message": "\u003Ca href=\"http://www.google.com/chrome/intl/$1/extensions/privacy_notices.html\"\u003EPolityka prywatno\u015Bci\u003C/a\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_footer_tos": {
+      "message": "\u003Ca href=\"http://chrome.google.com/extensions/intl/$1/gallery_tos.html\"\u003EWarunki korzystania z us\u0142ugi\u003C/a\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_how_it_works": {
+      "message": "Jak dzia\u0142a rozszerzenie Quick Scroll:"
+   },
+   "qs_about_installed": {
+      "message": "Rozszerzenie Google Quick Scroll zosta\u0142o zainstalowane."
+   },
+   "qs_about_introduction": {
+      "message": "Google Quick Scroll to rozszerzenie przegl\u0105darki, kt\u00F3re umo\u017Cliwia szybsze znalezienie wyszukiwanej zawarto\u015Bci."
+   },
+   "qs_about_only_useful": {
+      "message": "Rozszerzenie Quick Scroll uaktywnia si\u0119 tylko wtedy, kiedy jest przydatne. \u003Ca href=\"http://www.google.com/support/websearch/bin/answer.py?answer=171471&hl=$1\"\u003EWi\u0119cej informacji\u003C/a\u003E.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_options_saved": {
+      "message": "Zapisano opcje"
+   },
+   "qs_about_privacy_options_label": {
+      "message": "Pom\u00F3\u017C ulepszy\u0107 rozszerzenie Google Quick Scroll, automatycznie wysy\u0142aj\u0105c statystyki u\u017Cytkowania do Google."
+   },
+   "qs_about_privacy_options_title": {
+      "message": "Opcje prywatno\u015Bci"
+   },
+   "qs_about_step_1": {
+      "message": "Wyszukaj w Google."
+   },
+   "qs_about_step_2": {
+      "message": "Kliknij wynik wyszukiwania."
+   },
+   "qs_about_step_3": {
+      "message": "Kliknij rozszerzenie Quick Scroll, aby przej\u015B\u0107 do odpowiedniego fragmentu strony."
+   },
+   "qs_about_support_instructions": {
+      "message": "Je\u015Bli masz pytania lub problemy z korzystaniem z rozszerzenia Quick Scroll, sprawd\u017A nasz\u0105 \u003Ca href=\"http://www.google.com/support/websearch/bin/answer.py?answer=171471&hl=$1\"\u003Estron\u0119 pomocy\u003C/a\u003E.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_thank_you": {
+      "message": "Dzi\u0119kujemy za instalacj\u0119 rozszerzenia Google Quick Scroll!"
+   },
+   "qs_about_try_it": {
+      "message": "\u003Cb\u003EWypr\u00F3buj!\u003C/b\u003E Wyszukaj has\u0142o [\u003Ca id=\"sample-query\" target=\"_blank\" href=\"http://www.google.com/search?q=dark+matter+brown+dwarfs\"\u003Edark matter brown dwarfs\u003C/a\u003E] i kliknij wynik \u201Edark matter brown dwarfs\u201D."
+   },
+   "qs_about_try_queries": {
+      "message": "Wpisz nast\u0119puj\u0105ce zapytania:"
+   },
+   "qs_about_uninstall_instructions": {
+      "message": "Aby odinstalowa\u0107 rozszerzenie Google Quick Scroll, w przegl\u0105darce Chrome u\u017Cyj opcji menu Narz\u0119dzia&nbsp;\u003E&nbsp;Rozszerzenia, a nast\u0119pnie kliknij link Odinstaluj dla rozszerzenia Google Quick Scroll."
+   },
+   "qs_about_uninstall_title": {
+      "message": "Odinstalowywanie"
+   },
+   "qs_description": {
+      "message": "Rozszerzenie Quick Scroll umo\u017Cliwia przechodzenie bezpo\u015Brednio do tych element\u00F3w, kt\u00F3re odpowiadaj\u0105 wynikom wyszukiwania."
+   },
+   "qs_fewer_matches": {
+      "message": "\u003Cspan class=\"__gqs-go\"\u003E&laquo;\u003C/span\u003E  Fewer matches"
+   },
+   "qs_gallery_description": {
+      "message": "Google Quick Scroll to rozszerzenie przegl\u0105darki, kt\u00F3re pomo\u017Ce Ci szybciej znale\u017A\u0107 to, czego szukasz.\u003Cbr/\u003E\u003Cbr/\u003EPo klikni\u0119ciu wyniku wyszukiwania Google rozszerzenie Quick Scroll mo\u017Ce si\u0119 pojawi\u0107 w prawym dolnym rogu strony, wy\u015Bwietlaj\u0105c co najmniej jeden fragment strony, kt\u00F3ry odpowiada Twojemu zapytaniu. Klikni\u0119cie tekstu spowoduje przeniesienie do tej cz\u0119\u015Bci strony.\u003Cbr/\u003E\u003Cbr/\u003ERozszerzenie Quick Scroll stara si\u0119 nie przeszkadza\u0107 Ci w pracy i jest wy\u015Bwietlane tylko w\u00F3wczas, gdy z du\u017Cym prawdopodobie\u0144stwem mo\u017Ce okaza\u0107 si\u0119 przydatne."
+   },
+   "qs_info_no_tidbits_found": {
+      "message": "Niestety rozszerzenie Quick Scroll nie znalaz\u0142o na tej stronie dopasowa\u0144 do zapytania \u003Cspan class=\"__gqs-query\"\u003E$1\u003C/span\u003E. \u003Cspan class=\"__gqs-learn-more\"\u003EWi\u0119cej informacji.\u003C/span\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_info_non_annotated_result": {
+      "message": "Wygl\u0105da na to, \u017Ce ca\u0142a strona dotyczy zapytania \u003Cspan class=\"__gqs-query\"\u003E$1\u003C/span\u003E. Rozszerzenie Quick Scroll uaktywnia si\u0119, gdy tylko fragmenty strony s\u0105 trafne. \u003Cspan class=\"__gqs-learn-more\"\u003EWi\u0119cej informacji.\u003C/span\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_info_non_ebm_result": {
+      "message": "This whole page seems to be about your query. Showing best matches below. \u003Cspan class=\"__gqs-learn-more\"\u003ELearn more\u003C/span\u003E."
+   },
+   "qs_info_on_search": {
+      "message": "Rozszerzenie Quick Scroll uaktywnia si\u0119, gdy klikniesz wynik wyszukiwania Google. \u003Cspan class=\"__gqs-learn-more\"\u003EWi\u0119cej informacji.\u003C/span\u003E"
+   },
+   "qs_long_description_url": {
+      "message": "Klikaj\u0105c opcj\u0119 \u201EZainstaluj\u201D, wyra\u017Casz zgod\u0119 na te Warunki korzystania z us\u0142ugi: https://chrome.google.com/extensions/intl/en/gallery_tos.html"
+   },
+   "qs_more_matches": {
+      "message": "More matches \u003Cspan class=\"__gqs-go\"\u003E&raquo;\u003C/span\u003E"
+   },
+   "qs_name": {
+      "message": "Google Quick Scroll"
+   },
+   "qs_page_action_active": {
+      "message": "Rozszerzenie Quick Scroll znalaz\u0142o dopasowania na tej stronie."
+   },
+   "qs_page_action_inactive": {
+      "message": "Rozszerzenie Quick Scroll jest w\u0142\u0105czone. Kliknij, aby uzyska\u0107 wi\u0119cej informacji."
+   },
+   "qs_page_action_running": {
+      "message": "Rozszerzenie Quick Scroll czeka na wczytanie strony..."
+   },
+   "qs_tidbit_box_help_tooltip": {
+      "message": "Otw\u00F3rz stron\u0119 pomocy i opcji"
+   },
+   "qs_tidbit_box_matches": {
+      "message": "Dopasowania na stronie dla has\u0142a \u003Cspan class=\"__gqs-query\"\u003E\u003C/span\u003E"
+   },
+   "qs_tidbit_box_minimize_tooltip": {
+      "message": "Zminimalizuj"
+   },
+   "qs_tidbit_box_restore_tooltip": {
+      "message": "Otw\u00F3rz rozszerzenie Google Quick Scroll"
+   },
+   "qs_tidbit_box_tidbit_tooltip": {
+      "message": "Kliknij, aby zobaczy\u0107 ten tekst na stronie"
+   }
+}

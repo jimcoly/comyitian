@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SmartBookmark-Background</title>
+<script type="text/javascript">
+chrome.tabs.onCreated.addListener(function(){chrome.tabs.getSelected(null,function(){})});var MaxMemorySize=100;function marksobj(){this.point=this.id=0}var bookmarks=[];
+function downloadData(){if(!localStorage.leftLinkTarget){localStorage.leftLinkTarget="newTab";chrome.tabs.getSelected(null,function(c){console.log(c);chrome.tabs.create({index:c.index+1,url:"options.html"})})}for(var b=0;b<MaxMemorySize;b++){var f=localStorage["SortBookmark."+b],a=0;a=0;if(f!=null){f=f.split("#");if(f.length==2){a=parseInt(f[1]);if(!isNaN(a)&&a<1E5&&a>-100000){bookmarks[b]=new marksobj;bookmarks[b].id=f[0];bookmarks[b].point=a}else break}else break}else break}}
+function uploadData(){for(var b=0;b<bookmarks.length;b++)localStorage["SortBookmark."+b]=bookmarks[b].id+"#"+bookmarks[b].point}function repairLocalStorage(){}function cleanOldPoint(){if(bookmarks.length>MaxMemorySize-15){bookmarks.splice(MaxMemorySize-20,20);var b=bookmarks[bookmarks.length-1].point-1;if(b<=0)b=1;for(var f=0;f<bookmarks.length;f++)bookmarks[f].point-=b;bookmarks.length>=MaxMemorySize&&bookmarks.splice(MaxMemorySize,bookmarks.length-MaxMemorySize)}}
+function quickSort(){function b(a,c,d){console.log("DS:tag:");if(c<d){var e=f(a,c,d);b(a,c,e-1);b(a,e+1,d)}}function f(a,c,d){console.log("PA:tag:");var e=c;d=d+1;var g=new marksobj;g=a[e];for(console.log("a[s]",a,e,"temp",g);;){for(;a[++e].point>g.point;);for(;a[--d].point<g.point;);if(e>d)break;var h=a[e];a[e]=a[d];a[d]=h}a[c]=a[d];a[d]=g;return d}b(this,0,this.length-1);return this}Array.prototype.quickSort=quickSort;
+chrome.tabs.onUpdated.addListener(function(b,f,a){if(f.status=="complete"){console.log("changeInfo.status|"+f.status,"tab:"+a.url);chrome.bookmarks.search(a.url,function(c){console.log("se"+c.length);if(c.length!=0){for(var d=0;d<c.length;d++){var e=0;for(e=0;e<bookmarks.length;e++)if(bookmarks[e].id==c[d].id){bookmarks[e].point++;break}if(e==bookmarks.length){e=bookmarks.length;bookmarks[e]=new marksobj;bookmarks[e].id=c[d].id;bookmarks[e].point=1;console.log("ID:",c[d].id,"URL:",c[d].url)}}bookmarks.quickSort();
+cleanOldPoint()}})}});chrome.tabs.onRemoved.addListener(function(){uploadData()});chrome.extension.onRequest.addListener(function(b,f,a){switch(b.hope){case "getBookmarksArray":console.log("bookmarks.notsend",bookmarks);a({getBookmarksArray:bookmarks});console.log("bookmarks.send",bookmarks);break;case "openURL":chrome.tabs.getSelected(null,function(c){console.log(c);chrome.tabs.create({index:c.index+1,url:b.nexturl},function(){chrome.tabs.remove(c.id)})});break}});</script>
+</head>
+
+<body onload="downloadData()">
+</body>
+</html>

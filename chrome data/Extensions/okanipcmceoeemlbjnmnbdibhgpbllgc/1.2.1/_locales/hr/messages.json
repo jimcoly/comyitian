@@ -1,0 +1,166 @@
+{
+   "direction": {
+      "message": "ltr"
+   },
+   "locale": {
+      "message": "hr"
+   },
+   "qs_about_close_button": {
+      "message": "Zatvori"
+   },
+   "qs_about_copy": {
+      "message": "&copy;2009 Google"
+   },
+   "qs_about_explanation": {
+      "message": "Nakon \u0161to kliknete rezultat Google pretra\u017Eivanja, u donjem desnom kutu stranice mo\u017Ee se pojaviti Quick Scroll s prikazom jednog ili vi\u0161e dijelova teksta sa stranica koje su relevantne va\u0161em upitu. Klikom na tekst prelazite na taj dio stranice."
+   },
+   "qs_about_explanation2": {
+      "message": "Pro\u0161irenje Quick Scroll prikazuje se samo kad postoji mogu\u0107nost njegove upotrebe. Mo\u017Eete ga minimizirati ako u gornjem desnom dijelu kliknete gumb za minimiziranje."
+   },
+   "qs_about_footer_about_google": {
+      "message": "\u003Ca href=\"http://www.google.com/intl/$1/about.html\"\u003EO Googleu\u003C/a\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_footer_privacy_policy": {
+      "message": "\u003Ca href=\"http://www.google.com/chrome/intl/$1/extensions/privacy_notices.html\"\u003EPravila o privatnosti\u003C/a\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_footer_tos": {
+      "message": "\u003Ca href=\"http://chrome.google.com/extensions/intl/$1/gallery_tos.html\"\u003EUvjeti pru\u017Eanja usluge\u003C/a\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_how_it_works": {
+      "message": "Kako radi Brzo pretra\u017Eivanje:"
+   },
+   "qs_about_installed": {
+      "message": "Google Brzo pretra\u017Eivanje sad je instalirano."
+   },
+   "qs_about_introduction": {
+      "message": "Google Quick Scroll pro\u0161irenje je preglednika koje olak\u0161ava br\u017Ee tra\u017Eenje \u017Eeljenih stavki."
+   },
+   "qs_about_only_useful": {
+      "message": "Brzo pretra\u017Eivanje pojavljuje se samo kada je korisno. \u003Ca href=\"http://www.google.com/support/websearch/bin/answer.py?answer=171471&hl=$1\"\u003ESaznajte vi\u0161e\u003C/a\u003E.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_options_saved": {
+      "message": "Opcije spremljene"
+   },
+   "qs_about_privacy_options_label": {
+      "message": "Pomozite u pobolj\u0161anju pro\u0161irenja Google Quick Scroll automatskim slanjem statistike o upotrebi Googleu."
+   },
+   "qs_about_privacy_options_title": {
+      "message": "Opcije privatnosti"
+   },
+   "qs_about_step_1": {
+      "message": "Obavite Google pretra\u017Eivanje."
+   },
+   "qs_about_step_2": {
+      "message": "Kliknite rezultat pretra\u017Eivanja."
+   },
+   "qs_about_step_3": {
+      "message": "Kliknite Brzo pretra\u017Eivanje da biste pre\u0161li na relevantne dijelove stranice."
+   },
+   "qs_about_support_instructions": {
+      "message": "Ako imate pitanja ili problema s upotrebom pro\u0161irenja Quick Scroll, pogledajte na\u0161u \u003Ca href=\"http://www.google.com/support/websearch/bin/answer.py?answer=171471&hl=$1\"\u003Estranicu podr\u0161ke\u003C/a\u003E.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_thank_you": {
+      "message": "Zahvaljujemo \u0161to ste instalirali Google Quick Scroll!"
+   },
+   "qs_about_try_it": {
+      "message": "\u003Cb\u003EIsprobajte!\u003C/b\u003E Potra\u017Eite web-lokaciju [\u003Ca id=\"sample-query\" target=\"_blank\" href=\"http://www.google.com/search?q=dark+matter+brown+dwarfs\"\u003Edark matter brown dwarfs\u003C/a\u003E], a zatim kliknite rezultat \"dark matter brown dwarfs\"."
+   },
+   "qs_about_try_queries": {
+      "message": "Isprobajte ove upite:"
+   },
+   "qs_about_uninstall_instructions": {
+      "message": "Da biste deinstalirali Google Quick Scroll, upotrijebite alate preglednika Chrome&nbsp;\u003E&nbsp;opciju izbornika Pro\u0161irenja, a zatim za pro\u0161irenje Google Quick Scroll kliknite vezu Deinstaliraj."
+   },
+   "qs_about_uninstall_title": {
+      "message": "Deinstaliranje"
+   },
+   "qs_description": {
+      "message": "Quick Scroll omogu\u0107uje izravan prelazak na relevantne dijelove rezultata Google pretra\u017Eivanja."
+   },
+   "qs_fewer_matches": {
+      "message": "\u003Cspan class=\"__gqs-go\"\u003E&laquo;\u003C/span\u003E  Fewer matches"
+   },
+   "qs_gallery_description": {
+      "message": "Google Brzo pretra\u017Eivanje pro\u0161irenje je za preglednik koje omogu\u0107uje br\u017Ee pretra\u017Eivanje.\u003Cbr/\u003E\u003Cbr/\u003ENakon \u0161to kliknete Google rezultat pretra\u017Eivanja, Brzo pretra\u017Eivanje se mo\u017Ee prikazati na dnu desne strane stranice, a prikazuje jedan ili vi\u0161e dijelova teksta sa stranice koji su relevantni va\u0161em upitu. Ako kliknete tekst, prije\u0107i \u0107ete na taj dio stranice.\u003Cbr/\u003E\u003Cbr/\u003EBrzo pretra\u017Eivanje nastupa nenametljivo i prikazuje se samo ako postoji mogu\u0107nost njegove iskoristivosti."
+   },
+   "qs_info_no_tidbits_found": {
+      "message": "\u017Dao nam je, Brzo pretra\u017Eivanje ne mo\u017Ee prona\u0107i rezultate na ovoj stranici za \u003Cspan class=\"__gqs-query\"\u003E$1\u003C/span\u003E. \u003Cspan class=\"__gqs-learn-more\"\u003ESaznajte vi\u0161e.\u003C/span\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_info_non_annotated_result": {
+      "message": "\u010Cini se da je tema ove stranice \u003Cspan class=\"__gqs-query\"\u003E$1\u003C/span\u003E. Brzo pretra\u017Eivanje pojavljuje se kad su relevantni samo dijelovi stranice. \u003Cspan class=\"__gqs-learn-more\"\u003ESaznajte vi\u0161e.\u003C/span\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_info_non_ebm_result": {
+      "message": "This whole page seems to be about your query. Showing best matches below. \u003Cspan class=\"__gqs-learn-more\"\u003ELearn more\u003C/span\u003E."
+   },
+   "qs_info_on_search": {
+      "message": "Brzo pretra\u017Eivanje pojavljuje se kad kliknete na rezultat Google pretra\u017Eivanja. \u003Cspan class=\"__gqs-learn-more\"\u003ESaznajte vi\u0161e.\u003C/span\u003E"
+   },
+   "qs_long_description_url": {
+      "message": "Ako kliknete \"Instaliraj\", prihva\u0107ate ove Uvjete pru\u017Eanja usluge: https://chrome.google.com/extensions/intl/en/gallery_tos.html"
+   },
+   "qs_more_matches": {
+      "message": "More matches \u003Cspan class=\"__gqs-go\"\u003E&raquo;\u003C/span\u003E"
+   },
+   "qs_name": {
+      "message": "Google Quick Scroll"
+   },
+   "qs_page_action_active": {
+      "message": "Brzo pretra\u017Eivanje pronalazi rezultate na ovoj stranici."
+   },
+   "qs_page_action_inactive": {
+      "message": "Brzo pretra\u017Eivanje je omogu\u0107eno. Kliknite za vi\u0161e informacija."
+   },
+   "qs_page_action_running": {
+      "message": "Brzo pretra\u017Eivanje \u010Deka na u\u010Ditavanje stranice..."
+   },
+   "qs_tidbit_box_help_tooltip": {
+      "message": "Otvara stranicu pomo\u0107i i opcija"
+   },
+   "qs_tidbit_box_matches": {
+      "message": "Rezultata na stranici za upit \u003Cspan class=\"__gqs-query\"\u003E\u003C/span\u003E"
+   },
+   "qs_tidbit_box_minimize_tooltip": {
+      "message": "Minimiziraj"
+   },
+   "qs_tidbit_box_restore_tooltip": {
+      "message": "Otvori Google Quick Scroll"
+   },
+   "qs_tidbit_box_tidbit_tooltip": {
+      "message": "Kliknite kako biste ovaj tekst pogledali na stranici"
+   }
+}

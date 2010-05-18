@@ -1,0 +1,166 @@
+{
+   "direction": {
+      "message": "ltr"
+   },
+   "locale": {
+      "message": "lt"
+   },
+   "qs_about_close_button": {
+      "message": "U\u017Edaryti"
+   },
+   "qs_about_copy": {
+      "message": "&copy; \u201EGoogle\u201C, 2009 m."
+   },
+   "qs_about_explanation": {
+      "message": "Spustel\u0117jus \u201EGoogle\u201C paie\u0161kos rezultat\u0105, apatiniame de\u0161iniajame puslapio kampe gali atsirasti greitoji slinktis ir rodyti vien\u0105 ar daugiau teksto dali\u0173 i\u0161 u\u017Eklaus\u0105 atitinkan\u010Dio puslapio. Spustel\u0117j\u0119 tekst\u0105, b\u016Bsite nukreipti \u012F t\u0105 puslapio dal\u012F."
+   },
+   "qs_about_explanation2": {
+      "message": "Greitoji slinktis rodoma tik tada, kai ji gali b\u016Bti naudinga. J\u0105 galite suma\u017Einti spustel\u0117dami vir\u0161utiniame de\u0161iniajame kampe esant\u012F ma\u017Einimo mygtuk\u0105."
+   },
+   "qs_about_footer_about_google": {
+      "message": "\u003Ca href=\"http://www.google.com/intl/$1/about.html\"\u003EApie \u201EGoogle\u201C\u003C/a\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_footer_privacy_policy": {
+      "message": "\u003Ca href=\"http://www.google.com/chrome/intl/$1/extensions/privacy_notices.html\"\u003EPrivatumo politika\u003C/a\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_footer_tos": {
+      "message": "\u003Ca href=\"http://chrome.google.com/extensions/intl/$1/gallery_tos.html\"\u003EPaslaug\u0173 teikimo s\u0105lygos\u003C/a\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_how_it_works": {
+      "message": "Kaip Greitoji slinktis veikia:"
+   },
+   "qs_about_installed": {
+      "message": "Dabar \u201EGoogle\u201C greitoji slinktis \u012Fdiegta."
+   },
+   "qs_about_introduction": {
+      "message": "\u201EGoogle\u201C greitoji slinktis yra nar\u0161ykl\u0117s pl\u0117tinys, kuris padeda grei\u010Diau rasti tai, ko ie\u0161kote."
+   },
+   "qs_about_only_useful": {
+      "message": "Greitoji slinktis rodoma tik tada, kai ji naudinga. \u003Ca href=\"http://www.google.com/support/websearch/bin/answer.py?answer=171471&hl=$1\"\u003ESu\u017Einokite daugiau\u003C/a\u003E.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_options_saved": {
+      "message": "I\u0161saugotos parinktys"
+   },
+   "qs_about_privacy_options_label": {
+      "message": "Pad\u0117kite pagerinti \u201EGoogle\u201C greit\u0105j\u0105 slinkt\u012F automati\u0161kai si\u0173sdami naudojimo statistik\u0105 \u201EGoogle\u201C."
+   },
+   "qs_about_privacy_options_title": {
+      "message": "Privatumo parinktys"
+   },
+   "qs_about_step_1": {
+      "message": "Atlikite \u201EGoogle\u201C paie\u0161k\u0105."
+   },
+   "qs_about_step_2": {
+      "message": "Spustel\u0117kite paie\u0161kos rezultat\u0105."
+   },
+   "qs_about_step_3": {
+      "message": "Spustel\u0117kite Greit\u0105j\u0105 slinkt\u012F, kad pereitum\u0117te prie susijusi\u0173 puslapio dali\u0173."
+   },
+   "qs_about_support_instructions": {
+      "message": "Jei turite klausim\u0173, susijusi\u0173 su greitosios slinkties naudojimu, \u017Er. \u003Ca href=\"http://www.google.com/support/websearch/bin/answer.py?answer=171471&hl=$1\"\u003Epalaikymo puslap\u012F\u003C/a\u003E.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_thank_you": {
+      "message": "D\u0117kojame, kad \u012Fdieg\u0117te \u201EGoogle\u201C greit\u0105j\u0105 slinkt\u012F!"
+   },
+   "qs_about_try_it": {
+      "message": "\u003Cb\u003EI\u0161bandykite!\u003C/b\u003E Ie\u0161kokite [\u003Ca id=\"sample-query\" target=\"_blank\" href=\"http://www.google.com/search?q=dark+matter+brown+dwarfs\"\u003Edark matter brown dwarfs\u003C/a\u003E] ir spustel\u0117kite \u201Edark matter brown dwarfs\u201C rezultat\u0105."
+   },
+   "qs_about_try_queries": {
+      "message": "I\u0161bandykite \u0161ias u\u017Eklausas:"
+   },
+   "qs_about_uninstall_instructions": {
+      "message": "Jei norite pa\u0161alinti \u201EGoogle\u201C greit\u0105j\u0105 slinkt\u012F, naudokite \u201EChrome\u201C \u012Franki\u0173&nbsp;\u003E&nbsp;pl\u0117tini\u0173 meniu parinkt\u012F ir spustel\u0117kite \u201EGoogle\u201C greitojo slinkimo pl\u0117tinio nuorod\u0105 \u201EPa\u0161alinti\u201C."
+   },
+   "qs_about_uninstall_title": {
+      "message": "Pa\u0161alinti"
+   },
+   "qs_description": {
+      "message": "Greitoji slinktis leid\u017Eia tiesiogiai pereiti prie susijusi\u0173 \u201EGoogle\u201C paie\u0161kos rezultat\u0173 dali\u0173."
+   },
+   "qs_fewer_matches": {
+      "message": "\u003Cspan class=\"__gqs-go\"\u003E&laquo;\u003C/span\u003E  Fewer matches"
+   },
+   "qs_gallery_description": {
+      "message": "\u201EGoogle\u201C greitoji slinktis \u2013 tai nar\u0161ykl\u0117s pl\u0117tinys, padedantis grei\u010Diau rasti tai, ko ie\u0161kote.\u003Cbr/\u003E\u003Cbr/\u003ESpustel\u0117jus \u201EGoogle\u201C paie\u0161kos rezultat\u0105, greitoji slinktis gali atsirasti apatiniame de\u0161iniajame puslapio kampe ir rodyti vien\u0105 ar daugiau teksto dali\u0173 i\u0161 u\u017Eklaus\u0105 atitinkan\u010Dio puslapio. Spustel\u0117j\u0119 tekst\u0105, b\u016Bsite nukreipti \u012F t\u0105 puslapio dal\u012F.\u003Cbr/\u003E\u003Cbr/\u003EGreitoji slinktis nepateikiama kaskart, ji rodoma tik tada, kai gali b\u016Bti naudinga."
+   },
+   "qs_info_no_tidbits_found": {
+      "message": "Apgailestaujame, ta\u010Diau \u0161iame puslapyje Greitoji slinktis nerado joki\u0173 atitik\u010Di\u0173 pagal \u003Cspan class=\"__gqs-query\"\u003E$1\u003C/span\u003E. \u003Cspan class=\"__gqs-learn-more\"\u003ESu\u017Einokite daugiau.\u003C/span\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_info_non_annotated_result": {
+      "message": "Atrodo, kad visas \u0161is puslapis yra apie \u003Cspan class=\"__gqs-query\"\u003E$1\u003C/span\u003E. Greitoji slinktis parodoma tada, kai tik puslapio dalys yra susijusios. \u003Cspan class=\"__gqs-learn-more\"\u003ESu\u017Einokite daugiau.\u003C/span\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_info_non_ebm_result": {
+      "message": "This whole page seems to be about your query. Showing best matches below. \u003Cspan class=\"__gqs-learn-more\"\u003ELearn more\u003C/span\u003E."
+   },
+   "qs_info_on_search": {
+      "message": "Greitoji slinktis parodoma, kai spustelite \u201EGoogle\u201C paie\u0161kos rezultat\u0105. \u003Cspan class=\"__gqs-learn-more\"\u003ESu\u017Einokite daugiau.\u003C/span\u003E"
+   },
+   "qs_long_description_url": {
+      "message": "Spustel\u0117dami \u201E\u012Ediegti\u201C sutinkate su \u0161iomis Paslaug\u0173 teikimo s\u0105lygomis: https://chrome.google.com/extensions/intl/en/gallery_tos.html"
+   },
+   "qs_more_matches": {
+      "message": "More matches \u003Cspan class=\"__gqs-go\"\u003E&raquo;\u003C/span\u003E"
+   },
+   "qs_name": {
+      "message": "\u201EGoogle\u201C greitoji slinktis"
+   },
+   "qs_page_action_active": {
+      "message": "Greitoji slinktis \u0161iame puslapyje rado atitik\u010Di\u0173."
+   },
+   "qs_page_action_inactive": {
+      "message": "Greitoji slinktis \u012Fgalinta. Spustel\u0117kite, jei reikia daugiau informacijos."
+   },
+   "qs_page_action_running": {
+      "message": "Greitoji slinktis laukia, kol puslapis bus \u012Fkeltas..."
+   },
+   "qs_tidbit_box_help_tooltip": {
+      "message": "Atidaryti pagalbos ir parink\u010Di\u0173 puslap\u012F"
+   },
+   "qs_tidbit_box_matches": {
+      "message": "\u003Cspan class=\"__gqs-query\"\u003E\u003C/span\u003E atitiktys puslapyje"
+   },
+   "qs_tidbit_box_minimize_tooltip": {
+      "message": "Suma\u017Einti"
+   },
+   "qs_tidbit_box_restore_tooltip": {
+      "message": "Atidaryti \u201EGoogle\u201C greit\u0105j\u0105 slinkt\u012F"
+   },
+   "qs_tidbit_box_tidbit_tooltip": {
+      "message": "Spustel\u0117kite, jei norite matyti \u0161\u012F tekst\u0105 puslapyje"
+   }
+}

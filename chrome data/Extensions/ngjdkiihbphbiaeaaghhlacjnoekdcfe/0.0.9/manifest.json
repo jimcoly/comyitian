@@ -1,0 +1,19 @@
+{
+   "background_page": "background.html",
+   "content_scripts": [ {
+      "css": [ "fullfeed.css" ],
+      "js": [ "fullfeed.js" ],
+      "matches": [ "http://www.google.com/reader/*", "http://www.google.co.jp/reader/*", "https://www.google.com/reader/*", "https://www.google.co.jp/reader/*" ]
+   } ],
+   "description": "show full story of the current entry in google reader.",
+   "id": "findpbebkoafnmdflhoofbjmamacnneb",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtFpAQQ2wi2/rRj8Z/sSslOyyzVigiOz3uybp3o24CMhOD60GlgR5QDy50KxirISxznlg+fn7d4NFzTpJ5lytFCzq7ozW9RWri4BkCEUWAhQSky0Ffye5KSnPFx3yn2Tb8CQ8U7WhWfr0iHcOQp3udpFGWCZQW0xXMztrlv7k5nwIDAQAB",
+   "name": "Google Reader Full Feed",
+   "page_action": {
+      "default_icon": "btn.gif",
+      "default_title": "Fetch SITEINFO"
+   },
+   "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "0.0.9"
+}

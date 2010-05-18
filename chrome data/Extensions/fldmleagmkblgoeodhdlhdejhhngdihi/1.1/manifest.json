@@ -1,0 +1,20 @@
+{
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "sidewiki-active.gif",
+      "default_title": "Google Sidewiki: Read and contribute helpful information next to any webpage",
+      "popup": "popup.html"
+   },
+   "description": "Contribute and read helpful information next to any webpage.",
+   "icons": {
+      "128": "sidewiki128x128.png",
+      "16": "sidewiki16x16.png",
+      "32": "sidewiki32x32.png",
+      "48": "sidewiki48x48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDrMh7VcjJhaJBRsmSKJPI/EYx/Hy2i9TgOmVgJFWCMHj0nLabWBCvAEP+Uv4LLjL+Nge52SWa98s2Ymn7ZVgLv1pP9vMozqT0fx90hHzk4Zvcb0LYxYwk24T6THhXIQv3bYN5m9h0rTtyynnkaQyLEZqMkQ99SxlhQFy+DEaLdWQIDAQAB",
+   "name": "Google Sidewiki",
+   "permissions": [ "tabs", "http://*.google.com/*", "https://*.google.com/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.1"
+}

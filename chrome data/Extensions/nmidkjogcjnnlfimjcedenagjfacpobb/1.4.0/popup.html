@@ -1,0 +1,76 @@
+<head>
+    <link rel="stylesheet" rel="text/css" href="popup.css"/>
+    <script type="text/javascript" src="jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+</head>
+<body onload="init();">
+    <div id="updateNotifier" onclick="openUpdate()">
+        <img src="alert_icon.png" style="position: relative; top: 3px; left: -2px">
+        <span id="stringUpdatedMessage">updatedMessage</span>
+    </div>
+
+    <div id="smbase">
+        <div id="smsavebase" onselectstart="return false;">
+            <div id="smsaveicon"></div>
+            <div id="smsavelabel"><span id="stringSaveSession">Save Session</span></div>
+            <div id="smsavetitle">
+                <input id="savetitle" style="width:210px;" value="" maxlength="100">
+            </div>
+            <div id="smsavebutton" class="dimmed" onclick="save()"></div>
+            <div id="smsavetoggle" class="dimmed" title="Toggle" onclick="saveToggle()"></div>
+            <div id="smsavelist" title="Uncheck"></div>
+        </div>
+        <div id="smrestorebase" onselectstart="return false;">
+            <div id="smrestoreicon"></div>
+            <div id="smrestorelabel">Restore Session</div>
+            <div id="smrestorelabel2">Click to open in new window, ctrl-click (Win, Linux) or cmd-click (Mac) to open in current window</div>
+            <div id="smrestorelistwrapper">
+                <div id="smrestorelist"></div>
+                <div id="smeditsession">
+                    <h4>
+                        <span id="smheadingtitle">Title</span>
+                    </h4>
+                    <input id="smtitle" type="text" maxlength="100" onkeypress="renameChange(event)">
+
+                    <div id="smeditlist1" class="smeditlist">
+                        <h4>
+                            <span id="smheadingnew">New</span>
+                            <div id="smeditnewtoggle" class="dimmed" onclick="newToggle()"></div>
+                        </h4>
+                    </div>
+
+                    <div id="smeditlist2" class="smeditlist">
+                        <h4>
+                            <span id="smheadingsaved">Saved</span>
+                            <div id="smeditsavedtoggle" class="dimmed" onclick="savedToggle()"></div>
+                        </h4>
+                    </div>
+
+                    <div id="smeditcontrols">
+                        <input id="smeditsave" type="button" value="S" onclick="editSave(event)">
+                        <input id="smeditcancel" type="button" value="C" onclick="editCancel(event)">
+                        <input id="smeditremove" type="button" value="R" onclick="editRemove(event)">
+                    </div>
+                </div>
+            </div>
+            <div id="options" onclick="window.open('./options.html')">Options</div>
+            <div id="importBtn" onclick="showImportSessionBox()">Import session</div>
+            <div id="smrestorecrash" onclick="crashRestore()">Restore previous session</div>
+
+
+            <div id="sessionTextBox">
+                <span id="sessionTextBoxCloseBtn" onclick="$('#sessionTextBox').fadeOut()"></span>
+                <div id="sessionTextBoxTips"></div>
+                <textArea id="sessionTextBoxTextArea"></textArea>
+                <div id="sessionTextBoxBottomBar">
+                    <span id="importSessionBtn" onclick="importSession()">
+                        <img id="importSessionBtnIcon" src="./import.png">
+                        <span id="importSessionBtnText">Import</span>
+                    </span>
+                    
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+

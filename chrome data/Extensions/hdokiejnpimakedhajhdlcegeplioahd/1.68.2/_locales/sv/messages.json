@@ -1,0 +1,1115 @@
+{
+   "0_9": {
+      "message": "0-9"
+   },
+   "1Password": {
+      "message": "1Password"
+   },
+   "1__Insert_your_YubiKey_in_the_USB_port_with_the_USB_contact_facing_upward": {
+      "message": "1. S\u00E4tt in din YubiKey i USB-porten med USB-kontakten v\u00E4nd upp\u00E5t"
+   },
+   "1__Run_the_LastPass_Sesame_application_to_generate_a_one_time_password": {
+      "message": "1. K\u00F6r LastPass Sesame-applikationen f\u00F6r att generera ett eng\u00E5ngsl\u00F6senord"
+   },
+   "2__Paste_the_one_time_password_in_the_input_box_below_and_click__Authenticate_": {
+      "message": "2. Klistra in eng\u00E5ngsl\u00F6senordet i rutan nedan och klicka p\u00E5 'Verifiera'"
+   },
+   "2__Wait_until_your_YubiKey_touch_button_shines_with_a_steady_light": {
+      "message": "2. V\u00E4nta tills din YubiKey touch-knapp lyser med ett konstant ljus"
+   },
+   "3__Hold_your_fingertip_on_the_touch_button_for_2_seconds": {
+      "message": "3. H\u00E5ll fingertoppen p\u00E5 touch-knappen i 2 sekunder"
+   },
+   "ACTION": {
+      "message": "Handling"
+   },
+   "A_Zupper": {
+      "message": "A-Z"
+   },
+   "A_required_update_is_available_for_LastPass__Please_press_OK_to_begin_download_and_installation_": {
+      "message": "En n\u00F6dv\u00E4ndig uppdatering \u00E4r tillg\u00E4nglig f\u00F6r LastPass. Tryck p\u00E5 OK f\u00F6r att p\u00E5b\u00F6rja h\u00E4mtning och installation."
+   },
+   "A_retry_file_has_been_found__This_likely_means_that_not_all_of_your_site_changes_have_been_saved__Would_you_like_to_delete_this_file_and_potentially_lose_some_changes_": {
+      "message": "En 'retry'-fil har hittats. Detta betyder troligen att alla dina \u00E4ndringar inte har sparats. Vill du radera denna fil och eventuellt f\u00F6rlora vissa \u00E4ndringar?"
+   },
+   "A_server_error_occurred_while_processing_your_request_": {
+      "message": "Ett serverfel uppstod medan din f\u00F6rfr\u00E5gan behandlades."
+   },
+   "About___": {
+      "message": "Om..."
+   },
+   "Accept": {
+      "message": "Acceptera"
+   },
+   "Account_Settings": {
+      "message": "Kontoinst\u00E4llningar"
+   },
+   "Actionproper": {
+      "message": "\u00C5tg\u00E4rd"
+   },
+   "Add": {
+      "message": "L\u00E4gg till"
+   },
+   "Add_Credit_Card": {
+      "message": "L\u00E4gg till kreditkort"
+   },
+   "Add_Field": {
+      "message": "L\u00E4gg till f\u00E4lt"
+   },
+   "Add_Identity": {
+      "message": "L\u00E4gg till identitet"
+   },
+   "Add_New_Site": {
+      "message": "Ny sajt"
+   },
+   "Add_Profile": {
+      "message": "L\u00E4gg till profil"
+   },
+   "Add_Secure_Note": {
+      "message": "L\u00E4gg till s\u00E4ker anteckning"
+   },
+   "Add_Site": {
+      "message": "Ny sajt"
+   },
+   "Address_1": {
+      "message": "Adress 1"
+   },
+   "Address_2": {
+      "message": "Adress 2"
+   },
+   "Address_3": {
+      "message": "Adress 3"
+   },
+   "Advanced": {
+      "message": "Avancerat"
+   },
+   "All": {
+      "message": "Alla"
+   },
+   "Allow_LastPass_to_find_insecure_data_on_your_computer_": {
+      "message": "Till\u00E5ta LastPass att s\u00F6ka efter os\u00E4kra data p\u00E5 din dator?"
+   },
+   "Alt": {
+      "message": "Alt"
+   },
+   "Always_Choose_Profile_and_Credit_Card": {
+      "message": "Alltid v\u00E4lj profil och kreditkort"
+   },
+   "An_Update_is_Available__Would_you_like_to_install_": {
+      "message": "En uppdatering finns tillg\u00E4nglig. Vill du installera den?"
+   },
+   "An_error_has_been_encountered_while_loading_your_sites__Please_relogin_": {
+      "message": "Ett fel har uppst\u00E5tt vid inl\u00E4sning av dina webbplatser. V\u00E4nligen logga in igen."
+   },
+   "Appearance": {
+      "message": "Utseende"
+   },
+   "April": {
+      "message": "april"
+   },
+   "Are_you_sure_you_want_to_have_LastPass_remember_your_password___This_will_significantly_decrease_the_security_of_your_LastPass_account_": {
+      "message": "Vill du verkligen att LastPass ska komma ih\u00E5g ditt l\u00F6senord? Detta minskar s\u00E4kerheten betydligt f\u00F6r ditt LastPass-konto!"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_field_": {
+      "message": "Vill du verkligen radera det h\u00E4r f\u00E4ltet?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_form_fill_profile_": {
+      "message": "Vill du verkligen radera den h\u00E4r formul\u00E4rprofilen?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_generated_password_": {
+      "message": "Vill du verkligen radera det h\u00E4r genererade l\u00F6senordet?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_group_": {
+      "message": "\u00C4r du s\u00E4ker p\u00E5 att du vill radera denna grupp?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_never_URL_": {
+      "message": "Vill du verkligen radera denna 'Aldrig'-URL?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_secure_note_": {
+      "message": "Vill du verkligen radera den h\u00E4r s\u00E4kra anteckningen?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_site_": {
+      "message": "Vill du verkligen radera den h\u00E4r sidan?"
+   },
+   "August": {
+      "message": "augusti"
+   },
+   "Authenticate": {
+      "message": "Verifiera"
+   },
+   "Authentication_Failed_": {
+      "message": "Verifiering misslyckades."
+   },
+   "AutoFill": {
+      "message": "Autofyll"
+   },
+   "AutoLogin": {
+      "message": "Autoinloggning"
+   },
+   "Automatically_Fill_Login_Information": {
+      "message": "Fyll i inloggningsinformation automatiskt"
+   },
+   "Automatically_Logoff_after_idle__mins_": {
+      "message": "Automatisk utloggning efter vilol\u00E4ge (minuter)"
+   },
+   "Automatically_login_to_sites_if_time_since_last_login____seconds_": {
+      "message": "Automatisk inloggning till webbplatser om tiden sedan senaste inloggning \u003E (sekunder)"
+   },
+   "Avoid_Ambiguous_Characters": {
+      "message": "Undvik tvetydiga tecken"
+   },
+   "Birthday": {
+      "message": "F\u00F6delsedag"
+   },
+   "Blacklist": {
+      "message": "Ditt konto har sp\u00E4rrats tempor\u00E4rt (i fem minuter) p.g.a. f\u00F6r m\u00E5nga felaktiga inloggningsf\u00F6rs\u00F6k."
+   },
+   "Blog": {
+      "message": "Blogg"
+   },
+   "Browse_the_web_as_you_normally_would_and_LastPass_will_automatically_remember_passwords_as_you_enter_them_": {
+      "message": "Surfa p\u00E5 webben precis som vanligt och l\u00E5t LastPass komma ih\u00E5g dina l\u00F6senord automatiskt n\u00E4r du skriver in dem."
+   },
+   "Built_": {
+      "message": "Byggd:"
+   },
+   "But_I_m_a_forgetful_person___what_should_I_do_if_I_forget_my_password_": {
+      "message": "Men, jag \u00E4r s\u00E5 gl\u00F6msk... Vad g\u00F6r jag ifall jag gl\u00F6mmer l\u00F6senordet d\u00E5?"
+   },
+   "Can_t_find_hidden_LastPass_window": {
+      "message": "Kan inte hitta g\u00F6mda LastPass f\u00F6nster"
+   },
+   "Cancel": {
+      "message": "Avbryt"
+   },
+   "Change": {
+      "message": "\u00C4ndra"
+   },
+   "Change_Password": {
+      "message": "Byt l\u00F6senord"
+   },
+   "Check_For_Updates": {
+      "message": "S\u00F6k efter uppdateringar"
+   },
+   "Checkbox": {
+      "message": "Kryssruta"
+   },
+   "Checking_For_Updates___": {
+      "message": "S\u00F6ker efter uppdateringar..."
+   },
+   "Choose_Profile_and_Credit_Card": {
+      "message": "V\u00E4lj profil och kreditkort"
+   },
+   "City___Town": {
+      "message": "Ort"
+   },
+   "Clear": {
+      "message": "Rensa"
+   },
+   "Clear_Forms": {
+      "message": "Rensa formul\u00E4r"
+   },
+   "Clear_Local_Cache": {
+      "message": "Rensa lokal cache"
+   },
+   "Click_Continue_to_start_using_LastPass_": {
+      "message": "Klicka 'Forts\u00E4tt' f\u00F6r att b\u00F6rja anv\u00E4nda LastPass."
+   },
+   "Click_here_to_launch_account_settings": {
+      "message": "Klicka h\u00E4r f\u00F6r att starta kontoinst\u00E4llningar"
+   },
+   "Click_here_to_launch_feedback": {
+      "message": "Klicka h\u00E4r f\u00F6r att starta feedback"
+   },
+   "Click_here_to_watch_a_video_on_basic_usage_": {
+      "message": "Klicka h\u00E4r f\u00F6r att se en video om grundl\u00E4ggande anv\u00E4ndning."
+   },
+   "Close": {
+      "message": "St\u00E4ng"
+   },
+   "Collapse_All": {
+      "message": "D\u00F6lj alla"
+   },
+   "Company": {
+      "message": "F\u00F6retag"
+   },
+   "Configure_Form_Fill": {
+      "message": "Konfigurera formul\u00E4rfyllaren"
+   },
+   "Confirm": {
+      "message": "Bekr\u00E4fta"
+   },
+   "Congratulations": {
+      "message": "Gratulerar"
+   },
+   "Continue": {
+      "message": "Forts\u00E4tt"
+   },
+   "Copy": {
+      "message": "Kopiera"
+   },
+   "Copy_Password": {
+      "message": "Kopiera l\u00F6senord"
+   },
+   "Copy_Username": {
+      "message": "Kopiera anv\u00E4ndarnamn"
+   },
+   "Copyright_2008_LastPass__All_Rights_Reserved__Portions_of_this_software_were_licensed_from_third_parties_as_described_at_": {
+      "message": "Copyright 2008 LastPass. Alla r\u00E4ttigheter reserverade.\nDelar av denna programvara har licensierats fr\u00E5n tredje part som beskrivs i:"
+   },
+   "Country": {
+      "message": "Land"
+   },
+   "County": {
+      "message": "L\u00E4n"
+   },
+   "Create_Account": {
+      "message": "Skapa konto"
+   },
+   "Create_Sub_Group": {
+      "message": "Skapa undergrupp"
+   },
+   "Create_an_Account": {
+      "message": "Skapa konto"
+   },
+   "Creating_Account___": {
+      "message": "Skapar konto..."
+   },
+   "Ctrl": {
+      "message": "Ctrl"
+   },
+   "December": {
+      "message": "december"
+   },
+   "Delete": {
+      "message": "Radera"
+   },
+   "Delete_Group": {
+      "message": "Radera grupp"
+   },
+   "Disable_Insecure_Chrome_Password_Manager": {
+      "message": "Inaktivera os\u00E4kra Chrome Password Manager"
+   },
+   "Disable_Multifactor_Authentication": {
+      "message": "Inaktivera multifaktor authentication"
+   },
+   "Do_not_re_prompt_for_": {
+      "message": "Fr\u00E5ga inte om f\u00F6r"
+   },
+   "Down": {
+      "message": "Ned"
+   },
+   "Dr": {
+      "message": "Dr"
+   },
+   "Dutch": {
+      "message": "Nederl\u00E4ndska"
+   },
+   "Edit": {
+      "message": "\u00C4ndra"
+   },
+   "Edit_Form_Fields": {
+      "message": "Redigera formul\u00E4rf\u00E4lt"
+   },
+   "Email": {
+      "message": "E-postadress"
+   },
+   "Email_already_in_use__have_you_forgotten_your_password_": {
+      "message": "E-postadressen anv\u00E4nds redan. Har du gl\u00F6mt ditt l\u00F6senord?"
+   },
+   "End": {
+      "message": "Slutet"
+   },
+   "English": {
+      "message": "Engelska"
+   },
+   "ErrorGetAcctsMsg": {
+      "message": "Ett fel uppstod vid inh\u00E4mtandet av dina LastPass-sajter. V\u00E4nligen f\u00F6rs\u00F6k logga in igen f\u00F6r att h\u00E4mta dem."
+   },
+   "ErrorLoginMsg": {
+      "message": "Ett fel uppstod vid inloggningen till LastPass. V\u00E4nligen kontrollera din internetuppkoppling."
+   },
+   "ErrorSendingMsg": {
+      "message": "Ett fel uppstod vid f\u00F6rs\u00F6k att kontakta servern. V\u00E4nligen kontrollera din internetuppkoppling."
+   },
+   "ErrorSessionMsg": {
+      "message": "Din LastPass-session verkar ha g\u00E5tt ut. V\u00E4nligen logga in igen."
+   },
+   "ExistingUsersOTPPrompt": {
+      "message": "LastPass kan nu lagra ett eng\u00E5ngsl\u00F6senord lokalt p\u00E5 datorn, vilket kan anv\u00E4ndas f\u00F6r att \u00E5terst\u00E4lla ditt konto ifall du skulle gl\u00F6mma bort huvudl\u00F6senordet. Detta eng\u00E5ngsl\u00F6senord kommer att vara inaktivt tills du aktiverar det p\u00E5 servern.\n\nVill du aktivera konto\u00E5terst\u00E4llning?"
+   },
+   "Expand_All": {
+      "message": "Visa alla"
+   },
+   "Export_To": {
+      "message": "Exportera till"
+   },
+   "Favorite": {
+      "message": "Favorit"
+   },
+   "February": {
+      "message": "februari"
+   },
+   "Feedback": {
+      "message": "\u00C5terkoppling"
+   },
+   "Female": {
+      "message": "Kvinna"
+   },
+   "Fields_": {
+      "message": "Omr\u00E5den:"
+   },
+   "Fill_Current": {
+      "message": "Fyll aktuellt"
+   },
+   "Fill_Form": {
+      "message": "Fyll i formul\u00E4r"
+   },
+   "Fill_Forms": {
+      "message": "Fyll i formul\u00E4r"
+   },
+   "Fill_In_Next_Login__When_Multiple_": {
+      "message": "Fyll i n\u00E4sta inloggning (om flera)"
+   },
+   "Fill_In_Previous_Login__When_Multiple_": {
+      "message": "Fyll i tidigare inloggning (om flera)"
+   },
+   "FillableFormDetected": {
+      "message": "Ett ifyllbart formul\u00E4r har uppt\u00E4ckts p\u00E5 sidan."
+   },
+   "Find_a_site": {
+      "message": "Hitta en webbplats"
+   },
+   "Firefox_Password_Manager": {
+      "message": "Firefox l\u00F6senordshanterare"
+   },
+   "For_each_coordinate_listed_below__find_the_value_on_your_grid_and_enter_the_value_": {
+      "message": "Leta reda p\u00E5 och skriv in det tecken som i tabellen motsvaras av koordinaterna nedan."
+   },
+   "Form_Fill": {
+      "message": "Fyll i formul\u00E4r"
+   },
+   "Form_Name_": {
+      "message": "Formul\u00E4r Namn:"
+   },
+   "Forums": {
+      "message": "Forum"
+   },
+   "Gender": {
+      "message": "K\u00F6n"
+   },
+   "General": {
+      "message": "Allm\u00E4nt"
+   },
+   "Generate": {
+      "message": "Generera"
+   },
+   "GeneratePassword": {
+      "message": "Skapar du ett konto eller \u00E4ndrar ett l\u00F6senord? Klicka 'Generera' f\u00F6r att skapa ett unikt, starkt l\u00F6senord med LastPass."
+   },
+   "Generate_Secure_Password": {
+      "message": "Generera starkt l\u00F6senord"
+   },
+   "Generated_Password_for": {
+      "message": "Genererade l\u00F6senord f\u00F6r"
+   },
+   "Generic_CSV_File": {
+      "message": "Allm\u00E4n CSV fil"
+   },
+   "Go_Premium_": {
+      "message": "Skaffa 'Premium'!"
+   },
+   "Google_Chrome": {
+      "message": "Google Chrome"
+   },
+   "Group_": {
+      "message": "Grupp:"
+   },
+   "Help_Translate": {
+      "message": "Hj\u00E4lp till att \u00F6vers\u00E4tta"
+   },
+   "Help___": {
+      "message": "Hj\u00E4lp..."
+   },
+   "History": {
+      "message": "Historik"
+   },
+   "Home": {
+      "message": "Hem"
+   },
+   "HotKeys": {
+      "message": "Snabbtangenter"
+   },
+   "IT_IS_CRITICAL_THAT_YOU_NEVER_FORGET_YOUR_NEW_LASTPASS_PASSWORD_": {
+      "message": "DET \u00C4R OERH\u00D6RT VIKTIGT ATT DU INTE GL\u00D6MMER DITT HUVUDL\u00D6SENORD!"
+   },
+   "I_forgot_my_password__Help_": {
+      "message": "Jag har gl\u00F6mt mitt l\u00F6senord, Hj\u00E4lp"
+   },
+   "I_have_read_and_agree_with_the": {
+      "message": "Jag har l\u00E4st och inst\u00E4mmer i"
+   },
+   "I_understand_that_my_encrypted_data_will_be_sent_to_LastPass": {
+      "message": "Jag \u00E4r inf\u00F6rst\u00E5dd med att mina krypterade data kommer att skickas till LastPass"
+   },
+   "Identities": {
+      "message": "Identiteter"
+   },
+   "Identity": {
+      "message": "Identitet"
+   },
+   "If_you_already_have_a_LastPass_account_you_can_close_this_window_and_login_": {
+      "message": "Om du redan har ett LastPass-konto kan du st\u00E4nga det h\u00E4r f\u00F6nstret och logga in."
+   },
+   "If_you_do_end_up_forgetting_your_LastPass_master_password_": {
+      "message": "Om du skulle gl\u00F6mma ditt huvudl\u00F6senord till LastPass,"
+   },
+   "If_you_lost_your_Sesame_device__click_here_to_disable_Sesame_authentication": {
+      "message": "Har du f\u00F6rlorat din Sesame-enhet? Klicka h\u00E4r f\u00F6r att inaktivera Sesame-verifiering"
+   },
+   "If_you_lost_your_YubiKey_device__click_here_to_disable_YubiKey_authentication": {
+      "message": "Om du f\u00F6rlorat din YubiKey, klicka h\u00E4r f\u00F6r att inaktivera YubiKey-autentisering"
+   },
+   "If_you_lost_your_grid__click_here_to_disable_grid_authentication": {
+      "message": "Om du tappat bort din tabell, klicka h\u00E4r f\u00F6r att avaktivera tabellautenticering"
+   },
+   "Import": {
+      "message": "Importera"
+   },
+   "Import_From": {
+      "message": "Importera fr\u00E5n"
+   },
+   "Import_Your_Data": {
+      "message": "Importera dina data"
+   },
+   "Instructions": {
+      "message": "Instruktioner"
+   },
+   "Invalid_Password_": {
+      "message": "Ogiltigt l\u00F6senord."
+   },
+   "Invalid_email_address__try_again": {
+      "message": "Ogiltig e-postadress, f\u00F6rs\u00F6k igen"
+   },
+   "January": {
+      "message": "januari"
+   },
+   "July": {
+      "message": "juli"
+   },
+   "June": {
+      "message": "juni"
+   },
+   "KeePass": {
+      "message": "KeePass"
+   },
+   "Keep_a_history_of_my_logins_and_form_fills": {
+      "message": "Spara historik \u00F6ver mina inloggningar och formul\u00E4rifyllningar"
+   },
+   "Language": {
+      "message": "Spr\u00E5k"
+   },
+   "LastPass": {
+      "message": "LastPass"
+   },
+   "LastPass_CSV_File": {
+      "message": "LastPass CSV-fil"
+   },
+   "LastPass_Chrome_Toolbar": {
+      "message": "LastPass Chrome Toolbar"
+   },
+   "LastPass_Encrypted_File": {
+      "message": "LastPass-krypterad fil"
+   },
+   "LastPass_Grid_Multifactor_Authentication": {
+      "message": "LastPass Grid Multifactor Authentication"
+   },
+   "LastPass_cannot_login_until_cookies_are_allowed_from_lastpass_com": {
+      "message": "LastPass kan inte logga in dig f\u00F6rr\u00E4n du till\u00E5ter kakor/cookies fr\u00E5n LastPass.com"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_like_to_continue_": {
+      "message": "LastPass har uppt\u00E4ckt ett os\u00E4kert formul\u00E4r.\n\nVill du fors\u00E4tta?"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_still_like_LastPass_to_fill_the_form_": {
+      "message": "LastPass uppt\u00E4ckte ett os\u00E4kert formul\u00E4r.\n\nVill du fortfarande att LastPass ska fylla i formul\u00E4ret?"
+   },
+   "LastPass_detected_a_password_change_for": {
+      "message": "LastPass har uppt\u00E4ckt en l\u00F6senords\u00E4ndring f\u00F6r"
+   },
+   "LastPass_detected_a_password_change_for_domain_": {
+      "message": "LastPass har uppt\u00E4ckt en l\u00F6senords\u00E4ndring f\u00F6r dom\u00E4nen:"
+   },
+   "LastPass_detected_a_password_change_for_user_": {
+      "message": "LastPass har uppt\u00E4ckt en l\u00F6senords\u00E4ndring f\u00F6r:"
+   },
+   "LastPass_has_filled_your_login_information_into_the_form_on_this_page_": {
+      "message": "LastPass har redan fyllt i formul\u00E4ret nedan."
+   },
+   "LastPass_is_fully_installed___When_you_install_LastPass_on_other_computers_you_will_not_have_to_go_through_this_process_again__you_ll_simply_be_able_to_login____Do_not_share_your_Master_Password_with_anyone__including_LastPass_employees__we_ll_never_ask_for_it___LastPass_encrypts_your_sensitive_data_locally_so_even_LastPass_employees_do_not_have_access_to_it___You_can_get_help_by_clicking_on_the_LastPass_icon_and_going_to_Help_": {
+      "message": "LastPass \u00E4r fullt installerad! N\u00E4r du installerar LastPass p\u00E5 andra datorer beh\u00F6ver du inte g\u00E5 igenom denna process igen, du kan bara logga in. Dela inte inte ditt huvudl\u00F6senord med n\u00E5gon, inklusive LastPass-personal, vi kommer aldrig att fr\u00E5ga efter det! LastPass krypterar dina k\u00E4nsliga data lokalt s\u00E5 inte ens LastPass-personalen har tillg\u00E5ng till dem. Du kan f\u00E5 hj\u00E4lp genom att klicka p\u00E5 LastPass-ikonen och g\u00E5 till 'Hj\u00E4lp'."
+   },
+   "LastPass_is_the_last_password_you_ll_ever_have_to_remember___If_you_re_new_to_LastPass__we_ll_just_need_a_few_minutes_of_your_time_to_setup_your_account___You_ll_be_able_to_use_this_account_on_any_other_PC_you_use_to_always_keep_your_personal_data_in_sync___Hit_create_account_to_begin_": {
+      "message": "LastPass \u00E4r det sista l\u00F6senord du n\u00E5gonsin beh\u00F6ver komma ih\u00E5g. Om du inte har anv\u00E4nt LastPass f\u00F6rut beh\u00F6ver vi bara ett par minuter av din tid f\u00F6r att s\u00E4tta upp ditt konto. Du kommer att kunna anv\u00E4nda detta konto p\u00E5 varje annan dator du anv\u00E4nder och kommer alltid vara i synk. Tryck 'Skapa Konto' f\u00F6r att b\u00F6rja."
+   },
+   "Left": {
+      "message": "V\u00E4nster"
+   },
+   "LoggedInOffline": {
+      "message": "LastPass kunde inte kontakta inloggningsservern, s\u00E5 du \u00E4r inte ansluten f\u00F6r tillf\u00E4llet. Viss funktionalitet kan vara begr\u00E4nsad."
+   },
+   "Login": {
+      "message": "Logga in"
+   },
+   "LoginError": {
+      "message": "Det gick inte att logga in till LastPass. V\u00E4nligen f\u00F6rs\u00F6k igen."
+   },
+   "Login_to_LastPass": {
+      "message": "Logga in till LastPass"
+   },
+   "Logoff": {
+      "message": "Logga ut"
+   },
+   "Logoff_": {
+      "message": "Logga ut:"
+   },
+   "MSI_PasswordKeeper": {
+      "message": "MSI PasswordKeeper"
+   },
+   "Male": {
+      "message": "Man"
+   },
+   "March": {
+      "message": "mars"
+   },
+   "Master_Password": {
+      "message": "Huvudl\u00F6senord"
+   },
+   "May": {
+      "message": "maj"
+   },
+   "Meta": {
+      "message": "Meta"
+   },
+   "Minimum_Digit_Count": {
+      "message": "Minsta tecken r\u00E4kning"
+   },
+   "More": {
+      "message": "Mer"
+   },
+   "Move_to_Group": {
+      "message": "Flytta till grupp"
+   },
+   "Mr": {
+      "message": "Herr"
+   },
+   "Mrs": {
+      "message": "Fru"
+   },
+   "Ms": {
+      "message": "Fr\u00F6ken"
+   },
+   "MyPasswordSafe": {
+      "message": "MyPasswordSafe"
+   },
+   "My_LastPass_Vault": {
+      "message": "Mitt LastPass-valv"
+   },
+   "NAME": {
+      "message": "NAMN"
+   },
+   "Name_": {
+      "message": "Namn:"
+   },
+   "Nameproper": {
+      "message": "Namn"
+   },
+   "Never_Add_Site": {
+      "message": "L\u00E4gg aldrig till sajt"
+   },
+   "Never_AutoFill": {
+      "message": "Autofyll aldrig"
+   },
+   "Never_AutoLogin": {
+      "message": "Aldrig autoinloggning"
+   },
+   "Never_Fill_Forms": {
+      "message": "Fyll aldrig i formul\u00E4r"
+   },
+   "Never_For_This_Domain": {
+      "message": "Aldrig f\u00F6r denna dom\u00E4n"
+   },
+   "Never_For_This_Page": {
+      "message": "Aldrig f\u00F6r denna sajt"
+   },
+   "Never_Generate_Password": {
+      "message": "Generera aldrig l\u00F6senord"
+   },
+   "Never___": {
+      "message": "Aldrig ..."
+   },
+   "No": {
+      "message": "Nej"
+   },
+   "No_Thanks": {
+      "message": "Nej tack"
+   },
+   "No_Updates_Are_Available": {
+      "message": "Inga uppdateringar finns tillg\u00E4ngliga"
+   },
+   "No__I_do_not_want_LastPass_to_help_me_fill_forms_automatically": {
+      "message": "Nej, jag vill inte att LastPass ska hj\u00E4lpa mig att fylla i formul\u00E4r automatiskt"
+   },
+   "No__do_not_import_any_of_my_insecure_items": {
+      "message": "Nej, spara inga av mina os\u00E4kra uppgifter"
+   },
+   "None_Available": {
+      "message": "Inga lediga"
+   },
+   "Not_Now": {
+      "message": "Inte nu"
+   },
+   "Notes": {
+      "message": "Anteckningar"
+   },
+   "Notes_": {
+      "message": "Anm\u00E4rkningar:"
+   },
+   "Notifications": {
+      "message": "Notifieringar"
+   },
+   "November": {
+      "message": "november"
+   },
+   "OK": {
+      "message": "OK"
+   },
+   "October": {
+      "message": "oktober"
+   },
+   "Offer_to_Generate_Secure_Passwords": {
+      "message": "Erbjud att generera starka l\u00F6senord"
+   },
+   "Old_Password": {
+      "message": "Gammalt l\u00F6senord"
+   },
+   "Open_All": {
+      "message": "\u00D6ppna alla"
+   },
+   "Open_Favorites": {
+      "message": "\u00D6ppna favoriter"
+   },
+   "Open_My_LastPass_Vault": {
+      "message": "\u00D6ppna mitt LastPass-valv"
+   },
+   "Open_New_Pages_in": {
+      "message": "\u00D6ppna nya sidor i"
+   },
+   "Open_login_dialog_when_start_browser": {
+      "message": "\u00D6ppna inloggningsruta n\u00E4r webbl\u00E4saren startas"
+   },
+   "Other": {
+      "message": "Annat"
+   },
+   "Other_Sessions": {
+      "message": "Andra sessioner"
+   },
+   "PASSWORDupper": {
+      "message": "L\u00D6SENORD"
+   },
+   "Page_Down": {
+      "message": "Ned\u00E5t p\u00E5 sidan"
+   },
+   "Page_Up": {
+      "message": "Upp\u00E5t p\u00E5 sidan"
+   },
+   "Passpack": {
+      "message": "Passpack"
+   },
+   "Password": {
+      "message": "L\u00F6senord"
+   },
+   "Password_": {
+      "message": "L\u00F6senord:"
+   },
+   "Password_Agent": {
+      "message": "Password Agent"
+   },
+   "Password_Keeper": {
+      "message": "Password Keeper"
+   },
+   "Password_Length": {
+      "message": "L\u00F6senordsl\u00E4ngd"
+   },
+   "Password_Reminder": {
+      "message": "L\u00F6senordsledtr\u00E5d"
+   },
+   "Password_Safe": {
+      "message": "Password Safe"
+   },
+   "Password_reminder_cannot_match_password": {
+      "message": "L\u00F6senordsledtr\u00E5den kan inte likna l\u00F6senordet"
+   },
+   "Please_Make_a_Selection": {
+      "message": "V\u00E4nligen v\u00E4lj"
+   },
+   "Please_enter_a_Password_Reminder": {
+      "message": "V\u00E4nligen ange en l\u00F6senordsledtr\u00E5d"
+   },
+   "Please_provide_this_computer_a_name": {
+      "message": "V\u00E4nligen ange ett namn f\u00F6r denna dator"
+   },
+   "Please_select_which_sites_you_wish_to_apply_this_change_": {
+      "message": "V\u00E4nligen v\u00E4lj vilka sajter du vill utf\u00F6ra \u00E4ndringen p\u00E5."
+   },
+   "Please_visit_https___lastpass_com_to_create_an_account_at_a_later_time_": {
+      "message": "V\u00E4nligen bes\u00F6k https://lastpass.com f\u00F6r att skapa ett konto vid ett senare tillf\u00E4lle."
+   },
+   "Poll_Server_for_account_changes__mins_": {
+      "message": "Poll Server f\u00F6r konto\u00E4ndringar (minuter)"
+   },
+   "Preferences": {
+      "message": "Inst\u00E4llningar"
+   },
+   "Print": {
+      "message": "Skriv ut"
+   },
+   "Profile": {
+      "message": "Profil"
+   },
+   "Re_enter_Password": {
+      "message": "Ange l\u00F6senordet igen"
+   },
+   "Recently_Used": {
+      "message": "Nyligen anv\u00E4nda"
+   },
+   "Recheck_Page": {
+      "message": "Kontrollera sidan igen"
+   },
+   "Refresh_Sites": {
+      "message": "Uppdatera sajter"
+   },
+   "Reject": {
+      "message": "Neka"
+   },
+   "Remember_Email": {
+      "message": "Kom ih\u00E5g e-postadress"
+   },
+   "Remember_Password": {
+      "message": "Kom ih\u00E5g l\u00F6senord"
+   },
+   "Rename_Group": {
+      "message": "D\u00F6p om grupp"
+   },
+   "Replace_Existing_Site": {
+      "message": "Ers\u00E4tt existerande sajt"
+   },
+   "Require_Every_Character_Type": {
+      "message": "Kr\u00E4v samtliga teckentyper"
+   },
+   "Require_Password_Reprompt": {
+      "message": "Kr\u00E4v \u00E5terangivande av l\u00F6senord"
+   },
+   "Respect_AutoComplete_off__allow_websites_to_disable_AutoFill": {
+      "message": "Respektera AutoKomplettering=off: L\u00E5ter webbplatser inaktivera Autoifyllning"
+   },
+   "Right": {
+      "message": "H\u00F6ger"
+   },
+   "RoboForm": {
+      "message": "RoboForm"
+   },
+   "Save": {
+      "message": "Spara"
+   },
+   "Save_All_Entered_Data": {
+      "message": "Spara alla angivna data"
+   },
+   "Save_New_Site": {
+      "message": "Spara ny sajt"
+   },
+   "Save_Site": {
+      "message": "Spara sajt"
+   },
+   "Save_a_disabled_One_Time_Password_locally_for_Account_Recovery": {
+      "message": "Spara ett inaktivt eng\u00E5ngsl\u00F6senord lokalt f\u00F6r konto\u00E5terst\u00E4llning"
+   },
+   "Search": {
+      "message": "S\u00F6k"
+   },
+   "Secure_Notes": {
+      "message": "S\u00E4kra anteckningar"
+   },
+   "Security": {
+      "message": "S\u00E4kerhet"
+   },
+   "Security_Check": {
+      "message": "S\u00E4kerhetskontroll"
+   },
+   "Select": {
+      "message": "V\u00E4lj"
+   },
+   "Select_All": {
+      "message": "Markera alla"
+   },
+   "Send_anonymous_error_reporting_data_to_help_improve_LastPass": {
+      "message": "S\u00E4nda anonyma felrapportdata till LastPass i utvecklings- och f\u00F6rb\u00E4ttringssyfte?"
+   },
+   "September": {
+      "message": "september"
+   },
+   "SesameWrongButton": {
+      "message": "F\u00F6r att se dina data n\u00E4r du \u00E4r offline m\u00E5ste du starta programmet Sesame och anv\u00E4nda funktionen 'Generera offline-l\u00F6senord' ist\u00E4llet f\u00F6r 'Generera eng\u00E5ngsl\u00F6senord'."
+   },
+   "Sesame_Multifactor_Authentication": {
+      "message": "Sesame Multifaktor-autentisering"
+   },
+   "Share": {
+      "message": "Dela"
+   },
+   "Share_login_state_between_other_browsers": {
+      "message": "Dela inloggningstatus mellan andra webbl\u00E4sare"
+   },
+   "Share_offer_from": {
+      "message": "Dela erbjudande fr\u00E5n"
+   },
+   "Shift": {
+      "message": "Skift"
+   },
+   "Should_LastPass_remember_this_password_": {
+      "message": "Skall LastPass komma ih\u00E5g l\u00F6senordet?"
+   },
+   "Show": {
+      "message": "Visa"
+   },
+   "Show_Advanced_Options": {
+      "message": "Visa avancerade alternativ"
+   },
+   "Show_Deleted_Sites": {
+      "message": "Visa raderade sajter"
+   },
+   "Show_Form_Fill_Notifications": {
+      "message": "Visa formul\u00E4rf\u00E4ltsupplysningar"
+   },
+   "Show_My_LastPass_Vault_After_Login": {
+      "message": "Visa startsida efter inloggning"
+   },
+   "Show_Notifications": {
+      "message": "Visa meddelanden"
+   },
+   "Show_Save_Site_Notifications": {
+      "message": "Visa uppmaning att spara sajt"
+   },
+   "Show_Sites_in_Groups": {
+      "message": "Visa sajter i Grupper"
+   },
+   "Show_all_sites": {
+      "message": "Visa alla webbplatser"
+   },
+   "Show_certain_notifications_only_after_click": {
+      "message": "Visa vissa upplysningar f\u00F6rst efter klick"
+   },
+   "Simplify_your_life__Use_LastPass_to_autofill_in_this_site_s_login_info_": {
+      "message": "G\u00F6r livet enklare: Anv\u00E4nd LastPass f\u00F6r att fylla i inloggningsinformationen f\u00F6r sidan automatiskt!"
+   },
+   "Site_Search": {
+      "message": "Sajts\u00F6kning"
+   },
+   "Sites": {
+      "message": "Sajter"
+   },
+   "Special": {
+      "message": "Special"
+   },
+   "State___Province": {
+      "message": "L\u00E4n/Region"
+   },
+   "Submit_Form": {
+      "message": "Skicka formul\u00E4ret"
+   },
+   "Tabs": {
+      "message": "Flikar"
+   },
+   "Text": {
+      "message": "Text"
+   },
+   "The_LastPass_master_password_you_reentered_does_not_match": {
+      "message": "Huvudl\u00F6senordet du angav igen matchar inte"
+   },
+   "The_version_of_Chrome_you_are_currently_running_does_not_have_HTML5_database_support_enabled___As_such__this_login_page_will_not_remember_your_email_and_password__and_other_features_such_as_automatic_login_on_browser_restart_will_not_work___You_may_be_able_to_fix_this_by_adding___enable_databases_as_a_parameter_to_your_Google_Chrome_browser_shortcut_": {
+      "message": "Den version av Chrome du f\u00F6r n\u00E4rvarande k\u00F6r inte har HTML5 databasst\u00F6d aktiverat.  D\u00E4rf\u00F6 kommer inloggningssidan inte minns din e-postadress och l\u00F6senord, och andra funktioner som automatisk inloggning n\u00E4r webbl\u00E4saren omstartas kommer inte att fungera. Du kanske kan \u00E5tg\u00E4rda detta genom att l\u00E4gga till --enable-databases som en parameter i genv\u00E4gen till din Google Chrome webbl\u00E4sare."
+   },
+   "This_computer_is_trusted__do_not_require_a_second_form_of_authentication_": {
+      "message": "Denna dator \u00E4r betrodd, en andra form av autentisering beh\u00F6vs inte."
+   },
+   "This_is_a_shared_site__You_are_not_permitted_to_view_the_password_": {
+      "message": "Detta \u00E4r en delad sajt. Du har inte till\u00E5telse att se l\u00F6senordet."
+   },
+   "Time_Zone": {
+      "message": "Tidszon"
+   },
+   "Title": {
+      "message": "Titel"
+   },
+   "To_create_your_account__please_re_enter_your_LastPass_master_password": {
+      "message": "Ange ditt LastPass-huvudl\u00F6senord igen f\u00F6r att skapa ditt konto"
+   },
+   "To_get_started_with_LastPass__you_will_need_to_add_sites_to_your_account_": {
+      "message": "F\u00F6r att komma ig\u00E5ng med LastPass m\u00E5ste du l\u00E4gga till sajter till ditt konto."
+   },
+   "To_protect_your_privacy_and_keep_your_data_confidential_": {
+      "message": "F\u00F6r att skydda din integritet och h\u00E5lla dina data konfidentiella,"
+   },
+   "Tools": {
+      "message": "Verktyg"
+   },
+   "Try_Again": {
+      "message": "F\u00F6rs\u00F6k igen"
+   },
+   "TurboPasswords": {
+      "message": "TurboPasswords"
+   },
+   "Type_": {
+      "message": "Typ:"
+   },
+   "URL_": {
+      "message": "URL:"
+   },
+   "USERNAME": {
+      "message": "ANV\u00C4NDARNAMN"
+   },
+   "Unselect_All": {
+      "message": "Avmarkera alla"
+   },
+   "Up": {
+      "message": "Upp"
+   },
+   "Username_": {
+      "message": "Anv\u00E4ndarnamn:"
+   },
+   "Version_": {
+      "message": "Version:"
+   },
+   "Warn_before_filling_insecure_forms": {
+      "message": "Varna innan ifyllning av os\u00E4kra formul\u00E4r"
+   },
+   "Watch_a_video_on_basic_usage": {
+      "message": "Se en video om grundl\u00E4ggande anv\u00E4ndande"
+   },
+   "We_also_DO_NOT_keep_a_copy_or_backup_of_it_": {
+      "message": "Vi har INTE n\u00E5gon kopia eller backup av det."
+   },
+   "Welcome_to_LastPass_": {
+      "message": "V\u00E4lkommen till LastPass!"
+   },
+   "Windows": {
+      "message": "Windows"
+   },
+   "Would_you_like_to_set_up_a_Form_Filling_profile_now_": {
+      "message": "Vill du skapa en formul\u00E4rfyllningsprofil nu?"
+   },
+   "Yes": {
+      "message": "Ja"
+   },
+   "Yes__let_me_choose_which_items_I_want_imported_into_LastPass": {
+      "message": "Ja, l\u00E5t mig v\u00E4lja vilka uppgifter jag vill importera till LastPass"
+   },
+   "Yes__let_me_enter_and_review_data_that_will_be_used_when_filling_forms": {
+      "message": "Ja, l\u00E5t mig ange och granska data som kommer att anv\u00E4ndas vid ifyllning av formul\u00E4r"
+   },
+   "You_cannot_assign_more_than_one_HotKey_the_same_value_": {
+      "message": "Du kan inte tilldela samma v\u00E4rde till flera kortkommandon."
+   },
+   "You_must_agree_to_send_your_encrypted_data_to_LastPass_com___LastPass_com_encrypts_your_data_and_sends_it_to_its_secure_servers__No_one_at_LastPass_can_read_your_confidential_data_since_it_is_encrypted_using_your_secret_password_and_you_are_the_only_one_who_knows_your_password_": {
+      "message": "Du m\u00E5ste godk\u00E4nna att dina krypterade data skickas till LastPass.com.\n\nLastPass.com krypterar dina data och skickar det till sina s\u00E4kra servrar.\nIngen p\u00E5 LastPass kan l\u00E4sa dina konfidentiella data eftersom de \u00E4r krypterade med\nditt hemliga l\u00F6senord, vilket du \u00E4r den enda som k\u00E4nner till."
+   },
+   "You_must_agree_to_the_terms_to_continue": {
+      "message": "Du m\u00E5ste acceptera anv\u00E4ndningsvillkoren f\u00F6r att fors\u00E4tta"
+   },
+   "You_must_enter_a_name_": {
+      "message": "Du m\u00E5ste ange ett namn."
+   },
+   "You_must_enter_a_unique_name_": {
+      "message": "Du m\u00E5ste ange ett unikt namn."
+   },
+   "You_must_restart_Chrome_or_logoff_and_back_in_to_get_logoff_on_browser_close_changes_to_be_reflected": {
+      "message": "Du m\u00E5ste starta om Chrome eller logga ut och g\u00E5 tillbaka f\u00F6r att f\u00E5 utloggning p\u00E5 webbl\u00E4saren n\u00E4ra \u00E4ndringarna syns"
+   },
+   "You_must_restart_your_browser_before_all_of_the_changes_will_take_effect_": {
+      "message": "Du m\u00E5ste starta om webbl\u00E4saren f\u00F6r att \u00E4ndringarna ska tr\u00E4da i kraft."
+   },
+   "Your_password_can_not_be_the_same_as_your_email_": {
+      "message": "L\u00F6senordet kan inte vara samma som e-postadressen."
+   },
+   "Your_password_is_easily_guessable_": {
+      "message": "Ditt l\u00F6senord \u00E4r l\u00E4tt att gissa."
+   },
+   "Your_password_is_too_short__It_must_be_at_least_6_characters_long": {
+      "message": "Ditt l\u00F6senord \u00E4r f\u00F6r kort. Det m\u00E5ste best\u00E5 av MINST 6 tecken"
+   },
+   "Your_password_reminder_serves_to_remind_you_of_what_your": {
+      "message": "Din l\u00F6senordsledtr\u00E5d \u00E4r avsedd att p\u00E5minna dig om vad ditt"
+   },
+   "YubiKey_Multifactor_Authentication": {
+      "message": "YubiKey Multifaktor-autentisering"
+   },
+   "_Hide_": {
+      "message": "[D\u00F6lj]"
+   },
+   "_New_Pending_Share_Offers_": {
+      "message": "(Nya avvaktande delningserbjudanden)"
+   },
+   "_Show_": {
+      "message": "[Visa]"
+   },
+   "_none_": {
+      "message": "(inget)"
+   },
+   "a_zlower": {
+      "message": "a-z"
+   },
+   "actual_password_is__while_still_maintaining_its_secrecy_": {
+      "message": "aktuella l\u00F6senord \u00E4r, och \u00E4nd\u00E5 h\u00E5lla det hemligt."
+   },
+   "and": {
+      "message": "och"
+   },
+   "contact_us_and_we_will_email_you_your_password_reminder_": {
+      "message": "kontakta oss, s\u00E5 skickar vi ledtr\u00E5den per e-post."
+   },
+   "dummy": {
+      "message": "dummy, leave this here so we don't mess up the trailing comma"
+   },
+   "ext_": {
+      "message": "ext."
+   },
+   "favorites": {
+      "message": "favoriter"
+   },
+   "hour": {
+      "message": "timma"
+   },
+   "hours": {
+      "message": "timmar"
+   },
+   "minutes": {
+      "message": "minuter"
+   },
+   "privacy_statement": {
+      "message": "integritetsf\u00F6rklaring"
+   },
+   "recently_usedlower": {
+      "message": "nyligen anv\u00E4nda"
+   },
+   "seconds": {
+      "message": "sekunder"
+   },
+   "terms_of_service": {
+      "message": "anv\u00E4ndningsvillkor"
+   },
+   "the_current_tab": {
+      "message": "den aktuella fliken"
+   },
+   "we_DO_NOT_know_what_your_LastPass_password_is_": {
+      "message": "vi vet INTE vad du har f\u00F6r LastPass-l\u00F6senord."
+   }
+}

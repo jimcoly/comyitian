@@ -1,0 +1,451 @@
+<script>
+
+/**********************************************************************
+*  Copyright (C) 2010 by Josorek@gmail.com
+*  All rights reserved.
+*
+**********************************************************************/
+
+	var api = function(){
+	var slots=[];
+	
+	function refreshNewTabPages(){
+	}
+
+	function load(){
+		try{
+			slots = JSON.parse(localStorage.slots);
+		}catch(e){}
+	}
+
+	function save(){
+		var thumbs={}
+		for (var i=0,length=slots.length;i<length;i++){
+			if (slots[i] == null)
+				continue
+			var url=encodeURIComponent(slots[i].url)
+			thumbs[url]=localStorage[url]
+		}
+		localStorage.slots=JSON.stringify(slots);
+		for (var i=0,length=slots.length;i<length;i++){
+			if (slots[i] == null)
+				continue	
+			var url=encodeURIComponent(slots[i].url)
+			localStorage[url]=thumbs[url];
+		}
+		refreshNewTabPages()
+	}
+	
+	load()
+	return {
+		slots : slots,
+
+		reset : function(){
+			localStorage.clear()
+			slots = [];		
+		},
+		addCurrent : function(){
+			chrome.tabs.captureVisibleTab(null,function(dataurl){
+				chrome.tabs.getSelected(null,function(tab){
+					var canvas = document.createElementNS( "http://www.w3.org/1999/xhtml", "html:canvas" );
+					var ctx = canvas.getContext('2d');		
+					var img = document.createElement('img');
+					img.onload = function(){
+						try{
+							canvas.width=img.width/4
+							canvas.height=img.height/4
+							ctx.drawImage(img,0,0,img.width/4,img.height/4);
+							var slot={}
+							slot.title=tab.title;
+							slot.url=tab.url;
+							slot.favIcon = tab.favIconUrl;
+							var foundEmptySlot=false
+							var i=0;
+							for (var length=slots.length;i<length;i++){
+								if (slots[i] == null){
+									foundEmptySlot=true
+									slots[i]=slot;
+									break;
+								}
+							}
+							if (!foundEmptySlot) slots[i]=slot
+							localStorage[encodeURIComponent(slot.url)]=canvas.toDataURL("image/png","")
+							save();
+						}catch(e){
+							console.log(e)
+						}			
+					}
+					img.src=dataurl;
+				})
+			});		
+		},	
+		addSlot : function(index, title, url, favIcon, thumbnailURL, callback){
+			var slot={}
+			slot.title = title;
+			slot.url   = url;
+			slot.favIcon   = favIcon;
+			if (index==null) {
+				var foundEmptySlot = false
+				var i=0;
+				for (var length=slots.length;i<length;i++){
+					if (slots[i] == null){
+						foundEmptySlot = true
+						slots[i]=slot;
+						break;
+					}
+				}
+				if (!foundEmptySlot) slots[i] = slot
+				index = i;
+			} else {
+				slots[index] = slot
+			}
+			save();
+			if (thumbnailURL) {
+				this.setThumbnail(index, thumbnailURL, callback);
+			} else {
+				localStorage["emptyThumbnail_" + encodeURIComponent(url)] = true;
+				callback.apply(this, [index]);
+			}
+			return index;
+		},
+		remove : function(index){
+			var url = slots[index].url;
+			delete slots[index]
+			var found = false;
+			for (var i=0;i<slots.length;i++) {
+				if (slots[i]) {
+					if (slots[i].url==url) {
+						found = true;
+						break;
+					}
+				}
+			}
+			if (!found) {
+			    localStorage[encodeURIComponent(url)] = "";
+				localStorage["date_" + encodeURIComponent(url)] = "";
+				localStorage["userThumbnail_" + encodeURIComponent(url)] = "";
+				localStorage["emptyThumbnail_" + encodeURIComponent(url)] = "";
+			}
+			save()		
+		},
+		swap : function(index0,index1){
+			var slot=slots[index0]
+			slots[index0]=slots[index1]
+			slots[index1]=slot
+			if (slots[index0] == null)
+				delete slots[index0]
+			if (slots[index1] == null)
+				delete slots[index1]
+			save()		
+		},
+		update : function(index, title, url){
+
+			var slot = slots[index]
+			var lastURL = slot.url;
+			slot.title = title;
+			var tempStorage = localStorage[encodeURIComponent(slot.url)];
+			var _date = localStorage["date_" + encodeURIComponent(slot.url)];
+			var _userThumbnail = localStorage["userThumbnail_" + encodeURIComponent(slot.url)];
+			var _emptyThumbnail = localStorage["emptyThumbnail_" + encodeURIComponent(slot.url)];
+
+			slot.url   = url;
+			localStorage[encodeURIComponent(slot.url)] = tempStorage;
+			localStorage["date_" + encodeURIComponent(url)] = _date;
+			localStorage["userThumbnail_" + encodeURIComponent(url)] = _userThumbnail;
+			localStorage["emptyThumbnail_" + encodeURIComponent(url)] = _emptyThumbnail;
+
+			var found = false;
+			for (var i=0;i<slots.length;i++) {
+				if (slots[i]) {
+					if (slots[i].url==lastURL) {
+						found = true;
+						break;
+					}
+				}
+			}
+			if (!found) {
+				localStorage[encodeURIComponent(lastURL)] = "";
+			}
+			save()		
+		},
+		refreshThumbnail : function(url){
+			chrome.tabs.captureVisibleTab(null,function(dataurl){
+				chrome.tabs.getSelected(null,function(tab){
+					var canvas = document.createElementNS( "http://www.w3.org/1999/xhtml", "html:canvas" );
+					var ctx = canvas.getContext('2d');		
+					var img = document.createElement('img');
+					img.onload = function(){
+						try{
+							canvas.width=img.width/4
+							canvas.height=img.height/4
+							ctx.drawImage(img,0,0,img.width/4,img.height/4);
+							localStorage[encodeURIComponent(url)]=canvas.toDataURL("image/png","")
+							save();
+						}catch(e){
+							console.log(e)
+						}			
+					}
+					img.src=dataurl;
+				})
+			});		
+		},
+		setThumbnail : function(index, url, callback){
+
+			var slot = slots[index]
+			var canvas = document.createElementNS( "http://www.w3.org/1999/xhtml", "html:canvas" );
+			var ctx = canvas.getContext('2d');		
+			var img = document.createElement('img');
+			img.onload = function(){
+				try{
+					if ((img.width>250) || (img.height>250)) {
+						if (img.width>img.height) {
+							canvas.width=250
+							canvas.height=(img.height/img.width) * 250
+						} else {
+							canvas.width=(img.width/img.height) * 250
+							canvas.height=250;
+						}
+					} else {
+					    canvas.width = img.width;
+						canvas.height = img.height;
+					}
+					ctx.drawImage(img,0,0, canvas.width, canvas.height);
+					localStorage[encodeURIComponent(slot.url)]=canvas.toDataURL("image/png","")
+					localStorage["userThumbnail_" + encodeURIComponent(slot.url)] = true;
+					localStorage["emptyThumbnail_" + encodeURIComponent(slot.url)] = "";
+					save();
+					if (callback) callback.apply(this, [index, localStorage[encodeURIComponent(slot.url)]]);
+				}catch(e){
+					console.log(e)
+				}			
+			}
+			img.onerror = function(){
+				localStorage["userThumbnail_" + encodeURIComponent(slot.url)] = "";
+				localStorage["emptyThumbnail_" + encodeURIComponent(slot.url)] = true;
+				localStorage[encodeURIComponent(slot.url)] = "";
+				if (callback) callback.apply(this, [-1]);
+			}
+			img.src = url;	
+		},
+		get : function(){
+			var thumbs=[];
+			for (var i=0,length=slots.length;i<length;i++){
+				if (slots[i] == null)
+					continue
+				var title=slots[i].title
+				var url=slots[i].url
+				var favIcon=slots[i].favIcon
+				thumbs.push({
+					title : title,
+					url   : url,
+					favIcon   : favIcon,
+					pos	  : i,
+					thumbnailURL : localStorage[encodeURIComponent(url)]
+				})
+			}
+			return thumbs;		
+		}
+	}
+}()
+
+var rcList = new Array();
+var tabsList = new Array();
+chrome.tabs.onCreated.addListener(function(tab) {
+	tabsList[tab.id+""] = {
+		url     : tab.url,
+		title   : tab.title,
+		favIcon : tab.favIconUrl 
+	}
+});
+chrome.tabs.onUpdated.addListener(function(tabId, object , tab) {
+	tabsList[tab.id+""] = {
+		url     : tab.url,
+		title   : tab.title,
+		favIcon : tab.favIconUrl 
+	}
+});
+chrome.tabs.onRemoved.addListener(function(tabId) {
+	if (tabsList[tabId+""]!=null) {
+		addToRC(tabsList[tabId+""]);
+	}
+});
+chrome.tabs.onSelectionChanged.addListener(function(tabId, object) {
+	checkEmptyPreview();
+	chrome.tabs.getSelected(null, function (tab) {
+		if (localStorage["displayPageIcon"]!="false") {
+			chrome.pageAction.setIcon({tabId:tabs[j].id,path:"icons/16.png"})
+			chrome.pageAction.show(tab.id)	
+		}
+
+		tabsList[tab.id+""] = {
+			url     : tab.url,
+			title   : tab.title,
+			favIcon : tab.favIconUrl 
+		}		
+	})
+});
+chrome.tabs.onUpdated.addListener(function(tabId, info, tab) {
+	checkEmptyPreview();
+	if (tab.selected) {
+		if (tab.url) {
+		    var eURL = encodeURIComponent(tab.url);
+			if ((localStorage["refresh"]!=null) || (localStorage["emptyThumbnail_" + eURL])){
+				
+				var thumb = localStorage[eURL]
+				var userThumbnail = localStorage["userThumbnail_" + eURL]
+				if ((thumb!="undefined") && (thumb!=null) && (thumb!="") && (userThumbnail!=true) && (userThumbnail!="true")) {
+					var updatedDate = localStorage["date_" + eURL]
+					if (updatedDate) {
+						var d = new Date();
+						var timediff = d.getTime() - updatedDate;
+						hoursDiff = Math.floor(timediff / (1000 * 60 * 60)); 
+						if (updatedDate>=localStorage["refresh"]) {
+							api.refreshThumbnail(tab.url);
+							localStorage["date_" + eURL] = d.getTime();
+						}
+					} else {
+						api.refreshThumbnail(tab.url);
+						var d = new Date();
+						localStorage["date_" + eURL] = d.getTime();
+					}
+				} else {
+					var emptyThumbnail = localStorage["emptyThumbnail_" + eURL]
+					if (emptyThumbnail) {
+						api.refreshThumbnail(tab.url);
+						var d = new Date();
+						localStorage["date_" + eURL] = d.getTime();
+					}
+				}
+			}
+		}
+	}
+	if (localStorage["displayPageIcon"]!="false") {
+		chrome.pageAction.setIcon({tabId:tabId,path:"icons/16.png"})
+		chrome.pageAction.show(tabId)
+	}
+});
+
+function addToRC(tab) {
+	var rcString = localStorage["rc"];
+	if ((rcString==null) || (rcString=="null") || (rcString=="")) {
+		var rc = { list: new Array()}
+	} else {
+		var rc = JSON.parse(rcString);
+	}
+
+	var list = rc.list;
+	if (list.length==0) {
+		list.push(tab)
+	} else {
+		var maxItems = 10;
+		var found = false;
+		for (var i=0;i<list.length;i++) {
+			if ((list[i].url==tab.url) && (list[i].title==tab.title)) {
+				list.splice(i, 1)
+				list.unshift(tab);
+				found = true;
+				break;
+			}
+		}
+		if (!found) {
+			list.unshift(tab)
+			if (list.length>maxItems) {
+				list.pop();
+			}
+		}
+	}
+	var rcString = JSON.stringify(rc, function (key, value) {
+		return value;
+	});
+	localStorage["rc"] = rcString;
+}
+
+function getRC(tab) {
+	var rcString = localStorage["rc"];
+	if ((rcString==null) || (rcString=="null") || (rcString=="")) {
+		var rc = { list: new Array()}
+	} else {
+		var rc = JSON.parse(rcString);
+	}
+
+	return rc.list;
+}
+
+if ((localStorage["firstRun"]!="false") && (localStorage["firstRun"]!=false)){
+  chrome.tabs.create({url: "welcome/welcome.html", selected:true})
+  localStorage["firstRun"] = false;
+  localStorage["ver"]      = "2.0";
+} else {
+  if (localStorage["ver"]!="2.0") {
+	  chrome.tabs.create({url: "welcome/changelog.html", selected:true})
+	  localStorage["ver"]      = "2.0";  
+  }
+}
+
+chrome.extension.onRequest.addListener(
+  function(request, sender, sendResponse) {
+	 if (request.a=="add") {
+		if ((localStorage["addPageShortcut"]!=null) && (localStorage["addPageShortcut"]!="") && (localStorage["addPageShortcut"]!=0)){
+			var addPage = false;
+			
+			if (request.altKey) {
+				if ((localStorage["addPageShortcut"]==1) && (request.keyCode==81)) {
+					addPage = true;
+				} else if ((localStorage["addPageShortcut"]==2) && (request.keyCode==65)) {
+					addPage = true;
+				} else if ((localStorage["addPageShortcut"]==3) && (request.keyCode==83)) {
+					addPage = true;
+				} else if ((localStorage["addPageShortcut"]==4) && (request.keyCode==82)) {
+				
+					addPage = true;
+				}
+			}
+			if (addPage) {
+				 api.addCurrent();
+				 alert("Page added to Speed Dial");
+			}
+		}
+	 }
+});
+
+function checkEmptyPreview() {
+	if ((localStorage["emptyPreview"]!="") && (localStorage["emptyPreview"]!=null)) {
+	   chrome.tabs.getSelected(null, function (tab) {
+			var a = localStorage["emptyPreview"].split("^");
+			if (tab.status=="complete") {
+				setTimeout(function() {
+					if (a[0]==tab.id+"") {
+						api.refreshThumbnail(a[1]);
+						localStorage["emptyPreview"] = "";
+					}
+				}, 300);
+			} else {
+				setTimeout(function() {
+					if (a[0]==tab.id+"") {
+						api.refreshThumbnail(a[1]);
+					}
+				}, 1500);
+			}
+	   });	
+   }
+}
+
+chrome.windows.getAll({populate:true},function(windows){
+	if (localStorage["displayPageIcon"]!="false") {
+		for (var i=0;i<windows.length;i++){
+			var tabs = windows[i].tabs
+			for (var j=0;j<tabs.length;j++) {
+					chrome.pageAction.setIcon({tabId:tabs[j].id,path:"icons/16.png"})
+					chrome.pageAction.show(tabs[j].id)	
+			}
+		}
+	}
+})
+
+</script>
+
+
+
+
+
+

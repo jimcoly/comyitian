@@ -1,0 +1,14 @@
+{
+   "background_page": "background.html",
+   "description": "Read It Later extension for Chrome",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwbh2eeQC/QNsLrMy68ddyRpSYfEQ0Czd8Cm30yeTBIxoys0WGG5QB6M7pJhVR5QvEhRX+ZhM13T0+aNHEWoPi5M0F48T0p2zaRMwPBrfhc8ZLRPSo+YuZiV2k4QCuVNag6DDy9S/x4afyZ6vx4NyDPPqHLJDztv/oegFKGGztVwIDAQAB",
+   "name": "ChromeRIL",
+   "options_page": "options.html",
+   "page_actions": [ {
+      "icons": [ "checkmark-notadded.png", "checkmark-red.png", "notauthenticated.png" ],
+      "id": "addforlater",
+      "name": "Read This Page Later"
+   } ],
+   "permissions": [ "https://readitlaterlist.com/v2/*", "tabs", "bookmarks" ],
+   "version": "1.0.0"
+}

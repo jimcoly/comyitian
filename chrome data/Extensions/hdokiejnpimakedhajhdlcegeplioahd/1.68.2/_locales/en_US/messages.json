@@ -1,0 +1,1541 @@
+{
+   "0_9": {
+      "message": "0-9"
+   },
+   "1Password": {
+      "message": "1Password"
+   },
+   "1__Insert_your_YubiKey_in_the_USB_port_with_the_USB_contact_facing_upward": {
+      "message": "1. Insert your YubiKey in the USB-port with the USB-contact facing upward"
+   },
+   "1__Run_the_LastPass_Sesame_application_to_generate_a_one_time_password": {
+      "message": "1. Run the LastPass Sesame application to generate a one time password"
+   },
+   "2__Paste_the_one_time_password_in_the_input_box_below_and_click__Authenticate_": {
+      "message": "2. Paste the one time password in the input box below and click 'Authenticate'"
+   },
+   "2__Wait_until_your_YubiKey_touch_button_shines_with_a_steady_light": {
+      "message": "2. Wait until your YubiKey touch-button shines with a steady light"
+   },
+   "3__Hold_your_fingertip_on_the_touch_button_for_2_seconds": {
+      "message": "3. Hold your fingertip on the touch-button for 2 seconds"
+   },
+   "ACTION": {
+      "message": "ACTION"
+   },
+   "A_Zupper": {
+      "message": "A-Z"
+   },
+   "A_required_update_is_available_for_LastPass__Please_press_OK_to_begin_download_and_installation_": {
+      "message": "A required update is available for LastPass. Please press OK to begin download and installation."
+   },
+   "A_retry_file_has_been_found__This_likely_means_that_not_all_of_your_site_changes_have_been_saved__Would_you_like_to_delete_this_file_and_potentially_lose_some_changes_": {
+      "message": "A retry file has been found. This likely means that not all of your site changes have been saved. Would you like to delete this file and potentially lose some changes?"
+   },
+   "A_server_error_occurred_while_processing_your_request_": {
+      "message": "A server error occurred while processing your request."
+   },
+   "About___": {
+      "message": "About..."
+   },
+   "Accept": {
+      "message": "Accept"
+   },
+   "Account_Settings": {
+      "message": "Account Settings"
+   },
+   "Account_number": {
+      "message": "Account number"
+   },
+   "Actionproper": {
+      "message": "Action"
+   },
+   "Add": {
+      "message": "Add"
+   },
+   "Add_Credit_Card": {
+      "message": "Add Credit Card"
+   },
+   "Add_Credit_Card_profile": {
+      "message": "Add Credit Card profile"
+   },
+   "Add_Field": {
+      "message": "Add Field"
+   },
+   "Add_Form_Fill_profile": {
+      "message": "Add Form Fill profile"
+   },
+   "Add_Identity": {
+      "message": "Add Identity"
+   },
+   "Add_New_Site": {
+      "message": "Add New Site"
+   },
+   "Add_Profile": {
+      "message": "Add Profile"
+   },
+   "Add_Secure_Note": {
+      "message": "Add Secure Note"
+   },
+   "Add_Site": {
+      "message": "Add Site"
+   },
+   "Add_another_custom_field": {
+      "message": "Add another custom field"
+   },
+   "Address": {
+      "message": "Address"
+   },
+   "Address_1": {
+      "message": "Address 1"
+   },
+   "Address_2": {
+      "message": "Address 2"
+   },
+   "Address_3": {
+      "message": "Address 3"
+   },
+   "Advanced": {
+      "message": "Advanced"
+   },
+   "All": {
+      "message": "All"
+   },
+   "Allow_LastPass_to_find_insecure_data_on_your_computer_": {
+      "message": "Allow LastPass to find insecure data on your computer?"
+   },
+   "Alt": {
+      "message": "Alt"
+   },
+   "Alter_the_below_information_to_edit_the_Credit_Card_profile": {
+      "message": "Alter the below information to edit the Credit Card profile"
+   },
+   "Alter_the_below_information_to_edit_the_Form_Fill_profile": {
+      "message": "Alter the below information to edit the Form Fill profile"
+   },
+   "Always_Choose_Profile_and_Credit_Card": {
+      "message": "Always Choose Profile and Credit Card"
+   },
+   "An_Update_is_Available__Would_you_like_to_install_": {
+      "message": "An Update is Available. Would you like to install?"
+   },
+   "An_error_has_been_encountered_while_loading_your_sites__Please_relogin_": {
+      "message": "An error has been encountered while loading your sites. Please relogin."
+   },
+   "An_error_occurred": {
+      "message": "An error occurred"
+   },
+   "An_error_occurred_while_importing_your_Google_Chrome_passwords_": {
+      "message": "An error occurred while importing your Google Chrome passwords."
+   },
+   "Appearance": {
+      "message": "Appearance"
+   },
+   "April": {
+      "message": "April"
+   },
+   "Arbitrary_notes_to_store_along_with_this_Form_Fill_profile": {
+      "message": "Arbitrary notes to store along with this Form Fill profile"
+   },
+   "Are_you_sure_you_want_to_have_LastPass_remember_your_password___This_will_significantly_decrease_the_security_of_your_LastPass_account_": {
+      "message": "Are you sure you want to have LastPass remember your password?  This will significantly decrease the security of your LastPass account!"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_field_": {
+      "message": "Are you sure you would like to delete this field?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_form_fill_profile_": {
+      "message": "Are you sure you would like to delete this form fill profile?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_generated_password_": {
+      "message": "Are you sure you would like to delete this generated password?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_group_": {
+      "message": "Are you sure you would like to delete this group?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_never_URL_": {
+      "message": "Are you sure you would like to delete this never URL?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_secure_note_": {
+      "message": "Are you sure you would like to delete this secure note?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_site_": {
+      "message": "Are you sure you would like to delete this site?"
+   },
+   "August": {
+      "message": "August"
+   },
+   "Authenticate": {
+      "message": "Authenticate"
+   },
+   "Authentication_Failed_": {
+      "message": "Authentication Failed."
+   },
+   "AutoFill": {
+      "message": "AutoFill"
+   },
+   "AutoLogin": {
+      "message": "AutoLogin"
+   },
+   "Automatically_Fill_Login_Information": {
+      "message": "Automatically Fill Login Information"
+   },
+   "Automatically_Logoff_after_idle__mins_": {
+      "message": "Automatically Logoff after idle (mins)"
+   },
+   "Automatically_Logoff_when_all_browsers_are_closed_and_Chrome_has_been_closed_for__mins_": {
+      "message": "Automatically Logoff when all browsers are closed and Chrome has been closed for (mins)"
+   },
+   "Automatically_login_to_sites_if_time_since_last_login____seconds_": {
+      "message": "Automatically login to sites if time since last login \u003E (seconds)"
+   },
+   "Avoid_Ambiguous_Characters": {
+      "message": "Avoid Ambiguous Characters"
+   },
+   "Bank_account": {
+      "message": "Bank account"
+   },
+   "Bank_name": {
+      "message": "Bank name"
+   },
+   "Binary_Component_": {
+      "message": "Binary Component:"
+   },
+   "Birthday": {
+      "message": "Birthday"
+   },
+   "Blacklist": {
+      "message": "Your account has been temporarily suspended (for 5 minutes) because of too many login attempt failures."
+   },
+   "Blog": {
+      "message": "Blog"
+   },
+   "Browse_the_web_as_you_normally_would_and_LastPass_will_automatically_remember_passwords_as_you_enter_them_": {
+      "message": "Browse the web as you normally would and LastPass will automatically remember passwords as you enter them."
+   },
+   "Built_": {
+      "message": "Built:"
+   },
+   "But_I_m_a_forgetful_person___what_should_I_do_if_I_forget_my_password_": {
+      "message": "But I'm a forgetful person...what should I do if I forget my password?"
+   },
+   "Can_t_find_hidden_LastPass_window": {
+      "message": "Can't find hidden LastPass window"
+   },
+   "Cancel": {
+      "message": "Cancel"
+   },
+   "Change": {
+      "message": "Change"
+   },
+   "Change_Password": {
+      "message": "Change Password"
+   },
+   "Check_For_Updates": {
+      "message": "Check For Updates"
+   },
+   "Checkbox": {
+      "message": "Checkbox"
+   },
+   "Checking_For_Updates___": {
+      "message": "Checking For Updates..."
+   },
+   "Choose_Profile_and_Credit_Card": {
+      "message": "Choose Profile and Credit Card"
+   },
+   "City___Town": {
+      "message": "City / Town"
+   },
+   "Clear": {
+      "message": "Clear"
+   },
+   "Clear_Clipboard_after_use__seconds_": {
+      "message": "Clear Clipboard after use (seconds)"
+   },
+   "Clear_Forms": {
+      "message": "Clear Forms"
+   },
+   "Clear_Local_Cache": {
+      "message": "Clear Local Cache"
+   },
+   "Clear_Recent": {
+      "message": "Clear Recent"
+   },
+   "Click_Continue_to_start_using_LastPass_": {
+      "message": "Click Continue to start using LastPass."
+   },
+   "Click_here_to_launch_account_settings": {
+      "message": "Click here to launch account settings"
+   },
+   "Click_here_to_launch_feedback": {
+      "message": "Click here to launch feedback"
+   },
+   "Click_here_to_watch_a_video_on_basic_usage_": {
+      "message": "Click here to watch a video on basic usage."
+   },
+   "Close": {
+      "message": "Close"
+   },
+   "Close_this_window": {
+      "message": "Close this window"
+   },
+   "Collapse_All": {
+      "message": "Collapse All"
+   },
+   "Company": {
+      "message": "Company"
+   },
+   "Complete_the_below_information_to_add_a_new_Credit_Card_profile": {
+      "message": "Complete the below information to add a new Credit Card profile"
+   },
+   "Complete_the_below_information_to_add_a_new_Form_Fill_profile": {
+      "message": "Complete the below information to add a new Form Fill profile"
+   },
+   "Configure_Form_Fill": {
+      "message": "Configure Form Fill"
+   },
+   "Confirm": {
+      "message": "Confirm"
+   },
+   "Confirm_Password": {
+      "message": "Confirm Password"
+   },
+   "Congratulations": {
+      "message": "Congratulations"
+   },
+   "Contact": {
+      "message": "Contact"
+   },
+   "Continue": {
+      "message": "Continue"
+   },
+   "Copy": {
+      "message": "Copy"
+   },
+   "Copy_Password": {
+      "message": "Copy Password"
+   },
+   "Copy_Username": {
+      "message": "Copy Username"
+   },
+   "Copyright_2008_LastPass__All_Rights_Reserved__Portions_of_this_software_were_licensed_from_third_parties_as_described_at_": {
+      "message": "Copyright 2008 LastPass. All Rights Reserved.\nPortions of this software were licensed from third parties as described at:"
+   },
+   "Country": {
+      "message": "Country"
+   },
+   "County": {
+      "message": "County"
+   },
+   "Create_Account": {
+      "message": "Create Account"
+   },
+   "Create_Sub_Group": {
+      "message": "Create Sub-Group"
+   },
+   "Create_an_Account": {
+      "message": "Create an Account"
+   },
+   "Creating_Account___": {
+      "message": "Creating Account..."
+   },
+   "Credit_card": {
+      "message": "Credit card"
+   },
+   "Credit_card_number": {
+      "message": "Credit card number"
+   },
+   "Ctrl": {
+      "message": "Ctrl"
+   },
+   "Custom_Value": {
+      "message": "Custom Value"
+   },
+   "Custom_field__": {
+      "message": "Custom field #"
+   },
+   "Custom_fields": {
+      "message": "Custom fields"
+   },
+   "December": {
+      "message": "December"
+   },
+   "Default_Form_Fill_Profile": {
+      "message": "Default Form Fill Profile"
+   },
+   "Delete": {
+      "message": "Delete"
+   },
+   "Delete_Group": {
+      "message": "Delete Group"
+   },
+   "Delete_this_form_fill_profile": {
+      "message": "Delete this form fill profile"
+   },
+   "Disable_Insecure_Chrome_Password_Manager": {
+      "message": "Disable Insecure Chrome Password Manager"
+   },
+   "Disable_Multifactor_Authentication": {
+      "message": "Disable Multifactor Authentication"
+   },
+   "Disable_Single_factor_Authentication": {
+      "message": "Disable Single-factor Authentication"
+   },
+   "Discard_changes_and_close_this_window": {
+      "message": "Discard changes and close this window"
+   },
+   "Do_not_overwrite_fields_that_are_already_filled": {
+      "message": "Do not overwrite fields that are already filled"
+   },
+   "Do_not_re_prompt_for_": {
+      "message": "Do not re-prompt for "
+   },
+   "Do_you_really_want_to_quit___You_cannot_use_LastPass_without_creating_an_account_": {
+      "message": "Do you really want to quit?  You cannot use LastPass without creating an account."
+   },
+   "Down": {
+      "message": "Down"
+   },
+   "Dr": {
+      "message": "Dr"
+   },
+   "Dutch": {
+      "message": "Dutch"
+   },
+   "Edit": {
+      "message": "Edit"
+   },
+   "Edit_Credit_Card_profile": {
+      "message": "Edit Credit Card profile"
+   },
+   "Edit_Form_Fields": {
+      "message": "Edit Form Fields"
+   },
+   "Edit_Form_Fill_profile": {
+      "message": "Edit Form Fill profile"
+   },
+   "Email": {
+      "message": "Email"
+   },
+   "Email_address": {
+      "message": "Email address"
+   },
+   "Email_already_in_use__have_you_forgotten_your_password_": {
+      "message": "Email already in use, have you forgotten your password?"
+   },
+   "End": {
+      "message": "End"
+   },
+   "English": {
+      "message": "English"
+   },
+   "Enter_arbitrary_notes": {
+      "message": "Enter arbitrary notes"
+   },
+   "ErrorGetAcctsMsg": {
+      "message": "An error occurred while retrieving your LastPass sites. Please try to log back in to retrieve your sites."
+   },
+   "ErrorLoginMsg": {
+      "message": "An error occurred while logging into LastPass. Please check your Internet connection."
+   },
+   "ErrorSendingMsg": {
+      "message": "An error occurred while attempting to contact the server. Please check your Internet connection."
+   },
+   "ErrorSessionMsg": {
+      "message": "Your LastPass session appears to have expired. Please re-login."
+   },
+   "Evening_number": {
+      "message": "Evening number"
+   },
+   "ExistingUsersOTPPrompt": {
+      "message": "LastPass can now store a One Time Password (OTP) locally that can be used to recover your account if you forget your Master Password. This OTP will remain disabled until it is activated on the server.\n\nWould you like to activate account recovery?"
+   },
+   "Expand_All": {
+      "message": "Expand All"
+   },
+   "Expiration_date": {
+      "message": "Expiration date"
+   },
+   "Export_To": {
+      "message": "Export To"
+   },
+   "Favorite": {
+      "message": "Favorite"
+   },
+   "Fax_number": {
+      "message": "Fax number"
+   },
+   "February": {
+      "message": "February"
+   },
+   "Feedback": {
+      "message": "Feedback"
+   },
+   "Female": {
+      "message": "Female"
+   },
+   "Fields_": {
+      "message": "Fields:"
+   },
+   "Fill_Current": {
+      "message": "Fill Current"
+   },
+   "Fill_Form": {
+      "message": "Fill Form"
+   },
+   "Fill_Forms": {
+      "message": "Fill Forms"
+   },
+   "Fill_In_Default_Form_Fill_Profile": {
+      "message": "Fill In Default Form Fill Profile"
+   },
+   "Fill_In_Next_Login__When_Multiple_": {
+      "message": "Fill In Next Login (When Multiple)"
+   },
+   "Fill_In_Previous_Login__When_Multiple_": {
+      "message": "Fill In Previous Login (When Multiple)"
+   },
+   "FillableFormDetected": {
+      "message": "A fillable form has been detected on this page."
+   },
+   "Find_a_site": {
+      "message": "Find a site"
+   },
+   "Firefox_Password_Manager": {
+      "message": "Firefox Password Manager"
+   },
+   "First_3_digits_of_your_phone_number": {
+      "message": "First 3 digits of your phone number"
+   },
+   "First_name": {
+      "message": "First name"
+   },
+   "For_each_coordinate_listed_below__find_the_value_on_your_grid_and_enter_the_value_": {
+      "message": "For each coordinate listed below, find the value on your grid and enter the value."
+   },
+   "Form_Fill": {
+      "message": "Form Fill"
+   },
+   "Form_Name_": {
+      "message": "Form Name:"
+   },
+   "Forums": {
+      "message": "Forums"
+   },
+   "Gender": {
+      "message": "Gender"
+   },
+   "General": {
+      "message": "General"
+   },
+   "Generate": {
+      "message": "Generate"
+   },
+   "GeneratePassword": {
+      "message": "If you're creating an account or changing your password, hit generate to create a unique, secure password with LastPass."
+   },
+   "Generate_Secure_Password": {
+      "message": "Generate Secure Password"
+   },
+   "Generated_Password_for": {
+      "message": "Generated Password for"
+   },
+   "Generic_CSV_File": {
+      "message": "Generic CSV File"
+   },
+   "Go_Premium_": {
+      "message": "Go Premium!"
+   },
+   "Go_to_URL": {
+      "message": "Go to URL"
+   },
+   "Google_Chrome": {
+      "message": "Google Chrome"
+   },
+   "Google_Chrome_Password_Manager": {
+      "message": "Google Chrome Password Manager"
+   },
+   "Group_": {
+      "message": "Group:"
+   },
+   "Help_Translate": {
+      "message": "Help Translate"
+   },
+   "Help___": {
+      "message": "Help..."
+   },
+   "Highlight_input_boxes": {
+      "message": "Highlight input boxes"
+   },
+   "History": {
+      "message": "History"
+   },
+   "Home": {
+      "message": "Home"
+   },
+   "HotKeys": {
+      "message": "HotKeys"
+   },
+   "IMPORT_": {
+      "message": "IMPORT?"
+   },
+   "IT_IS_CRITICAL_THAT_YOU_NEVER_FORGET_YOUR_NEW_LASTPASS_PASSWORD_": {
+      "message": "IT IS CRITICAL THAT YOU NEVER FORGET YOUR NEW LASTPASS PASSWORD."
+   },
+   "I_forgot_my_password__Help_": {
+      "message": "I forgot my password, Help"
+   },
+   "I_have_read_and_agree_with_the": {
+      "message": "I have read and agree with the"
+   },
+   "I_understand_that_my_encrypted_data_will_be_sent_to_LastPass": {
+      "message": "I understand that my encrypted data will be sent to LastPass"
+   },
+   "Identities": {
+      "message": "Identities"
+   },
+   "Identity": {
+      "message": "Identity"
+   },
+   "If_checked__you_will_be_asked_to_re_enter_your_master_password_before_being_able_to_access_this_Form_Fill_profile": {
+      "message": "If checked, you will be asked to re-enter your master password\nbefore being able to access this Form Fill profile"
+   },
+   "If_you_already_have_a_LastPass_account_you_can_close_this_window_and_login_": {
+      "message": "If you already have a LastPass account you can close this window and login."
+   },
+   "If_you_do_end_up_forgetting_your_LastPass_master_password_": {
+      "message": "If you do end up forgetting your LastPass master password,"
+   },
+   "If_you_lost_your_Sesame_device__click_here_to_disable_Sesame_authentication": {
+      "message": "If you lost your Sesame device, click here to disable Sesame authentication"
+   },
+   "If_you_lost_your_YubiKey_device__click_here_to_disable_YubiKey_authentication": {
+      "message": "If you lost your YubiKey device, click here to disable YubiKey authentication"
+   },
+   "If_you_lost_your_grid__click_here_to_disable_grid_authentication": {
+      "message": "If you lost your grid, click here to disable grid authentication"
+   },
+   "Import": {
+      "message": "Import"
+   },
+   "Import_From": {
+      "message": "Import From"
+   },
+   "Import_Your_Data": {
+      "message": "Import Your Data"
+   },
+   "Importing_your_data_to_your_LastPass_vault_will_secure_it_and_protect_you_against_identity_theft__All_imported_data_remains_COMPLETELY_confidential__the_only_person_who_can_view_YOUR_data_is_YOU_": {
+      "message": "Importing your data to your LastPass vault will secure it and protect you against identity theft. All imported data remains COMPLETELY confidential: the only person who can view YOUR data is YOU."
+   },
+   "Install_the_binary_version_of_LastPass_for_Chrome_to_enable_automatic_logoff_after_idle": {
+      "message": "Install the binary version of LastPass for Chrome to enable automatic logoff after idle"
+   },
+   "Install_the_binary_version_of_LastPass_for_Chrome_to_enable_importing_passwords_from_Google_Chrome_password_manager": {
+      "message": "Install the binary version of LastPass for Chrome to enable importing passwords from Google Chrome password manager"
+   },
+   "Install_the_binary_version_of_LastPass_for_Chrome_to_enable_sharing_login_state_between_other_browsers": {
+      "message": "Install the binary version of LastPass for Chrome to enable sharing login state between other browsers"
+   },
+   "Instructions": {
+      "message": "Instructions"
+   },
+   "Invalid_Password_": {
+      "message": "Invalid Password."
+   },
+   "Invalid_email_address__try_again": {
+      "message": "Invalid email address, try again"
+   },
+   "Issue_number": {
+      "message": "Issue number"
+   },
+   "January": {
+      "message": "January"
+   },
+   "July": {
+      "message": "July"
+   },
+   "June": {
+      "message": "June"
+   },
+   "KeePass": {
+      "message": "KeePass"
+   },
+   "Keep_a_history_of_my_logins_and_form_fills": {
+      "message": "Keep a history of my logins and form fills"
+   },
+   "Language": {
+      "message": "Language"
+   },
+   "LastPass": {
+      "message": "LastPass"
+   },
+   "LastPass_CSV_File": {
+      "message": "LastPass CSV File"
+   },
+   "LastPass_Chrome_Toolbar": {
+      "message": "LastPass Chrome Toolbar"
+   },
+   "LastPass_Encrypted_File": {
+      "message": "LastPass Encrypted File"
+   },
+   "LastPass_Grid_Multifactor_Authentication": {
+      "message": "LastPass Grid Multifactor Authentication"
+   },
+   "LastPass_can_automatically_fill_web_page_forms_with_a_single_click___Using_automatic__Form_Filling__will_not_only_save_you_time__but_will_also_enhance_your_security_when_shopping_online_": {
+      "message": "LastPass can automatically fill web page forms with a single click.  Using automatic 'Form Filling' will not only save you time, but will also enhance your security when shopping online."
+   },
+   "LastPass_cannot_login_until_cookies_are_allowed_from_lastpass_com": {
+      "message": "LastPass cannot login until cookies are allowed from lastpass.com"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_like_to_continue_": {
+      "message": "LastPass detected a login form that is insecure.\n\nWould you like to continue?"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_still_like_LastPass_to_fill_the_form_": {
+      "message": "LastPass detected a login form that is insecure.\n\nWould you still like LastPass to fill the form?"
+   },
+   "LastPass_detected_a_password_change_for": {
+      "message": "LastPass detected a password change for"
+   },
+   "LastPass_detected_a_password_change_for_domain_": {
+      "message": "LastPass detected a password change for domain:"
+   },
+   "LastPass_detected_a_password_change_for_user_": {
+      "message": "LastPass detected a password change for user:"
+   },
+   "LastPass_has_filled_your_login_information_into_the_form_on_this_page_": {
+      "message": "LastPass has filled your login information into the form on this page."
+   },
+   "LastPass_is_fully_installed___When_you_install_LastPass_on_other_computers_you_will_not_have_to_go_through_this_process_again__you_ll_simply_be_able_to_login____Do_not_share_your_Master_Password_with_anyone__including_LastPass_employees__we_ll_never_ask_for_it___LastPass_encrypts_your_sensitive_data_locally_so_even_LastPass_employees_do_not_have_access_to_it___You_can_get_help_by_clicking_on_the_LastPass_icon_and_going_to_Help_": {
+      "message": "LastPass is fully installed!  When you install LastPass on other computers you will not have to go through this process again, you'll simply be able to login.   Do not share your Master Password with anyone, including LastPass employees, we'll never ask for it!  LastPass encrypts your sensitive data locally so even LastPass employees do not have access to it.  You can get help by clicking on the LastPass icon and going to Help."
+   },
+   "LastPass_is_the_last_password_you_ll_ever_have_to_remember___If_you_re_new_to_LastPass__we_ll_just_need_a_few_minutes_of_your_time_to_setup_your_account___You_ll_be_able_to_use_this_account_on_any_other_PC_you_use_to_always_keep_your_personal_data_in_sync___Hit_create_account_to_begin_": {
+      "message": "LastPass is the last password you'll ever have to remember.  If you're new to LastPass, we'll just need a few minutes of your time to setup your account.  You'll be able to use this account on any other PC you use to always keep your personal data in sync.  Hit create account to begin."
+   },
+   "Last_4_digits_of_your_phone_number": {
+      "message": "Last 4 digits of your phone number"
+   },
+   "Last_name": {
+      "message": "Last name"
+   },
+   "Left": {
+      "message": "Left"
+   },
+   "LoggedInOffline": {
+      "message": "LastPass was unable to contact the login server, so you are now in offline mode.  Some functionality may be limited."
+   },
+   "Login": {
+      "message": "Login"
+   },
+   "LoginError": {
+      "message": "Error logging into LastPass. Please try again."
+   },
+   "Login_to_LastPass": {
+      "message": "Login to LastPass"
+   },
+   "Logoff": {
+      "message": "Logoff"
+   },
+   "Logoff_": {
+      "message": "Logoff:"
+   },
+   "MSI_PasswordKeeper": {
+      "message": "MSI PasswordKeeper"
+   },
+   "Male": {
+      "message": "Male"
+   },
+   "March": {
+      "message": "March"
+   },
+   "Master_Password": {
+      "message": "Master Password"
+   },
+   "May": {
+      "message": "May"
+   },
+   "Meta": {
+      "message": "Meta"
+   },
+   "Middle_3_digits_of_your_phone_number": {
+      "message": "Middle 3 digits of your phone number"
+   },
+   "Middle_name": {
+      "message": "Middle name"
+   },
+   "Minimum_Digit_Count": {
+      "message": "Minimum Digit Count"
+   },
+   "Mobile_number": {
+      "message": "Mobile number"
+   },
+   "More": {
+      "message": "More"
+   },
+   "Move_to_Group": {
+      "message": "Move to Group"
+   },
+   "Mr": {
+      "message": "Mr"
+   },
+   "Mrs": {
+      "message": "Mrs"
+   },
+   "Ms": {
+      "message": "Ms"
+   },
+   "MyPasswordSafe": {
+      "message": "MyPasswordSafe"
+   },
+   "My_LastPass_Vault": {
+      "message": "My LastPass Vault"
+   },
+   "NAME": {
+      "message": "NAME"
+   },
+   "Name_": {
+      "message": "Name:"
+   },
+   "Name_on_card": {
+      "message": "Name on card"
+   },
+   "Nameproper": {
+      "message": "Name"
+   },
+   "Never_Add_Site": {
+      "message": "Never Add Site"
+   },
+   "Never_AutoFill": {
+      "message": "Never AutoFill"
+   },
+   "Never_AutoLogin": {
+      "message": "Never AutoLogin"
+   },
+   "Never_Fill_Forms": {
+      "message": "Never Fill Forms"
+   },
+   "Never_For_This_Domain": {
+      "message": "Never For This Domain"
+   },
+   "Never_For_This_Page": {
+      "message": "Never For This Page"
+   },
+   "Never_For_This_Site": {
+      "message": "Never For This Site"
+   },
+   "Never_Generate_Password": {
+      "message": "Never Generate Password"
+   },
+   "Never___": {
+      "message": "Never..."
+   },
+   "New_Master_Password": {
+      "message": "New Master Password"
+   },
+   "No": {
+      "message": "No"
+   },
+   "No_Thanks": {
+      "message": "No Thanks"
+   },
+   "No_Updates_Are_Available": {
+      "message": "No Updates Are Available"
+   },
+   "No__I_do_not_want_LastPass_to_help_me_fill_forms_automatically": {
+      "message": "No, I do not want LastPass to help me fill forms automatically"
+   },
+   "No__do_not_import_any_of_my_insecure_items": {
+      "message": "No, do not import any of my insecure items"
+   },
+   "None_Available": {
+      "message": "None Available"
+   },
+   "Not_Now": {
+      "message": "Not Now"
+   },
+   "Notes": {
+      "message": "Notes"
+   },
+   "Notes_": {
+      "message": "Notes:"
+   },
+   "Notifications": {
+      "message": "Notifications"
+   },
+   "November": {
+      "message": "November"
+   },
+   "OK": {
+      "message": "OK"
+   },
+   "October": {
+      "message": "October"
+   },
+   "Offer_to_Generate_Secure_Passwords": {
+      "message": "Offer to Generate Secure Passwords"
+   },
+   "Old_Password": {
+      "message": "Old Password"
+   },
+   "Open_All": {
+      "message": "Open All"
+   },
+   "Open_Favorites": {
+      "message": "Open Favorites"
+   },
+   "Open_My_LastPass_Vault": {
+      "message": "Open My LastPass Vault"
+   },
+   "Open_New_Pages_in": {
+      "message": "Open New Pages in"
+   },
+   "Open_login_dialog_when_start_browser": {
+      "message": "Open login dialog when start browser"
+   },
+   "Other": {
+      "message": "Other"
+   },
+   "Other_Sessions": {
+      "message": "Other Sessions"
+   },
+   "PASSWORDupper": {
+      "message": "PASSWORD"
+   },
+   "Page_Down": {
+      "message": "Page Down"
+   },
+   "Page_Up": {
+      "message": "Page Up"
+   },
+   "Passpack": {
+      "message": "Passpack"
+   },
+   "Password": {
+      "message": "Password"
+   },
+   "Password_": {
+      "message": "Password:"
+   },
+   "Password_Agent": {
+      "message": "Password Agent"
+   },
+   "Password_Keeper": {
+      "message": "Password Keeper"
+   },
+   "Password_Length": {
+      "message": "Password Length"
+   },
+   "Password_Reminder": {
+      "message": "Password Reminder"
+   },
+   "Password_Safe": {
+      "message": "Password Safe"
+   },
+   "Password_reminder_cannot_match_password": {
+      "message": "Password reminder cannot match password"
+   },
+   "Password_updated_": {
+      "message": "Password updated!"
+   },
+   "Personal": {
+      "message": "Personal"
+   },
+   "Phone_number": {
+      "message": "Phone number"
+   },
+   "Please_Make_a_Selection": {
+      "message": "Please Make a Selection"
+   },
+   "Please_enter_a_Password_Reminder": {
+      "message": "Please enter a Password Reminder"
+   },
+   "Please_provide_this_computer_a_name": {
+      "message": "Please provide this computer a name"
+   },
+   "Please_restart_all_your_browsers_to_begin_using_LastPass_Online_": {
+      "message": "Please restart all your browsers to begin using LastPass Online."
+   },
+   "Please_select": {
+      "message": "Please select"
+   },
+   "Please_select_which_sites_you_wish_to_apply_this_change_": {
+      "message": "Please select which sites you wish to apply this change."
+   },
+   "Please_visit_https___lastpass_com_to_create_an_account_at_a_later_time_": {
+      "message": "Please visit https://lastpass.com to create an account at a later time."
+   },
+   "Poll_Server_for_account_changes__mins_": {
+      "message": "Poll Server for account changes (mins)"
+   },
+   "Preferences": {
+      "message": "Preferences"
+   },
+   "Print": {
+      "message": "Print"
+   },
+   "Profile": {
+      "message": "Profile"
+   },
+   "Profile_language": {
+      "message": "Profile language"
+   },
+   "Profile_name": {
+      "message": "Profile name"
+   },
+   "Re_enter_Password": {
+      "message": "Re-enter Password"
+   },
+   "Recently_Used": {
+      "message": "Recently Used"
+   },
+   "Recheck_Page": {
+      "message": "Recheck Page"
+   },
+   "Reencrypting_Data___": {
+      "message": "Reencrypting Data..."
+   },
+   "Refresh_Sites": {
+      "message": "Refresh Sites"
+   },
+   "Reject": {
+      "message": "Reject"
+   },
+   "Remember_Email": {
+      "message": "Remember Email"
+   },
+   "Remember_Password": {
+      "message": "Remember Password"
+   },
+   "Rename_Group": {
+      "message": "Rename Group"
+   },
+   "Replace_Existing_Site": {
+      "message": "Replace Existing Site"
+   },
+   "Require_Every_Character_Type": {
+      "message": "Require Every Character Type"
+   },
+   "Require_Password_Reprompt": {
+      "message": "Require Password Reprompt"
+   },
+   "Respect_AutoComplete_off__allow_websites_to_disable_AutoFill": {
+      "message": "Respect AutoComplete=off: allow websites to disable AutoFill"
+   },
+   "Right": {
+      "message": "Right"
+   },
+   "RoboForm": {
+      "message": "RoboForm"
+   },
+   "Routing_number": {
+      "message": "Routing number"
+   },
+   "SITE": {
+      "message": "SITE"
+   },
+   "Save": {
+      "message": "Save"
+   },
+   "Save_All_Entered_Data": {
+      "message": "Save All Entered Data"
+   },
+   "Save_Credit_Card_profile": {
+      "message": "Save Credit Card profile"
+   },
+   "Save_Form_Fill_profile": {
+      "message": "Save Form Fill profile"
+   },
+   "Save_New_Site": {
+      "message": "Save New Site"
+   },
+   "Save_Site": {
+      "message": "Save Site"
+   },
+   "Save_a_disabled_One_Time_Password_locally_for_Account_Recovery": {
+      "message": "Save a disabled One Time Password locally for Account Recovery"
+   },
+   "Save_your_changes_and_close_this_window": {
+      "message": "Save your changes and close this window"
+   },
+   "Screen_Keyboard": {
+      "message": "Screen Keyboard"
+   },
+   "Search": {
+      "message": "Search"
+   },
+   "Secure_Notes": {
+      "message": "Secure Notes"
+   },
+   "Security": {
+      "message": "Security"
+   },
+   "Security_Check": {
+      "message": "Security Check"
+   },
+   "Security_code": {
+      "message": "Security code"
+   },
+   "Select": {
+      "message": "Select"
+   },
+   "Select_All": {
+      "message": "Select All"
+   },
+   "Send_anonymous_error_reporting_data_to_help_improve_LastPass": {
+      "message": "Send anonymous error reporting data to help improve LastPass"
+   },
+   "September": {
+      "message": "September"
+   },
+   "SesameWrongButton": {
+      "message": "To view your data when offline you must run Sesame\nand use the 'Copy Offline Password' button instead\nof the 'Generate One Time Password' button."
+   },
+   "Sesame_Multifactor_Authentication": {
+      "message": "Sesame Multifactor Authentication"
+   },
+   "Set_up_custom_form_fields": {
+      "message": "Set up custom form fields"
+   },
+   "Share": {
+      "message": "Share"
+   },
+   "Share_login_state_between_other_browsers": {
+      "message": "Share login state between other browsers"
+   },
+   "Share_offer_from": {
+      "message": "Share offer from"
+   },
+   "Shift": {
+      "message": "Shift"
+   },
+   "Should_LastPass_remember_this_password_": {
+      "message": "Should LastPass remember this password?"
+   },
+   "Should_LastPass_remember_this_password__": {
+      "message": "Should LastPass remember this password?."
+   },
+   "Show": {
+      "message": "Show"
+   },
+   "Show_Advanced_Options": {
+      "message": "Show Advanced Options"
+   },
+   "Show_Change_Password_Notification_Bar": {
+      "message": "Show Change Password Notification Bar"
+   },
+   "Show_Deleted_Sites": {
+      "message": "Show Deleted Sites"
+   },
+   "Show_Fill_Notification_Bar": {
+      "message": "Show Fill Notification Bar"
+   },
+   "Show_Form_Fill_Notifications": {
+      "message": "Show Form Fill Notifications"
+   },
+   "Show_My_LastPass_Vault_After_Login": {
+      "message": "Show My LastPass Vault After Login"
+   },
+   "Show_Notifications": {
+      "message": "Show Notifications"
+   },
+   "Show_Save_Site_Notification_Bar": {
+      "message": "Show Save Site Notification Bar"
+   },
+   "Show_Save_Site_Notifications": {
+      "message": "Show Save Site Notifications"
+   },
+   "Show_Sites_in_Groups": {
+      "message": "Show Sites in Groups"
+   },
+   "Show_all_sites": {
+      "message": "Show all sites"
+   },
+   "Show_certain_notifications_only_after_click": {
+      "message": "Show certain notifications only after click"
+   },
+   "Shows_another_custom_field_entry": {
+      "message": "Shows another custom field entry"
+   },
+   "Simplify_your_life__Use_LastPass_to_autofill_in_this_site_s_login_info_": {
+      "message": "Simplify your life: Use LastPass to autofill in this site's login info!"
+   },
+   "Site_Search": {
+      "message": "Site Search"
+   },
+   "Sites": {
+      "message": "Sites"
+   },
+   "Social_security_number": {
+      "message": "Social security number"
+   },
+   "Special": {
+      "message": "Special"
+   },
+   "Start_date": {
+      "message": "Start date"
+   },
+   "State___Province": {
+      "message": "State / Province"
+   },
+   "Submit_Form": {
+      "message": "Submit Form"
+   },
+   "Swipe_finger": {
+      "message": "Swipe finger"
+   },
+   "Swipe_your_finger_on_the_fingerprint_sensor": {
+      "message": "Swipe your finger on the fingerprint sensor"
+   },
+   "Tabs": {
+      "message": "Tabs"
+   },
+   "Text": {
+      "message": "Text"
+   },
+   "Text_to_find": {
+      "message": "Text to find"
+   },
+   "The_4_digit_year_the_credit_card_was_issued": {
+      "message": "The 4 digit year the credit card was issued"
+   },
+   "The_LastPass_master_password_you_reentered_does_not_match": {
+      "message": "The LastPass master password you reentered does not match"
+   },
+   "The__Old_Password__you_entered_is_not_your_correct_LastPass_master_password": {
+      "message": "The 'Old Password' you entered is not your correct LastPass master password"
+   },
+   "The_credit_card_number": {
+      "message": "The credit card number"
+   },
+   "The_credit_card_s_4_digit_expiration_year": {
+      "message": "The credit card's 4 digit expiration year"
+   },
+   "The_credit_card_s_expiration_month": {
+      "message": "The credit card's expiration month"
+   },
+   "The_credit_card_s_issue_number__Only_applicable_to_certain_European_brands_of_debit_cards__such_as_Maestro_": {
+      "message": "The credit card's issue number.\nOnly applicable to certain European brands of debit cards, such as Maestro."
+   },
+   "The_credit_card_s_security_code__For_most_credit_cards__this_is_the_last_3_digits_of_a_number_printed_on_the_back_of_the_card__For_American_Express_credit_cards__it_is_the_last_4_digits_of_a_number_printed_in_small_print_on_the_front_of_the_card_": {
+      "message": "The credit card's security code.\nFor most credit cards, this is the last 3 digits of a number printed on the back of the card.\nFor American Express credit cards, it is the last 4 digits of a number printed in small print on the front of the card."
+   },
+   "The_full_name_printed_on_the_credit_card": {
+      "message": "The full name printed on the credit card"
+   },
+   "The_language_of_the_Web_sites_where_this_Form_Fill_profile_will_be_used": {
+      "message": "The language of the Web sites where this Form Fill profile will be used"
+   },
+   "The_month_the_credit_card_was_issued": {
+      "message": "The month the credit card was issued"
+   },
+   "The_name_of_the_Form_Fill_profile": {
+      "message": "The name of the Form Fill profile"
+   },
+   "The_name_of_your_bank": {
+      "message": "The name of your bank"
+   },
+   "The_text_beside_the_name_of__or_the_id_of_the_form_field_to_be_filled__If_multiple_items_are_to_be_matched__specify_each_match_on_a_separate_line_": {
+      "message": "The text beside,the name of, or the id of the form field to be filled.\nIf multiple items are to be matched, specify each match on a separate line."
+   },
+   "The_value_to_be_filled": {
+      "message": "The value to be filled"
+   },
+   "The_version_of_Chrome_you_are_currently_running_does_not_have_HTML5_database_support_enabled___As_such__this_login_page_will_not_remember_your_email_and_password__and_other_features_such_as_automatic_login_on_browser_restart_will_not_work___You_may_be_able_to_fix_this_by_adding___enable_databases_as_a_parameter_to_your_Google_Chrome_browser_shortcut_": {
+      "message": "The version of Chrome you are currently running does not have HTML5 database support enabled.  As such, this login page will not remember your email and password, and other features such as automatic login on browser restart will not work.  You may be able to fix this by adding --enable-databases as a parameter to your Google Chrome browser shortcut."
+   },
+   "This_computer_is_trusted__do_not_require_a_second_form_of_authentication_": {
+      "message": "This computer is trusted, do not require a second form of authentication."
+   },
+   "This_is_a_shared_site__You_are_not_permitted_to_view_the_password_": {
+      "message": "This is a shared site. You are not permitted to view the password."
+   },
+   "Time_Zone": {
+      "message": "Time Zone"
+   },
+   "Title": {
+      "message": "Title"
+   },
+   "To_create_your_account__please_re_enter_your_LastPass_master_password": {
+      "message": "To create your account, please re-enter your LastPass master password"
+   },
+   "To_get_started_with_LastPass__you_will_need_to_add_sites_to_your_account_": {
+      "message": "To get started with LastPass, you will need to add sites to your account."
+   },
+   "To_protect_your_privacy_and_keep_your_data_confidential_": {
+      "message": "To protect your privacy and keep your data confidential,"
+   },
+   "Tools": {
+      "message": "Tools"
+   },
+   "Try_Again": {
+      "message": "Try Again"
+   },
+   "TurboPasswords": {
+      "message": "TurboPasswords"
+   },
+   "Type_": {
+      "message": "Type:"
+   },
+   "URL_": {
+      "message": "URL:"
+   },
+   "USERNAME": {
+      "message": "USERNAME"
+   },
+   "Unselect_All": {
+      "message": "Unselect All"
+   },
+   "Up": {
+      "message": "Up"
+   },
+   "Upgrade_to_LastPass_Online_": {
+      "message": "Upgrade to LastPass Online!"
+   },
+   "Uploading_Data___": {
+      "message": "Uploading Data..."
+   },
+   "User_name": {
+      "message": "User name"
+   },
+   "Username_": {
+      "message": "Username:"
+   },
+   "Value_to_fill": {
+      "message": "Value to fill"
+   },
+   "Version_": {
+      "message": "Version:"
+   },
+   "Warn_before_filling_insecure_forms": {
+      "message": "Warn before filling insecure forms"
+   },
+   "Watch_a_video_on_basic_usage": {
+      "message": "Watch a video on basic usage"
+   },
+   "We_also_DO_NOT_keep_a_copy_or_backup_of_it_": {
+      "message": "We also DO NOT keep a copy or backup of it."
+   },
+   "Welcome_to_LastPass_": {
+      "message": "Welcome to LastPass!"
+   },
+   "Windows": {
+      "message": "Windows"
+   },
+   "Would_you_like_to_set_up_a_Form_Filling_profile_now_": {
+      "message": "Would you like to set up a Form Filling profile now?"
+   },
+   "Yes": {
+      "message": "Yes"
+   },
+   "Yes__let_me_choose_which_items_I_want_imported_into_LastPass": {
+      "message": "Yes, let me choose which items I want imported into LastPass"
+   },
+   "Yes__let_me_enter_and_review_data_that_will_be_used_when_filling_forms": {
+      "message": "Yes, let me enter and review data that will be used when filling forms"
+   },
+   "You_cannot_assign_more_than_one_HotKey_the_same_value_": {
+      "message": "You cannot assign more than one HotKey the same value."
+   },
+   "You_currently_have_LastPass_set_to_remember_your_password___Doing_so_essentially_makes_the_automatically_logoff_options_you_ve_chosen_useless___Would_you_like_LastPass_to_stop_remembering_your_password_": {
+      "message": "You currently have LastPass set to remember your password.  Doing so essentially makes the automatically logoff options you've chosen useless.  Would you like LastPass to stop remembering your password?"
+   },
+   "You_have_not_yet_chosen_a_default_form_fill_profile___Would_you_like_to_choose_one_now_": {
+      "message": "You have not yet chosen a default form fill profile.  Would you like to choose one now?"
+   },
+   "You_may_also_be_blocking_all_cookies__which_causes_Chrome_to_disallow_HTML5_database_access_": {
+      "message": "You may also be blocking all cookies, which causes Chrome to disallow HTML5 database access."
+   },
+   "You_must_agree_to_send_your_encrypted_data_to_LastPass_com___LastPass_com_encrypts_your_data_and_sends_it_to_its_secure_servers__No_one_at_LastPass_can_read_your_confidential_data_since_it_is_encrypted_using_your_secret_password_and_you_are_the_only_one_who_knows_your_password_": {
+      "message": "You must agree to send your encrypted data to LastPass.com.\n\nLastPass.com encrypts your data and sends it to its secure servers.\nNo one at LastPass can read your confidential data since it is encrypted using your\nsecret password and you are the only one who knows your password."
+   },
+   "You_must_agree_to_the_terms_to_continue": {
+      "message": "You must agree to the terms to continue"
+   },
+   "You_must_enter_a_name_": {
+      "message": "You must enter a name."
+   },
+   "You_must_enter_a_unique_name_": {
+      "message": "You must enter a unique name."
+   },
+   "You_must_restart_Chrome_or_logoff_and_back_in_to_get_logoff_on_browser_close_changes_to_be_reflected": {
+      "message": "You must restart Chrome or logoff and back in to get logoff on browser close changes to be reflected"
+   },
+   "You_must_restart_your_browser_before_all_of_the_changes_will_take_effect_": {
+      "message": "You must restart your browser before all of the changes will take effect."
+   },
+   "Your_4_digit_birth_year": {
+      "message": "Your 4 digit birth year"
+   },
+   "Your_Google_Chrome_passwords_have_been_imported_successfully_": {
+      "message": "Your Google Chrome passwords have been imported successfully."
+   },
+   "Your_ZIP_or_postal_code": {
+      "message": "Your ZIP or postal code"
+   },
+   "Your_address_information": {
+      "message": "Your address information"
+   },
+   "Your_bank_account_information": {
+      "message": "Your bank account information"
+   },
+   "Your_bank_account_number__This_number_can_typically_be_found_to_the_right_of_the_routing_number_on_your_personal_checks_": {
+      "message": "Your bank account number.\nThis number can typically be found to the right of the routing number on your personal checks."
+   },
+   "Your_bank_s_routing_number__This_9_digit_number_can_typically_be_found_on_your_personal_checks_in_the_bottom_left_corner_": {
+      "message": "Your bank's routing number.\nThis 9 digit number can typically be found on your personal checks in the bottom left corner."
+   },
+   "Your_birth_day": {
+      "message": "Your birth day"
+   },
+   "Your_birth_month": {
+      "message": "Your birth month"
+   },
+   "Your_city_name": {
+      "message": "Your city name"
+   },
+   "Your_company_s_name": {
+      "message": "Your company's name"
+   },
+   "Your_contact_information": {
+      "message": "Your contact information"
+   },
+   "Your_country_name": {
+      "message": "Your country name"
+   },
+   "Your_county_name": {
+      "message": "Your county name"
+   },
+   "Your_credit_card_information": {
+      "message": "Your credit card information"
+   },
+   "Your_current_settings_require_you_to_enter_your_LastPass_password_to_complete_this_action_": {
+      "message": "Your current settings require you to enter your LastPass password to complete this action."
+   },
+   "Your_email_address": {
+      "message": "Your email address"
+   },
+   "Your_first_name": {
+      "message": "Your first name"
+   },
+   "Your_government_ID_number": {
+      "message": "Your government ID number"
+   },
+   "Your_last_name": {
+      "message": "Your last name"
+   },
+   "Your_middle_name": {
+      "message": "Your middle name"
+   },
+   "Your_password_can_not_be_the_same_as_your_email_": {
+      "message": "Your password can not be the same as your email."
+   },
+   "Your_password_is_easily_guessable_": {
+      "message": "Your password is easily guessable."
+   },
+   "Your_password_is_too_short__It_must_be_at_least_6_characters_long": {
+      "message": "Your password is too short. It must be at least 6 characters long"
+   },
+   "Your_password_reminder_serves_to_remind_you_of_what_your": {
+      "message": "Your password reminder serves to remind you of what your"
+   },
+   "Your_passwords_did_not_match_": {
+      "message": "Your passwords did not match."
+   },
+   "Your_personal_information": {
+      "message": "Your personal information"
+   },
+   "Your_phone_number": {
+      "message": "Your phone number"
+   },
+   "Your_phone_number_extension": {
+      "message": "Your phone number extension"
+   },
+   "Your_prefix_or_title": {
+      "message": "Your prefix or title"
+   },
+   "Your_selected_Identity_no_longer_exists__Defaulting_to__All__and_logging_off_": {
+      "message": "Your selected Identity no longer exists. Defaulting to 'All' and logging off."
+   },
+   "Your_sex": {
+      "message": "Your sex"
+   },
+   "Your_state_or_province_name": {
+      "message": "Your state or province name"
+   },
+   "Your_street_address": {
+      "message": "Your street address"
+   },
+   "Your_time_zone": {
+      "message": "Your time zone"
+   },
+   "Your_username_when_signing_into_Web_sites": {
+      "message": "Your username when signing into Web sites"
+   },
+   "YubiKey_Multifactor_Authentication": {
+      "message": "YubiKey Multifactor Authentication"
+   },
+   "ZIP___Postal_code": {
+      "message": "ZIP / Postal code"
+   },
+   "_Hide_": {
+      "message": "[Hide]"
+   },
+   "_New_Pending_Share_Offers_": {
+      "message": "(New Pending Share Offers)"
+   },
+   "_Show_": {
+      "message": "[Show]"
+   },
+   "_domain_": {
+      "message": "(domain)"
+   },
+   "_none_": {
+      "message": "(none)"
+   },
+   "a_zlower": {
+      "message": "a-z"
+   },
+   "actual_password_is__while_still_maintaining_its_secrecy_": {
+      "message": "actual password is, while still maintaining its secrecy."
+   },
+   "and": {
+      "message": "and"
+   },
+   "contact_us_and_we_will_email_you_your_password_reminder_": {
+      "message": "contact us and we will email you your password reminder."
+   },
+   "dummy": {
+      "message": "dummy, leave this here so we don't mess up the trailing comma"
+   },
+   "ext_": {
+      "message": "ext."
+   },
+   "favorites": {
+      "message": "favorites"
+   },
+   "hour": {
+      "message": "hour"
+   },
+   "hours": {
+      "message": "hours"
+   },
+   "minutes": {
+      "message": "minutes"
+   },
+   "privacy_statement": {
+      "message": "privacy statement"
+   },
+   "recently_usedlower": {
+      "message": "recently used"
+   },
+   "seconds": {
+      "message": "seconds"
+   },
+   "terms_of_service": {
+      "message": "terms of service"
+   },
+   "the_current_tab": {
+      "message": "the current tab"
+   },
+   "we_DO_NOT_know_what_your_LastPass_password_is_": {
+      "message": "we DO NOT know what your LastPass password is."
+   }
+}

@@ -1,0 +1,19 @@
+{
+   "content_scripts": [ {
+      "js": [ "syoutube.js" ],
+      "matches": [ "http://*.youtube.com/watch?v=*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Scans the YouTube page for all formats, including 1080p on selected videos.",
+   "icons": {
+      "128": "128.png",
+      "16": "16.png",
+      "32": "32.png",
+      "48": "48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDiIZirzKSrnmruIMFQYmSYO7EllLqWoZYWDpQL3UE+0a1O/t8LTRkRwg97oA5n5g66cEg4HbHMBcL48Yt8A13rPb4HF2dZqurNV8oLNmHC5vaeIbORbL5fUM7tlQF2bbdMQh7yLIwglpaVkvN/C4eB7en2hfgRaHbmP7x9p0h2owIDAQAB",
+   "name": "S-YouTube Downloader",
+   "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "0.0.2"
+}

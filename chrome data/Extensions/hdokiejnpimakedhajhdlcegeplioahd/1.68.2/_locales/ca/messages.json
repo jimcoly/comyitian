@@ -1,0 +1,764 @@
+{
+   "0_9": {
+      "message": "0-9"
+   },
+   "A_Zupper": {
+      "message": "AZ"
+   },
+   "A_server_error_occurred_while_processing_your_request_": {
+      "message": "S'ha produ\u00EFt un error al servidor mentre es processava la seva sol licitud."
+   },
+   "About___": {
+      "message": "Sobre..."
+   },
+   "Accept": {
+      "message": "Acceptar"
+   },
+   "Account_Settings": {
+      "message": "Configuraci\u00F3 del compte"
+   },
+   "Actionproper": {
+      "message": "Acci\u00F3"
+   },
+   "Add_Credit_Card": {
+      "message": "Afegir targeta de cr\u00E8dit"
+   },
+   "Add_Field": {
+      "message": "Afegir camp"
+   },
+   "Add_Identity": {
+      "message": "Afegir identitat"
+   },
+   "Add_New_Site": {
+      "message": "Afegeix lloc nou"
+   },
+   "Add_Profile": {
+      "message": "Afegir perfil"
+   },
+   "Add_Secure_Note": {
+      "message": "Afegir Nota amb seguretat"
+   },
+   "Add_Site": {
+      "message": "Afegir lloc"
+   },
+   "Address_1": {
+      "message": "Adre\u00E7a 1"
+   },
+   "Address_2": {
+      "message": "Adre\u00E7a 2"
+   },
+   "Address_3": {
+      "message": "Adre\u00E7a 3"
+   },
+   "Advanced": {
+      "message": "Avan\u00E7at"
+   },
+   "All": {
+      "message": "Tot"
+   },
+   "Allow_LastPass_to_find_insecure_data_on_your_computer_": {
+      "message": "Permetre a LastPass trobar les dades no segures en l'equip?"
+   },
+   "Alt": {
+      "message": "Alt"
+   },
+   "Always_Choose_Profile_and_Credit_Card": {
+      "message": "Trieu sempre perfil i targeta de cr\u00E8dit"
+   },
+   "An_Update_is_Available__Would_you_like_to_install_": {
+      "message": "Hi ha una actualitzaci\u00F3 disponible. La voleu instal\u00B7lar?"
+   },
+   "An_error_has_been_encountered_while_loading_your_sites__Please_relogin_": {
+      "message": "S'ha produ\u00EFt un error en el decurs de la c\u00E0rrega dels seus llocs. Si us plau, torneu a iniciar la sessi\u00F3."
+   },
+   "Appearance": {
+      "message": "Aparen\u00E7a"
+   },
+   "April": {
+      "message": "Abril"
+   },
+   "Are_you_sure_you_want_to_have_LastPass_remember_your_password___This_will_significantly_decrease_the_security_of_your_LastPass_account_": {
+      "message": "Esteu segurs que voleu que LastPass recordi la contrasenya?  Aix\u00F2 redueix significativament la seguretat del seu compte LastPass!"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_generated_password_": {
+      "message": "Esteu segurs que voleu eliminar aquesta contrasenya generada?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_secure_note_": {
+      "message": "Est\u00E0 segur que vol eliminar aquesta nota segura?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_site_": {
+      "message": "Est\u00E0 segur que vol eliminar aquest lloc?"
+   },
+   "August": {
+      "message": "Agost"
+   },
+   "AutoFill": {
+      "message": "Omplir autom\u00E0ticament"
+   },
+   "AutoLogin": {
+      "message": "Inici de sessi\u00F3 autom\u00E0tic"
+   },
+   "Automatically_Fill_Login_Information": {
+      "message": "Emplenar autom\u00E0ticament la informaci\u00F3 d'acc\u00E9s"
+   },
+   "Automatically_Logoff_after_idle__mins_": {
+      "message": "Tancament autom\u00E0tic de la sessi\u00F3 despr\u00E9s de (min)"
+   },
+   "Automatically_login_to_sites_if_time_since_last_login____seconds_": {
+      "message": "Connexi\u00F3 autom\u00E0tica als llocs si el temps des de l'\u00FAltim acc\u00E9s\u003E (segons)"
+   },
+   "Avoid_Ambiguous_Characters": {
+      "message": "Eviteu car\u00E0cters ambigus"
+   },
+   "Birthday": {
+      "message": "Aniversari"
+   },
+   "Blog": {
+      "message": "Bloc"
+   },
+   "Built_": {
+      "message": "Constru\u00EFda:"
+   },
+   "Can_t_find_hidden_LastPass_window": {
+      "message": "No es pot trobar la finestra LastPass"
+   },
+   "Cancel": {
+      "message": "Cancel\u00B7lar"
+   },
+   "Change": {
+      "message": "Canviar"
+   },
+   "Change_Password": {
+      "message": "Canviar Contrasenya"
+   },
+   "Check_For_Updates": {
+      "message": "Cercar actualitzacions"
+   },
+   "Checkbox": {
+      "message": "Casella de verificaci\u00F3"
+   },
+   "Choose_Profile_and_Credit_Card": {
+      "message": "Escollir Perfil i Targeta de Cr\u00E8dit"
+   },
+   "Clear": {
+      "message": "Neteja"
+   },
+   "Clear_Forms": {
+      "message": "Esborrar formularis"
+   },
+   "Clear_Local_Cache": {
+      "message": "Esborrar la mem\u00F2ria cau local"
+   },
+   "Click_Continue_to_start_using_LastPass_": {
+      "message": "Feu clic a Continuar per comen\u00E7ar a utilitzar LastPass."
+   },
+   "Click_here_to_launch_account_settings": {
+      "message": "Feu clic aqu\u00ED per iniciar la configuraci\u00F3 del compte"
+   },
+   "Click_here_to_launch_feedback": {
+      "message": "Feu clic aqu\u00ED per enviar comentaris"
+   },
+   "Click_here_to_watch_a_video_on_basic_usage_": {
+      "message": "Cliqueu aqu\u00ED per veure un v\u00EDdeo sobre l'\u00FAs b\u00E0sic."
+   },
+   "Close": {
+      "message": "Tancar"
+   },
+   "Collapse_All": {
+      "message": "Tancar tot"
+   },
+   "Company": {
+      "message": "Empresa"
+   },
+   "Configure_Form_Fill": {
+      "message": "Configurar Omplir Formulari"
+   },
+   "Confirm": {
+      "message": "Confirmar"
+   },
+   "Congratulations": {
+      "message": "Felicitats"
+   },
+   "Continue": {
+      "message": "Continua"
+   },
+   "Copy": {
+      "message": "Copiar"
+   },
+   "Copy_Password": {
+      "message": "Copiar Contrasenya"
+   },
+   "Copy_Username": {
+      "message": "Copiar el nom d'usuari"
+   },
+   "Country": {
+      "message": "Pa\u00EDs"
+   },
+   "County": {
+      "message": "Comarca"
+   },
+   "Create_Account": {
+      "message": "Crear Compte"
+   },
+   "Create_Sub_Group": {
+      "message": "Crea Sub-Grup"
+   },
+   "Create_an_Account": {
+      "message": "Crear un compte"
+   },
+   "Creating_Account___": {
+      "message": "Creant el compte..."
+   },
+   "Ctrl": {
+      "message": "Ctrl"
+   },
+   "December": {
+      "message": "Desembre"
+   },
+   "Delete": {
+      "message": "Esborrar"
+   },
+   "Disable_Insecure_Chrome_Password_Manager": {
+      "message": "Deshabilitar Chrome Password Manager insegura"
+   },
+   "Down": {
+      "message": "A sota"
+   },
+   "Dr": {
+      "message": "Dr"
+   },
+   "Dutch": {
+      "message": "Neerland\u00E8s"
+   },
+   "Edit": {
+      "message": "Edita"
+   },
+   "Edit_Form_Fields": {
+      "message": "Edita els camps del formulari"
+   },
+   "Email": {
+      "message": "Correu electr\u00F2nic"
+   },
+   "Email_already_in_use__have_you_forgotten_your_password_": {
+      "message": "Correu electr\u00F2nic ja est\u00E0 en \u00FAs, ha oblidat la seva contrasenya?"
+   },
+   "End": {
+      "message": "Final"
+   },
+   "English": {
+      "message": "Angl\u00E8s"
+   },
+   "ErrorGetAcctsMsg": {
+      "message": "S'ha produ\u00EFt un error al recuperar el llocs LastPass. Si us plau, intenteu accedir de nou a recuperar els llocs."
+   },
+   "ErrorLoginMsg": {
+      "message": "S'ha produ\u00EFt un error al utilitzar LastPass. Si us plau, comproveu la vostra connexi\u00F3 a Internet."
+   },
+   "ErrorSendingMsg": {
+      "message": "S'ha produ\u00EFt un error en intentar contactar amb el servidor. Si us plau, comproveu la vostra connexi\u00F3 a Internet."
+   },
+   "ExistingUsersOTPPrompt": {
+      "message": "LastPass ara pot emmagatzemar un One Time Password (OTP) a nivell local que pot ser utilitzada per recuperar el seu compte si oblida la seva contrasenya mestra. Aquest OTP romandr\u00E0 desactivat fins que s'activi al servidor.\n\nVol activar la recuperaci\u00F3 de compte?"
+   },
+   "Expand_All": {
+      "message": "Expandir tot"
+   },
+   "Export_To": {
+      "message": "Exportar"
+   },
+   "Favorite": {
+      "message": "Preferit"
+   },
+   "February": {
+      "message": "Febrer"
+   },
+   "Feedback": {
+      "message": "Feedback"
+   },
+   "Female": {
+      "message": "Dona"
+   },
+   "Fields_": {
+      "message": "Camps:"
+   },
+   "Fill_Current": {
+      "message": "Ompli actual"
+   },
+   "Fill_Form": {
+      "message": "Ompli el formulari"
+   },
+   "Fill_Forms": {
+      "message": "Omplir-ho"
+   },
+   "Find_a_site": {
+      "message": "Trobar un lloc"
+   },
+   "Firefox_Password_Manager": {
+      "message": "Directori de Contrasenyes Firefox"
+   },
+   "Forums": {
+      "message": "F\u00F2rums"
+   },
+   "Gender": {
+      "message": "G\u00E8nere"
+   },
+   "General": {
+      "message": "General"
+   },
+   "Generate": {
+      "message": "Generar"
+   },
+   "Generate_Secure_Password": {
+      "message": "Generar contrasenya segura"
+   },
+   "Generated_Password_for": {
+      "message": "Generar Contrasenya per"
+   },
+   "Generic_CSV_File": {
+      "message": "Arxiu CSV Gen\u00E8ric"
+   },
+   "Google_Chrome": {
+      "message": "Google Chrome"
+   },
+   "Group_": {
+      "message": "Grup:"
+   },
+   "Help_Translate": {
+      "message": "Ajuda a traduir"
+   },
+   "Help___": {
+      "message": "Ajuda..."
+   },
+   "History": {
+      "message": "Hist\u00F2ria"
+   },
+   "Home": {
+      "message": "Inici"
+   },
+   "HotKeys": {
+      "message": "Tecles r\u00E0pides"
+   },
+   "IT_IS_CRITICAL_THAT_YOU_NEVER_FORGET_YOUR_NEW_LASTPASS_PASSWORD_": {
+      "message": "\u00C9S FONAMENTAL QUE NO OBLIDI MAI LA SEVA NOVA CONTRASENYA LASTPASS."
+   },
+   "I_forgot_my_password__Help_": {
+      "message": "He oblidat la contrasenya, Ajuda"
+   },
+   "I_understand_that_my_encrypted_data_will_be_sent_to_LastPass": {
+      "message": "Entenc que les meves dades xifrades s'enviar\u00E0 a LastPass"
+   },
+   "Identities": {
+      "message": "Identitats"
+   },
+   "Identity": {
+      "message": "Identitat"
+   },
+   "If_you_already_have_a_LastPass_account_you_can_close_this_window_and_login_": {
+      "message": "Si ja te un compte LastPass pot tancar aquesta finestra."
+   },
+   "Import": {
+      "message": "Importaci\u00F3"
+   },
+   "Import_From": {
+      "message": "Importar"
+   },
+   "Import_Your_Data": {
+      "message": "Importar les seves dades"
+   },
+   "Instructions": {
+      "message": "Instruccions"
+   },
+   "Invalid_Password_": {
+      "message": "Contrasenya no v\u00E0lida."
+   },
+   "Invalid_email_address__try_again": {
+      "message": "L'adre\u00E7a de correu electr\u00F2nic no \u00E9s v\u00E0lida, torni a provar-ho"
+   },
+   "January": {
+      "message": "Gener"
+   },
+   "July": {
+      "message": "Juliol"
+   },
+   "June": {
+      "message": "Juny"
+   },
+   "Keep_a_history_of_my_logins_and_form_fills": {
+      "message": "Mantingueu un historial dels meus inicis de sessi\u00F3 i formularis"
+   },
+   "Language": {
+      "message": "Idioma"
+   },
+   "LastPass": {
+      "message": "LastPass"
+   },
+   "LastPass_Chrome_Toolbar": {
+      "message": "Barra d'eines de LastPass Chrome"
+   },
+   "LastPass_Encrypted_File": {
+      "message": "LastPass arxiu encriptat"
+   },
+   "LastPass_cannot_login_until_cookies_are_allowed_from_lastpass_com": {
+      "message": "LastPass no pot ingressar fins que es permetin les galetes des de lastpass.com"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_like_to_continue_": {
+      "message": "LastPass ha detectat un formulari de contrasenyes insegur.\n\nVoleu continuar?"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_still_like_LastPass_to_fill_the_form_": {
+      "message": "LastPass ha detectat un formulari de contrasenyes insegur.\n\nVoleu encara que LastPass ompli el formulari?"
+   },
+   "Left": {
+      "message": "Esquerra"
+   },
+   "Login": {
+      "message": "Inici de sessi\u00F3"
+   },
+   "LoginError": {
+      "message": "S'ha produ\u00EFt un error al iniciar la sessi\u00F3 LastPass. Si us plau, torneu-ho a provar."
+   },
+   "Login_to_LastPass": {
+      "message": "Entrada a LastPass"
+   },
+   "Logoff": {
+      "message": "Tancar sessi\u00F3"
+   },
+   "Logoff_": {
+      "message": "Tancament de sessi\u00F3:"
+   },
+   "MSI_PasswordKeeper": {
+      "message": "Guardacontrasenya MSI"
+   },
+   "Male": {
+      "message": "Home"
+   },
+   "March": {
+      "message": "Mar\u00E7"
+   },
+   "Master_Password": {
+      "message": "Contrasenya Mestra"
+   },
+   "May": {
+      "message": "Maig"
+   },
+   "Meta": {
+      "message": "Meta"
+   },
+   "More": {
+      "message": "M\u00E9s"
+   },
+   "Move_to_Group": {
+      "message": "Canvia de Grup"
+   },
+   "Mr": {
+      "message": "En"
+   },
+   "Mrs": {
+      "message": "Na"
+   },
+   "Ms": {
+      "message": "Na"
+   },
+   "My_LastPass_Vault": {
+      "message": "La meva LastPass Vault"
+   },
+   "NAME": {
+      "message": "NOM"
+   },
+   "Name_": {
+      "message": "Nom:"
+   },
+   "Nameproper": {
+      "message": "Nom"
+   },
+   "Never_AutoFill": {
+      "message": "Mai autom\u00E0tic"
+   },
+   "Never_For_This_Domain": {
+      "message": "Mai per a aquest domini"
+   },
+   "Never_For_This_Page": {
+      "message": "Mai per aquesta p\u00E0gina"
+   },
+   "Never___": {
+      "message": "Mai ..."
+   },
+   "No": {
+      "message": "No"
+   },
+   "No_Thanks": {
+      "message": "No, gr\u00E0cies"
+   },
+   "No_Updates_Are_Available": {
+      "message": "No hi ha actualitzacions disponibles"
+   },
+   "Not_Now": {
+      "message": "Ara no"
+   },
+   "Notes": {
+      "message": "Notes"
+   },
+   "Notes_": {
+      "message": "Notes:"
+   },
+   "November": {
+      "message": "Novembre"
+   },
+   "OK": {
+      "message": "OK"
+   },
+   "October": {
+      "message": "Octubre"
+   },
+   "Open_All": {
+      "message": "Obrir tots"
+   },
+   "Open_Favorites": {
+      "message": "Obrir Preferits"
+   },
+   "Open_My_LastPass_Vault": {
+      "message": "Obrir el meu LastPass"
+   },
+   "Open_login_dialog_when_start_browser": {
+      "message": "Di\u00E0leg d'acc\u00E9s obert a l'inici del navegador"
+   },
+   "PASSWORDupper": {
+      "message": "CONTRASENYA"
+   },
+   "Page_Down": {
+      "message": "Anar cap a baix de la P\u00E0gina"
+   },
+   "Page_Up": {
+      "message": "Anar cap a dalt de la P\u00E0gina"
+   },
+   "Password": {
+      "message": "Contrasenya"
+   },
+   "Password_": {
+      "message": "Contrasenya:"
+   },
+   "Password_Keeper": {
+      "message": "Conservar contrasenya"
+   },
+   "Password_Length": {
+      "message": "Longitud de la contrasenya"
+   },
+   "Password_Reminder": {
+      "message": "Recordar contrasenya"
+   },
+   "Password_reminder_cannot_match_password": {
+      "message": "El recordatori de la contrasenya no pot coincidir amb la contrasenya"
+   },
+   "Please_Make_a_Selection": {
+      "message": "Si us plau, fes una selecci\u00F3"
+   },
+   "Please_enter_a_Password_Reminder": {
+      "message": "Si us plau, introdu\u00EFu un recordatori per la contrasenya "
+   },
+   "Poll_Server_for_account_changes__mins_": {
+      "message": "Valoraci\u00F3 de servidor per als canvis de compte (mins)"
+   },
+   "Preferences": {
+      "message": "Prefer\u00E8ncies"
+   },
+   "Print": {
+      "message": "Imprimeix"
+   },
+   "Re_enter_Password": {
+      "message": "Torneu a introduir la contrasenya"
+   },
+   "Recently_Used": {
+      "message": "Usat recentment"
+   },
+   "Recheck_Page": {
+      "message": "Tornar a P\u00E0gina"
+   },
+   "Refresh_Sites": {
+      "message": "Actualitza els llocs"
+   },
+   "Reject": {
+      "message": "Rebutjar"
+   },
+   "Remember_Email": {
+      "message": "Recordeu Email"
+   },
+   "Remember_Password": {
+      "message": "Recordar la contrasenya"
+   },
+   "Rename_Group": {
+      "message": "Canviar el nom de Grup"
+   },
+   "Replace_Existing_Site": {
+      "message": "Substituir l'actual lloc"
+   },
+   "Require_Password_Reprompt": {
+      "message": "Requereix tornar a demanar contrasenya"
+   },
+   "Right": {
+      "message": "Dreta"
+   },
+   "Save": {
+      "message": "Salvar"
+   },
+   "Save_All_Entered_Data": {
+      "message": "Desar totes les dades introdu\u00EFdes"
+   },
+   "Save_New_Site": {
+      "message": "Guardar lloc nou"
+   },
+   "Save_Site": {
+      "message": "Desa lloc"
+   },
+   "Search": {
+      "message": "Recerca"
+   },
+   "Secure_Notes": {
+      "message": "En quan a seguretat"
+   },
+   "Security": {
+      "message": "Seguretat"
+   },
+   "Select_All": {
+      "message": "Seleccionar tot"
+   },
+   "September": {
+      "message": "Setembre"
+   },
+   "Share": {
+      "message": "Compartir"
+   },
+   "Share_offer_from": {
+      "message": "Compartir oferta"
+   },
+   "Shift": {
+      "message": "Shift"
+   },
+   "Show_Advanced_Options": {
+      "message": "Mostra Opcions avan\u00E7ades"
+   },
+   "Show_Deleted_Sites": {
+      "message": "Mostra llocs suprimits"
+   },
+   "Show_Notifications": {
+      "message": "Mostra Notificacions"
+   },
+   "Show_Sites_in_Groups": {
+      "message": "Mostra els llocs en grups"
+   },
+   "Site_Search": {
+      "message": "Recerca del lloc"
+   },
+   "Sites": {
+      "message": "Llocs"
+   },
+   "Special": {
+      "message": "Especial"
+   },
+   "State___Province": {
+      "message": "Estat / Prov\u00EDncia"
+   },
+   "Text": {
+      "message": "Text"
+   },
+   "The_LastPass_master_password_you_reentered_does_not_match": {
+      "message": "Introdu\u00EFu una altra contrasenya mestra LastPass que no coincideixi amb"
+   },
+   "This_is_a_shared_site__You_are_not_permitted_to_view_the_password_": {
+      "message": "Aquest \u00E9s un lloc com\u00FA. No se li permet veure la contrasenya."
+   },
+   "Time_Zone": {
+      "message": "Zona hor\u00E0ria"
+   },
+   "Title": {
+      "message": "T\u00EDtol"
+   },
+   "To_create_your_account__please_re_enter_your_LastPass_master_password": {
+      "message": "Per crear el compte, torneu a introduir la contrasenya mestra LastPass"
+   },
+   "Tools": {
+      "message": "Eines"
+   },
+   "Try_Again": {
+      "message": "Torneu a provar-ho"
+   },
+   "TurboPasswords": {
+      "message": "TurboContrasenyes"
+   },
+   "URL_": {
+      "message": "URL:"
+   },
+   "Unselect_All": {
+      "message": "Deselecciona tots"
+   },
+   "Up": {
+      "message": "A dalt"
+   },
+   "Username_": {
+      "message": "Nom d'usuari:"
+   },
+   "Version_": {
+      "message": "Versi\u00F3:"
+   },
+   "Welcome_to_LastPass_": {
+      "message": "Benvingut a LastPass!"
+   },
+   "Windows": {
+      "message": "Windows"
+   },
+   "Yes": {
+      "message": "Si"
+   },
+   "You_must_agree_to_the_terms_to_continue": {
+      "message": "Cal acceptar els acords per continuar"
+   },
+   "You_must_enter_a_name_": {
+      "message": "Cal introduir un nom."
+   },
+   "Your_password_can_not_be_the_same_as_your_email_": {
+      "message": "La contrasenya no pot ser la seva adre\u00E7a de correu electr\u00F2nic."
+   },
+   "Your_password_is_easily_guessable_": {
+      "message": "La contrasenya \u00E9s f\u00E0cil d'endevinar."
+   },
+   "Your_password_is_too_short__It_must_be_at_least_6_characters_long": {
+      "message": "La contrasenya \u00E9s massa curta. Ha de tenir un m\u00EDnim de 6 car\u00E0cters"
+   },
+   "_Hide_": {
+      "message": "[Oculta]"
+   },
+   "_Show_": {
+      "message": "[Veure]"
+   },
+   "_none_": {
+      "message": "(cap)"
+   },
+   "and": {
+      "message": "i"
+   },
+   "dummy": {
+      "message": "dummy, leave this here so we don't mess up the trailing comma"
+   },
+   "ext_": {
+      "message": "ext."
+   },
+   "favorites": {
+      "message": "preferits"
+   },
+   "hour": {
+      "message": "hora"
+   },
+   "hours": {
+      "message": "hores"
+   },
+   "minutes": {
+      "message": "minuts"
+   },
+   "privacy_statement": {
+      "message": "declaraci\u00F3 de privacitat"
+   },
+   "seconds": {
+      "message": "segons"
+   },
+   "terms_of_service": {
+      "message": "Condicions del servei"
+   }
+}

@@ -1,0 +1,1 @@
+doconnect();var port;function doconect(){console.log("login.html load: "+document.location.href);port=chrome.extension.connect();port.onMessage.addListener(function(A){console.log("got login message: "+A)})};

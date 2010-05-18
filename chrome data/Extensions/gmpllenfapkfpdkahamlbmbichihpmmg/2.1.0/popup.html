@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>迅雷、快车专用链破解</title>
+<script type="text/javascript" src="js/version.js"></script>
+<script type="text/javascript" src="js/popup.js"></script>
+<style type="text/css">
+body { width: 155px; height: 115px; background-color: #D2E1F6;margin:5px 0px;font-family:"Times New Roman", Times, serif;font-size:14px;}
+.replaceButton { list-style: none;padding-left:0px;color:#000;width:115px;margin:0 auto;}
+	.replaceButton li { height: 25px; line-height: 25px ; ; margin-bottom: 5px; cursor: pointer ; }
+		.replaceButton li:hover { background-color: #FFF}
+		.replaceButton li img{width:25px;height:25px;float:left;cursor: pointer ; }
+		.replaceButton li span{display:block;float:left;margin-left:5px;width:80px;text-align:left;cursor: pointer ; }
+;
+#newversion{font-size:12px; text-align:center; color:#F00;}
+</style>
+</head>
+
+<body onload="loadset()">
+
+<ul class="replaceButton">
+<li onClick="replaceLinks('1','1','1')" title="转换迅雷、快车、旋风下载链接"><img src="./img/all.png" /><span>ALL</span></li>
+<li onClick="replaceLinks('1','0','0')" title="只转换迅雷链接"><img src="./img/thunder.png" /><span>Thunder</span></li>
+<li onClick="replaceLinks('0','1','0')" title="只转换网际快车链接"><img src="./img/flashget.png" /><span>Flashget</span></li>
+<li onClick="replaceLinks('0','0','1')" title="只转换旋风下载链接"><img src="./img/qqxf.png" /><span>QQDownload</span></li>
+<li title="页面加载时是否自动转换链接"><label for="autoReplaceEnable">
+  <img src="./img/checkbox-not.png" id="autoReplaceEnable_checkbox" /><input name="autoReplaceEnable" id="autoReplaceEnable" type="checkbox" value="autoReplaceEnable" onChange="save()" style="display:none;"><span>Auto convert</span></label></li>
+  <li id="newversion" style="font-size:12px; text-align:center; color:#F00; display:none;">！</li>
+</ul>
+</body>
+</html>

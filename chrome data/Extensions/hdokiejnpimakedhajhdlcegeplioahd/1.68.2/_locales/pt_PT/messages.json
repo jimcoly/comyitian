@@ -1,0 +1,941 @@
+{
+   "0_9": {
+      "message": "0-9"
+   },
+   "1Password": {
+      "message": "1Senha"
+   },
+   "1__Insert_your_YubiKey_in_the_USB_port_with_the_USB_contact_facing_upward": {
+      "message": "1. Insira a sua YubiKey na porta USB com o contacto USB virado para cima"
+   },
+   "2__Wait_until_your_YubiKey_touch_button_shines_with_a_steady_light": {
+      "message": "2. Espere at\u00E9 que o seu bot\u00E3o de toque da YubiKey brilhe com uma luz constante"
+   },
+   "3__Hold_your_fingertip_on_the_touch_button_for_2_seconds": {
+      "message": "3. Mantenha o dedo sobre o bot\u00E3o de toque durante 2 segundos"
+   },
+   "ACTION": {
+      "message": "AC\u00C7\u00C3O"
+   },
+   "A_Zupper": {
+      "message": "AZ"
+   },
+   "A_required_update_is_available_for_LastPass__Please_press_OK_to_begin_download_and_installation_": {
+      "message": "Uma actualiza\u00E7\u00E3o necess\u00E1ria est\u00E1 dispon\u00EDvel para o LastPass. Por favor, pressione OK para iniciar o download e instala\u00E7\u00E3o."
+   },
+   "A_server_error_occurred_while_processing_your_request_": {
+      "message": "Ocorreu um erro no servidor ao processar seu pedido."
+   },
+   "About___": {
+      "message": "Acerca..."
+   },
+   "Accept": {
+      "message": "Aceitar"
+   },
+   "Account_Settings": {
+      "message": "Defini\u00E7\u00F5es de Conta"
+   },
+   "Actionproper": {
+      "message": "Ac\u00E7\u00E3o"
+   },
+   "Add": {
+      "message": "Adicionar"
+   },
+   "Add_Credit_Card": {
+      "message": "Adicionar Cart\u00E3o de Cr\u00E9dito"
+   },
+   "Add_Field": {
+      "message": "Adicionar Campo"
+   },
+   "Add_Identity": {
+      "message": "Adicionar Identidade"
+   },
+   "Add_New_Site": {
+      "message": "Adicionar novo endere\u00E7o"
+   },
+   "Add_Profile": {
+      "message": "Adicionar Perfil"
+   },
+   "Add_Secure_Note": {
+      "message": "Adicionar Nota Segura"
+   },
+   "Add_Site": {
+      "message": "Adicionar Site"
+   },
+   "Address_1": {
+      "message": "Endere\u00E7o 1"
+   },
+   "Address_2": {
+      "message": "Endere\u00E7o 2"
+   },
+   "Address_3": {
+      "message": "Endere\u00E7o 3"
+   },
+   "Advanced": {
+      "message": "Avan\u00E7ado"
+   },
+   "All": {
+      "message": "Tudo"
+   },
+   "Allow_LastPass_to_find_insecure_data_on_your_computer_": {
+      "message": "Permitir que o LastPass procure dados inseguros no seu computador?"
+   },
+   "Alt": {
+      "message": "Alt"
+   },
+   "An_Update_is_Available__Would_you_like_to_install_": {
+      "message": "Est\u00E1 dispon\u00EDvel uma actualiza\u00E7\u00E3o. Pretende instala-la?"
+   },
+   "Appearance": {
+      "message": "Apar\u00EAncia"
+   },
+   "April": {
+      "message": "Abril"
+   },
+   "Are_you_sure_you_want_to_have_LastPass_remember_your_password___This_will_significantly_decrease_the_security_of_your_LastPass_account_": {
+      "message": "Tem certeza que quer ter o LastPass a lembrar a sua password?\nIsso ir\u00E1 diminuir significativamente a seguran\u00E7a da sua conta LastPass!"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_field_": {
+      "message": "Tem certeza que deseja apagar este campo?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_form_fill_profile_": {
+      "message": "Tem a certeza que gostaria de eliminar esta forma de preenchimento de perfil?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_generated_password_": {
+      "message": "Tem a certeza de que deseja apagar esta palavra passe gerada?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_secure_note_": {
+      "message": "Tem a certeza de que deseja apagar esta nota segura?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_site_": {
+      "message": "Tem a certeza de que deseja eliminar este website?"
+   },
+   "August": {
+      "message": "Agosto"
+   },
+   "Authenticate": {
+      "message": "Autenticar"
+   },
+   "Authentication_Failed_": {
+      "message": "Autentica\u00E7\u00E3o Falhou."
+   },
+   "AutoFill": {
+      "message": "Auto Preencher"
+   },
+   "AutoLogin": {
+      "message": "Autentica\u00E7\u00E3o Autom\u00E1tica"
+   },
+   "Automatically_Fill_Login_Information": {
+      "message": "Autom\u00E1ticamente Preencher a Informa\u00E7\u00E3o da Autentica\u00E7\u00E3o"
+   },
+   "Automatically_Logoff_after_idle__mins_": {
+      "message": "Autom\u00E1ticamente Sair Ap\u00F3s estar parado (minutos)"
+   },
+   "Automatically_login_to_sites_if_time_since_last_login____seconds_": {
+      "message": "Autom\u00E1ticamente autenticar nos sites se o tempo desde a \u00FAltima autentica\u00E7\u00E3o for \u003E (segundos)"
+   },
+   "Avoid_Ambiguous_Characters": {
+      "message": "Evitar Caracteres Amb\u00EDguos"
+   },
+   "Birthday": {
+      "message": "Anivers\u00E1rio"
+   },
+   "Blacklist": {
+      "message": "A sua conta foi temporariamente suspendida (por 5 minutos) por causa de muitas  tentativas de autentica\u00E7\u00E3o."
+   },
+   "Blog": {
+      "message": "Blog"
+   },
+   "Built_": {
+      "message": "Built:"
+   },
+   "But_I_m_a_forgetful_person___what_should_I_do_if_I_forget_my_password_": {
+      "message": "Mas eu sou uma pessoa esquecida...o que fa\u00E7o se me esquecer da palavra-passe?"
+   },
+   "Can_t_find_hidden_LastPass_window": {
+      "message": "N\u00E3o \u00E9 poss\u00EDvel encontrar a janela escondida do LastPass"
+   },
+   "Cancel": {
+      "message": "Cancelar"
+   },
+   "Change": {
+      "message": "Alterar"
+   },
+   "Change_Password": {
+      "message": "Alterar Senha"
+   },
+   "Check_For_Updates": {
+      "message": "Verificar por actualiza\u00E7\u00F5es"
+   },
+   "Checkbox": {
+      "message": "Checkbox"
+   },
+   "Checking_For_Updates___": {
+      "message": "Verificar atualiza\u00E7\u00F5es ..."
+   },
+   "Choose_Profile_and_Credit_Card": {
+      "message": "Escolha o Perfil e Cart\u00E3o de Cr\u00E9dito"
+   },
+   "City___Town": {
+      "message": "Cidade / Vila"
+   },
+   "Clear": {
+      "message": "Limpar"
+   },
+   "Clear_Forms": {
+      "message": "Limpar Campos"
+   },
+   "Clear_Local_Cache": {
+      "message": "Limpar Cache Local"
+   },
+   "Click_Continue_to_start_using_LastPass_": {
+      "message": "Clique em Continuar para come\u00E7ar a usar LastPass."
+   },
+   "Click_here_to_launch_account_settings": {
+      "message": "Clique aqui para iniciar as configura\u00E7\u00F5es da conta"
+   },
+   "Click_here_to_watch_a_video_on_basic_usage_": {
+      "message": "Clique aqui para ver um v\u00EDdeo sobre o uso b\u00E1sico."
+   },
+   "Close": {
+      "message": "Fechar"
+   },
+   "Company": {
+      "message": "Imprensa"
+   },
+   "Configure_Form_Fill": {
+      "message": "Configurar o preenchimento de formul\u00E1rio"
+   },
+   "Confirm": {
+      "message": "Confirmar"
+   },
+   "Congratulations": {
+      "message": "Parab\u00E9ns"
+   },
+   "Continue": {
+      "message": "Continuar"
+   },
+   "Copy": {
+      "message": "Copiar"
+   },
+   "Copy_Password": {
+      "message": "Copiar a Password"
+   },
+   "Copy_Username": {
+      "message": "Copiar o Nome de Utilizador"
+   },
+   "Country": {
+      "message": "Pa\u00EDs"
+   },
+   "County": {
+      "message": "Concelho"
+   },
+   "Create_Account": {
+      "message": "Criar Conta"
+   },
+   "Create_an_Account": {
+      "message": "Criar Conta"
+   },
+   "Creating_Account___": {
+      "message": "A Criar Conta ..."
+   },
+   "Ctrl": {
+      "message": "Ctrl"
+   },
+   "December": {
+      "message": "Dezembro"
+   },
+   "Delete": {
+      "message": "Eliminar"
+   },
+   "Delete_Group": {
+      "message": "Apagar Grupo"
+   },
+   "Disable_Insecure_Chrome_Password_Manager": {
+      "message": "Desactivar Gestor de Palavras Passe Inseguro do Chrome"
+   },
+   "Disable_Multifactor_Authentication": {
+      "message": "Desactivar Multifactor de Autentica\u00E7\u00E3o"
+   },
+   "Do_you_really_want_to_quit___You_cannot_use_LastPass_without_creating_an_account_": {
+      "message": "De certeza que quer sair? N\u00E3o pode continuar a usar LastPass sem criar uma conta."
+   },
+   "Down": {
+      "message": "Para Baixo"
+   },
+   "Dr": {
+      "message": "Dr"
+   },
+   "Dutch": {
+      "message": "Holanda"
+   },
+   "Edit": {
+      "message": "Editar"
+   },
+   "Edit_Form_Fields": {
+      "message": "Editar Campos do Formul\u00E1rio"
+   },
+   "Email": {
+      "message": "Email"
+   },
+   "Email_already_in_use__have_you_forgotten_your_password_": {
+      "message": "O email j\u00E1 est\u00E1 em uso, esqueceu-se da sua palavra-passe?"
+   },
+   "End": {
+      "message": "Fim"
+   },
+   "English": {
+      "message": "Ingl\u00EAs"
+   },
+   "ErrorLoginMsg": {
+      "message": "Ocorreu um erro ao fazer a autentica\u00E7\u00E3o no LastPass.Por favor verifique a sua conec\u00E7\u00E3o da Internet."
+   },
+   "ErrorSendingMsg": {
+      "message": "Ocorreu um erro ao tentar contactar o servidor. Por favor verifique a sua connec\u00E7\u00E3o de Internet."
+   },
+   "ErrorSessionMsg": {
+      "message": "A Sua sess\u00E3o do LastPass parece ter expirado. Por favor, volte a autenticar."
+   },
+   "Expand_All": {
+      "message": "Expandir tudo"
+   },
+   "Export_To": {
+      "message": "Exportar Para"
+   },
+   "Favorite": {
+      "message": "Favoritos"
+   },
+   "February": {
+      "message": "Fevereiro"
+   },
+   "Feedback": {
+      "message": "Resposta"
+   },
+   "Female": {
+      "message": "Feminino"
+   },
+   "Fields_": {
+      "message": "Campos:"
+   },
+   "Fill_Current": {
+      "message": "Preencher Actual"
+   },
+   "Fill_Forms": {
+      "message": "Preencher Formul\u00E1rios"
+   },
+   "Fill_In_Next_Login__When_Multiple_": {
+      "message": "Preencha Pr\u00F3xima Autentica\u00E7\u00E3o(quando m\u00FAltiplas)"
+   },
+   "Fill_In_Previous_Login__When_Multiple_": {
+      "message": "Preencher \u00DAltima Autentica\u00E7\u00E3o(quando m\u00FAltiplas)"
+   },
+   "FillableFormDetected": {
+      "message": "Um formul\u00E1rio preench\u00EDvel foi detectado nesta p\u00E1gina."
+   },
+   "Find_a_site": {
+      "message": "Encontre um site"
+   },
+   "Firefox_Password_Manager": {
+      "message": "Gestor de Palavra-Passe do Firefox"
+   },
+   "For_each_coordinate_listed_below__find_the_value_on_your_grid_and_enter_the_value_": {
+      "message": "Para cada coordenada listada abaixo, encontre o valor na sua grelha e digite o valor."
+   },
+   "Form_Name_": {
+      "message": "Nome do Formul\u00E1rio:"
+   },
+   "Forums": {
+      "message": "F\u00F3runs"
+   },
+   "Gender": {
+      "message": "Sexo"
+   },
+   "General": {
+      "message": "Geral"
+   },
+   "Generate": {
+      "message": "Gerar"
+   },
+   "Generate_Secure_Password": {
+      "message": "Gerar Palavra-passe Segura"
+   },
+   "Generated_Password_for": {
+      "message": "Palavra-Passe Gerada para"
+   },
+   "Generic_CSV_File": {
+      "message": "Ficheiro Gen\u00E9rico CSV"
+   },
+   "Go_Premium_": {
+      "message": "Ficar Premium!"
+   },
+   "Google_Chrome": {
+      "message": "Google Chrome"
+   },
+   "Group_": {
+      "message": "Grupo:"
+   },
+   "Help_Translate": {
+      "message": "Ajude a Traduzir "
+   },
+   "Help___": {
+      "message": "Ajuda..."
+   },
+   "Highlight_input_boxes": {
+      "message": "Destacar caixas de entrada"
+   },
+   "History": {
+      "message": "Hist\u00F3rico"
+   },
+   "Home": {
+      "message": "In\u00EDcio"
+   },
+   "HotKeys": {
+      "message": "Teclas de Atalho"
+   },
+   "IT_IS_CRITICAL_THAT_YOU_NEVER_FORGET_YOUR_NEW_LASTPASS_PASSWORD_": {
+      "message": "\u00C9 FUNDAMENTAL QUE NUNCA ESQUE\u00C7A A SUA \u00DALTIMA PALAVRA-PASSE DO LASTPASS."
+   },
+   "I_forgot_my_password__Help_": {
+      "message": "Esqueci a minha palavra passe, Ajuda"
+   },
+   "I_have_read_and_agree_with_the": {
+      "message": "Eu li e concordo com o"
+   },
+   "I_understand_that_my_encrypted_data_will_be_sent_to_LastPass": {
+      "message": "Eu compreendo que os meus dados encriptados ser\u00E3o enviados para o LastPass"
+   },
+   "Identities": {
+      "message": "Identidades"
+   },
+   "Identity": {
+      "message": "Identidade"
+   },
+   "If_you_already_have_a_LastPass_account_you_can_close_this_window_and_login_": {
+      "message": "Se voc\u00EA j\u00E1 tem uma conta LastPass pode fechar esta janela e se autenticar."
+   },
+   "If_you_do_end_up_forgetting_your_LastPass_master_password_": {
+      "message": "Se voc\u00EA esuqecer a sua palavra-passe mestre do LastPass,"
+   },
+   "If_you_lost_your_YubiKey_device__click_here_to_disable_YubiKey_authentication": {
+      "message": "Se perdeu o seu dispositivo YubiKey, clique aqui para desactivar a autentica\u00E7\u00E3o YubiKey"
+   },
+   "If_you_lost_your_grid__click_here_to_disable_grid_authentication": {
+      "message": "Se perdeu a sua grelha, clique aqui para desactivar a autentica\u00E7\u00E3o por grelha"
+   },
+   "Import": {
+      "message": "Importar"
+   },
+   "Import_From": {
+      "message": "Importar De"
+   },
+   "Instructions": {
+      "message": "Instru\u00E7\u00F5es"
+   },
+   "Invalid_Password_": {
+      "message": "Senha inv\u00E1lida"
+   },
+   "Invalid_email_address__try_again": {
+      "message": "Email inv\u00E1lido, tente novamente"
+   },
+   "January": {
+      "message": "Janeiro"
+   },
+   "July": {
+      "message": "Julho"
+   },
+   "June": {
+      "message": "Junho"
+   },
+   "KeePass": {
+      "message": "KeePass"
+   },
+   "Keep_a_history_of_my_logins_and_form_fills": {
+      "message": "Manter um hist\u00F3rico dos meus logins e preenchimentos de formul\u00E1rios"
+   },
+   "Language": {
+      "message": "Linguagem"
+   },
+   "LastPass": {
+      "message": "LastPass"
+   },
+   "LastPass_CSV_File": {
+      "message": "LastPass Arquivo CSV"
+   },
+   "LastPass_Chrome_Toolbar": {
+      "message": "Barra de Ferramentas do LastPass Para o Chrome"
+   },
+   "LastPass_Encrypted_File": {
+      "message": "Arquivo Criptografado do Last Pass"
+   },
+   "LastPass_Grid_Multifactor_Authentication": {
+      "message": "Autentica\u00E7\u00E3o Grid Multifactor da LastPass"
+   },
+   "LastPass_cannot_login_until_cookies_are_allowed_from_lastpass_com": {
+      "message": "LastPass n\u00E3o pode autenticar at\u00E9 que os cookies sejam permitidos para lastpass.com"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_like_to_continue_": {
+      "message": "LastPass detectou um formul\u00E1rio de autentica\u00E7\u00E3o que \u00E9 inseguro.\n\nDeseja continuar?"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_still_like_LastPass_to_fill_the_form_": {
+      "message": "LastPass detectou um formul\u00E1rio de autentica\u00E7\u00E3o que \u00E9 inseguro.\n\nIr\u00E1 desejar que o LastPass preencha oo formul\u00E1rio?"
+   },
+   "LastPass_detected_a_password_change_for": {
+      "message": "LastPass detectou uma mudan\u00E7a de palavra-passe para"
+   },
+   "LastPass_detected_a_password_change_for_domain_": {
+      "message": "LastPass detectou uma mudan\u00E7a de palavra-passe para o dom\u00EDnio:"
+   },
+   "LastPass_detected_a_password_change_for_user_": {
+      "message": "LastPass detectou uma mudan\u00E7a de palavra-passe para o utilizador:"
+   },
+   "Left": {
+      "message": "Esquerda"
+   },
+   "LoggedInOffline": {
+      "message": "LastPass n\u00E3o conseguiu contatar o servidor de autentica\u00E7\u00E3o, por isso voc\u00EA est\u00E1 agora em modo offline. Algumas funcionalidades podem ser limitadas."
+   },
+   "Login": {
+      "message": "Entrar"
+   },
+   "LoginError": {
+      "message": "Erro ao autenticar no LastPass. Por favor tente de novo."
+   },
+   "Login_to_LastPass": {
+      "message": "Entrar no LastPass"
+   },
+   "Logoff": {
+      "message": "Sair"
+   },
+   "Logoff_": {
+      "message": "Sair:"
+   },
+   "Male": {
+      "message": "Masculino"
+   },
+   "March": {
+      "message": "Mar\u00E7o"
+   },
+   "Master_Password": {
+      "message": "Palavra-passe m\u00E3e/mestra"
+   },
+   "May": {
+      "message": "Maio"
+   },
+   "Minimum_Digit_Count": {
+      "message": "Quantidade de D\u00EDgitos Minima"
+   },
+   "More": {
+      "message": "Mais"
+   },
+   "Mr": {
+      "message": "Sr."
+   },
+   "Mrs": {
+      "message": "Sra"
+   },
+   "Ms": {
+      "message": "Sr"
+   },
+   "My_LastPass_Vault": {
+      "message": "O Meu Cofre LastPass"
+   },
+   "NAME": {
+      "message": "NOME"
+   },
+   "Name_": {
+      "message": "Nome:"
+   },
+   "Nameproper": {
+      "message": "Nome"
+   },
+   "Never_AutoFill": {
+      "message": "Nunca Autopreencher"
+   },
+   "Never_For_This_Domain": {
+      "message": "Nunca Para Este Dom\u00EDnio"
+   },
+   "Never_For_This_Page": {
+      "message": "Nunca Para Esta P\u00E1gina"
+   },
+   "Never___": {
+      "message": "Nunca ..."
+   },
+   "No": {
+      "message": "N\u00E3o"
+   },
+   "No_Thanks": {
+      "message": "N\u00E3o, obrigado"
+   },
+   "No_Updates_Are_Available": {
+      "message": "N\u00E3o H\u00E1 Actualiza\u00E7\u00F5es Dispon\u00EDveis"
+   },
+   "No__I_do_not_want_LastPass_to_help_me_fill_forms_automatically": {
+      "message": "N\u00E3o, eu n\u00E3o quero que LastPass me ajudar a preencher formul\u00E1rios automaticamente"
+   },
+   "Not_Now": {
+      "message": "N\u00E3o por enquanto"
+   },
+   "Notes": {
+      "message": "Notas"
+   },
+   "Notes_": {
+      "message": "Notas:"
+   },
+   "Notifications": {
+      "message": "Notifica\u00E7\u00F5es"
+   },
+   "November": {
+      "message": "Novembro"
+   },
+   "OK": {
+      "message": "OK"
+   },
+   "October": {
+      "message": "Outubro"
+   },
+   "Old_Password": {
+      "message": "Palavra-Chave Antiga"
+   },
+   "Open_All": {
+      "message": "Abrir Todos"
+   },
+   "Open_Favorites": {
+      "message": "Abrir Favoritos"
+   },
+   "Open_login_dialog_when_start_browser": {
+      "message": "Abrir o di\u00E1logo de autentica\u00E7\u00E3o quando iniciar o Navegador"
+   },
+   "Other": {
+      "message": "Outro"
+   },
+   "Other_Sessions": {
+      "message": "Outras Sess\u00F5es"
+   },
+   "PASSWORDupper": {
+      "message": "PALAVRA-PASSE"
+   },
+   "Password": {
+      "message": "Palavra-passe"
+   },
+   "Password_": {
+      "message": "Palavra-passe:"
+   },
+   "Password_Length": {
+      "message": "Tamanho da Palavra-Passe"
+   },
+   "Password_Reminder": {
+      "message": "Lembrete/Dica de Palavra-passe"
+   },
+   "Password_reminder_cannot_match_password": {
+      "message": "O lembrete da palavra-passe n\u00E3o pode igual \u00E0 palavra-passe"
+   },
+   "Please_Make_a_Selection": {
+      "message": "Fa\u00E7a uma selec\u00E7\u00E3o"
+   },
+   "Please_enter_a_Password_Reminder": {
+      "message": "Por favor, introduza um lembrete de password"
+   },
+   "Please_provide_this_computer_a_name": {
+      "message": "Por favor, forne\u00E7a um nome a este computador"
+   },
+   "Please_select_which_sites_you_wish_to_apply_this_change_": {
+      "message": "Por favor seleccione quais os sites que voc\u00EA deseja aplicar esta altera\u00E7\u00E3o."
+   },
+   "Please_visit_https___lastpass_com_to_create_an_account_at_a_later_time_": {
+      "message": "Por favor visite https://lastpass.com para criar uma conta mais tarde."
+   },
+   "Preferences": {
+      "message": "Prefer\u00EAncias"
+   },
+   "Print": {
+      "message": "Imprimir"
+   },
+   "Profile": {
+      "message": "Perfil"
+   },
+   "Re_enter_Password": {
+      "message": "Reescreva a Senha"
+   },
+   "Recently_Used": {
+      "message": "Recentemente Utilizado"
+   },
+   "Recheck_Page": {
+      "message": "Verificar P\u00E1gina Novamente"
+   },
+   "Refresh_Sites": {
+      "message": "Actualizar Sites"
+   },
+   "Reject": {
+      "message": "Rejeitar"
+   },
+   "Remember_Email": {
+      "message": "Lembrar o Email"
+   },
+   "Remember_Password": {
+      "message": "Lembrar Palavra-Passe"
+   },
+   "Rename_Group": {
+      "message": "Renomear Grupo"
+   },
+   "Require_Every_Character_Type": {
+      "message": "Exige Todos os Tipos de Caracteres"
+   },
+   "Require_Password_Reprompt": {
+      "message": "Exigir Senha Reescrita"
+   },
+   "Respect_AutoComplete_off__allow_websites_to_disable_AutoFill": {
+      "message": "Respeitar AutoCompletar=off: permitir que websites desactivem preenchimento autom\u00E1tico"
+   },
+   "Right": {
+      "message": "Direita"
+   },
+   "RoboForm": {
+      "message": "RoboForm"
+   },
+   "Save": {
+      "message": "Guardar"
+   },
+   "Save_All_Entered_Data": {
+      "message": "Guardar Todos os Tados Inseridos"
+   },
+   "Save_New_Site": {
+      "message": "Guardar Novo Site"
+   },
+   "Save_Site": {
+      "message": "Guardar Site"
+   },
+   "Save_a_disabled_One_Time_Password_locally_for_Account_Recovery": {
+      "message": "Guarde uma Uma Vez Palavra-Passe localmente para Recupera\u00E7\u00E3o da Conta"
+   },
+   "Search": {
+      "message": "Pesquisa"
+   },
+   "Secure_Notes": {
+      "message": "Notas Seguras"
+   },
+   "Security": {
+      "message": "Seguran\u00E7a"
+   },
+   "Security_Check": {
+      "message": "Verifica\u00E7\u00E3o de Seguran\u00E7a"
+   },
+   "Select": {
+      "message": "Seleccione"
+   },
+   "Select_All": {
+      "message": "Seleccionar Tudo"
+   },
+   "Send_anonymous_error_reporting_data_to_help_improve_LastPass": {
+      "message": "Enviar relat\u00F3rios de erro an\u00F3nimos para ajudar a melhorar a LastPass"
+   },
+   "September": {
+      "message": "Setembro"
+   },
+   "Sesame_Multifactor_Authentication": {
+      "message": "Autentica\u00E7\u00E3o Multi-factor Sesame "
+   },
+   "Share": {
+      "message": "Partilhas"
+   },
+   "Share_offer_from": {
+      "message": "Oferta de ac\u00E7\u00F5es de"
+   },
+   "Shift": {
+      "message": "Shift"
+   },
+   "Should_LastPass_remember_this_password_": {
+      "message": "Deseja que o LastPass se lembre desta palavra-passe?"
+   },
+   "Show": {
+      "message": "Mostrar"
+   },
+   "Show_Advanced_Options": {
+      "message": "Mostrar Op\u00E7\u00F5es Avan\u00E7adas"
+   },
+   "Show_Deleted_Sites": {
+      "message": "Mostrar Sites Apagados"
+   },
+   "Show_Notifications": {
+      "message": "Mostrar Notifica\u00E7\u00F5es"
+   },
+   "Show_Sites_in_Groups": {
+      "message": "Mostrar Sites em Grupos"
+   },
+   "Show_all_sites": {
+      "message": "Mostrar todos os sites"
+   },
+   "Site_Search": {
+      "message": "Procura no Site"
+   },
+   "Sites": {
+      "message": "Sites"
+   },
+   "Special": {
+      "message": "Especial"
+   },
+   "State___Province": {
+      "message": "Concelho / Freguesia"
+   },
+   "Submit_Form": {
+      "message": "Enviar Formul\u00E1rio"
+   },
+   "Text": {
+      "message": "Texto"
+   },
+   "The_LastPass_master_password_you_reentered_does_not_match": {
+      "message": "A palavra-passe m\u00E3e/mestra do LastPass que introduziu n\u00E3o \u00E9 igual"
+   },
+   "This_computer_is_trusted__do_not_require_a_second_form_of_authentication_": {
+      "message": "Este computador \u00E9 de confian\u00E7a, n\u00E3o pe\u00E7a uma segunda forma de autentica\u00E7\u00E3o."
+   },
+   "This_is_a_shared_site__You_are_not_permitted_to_view_the_password_": {
+      "message": "Este \u00E9 um site compartilhado. Voc\u00EA n\u00E3o tem permiss\u00E3o para ver a palavra-passe."
+   },
+   "Time_Zone": {
+      "message": "Fuso hor\u00E1rio"
+   },
+   "Title": {
+      "message": "T\u00EDtulo"
+   },
+   "To_create_your_account__please_re_enter_your_LastPass_master_password": {
+      "message": "Para criar a sua conta, por favor coloque a sua password mestre"
+   },
+   "To_protect_your_privacy_and_keep_your_data_confidential_": {
+      "message": "Para proteger a sua privacidade e manter os seus dados confidenciais,"
+   },
+   "Tools": {
+      "message": "Ferramentas"
+   },
+   "Try_Again": {
+      "message": "Tente Novamente"
+   },
+   "TurboPasswords": {
+      "message": "Palavra-Passe Turbo"
+   },
+   "Type_": {
+      "message": "Tipo:"
+   },
+   "URL_": {
+      "message": "URL:"
+   },
+   "USERNAME": {
+      "message": "NOME DE UTILIZADOR"
+   },
+   "Unselect_All": {
+      "message": "Desmarcar Todos"
+   },
+   "Up": {
+      "message": "Para cima"
+   },
+   "Username_": {
+      "message": "Nome de utilizador:"
+   },
+   "Version_": {
+      "message": "Vers\u00E3o:"
+   },
+   "Warn_before_filling_insecure_forms": {
+      "message": "Avisar antes de preencher formul\u00E1rios inseguros"
+   },
+   "We_also_DO_NOT_keep_a_copy_or_backup_of_it_": {
+      "message": "N\u00F3s tamb\u00E9m N\u00C3O mantemos uma c\u00F3pia ou c\u00F3pia do mesmo."
+   },
+   "Welcome_to_LastPass_": {
+      "message": "Bem-vindo ao LastPass!"
+   },
+   "Windows": {
+      "message": "Windows"
+   },
+   "Would_you_like_to_set_up_a_Form_Filling_profile_now_": {
+      "message": "Gostaria de configurar um Formul\u00E1rio de Preenchimento de Perfil agora?"
+   },
+   "Yes": {
+      "message": "Sim"
+   },
+   "You_cannot_assign_more_than_one_HotKey_the_same_value_": {
+      "message": "Voc\u00EA n\u00E3o pode atribuir a uma HotKey o mesmo valor."
+   },
+   "You_currently_have_LastPass_set_to_remember_your_password___Doing_so_essentially_makes_the_automatically_logoff_options_you_ve_chosen_useless___Would_you_like_LastPass_to_stop_remembering_your_password_": {
+      "message": "Actualmente definiu o LastPass para guardar a sua senha. Isso simplesmente faz com que a op\u00E7\u00E3o de Logoff Autom\u00E1tico, que voc\u00EA escolheu, seja in\u00FAtil. Gostaria que LastPass parasse de lembrar a sua senha?"
+   },
+   "You_must_agree_to_the_terms_to_continue": {
+      "message": "Para continuar tem de concordar com os termos"
+   },
+   "You_must_enter_a_name_": {
+      "message": "Tem de colocar um nome."
+   },
+   "You_must_enter_a_unique_name_": {
+      "message": "Tem de colocar um nome \u00FAnico"
+   },
+   "Your_current_settings_require_you_to_enter_your_LastPass_password_to_complete_this_action_": {
+      "message": "As suas configura\u00E7\u00F5es actuais requerem que voc\u00EA re-entre a sua palavra-passe do LastPass para completar esta ac\u00E7\u00E3o."
+   },
+   "Your_password_can_not_be_the_same_as_your_email_": {
+      "message": "A sua senha n\u00E3o pode ser a mesma que o seu email."
+   },
+   "Your_password_is_easily_guessable_": {
+      "message": "A sua palavra-passe \u00E9 f\u00E1cil de adivinhar."
+   },
+   "Your_password_is_too_short__It_must_be_at_least_6_characters_long": {
+      "message": "A sua senha \u00E9 muito curta. Ela deve ter pelo menos 6 caracteres."
+   },
+   "Your_password_reminder_serves_to_remind_you_of_what_your": {
+      "message": "A sua lembran\u00E7a de palavra-passe serve para lembr\u00E1-lo da sua"
+   },
+   "YubiKey_Multifactor_Authentication": {
+      "message": "Autentica\u00E7\u00E3o Multi-factor YubiKey"
+   },
+   "_Hide_": {
+      "message": "[Esconder]"
+   },
+   "_New_Pending_Share_Offers_": {
+      "message": "(Novas Ofertas de Ac\u00E7\u00F5es Pendentes)"
+   },
+   "_Show_": {
+      "message": "[Mostrar]"
+   },
+   "_none_": {
+      "message": "(nenhum)"
+   },
+   "a_zlower": {
+      "message": "a-z"
+   },
+   "actual_password_is__while_still_maintaining_its_secrecy_": {
+      "message": "a palavra-passe \u00E9, mantendo a sua confidencialidade."
+   },
+   "and": {
+      "message": "e"
+   },
+   "contact_us_and_we_will_email_you_your_password_reminder_": {
+      "message": "Contacte-nos e iremos enviar-lhe a sua lembran\u00E7a de palavra-passe."
+   },
+   "dummy": {
+      "message": "dummy, leave this here so we don't mess up the trailing comma"
+   },
+   "ext_": {
+      "message": "ext."
+   },
+   "favorites": {
+      "message": "Favoritos"
+   },
+   "hour": {
+      "message": "hora"
+   },
+   "hours": {
+      "message": "horas"
+   },
+   "minutes": {
+      "message": "minutos"
+   },
+   "privacy_statement": {
+      "message": "pol\u00EDtica de privacidade"
+   },
+   "seconds": {
+      "message": "segundos"
+   },
+   "terms_of_service": {
+      "message": "Termos de Servi\u00E7o"
+   },
+   "we_DO_NOT_know_what_your_LastPass_password_is_": {
+      "message": "N\u00F3s N\u00C3O SABEMOS qual \u00E9 a sua senha."
+   }
+}

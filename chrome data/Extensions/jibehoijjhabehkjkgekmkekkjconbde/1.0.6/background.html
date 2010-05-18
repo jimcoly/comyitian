@@ -1,0 +1,17 @@
+<html>
+<head>
+<script>
+  // Called when the user clicks on the browser action.
+  chrome.browserAction.onClicked.addListener(function(tab) {
+   var firstRun = localStorage["first_run"] ;
+    if(firstRun){
+	var action_url = "javascript:(function(){var ibriiMainLib = document.createElement('SCRIPT');ibriiMainLib.type = 'text/javascript';ibriiMainLib.src = 'http://www.ibrii.com:80/bookmarklet/ibriiBookmarklet.js?client=chromeExtension&v=' + Math.floor(Math.random() * 1000000);ibriiMainLib.id = 'ibriiBookmarkletScript1';var ibriiHead=document.getElementsByTagName('head');if (ibriiHead.length!=0){    ibriiHead[0].appendChild(ibriiMainLib);}else{    document.body.appendChild(ibriiMainLib);} })();";
+    }else{
+	var action_url="http://www.ibrii.com/bar/try";
+	localStorage["first_run"] =true;
+    }
+    chrome.tabs.update(tab.id, {url: action_url});
+  });
+</script>
+</head>
+</html>

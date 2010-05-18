@@ -1,0 +1,221 @@
+<html><head><script type="text/javascript">var _SERVER_RESPONSE_TIME = (new Date()).getTime(); var _FRONTEND_VERSION = "1259020051"; function enableSidewiki() { chrome.extension.getBackgroundPage().setSidewikiEnabled(true); init(); document.getElementById('anno-opt-in').style.display = 'none'; document.getElementById('anno-client-not-loaded').style.visibility = 'visible'; }</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head> 
+<body class="anno-standalone" style="min-height: 600px; min-width: 300px;">
+<div style="width: 300px; height: 600px;"></div>
+<link rel="stylesheet" href="1010946542-client.css" type="text/css"> 
+
+<style type="text/css"> 
+    #anno-share-link,
+    .anno-item-share-link,
+    .preload-link {
+      background-image: url("http://www.google.com/sidewiki/resources/2166890895-link_icon.gif");
+      background-repeat: no-repeat;
+    }
+    #anno-share-email,
+    .anno-item-share-email,
+    .preload-email {
+      background-image: url("http://www.google.com/sidewiki/resources/3195219300-email_icon.gif");
+      background-repeat: no-repeat;
+    }
+    #anno-share-twitter,
+    .anno-item-share-twitter,
+    .preload-twitter {
+      background-image: url("http://www.google.com/sidewiki/resources/2030544128-twitter_icon.gif");
+      background-repeat: no-repeat;
+    }
+    #anno-share-fb,
+    .anno-item-share-fb,
+    .preload-fb {
+      background-image: url("http://www.google.com/sidewiki/resources/2286103645-facebook_share_icon.gif");
+      background-repeat: no-repeat;
+    }
+ 
+    #anno-edit-comment-tags {
+      background: url("http://www.google.com/sidewiki/resources/2281650899-tag.gif")
+          no-repeat 3px 4px;
+    }
+ 
+    #anno-permalink-close {
+      background: url("http://www.google.com/sidewiki/resources/3523885593-client-popup_close.png")
+          no-repeat 0 0;
+    }
+    #anno-permalink-close:hover,
+    .preload-onhover {
+      background: url("http://www.google.com/sidewiki/resources/2963815858-client-popup_close_onhover.png")
+          no-repeat 0 0;
+    }
+    #anno-permalink-close:active,
+    .preload-onpress {
+      background: url("http://www.google.com/sidewiki/resources/843199826-client-popup_close_onpress.png")
+          no-repeat 0 0;
+    }
+  </style> 
+<div id="anno-preload"><div class="preload-onhover"></div> 
+<div class="preload-onpress"></div> 
+<div class="preload-link"></div> 
+<div class="preload-email"></div> 
+<div class="preload-twitter"></div> 
+<div class="preload-fb"></div></div> 
+<div style="display:none;"><b> Sidewiki is temporarily unavailable. </b><br> Connecting in <span id="unavail-timeout"></span>... <span id="unavail-reconnect"> Try now</span> 
+Trying to reconnect now&hellip;</div> 
+<div style="display:none;"><b> Unable to reach Sidewiki. </b> Please check your internet connection. Connecting in <span id="err-timeout"></span>... <span id="err-reconnect"> Try now</span></div> 
+<div id="anno-client-caption"><div class="left"><a id="google-comments-logo"><span id="anno-product-name"> <img src="http://www.google.com/sidewiki/resources/2816056834-client-google_logo.gif" alt="Google">  Sidewiki</span></a> 
+<span id="anno-annotations-count" style="display:none;"></span> 
+<img id="menu-button" src="http://www.google.com/sidewiki/resources/2309232807-client-menu_arrow.gif" alt="Menu"> 
+<a id="close-button" style="display:none;" href="http://www.google.com/"><img src="http://www.google.com/sidewiki/resources/3917044113-close_frame.gif" alt="Close sidebar"></a></div> 
+<div id="anno-server-not-avail" style="display:none;"><span id="anno-server-not-avail-timer"></span></div> 
+<div class="right"><span id="anno-sorting-block" style="display:none;">View:
+<span id="anno-sorting-best" class="anno-sorting-current">Best</span> 
+<span>|</span> 
+<span id="anno-sorting-newest" class="anno-sorting-option">Newest</span></span></div></div> 
+<div id="anno-client-nonfooter"><div id="anno-client-main-content"><div class="top"><div id="anno-client-notification-bar" style="display:none;"><div id="anno-notify-published" style="display:none;"><span class="anno-notify-message">Entry published.</span></div> 
+<div id="anno-notify-deleted" style="display:none;"><span class="anno-notify-message">Your entry has been deleted.</span></div></div> 
+<div id="anno-below-q" style="display:none;"><span class="bold"> These entries may be less useful. </span> Click an entry to tell us what you think.
+<a id="anno-below-q-link" class="nowrap">Learn more</a></div></div> 
+<div id="anno-client-page-comments-tpl" style="display:none;">Entries about the entire page:</div> 
+<div id="anno-client-item-tpl" class="anno-client-item" style="display:none;"><div class="anno-client-item-main"><div class="anno-client-item-header" style="display:none;"><div class="small">Published.
+<a class="anno-profile-link">See it in your Google profile</a></div> 
+<div class="bold">Share via
+<a class="anno-item-share-link gta-link"></a> 
+<a class="anno-item-share-email gta-link"></a> 
+<a class="anno-item-share-twitter gta-link"></a> 
+<a class="anno-item-share-fb gta-link"></a></div></div> 
+<div class="anno-client-item-body"><div class="anno-client-userlogo-block"><a><img class="anno-client-userlogo" alt="No avatar"></a></div> 
+<div class="anno-client-author-block"><span class="anno-client-blog-post" style="display:none;">Blog post by</span> 
+<span class="anno-client-pageowner-name">Page owner</span> 
+<a class="anno-client-username"></a> 
+-
+<span class="anno-client-date"></span> 
+<div class="anno-client-author-desc"></div></div> 
+<div class="anno-client-textarea"><div class="anno-client-comment-about"></div> 
+<div class="anno-client-comment-title-block"><a class="anno-client-comment-title"></a></div> 
+<div class="anno-client-comment-text"></div> 
+<div class="anno-client-item-footer"><div class="anno-client-item-tags" style="display:none;">Tags:
+<span class="anno-client-tags-container"></span></div> 
+<div class="anno-client-view-stats" style="display:none;"></div> 
+<div><span class="anno-client-item-useful">Useful?
+<span class="nowrap"><span class="anno-client-u-yes">Yes</span> 
+(<span class="anno-client-num-useful">0</span>)</span> 
+<span class="nowrap"><span class="anno-client-u-no">No</span> 
+(<span class="anno-client-num-notuseful">0</span>)</span> 
+<span class="nowrap"><a class="anno-client-u-abuse">Report abuse</a></span></span> 
+<span class="anno-client-edit-controls" style="display:none;"><span class="anno-client-edit-comment nowrap">Edit</span> 
+<span class="anno-client-delete-comment nowrap">Delete</span></span> 
+<span class="anno-client-menu-more"><span class="u">Share</span> &#9660;</span> 
+<img class="progress-wheel" src="http://www.google.com/sidewiki/resources/499746212-progress_wheel.gif" alt="In progress"></div> 
+<div class="anno-client-stats" style="display:none;"></div> 
+<div class="anno-client-origpost" style="display:none;">Originally about:
+<a class="anno-client-origpost-link"></a></div> 
+<div class="anno-client-owner-more" style="display:none;"><a class="pageowner-learn-more nowrap">What&#39;s this?</a></div></div></div></div></div> 
+<div class="anno-client-item-alt" style="display:none;">You rated this entry by <span class="anno-client-username"></span>&nbsp;as not useful. <div><span class="page-link"> Expand &raquo; </span></div></div></div> 
+<div id="anno-client-comment-container" style="display:none;"></div> 
+<div id="anno-client-related-info-container" style="display:none;"><div class="anno-client-related-info"><div><span class="anno-client-related-info-title"></span></div> 
+<div class="anno-client-related-info-body"></div></div></div> 
+<div id="anno-opt-in" style="display:none; padding: 5px 0 0 5px;">
+<div><strong>Google Sidewiki</strong> lets you read and contribute helpful information alongside any webpage.</div>
+<div style="margin-top: 1.5em;"><img src="screenshot.png"/></div>
+<div style="display: none;margin-top: 1em;">Watch our <a href="http://www.youtube.com/watch?v=CsjJOsx84MA">Sidewiki video</a>, <a href="http://www.google.com/sidewiki/intl/en/learnmore.html">discover great entries</a> and visit our <a href="http://www.google.com/support/toolbar/bin/static.py?hl=en&page=guide.cs&guide=24296">Getting Started Guide</a> to learn more.</div>
+<div style="text-align: center; margin: 1.5em 0;"><img src="sidewiki32x32.png" style="vertical-align: middle;"/> <input type="button" onclick="enableSidewiki();" value=" Ok! Enable Sidewiki " style="font-weight: bold; font-family: sans-serif; padding: 5px 5px;"/> <a href="#" onclick="window.close();" style="color: #00f; margin-left: 3px; margin-right: 16px;">cancel</a></div>
+<div style="font-size: 12px; color: #333; padding-right: 5px;">For Sidewiki to work, this Chrome extension has to tell us what site you're visiting by sending Google the URL of the current page. <a href="http://www.google.com/support/toolbar/bin/answer.py?hl=en&answer=168120" onclick="chrome.tabs.create({url:this.href}); return false;" style="color: #00f;">Privacy notice</a></div>
+</div>
+<div id="anno-client-not-loaded">Loading...
+<img class="progress-wheel" src="http://www.google.com/sidewiki/resources/499746212-progress_wheel.gif" alt="In progress"></div> 
+<div id="anno-not-logged-in" style="display:none;"><span id="anno-sign-in-link" class="gta-link">Sign in</span> to your Google Account to write an entry.</div> 
+<div id="anno-not-supported" style="display:none;">Entries for this page are not supported. <a id="anno-not-supported-why"> Why?</a></div> 
+<div id="anno-not-available" style="display:none;">Entries for this page are not available.</div> 
+<div id="anno-edit-content" style="display:none;"><div id="anno-edit-top"><div id="anno-edit-with-profile"><img id="anno-edit-author-logo" alt="No avatar"> 
+<div><div><span id="anno-edit-author-name"></span></div> 
+<div><a id="anno-edit-profile">Edit your name</a></div></div></div> 
+<div id="anno-edit-as-pageowner" style="display:none;"><div>Writing as the page owner for:</div> 
+<div id="anno-edit-pageowner-url"></div> 
+<div id="anno-edit-siteowner-url"></div></div> 
+<div id="anno-edit-no-profile" style="display:none;"><div>Enter your name to write an entry.</div> 
+<div class="small">This will also create a Google profile.
+<a id="no-profile-link" class="nowrap">Learn more</a></div> 
+<table cellpadding="0" cellspacing="0" align="center"><tr><td>First name:</td> 
+<td width="100%"><input id="anno-edit-first-name" spellcheck="true" value="" maxlength="256"></td></tr> 
+<tr><td>Last name:</td> 
+<td width="100%"><input id="anno-edit-last-name" spellcheck="true" value="" maxlength="256"></td></tr></table></div> 
+<div id="anno-edit-about-block"><div id="anno-edit-quote-prefix"></div> 
+<div id="anno-edit-quote"></div></div></div> 
+<div id="anno-edit-pageowner"><div id="anno-edit-pageowner-new"><p>As the page owner, you can write a special entry that will remain the top entry for this page.</p> 
+<input id="anno-edit-pageowner-option" name="anno-edit-pageowner-option" type="checkbox"> 
+<label for="anno-edit-pageowner-option">Write as the page owner</label> 
+<a class="pageowner-learn-more nowrap">Learn more</a></div> 
+<div id="anno-edit-siteowner"><input id="anno-edit-siteowner-option" name="anno-edit-siteowner-option" type="checkbox"> 
+<label for="anno-edit-siteowner-option">Show this page owner entry on all pages of  <span id="anno-edit-siteowner-domain"></span> </label> 
+<div id="anno-edit-siteowner-already-exists"><strong> Note: </strong> A page owner entry for the domain already exists. <span id="anno-edit-existing-siteowner"> Edit </span> 
+<br> 
+A new page owner entry will be shown instead of the entry for the domain.</div></div> 
+<div id="anno-edit-pageowner-already-exists"><strong> Note: </strong> A page owner entry already exists. <span id="anno-edit-existing-pageowner"> Edit </span> 
+<div id="anno-edit-pageowner-exists-siteowner-msg">To write or edit an entry for the entire domain, please delete this page owner entry first.</div></div> 
+<div id="anno-edit-owner-msg"><p id="anno-edit-pageowner-msg">As the page owner, you can edit this special entry that will remain the top entry for this page.</p> 
+<p id="anno-edit-siteowner-msg">As the owner of  <span id="anno-edit-siteowner-msg-url"></span>, you can edit this special entry that will remain the top entry on all pages of this domain.</p> 
+<a class="pageowner-learn-more nowrap">Learn more</a></div></div> 
+<div id="anno-edit-frame-warning" style="display:none;">This page contains content from other domains. You are writing your entry about  <span id="anno-edit-frame-warning-domain"></span>.</div> 
+<div id="anno-edit-tip-page">To write an entry about a specific part of the page, highlight those words on the page.</div> 
+<div id="anno-edit-tip-partial">To write an entry about the entire page, make sure no text is highlighted.</div> 
+<div class="anno-edit-comment-title-wrapper"><input id="anno-edit-comment-title" spellcheck="true" value="" maxlength="256"></div> 
+<div class="anno-edit-comment-text-wrapper"><textarea id="anno-edit-comment-text" spellcheck="true" rows="10" cols="80"></textarea></div> 
+<div class="anno-edit-comment-tags-wrapper"><input id="anno-edit-comment-tags" spellcheck="true" value="" maxlength="256"></div> 
+<div id="anno-edit-comment-blogs-wrapper" style="display:none;"><div id="anno-edit-comment-blogs-zippy" class="anno-zippy">My blogs on Blogger</div> 
+<div id="anno-edit-comment-blogs" style="display:none;">Also post to:
+<div id="anno-edit-comment-blogslist"></div> 
+<div id="anno-edit-comment-blog-remember-holder"><input type="checkbox" name="anno-edit-comment-blog-remember" id="anno-edit-comment-blog-remember"> 
+<label for="anno-edit-comment-blog-remember">Remember these settings</label></div> 
+<div id="anno-edit-comment-blog-tpl" style="display:none;"><input type="checkbox"> 
+<img src="http://www.google.com/sidewiki/resources/3524752262-blogger_icon.gif" alt="Blogger"> 
+<a target="_blank" href=""></a></div></div></div> 
+<div id="anno-client-footer-edit" style="display:none;"><div><input type="button" id="anno-edit-cancel" value="Cancel"> 
+<input type="button" id="anno-edit-publish"> 
+<img id="anno-edit-progress-wheel" style="display:none;" src="http://www.google.com/sidewiki/resources/499746212-progress_wheel.gif" alt="In progress"></div> 
+<div id="anno-all-public-tip">All entries are public and must follow our <a id="anno-content-policy" target="_blank"> content policy</a>.</div></div></div></div> 
+<div id="anno-hover-card" style="display:none;"><img id="hovercard-author-logo" alt="No avatar"> 
+<div class="hovercard-body"><p id="hovercard-author-name"></p> 
+<p id="hovercard-comments-num" class="gta-gray-text"></p> 
+<p><a id="hovercard-profile-link" class="gta-link">View full profile &raquo;</a></p></div></div> 
+<div id="anno-client-popup-menu" class="popup-menu" style="display:none;"><a href="#" id="anno-share-link">Link</a> 
+<a href="#" id="anno-share-email">Email</a> 
+<a href="#" id="anno-share-twitter">Twitter</a> 
+<a href="#" id="anno-share-fb">Facebook</a></div> 
+<div id="anno-client-link-popup" style="display:none;"><a href="#" id="anno-permalink-close"></a> 
+<div>Paste link in <strong>email</strong> or <strong>IM</strong></div> 
+<div id="anno-permalink-wrapper"><input id="anno-permalink" value=""></div></div> 
+<div id="anno-lq-warn-page" style="display:none;"><div class="content"><div class="header"> Note: </div> <div> Feedback from users and our algorithm indicate that the following entries may be less useful. </div>  <div class="footer"><a id="show-lq-entries"> View these entries anyway &raquo; </a></div> </div></div></div> 
+<div id="anno-client-footer" style="display:none;"><div class="float-right"><span id="show-all-link" class="gta-link" style="display:none;">Show all entries &raquo;</span> 
+<span id="page-prev" style="display:none;">&lt; <a class="gta-link">Previous</a></span> 
+<span id="page-next" style="display:none;"><a class="gta-link">Next</a> &gt;</span> 
+<img id="page-progress" style="display:none;" src="http://www.google.com/sidewiki/resources/499746212-progress_wheel.gif" alt="In progress"></div> 
+<div><span id="publish-link-at-footer" class="page-link">Write an entry</span> 
+<span id="read-link-at-footer" class="page-link" style="display:none;">Read entries</span> 
+<span id="anno-client-footer-login" class="page-link" style="display:none;">Sign in to write an entry</span> 
+&nbsp;</div></div> 
+<div id="anno-dropdown-menu" class="popup-menu" style="display:none;"><a href="#" id="hide-minibar">Disable notification bar</a> 
+<a id="hide-minibar-domain">Hide just for <span id="domain-name"></span></a> 
+<a href="#" id="menu-write-anno">Write an entry</a> 
+<a id="menu-view-profile">View my Google profile</a> 
+<div class="menu-separator"><div></div></div> 
+<a id="send-feedback">Send feedback</a> 
+<a id="learn-more">Learn more</a></div> 
+<script src="2444715315-client_js.js" type="text/javascript"></script> 
+<script type="text/javascript">
+var _GTA_interface; 
+function init() {
+  if (_GTA_interface) {
+   var baseUrl = "http://www.google.com/sidewiki/"; _GTA_interface._setServerUrl(baseUrl); _GTA_interface._setServerBaseUrl(baseUrl); var url = chrome.extension.getBackgroundPage().getCurrentUrl(); _GTA_interface._setUrl(url); _GTA_interface._setExtensionMode(false);
+    _GTA_interface._fetchUrlData( chrome.extension.getBackgroundPage().getCurrentUrl() ); 
+    document.getElementById('anno-sign-in-link').onclick = document.getElementById('anno-client-footer-login').onclick = function() { chrome.extension.getBackgroundPage().openLoginWindow(chrome.extension.getBackgroundPage().getCurrentUrl());  };
+  }
+}
+setTimeout(function(){
+  document.getElementById('close-button').style.display='inline';
+  document.getElementById('close-button').onclick = function() { window.close(); return false; };
+  if (chrome.extension.getBackgroundPage().isSidewikiEnabled()) {
+    init();
+  }
+  else {
+    document.getElementById('anno-client-not-loaded').style.visibility = 'hidden';
+    document.getElementById('anno-opt-in').style.display = 'block';  
+  }
+}, 20);
+</script></body></html>

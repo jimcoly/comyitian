@@ -1,0 +1,17 @@
+{
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "proxy_off.png",
+      "default_title": "Toggle HTTP Proxy"
+   },
+   "description": "Switch Chrome proxy setting with one click.",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC7VS5DLIGqIg6O4hcnp8Y7PIMolY1+EcdO/9kSWYkq3LqtAWEd4lHI/FeEe5kdhgSfFutR/CsSyGeSRadvucv0vgSyd8t+dOX2tdVNSqYMpydbu7xFcr5v1s4O7LRl6K4cswf0eTYIoZ7GSKzp+Oc1cwTQN/fP1TGS44rejbUQYQIDAQAB",
+   "name": "Switch HTTP Proxy",
+   "permissions": [ "tabs" ],
+   "plugins": [ {
+      "path": "plugin/npswitchproxy.dll",
+      "public": true
+   } ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.4.1"
+}

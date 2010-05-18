@@ -1,0 +1,64 @@
+<html>
+<body>
+<div id="background-pages"></div>
+<object id='coolirisBridge' type='application/x-cooliris-background'></object>
+<script>
+var cooliris = document.getElementById('coolirisBridge');
+
+chrome.extension.onConnect.addListener(function (port) {
+  if (port.name == "HasJsPageHandler") {
+    port.onMessage.addListener(function () {
+      if (cooliris.hasJsPageHandler(port.tab.url)) {
+        port.postMessage();
+      }
+    });
+  } else if (port.name == "LaunchableChanged") {
+    port.onMessage.addListener(function (params) {
+      var path = params.launchable ? "resources/launch.active.png" : "resources/launch.normal.png";
+      chrome.browserAction.setIcon({tabId: port.tab.id, path: path});
+    });
+  }
+});
+
+function launchInTab(tabId) {
+  var xhr = new XMLHttpRequest();
+  xhr.onload = function() {
+    var code = xhr.responseText + "initCooliris().launchFromToolbar()";
+    chrome.tabs.executeScript(tabId, {code: code});
+  }
+  xhr.open("GET", chrome.extension.getURL('init.js'), true);
+  xhr.send();
+}
+
+chrome.browserAction.onClicked.addListener(function (tab) {
+  if (!cooliris.launchFromToolbar) {
+    chrome.tabs.update(tab.id, {url: chrome.extension.getURL('unsupported.html'), selected: true});
+  } else if (tab.url.match(/^https?:/) &&
+      !tab.url.match(/^https?:\/\/chrome.google.com\//)) {
+    launchInTab(tab.id);
+  } else {
+    cooliris.launchFromToolbar();
+  }
+});
+
+// Called by NPAPI
+function openUrl(url, newTab, selectTab) {
+  chrome.windows.getLastFocused(function (win) {
+    if (newTab) {
+      chrome.tabs.create({windowId: win.id, url: url, selected: selectTab});
+    } else {
+      chrome.tabs.getSelected(win.id, function (tab) {
+        chrome.tabs.update(tab.id, {url: url, selected: selectTab});
+      });
+    }
+  });
+}
+function stringForKey(key) {
+    return localStorage[key];
+}
+function setStringForKey(key, value) {
+    localStorage[key] = value;
+}
+</script>
+</body>
+</html>

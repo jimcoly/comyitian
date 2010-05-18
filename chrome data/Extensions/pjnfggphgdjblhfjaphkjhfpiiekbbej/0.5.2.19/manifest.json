@@ -1,0 +1,21 @@
+{
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "images/sp-19.png",
+      "default_title": "See Google Similar Pages",
+      "popup": "popup.html"
+   },
+   "description": "Discover webpages similar to the page you're currently browsing.",
+   "icons": {
+      "128": "images/sp-128.png",
+      "19": "images/sp-19.png",
+      "32": "images/sp-32.png",
+      "48": "images/sp-48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDnX9ymVKuyePPFZymXCCey1i2EUpZL8WDwB9ShsoH0FUGj8E2nIL+/gtZvD4lAlgxeX6sVteP4L7DENOyWqsHdTo6Ap4SnhdQBZdGa4RAfTHVk+ff+bzb4Jd5ZJnWgXzGxSVcYUy6mkAFjh8x+zpInj2EndzTWKRVrml8u2dqFTwIDAQAB",
+   "name": "Google Similar Pages beta (by Google)",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "https://www.google.com/", "http://*/" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "0.5.2.19"
+}

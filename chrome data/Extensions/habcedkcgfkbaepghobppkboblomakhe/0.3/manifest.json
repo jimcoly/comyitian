@@ -1,0 +1,16 @@
+{
+   "background_page": "monitor.html",
+   "content_scripts": [ {
+      "js": [ "monitor.js" ],
+      "matches": [ "http://*.taobao.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Chrome WangWang Handler Extension by Taobao UED, ChongHou",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9jnShzS8x2RFzIPyuyamZAb/hfjdEHc0RE4xhGFcMA4zkICUa2IweQwxZf09AgfIyPARih4OTqVesuc2KrMY0C8bkrtMk6VFB8CGlBdFse8JkfbaiaBFu5ixp2PhUhNj9u1yWutQtwZQyB/AVkUdsfpsz46LNGBWcN0KNJmhidQIDAQAB",
+   "name": "Chrome WangWang Handler Extension",
+   "plugins": [ {
+      "path": "npwangwang.dll"
+   } ],
+   "update_url": "http://ued.taobao.com/lab/cww/update.xml",
+   "version": "0.3"
+}

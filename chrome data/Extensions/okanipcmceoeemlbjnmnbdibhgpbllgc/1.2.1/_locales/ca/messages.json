@@ -1,0 +1,166 @@
+{
+   "direction": {
+      "message": "ltr"
+   },
+   "locale": {
+      "message": "ca"
+   },
+   "qs_about_close_button": {
+      "message": "Tanca"
+   },
+   "qs_about_copy": {
+      "message": "&copy;2009 Google"
+   },
+   "qs_about_explanation": {
+      "message": "Despr\u00E9s de fer clic en un resultat de la cerca de Google, \u00E9s possible que Quick Scroll aparegui a l'extrem inferior dret de la p\u00E0gina i que mostri un o m\u00E9s bits de text de la p\u00E0gina que s\u00F3n rellevants per a la vostra consulta. En fer clic al text, se us portar\u00E0 a aquella part de la p\u00E0gina."
+   },
+   "qs_about_explanation2": {
+      "message": "Quick Scroll nom\u00E9s apareix quan \u00E9s possible que sigui \u00FAtil. Podeu minimitzar-lo si feu clic al bot\u00F3 de minimitzaci\u00F3 que trobareu a l'extrem superior dret."
+   },
+   "qs_about_footer_about_google": {
+      "message": "\u003Ca href=\"http://www.google.com/intl/$1/about.html\"\u003EQuant a Google\u003C/a\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_footer_privacy_policy": {
+      "message": "\u003Ca href=\"http://www.google.com/chrome/intl/$1/extensions/privacy_notices.html\"\u003EPol\u00EDtica de privadesa\u003C/a\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_footer_tos": {
+      "message": "\u003Ca href=\"http://chrome.google.com/extensions/intl/$1/gallery_tos.html\"\u003ECondicions d'\u00FAs\u003C/a\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_how_it_works": {
+      "message": "Com funciona Google Quick Scroll:"
+   },
+   "qs_about_installed": {
+      "message": "Google Quick Scroll ja est\u00E0 instal\u00B7lat."
+   },
+   "qs_about_introduction": {
+      "message": "Google Quick Scroll \u00E9s una extensi\u00F3 del navegador que us ajuda a localitzar tot all\u00F2 que cerqueu amb m\u00E9s rapidesa."
+   },
+   "qs_about_only_useful": {
+      "message": "Google Quick Scroll apareix nom\u00E9s quan pot resultar \u00FAtil. \u003Ca href=\"http://www.google.com/support/websearch/bin/answer.py?answer=171471&hl=$1\"\u003EM\u00E9s informaci\u00F3\u003C/a\u003E.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_options_saved": {
+      "message": "Opcions desades"
+   },
+   "qs_about_privacy_options_label": {
+      "message": "Envieu autom\u00E0ticament estad\u00EDstiques d'\u00FAs a Google i ajudeu a millorar Google Quick Scroll."
+   },
+   "qs_about_privacy_options_title": {
+      "message": "Opcions de privadesa"
+   },
+   "qs_about_step_1": {
+      "message": "Realitzeu una cerca de Google."
+   },
+   "qs_about_step_2": {
+      "message": "Feu clic en un resultat de la cerca."
+   },
+   "qs_about_step_3": {
+      "message": "Feu clic a Google Quick Scroll per anar a les parts de la p\u00E0gina que siguin rellevants."
+   },
+   "qs_about_support_instructions": {
+      "message": "Si teniu preguntes o problemes relacionats amb l'\u00FAs de Quick Scroll, vegeu la nostra \u003Ca href=\"http://www.google.com/support/websearch/bin/answer.py?answer=171471&hl=$1\"\u003Ep\u00E0gina d'assist\u00E8ncia\u003C/a\u003E.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_about_thank_you": {
+      "message": "Gr\u00E0cies per instal\u00B7lar Google Quick Scroll."
+   },
+   "qs_about_try_it": {
+      "message": "\u003Cb\u003EProveu-lo.\u003C/b\u003E Cerqueu [\u003Ca id=\"sample-query\" target=\"_blank\" href=\"http://www.google.com/search?q=dark+matter+brown+dwarfs\"\u003Edark matter brown dwarfs\u003C/a\u003E] i feu clic al resultat \"dark matter brown dwarfs\"."
+   },
+   "qs_about_try_queries": {
+      "message": "Proveu aquestes consultes:"
+   },
+   "qs_about_uninstall_instructions": {
+      "message": "Per desinstal\u00B7lar Google Quick Scroll, utilitzeu l'opci\u00F3 del men\u00FA Extensions&nbsp;\u003E&nbsp;de les eines de Google Chrome i feu clic a l'enlla\u00E7 \"Desinstal\u00B7la\" de l'extensi\u00F3 de Google Quick Scroll."
+   },
+   "qs_about_uninstall_title": {
+      "message": "Desinstal\u00B7laci\u00F3"
+   },
+   "qs_description": {
+      "message": "Quick Scroll us permet saltar directament als bits rellevants d'un resultat de la cerca de Google."
+   },
+   "qs_fewer_matches": {
+      "message": "\u003Cspan class=\"__gqs-go\"\u003E&laquo;\u003C/span\u003E  Fewer matches"
+   },
+   "qs_gallery_description": {
+      "message": "Google Quick Scroll \u00E9s una extensi\u00F3 del navegador que us ajuda a trobar el que cerqueu m\u00E9s r\u00E0pidament.\u003Cbr/\u003E\u003Cbr/\u003EQuan h\u00E0giu fet clic en un resultat de la cerca de Google, \u00E9s possible que Quick Scroll aparegui a l'extrem inferior dret de la p\u00E0gina i que mostri un o b\u00E9 m\u00E9s fragments de text de la p\u00E0gina que siguin rellevants per a la consulta. Si feu clic al text, se us dirigir\u00E0 a la part de la p\u00E0gina en q\u00FCesti\u00F3.\u003Cbr/\u003E\u003Cbr/\u003EQuick Scroll prova de no molestar-vos, per la qual cosa nom\u00E9s apareix quan \u00E9s probable que el necessiteu."
+   },
+   "qs_info_no_tidbits_found": {
+      "message": "Google Quick Scroll no ha trobat cap resultat en aquesta p\u00E0gina per a \u003Cspan class=\"__gqs-query\"\u003E$1\u003C/span\u003E. \u003Cspan class=\"__gqs-learn-more\"\u003EM\u00E9s informaci\u00F3.\u003C/span\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_info_non_annotated_result": {
+      "message": "Sembla ser que tota la p\u00E0gina tracta sobre \u003Cspan class=\"__gqs-query\"\u003E$1\u003C/span\u003E. Google Quick Scroll apareix quan nom\u00E9s algunes parts de la p\u00E0gina s\u00F3n rellevants. \u003Cspan class=\"__gqs-learn-more\"\u003EM\u00E9s informaci\u00F3.\u003C/span\u003E",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "qs_info_non_ebm_result": {
+      "message": "This whole page seems to be about your query. Showing best matches below. \u003Cspan class=\"__gqs-learn-more\"\u003ELearn more\u003C/span\u003E."
+   },
+   "qs_info_on_search": {
+      "message": "Google Quick Scroll apareix en fer clic en un resultat de la cerca de Google. \u003Cspan class=\"__gqs-learn-more\"\u003EM\u00E9s informaci\u00F3.\u003C/span\u003E"
+   },
+   "qs_long_description_url": {
+      "message": "En fer clic a \"Instal\u00B7la\", accepteu aquestes Condicions d'\u00FAs: https://chrome.google.com/extensions/intl/en/gallery_tos.html"
+   },
+   "qs_more_matches": {
+      "message": "More matches \u003Cspan class=\"__gqs-go\"\u003E&raquo;\u003C/span\u003E"
+   },
+   "qs_name": {
+      "message": "Google Quick Scroll"
+   },
+   "qs_page_action_active": {
+      "message": "Google Quick Scroll ha trobat coincid\u00E8ncies en aquesta p\u00E0gina."
+   },
+   "qs_page_action_inactive": {
+      "message": "Google Quick Scroll est\u00E0 activat, feu clic per obtenir m\u00E9s informaci\u00F3."
+   },
+   "qs_page_action_running": {
+      "message": "Google Quick Scroll est\u00E0 esperant que es carregui la p\u00E0gina..."
+   },
+   "qs_tidbit_box_help_tooltip": {
+      "message": "Obre la p\u00E0gina d'ajuda i d'opcions"
+   },
+   "qs_tidbit_box_matches": {
+      "message": "Coincid\u00E8ncies a la p\u00E0gina per a \u003Cspan class=\"__gqs-query\"\u003E\u003C/span\u003E"
+   },
+   "qs_tidbit_box_minimize_tooltip": {
+      "message": "Minimitza"
+   },
+   "qs_tidbit_box_restore_tooltip": {
+      "message": "Obre Google Quick Scroll"
+   },
+   "qs_tidbit_box_tidbit_tooltip": {
+      "message": "Feu clic per veure aquest text a la p\u00E0gina."
+   }
+}

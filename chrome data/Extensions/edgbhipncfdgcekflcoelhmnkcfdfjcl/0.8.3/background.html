@@ -1,0 +1,38 @@
+<html>
+<script>
+	var valid_extension = ["doc", "docx", "pdf", "ppt", "pps", "tiff"]; // "xls", "xlsx", "ods", "csv", "tsv", "txt", "tsb", "sxw", 
+	
+	chrome.extension.onRequest.addListener(
+		function(request, sender, sendResponse) {
+			switch (request.type) {
+				case 'get_ext':
+					// return json object
+					var obj = "";
+					for (var i = 0; i < valid_extension.length; i++){
+						obj	+= valid_extension[i] + ":" + localStorage["ugdv_" + valid_extension[i]] + ",";
+					}
+					obj += "newTab:" + localStorage["ugdv_newTab"];
+					sendResponse(obj);
+					break;
+				case "open_win":
+					chrome.windows.create({url:request.url});
+					sendResponse();
+					break;
+				case "open_tab":
+					chrome.tabs.create({url:request.url});
+					sendResponse();
+					break;
+				case 'set':
+					localStorage[request.key] = request.value;
+					break;
+				case 'get':
+					sendResponse(localStorage[request.key]);
+					break;
+				default:
+					sendResponse();
+					break;
+			}
+		}
+	);
+</script>
+</html>

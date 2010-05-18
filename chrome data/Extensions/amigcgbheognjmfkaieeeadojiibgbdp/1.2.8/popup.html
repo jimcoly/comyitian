@@ -1,0 +1,543 @@
+<html>
+<head>
+<title>TooManyTabs for Chrome</title>
+<style>
+	body {
+    border:0px;
+    margin:0px;
+
+    min-width:600px;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+	  background-color: #777777;
+	}
+	#basebox {
+		border:0px;
+		margin:0px;
+    width:100%;
+		height:600px;
+
+    position:absolute;
+    overflow:hidden;
+	}
+	#logoarea {
+    right:190px;
+    top:5px;
+    width:120px;
+    height:50px;
+    background-image:url(tmtchrome_logo.png);
+    position:absolute;
+    overflow:hidden;
+    z-index:3000;
+    cursor:hand;
+
+
+  }
+  #toolbararea {
+    left:25px;
+    top:12px;
+    width:400px;
+    height:32px;
+
+    position:absolute;
+    overflow:hidden;
+  }
+	#tabarea {
+
+    top:55px;
+    right:180px;
+    left:0px;
+		height:545px;
+    position:absolute;
+
+    overflow:hidden;
+	}
+	#innertabarea {
+
+		height:540px;
+
+    position:absolute;
+	}
+	#tmtarea {
+    right:0px;
+    top:0px;
+    width:180px;
+    height:600px;
+    position:absolute;
+    background-image:url(tmtchrome_tmtbackground.png);
+    overflow:hidden;
+
+  }
+  #tmtlistbox {
+    left:10px;
+    top:140px;
+    width:160px;
+    height:430px;
+    position:absolute;
+    overflow:hidden;
+
+  }
+  #innertmtarea {
+    left:0px;
+    top:0px;
+    width:160px;
+
+    position:absolute;
+
+    overflow:hidden;
+  }
+  #tmtrowlabel {
+    left:21px;
+    top:15px;
+    width:138px;
+    height:30px;
+    position:absolute;
+    color:white;
+    font-family:Verdana, Arial, Tahoma;
+    font-size:12px;
+    font-weight:bold;
+    text-align:center;
+  }
+  #tmtrowtip {
+    left:10px;
+    top:40px;
+    width:160px;
+    font-family:Verdana, Arial, Tahoma;
+    height:80px;
+    color:white;
+    position:absolute;
+    font-size:10px;
+
+  }
+  #leftarrow {
+    left:0px;
+    top:250px;
+    width:50px;
+    height:50px;
+    position:absolute;
+    background-image:url(tmtchrome_arrow1.png);
+    z-index:1000;
+  }
+  #rightarrow {
+    right:0px;
+    top:250px;
+    width:50px;
+    height:50px;
+    position:absolute;
+    background-image:url(tmtchrome_arrow2.png);
+    z-index:1000;
+  }
+  #tmtleftarrow {
+    left:10px;
+    top:10px;
+    width:16px;
+    height:30px;
+    position:absolute;
+    background-image:url(tmtchrome_arrow3.png);
+    z-index:1000;
+    
+  }
+  #tmtrightarrow {
+    right:10px;
+    top:10px;
+    width:16px;
+    height:30px;
+    position:absolute;
+    background-image:url(tmtchrome_arrow4.png);
+    z-index:1000;
+
+  }
+  #uparrow {
+    left:10px;
+    top:115px;
+    width:160px;
+    height:20px;
+    position:absolute;
+    background-image:url(tmtchrome_tmtarrowup.png);
+    z-index:1000;
+  }
+  #downarrow {
+    left:10px;
+    top:570px;
+    width:160px;
+    height:20px;
+    position:absolute;
+    background-image:url(tmtchrome_tmtarrowdown.png);
+
+    z-index:1000;
+  }
+  #tmtcontextmenu {
+    left:30px;
+    width:65px;
+    height:35px;
+    position:relative;
+    background-color:#444444;
+    border:2px solid #FFFFFF;
+    opacity:0.85;
+    z-index:3000;
+  }
+  #numsearchresults {
+    text-align:center;
+    position:absolute;
+    width:160px;
+    height:30px;
+    overflow:hidden;
+    text-shadow: 1px 1px 1px black;
+    padding-left:4px;
+    padding-top:4px;
+    color:#FFFFFF;
+    font-family:Verdana, Arial, Tahoma;
+    font-size:10px;
+  }
+  #searchseparator {
+    position:absolute;
+    width:3px;
+    height:400px;
+    top:50px;
+
+    background:#FFFFFF;
+    opacity:0.15;
+  }
+  #errordisplay {
+    left:150px;
+    bottom:0px;
+    right:250px;
+    height:55px;
+    background:-webkit-gradient(linear, left top, left bottom, from(rgba(45,45,45,0.0)), to(rgba(45,45,45,0.7)));
+    position:absolute;
+    opacity:0.0;
+
+    overflow:hidden;
+    text-shadow: 1px 1px 1px black;
+    text-align:center;
+    padding:10px;
+    color:#FFFFFF;
+    font-family:Verdana, Arial, Tahoma;
+    font-size:10px;
+    font-weight:bold;
+    z-index:4000;
+  }
+  #youareheresign {
+    left: 95px;
+    top:16px;
+    
+    position:absolute;
+    width:60px;
+    height:48px;
+    overflow:hidden;
+    background-image:url(tmtchrome_youarehere.png);
+    z-index: 5000;
+  }
+  #firstrunbox {
+    position:absolute;
+    left:50px;
+    top:50px;
+    width:700px;
+    height:500px;
+    border:2px solid black;
+    background:#FFFFFF;
+    z-index: 10000;
+    
+  }
+  #licensebox {
+    position:absolute;
+    left:20px;
+    top:20px;
+    width:660px;
+    height:460px;
+    margin:1px solid black;
+    background:#FFFFFF;
+    color:black;
+  }
+  .tabexterior {
+
+    width:180px;
+    height:130px;
+    background-image:url(tmtchrome_tab.png);
+    position:absolute;
+    opacity: 0.85;
+  }
+  .tabexterior:hover {
+
+    width:180px;
+    height:130px;
+    background-image:url(tmtchrome_tab.png);
+    position:absolute;
+    opacity: 1.0;
+  }
+  .tabinterior {
+    left:6px;
+    top:39px;
+    width:168px;
+    height:90px;
+
+    position:absolute;
+    overflow:hidden;
+    cursor:hand;
+
+  }
+
+  .tabtitle {
+    left:29px;
+    top:4px;
+    width:125px;
+    height:30px;
+
+    position:absolute;
+    overflow:hidden;
+    font-family:Verdana, Arial, Tahoma;
+    font-size:10px;
+    color:#FFFFFF;
+    cursor:hand;
+  }
+  .tabfavicon {
+    left:10px;
+    top:8px;
+    width:16px;
+    height:16px;
+
+    position:absolute;
+    overflow:hidden;
+  }
+  .tabpopicon {
+    right:3px;
+    top:4px;
+    width:20px;
+    height:20px;
+    background-image:url(tmtchrome_pop.png);
+
+    position:absolute;
+    overflow:hidden;
+    cursor:hand;
+    opacity:0.75;
+  }
+  .tabpopicon:hover {
+    right:3px;
+    top:5px;
+    width:20px;
+    height:20px;
+    background-image:url(tmtchrome_pop.png);
+    position:absolute;
+    overflow:hidden;
+    cursor:hand;
+    opacity:1.0;
+  }
+  .tabimage {
+    width:340px;
+    -webkit-mask-image: -webkit-gradient(linear, 0 75, 0 90, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
+
+  }
+  .tabclosebutton {
+    right:27px;
+    top:6px;
+    width:16px;
+    height:16px;
+    background-image:url(tmtchrome_close.png);
+    opacity:0.2;
+    
+    position:absolute;
+    overflow:hidden;
+    cursor:hand;
+  }
+  .tabclosebutton:hover {
+    right:27px;
+    top:6px;
+    width:16px;
+    height:16px;
+    background-image:url(tmtchrome_close.png);
+    opacity:1.0;
+
+    position:absolute;
+    overflow:hidden;
+    cursor:hand;
+  }
+  .tmttab{
+    width:160px;
+    height:30px;
+    overflow:hidden;
+    background-image:url(tmtchrome_tmttab.png);
+    padding-left:4px;
+    padding-top:4px;
+
+    opacity:0.9;
+  }
+  .tmttab:hover{
+    width:160px;
+    height:30px;
+    overflow:hidden;
+    background-image:url(tmtchrome_tmttab.png);
+    padding-left:4px;
+    padding-top:4px;
+
+    opacity:1.0;
+  }
+  .tmttabiconbox {
+    left:5px;
+    width:22px;
+    height:36px;
+
+    cursor:hand;
+    position:relative;
+
+  }
+  .tmttabiconbox:hover {
+    left:5px;
+    width:22px;
+    height:36px;
+    background-image:url(tmtchrome_smallmenu.png);
+
+    cursor:hand;
+    position:relative;
+
+  }
+  .tmttabicon {
+    width:16px;
+    height:16px;
+
+
+  }
+  .tmttabtitle {
+    top:-38px;
+    left:22px;
+    width:127px;
+    height:28px;
+    overflow:hidden;
+    color:#444400;
+    font-family:Verdana, Arial, Tahoma;
+    font-size:10px;
+    cursor:hand;
+    position:relative;
+
+
+  }
+  .tmttabtitle:hover {
+    top:-38px;
+    left:22px;
+    width:127px;
+    height:26px;
+    overflow:hidden;
+    color:#444400;
+    font-family:Verdana, Arial, Tahoma;
+    font-size:10px;
+    cursor:hand;
+    position:relative;
+    background-image:url(tmtchrome_largeglow.png);
+
+  }
+  .tmtcontextmenutext{
+    color:#DDDDDD;
+    font-family:Verdana, Arial, Tahoma;
+    font-size:10px;
+    cursor:hand;
+  }
+  .tmtcontextmenutext:hover{
+    color:#FFFFDD;
+    font-family:Verdana, Arial, Tahoma;
+    font-size:10px;
+    cursor:hand;
+  }
+  .tmtclearallbutton {
+    text-align:center;
+
+    width:160px;
+    height:30px;
+    overflow:hidden;
+    padding-left:4px;
+    padding-top:4px;
+    color:#FFFFDD;
+    font-family:Verdana, Arial, Tahoma;
+    font-size:10px;
+    cursor:hand;
+
+  }
+
+  
+  .colorbutton {
+    position:absolute;
+    width:12px;
+    height:12px;
+    cursor:hand;
+    position:absolute;
+    border:1px solid white;
+    z-index:9000;
+  }
+  .sortbutton {
+    top:2px;
+    width:24px;
+    height:24px;
+    cursor:hand;
+    position:absolute;
+  }
+  .toolbarlabel {
+    top:4px;
+    text-shadow: 1px 1px 1px black;
+    color:#FFFFFF;
+    overflow:hidden;
+    font-family:Verdana, Arial, Tahoma;
+    font-weight:bold;
+    font-size:12px;
+    position:absolute;
+
+  }
+
+
+</style>
+<script type="text/javascript" src="popup.js"></script>
+</head>
+
+<body onload="main();" onblur="window.close();" onresize="if (resizedTimes >= 2) window.close(); resizedTimes++;" style="width:800px; height:600px;">
+  <div id="basebox" style="background:-webkit-gradient(linear, left top, left bottom, from(#00abeb), to(rgba(45,72,101,1)));">
+
+    <div id="toolbararea">
+
+         <form>
+              <input id="searchbox" title="Just type in..." style="width:80px; opacity:0.66;" onkeyup="findTabsCommand();" />
+         </form>
+         <div class="toolbarlabel" style="left:85px;" onselectstart="return false;">Find</div>
+         <div class="sortbutton" style="left:130px; background-image:url(tmtchrome_sortbuttons_01.png);" title="Sort by Name" onclick="sortTabsCommand('name');" onselectstart="return false;"></div>
+         <div class="sortbutton" style="left:155px; background-image:url(tmtchrome_sortbuttons_02.png);" title="Sort by Web Address" onclick="sortTabsCommand('domain');" onselectstart="return false;"></div>
+         <div class="sortbutton" style="left:180px; background-image:url(tmtchrome_sortbuttons_03.png);" title="Sort by Creation Time" onclick="sortTabsCommand('tabid');" onselectstart="return false;"></div>
+
+
+    </div>
+    <div id="errordisplay"></div>
+    <div id="logoarea" title="Click here for update notes."  onclick="var optionURL = chrome.extension.getURL('options.html'); chrome.tabs.create({url:optionURL, selected:true}); localStorage.setItem('updateread', MAJOR_VERSION);"></div>
+
+    <div class="colorbutton" style="bottom:16px; left:96px;  background:#444455;" onclick="changeBackground(4);"></div>
+    <div class="colorbutton" style="bottom:16px; left:78px;  background:#E6E6E6;" onclick="changeBackground(3);"></div>
+    <div class="colorbutton" style="bottom:16px; left:60px;  background:#f8ae32;" onclick="changeBackground(2);"></div>
+    <div class="colorbutton" style="bottom:16px; left:42px;  background:#AAAAAA;" onclick="changeBackground(1);"></div>
+    <div class="colorbutton" style="bottom:16px; left:24px;  background:#00abeb;" onclick="changeBackground(0);"></div>
+    <div id="tabarea" onselectstart="return false;">
+
+       <div id="innertabarea" style="left:0px; width:1000px">
+            <div id="numsearchresults" style="top:600px;"></div>
+            <div id="searchseparator" style="left:-10px;"></div>
+       </div>
+       <div id="leftarrow" onclick="moveInnerArea(55,6)"></div>
+       <div id="rightarrow" onclick="moveInnerArea(-55,6)"></div>
+
+		</div>
+		<div id="tmtarea">
+       <div id="tmtleftarrow" onclick="prevTMTRow()" title="Previous column"></div>
+       <div id="tmtrowlabel" onselectstart="return false;"></div>
+       <div id="tmtrightarrow" onclick="nextTMTRow()" title="Next column"></div>
+       <div id="tmtrowtip" onselectstart="return false;"></div>
+       <div id="uparrow" onclick="moveTMTArea(25,6)"></div>
+
+       <div id="tmtlistbox" onselectstart="return false;">
+
+            <div id="innertmtarea" style="top:0px;"></div>
+       </div>
+       <div id="downarrow" onclick="moveTMTArea(-25,6)"></div>
+       <div id="tmtcontextmenu" style="top:600px;">
+            <div class="tmtcontextmenutext" onclick="onTabRemove(event); cancelTMTContextMenu();">Remove</div>
+            <div class="tmtcontextmenutext" onclick="cancelTMTContextMenu()">Cancel</div>
+       </div>
+
+
+    </div>
+	</div>
+</body>
+</html>

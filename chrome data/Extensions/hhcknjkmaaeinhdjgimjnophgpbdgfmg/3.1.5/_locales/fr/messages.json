@@ -1,0 +1,17 @@
+{
+   "browser_action_tooltip_default": {
+      "message": "Pr\u00E9f\u00E9rences pour ReaderPlus "
+   },
+   "extension_description": {
+      "message": "Am\u00E9liorer Google Reader en ajoutant les ic\u00F4nes des sites, des th\u00E8mes et toute une collection d'autres fonctionnalit\u00E9s"
+   },
+   "extension_language": {
+      "message": "Fran\u00E7ais"
+   },
+   "extension_name": {
+      "message": "Reader Plus"
+   },
+   "extension_summary": {
+      "message": "Am\u00E9liorer votre Google Reader en ajoutant les ic\u00F4nes de sites (favicons), la correction de nombreux probl\u00E8mes de mise en page et d'images manquantes, afficher le compteur r\u00E9el d'\u00E9l\u00E9ments nons lus, un meilleur affichage sur des \u00E9crans plus larges, aper\u00E7u int\u00E9gr\u00E9, une vue avec couleur, un filtrage, un affiche en mode colonnes comme les magazines, aller de bas en haut, fermer la nouvelle, adapter la hauteur, ouverture dans un onglet en arri\u00E8re-plan, lecture par la souris, partager des nouvelles sur Facebook, Twitter, Instapaper, ReadItLater, marquer comme lu pour les \u00E9l\u00E9ments pr\u00E9c\u00E9dents et suivants, nettoyeur de publicit\u00E9s, remplacement des articles pour les BD, traduction automatique.\nVous pouvez choisir votre th\u00E8me pr\u00E9f\u00E9r\u00E9 parmi une large s\u00E9lection, utiliser votre propre image de fond ou encore choisir parmi les th\u00E8mes iGoogle.\nLes raccourcis clavier peuvent \u00EAtre facilement configurable.\nCette extension prend en charge les traductions (anglais, fran\u00E7ais, russe et chinois) .\nN'h\u00E9sitez pas \u00E0 venir aider pour compl\u00E9ter les traductions [http://goo.gl/HjiG]\nVous pouvez ajouter un bouton optionel dans la barre d'outil :\n\nhttps://chrome.google.com/extensions/detail/ecpcafinfpjgabomoamkhkgnpgpmdmeo"
+   }
+}

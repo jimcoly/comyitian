@@ -1,0 +1,4 @@
+<embed id="wangwang" type="application/x-taobao-wangwang-handler" width="1" height="1">
+<script type="text/javascript">
+var wangwang=document.getElementById("wangwang");var isWangWangInstalled=wangwang.isWangWangInstalled;function openWangWang(d,c,b){if(!isWangWangInstalled){return}var h=decodeURIComponent(d.fromUid||""),a=decodeURIComponent(d.toUid||""),g=decodeURIComponent(d.itemId||"");if(a!==""){try{wangwang.openWangWang(a,h,g)}catch(f){}}}function getWangWangInstallStatus(c,b,a){a(isWangWangInstalled)}chrome.extension.onRequest.addListener(function(d,b,a){var c=function(){};switch(d.command){case"getWangWangInstallStatus":c=getWangWangInstallStatus;break;case"openWangWang":c=openWangWang;break;default:break}c(d,b,a)});
+</script>

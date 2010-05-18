@@ -1,0 +1,256 @@
+<html>
+<head>
+<script type="text/javascript" src="base64.js"></script>
+<script type="text/javascript" src="infoquery.js"></script>
+<script>
+
+  var urlCache = {};
+  var urlList = [];
+  var lastTabId = null;
+
+  var URL_CACHE_SIZE = 100;
+
+  var NO_ENTRIES = -1;
+  var ENTRIES_NOT_SUPPORTED = -2;
+
+  var SIDEWIKI_ENABLED_PREFERENCE = '__sidewiki_enabled__';
+
+  function getClientUIUrl() {
+    return "https://www.google.com/sidewiki/clientui?hl=en&url=" + encodeURIComponent(getCurrentUrl());
+  }
+
+  function getCurrentUrl() {
+    return chrome.extension.getBackgroundPage().__url;
+  }
+
+  function updateSidewikiBadge(tabId, numEntries) {
+    if (numEntries > 0) {
+      if (numEntries > 9) {
+        chrome.browserAction.setBadgeText({text: "9+", tabId: tabId});
+        chrome.browserAction.setIcon({path:chrome.extension.getURL('sidewiki-9plus.gif')});
+      }
+      else {
+        chrome.browserAction.setIcon({path:chrome.extension.getURL('sidewiki-active.gif')});
+        chrome.browserAction.setBadgeText({text: numEntries+"", tabId: tabId});
+      }
+      chrome.browserAction.setTitle({title: "Read Google Sidewiki entries about this webpage"});
+    }
+    else {
+      chrome.browserAction.setBadgeText({text: "", tabId: tabId});
+      if (numEntries == 0 || numEntries == NO_ENTRIES) {
+        chrome.browserAction.setIcon({path:chrome.extension.getURL('sidewiki-active.gif')});
+      }
+      else if (numEntries < 0){
+        chrome.browserAction.setIcon({path:chrome.extension.getURL('sidewiki-disabled.gif')});
+      }
+    }
+  }
+
+  // used for showing post-install message - Sidewiki will not work until the user enables it
+  function isSidewikiEnabled() {
+    return localStorage[SIDEWIKI_ENABLED_PREFERENCE];
+  }
+
+  function setSidewikiEnabled(flag) {
+    if (flag) {
+      localStorage[SIDEWIKI_ENABLED_PREFERENCE] = 1;
+      chrome.browserAction.setBadgeText({text: "", tabId: lastTabId});
+      checkForSidewikiEntries(lastTabId, getCurrentUrl());
+    }
+    else
+      localStorage[SIDEWIKI_ENABLED_PREFERENCE] = 0;
+  }
+
+  function checkForSidewikiEntries(tabId, url, forceRefresh) {
+
+    if (!tabId && !url) {
+
+      chrome.tabs.getSelected(null, function(tab) {
+        checkForSidewikiEntries(tab.id, tab.url);
+      });
+
+      return;
+
+    }
+    
+    if (url.indexOf('https://chrome.google.com/extensions/detail/fldmleagmkblgoeodhdlhdejhhngdihi')==0) {
+      url = url.replace(/^https/, 'http');
+    }
+
+    lastTabId = tabId;
+    chrome.browserAction.setTitle({title: "Google Sidewiki: Read and contribute helpful information to any webpage"});
+    chrome.extension.getBackgroundPage().__url = url;
+
+    if (!(/^http:\/\//i.test(url)) || /^https?:\/\/www\.google\.com\/sidewiki\/clientui/i.test(url)) {
+       chrome.browserAction.setIcon({path:chrome.extension.getURL('sidewiki-disabled.gif')});
+       return;
+    }
+
+
+    if (!isSidewikiEnabled()) {
+
+      chrome.browserAction.setIcon({path:chrome.extension.getURL('sidewiki-active.gif')});
+      chrome.browserAction.setBadgeText({text: "?", tabId: tabId});
+
+      return;
+
+    }
+
+    chrome.browserAction.setIcon({path:chrome.extension.getURL('sidewiki-active.gif')});
+
+    var url_cache_result = urlCache[url];
+
+    if (url_cache_result && !forceRefresh) {
+        updateSidewikiBadge(tabId, url_cache_result)
+        return;
+    }
+    else {
+      urlCache[url] = NO_ENTRIES;
+      urlList.push(url);
+      if (urlList.length > URL_CACHE_SIZE) {
+        removal_url = urlList.shift();
+        delete urlCache[removal_url];
+      }
+    }
+
+    var xhr = new XMLHttpRequest();
+
+    var request_url = _getInfoQueryRequestUrl(url);
+
+    xhr.open("GET", request_url, true);
+    xhr.send();
+
+    xhr.onreadystatechange = function() {
+
+      if (xhr.readyState == 4) {
+
+        var result = NO_ENTRIES;
+
+        if (xhr.status == 403) {
+
+          result = ENTRIES_NOT_SUPPORTED;
+
+        }
+        else {
+
+          var sidewiki_match = xhr.responseText.match(/SW_1:\d+:(\S+)/);
+
+          if (sidewiki_match) {
+
+            try {
+
+              var sw_json = atob(sidewiki_match[1]);
+
+              var sw_data = JSON.parse(sw_json);
+
+              if (sw_data && sw_data.annotations) {
+
+                if (sw_data.annotations.stats && sw_data.annotations.stats.total_annotations) {
+
+                  result = sw_data.annotations.stats.total_annotations;
+
+                }
+                else {
+                  if (!sw_data.annotations.comments_allowed) {
+                    result = ENTRIES_NOT_SUPPORTED;
+                  }
+                }
+              }
+            } catch (e) {
+              console.error(e);
+            }
+          }
+        }
+
+        urlCache[url] = result;
+        updateSidewikiBadge(tabId, result);
+
+      }
+    }
+
+  };
+
+  function getGDataRequestUrl(url) {
+
+    return 'http://www.google.com/sidewiki/feeds/entries/webpage/' + encodeURIComponent(url) + '/full?alt=json&includeLessUseful=false&sortorder=quality&max-results=10';
+
+  }
+
+  function openWindow(linkRef, opt_options, opt_parentWin) {
+    if (!opt_options) {
+      opt_options = {};
+    }
+    var parentWin = opt_parentWin || window;
+    var href = typeof linkRef.href != 'undefined' ? linkRef.href :
+        String(linkRef);
+    var target = opt_options.target || linkRef.target;
+
+    var sb = [];
+    for (var option in opt_options) {
+      switch (option) {
+        case 'width':
+        case 'height':
+        case 'top':
+        case 'left':
+          sb.push(option + '=' + opt_options[option]);
+          break;
+        case 'target':
+          break;
+        default:
+          sb.push(option + '=' + (opt_options[option] ? 1 : 0));
+      }
+    }
+    var optionString = sb.join(',');
+
+    var newWin = parentWin.open(href, target, optionString);
+    return newWin;
+  };
+
+  function openLoginWindow(url) {
+    var windowOptions = {
+      'width': 300,
+      'height': 600,
+      'toolbar': false,
+      'scrollbars': true,
+      'location': true,
+      'statusbar': false,
+      'status': false,
+      'menubar': false,
+      'resizable': true
+    };
+
+    openWindow('https://www.google.com/accounts/login?continue=' + encodeURIComponent("http://www.google.com/sidewiki/clientui?url=" + encodeURIComponent(url)), windowOptions);
+
+  };
+
+  chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+
+    if (changeInfo.url) {
+      checkForSidewikiEntries(tabId, changeInfo.url);
+    }
+    else if (changeInfo.status == "loading") {
+      checkForSidewikiEntries();
+    }
+  });
+
+  chrome.tabs.onSelectionChanged.addListener(function(tabId) {
+
+    checkForSidewikiEntries();
+
+  });
+
+  chrome.tabs.onCreated.addListener(function(tab) {
+    checkForSidewikiEntries(tab.id, tab.url);
+  });
+
+  chrome.windows.onFocusChanged.addListener(function(windowId) {
+    checkForSidewikiEntries();
+  });
+
+  chrome.tabs.getSelected(null, function(tab) {
+    checkForSidewikiEntries(tab.id, tab.url);
+  });
+
+</script>
+</head>
+</html>

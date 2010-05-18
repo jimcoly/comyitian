@@ -1,0 +1,13 @@
+{
+   "background_page": "background.html",
+   "description": "Lets Google Web History work in Chrome",
+   "icons": {
+      "128": "images/icon128.png",
+      "48": "images/icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDdn3eW7F7qjQrwER+PX8kNZDTBHmHargL9f5Hfa8Pa+q2RYG11H3JUBLyWbqH6pqyRnweWFoCI3Zn4XGZIicNgtzco6dB8RJ8wvavKotmnd5D8xAFHpGRDJFjDnYmg1swivldz+2VJWckT5LwIMWN1i5UTvxRQ+W3v4SNtdFTeMwIDAQAB",
+   "name": "Google Web History Updater",
+   "permissions": [ "tabs", "http://www.google.com/" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "0.4.3"
+}

@@ -1,0 +1,569 @@
+{
+   "0_9": {
+      "message": "0-9"
+   },
+   "1Password": {
+      "message": "1Geslo"
+   },
+   "1__Insert_your_YubiKey_in_the_USB_port_with_the_USB_contact_facing_upward": {
+      "message": "1. Vstavite kartico YubiKey v USB-port z USB-kontaktom obrnjenim navzgor"
+   },
+   "2__Wait_until_your_YubiKey_touch_button_shines_with_a_steady_light": {
+      "message": "2. Po\u010Dakajte, da va\u0161 YubiKey gumb zasveti s stalno svetlobo"
+   },
+   "3__Hold_your_fingertip_on_the_touch_button_for_2_seconds": {
+      "message": "3. Dr\u017Eite prst na gumb na dotik za 2 sekundi"
+   },
+   "ACTION": {
+      "message": "AKCIJA"
+   },
+   "A_Zupper": {
+      "message": "A-Z"
+   },
+   "A_retry_file_has_been_found__This_likely_means_that_not_all_of_your_site_changes_have_been_saved__Would_you_like_to_delete_this_file_and_potentially_lose_some_changes_": {
+      "message": "Retry Datoteka je bila najdena. To verjetno pomeni, da so bile shranjene vse va\u0161e spletne strani sprememb. Ali \u017Eelite izbrisati to datoteko in morda izgubiti nekaj sprememb?"
+   },
+   "A_server_error_occurred_while_processing_your_request_": {
+      "message": "Na stre\u017Eniku pri\u0161lo do napake pri obdelavi va\u0161e zahteve."
+   },
+   "About___": {
+      "message": "O ..."
+   },
+   "Accept": {
+      "message": "Sprejmi"
+   },
+   "Account_Settings": {
+      "message": "Nastavitve ra\u010Duna"
+   },
+   "Actionproper": {
+      "message": "Ukrep"
+   },
+   "Add": {
+      "message": "Dodaj"
+   },
+   "Add_Credit_Card": {
+      "message": "Dodaj Creditno kartico"
+   },
+   "Add_Field": {
+      "message": "Dodaj polje"
+   },
+   "Add_Identity": {
+      "message": "Dodaj Identiteto"
+   },
+   "Add_New_Site": {
+      "message": "Dodaj novo spletno mesto"
+   },
+   "Add_Profile": {
+      "message": "Dodaj Profil"
+   },
+   "Add_Secure_Note": {
+      "message": "Dodaj Varnostno opombo"
+   },
+   "Add_Site": {
+      "message": "Dodaj stran"
+   },
+   "Address_1": {
+      "message": "Naslov 1"
+   },
+   "Address_2": {
+      "message": "Naslov 2"
+   },
+   "Address_3": {
+      "message": "Naslov 3"
+   },
+   "Advanced": {
+      "message": "Napredno"
+   },
+   "All": {
+      "message": "Vse"
+   },
+   "Always_Choose_Profile_and_Credit_Card": {
+      "message": "Vedno izberite profil in kreditno kartico"
+   },
+   "An_Update_is_Available__Would_you_like_to_install_": {
+      "message": "Posodobitev je na voljo. \u017Delite namestiti?"
+   },
+   "Appearance": {
+      "message": "Izgled"
+   },
+   "April": {
+      "message": "April"
+   },
+   "Are_you_sure_you_want_to_have_LastPass_remember_your_password___This_will_significantly_decrease_the_security_of_your_LastPass_account_": {
+      "message": "Ali ste prepri\u010Dani, da \u017Eelite da si LastPass zapomni va\u0161e geslo? To bo znatno zni\u017Ealo varnost va\u0161ega LastPass ra\u010Duna!"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_form_fill_profile_": {
+      "message": "Ali ste prepri\u010Dani, da \u017Eelite izbrisati ta obrazec 'izpolnite profil'?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_generated_password_": {
+      "message": "Ali ste prepri\u010Dani, da \u017Eelite izbrisati to ustvarjeni geslo?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_secure_note_": {
+      "message": "Ali ste prepri\u010Dani, da \u017Eelite izbrisati to varnostno opombo?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_site_": {
+      "message": "Ali ste prepri\u010Dani, da \u017Eelite izbrisati to stran?"
+   },
+   "August": {
+      "message": "Avgust"
+   },
+   "AutoFill": {
+      "message": "Avtomatsko zapolni"
+   },
+   "AutoLogin": {
+      "message": "Automatska prijava"
+   },
+   "Automatically_Fill_Login_Information": {
+      "message": "Samodejno zapolni prijavne podatke"
+   },
+   "Automatically_Logoff_after_idle__mins_": {
+      "message": "Samodejno odjavi pri mirovanju (min)"
+   },
+   "Avoid_Ambiguous_Characters": {
+      "message": "Izognite se dvoumnim znakom"
+   },
+   "Birthday": {
+      "message": "Rojstni dan"
+   },
+   "Blog": {
+      "message": "Blog"
+   },
+   "Built_": {
+      "message": "Leto izgradnje:"
+   },
+   "Cancel": {
+      "message": "Prekli\u010Di"
+   },
+   "Change": {
+      "message": "Spremeni"
+   },
+   "Change_Password": {
+      "message": "Spremeni geslo"
+   },
+   "Checkbox": {
+      "message": "Izbira"
+   },
+   "Clear": {
+      "message": "Po\u010Disti"
+   },
+   "Clear_Forms": {
+      "message": "Po\u010Disti polja"
+   },
+   "Close": {
+      "message": "Zapri"
+   },
+   "Collapse_All": {
+      "message": "Zdru\u017Ei vse"
+   },
+   "Company": {
+      "message": "Dru\u017Eba"
+   },
+   "Confirm": {
+      "message": "Potrdi"
+   },
+   "Continue": {
+      "message": "Nadaljuj"
+   },
+   "Copy": {
+      "message": "kopiraj"
+   },
+   "Copy_Password": {
+      "message": "Kopiraj Geslo"
+   },
+   "Copy_Username": {
+      "message": "Kopiraj uporabni\u0161ko ime"
+   },
+   "Country": {
+      "message": "Dr\u017Eava"
+   },
+   "County": {
+      "message": "Okro\u017Eje"
+   },
+   "Create_Account": {
+      "message": "Ustvari ra\u010Dun"
+   },
+   "Creating_Account___": {
+      "message": "Ustvarjanje ra\u010Duna ..."
+   },
+   "December": {
+      "message": "December"
+   },
+   "Delete": {
+      "message": "Izbri\u0161i"
+   },
+   "Down": {
+      "message": "Dol"
+   },
+   "Dr": {
+      "message": "Dr"
+   },
+   "Dutch": {
+      "message": "Nizozem\u0161\u010Dina"
+   },
+   "Edit": {
+      "message": "Urejanje"
+   },
+   "Edit_Form_Fields": {
+      "message": "Uredi polja obrazca"
+   },
+   "Email": {
+      "message": "E-po\u0161ta"
+   },
+   "Email_already_in_use__have_you_forgotten_your_password_": {
+      "message": "E-po\u0161ta \u017Ee v uporabi, ali ste pozabili geslo?"
+   },
+   "End": {
+      "message": "Na konec"
+   },
+   "English": {
+      "message": "Angle\u0161\u010Dina"
+   },
+   "ErrorSendingMsg": {
+      "message": "Pri\u0161lo je do napake, medtem ko posku\u0161a stopiti v stik s stre\u017Enikom. Preverite internetno povezavo."
+   },
+   "Favorite": {
+      "message": "Priljubljeni"
+   },
+   "February": {
+      "message": "Februar"
+   },
+   "Feedback": {
+      "message": "Povratne informacije"
+   },
+   "Female": {
+      "message": "\u017Denska"
+   },
+   "Fields_": {
+      "message": "Polja:"
+   },
+   "Fill_Forms": {
+      "message": "Izpolni obrazce"
+   },
+   "FillableFormDetected": {
+      "message": "Izpolnitveni obrazec je bil najden na tej strani."
+   },
+   "Find_a_site": {
+      "message": "Poi\u0161\u010Di stran"
+   },
+   "Forums": {
+      "message": "Forumi"
+   },
+   "Gender": {
+      "message": "Spol"
+   },
+   "General": {
+      "message": "Splo\u0161no"
+   },
+   "Generate": {
+      "message": "Ustvari"
+   },
+   "Generated_Password_for": {
+      "message": "Generirano geslo za"
+   },
+   "Go_Premium_": {
+      "message": "Nadgradite na Premium!"
+   },
+   "Group_": {
+      "message": "Skupina:"
+   },
+   "Help_Translate": {
+      "message": "Pomagajte prevajati"
+   },
+   "Help___": {
+      "message": "Pomo\u010D ..."
+   },
+   "History": {
+      "message": "Zgodovina"
+   },
+   "Home": {
+      "message": "Domov"
+   },
+   "I_forgot_my_password__Help_": {
+      "message": "Pozabil sem geslo, Pomo\u010D"
+   },
+   "I_have_read_and_agree_with_the": {
+      "message": "Prebral sem in se strinjam s"
+   },
+   "I_understand_that_my_encrypted_data_will_be_sent_to_LastPass": {
+      "message": "Razumem, da bodo moji \u0161ifrirani podatki poslani v LastPass"
+   },
+   "Identities": {
+      "message": "Identitete"
+   },
+   "Identity": {
+      "message": "Identiteta"
+   },
+   "Import": {
+      "message": "Uvoz"
+   },
+   "Import_From": {
+      "message": "Uvoz iz"
+   },
+   "Import_Your_Data": {
+      "message": "Uvozite Va\u0161e podatke"
+   },
+   "Invalid_Password_": {
+      "message": "Neveljavna geslo."
+   },
+   "Invalid_email_address__try_again": {
+      "message": "Neveljaven e-po\u0161tni naslov, poskusite znova"
+   },
+   "January": {
+      "message": "Januar"
+   },
+   "July": {
+      "message": "Julij"
+   },
+   "June": {
+      "message": "Junij"
+   },
+   "Keep_a_history_of_my_logins_and_form_fills": {
+      "message": "Obdr\u017Ei zgodovino moje prijave in izpolnjenih obrazcev"
+   },
+   "Language": {
+      "message": "Jezik"
+   },
+   "LastPass": {
+      "message": "LastPass"
+   },
+   "Left": {
+      "message": "Levo"
+   },
+   "Login": {
+      "message": "Prijava"
+   },
+   "LoginError": {
+      "message": "Napaka pri prijavi v LastPass. Prosimo, poskusite znova."
+   },
+   "Logoff": {
+      "message": "Odjava"
+   },
+   "Logoff_": {
+      "message": "Odjava:"
+   },
+   "Male": {
+      "message": "Mo\u0161ki"
+   },
+   "March": {
+      "message": "Marec"
+   },
+   "Master_Password": {
+      "message": "Glavno geslo"
+   },
+   "May": {
+      "message": "Maj"
+   },
+   "Mr": {
+      "message": "G."
+   },
+   "Mrs": {
+      "message": "Miss"
+   },
+   "Ms": {
+      "message": "Gospa"
+   },
+   "NAME": {
+      "message": "IME"
+   },
+   "Name_": {
+      "message": "Ime:"
+   },
+   "Nameproper": {
+      "message": "Ime"
+   },
+   "Never___": {
+      "message": "Nikoli ..."
+   },
+   "No": {
+      "message": "Ne"
+   },
+   "No_Thanks": {
+      "message": "Ne, hvala"
+   },
+   "No_Updates_Are_Available": {
+      "message": "No posodobitve so na voljo"
+   },
+   "Notes": {
+      "message": "Opombe"
+   },
+   "Notes_": {
+      "message": "Opombe:"
+   },
+   "November": {
+      "message": "November"
+   },
+   "OK": {
+      "message": "OK"
+   },
+   "October": {
+      "message": "Oktober"
+   },
+   "Old_Password": {
+      "message": "Staro geslo"
+   },
+   "Open_Favorites": {
+      "message": "Odpri priljubljene"
+   },
+   "Other": {
+      "message": "Ostalo"
+   },
+   "PASSWORDupper": {
+      "message": "GESLO"
+   },
+   "Password": {
+      "message": "Geslo"
+   },
+   "Password_": {
+      "message": "Geslo:"
+   },
+   "Password_reminder_cannot_match_password": {
+      "message": "Opomnik gesla se ne ujema z geslom"
+   },
+   "Please_enter_a_Password_Reminder": {
+      "message": "Prosimo, vnesite opomnik gesla"
+   },
+   "Preferences": {
+      "message": "Nastavitve"
+   },
+   "Profile": {
+      "message": "Profil"
+   },
+   "Recently_Used": {
+      "message": "Pred kratkim uporabljeno"
+   },
+   "Refresh_Sites": {
+      "message": "Osve\u017Ei strani"
+   },
+   "Remember_Email": {
+      "message": "Zapomni si Email"
+   },
+   "Remember_Password": {
+      "message": "Zapomni si geslo"
+   },
+   "Require_Every_Character_Type": {
+      "message": "Zahteva vsak znakovni tip"
+   },
+   "Require_Password_Reprompt": {
+      "message": "Zahteva ponovni vnos gesla"
+   },
+   "Respect_AutoComplete_off__allow_websites_to_disable_AutoFill": {
+      "message": "Spo\u0161tovanje Samodokon\u010Daj = off: omogo\u010Dajo da onemogo\u010Dite AutoFill na spletne strani "
+   },
+   "Save": {
+      "message": "Shrani"
+   },
+   "Save_All_Entered_Data": {
+      "message": "Shrani vse vpisane podatke"
+   },
+   "Save_Site": {
+      "message": "Shranistran"
+   },
+   "Search": {
+      "message": "Iskanje"
+   },
+   "Secure_Notes": {
+      "message": "Varnostne opombe"
+   },
+   "Select": {
+      "message": "Izberite"
+   },
+   "Select_All": {
+      "message": "Izberi vse"
+   },
+   "September": {
+      "message": "September"
+   },
+   "Sesame_Multifactor_Authentication": {
+      "message": "Sesame Multifactor authentikacija"
+   },
+   "Sites": {
+      "message": "Strani"
+   },
+   "Special": {
+      "message": "Specialno"
+   },
+   "Text": {
+      "message": "Besedilo"
+   },
+   "The_LastPass_master_password_you_reentered_does_not_match": {
+      "message": "Glavno LastPass geslo, ki ste ponovno vpisali se ne ujema"
+   },
+   "To_create_your_account__please_re_enter_your_LastPass_master_password": {
+      "message": "\u010Ce \u017Eelite ustvariti svoj ra\u010Dun, ponovno vnesite svoje glavno geslo LastPass"
+   },
+   "Tools": {
+      "message": "Orodja"
+   },
+   "Try_Again": {
+      "message": "Poskusite ponovno"
+   },
+   "URL_": {
+      "message": "URL:"
+   },
+   "USERNAME": {
+      "message": "UPORABNI\u0160KO IME"
+   },
+   "Username_": {
+      "message": "Uporabni\u0161ko ime:"
+   },
+   "Version_": {
+      "message": "Razli\u010Dica:"
+   },
+   "Yes": {
+      "message": "Da"
+   },
+   "You_must_agree_to_the_terms_to_continue": {
+      "message": "Strinjati se morate s pogoji, da lahko nadaljuje"
+   },
+   "You_must_enter_a_name_": {
+      "message": "Vnesti morate ime."
+   },
+   "Your_password_can_not_be_the_same_as_your_email_": {
+      "message": "Va\u0161e geslo ne more biti isto kot va\u0161 email."
+   },
+   "Your_password_is_easily_guessable_": {
+      "message": "Va\u0161e geslo je preprosto uganljivo."
+   },
+   "Your_password_is_too_short__It_must_be_at_least_6_characters_long": {
+      "message": "Va\u0161e geslo je prekratko. Mora biti vsaj 6 znakov"
+   },
+   "YubiKey_Multifactor_Authentication": {
+      "message": "YubiKey Multifactor Authentikacija"
+   },
+   "_Hide_": {
+      "message": "[Skrij]"
+   },
+   "_New_Pending_Share_Offers_": {
+      "message": "(Nova \u010Dakajo\u010De ponudbe del)"
+   },
+   "_Show_": {
+      "message": "[Prika\u017Ei]"
+   },
+   "_none_": {
+      "message": "(ni\u010D)"
+   },
+   "a_zlower": {
+      "message": "a-z"
+   },
+   "and": {
+      "message": "in"
+   },
+   "dummy": {
+      "message": "dummy, leave this here so we don't mess up the trailing comma"
+   },
+   "favorites": {
+      "message": "priljubljene"
+   },
+   "hour": {
+      "message": "ura"
+   },
+   "hours": {
+      "message": "ur"
+   },
+   "minutes": {
+      "message": "minut"
+   },
+   "seconds": {
+      "message": "sekund"
+   }
+}

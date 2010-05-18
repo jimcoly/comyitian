@@ -1,0 +1,911 @@
+{
+   "0_9": {
+      "message": "0-9"
+   },
+   "1Password": {
+      "message": "1Parola"
+   },
+   "1__Insert_your_YubiKey_in_the_USB_port_with_the_USB_contact_facing_upward": {
+      "message": "1. Inserati YubiKey-ul dvs in portul USB cu contactul USB in sus"
+   },
+   "1__Run_the_LastPass_Sesame_application_to_generate_a_one_time_password": {
+      "message": "1. Rula\u0163i aplica\u0163ia LastPass Sesame pentru a genera o parol\u0103 de unic\u0103 folosin\u0163\u0103"
+   },
+   "2__Paste_the_one_time_password_in_the_input_box_below_and_click__Authenticate_": {
+      "message": "2. Lipi\u0163i parola de unic\u0103 folosin\u0163\u0103 \u00EEn caseta de intrare de mai jos \u015Fi face\u0163i clic pe 'Autentificare'"
+   },
+   "2__Wait_until_your_YubiKey_touch_button_shines_with_a_steady_light": {
+      "message": "2. Asteptati pana cand butonul YubiKey-ului e luminat cu o lumina constanta"
+   },
+   "3__Hold_your_fingertip_on_the_touch_button_for_2_seconds": {
+      "message": "3. Tineti degetul pe buton pentru 2 secunde"
+   },
+   "ACTION": {
+      "message": "ACTIUNE"
+   },
+   "A_Zupper": {
+      "message": "A-Z"
+   },
+   "A_required_update_is_available_for_LastPass__Please_press_OK_to_begin_download_and_installation_": {
+      "message": "O actualizare necesar\u0103 este disponibil\u0103 pentru LastPass. V\u0103 rug\u0103m s\u0103 ap\u0103sa\u0163i pe OK pentru a \u00EEncepe desc\u0103rcarea \u015Fi instalarea."
+   },
+   "A_retry_file_has_been_found__This_likely_means_that_not_all_of_your_site_changes_have_been_saved__Would_you_like_to_delete_this_file_and_potentially_lose_some_changes_": {
+      "message": "Un fisier a fost gasit asteptand sa fie reincarcat. Aceasta inseamna cel mai probabil ca nu toate schimbarile dvs au fost salvate. Doriti sa stergeti acest fisier si probabil sa pierdeti unele schimbari?"
+   },
+   "A_server_error_occurred_while_processing_your_request_": {
+      "message": "O eroare a serverului a intervenit in timp ce procesam cererea dvs."
+   },
+   "About___": {
+      "message": "Despre..."
+   },
+   "Accept": {
+      "message": "Accept"
+   },
+   "Account_Settings": {
+      "message": "Setarile Contului"
+   },
+   "Actionproper": {
+      "message": "Actiune"
+   },
+   "Add": {
+      "message": "Adauga"
+   },
+   "Add_Credit_Card": {
+      "message": "Adauga card de credit"
+   },
+   "Add_Field": {
+      "message": "Adauga camp"
+   },
+   "Add_Identity": {
+      "message": "Adauga identitate"
+   },
+   "Add_New_Site": {
+      "message": "Adauga site nou"
+   },
+   "Add_Profile": {
+      "message": "Adauga profil"
+   },
+   "Add_Secure_Note": {
+      "message": "Adauga Nota Securizata"
+   },
+   "Add_Site": {
+      "message": "Adauga site"
+   },
+   "Address_1": {
+      "message": "Adresa 1"
+   },
+   "Address_2": {
+      "message": "Adresa 2"
+   },
+   "Address_3": {
+      "message": "Adresa 3"
+   },
+   "Advanced": {
+      "message": "Avansat"
+   },
+   "All": {
+      "message": "Tot"
+   },
+   "Allow_LastPass_to_find_insecure_data_on_your_computer_": {
+      "message": "Permiteti LastPass sa caute datele nesigure din calculatorul dvs?"
+   },
+   "Alt": {
+      "message": "Alt"
+   },
+   "Always_Choose_Profile_and_Credit_Card": {
+      "message": "Intotdeauna alege Profilul si Cardul de credit"
+   },
+   "An_Update_is_Available__Would_you_like_to_install_": {
+      "message": "O actualizare este disponibila. Doriti sa o instalati?"
+   },
+   "An_error_has_been_encountered_while_loading_your_sites__Please_relogin_": {
+      "message": "O eroare a intervenit in timp ce incarcam site-urile dvs. Va rugam sa va autorizati din nou."
+   },
+   "An_error_occurred": {
+      "message": "A ap\u0103rut o eroare"
+   },
+   "Appearance": {
+      "message": "Aspect"
+   },
+   "April": {
+      "message": "Aprilie"
+   },
+   "Are_you_sure_you_want_to_have_LastPass_remember_your_password___This_will_significantly_decrease_the_security_of_your_LastPass_account_": {
+      "message": "Sunteti sigur ca doriti ca LastPass sa tina minte parola dumneavoastra? Aceasta va diminua semnificativ securitatea contului dumneavoastra LastPass!"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_field_": {
+      "message": "Sunteti sigur ca doriti sa stergeti acest camp?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_form_fill_profile_": {
+      "message": "Sunteti sigur ca doriti sa stergeti acest profil de autocompletare a formularelor?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_generated_password_": {
+      "message": "Sunteti sigur ca doriti sa stergeti aceasta parola generata?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_group_": {
+      "message": "Sunte\u0163i sigur c\u0103 dori\u0163i s\u0103 \u015Fterge\u0163i acest grup?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_secure_note_": {
+      "message": "Sunteti sigur ca doriti sa stergeti aceasta Nota Securizata?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_site_": {
+      "message": "Sunteti sigur ca doriti sa stergeti acest site?"
+   },
+   "August": {
+      "message": "August"
+   },
+   "Authenticate": {
+      "message": "Autentificare"
+   },
+   "Authentication_Failed_": {
+      "message": "Autentificarea a e\u015Fuat."
+   },
+   "AutoFill": {
+      "message": "AutoCompletare"
+   },
+   "AutoLogin": {
+      "message": "Autentificare automata"
+   },
+   "Automatically_Fill_Login_Information": {
+      "message": "Completati automat datele de autentificare"
+   },
+   "Automatically_Logoff_after_idle__mins_": {
+      "message": "Deconectare automat\u0103 dup\u0103 inactivitate (minute)"
+   },
+   "Avoid_Ambiguous_Characters": {
+      "message": "Evitati caracterele ambigue"
+   },
+   "Birthday": {
+      "message": "Data nasterii"
+   },
+   "Blacklist": {
+      "message": "Contul dvs. a fost suspendat temporar (pentru 5 minute), din cauza prea multor \u00EEncerc\u0103ri de logare e\u015Fuate."
+   },
+   "Blog": {
+      "message": "Blog"
+   },
+   "Browse_the_web_as_you_normally_would_and_LastPass_will_automatically_remember_passwords_as_you_enter_them_": {
+      "message": "Navigati pe internet in mod normal si LastPass va memora automat parolele imediat ce le introduceti."
+   },
+   "Built_": {
+      "message": "Construit:"
+   },
+   "But_I_m_a_forgetful_person___what_should_I_do_if_I_forget_my_password_": {
+      "message": "Dar eu sunt o persoana uituca... ce ar trebui sa fac daca imi uit parola?"
+   },
+   "Cancel": {
+      "message": "Anulare"
+   },
+   "Change": {
+      "message": "Schimba"
+   },
+   "Change_Password": {
+      "message": "Schimba Parola"
+   },
+   "Check_For_Updates": {
+      "message": "Verifica update-uri"
+   },
+   "Checkbox": {
+      "message": "Caseta de selectare"
+   },
+   "Checking_For_Updates___": {
+      "message": "Se verific\u0103 actualiz\u0103rile ..."
+   },
+   "Choose_Profile_and_Credit_Card": {
+      "message": "Alege Profil si Card de credit"
+   },
+   "City___Town": {
+      "message": "Ora\u015F"
+   },
+   "Clear": {
+      "message": "Sterge tot"
+   },
+   "Clear_Forms": {
+      "message": "Sterge Formularele"
+   },
+   "Clear_Local_Cache": {
+      "message": "Curata memoria Cache locala"
+   },
+   "Click_Continue_to_start_using_LastPass_": {
+      "message": "Faceti clic pe Continuare pentru a incepe sa utilizati LastPass."
+   },
+   "Click_here_to_watch_a_video_on_basic_usage_": {
+      "message": "Click aici pentru a viziona un video despre utilizarea de baza."
+   },
+   "Close": {
+      "message": "Inchide"
+   },
+   "Collapse_All": {
+      "message": "Restrange Tot"
+   },
+   "Company": {
+      "message": "Companie"
+   },
+   "Configure_Form_Fill": {
+      "message": "Configurarea completarii formularelor"
+   },
+   "Confirm": {
+      "message": "Confirma"
+   },
+   "Confirm_Password": {
+      "message": "Confirm\u0103 parola"
+   },
+   "Congratulations": {
+      "message": "Felicitari"
+   },
+   "Continue": {
+      "message": "Continua"
+   },
+   "Copy": {
+      "message": "Copie"
+   },
+   "Copy_Password": {
+      "message": "Copie Parola"
+   },
+   "Copy_Username": {
+      "message": "Copie Nume Utilizator"
+   },
+   "Country": {
+      "message": "Tara"
+   },
+   "County": {
+      "message": "Judet"
+   },
+   "Create_Account": {
+      "message": "Creeaz\u0103 cont"
+   },
+   "Create_Sub_Group": {
+      "message": "Creati Subgrup"
+   },
+   "Create_an_Account": {
+      "message": "Creeaza un cont nou"
+   },
+   "Creating_Account___": {
+      "message": "Creare cont..."
+   },
+   "Ctrl": {
+      "message": "Ctrl"
+   },
+   "December": {
+      "message": "Decembrie"
+   },
+   "Delete": {
+      "message": "Sterge"
+   },
+   "Delete_Group": {
+      "message": "\u015Eterge grup"
+   },
+   "Disable_Multifactor_Authentication": {
+      "message": "Dezactiveaz\u0103 autentificarea multifactor"
+   },
+   "Do_you_really_want_to_quit___You_cannot_use_LastPass_without_creating_an_account_": {
+      "message": "Sigur dori\u0163i s\u0103 renun\u0163a\u0163i? Nu pute\u0163i utiliza LastPass f\u0103r\u0103 a crea un cont."
+   },
+   "Down": {
+      "message": "Jos"
+   },
+   "Dr": {
+      "message": "Dr."
+   },
+   "Edit": {
+      "message": "Editare"
+   },
+   "Edit_Form_Fields": {
+      "message": "Editare campuri de Formular"
+   },
+   "Email": {
+      "message": "Email"
+   },
+   "Email_already_in_use__have_you_forgotten_your_password_": {
+      "message": "E-mail folosit deja, ti-ai uitat parola?"
+   },
+   "End": {
+      "message": "Sf\u00E2r\u015Fit"
+   },
+   "ErrorGetAcctsMsg": {
+      "message": "O eroare a intervenit in timp ce reuperam site-urile dvs LastPass. Va rugam incercati sa va autentificati din nou pentru a va recupera site-urile."
+   },
+   "ErrorLoginMsg": {
+      "message": "O eroare a intervenit in timp ce ma autentificam la LastPass. Va rugam verificati conexiunea dvs la internet."
+   },
+   "ErrorSendingMsg": {
+      "message": "O eroare a intervenit in timp ce incercam sa contactez serverul. Va rugam verificati conexiunea la internet."
+   },
+   "ErrorSessionMsg": {
+      "message": "Sesiunea dvs. LastPass pare s\u0103 fi expirat. V\u0103 rug\u0103m s\u0103 v\u0103 re-loga\u0163i."
+   },
+   "ExistingUsersOTPPrompt": {
+      "message": "LastPass poate stoca acum o parol\u0103 de unic\u0103 folosin\u0163\u0103 la nivel local, care poate fi utilizat\u0103 pentru a recupera contul dvs. dac\u0103 uita\u0163i parola de administrator. Aceast\u0103 parol\u0103 de unic\u0103 folosin\u0163\u0103 va r\u0103m\u00E2ne dezactivat\u0103 p\u00E2n\u0103 c\u00E2nd este activat\u0103 pe server.\n\nDori\u0163i s\u0103 activa\u0163i recuperarea contului?"
+   },
+   "Expand_All": {
+      "message": "Expandeaza tot"
+   },
+   "Export_To": {
+      "message": "Exporteaza catre"
+   },
+   "Favorite": {
+      "message": "Favorite"
+   },
+   "February": {
+      "message": "Februarie"
+   },
+   "Feedback": {
+      "message": "Feedback"
+   },
+   "Female": {
+      "message": "Femeie"
+   },
+   "Fields_": {
+      "message": "C\u00E2mpuri:"
+   },
+   "Fill_Current": {
+      "message": "Completeaza formularul curent"
+   },
+   "Fill_Form": {
+      "message": "Completeaza formular"
+   },
+   "Fill_Forms": {
+      "message": "Completeaza formulare"
+   },
+   "FillableFormDetected": {
+      "message": "Un formular care poate fi completat a fost detectat pe aceasta pagina."
+   },
+   "Find_a_site": {
+      "message": "G\u0103se\u015Fte un site"
+   },
+   "Firefox_Password_Manager": {
+      "message": "Administratorul de parole Firefox"
+   },
+   "For_each_coordinate_listed_below__find_the_value_on_your_grid_and_enter_the_value_": {
+      "message": "Pentru fiecare coordonat\u0103 afi\u015Fat\u0103 mai jos, g\u0103si\u0163i valoarea pe grila dvs. \u015Fi introduce\u0163i-o."
+   },
+   "Form_Name_": {
+      "message": "Denumire formular:"
+   },
+   "Forums": {
+      "message": "Forumuri"
+   },
+   "Gender": {
+      "message": "Gen"
+   },
+   "General": {
+      "message": "General"
+   },
+   "Generate": {
+      "message": "Genereaza"
+   },
+   "Generate_Secure_Password": {
+      "message": "Genereaza parola sigura"
+   },
+   "Generated_Password_for": {
+      "message": "Genereaza parola pentru"
+   },
+   "Generic_CSV_File": {
+      "message": "Fisier CSV generic"
+   },
+   "Go_to_URL": {
+      "message": "Salt la URL"
+   },
+   "Google_Chrome": {
+      "message": "Google Chrome"
+   },
+   "Group_": {
+      "message": "Grup:"
+   },
+   "Help_Translate": {
+      "message": "Ajuta la traducere"
+   },
+   "Help___": {
+      "message": "Ajutor ..."
+   },
+   "Highlight_input_boxes": {
+      "message": "Eviden\u0163iaz\u0103 casetele de intrare"
+   },
+   "History": {
+      "message": "Istoric"
+   },
+   "Home": {
+      "message": "Acas\u0103"
+   },
+   "HotKeys": {
+      "message": "Taste rapide"
+   },
+   "IT_IS_CRITICAL_THAT_YOU_NEVER_FORGET_YOUR_NEW_LASTPASS_PASSWORD_": {
+      "message": "Este esen\u0163ial s\u0103 nu uita\u0163i niciodat\u0103 noua dumneavoastr\u0103 parol\u0103 LastPass."
+   },
+   "I_forgot_my_password__Help_": {
+      "message": "Mi-am uitat parola, Ajutor"
+   },
+   "I_have_read_and_agree_with_the": {
+      "message": "Am citit \u015Fi sunt de acord cu"
+   },
+   "I_understand_that_my_encrypted_data_will_be_sent_to_LastPass": {
+      "message": "\u00CEn\u0163eleg c\u0103 datele mele criptate vor fi trimise la LastPass"
+   },
+   "Identities": {
+      "message": "Identitati"
+   },
+   "Identity": {
+      "message": "Identitate"
+   },
+   "If_you_already_have_a_LastPass_account_you_can_close_this_window_and_login_": {
+      "message": "Dac\u0103 ave\u0163i deja un cont LastPass pute\u0163i s\u0103 \u00EEnchide\u0163i aceast\u0103 fereastr\u0103 \u015Fi s\u0103 v\u0103 loga\u0163i."
+   },
+   "If_you_do_end_up_forgetting_your_LastPass_master_password_": {
+      "message": "Daca sf\u00E2r\u015Fi\u0163i prin a uita parola dumneavoastr\u0103 de administrator LastPass,"
+   },
+   "If_you_lost_your_Sesame_device__click_here_to_disable_Sesame_authentication": {
+      "message": "Dac\u0103 a\u0163i pierdut dispozitivul Sesame, face\u0163i clic aici pentru a dezactiva autentificarea Sesame"
+   },
+   "If_you_lost_your_YubiKey_device__click_here_to_disable_YubiKey_authentication": {
+      "message": "Dac\u0103 a\u0163i pierdut dispozitivul dumneavoastr\u0103 YubiKey, face\u0163i clic aici pentru a dezactiva autentificarea YubiKey"
+   },
+   "If_you_lost_your_grid__click_here_to_disable_grid_authentication": {
+      "message": "Dac\u0103 a\u0163i pierdut grila dumneavoastr\u0103, face\u0163i clic aici pentru a dezactiva autentificarea gril\u0103"
+   },
+   "Import": {
+      "message": "Importa"
+   },
+   "Import_From": {
+      "message": "Importa de la"
+   },
+   "Import_Your_Data": {
+      "message": "Importati datele dvs"
+   },
+   "Instructions": {
+      "message": "Instructiuni"
+   },
+   "Invalid_Password_": {
+      "message": "Parol\u0103 incorect\u0103."
+   },
+   "Invalid_email_address__try_again": {
+      "message": "Adresa de email invalida, incercati din nou"
+   },
+   "January": {
+      "message": "Ianuarie"
+   },
+   "July": {
+      "message": "Iulie"
+   },
+   "June": {
+      "message": "Iunie"
+   },
+   "KeePass": {
+      "message": "KeePass"
+   },
+   "Language": {
+      "message": "Limb\u0103"
+   },
+   "LastPass": {
+      "message": "LastPass"
+   },
+   "LastPass_Encrypted_File": {
+      "message": "Fisier criptat LastPass"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_like_to_continue_": {
+      "message": "LastPass a detectat un formular de autentificare nesigur.\n\nDori\u0163i s\u0103 continua\u0163i?"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_still_like_LastPass_to_fill_the_form_": {
+      "message": "LastPass a detectat un formular de autentificare nesigur.\n\nDori\u0163i ca LastPass s\u0103 completeze totu\u015Fi formularul?"
+   },
+   "LastPass_detected_a_password_change_for": {
+      "message": "LastPass a detectat o schimbare de parol\u0103 pentru"
+   },
+   "LastPass_detected_a_password_change_for_domain_": {
+      "message": "LastPass a detectat o schimbare de parol\u0103 pentru domeniul:"
+   },
+   "LastPass_detected_a_password_change_for_user_": {
+      "message": "LastPass a detectat o schimbare de parol\u0103 pentru utilizatorul:"
+   },
+   "LastPass_is_the_last_password_you_ll_ever_have_to_remember___If_you_re_new_to_LastPass__we_ll_just_need_a_few_minutes_of_your_time_to_setup_your_account___You_ll_be_able_to_use_this_account_on_any_other_PC_you_use_to_always_keep_your_personal_data_in_sync___Hit_create_account_to_begin_": {
+      "message": "LastPass este ultima parol\u0103 pe care va trebui s\u0103 v-o aminti\u0163i vreodat\u0103. Dac\u0103 sunte\u0163i nou la LastPass, vom avea nevoie doar de c\u00E2teva minute din timpul dvs. pentru configurarea contului. Ve\u0163i avea posibilitatea de a folosi acest cont pe orice alt PC pe care \u00EEl utiliza\u0163i pentru a men\u0163ine \u00EEntotdeauna datele dumneavoastr\u0103 personale sincronizate. Ap\u0103sa\u0163i creeaz\u0103 cont pentru a \u00EEncepe."
+   },
+   "Login": {
+      "message": "Login"
+   },
+   "LoginError": {
+      "message": "Eroare de logare \u00EEn LastPass. V\u0103 rug\u0103m s\u0103 \u00EEncerca\u0163i din nou."
+   },
+   "Logoff": {
+      "message": "Deconectare"
+   },
+   "Logoff_": {
+      "message": "Deconectare:"
+   },
+   "MSI_PasswordKeeper": {
+      "message": "MSI PasswordKeeper"
+   },
+   "Male": {
+      "message": "Mascul"
+   },
+   "March": {
+      "message": "Martie"
+   },
+   "Master_Password": {
+      "message": "Parol\u0103 de administrator"
+   },
+   "May": {
+      "message": "mai"
+   },
+   "More": {
+      "message": "Mai mult"
+   },
+   "Mr": {
+      "message": "Dl"
+   },
+   "MyPasswordSafe": {
+      "message": "Seiful meu LastPass"
+   },
+   "My_LastPass_Vault": {
+      "message": "Seiful meu LastPass"
+   },
+   "NAME": {
+      "message": "NUME"
+   },
+   "Name_": {
+      "message": "Nume:"
+   },
+   "Nameproper": {
+      "message": "Nume"
+   },
+   "Never_AutoFill": {
+      "message": "Niciodata nu mai completa automat"
+   },
+   "Never_For_This_Domain": {
+      "message": "Niciodata pentru Domeniul acesta"
+   },
+   "Never_For_This_Page": {
+      "message": "Niciodata pentru aceasta Pagina"
+   },
+   "Never_For_This_Site": {
+      "message": "Niciodat\u0103 pentru acest site"
+   },
+   "Never___": {
+      "message": "Niciodat\u0103 ..."
+   },
+   "No": {
+      "message": "Nu"
+   },
+   "No_Thanks": {
+      "message": "Nu, mul\u0163umesc"
+   },
+   "No_Updates_Are_Available": {
+      "message": "Nu sunt disponibile actualiz\u0103ri"
+   },
+   "No__I_do_not_want_LastPass_to_help_me_fill_forms_automatically": {
+      "message": "Nu, nu vreau ca LastPass s\u0103 m\u0103 ajute s\u0103 completez formulare \u00EEn mod automat"
+   },
+   "None_Available": {
+      "message": "Nici unul disponibil"
+   },
+   "Not_Now": {
+      "message": "Nu acum"
+   },
+   "Notes": {
+      "message": "Notite"
+   },
+   "Notes_": {
+      "message": "Note:"
+   },
+   "Notifications": {
+      "message": "Notific\u0103ri"
+   },
+   "November": {
+      "message": "Noiembrie"
+   },
+   "OK": {
+      "message": "OK"
+   },
+   "October": {
+      "message": "Octombrie"
+   },
+   "Offer_to_Generate_Secure_Passwords": {
+      "message": "Ofera posibilitatea de a genera Parole Sigure"
+   },
+   "Old_Password": {
+      "message": "Parola veche"
+   },
+   "Open_All": {
+      "message": "Deschide toate"
+   },
+   "Open_Favorites": {
+      "message": "Deschide Favoritele"
+   },
+   "Open_New_Pages_in": {
+      "message": "Deschide pagini noi \u00EEn"
+   },
+   "Other": {
+      "message": "Altele"
+   },
+   "Other_Sessions": {
+      "message": "Alte sesiuni"
+   },
+   "PASSWORDupper": {
+      "message": "PAROLA"
+   },
+   "Password": {
+      "message": "Parola"
+   },
+   "Password_": {
+      "message": "Parola:"
+   },
+   "Password_Length": {
+      "message": "Lungime parol\u0103"
+   },
+   "Password_Reminder": {
+      "message": "Memento parol\u0103"
+   },
+   "Please_enter_a_Password_Reminder": {
+      "message": "V\u0103 rug\u0103m s\u0103 introduce\u0163i un memento parol\u0103"
+   },
+   "Please_provide_this_computer_a_name": {
+      "message": "V\u0103 rug\u0103m s\u0103 furniza\u0163i un nume acestui calculator"
+   },
+   "Please_visit_https___lastpass_com_to_create_an_account_at_a_later_time_": {
+      "message": "V\u0103 rug\u0103m s\u0103 vizita\u0163i https://lastpass.com pentru a crea un cont la o dat\u0103 ulterioar\u0103."
+   },
+   "Preferences": {
+      "message": "Preferin\u0163e"
+   },
+   "Print": {
+      "message": "Imprim\u0103"
+   },
+   "Profile": {
+      "message": "Profil"
+   },
+   "Re_enter_Password": {
+      "message": "Re-introduce\u0163i parola"
+   },
+   "Recently_Used": {
+      "message": "Recent utilizate"
+   },
+   "Recheck_Page": {
+      "message": "Reverificare pagin\u0103"
+   },
+   "Refresh_Sites": {
+      "message": "Re\u00EEmprosp\u0103tare site-uri"
+   },
+   "Reject": {
+      "message": "Respinge"
+   },
+   "Remember_Email": {
+      "message": "Retine Email"
+   },
+   "Remember_Password": {
+      "message": "Retine Parola"
+   },
+   "Rename_Group": {
+      "message": "Redenumire Grup"
+   },
+   "Replace_Existing_Site": {
+      "message": "\u00CEnlocuie\u015Fte site existent"
+   },
+   "Require_Password_Reprompt": {
+      "message": "Solicit\u0103 reconfirmare parol\u0103"
+   },
+   "RoboForm": {
+      "message": "RoboForm"
+   },
+   "SITE": {
+      "message": "SITE"
+   },
+   "Save": {
+      "message": "Salveaz\u0103"
+   },
+   "Save_All_Entered_Data": {
+      "message": "Salvati toate datele introduse"
+   },
+   "Save_New_Site": {
+      "message": "Salveaz\u0103 site nou"
+   },
+   "Save_Site": {
+      "message": "Salveaz\u0103 site"
+   },
+   "Search": {
+      "message": "Cauta"
+   },
+   "Secure_Notes": {
+      "message": "Note Securizate"
+   },
+   "Security": {
+      "message": "Securitate"
+   },
+   "Security_Check": {
+      "message": "Verificare de securitate"
+   },
+   "Select": {
+      "message": "Selectati"
+   },
+   "Select_All": {
+      "message": "Selecteaz\u0103 tot"
+   },
+   "September": {
+      "message": "septembrie"
+   },
+   "Sesame_Multifactor_Authentication": {
+      "message": "Autentificare Sesame Multifactor"
+   },
+   "Share": {
+      "message": "Partajeaz\u0103"
+   },
+   "Should_LastPass_remember_this_password_": {
+      "message": "S\u0103 re\u0163in\u0103 LastPass aceast\u0103 parol\u0103?"
+   },
+   "Should_LastPass_remember_this_password__": {
+      "message": "S\u0103 memoreze LastPass aceast\u0103 parol\u0103?."
+   },
+   "Show": {
+      "message": "Arat\u0103"
+   },
+   "Show_Advanced_Options": {
+      "message": "Arat\u0103 op\u0163iuni avansate"
+   },
+   "Show_Deleted_Sites": {
+      "message": "Arat\u0103 site-uri \u015Fterse"
+   },
+   "Show_Notifications": {
+      "message": "Arat\u0103 notific\u0103ri"
+   },
+   "Show_Sites_in_Groups": {
+      "message": "Arat\u0103 site-urile \u00EEn grupuri"
+   },
+   "Show_all_sites": {
+      "message": "Arat\u0103 toate site-urile"
+   },
+   "Site_Search": {
+      "message": "C\u0103utare pe site"
+   },
+   "Sites": {
+      "message": "Site-uri"
+   },
+   "Special": {
+      "message": "Special"
+   },
+   "Submit_Form": {
+      "message": "Trimite formularul"
+   },
+   "Tabs": {
+      "message": "File"
+   },
+   "Text": {
+      "message": "Text"
+   },
+   "The_LastPass_master_password_you_reentered_does_not_match": {
+      "message": "Parola de administrator LastPass pe care a\u0163i reintrodus-o nu se potrive\u015Fte"
+   },
+   "This_computer_is_trusted__do_not_require_a_second_form_of_authentication_": {
+      "message": "Acest calculator este de \u00EEncredere, nu solicita o a doua form\u0103 de autentificare."
+   },
+   "This_is_a_shared_site__You_are_not_permitted_to_view_the_password_": {
+      "message": "Acesta este un site partajat. Nu ave\u0163i permisiunea de a vizualiza parola."
+   },
+   "Time_Zone": {
+      "message": "Fus orar"
+   },
+   "Title": {
+      "message": "Titlu"
+   },
+   "To_create_your_account__please_re_enter_your_LastPass_master_password": {
+      "message": "Pentru a crea contul dvs., v\u0103 rug\u0103m s\u0103 re-introduce\u0163i parola LastPass maestru"
+   },
+   "Tools": {
+      "message": "Unelte"
+   },
+   "Try_Again": {
+      "message": "Incearca din nou"
+   },
+   "TurboPasswords": {
+      "message": "Parole Turbo"
+   },
+   "URL_": {
+      "message": "URL:"
+   },
+   "USERNAME": {
+      "message": "NUME UTILIZATOR"
+   },
+   "Unselect_All": {
+      "message": "Deselectati totul"
+   },
+   "Up": {
+      "message": "Sus"
+   },
+   "Username_": {
+      "message": "Nume utilizator:"
+   },
+   "Version_": {
+      "message": "Versiunea:"
+   },
+   "Warn_before_filling_insecure_forms": {
+      "message": "Avertizeaz\u0103 \u00EEnainte de a completa formulare nesigure"
+   },
+   "Welcome_to_LastPass_": {
+      "message": "Bine a\u0163i venit la LastPass!"
+   },
+   "Windows": {
+      "message": "Ferestre"
+   },
+   "Yes": {
+      "message": "Da"
+   },
+   "You_must_agree_to_the_terms_to_continue": {
+      "message": "Trebuie s\u0103 fi\u0163i de acord cu termenii pentru a continua"
+   },
+   "You_must_enter_a_name_": {
+      "message": "Trebuie s\u0103 introduce\u0163i un nume."
+   },
+   "You_must_enter_a_unique_name_": {
+      "message": "Trebuie s\u0103 introduce\u0163i un nume unic."
+   },
+   "Your_Google_Chrome_passwords_have_been_imported_successfully_": {
+      "message": "Parolele dumneavoastr\u0103 Google Chrome au fost importate cu succes."
+   },
+   "Your_current_settings_require_you_to_enter_your_LastPass_password_to_complete_this_action_": {
+      "message": "Set\u0103rile dumneavoastr\u0103 curente impun introducerea parolei dumneavoastr\u0103 LastPass pentru a finaliza aceast\u0103 ac\u0163iune."
+   },
+   "Your_password_can_not_be_the_same_as_your_email_": {
+      "message": "Parola dumneavoastr\u0103 nu poate fi aceea\u015Fi cu adresa dumneavoastr\u0103 de email."
+   },
+   "Your_password_is_easily_guessable_": {
+      "message": "Parola dvs. este u\u015For de intuit."
+   },
+   "Your_password_is_too_short__It_must_be_at_least_6_characters_long": {
+      "message": "Parola dumneavoastr\u0103 este prea scurt\u0103. Aceasta trebuie s\u0103 con\u0163in\u0103 cel pu\u0163in 6 caractere"
+   },
+   "YubiKey_Multifactor_Authentication": {
+      "message": "Autentificare YubiKey Multifactor"
+   },
+   "_Hide_": {
+      "message": "[Ascunde]"
+   },
+   "_New_Pending_Share_Offers_": {
+      "message": "(Oferte noi de partajare in asteptare)"
+   },
+   "_Show_": {
+      "message": "[Arat\u0103]"
+   },
+   "_none_": {
+      "message": "(nici unul)"
+   },
+   "a_zlower": {
+      "message": "a-z"
+   },
+   "actual_password_is__while_still_maintaining_its_secrecy_": {
+      "message": "este parola actual\u0103, men\u0163in\u00E2nd \u00EEn acela\u015Fi timp caracterul secret al acesteia."
+   },
+   "and": {
+      "message": "\u015Fi"
+   },
+   "dummy": {
+      "message": "dummy, leave this here so we don't mess up the trailing comma"
+   },
+   "favorites": {
+      "message": "favorite"
+   },
+   "hour": {
+      "message": "or\u0103"
+   },
+   "hours": {
+      "message": "ore"
+   },
+   "minutes": {
+      "message": "minute"
+   },
+   "privacy_statement": {
+      "message": "Declara\u0163ie de confiden\u0163ialitate"
+   },
+   "recently_usedlower": {
+      "message": "utilizate recent"
+   },
+   "seconds": {
+      "message": "secunde"
+   },
+   "terms_of_service": {
+      "message": "Condi\u0163ii de utilizare a serviciului"
+   },
+   "the_current_tab": {
+      "message": "fila curent\u0103"
+   },
+   "we_DO_NOT_know_what_your_LastPass_password_is_": {
+      "message": "noi nu \u015Ftim care este parola dumneavoastr\u0103 LastPass."
+   }
+}

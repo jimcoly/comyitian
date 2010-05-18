@@ -1,0 +1,33 @@
+{
+   "background_page": "background.html",
+   "content_scripts": [ {
+      "js": [ "search-experiment-redirector_content_script.js" ],
+      "matches": [ "http://www.google.com/search?*", "http://www.google.ae/search?*", "http://www.google.at/search?*", "http://www.google.be/search?*", "http://www.google.bg/search?*", "http://www.google.ca/search?*", "http://www.google.ch/search?*", "http://www.google.cl/search?*", "http://www.google.cn/search?*", "http://www.google.co.id/search?*", "http://www.google.co.il/search?*", "http://www.google.co.in/search?*", "http://www.google.co.kr/search?*", "http://www.google.co.jp/search?*", "http://www.google.co.th/search?*", "http://www.google.co.uk/search?*", "http://www.google.co.ve/search?*", "http://www.google.co.za/search?*", "http://www.google.com.ar/search?*", "http://www.google.com.au/search?*", "http://www.google.com.br/search?*", "http://www.google.com.co/search?*", "http://www.google.com.eg/search?*", "http://www.google.com.hk/search?*", "http://www.google.com.mx/search?*", "http://www.google.com.my/search?*", "http://www.google.com.pe/search?*", "http://www.google.com.ph/search?*", "http://www.google.com.sa/search?*", "http://www.google.com.tr/search?*", "http://www.google.com.tw/search?*", "http://www.google.com.ua/search?*", "http://www.google.com.vn/search?*", "http://www.google.cz/search?*", "http://www.google.de/search?*", "http://www.google.dk/search?*", "http://www.google.ee/search?*", "http://www.google.es/search?*", "http://www.google.fi/search?*", "http://www.google.fr/search?*", "http://www.google.gr/search?*", "http://www.google.hr/search?*", "http://www.google.hu/search?*", "http://www.google.ie/search?*", "http://www.google.it/search?*", "http://www.google.lt/search?*", "http://www.google.lv/search?*", "http://www.google.nl/search?*", "http://www.google.no/search?*", "http://www.google.pl/search?*", "http://www.google.pt/search?*", "http://www.google.ro/search?*", "http://www.google.rs/search?*", "http://www.google.ru/search?*", "http://www.google.se/search?*", "http://www.google.si/search?*", "http://www.google.sk/search?*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "jquery_do_not_compile.js", "in-search-results_content_script.js" ],
+      "matches": [ "http://www.google.com/search?*", "http://www.google.ae/search?*", "http://www.google.at/search?*", "http://www.google.be/search?*", "http://www.google.bg/search?*", "http://www.google.ca/search?*", "http://www.google.ch/search?*", "http://www.google.cl/search?*", "http://www.google.cn/search?*", "http://www.google.co.id/search?*", "http://www.google.co.il/search?*", "http://www.google.co.in/search?*", "http://www.google.co.kr/search?*", "http://www.google.co.jp/search?*", "http://www.google.co.th/search?*", "http://www.google.co.uk/search?*", "http://www.google.co.ve/search?*", "http://www.google.co.za/search?*", "http://www.google.com.ar/search?*", "http://www.google.com.au/search?*", "http://www.google.com.br/search?*", "http://www.google.com.co/search?*", "http://www.google.com.eg/search?*", "http://www.google.com.hk/search?*", "http://www.google.com.mx/search?*", "http://www.google.com.my/search?*", "http://www.google.com.pe/search?*", "http://www.google.com.ph/search?*", "http://www.google.com.sa/search?*", "http://www.google.com.tr/search?*", "http://www.google.com.tw/search?*", "http://www.google.com.ua/search?*", "http://www.google.com.vn/search?*", "http://www.google.cz/search?*", "http://www.google.de/search?*", "http://www.google.dk/search?*", "http://www.google.ee/search?*", "http://www.google.es/search?*", "http://www.google.fi/search?*", "http://www.google.fr/search?*", "http://www.google.gr/search?*", "http://www.google.hr/search?*", "http://www.google.hu/search?*", "http://www.google.ie/search?*", "http://www.google.it/search?*", "http://www.google.lt/search?*", "http://www.google.lv/search?*", "http://www.google.nl/search?*", "http://www.google.no/search?*", "http://www.google.pl/search?*", "http://www.google.pt/search?*", "http://www.google.rs/search?*", "http://www.google.ro/search?*", "http://www.google.ru/search?*", "http://www.google.se/search?*", "http://www.google.si/search?*", "http://www.google.sk/search?*" ]
+   }, {
+      "js": [ "in-document-start_content_script.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_qs_description__",
+   "icons": {
+      "128": "images/icon128x128.png",
+      "16": "images/icon16x16.png",
+      "19": "images/icon19x19.png",
+      "32": "images/icon32x32.png",
+      "48": "images/icon48x48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCi4GP4r1JFcIaaYWTKGPHjPV7OXP8n7d3JEYlGW+eRz9b1cnLLUqFNkEdrvuhId0MlQi40HT8NC+W2vcqpk2aItSgAdKhkF0X0Ce1M849nDlcscQGQ0UxINJLvF2jQ6PM/Q7PdmRIqK9nwadTB3uJFNoZaFj8JvM88TJwX0cSQWQIDAQAB",
+   "name": "__MSG_qs_name__",
+   "options_page": "about.html",
+   "page_action": {
+      "default_icon": "images/page-action-active.png"
+   },
+   "permissions": [ "tabs", "http://*.google.com/search*", "http://*/*", "https://*/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.2.1"
+}

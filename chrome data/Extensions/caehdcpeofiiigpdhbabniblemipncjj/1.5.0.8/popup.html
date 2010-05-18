@@ -1,0 +1,126 @@
+<!--///////////////////////////////////////////////////////////////////////
+//                                                                       //
+//   Switchy! Chrome Proxy Manager and Switcher                          //
+//   Copyright (c) 2009 Mohammad Hejazi (mohammadhi at gmail d0t com)    //
+//   Dual licensed under the MIT and GPL licenses.                       //
+//                                                                       //
+////////////////////////////////////////////////////////////////////////-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<link rel="stylesheet" href="assets/styles/popup.css" type="text/css">
+	<script src="assets/scripts/popup.js" type="text/javascript"></script>
+	<script>
+		quickSwitchProxy();
+	</script>
+	<script src="assets/libs/jquery-1.4.min.js" type="text/javascript"></script>
+</head>
+<body onload="init()">
+	<div id="menu">
+		<div id="directConnection" name="[Direct Connection]" class="item proxy" title="Disable Proxy">
+			<div class="icon"></div><span>Direct Connection</span>
+		</div>
+		<div id="separatorProxies" class="separator"></div>
+		<div id="proxies">
+			<div class="templateItem" title="">
+				<div class="icon"></div><span>Proxy</span>
+			</div>
+		</div>
+		<div id="separatorRules" class="separator"></div>
+		<div id="automaticMode" class="item proxy" title="Automatically choose the proper proxy profile &#13;for each URL, based on Switch Rules.">
+			<div class="icon"></div><span>Auto Switch Mode</span>
+		</div>
+		<div id="menuAddRule" class="item" onclick="showAddRule();" title="Quickly add a new Switch Rule &#13;for the current website.">
+			<img src="assets/images/filter-add.png" /><span>New Rule</span>
+		</div>
+		<div id="separatorOptions" class="separator"></div>
+		<div id="menuOptions" class="item" onclick="openOptions();">
+			<img src="assets/images/options.png" /><span>Options</span>
+		</div>
+		<div id="menuAbout" class="item" onclick="showAbout();">
+			<img src="assets/images/about.png" /><span>About Switchy!</span>
+		</div>
+		<div id="separatorError" class="separator"></div>
+		<div id="menuError" class="item" onclick="openErrorLog();" title="Switchy! isn't working properly. &#13;Click to open the error log.">
+			<img src="assets/images/error2.png" /><span>Not Working Properly</span>
+		</div>
+	</div>
+
+	<div id="about">
+		<div class="close"><img src="assets/images/close.png" /></div>
+		<div class="header">
+			<table>
+				<tr>
+					<td><img src="assets/images/icon-128.png" width="70" /></td>
+					<td>
+						<div class="title">Switchy!</div>
+						<div class="version">version <span class="versionNumber"></span></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="body">
+			<div id="developer"><div class="name">Developed by Mhd Hejazi</div></div>
+			<div id="changeLog">
+				<div class="title">What's new?</div>
+				<div class="item"><b>&bull; Rule List Support.</b></div>
+				<div>&nbsp; &nbsp;import Switch Rules from online repository.</div>
+				<div>&nbsp; &nbsp;supports AutoProxy lists.</div>
+				<div class="item"><b>&bull; Export/Import.</b></div>
+				<div>&nbsp; &nbsp;export rules and backup/restore options.</div>
+				<div class="item"><b>&bull; Error Diagnostics.</b></div>
+				<div>see the full <a href="" onclick="openExtensionGalleryWebsite();">change log..</a></div>
+			</div>
+			<span><img src="assets/images/chrome.png" valign="middle" /> 
+				<a href="" onclick="openExtensionGalleryWebsite();">Chrome Extension Gallery</a></span><br />
+			<span><img src="assets/images/web.png" valign="middle" /> 
+				<a href="" onclick="openMainWebsite();">Switchy! web page</a></span><br />
+			<span><img src="assets/images/web.png" valign="middle" /> 
+				<a href="" onclick="openSupportWebsite();">Support & Bug reports</a></span><br />
+			<span><img src="assets/images/mail.png" valign="middle" /> 
+				<a href="" onclick="openContactEmail();">mohammadhi@gmail.com</a></span>
+		</div>
+		<div class="footer">
+			<div>Copyright &copy; 2009 Samabox. All rights reserved.</div>
+		</div>
+	</div>
+	
+	<div id="addRule">
+		
+		<div class="header">&nbsp; New Rule
+			<!--span class="close"><img src="assets/images/close.png" /></span--></div>
+		<div class="header light">
+			<table>
+				<tr>
+					<th>Rule Name</th>
+					<td><input id="txtRuleName" type="text" value="Quick Rule"></td>
+				</tr>
+				<tr>
+					<th><b>URL Pattern</b></th>
+					<td><input id="txtUrlPattern" type="text"></td>
+				</tr>
+				<tr class="note">
+					<th></th>
+					<td><div class="invalid">* There is already a rule for this URL Pattern.</div></td>
+				</tr>
+				<tr>
+					<th>Pattern Type</th>
+					<td><select id="cmbPatternType">
+						<option value="wildcard">Wildcard</option>
+						<option value="regexp">RegExp</option>
+					</select></td>
+				</tr>
+				<tr>
+					<th>Proxy Profile</th>
+					<td><select id="cmbProfileId"></select></td>
+				</tr>
+			</table>
+		</div>
+		<button class="button" id="btnSave" onclick="addSwitchRule();">Add</button>
+		&nbsp;&nbsp; or &nbsp;<a href="" onclick="closePopup();"><b>Cancel</b></a>
+		<!--button class="button" id="btnCancel" onclick="closePopup();">Cancel</button-->
+		<br />
+		<br />
+	</div>
+</body>
+</html>

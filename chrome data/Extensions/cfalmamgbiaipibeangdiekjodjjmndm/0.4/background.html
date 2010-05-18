@@ -1,0 +1,115 @@
+<html>
+<head>
+	<script type="text/javascript">
+		var enabled;
+		var displayMethod;
+		var expanded;		
+		
+		init();
+		
+		function init(){
+			expanded = false;
+			
+			if(localStorage["displayMethod"] == null){
+				localStorage["displayMethod"] = "bubble";
+			}
+			displayMethod = localStorage["displayMethod"];
+			
+			if(localStorage["enabled"] == "false"){
+				enabled = false;
+			}else{
+				enabled = true;
+				localStorage["enabled"] = "true";
+			}
+				
+		    if(localStorage["tasks-version"] == null || localStorage["tasks-version"] != "0.3") {
+				localStorage["tasks-version"] = "0.3";
+				chrome.tabs.create({url : "options.html"});
+			}	
+		}
+    
+        function toggleExtension(){
+			if(displayMethod == 'tab'){
+				if(enabled == true){
+					disable();
+				}else{
+					enable();
+				}
+			}
+		}
+		
+        function enable(){
+			enabled = true;
+			localStorage["enabled"] = enabled;
+			updateToolstrip();
+			updateContentScript();
+		}
+		
+        function disable(){
+			enabled = false;
+			localStorage["enabled"] = enabled;
+			updateToolstrip();
+			updateContentScript();
+		}
+		
+		function toggleExpand(){
+			/* Change expanded flag */
+            if(expanded == true){
+                expanded = false;
+            }else{
+                expanded = true;
+            }
+			updateContentScript();
+		}	
+		
+		function updateContentScript(){
+			/* Hide/Show task list */
+			chrome.windows.getAll({populate: true}, function(windows){
+				for(var i in windows){
+					chrome.tabs.getAllInWindow(windows[i].id, function(tabs) {
+						for(var j in tabs){
+							var port = chrome.tabs.connect(tabs[j].id, {name: "UpdateContentScript"});
+							port.postMessage({visible: enabled, expand: expanded});
+						}
+					});
+				}
+			});
+		}	
+		
+		function updateToolstrip(){
+			if(displayMethod == 'tab'){
+				if(enabled){
+					chrome.browserAction.setIcon({path: "icon.png"});
+				}else{
+					chrome.browserAction.setIcon({path: "icon-disabled.png"});
+				}
+			}else{
+				chrome.browserAction.setIcon({path: "icon.png"});
+			}
+		}
+		
+		/* Listening for Expand Toggle request from page */
+		chrome.extension.onConnect.addListener(function(port3) {
+		  console.assert(port3.name == "UpdateBackgroundPage");
+		  port3.onMessage.addListener(function(msg) {
+			if(msg.toggleExpand == true){
+				toggleExpand();
+			}else{
+				updateContentScript();
+			}
+		  });
+		});
+		
+		function changeMode(pDisplayMethod){
+			displayMethod = pDisplayMethod;
+			if(pDisplayMethod == 'bubble'){
+				disable();	
+			}else{
+				enable();
+			}
+		}
+    </script>
+</head>
+<body>
+</body>
+</html>

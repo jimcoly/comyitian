@@ -1,0 +1,2 @@
+(function(){var c=devhd.pkg("control");var a=c.BaseControl.prototype;var b=c.createClass("ConversationsControl",c.BaseControl);b.setFriendfeed=function(d){this.friendfeed=d};b.setQuery=function(d){this.query=d};b.setMax=function(d){this.max=d};b.destroy=function(){this.friendfeed=null;this.query=null;a.destroy.call(this)};b.display=function(){var d=this;
+this.friendfeed.askSearch(this.query,this.max||5,function(e){if(d.part==null){return}if(e==null||e.length==0){d.part.style.display="none";return}d.part.innerHTML=templates.page.base.conversations(e,d.home)})}})();

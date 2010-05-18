@@ -1,0 +1,127 @@
+body
+{
+    background: transparent;
+    
+    min-width: 17em;
+    margin: 3px;
+    
+    cursor:default;
+    -webkit-user-select:none;
+}
+
+input[type="text"]
+{
+    width: 100%;
+    margin: 0;
+    border: solid 1px ThreeDShadow;
+}
+
+label
+{
+    color: MenuText;
+}
+
+label[for="feedName"], 
+label[for="folders"]
+{
+    padding-right: 0.2em;
+}
+
+h1 
+{
+    font-size: 100%;
+    font-weight: normal;
+}
+
+body.platform-win32, 
+body.platform-win32 input
+{
+    font: menu;
+}
+
+body.platform-win32 h1
+{
+    font-size: 120%;
+    margin: 0 0 0.2em 0;
+}
+
+body.platform-other
+{
+    font-size: medium;
+}
+
+#connecting
+{
+    background: url('../png/throbber.gif') no-repeat left center;
+    padding-left: 20px;
+}
+
+#newFolder.busy
+{
+    background: url('../png/throbber.gif') no-repeat 98% center;
+    padding: 2px 0;
+}
+
+#newFolder.busy:focus
+{
+    outline: none;
+}
+
+#feedName
+{
+    margin-bottom: 0.3em;
+}
+
+#folders
+{
+    padding: 0;
+    margin: 0;
+    max-height: 12em;
+    overflow-y: auto;
+}
+
+#folders.hasitems
+{
+    border: solid 1px ThreeDShadow;
+    padding: 0 0.2em 0.2em 0;
+}
+
+#folders.hasitems li
+{
+    margin-bottom: 0.2em;
+}
+
+.fullwidth
+{
+    width: 100%;
+}
+
+.hidden 
+{ 
+    display: none; 
+}
+
+.right
+{
+    min-width: 1em;
+    float: right; 
+    text-align: right;
+    padding: 0.2em 0 0 0;
+}
+
+.table
+{
+    display: table;
+    padding: 0;
+    margin: 0;
+}
+
+.table > *
+{
+    display: table-row;
+}
+
+.table > * > *
+{
+    display: table-cell;
+}

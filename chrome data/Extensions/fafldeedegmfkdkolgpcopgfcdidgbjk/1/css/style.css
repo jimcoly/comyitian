@@ -1,0 +1,233 @@
+*{
+  font-family: Georgia,
+  "New Century Schoolbook",
+  "Nimbus Roman No9 L",
+  serif;
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+body{
+    padding:5px;
+    font-size:12px;
+}
+
+.app{
+    border:solid 1px silver;
+    height:24px;
+    width:24px;
+    padding:2px;
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    cursor:pointer;
+    margin:2px;
+    float:left;
+}
+
+.app:hover{
+    border:solid 1px gray;
+}
+
+.no-display{
+    display:none;
+}
+
+.display{
+    display:block;
+}
+
+#arrow_back{
+    width:99%;
+    height:30px;
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    border-bottom:dotted 1px gray;
+    margin:auto;
+    margin-bottom:4px;
+}
+
+.arrow_top{
+    background-image:url(../media/misc/arrow.png);
+    cursor:pointer;
+}
+
+.logo_top{
+    background-image:url(../media/logo/icon.16.png);
+    cursor:default;
+}
+
+.tab_system_content{
+	width:800px;
+	border:solid 1px #7b9ecd;
+	background-color:#bcd8ff;
+	margin-top:-1px;
+	z-index:20;
+	position:relative;
+	padding:5px;
+}
+
+.tab_system_tab{
+	width:150px;
+	height:20px;
+	background-color:#f9f9f9;
+	border:solid 1px #dedede;
+	float:left;
+	text-align: center;
+	color:#a2a2a2;
+	margin-right:5px;
+	border-bottom:solid 1px #7b9ecd;
+	z-index:10;
+	position:relative;
+	margin-top:10px;
+}
+
+.tab_system_tab_active{
+	z-index:30;
+	border:solid 1px #7b9ecd;
+	border-bottom: solid 1px #bcd8ff;
+	background-color:#bcd8ff;
+	font-weight:bold;
+	color:#009BD7;
+	height:25px;
+	cursor:pointer;
+}
+
+.tab_system_tab_lien{
+	display:block;
+	width:150px;
+	height:24px;
+	padding-top:2px;
+	overflow:hidden;
+	color: inherit;
+	font-weight: normal;
+	text-decoration:  inherit;
+	z-index:40;
+}
+
+.container{
+    margin:auto;
+    width:810px;
+}
+
+.parameters_myapp_checkbox , .parameters_subapp_checkbox{
+    vertical-align:middle;
+}
+
+.parameters_myapp_img , .parameters_subapp_img{
+    vertical-align:middle;
+    margin-left:5px;
+}
+
+.parameters_myapp_text , .parameters_subapp_text{
+    vertical-align:middle;
+    margin-left:5px;
+}
+
+.parameters_myapp{
+    background-color:#d9e9ff;
+    padding:2px;
+    padding-left:5px;
+    margin-bottom:1px;
+    z-index:1000;
+}
+
+.parameters_myapp_options{
+    margin-left:30px;
+    width:750px;
+}
+
+.parameters_myapp_arrow{
+    vertical-align:middle;
+    margin-top:4px;
+    cursor:pointer;
+    float:right;
+}
+
+li{
+    list-style-type:none;
+    padding:0;
+    z-index:1001;
+}
+
+.handler{
+    cursor:move; 
+    vertical-align:middle;
+}
+
+#bottom{
+    width:99%;
+    height:15px;
+    text-align:center;
+    padding-top:5px;
+    border-top:dotted 1px gray;
+    margin:auto;
+    margin-top:4px;
+}
+
+.left_arrow{
+    vertical-align:middle;
+}
+
+.check_uncheck{
+    margin-top:5px;
+    padding-left:19px;
+    float:left;
+    width:200px;
+    color:#009BD7;
+}
+
+#check_uncheck_box{
+    vertical-align:middle;
+}
+
+#check_uncheck_span{
+    vertical-align:middle;
+}
+
+.expand_shrink{
+    margin-top:5px;
+    padding-right:2px;
+    float:right;
+    width:200px;
+    text-align:right; 
+    color:#009BD7;
+}
+
+#expand_shrink_span{
+    vertical-align:middle;
+}
+
+#expand_shrink_arrow{
+    vertical-align:middle;
+    cursor:pointer;
+    float:right;
+}
+
+
+/* Settings */
+
+.settings_new_option{
+    background-color:#d9e9ff;
+    padding:2px;
+    padding-left:5px;
+    padding-right:5px;
+    margin-bottom:1px;
+    z-index:1000;
+}
+
+.settings_value{
+    float:right;
+}
+
+.settings_new_option input[type='text']{
+    width:40px;
+    font-size:12px;
+    height:16px;
+    text-align:center;
+}
+
+.twitter a:link, .twitter a:visited, .twitter a:hover{
+    text-decoration:none;
+    color:blue;
+}

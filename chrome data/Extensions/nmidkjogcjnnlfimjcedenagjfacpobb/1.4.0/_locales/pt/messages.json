@@ -1,0 +1,136 @@
+{
+   "clickToRestore": {
+      "message": "Clique para restaurar a sess\u00E3o '$name$' em uma nova janela",
+      "placeholders": {
+         "name": {
+            "content": "$1"
+         }
+      }
+   },
+   "contactUs": {
+      "message": "Contate-nos:"
+   },
+   "contactUs2": {
+      "message": "Sugest\u00F5es? Elogios? Afei\u00E7\u00F5es? Nos visite \u003Ca href='http://getsatisfaction.com/visibo/products/visibo_freshstart_session_manager' target='_blank'\u003Eaqui\u003C/a\u003E!"
+   },
+   "contactUs3": {
+      "message": "Problemas? Bugs? Nos visite \u003Ca href='http://getsatisfaction.com/visibo/products/visibo_freshstart_session_manager' target='_blank'\u003Eaqui\u003C/a\u003E tamb\u00E9m. N\u00F3s precisaremos, provavelmente, de screenshots, vers\u00E3o do sistema operacional e navegador."
+   },
+   "contactUs4": {
+      "message": "\u00C9 bem-vindo todas as informa\u00E7\u00F5es construtivas e em linguagens civilizadas. ;)"
+   },
+   "copyright": {
+      "message": "\u003Ca href='http://www.visibotech.com/' target='_blank'\u003EHome\u003C/a\u003E | \u003Ca href='http://blog.visibotech.com/' target='_blank'\u003EBlog\u003C/a\u003E | \u003Ca href='http://twitter.com/visibo' target='_blank'\u003ETwitter\u003C/a\u003E | Copyright 2010 Visibo Ltd. Todos os direitos reservados."
+   },
+   "crashRestoreTitle": {
+      "message": "Restaure a \u00FAltima sess\u00E3o"
+   },
+   "description": {
+      "description": "The extension description",
+      "message": "Precisa de um simples gerenciador de sess\u00F5es? Tem muitos usu\u00E1rios em um s\u00F3 Chrome? FreshStart \u00E9 um simples gerenciador de sess\u00F5es multi-navegador."
+   },
+   "edit": {
+      "message": "Editar"
+   },
+   "enableCrashRecovery": {
+      "message": "Ativar recupera\u00E7\u00E3o p\u00F3s-travamento"
+   },
+   "extensionBrowserActionTitle": {
+      "message": "FreshStart - Gerenciador de Sess\u00F5es Multi-Navegador"
+   },
+   "minutes": {
+      "message": "minuto(s)"
+   },
+   "mySession": {
+      "message": "Minha Sess\u00E3o"
+   },
+   "name": {
+      "description": "The extension name",
+      "message": "FreshStart - Gerenciador de Sess\u00F5es Multi-Navegador"
+   },
+   "noSessionSaved": {
+      "message": "Nenhuma sess\u00E3o salva"
+   },
+   "options": {
+      "message": "Op\u00E7\u00F5es"
+   },
+   "optionsBackupPeriod": {
+      "message": "Salvar todas suas janelas e abas a cada "
+   },
+   "optionsBackupPeriodOutOfRange": {
+      "message": "Per\u00EDodo de backup n\u00E3o pode ser menor que 1 minuto ou maior que 999 minutos"
+   },
+   "optionsEnableCrashRecovery": {
+      "message": "Ativar recupera\u00E7\u00E3o p\u00F3s-travamento"
+   },
+   "optionsNewUserTips": {
+      "message": "Novo no FreshStart? Visite nossa \u003Ca href='http://www.visibotech.com/FreshStart/welcome.html' target='_blank'\u003Ep\u00E1gina de bem-vindo\u003C/a\u003E!"
+   },
+   "optionsPageTitle": {
+      "message": "FreshStart Op\u00E7\u00F5es"
+   },
+   "optionsSaved": {
+      "message": "Op\u00E7\u00F5es salvas"
+   },
+   "remove": {
+      "message": "Remover"
+   },
+   "restorePreviousSession": {
+      "message": "Restaurar \u00FAltima sess\u00E3o"
+   },
+   "restoreSavedWindow": {
+      "message": "Janela salva ($count$) - clique para restaurar esta janela",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "restoreSession": {
+      "message": "Restaurar sess\u00E3o"
+   },
+   "restoreSession2": {
+      "message": "Clique para abrir em uma nova janela. CTRL-clique ou CMD-clique para abrir na atual"
+   },
+   "save": {
+      "message": "Salvar"
+   },
+   "saveSession": {
+      "message": "Salvar Sess\u00E3o"
+   },
+   "smEditCancel": {
+      "message": "Cancelar"
+   },
+   "smEditSave": {
+      "message": "Salvar"
+   },
+   "smHeadingNew": {
+      "message": "Abas para adicionar (marque para adicionar)"
+   },
+   "smHeadingSaved": {
+      "message": "Abas salvas (desmarque para remover)"
+   },
+   "smHeadingTitle": {
+      "message": "T\u00EDtulo"
+   },
+   "smSaveList": {
+      "message": "Desmarque as abas que voc\u00EA n\u00E3o quer que sejam salvas."
+   },
+   "smSaveToggle": {
+      "message": "Inverter sele\u00E7\u00E3o"
+   },
+   "supportUs": {
+      "message": "Ajude nosso desenvolvimento e\u003Cbr\u003Ecompartilhe com seus amigos!"
+   },
+   "tabsCount": {
+      "message": " ($count$ abas)",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedMessage": {
+      "message": "FreshStart foi atualizado, clique aqui para ver o que h\u00E1 de novo"
+   }
+}

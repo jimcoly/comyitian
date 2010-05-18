@@ -1,0 +1,134 @@
+<html>
+<head>
+<script src="javascript/jquery-1.4.2.min.js"></script>
+<script src="javascript/apikey.js"></script>
+<script type="text/javascript">
+    var tabsMarkedStatus = {};
+    var authenticated = false;
+
+    function lookupPage(port) {
+        var userUrlsList = [];
+
+        Array.prototype.contains = function(obj) {
+            var i = this.length;
+            while (i--) {
+                if (this[i] === obj) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        var reqUrl = "https://readitlaterlist.com/v2/get?username="
+                + escape(localStorage["RFL.login"]) + "&password="
+                + escape(localStorage["RFL.pass"]) + "&apikey=" + apiKey
+                + "&state=unread";
+        $.getJSON(reqUrl, function(data) {
+            var respons = data["list"];
+            for (key in respons) {
+                userUrlsList.push(respons[key]["url"]);
+            }
+
+            if (userUrlsList.contains(port.tab.url)) {
+                chrome.pageAction.setIcon( {
+                    tabId : port.tab.id,
+                    path : "images/check-mark-red.png"
+                });
+                chrome.pageAction.setTitle( {
+                    tabId : port.tab.id,
+                    title : "click to unmark this page"
+                });
+                tabsMarkedStatus[port.tab.id] = true
+            } else {
+                chrome.pageAction.setIcon( {
+                    tabId : port.tab.id,
+                    path : "images/check-mark-empty.png"
+                });
+                chrome.pageAction.setTitle( {
+                    tabId : port.tab.id,
+                    title : "click to mark this page"
+                });
+                tabsMarkedStatus[port.tab.id] = false;
+            }
+            chrome.pageAction.show(port.tab.id);
+        });
+    }
+
+    chrome.extension.onConnect.addListener(function(port) {
+        if (!authenticated) {
+            var reqUrl = "https://readitlaterlist.com/v2/auth?username="
+                    + escape(localStorage["RFL.login"]) + "&password="
+                    + escape(localStorage["RFL.pass"]) + "&apikey=" + apiKey;
+            $.ajax( {
+                url : reqUrl,
+                complete : function(XMLHttpRequest, textStatus) {
+                    if (XMLHttpRequest.status != 200) {
+                        authenticated = false;
+                        chrome.pageAction.setPopup( {
+                            tabId : port.tab.id,
+                            popup : "/options.html"
+                        });
+                        chrome.pageAction.setIcon( {
+                            tabId : port.tab.id,
+                            path : "images/check-mark-empty.png"
+                        });
+                        chrome.pageAction.setTitle( {
+                            tabId : port.tab.id,
+                            title : "configure"
+                        });
+                        chrome.pageAction.show(port.tab.id);
+                        return;
+                    } else {
+                        authenticated = true;
+                        lookupPage(port);
+                    }
+                }
+            });
+        } else {
+            lookupPage(port);
+        }
+    });
+
+    chrome.pageAction.onClicked
+            .addListener(function(tab) {
+                var reqUrl = "";
+                if (tabsMarkedStatus[tab.id]) {
+                    reqUrl = "https://readitlaterlist.com/v2/send?username="
+                            + escape(localStorage["RFL.login"]) + "&password="
+                            + escape(localStorage["RFL.pass"]) + "&apikey="
+                            + apiKey + "&read=" + '{"0":{"url":"'
+                            + encodeURIComponent(tab.url) + '"}}';
+                    $.get(reqUrl, function(data) {
+                        chrome.pageAction.setIcon( {
+                            tabId : tab.id,
+                            path : "images/check-mark-empty.png"
+                        });
+                        chrome.pageAction.setTitle( {
+                            tabId : tab.id,
+                            title : "click to mark this page"
+                        });
+                        tabsMarkedStatus[tab.id] = false;
+                    });
+                } else {
+                    reqUrl = "https://readitlaterlist.com/v2/add?username="
+                            + escape(localStorage["RFL.login"]) + "&password="
+                            + escape(localStorage["RFL.pass"]) + "&apikey="
+                            + apiKey + "&url=" + encodeURIComponent(tab.url) + "&title="
+                            + encodeURI(tab.title);
+                    $.get(reqUrl, function(data) {
+                        chrome.pageAction.setIcon( {
+                            tabId : tab.id,
+                            path : "images/check-mark-red.png"
+                        });
+                        chrome.pageAction.setTitle( {
+                            tabId : tab.id,
+                            title : "click to unmark this page"
+                        });
+                        tabsMarkedStatus[tab.id] = true;
+                    });
+                }
+            });
+</script>
+
+</head>
+</html>

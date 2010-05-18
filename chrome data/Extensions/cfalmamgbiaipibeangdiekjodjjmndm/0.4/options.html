@@ -1,0 +1,75 @@
+<html>
+<head><title>Google Tasks Options</title></head>
+<script type="text/javascript">
+
+function restore_options() {
+  var displayMethod = localStorage["displayMethod"];
+  if (!displayMethod) {
+    return;
+  }
+  var select = document.getElementById("display");
+  for (var i = 0; i < select.children.length; i++) {
+    var child = select.children[i];
+    if (child.value == displayMethod) {
+      child.selected = "true";
+      break;
+    }
+  }
+}
+
+function save_options() {
+  var select = document.getElementById("display");
+  var displayMethod = select.children[select.selectedIndex].value;
+  localStorage["displayMethod"] = displayMethod;
+
+  var status = document.getElementById("status");
+  status.innerHTML = "Options Saved.";
+  setTimeout(function() {
+    status.innerHTML = "";
+  }, 750);
+	chrome.extension.getBackgroundPage().changeMode(displayMethod);
+}
+
+</script>
+
+<style type="text/css">
+	body{
+		background: #BFCEE3;	
+	}
+	.OptionsPanel{
+		width: 400px;
+		height: 400px;
+		background: #fff url(icon128.png) no-repeat right bottom;
+		-webkit-border-radius: 5px;
+		margin: 50px auto;
+		padding: 10px 20px;
+	}
+</style>
+
+<body onLoad="restore_options()">
+
+<div class="OptionsPanel">
+    <h1>Google Tasks for Chrome</h1>
+    
+    Display Option:
+    <select id="display">
+     <option value="bubble">Icon bubble (recommended)</option>
+     <option value="tab">Tab at bottom (like gmail)</option>
+    </select>
+    
+    <br>
+    <button onClick="save_options()">Save</button><span id="status"></span>
+    <br>
+    <br>
+    <br>
+        <br>
+    <br>
+    <br>    <br>
+    <br>
+    <br>    <br>
+    <br>
+    <br>
+    <button onClick="window.close();">Close</button>
+</div>
+</body>
+</html>
