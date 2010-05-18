@@ -1,0 +1,4 @@
+/* General */
+.clear         {clear:both;font-size:0;height:0;line-height:0;overflow:hidden;}
+table          {padding:0;spacing:0;}
+table td       {padding:0;spacing:0;white-space:nowrap;}

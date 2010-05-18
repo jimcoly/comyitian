@@ -1,0 +1,125 @@
+<html>
+<head>
+<script>
+
+var FEEDLY_IO_PORT_NAME_ = 'FeedlyIO_';
+ 
+function processOPML( opmlElem )
+{
+	var feeds = [];
+	
+	var feedIndex = {};
+	
+	// find all rss nodes
+	var rssNodes = opmlElem.getElementsByTagName( "outline" );
+
+	for( var i = 0; i < rssNodes.length; i++ )
+	{
+		var outlineElem = rssNodes[ i ];
+		
+		var feedURL = outlineElem.getAttribute( "xmlUrl" );
+		
+		if( feedURL == null )
+			continue;
+		
+		var feedId = "feed/" + feedURL;
+		
+		var title = outlineElem.getAttribute( "title" );
+		if( title == null )
+			title = outlineElem.getAttribute( "text" );
+		
+		// is there a parent element with a text attribute?
+		var categories = [];
+		var category = outlineElem.parentNode;
+		if( category != null && category.getAttribute( "text" ) ); 
+		{
+			categories.push( category.getAttribute( "text" ) );
+		}
+		
+		// has this feed already been defined?
+		if( feedIndex[ feedId ] == null )
+		{
+			var fi = { 
+						id: 			feedId, 
+						URL:			feedURL,
+						title: 			title, 
+						categories:		categories,
+					 };
+					 
+			feeds.push( fi );
+			feedIndex[ feedId ] = fi;
+		}
+	}
+
+	return feeds;
+}
+ 
+/**
+* Should be called by the background page.
+*/
+function setupIO() 
+{
+	chrome.extension.onConnect.addListener( function( port ) 
+	{
+	    if (port.name != FEEDLY_IO_PORT_NAME_)
+	      return;
+	    
+	    port.onMessage.addListener( function( xhrOptions ) 
+		{
+			var url = xhrOptions.url;
+			if( url.indexOf( "http://" ) != 0 && url.indexOf( "chrome-extension://" ) != 0 )
+				url = chrome.extension.getURL( url );
+		
+			var xhr = new XMLHttpRequest();	
+			
+			xhr.onreadystatechange = function() {
+				if( this.readyState == 4 ) 
+				{
+					var text = this.responseText;
+					
+					if( xhrOptions.contentType == "opml/xml" && this.responseXML != null )
+					{
+						var opml = this.responseXML.documentElement;
+						text = JSON.stringify( processOPML( opml ) );				
+					}
+					
+	          		port.postMessage({
+	           	 		status: 	this.status == 0 ? 200 : this.status,
+	            		data: 		text,
+						version: 	this.getResponseHeader( "data-version" )
+	          		});
+	        	}
+	      	}
+
+			xhr.open(xhrOptions.method || "GET", url, true, xhrOptions.username, xhrOptions.password );
+
+			if( xhrOptions.headers != null )
+			{
+				for( var name in xhrOptions.headers ) 
+				{
+					if( xhrOptions.headers[name] == null || xhrOptions.headers[name] == "" )
+						continue;
+						
+		      		xhr.setRequestHeader( name, xhrOptions.headers[name] );
+				}
+			}
+			
+	      	xhr.send( xhrOptions.body );
+	    });
+	});
+}
+
+setupIO();
+
+function goToFeedly() {
+  chrome.tabs.create({url: "http://www.feedly.com/home" });
+}
+
+// Called when the user clicks on the browser action.
+chrome.browserAction.onClicked.addListener(function(windowId) {
+  goToFeedly();
+});
+
+</script>
+</head>
+</html>

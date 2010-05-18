@@ -1,0 +1,20 @@
+{
+   "browser_action": {
+      "default_icon": "media/logo/icon.png",
+      "default_title": "Symtica",
+      "popup": "menu.html"
+   },
+   "description": "Symtica helps you to access quickly to all your google's apps. You can now get the best shortcut you have ever wanted.",
+   "icons": {
+      "128": "media/logo/icon.128.png",
+      "16": "media/logo/icon.16.png",
+      "32": "media/logo/icon.32.png",
+      "48": "media/logo/icon.48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3ncfGdtIYrU82r+m7zGHP5K01QjjZHUQGfNxV+FE8EQuW9Jj9ujAa5ijw4u4EO8T3tfM4xdAhf1ddfzl3XngYioTfzXzRuH1V5rYOfPzObrs8956YkyLbenWJ0tu7rsd7XFwDYdzuEgLPx/lGEFh1jrouP/u3s7XLvIeq+BkWqwIDAQAB",
+   "name": "Symtica",
+   "options_page": "settings.html",
+   "permissions": [ "tabs" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1"
+}

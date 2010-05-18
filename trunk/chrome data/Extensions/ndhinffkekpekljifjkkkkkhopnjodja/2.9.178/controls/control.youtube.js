@@ -1,0 +1,2 @@
+(function(){var b=devhd.pkg("control");var a=b.BaseControl.prototype;var c=b.createClass("YoutubeControl",b.BaseControl);c.setSherlock=function(d){this.sherlock=d};c.setMax=function(d){this.max=d};c.setQuery=function(d){this.query=d};c.destroy=function(){this.sherlock=null;this.query=null;a.destroy.call(this)};c.display=function(){var d=this;this.sherlock.askSearchYoutube(this.query,function(e){if(d.isDestroyed()==null){return
+}d.part.innerHTML=templates.modules.layoutYoutubeVideos(e.slice(0,d.max||4),d.home)})}})();

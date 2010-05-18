@@ -1,0 +1,1 @@
+function href(c,b){return["a ",'href="',devhd.utils.FeedlyUtils.homeURL,"#",c,"/",encodeURIComponent(b),'" ','" data-uri="',c,"/",devhd.str.toSafeAttr(b)+'"'].join("")};

@@ -1,0 +1,136 @@
+{
+   "clickToRestore": {
+      "message": "Click para restaurar la sesi\u00F3n '$name$' en una nueva ventana",
+      "placeholders": {
+         "name": {
+            "content": "$1"
+         }
+      }
+   },
+   "contactUs": {
+      "message": "Cont&aacute;ctanos:"
+   },
+   "contactUs2": {
+      "message": "&#191;Sugerencias? &#191;Alabanzas? &#191;Amor? &#161;Vis&iacute;tanos \u003Ca href='http://getsatisfaction.com/visibo/products/visibo_freshstart_session_manager'\u003Eaqu&iacute;\u003C/a\u003E!"
+   },
+   "contactUs3": {
+      "message": "&#191;Problemas? &#191;Bugs? Vis&iacute;tanos \u003Ca href='http://getsatisfaction.com/visibo/products/visibo_freshstart_session_manager'\u003Eaqu&iacute;\u003C/a\u003E tambi&eacute;n. Generalmente necesitamos capturas de pantalla y tu versi&oacute;n de OS/Chrome."
+   },
+   "contactUs4": {
+      "message": "Son bienvenidos todos las cr&iacute;ticas constructivas en un lenguaje civilizado. *gui&ntilde;o*"
+   },
+   "copyright": {
+      "message": "\u003Ca href='http://www.visibotech.com/' target='_blank'\u003EP\u00E1gina de inicio\u003C/a\u003E | \u003Ca href='http://blog.visibotech.com/' target='_blank'\u003EBlog\u003C/a\u003E | \u003Ca href='http://twitter.com/visibo' target='_blank'\u003ETwitter\u003C/a\u003E | Copyright 2010 Visibo Ltd. Todos los derechos reservados."
+   },
+   "crashRestoreTitle": {
+      "message": "Restaurar sesi&oacute;n anterior"
+   },
+   "description": {
+      "description": "Descripci&oacute;n de la extensi\u00F3n",
+      "message": "\u00BFNecesita gestionar sesiones de manera sencilla? \u00BFVarios usuarios en el mismo Chrome? FreshStart es un sencillo administrador de sesiones entre varios navegadores."
+   },
+   "edit": {
+      "message": "Edit"
+   },
+   "enableCrashRecovery": {
+      "message": "Habilitar recuperaci\u00F3n por cerrado inesperado"
+   },
+   "extensionBrowserActionTitle": {
+      "message": "FreshStart - Administrador de sesiones entre varios navegadores"
+   },
+   "minutes": {
+      "message": "minutos"
+   },
+   "mySession": {
+      "message": "Mi Sesi\u00F3n"
+   },
+   "name": {
+      "description": "El nombre de la extensi&oacute;n",
+      "message": "FreshStart - Administrador de sesiones entre varios navegadores"
+   },
+   "noSessionSaved": {
+      "message": "No hay sesiones guardadas"
+   },
+   "options": {
+      "message": "Opciones"
+   },
+   "optionsBackupPeriod": {
+      "message": "Guarda todas las pesta&ntilde;as cada "
+   },
+   "optionsBackupPeriodOutOfRange": {
+      "message": "El tiempo entre backups no puede ser m\u00E1s corto que 1 minuto o m\u00E1s largo que 999"
+   },
+   "optionsEnableCrashRecovery": {
+      "message": "Habilitar Recuperaci&oacute;n en caso de cierre incorrecto"
+   },
+   "optionsNewUserTips": {
+      "message": "&#191;Nuevo en FreshStart? &#161;Visita nuestra \u003Ca href='http://www.visibotech.com/FreshStart/welcome.html' target='_blank'\u003EP\u00E1gina de Bienvenida\u003C/a\u003E!"
+   },
+   "optionsPageTitle": {
+      "message": "Opciones de FreshStart"
+   },
+   "optionsSaved": {
+      "message": "Opciones guardadas"
+   },
+   "remove": {
+      "message": "Eliminar"
+   },
+   "restorePreviousSession": {
+      "message": "Restaurar sesi\u00F3n anterior"
+   },
+   "restoreSavedWindow": {
+      "message": "Ventana guardada ($count$) - click para restaurar esta ventana",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "restoreSession": {
+      "message": "Restaurar sesi&oacute;n"
+   },
+   "restoreSession2": {
+      "message": "Click izquierdo para abrir en una nueva ventana o ctrl-click para desplegar en esta ventana"
+   },
+   "save": {
+      "message": "Guardar"
+   },
+   "saveSession": {
+      "message": "Guardar sesi&oacute;n"
+   },
+   "smEditCancel": {
+      "message": "Cancel"
+   },
+   "smEditSave": {
+      "message": "Save"
+   },
+   "smHeadingNew": {
+      "message": "Tabs to Add (check to add)"
+   },
+   "smHeadingSaved": {
+      "message": "Saved Tabs (uncheck to remove)"
+   },
+   "smHeadingTitle": {
+      "message": "Title"
+   },
+   "smSaveList": {
+      "message": "Desmarque las pesta\u00F1as que no desea guardar."
+   },
+   "smSaveToggle": {
+      "message": "Toggle Selection"
+   },
+   "supportUs": {
+      "message": "\u00A1Apoya nuestra extensi\u00F3n y\u003Cbr\u003Ecomp\u00E1rtela con tus amigos!"
+   },
+   "tabsCount": {
+      "message": " ($count$ pesta\u00F1as)",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedMessage": {
+      "message": "FreshStart ha sido actualizado, haga click aqu\u00ED para saber las novedades"
+   }
+}

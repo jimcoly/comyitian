@@ -1,0 +1,139 @@
+<html>
+<head><title>Options for TooManyTabs</title>
+<style>
+	body {
+    border:0px;
+    margin:0px;
+
+    background: -webkit-gradient(linear, left top, left bottom, from(#00abeb), to(rgba(45,72,101,1)));
+	}
+  a:link {
+    color: #FFFF99;
+	}
+  a:visited {
+    color: #FFFF99;
+	}
+  a:hover {
+    color: #FFFF99;
+	}
+  a:active {
+    color: #FFFF99;
+	}
+	#logoarea {
+    left:50px;
+    top:50px;
+    width:120px;
+    height:50px;
+    background-image:url(tmtchrome_logo.png);
+    position:absolute;
+    overflow:hidden;
+    z-index:3000;
+    cursor:hand;
+
+  }
+  #optiontitle {
+    left: 190px;
+    top: 60px;
+    position:absolute;
+    color:white;
+    font-family:Verdana, Arial, Tahoma;
+    font-size:18px;
+    font-weight:bold;
+  }
+  #updatenotes {
+    left:70px;
+    top: 120px;
+    position:absolute;
+    font-family:Verdana, Arial, Tahoma;
+    font-size:14px;
+    color:#FFFFAA;
+    padding:10px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.2)), to(rgba(255,255,255,0.05)));
+  }
+  #widthselection {
+    left:70px;
+    top: 300px;
+    position:absolute;
+    font-family:Verdana, Arial, Tahoma;
+    font-size:14px;
+    color:white;
+  }
+  #otherinfo {
+    left:70px;
+    top: 340px;
+    position:absolute;
+    font-family:Verdana, Arial, Tahoma;
+    font-size:14px;
+    color:white;
+
+  }
+</style>
+
+</head>
+<script type="text/javascript">
+
+
+// Restores select box state to saved value from localStorage.
+function restore_options() {
+  if (!localStorage.getItem("popupsize")) {
+     widebutton.checked = true;
+
+  } else {
+    if (localStorage.getItem("popupsize") == "narrow")
+       narrowbutton.checked = true;
+    else if (localStorage.getItem("popupsize") == "wide")
+       widebutton.checked = true;
+    else if (localStorage.getItem("popupsize") == "small")
+       smallbutton.checked = true;
+  }
+}
+
+</script>
+
+<body onload="restore_options()">
+    <div id="logoarea"></div>
+    <div id="optiontitle">TooManyTabs for Chrome - Options </div>
+    <div id="updatenotes">
+    <b>What's New in This Update</b>
+    <ul>
+    <li>Now only displays tabs from the same window. This makes 100+ tabs cases more manageable for us all.</li>
+    <li>Close button for each tab near the title. Go tab-closing-frenzy when you don't need them anymore!</li>
+    <li>New option: "small" popup size for netbooks. Will further improve after testing.</li>
+    <li>Searching tabs now considers URL too.</li>
+    </ul>
+    <b>Enjoy!</b>
+    </div>
+    <div id="widthselection"> <form>
+         Popup Width:
+         <input id="widebutton" type="radio" name="widthselect" value="wide" onclick="localStorage.setItem('popupsize','wide');">Wide
+         <input id="narrowbutton" type="radio" name="widthselect" value="narrow" onclick="localStorage.setItem('popupsize','narrow');">Narrow
+         <input id="smallbutton" type="radio" name="widthselect" value="small" onclick="localStorage.setItem('popupsize','small');">Small
+    </form></div>
+    <div id="otherinfo">Quick Support:
+         <ul>
+         <li>Presented to you by Visibo Ltd</li>
+         <li>Latest updates, tips and video tutorials <a href="http://www.visibotech.com/TMTChrome/">here</a>!</li>
+
+         <li>Experimental Shortcut Key: Ctrl+~ (Doesn't work when you are on system pages, like this option page)</li>
+         <li>We do not collect any of your private information and never send them to any servers.</li>
+         </ul>
+         Contact Us:
+         <ul>
+         <li>Suggestions? Praise? Love? Visit us <a href="http://www.visibotech.com/TMTChrome/">here</a>!</li>
+         <li>Problems? Bugs? Visit us <a href="http://www.visibotech.com/TMTChrome/">here</a> as well. We often need screenshots and your OS/Chrome version.
+         <li>We welcome all constructive feedbacks in civilized languages. *wink*
+         </ul>
+
+         <p>Known Issues - do not file bug-reports on these, we are communicating with Chrome team to resolve them:
+         <ol>
+         <li>Shortcut key does not work on Chrome's own pages (e.g. default homepage, option pages).
+         <li>Chrome's own pages do not respond to TMT's wake up calls occasionally.
+         </ol>
+
+
+
+         Copyright 2009 Visibo Ltd. All rights reserved.
+    </div>
+</body>
+</html>
+

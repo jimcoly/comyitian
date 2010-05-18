@@ -1,0 +1,102 @@
+<html>
+<head>
+     <script type="text/javascript" src="jquery-1.3.2.js"></script>
+     <script type="text/javascript" src="ril4.js"></script>
+    <script type="text/javascript">
+var paMarkReadItLater = 0;
+var paMarkedUnread = 1;
+var paNotAuthenticated = 2;
+
+/* UI */
+
+function updatePageActionForAllTabs() {
+    chrome.windows.getAll({populate: true}, function(windows) {
+        for (var i = 0; i < windows.length; i++) {
+            for (var j = 0; j < windows[i].tabs.length; j++) {
+                updatePageActionInTab(windows[i].tabs[j].id);
+            }
+        }
+    });
+}
+
+function updatePageActionInTab(tabid) {
+    chrome.tabs.get(tabid, function(currentTab) {
+        if (!ReadItLater.authenticated) {
+            chrome.pageActions.enableForTab('addforlater', {
+                tabId: currentTab.id,
+                url: currentTab.url,
+                title: "Authenticate with Read It Later",
+                iconId: paNotAuthenticated
+            });
+            return;
+        }
+
+        var state = ReadItLater.getStatusOfURL(currentTab.url);
+        if (state == 'unread') {
+            chrome.pageActions.enableForTab('addforlater', {
+                tabId: currentTab.id,
+                url: currentTab.url,
+                title: "This page has been marked to Read It Later",
+                iconId: paMarkedUnread
+            });            
+        }
+        else {
+            chrome.pageActions.enableForTab('addforlater', {
+                tabId: currentTab.id,
+                url: currentTab.url,
+                title: "Read This Page Later",
+                iconId: paMarkReadItLater
+            });                        
+        }
+    });
+}
+
+function pageAction_AddForLater() {
+    chrome.windows.getCurrent(function(currentWindow) {
+        chrome.tabs.getSelected(currentWindow.id, function(currentTab) {
+            var state = ReadItLater.getStatusOfURL(currentTab.url);
+            if (state && (state == 'unread')) {
+                ReadItLater.addRead(currentTab.url);
+            }
+            else {
+                ReadItLater.addUnread(currentTab.url, currentTab.title);
+            }
+            updatePageActionForAllTabs();
+        });
+    });
+}
+
+/********* Listen for Events **************/
+chrome.tabs.onUpdated.addListener(function(tabid) {
+    updatePageActionInTab(tabid);
+});
+
+
+    chrome.pageActions["addforlater"].addListener(function(pageaction) {
+        pageAction_AddForLater();
+    });
+
+
+chrome.extension.onConnect.addListener(function(port) {
+    port.onMessage.addListener(function(data) {
+        if (data.message && data.message == 'reloadoptions') {
+            ReadItLater.reloadOptions();
+        } else {
+            console.log(data.message);
+        }
+    });
+});
+
+function onload() {
+    ReadItLater.refreshListFromServer();
+
+    // Also set up that every hour, we refresh the local list from the server
+    // in case another client has been doing updates
+    window.setInterval(ReadItLater.refreshListFromServer, 3600000);
+}
+    </script>
+
+</head>
+<body onload="onload()">
+</body>
+</html>

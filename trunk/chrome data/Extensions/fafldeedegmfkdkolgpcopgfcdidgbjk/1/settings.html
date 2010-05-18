@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head> 
+    	<link rel="stylesheet" type="text/css" href="css/style.css">
+    	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    	<script type="text/javascript" src="js/script.js"></script>
+    	<script type="text/javascript" src="js/jquery-ui-1.8rc3.custom.min.js"></script>
+    	<title>Symtica :: Settings</title>
+    </head>
+    <body>
+    	<script>
+    	$(document).ready(function() {
+    	   
+    	   var ParametersMyApps = new Symtica_parameters_myapps();
+    	   var parametersSubApps = new Symtica_parameters_subapps();
+           var Tabs = new Symtica_tabs();
+           
+           Tabs.newTab('My apps');
+           Tabs.newTab('Settings');
+           Tabs.addEvents();
+           Tabs.run(); 
+
+        	// Variable utile lors de l'ajout de nouvelle application, elle permet d'eviter la remise a zero de l'ordre des applications, en ajoutant les nouvelles à la fin
+        	var nb_total_apps = 22;
+           
+           if(getStorage('conf_apps_order')==null)
+                var list_apps = new Array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22);
+           else
+                var list_apps = getStorage('conf_apps_order').split(',');
+
+            // On ajouter les nouvelle applications a la fin de la chaine 
+            if(list_apps.length != nb_total_apps)
+            {
+                var nb_new_apps = nb_total_apps - list_apps.length;
+                
+                for(var j = list_apps.length ; j < nb_total_apps ; j++)
+                {
+                    list_apps[j] = j+1;    
+                }        
+            }
+
+            for (var n in a = list_apps)
+            {
+                if(a[n]==1)
+                    Tabs.addContent(0,ParametersMyApps.addApp('igoogle','IGoogle',a[n]));
+                else if(a[n]==2)
+                    Tabs.addContent(0,ParametersMyApps.addApp('gmail','Gmail',a[n]));
+                else if(a[n]==3)
+                    Tabs.addContent(0,ParametersMyApps.addApp('youtube','Youtube',a[n]));
+                else if(a[n]==4)                             
+                    Tabs.addContent(0,ParametersMyApps.addApp('agenda','Agenda',a[n]));
+                else if(a[n]==5)
+                    Tabs.addContent(0,ParametersMyApps.addApp('documents','Documents',a[n]));
+                else if(a[n]==6)
+                    Tabs.addContent(0,ParametersMyApps.addApp('reader','Reader',a[n]));
+                else if(a[n]==7)
+                    Tabs.addContent(0,ParametersMyApps.addApp('talk','Talk',a[n]));
+                else if(a[n]==8) 
+                    Tabs.addContent(0,ParametersMyApps.addApp('contacts','Contacts',a[n]));
+                else if(a[n]==9) 
+                    Tabs.addContent(0,ParametersMyApps.addApp('wave','Wave',a[n]));
+                else if(a[n]==10)
+                    Tabs.addContent(0,ParametersMyApps.addApp('picasa','Picasa',a[n]));
+                else if(a[n]==11)
+                    Tabs.addContent(0,ParametersMyApps.addApp('tasks','Tasks',a[n]));
+                else if(a[n]==12) 
+                    Tabs.addContent(0,ParametersMyApps.addApp('translate','Translate',a[n]));
+                else if(a[n]==13)
+                    Tabs.addContent(0,ParametersMyApps.addApp('maps','Maps',a[n]));
+                else if(a[n]==14) 
+                    Tabs.addContent(0,ParametersMyApps.addApp('blogger','Blogger',a[n]));
+                else if(a[n]==15)
+                    Tabs.addContent(0,ParametersMyApps.addApp('analytics','Analytics',a[n]));
+                else if(a[n]==16)                            
+                    Tabs.addContent(0,ParametersMyApps.addApp('sites','Sites',a[n]));
+                else if(a[n]==17)
+                    Tabs.addContent(0,ParametersMyApps.addApp('notebook','Notebook',a[n]));
+                else if(a[n]==18)
+                    Tabs.addContent(0,ParametersMyApps.addApp('finance','Finance',a[n]));
+                else if(a[n]==19)
+                    Tabs.addContent(0,ParametersMyApps.addApp('voice','Voice',a[n]));
+                else if(a[n]==20)
+                    Tabs.addContent(0,ParametersMyApps.addApp('webmastertools','Webmaster Tools',a[n]));
+                else if(a[n]==21)
+                    Tabs.addContent(0,ParametersMyApps.addApp('code','Code',a[n]));
+                else if(a[n]==22)
+                    Tabs.addContent(0,ParametersMyApps.addApp('bookmarks','Bookmarks',a[n]));
+            } 
+           
+           parametersSubApps.addApp('igoogle','home','Home');
+           
+           parametersSubApps.addApp('gmail','home','Home');
+           parametersSubApps.addApp('gmail','new','New email');
+           parametersSubApps.addApp('gmail','parameters','Parameters');
+           
+           parametersSubApps.addApp('youtube','home','Home');
+           parametersSubApps.addApp('youtube','user','User');
+           parametersSubApps.addApp('youtube','suscribe','Suscribe');
+           parametersSubApps.addApp('youtube','history','Home');
+           parametersSubApps.addApp('youtube','parameters','Parameters');
+           
+           parametersSubApps.addApp('agenda','home','Home');
+           
+           parametersSubApps.addApp('documents','home','Home');
+           parametersSubApps.addApp('documents','new_document','New document');
+           parametersSubApps.addApp('documents','new_spreadsheet','New spreadsheet');
+           parametersSubApps.addApp('documents','new_slideshow','New slideshow');
+           parametersSubApps.addApp('documents','new_drawing','New drawing');
+           parametersSubApps.addApp('documents','parameters','Parameters');
+           
+           parametersSubApps.addApp('reader','home','Home');
+           parametersSubApps.addApp('reader','all','All items');
+           parametersSubApps.addApp('reader','favorite','Favorite items');
+           parametersSubApps.addApp('reader','shared','Shared items');
+           parametersSubApps.addApp('reader','parameters','Parameters');
+           
+           parametersSubApps.addApp('talk','home','Home');
+           
+           parametersSubApps.addApp('contacts','home','Home');
+           
+           parametersSubApps.addApp('wave','home','Home');
+           parametersSubApps.addApp('wave','parameters','Parameters');
+           
+           parametersSubApps.addApp('picasa','home','Home');
+           parametersSubApps.addApp('picasa','parameters','Parameters');
+           
+           parametersSubApps.addApp('tasks','home','Home');
+           
+           parametersSubApps.addApp('translate','home','Home');
+           
+           parametersSubApps.addApp('maps','home','Home');
+           
+           parametersSubApps.addApp('blogger','home','Home');
+           
+           parametersSubApps.addApp('analytics','home','Home');
+           parametersSubApps.addApp('analytics','report','Report');
+           parametersSubApps.addApp('analytics','parameters','Parameters');
+           
+           parametersSubApps.addApp('sites','home','Home');
+           parametersSubApps.addApp('sites','parameters','Parameters');
+           
+           parametersSubApps.addApp('notebook','home','Home');
+           
+           parametersSubApps.addApp('finance','home','Home');
+           parametersSubApps.addApp('finance','new','News')
+           
+           parametersSubApps.addApp('voice','home','Home');
+           parametersSubApps.addApp('voice','sms','SMS');
+           
+           parametersSubApps.addApp('webmastertools','home','Home');
+           
+           parametersSubApps.addApp('code','home','Home');
+           
+           parametersSubApps.addApp('bookmarks','home','Home');
+           
+           parametersSubApps.addEvents();                                   
+           
+           var Settings = new Symtica_parameters_settings();
+           Tabs.addContent(1, Settings.addOption('conf_settings_nbappsinrow', 'How many apps in a row?', 'text', 2));
+           Tabs.addContent(1, Settings.addOption('conf_settings_hidetopbottom', 'Would you like to hide top and bottom menu? (Tools > Extension > Symtica > Options to undo)', 'checkbox', ''));
+           Tabs.addContent(1, Settings.addOption('conf_settings_https', 'Would you like to use HTTPS? (only for compatible apps)', 'checkbox', ''));
+           Tabs.addContent(1, Settings.addOption('conf_settings_open', 'How would you like to open the apps?', 'radio', {"option": ["tabs","popups"], "text": ["Tabs","Popups"]}));
+           Tabs.addContent(1, Settings.addOption('conf_settings_popupwidth', '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Popup Width : ', 'text', 800));
+           Tabs.addContent(1, Settings.addOption('conf_settings_popupheight', '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Popup Height : ', 'text', 600)); 
+           
+           ParametersMyApps.dragDrop();
+           ParametersMyApps.eventsMyApps();
+           
+           Tabs.addContent(0,'<div class="check_uncheck"><input type="checkbox" checked="checked" id="check_uncheck_box" value="1" /> &nbsp;<span id="check_uncheck_span">Uncheck all</span></div>');
+           Tabs.addContent(0,'<div class="expand_shrink"><span id="expand_shrink_span">Expand all</span> &nbsp;<img src="media/misc/arrow_down.png" alt="" id="expand_shrink_arrow" /></div>');
+           Tabs.addContent(0,'<div style="clear:both;"></div>');
+           
+           var Check_and_expand = new check_expand();
+           Check_and_expand.addEvents();  
+           
+    	});
+    	</script>
+    	<div class="container">
+            <div id="tabs">
+                <div class="twitter" style="float:right; margin-top:8px;"><a target="_blank" href="http://twitter.com/cuakaltaya"><img src="media/misc/twitter.png" alt="twitter" title="twitter" /> Follow me on twitter</a></div>
+            </div>
+            <div id="content">
+            </div>
+ 
+    	</div>
+    </body>
+</html>

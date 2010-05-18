@@ -1,0 +1,372 @@
+<html>
+<head>
+	<style>
+	#d2:hover{cursor:pointer;}
+	
+	#a134{
+	
+	
+	background:url('images/refresh_button_over.png') 0px 0px no-repeat;
+	opacity:0;
+		-webkit-transition: opacity 300ms ease-out;
+
+	width: 25px;height:24px;}	
+	#a134:hover{
+	
+	opacity:1;
+	}	
+	
+	#a12{
+	
+	
+	display:inline-block;background:url('images/refresh_button.png') 0px 0px no-repeat;
+	
+	
+	position:relative;top:4px;right:7px;width: 25px;height:24px;margin-left:5px;vertical-align:middle;}
+	
+	
+	#oi32v{cursor:default;height:30px;top:0px;position:relative;
+	 -webkit-user-select: none;
+	-webkit-animation: support;-webkit-tweening: true;-webkit-transition: opacity 300ms ease-out;-webkit-animation: support;-webkit-tweening: true;-webkit-transition: top 300ms ease-out;-webkit-box-shadow: 0px 3px 3px #4e4e4e}#oi32v:hover{}#d2{position:relative;top:0px;-webkit-animation: support;-webkit-tweening: true;-webkit-transition: top 300ms ease-out;background:rgb(218,232,249);}
+	
+	
+	
+	#a12s:hover {-webkit-box-shadow: 0px 0px 15px rgba(254,253,226,0.55);cursor:pointer;}
+	
+	
+	#z52 {display: inline-block;
+	
+	background: url('images/maximize.png') no-repeat;position:absolute;right:0px;top:17px;float:right;width: 62px;height:13px;
+	
+	
+	}
+	
+	#dbd4{
+	
+	
+	background:url('images/maximize_over.png') 0px 0px no-repeat;
+	opacity:0;
+		-webkit-transition: opacity 300ms ease-out;
+
+	width: 62px;height:13px;}	
+	#dbd4:hover{
+	
+	opacity:1;
+	}	
+	
+	
+	#tru {display: inline-block;
+	
+	background: url('images/minimize_button.png') no-repeat;position:relative;
+	
+	right:15px;top:4px;float:right;width: 25px;height:24px;}
+	
+		#asdvbqa{
+	
+	
+	background:url('images/minimize_button_over.png') 0px 0px no-repeat;
+	opacity:0;
+		-webkit-transition: opacity 300ms ease-out;
+
+	width: 25px;height:24px;}	
+	#asdvbqa:hover{
+	
+	opacity:1;
+	}	
+	
+	
+	#fg41f {display: inline-block;	background: url('images/settings.png') 0px 0px no-repeat;
+	
+	position:relative;float: left;top:4px;left:9px;width: 25px;height:24px;
+	
+	
+	}
+	#cvsdf{
+	
+	
+	background:url('images/settings_over.png') 0px 0px no-repeat;
+	opacity:0;
+		-webkit-transition: opacity 300ms ease-out;
+
+	width: 25px;height:24px;}	
+	#cvsdf:hover{
+	
+	opacity:1;
+	}		
+
+	
+	
+	#iasde{-webkit-transition: top 300ms ease-out;}#fd31f{height:100%;width:100%;top:5px;background: -webkit-gradient(linear, left top, left bottom, from(rgb(97,129,180)), to(rgb(89,108,141)), color-stop(0.30,rgb(91,120,164)) ,color-stop(0.34,rgb(92,116,160)));-webkit-background-origin: padding-box;-webkit-background-clip: content-box;}
+	
+	
+	
+	#ki34 {left:4px;
+	background:url('images/pin.png') 0px 0px no-repeat;
+	width:25px;height:24px;position:relative;top:4px;vertical-align:middle;float:left;
+	}
+	#b161{
+	
+	
+	background:url('images/pin_over.png') 0px 0px no-repeat;
+	opacity:0;
+		-webkit-transition: opacity 300ms ease-out;
+
+	width: 25px;height:24px;}	
+	#b161:hover{
+	
+	opacity:1;
+	}	
+
+	
+	#ki34.pressed {
+	
+		background: url('images/pin_selected.png')  no-repeat;
+		width:25px;height:24px;
+	}
+	
+	
+	
+
+
+
+	#fsdg2z {display:inline-block;width:16px;height:16px;position:relative;top:4px;vertical-align:middle;background: url('ie.png') 0px 0px no-repeat;}#fsdg2z:hover{/*-webkit-box-shadow: 0px 0px 10px blue;*/}
+	
+	
+	
+	#olt2{
+	
+	float:right;width: 25px;height:24px;position:relative;
+	right:8px;top:4px;
+	
+	background:url('images/close_button.png') 0px 0px no-repeat;
+	
+	
+	}
+	
+	
+
+	#cbr45f{
+	
+	
+		background:url('images/close_button_over.png') 0px 0px no-repeat;
+		opacity:0;
+		-webkit-transition: opacity 300ms ease-out;
+	
+		width: 25px;height:24px;
+	}	
+	#cbr45f:hover{
+	
+	opacity:1;
+	}		
+
+
+
+	#lp123 {vertical-align:middle;display:inline-block;font-family:"verdana";top:3px;
+	font-size:12px;
+	height:23px;
+	border:1px solid #39465d;
+	padding-left:3px;
+	color:393d44;
+	
+
+		position:relative;width:60%;}
+	</style>
+<script>
+	var history=[]
+	var id="ie"+new Date().getTime()+Math.floor(Math.random()*1000)
+	function resetSize(){
+		var ie_container =  document.querySelector("#ie_container");
+		var bodyHeight = dfgas.innerHeight;	
+		ie_container.style.height = bodyHeight - ie_container.offsetTop + "px";
+	};
+	/**/
+	var history=[]
+	var currentURL=""
+	var olymp=true
+	
+	function jumped(e){
+		olymp=true	
+		dfgas.removeEventListener('hashchange',jumped,false)		
+	}
+	
+	function usna(){
+		if (olymp){
+			dfgas.clearInterval(avent)
+			dfgas.clearTimeout(mdisp)
+			//history.pop()
+			currentURL=dfgas.location.hash.substring(1)
+			document.querySelector('#lp123').value=currentURL
+			document.querySelector('#iasde').SetURL(id,currentURL)
+			mdisp=setTimeout(starts,1000)
+		}else{
+			;
+		}
+	}
+
+	var mdisp
+	var avent;
+	function starts(){
+		avent=setInterval(function(){
+			currentURL=document.querySelector('#iasde').GetCurUrl(id)
+			//console.log(currentURL.substring(7,52))
+			if (encodeURIComponent(dfgas.location.hash) != encodeURIComponent('#'+currentURL)){
+				document.querySelector('#lp123').value=currentURL
+				//history.push(currentURL)
+				dfgas.addEventListener('hashchange',jumped,false)
+				olymp=false;
+				dfgas.location=chrome.extension.getURL('ie.html')+'#'+currentURL
+				document.title=currentURL
+			}
+		},2000)
+	}
+
+	function g4fs(){
+		var d2=document.querySelector('#d2')
+		var oi32v=document.querySelector('#oi32v')
+		oi32v.style.opacity="0px"
+		oi32v.style.top="-30px"
+		setTimeout(function(){
+			d2.style.top="-17px"
+			var ie=document.querySelector('#iasde')
+			ie.style.top="-17px"
+		},300)	
+	}
+	var pinned=false
+	window.addEventListener('resize',resetSize,true);
+	window.addEventListener('DOMContentLoaded',function(){
+		if (chrome.extension == null){ // chrome bug after chrome.tab.update(url:extFile)
+			location.reload(true)
+			return;
+		}
+		dfgas.addEventListener('hashchange',usna,true)
+		var ie = document.createElement("embed");
+		ie.id="iasde"
+		ie.setAttribute('FID',id)
+		ie.name="IE TAB";
+		ie.type="application/ietab"
+		ie.align="center"
+		ie.style.cssText="position:relative;width:100%;height:100%"
+		
+		var url=decodeURIComponent(document.location.hash.substring(1));
+		ie.setAttribute('url',url)
+		document.querySelector('#ie_container').appendChild(ie)
+		var y52='click'
+		document.querySelector('#a12').addEventListener(y52,function(e){
+			location.reload(true)
+		})
+		var f23sdl=location;
+		var ki34=document.querySelector('#ki34')
+		ki34.addEventListener(y52,function(e){
+			ki34.className=pinned ? "" : "pressed"
+			pinned=!pinned
+		},true)
+		//document.title = "Internet Explorer"
+		var d2=document.querySelector('#d2');
+		d2.addEventListener(y52,function(e){
+			oi32v.style.top="0px"
+			setTimeout(function(){
+				d2.style.top="0px"
+				var ie=document.querySelector('#iasde')
+				ie.style.top="0px"
+			},100)
+		},false)
+		var fcads='focus'
+		var oi32v=document.querySelector('#oi32v');
+		var sd2gf=document.querySelector('#lp123');
+		var tru=document.querySelector('#tru');
+		tru.addEventListener(y52,function(e){
+			e.stopPropagation()
+			g4fs()
+		},true)		
+		var fg='dblclick'
+		oi32v.addEventListener(y52,function(e){
+			e.stopPropagation()
+		},false)
+		var gfa13v='keyup'
+		oi32v.addEventListener(fg,function(e){
+			g4fs()
+		},false)
+		sd2gf.addEventListener(fcads,function(e){
+			setTimeout(function(){sd2gf.select()},50)			
+		})
+		sd2gf.addEventListener(gfa13v,function(e){
+			if (e.keyCode == 13){
+				dfgas.location=chrome.extension.getURL('ie.html')+'#'+sd2gf.value
+				if (!pinned)
+					setTimeout(g4fs,500)
+			}
+		})
+
+		var currentURL=decodeURIComponent(f23sdl.hash.substring(1))
+		sd2gf.value=currentURL
+		document.title=currentURL
+		resetSize();
+		starts()
+
+
+
+      /*  document.querySelector('#a12').addEventListener("mouseover", function(e) {
+			document.getElementById("a134"
+        }, false);
+
+        document.querySelector('#a12').addEventListener("mouseout", function(e) {
+					document.getElementById("a134"
+	
+        }, false);*/
+
+
+	},true)
+	var dfgas=window
+	function _close(){
+		chrome.tabs.getSelected(null,function(tab){
+			chrome.tabs.remove(tab.id)
+		})
+	}
+	function fg41f(){
+		var url=chrome.extension.getURL('options.html')
+		chrome.tabs.getAllInWindow(null,function(tabs){
+			for (var i=0;i<tabs.length;i++){
+				if (tabs[i].url == url){
+					chrome.tabs.update(tabs[i].id, {selected:true})
+					dfgas.close()
+					return;
+				}
+			}
+			chrome.tabs.create({selected:true,url:url})
+			dfgas.close()
+		})
+	}	
+</script>
+</head>
+<body style="margin:0px;padding:0px">
+	<div id="d2">
+	<div id="z52">
+		<div id="dbd4"></div>
+	</div>
+	<center id="oi32v">
+		<div id="fd31f">
+			<div id="ki34" title="Pin the address bar">
+				<div id="b161" ></div>
+			</div>
+			<div id="fg41f" onclick="fg41f()" title="Settings">
+				<div id="cvsdf" ></div>
+			</div>								
+			<div style="margin-left:20px;display:inline">
+				<div id="fsdg2z"></div>
+				<input id="lp123" spellcheck="false" type="text">
+				<div id="a12" title="Reload this page">
+					<div id="a134" ></div>
+				</div>
+			</div>
+			<div id="olt2" onclick="_close()" title="Close">
+				<div id="cbr45f"></div>	
+			</div>			
+			<div id="tru" title="Minimize Bar">
+				<div id="asdvbqa"></div>
+			</div>
+		</div>
+	</center>
+	</div>
+	<div id="ie_container" style="position:relative;width:100%;height:100%;margin:0px;padding:0px;"></div>
+</body>
+</html>

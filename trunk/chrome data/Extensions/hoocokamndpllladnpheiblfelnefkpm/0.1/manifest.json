@@ -1,0 +1,18 @@
+{
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "img/icon.png",
+      "default_title": "Hot Bookmarks!",
+      "popup": "popup.html"
+   },
+   "description": "\u667A\u80FD\u4E66\u7B7E\u3002\u81EA\u52A8\u6536\u96C6\u4F60\u7ECF\u5E38\u8BBF\u95EE\u7684\u4E66\u7B7E\uFF0C\u5E76\u653E\u7F6E\u5728\u5DE5\u5177\u680F\u4E0B\u62C9\u83DC\u5355\u91CC",
+   "icons": {
+      "128": "img/logo.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDyf8zbs9/dCln7tm/ctlARvth6bavxiXNKWColO+h9Dgk4JBeK9Ico1SQ76AlffhK36pgR6j1gb+aonEcCAzpWKaFfx7UUmf05vpq4vaxC80IkHf5DID4XxDBlUcVGhApU2c3Ylp/v0Zlz6O0NPcf+DTMIXX3Axw8QrXbLzEgzwIDAQAB",
+   "name": "SmartBookmarks",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "bookmarks" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "0.1"
+}

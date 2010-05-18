@@ -1,0 +1,1217 @@
+{
+   "0_9": {
+      "message": "0-9"
+   },
+   "1Password": {
+      "message": "1Password"
+   },
+   "1__Insert_your_YubiKey_in_the_USB_port_with_the_USB_contact_facing_upward": {
+      "message": "1. W\u0142o\u017C YubiKey do gniazda USB (stykiem skierowanym do g\u00F3ry)"
+   },
+   "1__Run_the_LastPass_Sesame_application_to_generate_a_one_time_password": {
+      "message": "1. Uruchom aplikacj\u0119 LastPass Sesame w celu wygenerowania has\u0142a jednorazowego"
+   },
+   "2__Paste_the_one_time_password_in_the_input_box_below_and_click__Authenticate_": {
+      "message": "2. Wklej has\u0142o jednorazowe w poni\u017Csze pole i kliknij przycisk 'Uwierzytelnij'"
+   },
+   "2__Wait_until_your_YubiKey_touch_button_shines_with_a_steady_light": {
+      "message": "2. Zaczekaj, a\u017C przycisk YubiKey zacznie \u015Bwieci\u0107 \u015Bwiat\u0142em ci\u0105g\u0142ym"
+   },
+   "3__Hold_your_fingertip_on_the_touch_button_for_2_seconds": {
+      "message": "3. Przytrzymaj przycisk YubiKey przez 2 sekundy"
+   },
+   "ACTION": {
+      "message": "AKCJA"
+   },
+   "A_Zupper": {
+      "message": "A-Z"
+   },
+   "A_required_update_is_available_for_LastPass__Please_press_OK_to_begin_download_and_installation_": {
+      "message": "Wymagana aktualizacja dla LastPass jest dost\u0119pna. Prosz\u0119 nacisn\u0105\u0107 przycisk OK, aby rozpocz\u0105\u0107 pobieranie i instalacj\u0119."
+   },
+   "A_retry_file_has_been_found__This_likely_means_that_not_all_of_your_site_changes_have_been_saved__Would_you_like_to_delete_this_file_and_potentially_lose_some_changes_": {
+      "message": "Znaleziono plik ponawiania. Najcz\u0119\u015Bciej oznacza to, \u017Ce nie wszystkie zmiany twoich stron zosta\u0142y zapisane. Czy chcesz usun\u0105\u0107 ten plik i prawdopodobnie utraci\u0107 cz\u0119\u015B\u0107 zmian?"
+   },
+   "A_server_error_occurred_while_processing_your_request_": {
+      "message": "Wyst\u0105pi\u0142 b\u0142\u0105d serwera w trakcie przetwarzania twojego \u017C\u0105dania."
+   },
+   "About___": {
+      "message": "O LastPass..."
+   },
+   "Accept": {
+      "message": "Akceptuj"
+   },
+   "Account_Settings": {
+      "message": "Ustawienia konta"
+   },
+   "Actionproper": {
+      "message": "Czynno\u015B\u0107"
+   },
+   "Add": {
+      "message": "Dodaj"
+   },
+   "Add_Credit_Card": {
+      "message": "Dodaj kart\u0119 kredytow\u0105"
+   },
+   "Add_Field": {
+      "message": "Dodaj pole"
+   },
+   "Add_Identity": {
+      "message": "Dodaj to\u017Csamo\u015B\u0107"
+   },
+   "Add_New_Site": {
+      "message": "Dodaj now\u0105 stron\u0119"
+   },
+   "Add_Profile": {
+      "message": "Dodaj profil"
+   },
+   "Add_Secure_Note": {
+      "message": "Dodaj bezpieczn\u0105 notatk\u0119"
+   },
+   "Add_Site": {
+      "message": "Dodaj stron\u0119"
+   },
+   "Address_1": {
+      "message": "Adres 1"
+   },
+   "Address_2": {
+      "message": "Adres 2"
+   },
+   "Address_3": {
+      "message": "Adres 3"
+   },
+   "Advanced": {
+      "message": "Zaawansowane"
+   },
+   "All": {
+      "message": "Wszystkie"
+   },
+   "Allow_LastPass_to_find_insecure_data_on_your_computer_": {
+      "message": "Zezwoli\u0107 LastPass, \u017Ceby znalaz\u0142 niezabezpieczone dane na tym komputerze?"
+   },
+   "Alt": {
+      "message": "Alt"
+   },
+   "Always_Choose_Profile_and_Credit_Card": {
+      "message": "Zawsze wybieraj profil i kart\u0119 kredytow\u0105"
+   },
+   "An_Update_is_Available__Would_you_like_to_install_": {
+      "message": "Aktualizacja jest dost\u0119pna. Czy chcesz j\u0105 zainstalowa\u0107?"
+   },
+   "An_error_has_been_encountered_while_loading_your_sites__Please_relogin_": {
+      "message": "Wyst\u0105pi\u0142 b\u0142\u0105d w trakcie wczytywania stron. Zaloguj si\u0119 ponownie."
+   },
+   "An_error_occurred": {
+      "message": "Wyst\u0105pi\u0142 b\u0142\u0105d"
+   },
+   "An_error_occurred_while_importing_your_Google_Chrome_passwords_": {
+      "message": "Wyst\u0105pi\u0142 b\u0142\u0105d podczas importowania hase\u0142 w Google Chrome."
+   },
+   "Appearance": {
+      "message": "Wygl\u0105d"
+   },
+   "April": {
+      "message": "Kwiecie\u0144"
+   },
+   "Are_you_sure_you_want_to_have_LastPass_remember_your_password___This_will_significantly_decrease_the_security_of_your_LastPass_account_": {
+      "message": "Czy na pewno chcesz, aby LastPass zapami\u0119ta\u0142 has\u0142o? To znacznie zmniejszy bezpiecze\u0144stwo twojego konta LastPass!"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_field_": {
+      "message": "Czy na pewno chcesz usun\u0105\u0107 to pole?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_form_fill_profile_": {
+      "message": "Czy na pewno chcesz usun\u0105\u0107 ten profil?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_generated_password_": {
+      "message": "Czy na pewno chcesz usun\u0105\u0107 to wygenerowane has\u0142o?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_group_": {
+      "message": "Czy na pewno chcesz usun\u0105\u0107 t\u0119 grup\u0119?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_never_URL_": {
+      "message": "Czy na pewno chcesz usun\u0105\u0107 ten URL?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_secure_note_": {
+      "message": "Czy na pewno chcesz usun\u0105\u0107 t\u0119 bezpieczn\u0105 notatk\u0119?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_site_": {
+      "message": "Czy na pewno chcesz usun\u0105\u0107 t\u0119 stron\u0119?"
+   },
+   "August": {
+      "message": "Sierpie\u0144"
+   },
+   "Authenticate": {
+      "message": "Uwierzytelnij"
+   },
+   "Authentication_Failed_": {
+      "message": "Uwierzytelnianie nie powiod\u0142o si\u0119"
+   },
+   "AutoFill": {
+      "message": "Wype\u0142nij automatycznie"
+   },
+   "AutoLogin": {
+      "message": "Loguj automatycznie"
+   },
+   "Automatically_Fill_Login_Information": {
+      "message": "Wype\u0142niaj loginy automatycznie"
+   },
+   "Automatically_Logoff_after_idle__mins_": {
+      "message": "Automatyczne wylogowywanie gdy brak aktywno\u015Bci (min.)"
+   },
+   "Automatically_Logoff_when_all_browsers_are_closed_and_Chrome_has_been_closed_for__mins_": {
+      "message": "Wyloguj automatycznie gdy wszystkie przegl\u0105darki zosta\u0142y zamkni\u0119te a Chrome zosta\u0142 zamkni\u0119ty (minut) temu"
+   },
+   "Automatically_login_to_sites_if_time_since_last_login____seconds_": {
+      "message": "Loguj automatycznie, gdy czas od ostatniego logowania \u003E (sek.)"
+   },
+   "Avoid_Ambiguous_Characters": {
+      "message": "Unikaj niejednoznacznych znak\u00F3w"
+   },
+   "Binary_Component_": {
+      "message": "Komponent binarny:"
+   },
+   "Birthday": {
+      "message": "Urodziny"
+   },
+   "Blacklist": {
+      "message": "Twoje konto zosta\u0142o zawieszone (na 5 minut) z powodu zbyt wielu pr\u00F3b b\u0142\u0119dnego logowania."
+   },
+   "Blog": {
+      "message": "Blog"
+   },
+   "Browse_the_web_as_you_normally_would_and_LastPass_will_automatically_remember_passwords_as_you_enter_them_": {
+      "message": "Przegl\u0105daj sie\u0107 jak dotychczas, a LastPass automatycznie zapami\u0119ta has\u0142a po ich wprowadzeniu."
+   },
+   "Built_": {
+      "message": "Built:"
+   },
+   "But_I_m_a_forgetful_person___what_should_I_do_if_I_forget_my_password_": {
+      "message": "Ale ja jestem zapominalski... Co powinienem zrobi\u0107, je\u015Bli zapomn\u0119 swojego has\u0142a?"
+   },
+   "Can_t_find_hidden_LastPass_window": {
+      "message": "Nie mog\u0119 znale\u017A\u0107 ukrytego okna LastPass"
+   },
+   "Cancel": {
+      "message": "Anuluj"
+   },
+   "Change": {
+      "message": "Zmie\u0144"
+   },
+   "Change_Password": {
+      "message": "Zmie\u0144 has\u0142o"
+   },
+   "Check_For_Updates": {
+      "message": "Sprawd\u017A aktualizacje"
+   },
+   "Checkbox": {
+      "message": "Checkbox"
+   },
+   "Checking_For_Updates___": {
+      "message": "Sprawdzanie dost\u0119pno\u015Bci aktualizacji..."
+   },
+   "Choose_Profile_and_Credit_Card": {
+      "message": "Wybierz profil i kart\u0119 kredytow\u0105"
+   },
+   "City___Town": {
+      "message": "Miejscowo\u015B\u0107"
+   },
+   "Clear": {
+      "message": "Wyczy\u015B\u0107"
+   },
+   "Clear_Clipboard_after_use__seconds_": {
+      "message": "Wyczy\u015B\u0107 schowek po u\u017Cyciu (sekundy)"
+   },
+   "Clear_Forms": {
+      "message": "Wyczy\u015B\u0107 formularze"
+   },
+   "Clear_Local_Cache": {
+      "message": "Wyczy\u015B\u0107 lokaln\u0105 pami\u0119\u0107 podr\u0119czn\u0105"
+   },
+   "Click_Continue_to_start_using_LastPass_": {
+      "message": "Kliknij 'Kontynuuj' aby rozpocz\u0105\u0107 u\u017Cywanie LastPass."
+   },
+   "Click_here_to_launch_account_settings": {
+      "message": "Kliknij tutaj, aby zmieni\u0107 ustawienia konta w przegl\u0105darce"
+   },
+   "Click_here_to_launch_feedback": {
+      "message": "Kliknij tutaj, aby rozpocz\u0105\u0107 wysy\u0142anie opinii"
+   },
+   "Click_here_to_watch_a_video_on_basic_usage_": {
+      "message": "Kliknij tutaj, aby obejrze\u0107 film o podstawowym u\u017Cytkowaniu."
+   },
+   "Close": {
+      "message": "Zamknij"
+   },
+   "Collapse_All": {
+      "message": "Zwi\u0144 wszystko"
+   },
+   "Company": {
+      "message": "Firma"
+   },
+   "Configure_Form_Fill": {
+      "message": "Skonfiguruj wype\u0142nianie formularzy"
+   },
+   "Confirm": {
+      "message": "Zatwierd\u017A"
+   },
+   "Confirm_Password": {
+      "message": "Potwierd\u017A has\u0142o"
+   },
+   "Congratulations": {
+      "message": "Gratulacje"
+   },
+   "Continue": {
+      "message": "Kontynuuj"
+   },
+   "Copy": {
+      "message": "Kopiuj"
+   },
+   "Copy_Password": {
+      "message": "Skopiuj has\u0142o"
+   },
+   "Copy_Username": {
+      "message": "Skopiuj nazw\u0119 u\u017Cytkownika"
+   },
+   "Copyright_2008_LastPass__All_Rights_Reserved__Portions_of_this_software_were_licensed_from_third_parties_as_described_at_": {
+      "message": "Copyright 2008 LastPass. Wszystkie prawa zastrze\u017Cone.\nCz\u0119\u015B\u0107 tego oprogramowania jest licencjonowana przez osoby trzecie, jak opisano w:"
+   },
+   "Country": {
+      "message": "Kraj"
+   },
+   "County": {
+      "message": "Powiat"
+   },
+   "Create_Account": {
+      "message": "Za\u0142\u00F3\u017C konto"
+   },
+   "Create_Sub_Group": {
+      "message": "Dodaj podgrup\u0119"
+   },
+   "Create_an_Account": {
+      "message": "Za\u0142\u00F3\u017C konto"
+   },
+   "Creating_Account___": {
+      "message": "Tworzenie konta..."
+   },
+   "Ctrl": {
+      "message": "Ctrl"
+   },
+   "December": {
+      "message": "Grudzie\u0144"
+   },
+   "Default_Form_Fill_Profile": {
+      "message": "Domy\u015Blny profil wype\u0142niania formularzy"
+   },
+   "Delete": {
+      "message": "Usu\u0144"
+   },
+   "Delete_Group": {
+      "message": "Usu\u0144 grup\u0119"
+   },
+   "Disable_Insecure_Chrome_Password_Manager": {
+      "message": "Wy\u0142\u0105cz wbudowany mened\u017Cer hase\u0142"
+   },
+   "Disable_Multifactor_Authentication": {
+      "message": "Wy\u0142\u0105cz uwierzytelnianie wieloczynnikowe"
+   },
+   "Disable_Single_factor_Authentication": {
+      "message": "Wy\u0142\u0105cz uwierzytelnianie jednoczynnikowe"
+   },
+   "Do_not_overwrite_fields_that_are_already_filled": {
+      "message": "Nie nadpisuj p\u00F3l ju\u017C wype\u0142nionych"
+   },
+   "Do_not_re_prompt_for_": {
+      "message": "Nie pytaj ponownie o "
+   },
+   "Do_you_really_want_to_quit___You_cannot_use_LastPass_without_creating_an_account_": {
+      "message": "Czy na pewno chcesz wyj\u015B\u0107?  Nie mo\u017Cesz korzysta\u0107 z LastPass bez utworzenia konta."
+   },
+   "Down": {
+      "message": "W d\u00F3\u0142"
+   },
+   "Dr": {
+      "message": "Dr"
+   },
+   "Dutch": {
+      "message": "Holenderski"
+   },
+   "Edit": {
+      "message": "Edytuj"
+   },
+   "Edit_Form_Fields": {
+      "message": "Edytuj pola formularza"
+   },
+   "Email": {
+      "message": "E-mail"
+   },
+   "Email_already_in_use__have_you_forgotten_your_password_": {
+      "message": "Adres e-mail jest ju\u017C u\u017Cywany, czy zapomnia\u0142e\u015B swoje has\u0142o?"
+   },
+   "End": {
+      "message": "Koniec"
+   },
+   "English": {
+      "message": "Angielski"
+   },
+   "ErrorGetAcctsMsg": {
+      "message": "Wyst\u0105pi\u0142 b\u0142\u0105d w trakcie pobierania twoich stron LastPass. Spr\u00F3buj zalogowa\u0107 si\u0119 ponownie w celu pobrania stron."
+   },
+   "ErrorLoginMsg": {
+      "message": "Wyst\u0105pi\u0142 b\u0142\u0105d w trakcie logowania do LastPass. Sprawd\u017A swoje po\u0142\u0105czenie internetowe."
+   },
+   "ErrorSendingMsg": {
+      "message": "Wyst\u0105pi\u0142 b\u0142\u0105d w trakcie po\u0142\u0105czenia z serwerem. Sprawd\u017A swoje po\u0142\u0105czenie internetowe."
+   },
+   "ErrorSessionMsg": {
+      "message": "Wygl\u0105da na to, \u017Ce twoja sesja wygas\u0142a. Prosz\u0119 zalogowa\u0107 si\u0119 ponownie."
+   },
+   "ExistingUsersOTPPrompt": {
+      "message": "LastPass mo\u017Ce od teraz lokalnie przechowywa\u0107 has\u0142o jednorazowe, kt\u00F3re mo\u017Cesz wykorzysta\u0107 w celu odzyskiwania konta, je\u015Bli zapomnisz swojego has\u0142a g\u0142\u00F3wnego. Has\u0142o jednorazowe pozostanie wy\u0142\u0105czone, do czasu aktywacji na serwerze.\n\nCzy chcesz uruchomi\u0107 proces odzyskiwania konta?"
+   },
+   "Expand_All": {
+      "message": "Rozwi\u0144 wszystko"
+   },
+   "Export_To": {
+      "message": "Eksportuj do..."
+   },
+   "Favorite": {
+      "message": "Ulubione"
+   },
+   "February": {
+      "message": "Luty"
+   },
+   "Feedback": {
+      "message": "Wsparcie"
+   },
+   "Female": {
+      "message": "Kobieta"
+   },
+   "Fields_": {
+      "message": "Pola:"
+   },
+   "Fill_Current": {
+      "message": "Wype\u0142nij bie\u017C\u0105cy"
+   },
+   "Fill_Form": {
+      "message": "Wype\u0142nij formularz"
+   },
+   "Fill_Forms": {
+      "message": "Wype\u0142nij formularze"
+   },
+   "Fill_In_Default_Form_Fill_Profile": {
+      "message": "Wype\u0142nij formularz z profilu domy\u015Blnego"
+   },
+   "Fill_In_Next_Login__When_Multiple_": {
+      "message": "Wype\u0142nij kolejne logowanie (gdy wiele)"
+   },
+   "Fill_In_Previous_Login__When_Multiple_": {
+      "message": "Wype\u0142nij poprzednie logowanie (gdy wiele)"
+   },
+   "FillableFormDetected": {
+      "message": "Wykryto formularz na tej stronie."
+   },
+   "Find_a_site": {
+      "message": "Wyszukaj stron\u0119"
+   },
+   "Firefox_Password_Manager": {
+      "message": "Mened\u017Cer hase\u0142 Firefoksa"
+   },
+   "For_each_coordinate_listed_below__find_the_value_on_your_grid_and_enter_the_value_": {
+      "message": "Musisz znale\u017A\u0107 warto\u015B\u0107 na siatce dla ka\u017Cdej wsp\u00F3\u0142rz\u0119dnej z wymienionych poni\u017Cej i j\u0105 wprowadzi\u0107."
+   },
+   "Form_Fill": {
+      "message": "Wype\u0142nianie formularza"
+   },
+   "Form_Name_": {
+      "message": "Nazwa formularza:"
+   },
+   "Forums": {
+      "message": "Forum"
+   },
+   "Gender": {
+      "message": "P\u0142e\u0107"
+   },
+   "General": {
+      "message": "G\u0142\u00F3wne"
+   },
+   "Generate": {
+      "message": "Generuj"
+   },
+   "GeneratePassword": {
+      "message": "Je\u015Bli tworzysz konto albo zmieniasz has\u0142o, kliknij Generuj, aby wygenerowa\u0107 unikalne, bezpieczne has\u0142o."
+   },
+   "Generate_Secure_Password": {
+      "message": "Generuj bezpieczne has\u0142o"
+   },
+   "Generated_Password_for": {
+      "message": "Wygenerowane has\u0142o dla"
+   },
+   "Generic_CSV_File": {
+      "message": "Standardowy plik CSV"
+   },
+   "Go_Premium_": {
+      "message": "Subskrybuj Premium!"
+   },
+   "Go_to_URL": {
+      "message": "Id\u017A do adresu URL"
+   },
+   "Google_Chrome": {
+      "message": "Google Chrome"
+   },
+   "Google_Chrome_Password_Manager": {
+      "message": "Menad\u017Aer hase\u0142 Google Chrome"
+   },
+   "Group_": {
+      "message": "Grupa:"
+   },
+   "Help_Translate": {
+      "message": "Pom\u00F3\u017C w t\u0142umaczeniu"
+   },
+   "Help___": {
+      "message": "Pomoc..."
+   },
+   "Highlight_input_boxes": {
+      "message": "Zaznacz pola przyjmuj\u0105ce dane (input)"
+   },
+   "History": {
+      "message": "Historia"
+   },
+   "Home": {
+      "message": "Strona g\u0142\u00F3wna"
+   },
+   "HotKeys": {
+      "message": "Skr\u00F3ty klawiszowe"
+   },
+   "IMPORT_": {
+      "message": "Zaimportowa\u0107?"
+   },
+   "IT_IS_CRITICAL_THAT_YOU_NEVER_FORGET_YOUR_NEW_LASTPASS_PASSWORD_": {
+      "message": "TO BARDZO WA\u017BNE, ABY\u015A NIGDY NIE ZAPOMNIA\u0141 SWOJEGO NOWEGO HAS\u0141A LASTPASS."
+   },
+   "I_forgot_my_password__Help_": {
+      "message": "Zapomnia\u0142em has\u0142a, pomocy"
+   },
+   "I_have_read_and_agree_with_the": {
+      "message": "Przeczyta\u0142em i zgadzam si\u0119 z"
+   },
+   "I_understand_that_my_encrypted_data_will_be_sent_to_LastPass": {
+      "message": "Rozumiem, \u017Ce moje szyfrowane dane b\u0119d\u0105 wysy\u0142ane do LastPass"
+   },
+   "Identities": {
+      "message": "To\u017Csamo\u015Bci"
+   },
+   "Identity": {
+      "message": "To\u017Csamo\u015B\u0107"
+   },
+   "If_you_already_have_a_LastPass_account_you_can_close_this_window_and_login_": {
+      "message": "Je\u015Bli masz ju\u017C konto w LastPass, mo\u017Cesz zamkn\u0105\u0107 to okno i zalogowa\u0107 si\u0119."
+   },
+   "If_you_do_end_up_forgetting_your_LastPass_master_password_": {
+      "message": "Je\u015Bli jednak zapomnisz swojego has\u0142a,"
+   },
+   "If_you_lost_your_Sesame_device__click_here_to_disable_Sesame_authentication": {
+      "message": "Je\u015Bli zgubi\u0142e\u015B urz\u0105dzenie Sesame, kliknij tutaj, aby wy\u0142\u0105czy\u0107 uwierzytelnienie Sesame"
+   },
+   "If_you_lost_your_YubiKey_device__click_here_to_disable_YubiKey_authentication": {
+      "message": "Je\u015Bli zgubi\u0142e\u015B urz\u0105dzenie YubiKey, kliknij tutaj, aby zablokowa\u0107 uwierzytelnianie YubiKey"
+   },
+   "If_you_lost_your_grid__click_here_to_disable_grid_authentication": {
+      "message": "Je\u015Bli zgubi\u0142e\u015B siatk\u0119, kliknij tutaj, aby wy\u0142\u0105czy\u0107 uwierzytelnianie siatki"
+   },
+   "Import": {
+      "message": "Importuj"
+   },
+   "Import_From": {
+      "message": "Importuj z..."
+   },
+   "Import_Your_Data": {
+      "message": "Importuj swoje dane"
+   },
+   "Importing_your_data_to_your_LastPass_vault_will_secure_it_and_protect_you_against_identity_theft__All_imported_data_remains_COMPLETELY_confidential__the_only_person_who_can_view_YOUR_data_is_YOU_": {
+      "message": "Importowanie danych do twojego sejfu LastPass zabezpieczy je\n  i uchroni ci\u0119 przed kradzie\u017C\u0105 to\u017Csamo\u015Bci. Wszystkie importowane dane pozostan\u0105 CA\u0141KOWICIE poufne: jedyn\u0105 osob\u0105, kt\u00F3ra mo\u017Ce wy\u015Bwietli\u0107 TWOJE dane jeste\u015B TY."
+   },
+   "Install_the_binary_version_of_LastPass_for_Chrome_to_enable_automatic_logoff_after_idle": {
+      "message": "Zainstaluj wersj\u0119 binarn\u0105 LastPass dla Chrome aby umo\u017Cliwi\u0107 automatyczne wylogowanie po okresie bezczynno\u015Bci"
+   },
+   "Install_the_binary_version_of_LastPass_for_Chrome_to_enable_importing_passwords_from_Google_Chrome_password_manager": {
+      "message": "Zainstaluj wersj\u0119 binarn\u0105 LastPass dla Chrome aby umo\u017Cliwi\u0107  import hase\u0142 z mened\u017Cera hase\u0142 Google Chrome"
+   },
+   "Install_the_binary_version_of_LastPass_for_Chrome_to_enable_sharing_login_state_between_other_browsers": {
+      "message": "Zainstaluj wersj\u0119 binarn\u0105 LastPass dla Chrome aby umo\u017Cliwi\u0107 dzieleniem si\u0119 stanem logowania mi\u0119dzy innymi przegl\u0105darkami"
+   },
+   "Instructions": {
+      "message": "Instrukcje"
+   },
+   "Invalid_Password_": {
+      "message": "B\u0142\u0119dne khas\u0142o"
+   },
+   "Invalid_email_address__try_again": {
+      "message": "B\u0142\u0119dny adres e-mail, spr\u00F3buj ponownie"
+   },
+   "January": {
+      "message": "Stycze\u0144"
+   },
+   "July": {
+      "message": "Lipiec"
+   },
+   "June": {
+      "message": "Czerwiec"
+   },
+   "KeePass": {
+      "message": "KeePass"
+   },
+   "Keep_a_history_of_my_logins_and_form_fills": {
+      "message": "Przechowuj histori\u0119 moich logowa\u0144 i wype\u0142nie\u0144 formularzy"
+   },
+   "Language": {
+      "message": "J\u0119zyk"
+   },
+   "LastPass": {
+      "message": "LastPass"
+   },
+   "LastPass_CSV_File": {
+      "message": "Plik CSV"
+   },
+   "LastPass_Chrome_Toolbar": {
+      "message": "Pasek narz\u0119dzi LastPass Chrome"
+   },
+   "LastPass_Encrypted_File": {
+      "message": "Zaszyfrowany plik LastPass"
+   },
+   "LastPass_Grid_Multifactor_Authentication": {
+      "message": "Uwierzytelnienie wieloczynnikowe z siatk\u0105 LastPass"
+   },
+   "LastPass_can_automatically_fill_web_page_forms_with_a_single_click___Using_automatic__Form_Filling__will_not_only_save_you_time__but_will_also_enhance_your_security_when_shopping_online_": {
+      "message": "LastPass mo\u017Ce automatycznie wype\u0142nia\u0107 formularze na stronach po jednym klikni\u0119ciu. U\u017Cywanie automatycznego wype\u0142niania formularzy zaoszcz\u0119dzi wiele czasu, oraz poprawi bezpiecze\u0144stwo zakup\u00F3w online."
+   },
+   "LastPass_cannot_login_until_cookies_are_allowed_from_lastpass_com": {
+      "message": "LastPass nie zaloguje si\u0119 dop\u00F3ki nie zezwolisz na ciasteczka od lastpass.com"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_like_to_continue_": {
+      "message": "LastPass wykry\u0142 niezabezpieczony formularz logowania.\n\nKontynuowa\u0107?"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_still_like_LastPass_to_fill_the_form_": {
+      "message": "LastPass wykry\u0142 formularz logowania, kt\u00F3ry jest niezabezpieczony.\n\nCzy nadal chcesz wype\u0142ni\u0107 formularz?"
+   },
+   "LastPass_detected_a_password_change_for": {
+      "message": "Wykryto zmian\u0119 has\u0142a dla"
+   },
+   "LastPass_detected_a_password_change_for_domain_": {
+      "message": "Wykryto zmian\u0119 has\u0142a dla domeny:"
+   },
+   "LastPass_detected_a_password_change_for_user_": {
+      "message": "LastPass wykry\u0142 zmian\u0119 has\u0142a dla u\u017Cytkownika:"
+   },
+   "LastPass_has_filled_your_login_information_into_the_form_on_this_page_": {
+      "message": "LastPass wype\u0142ni\u0142 dane logowania na tej stronie."
+   },
+   "LastPass_is_fully_installed___When_you_install_LastPass_on_other_computers_you_will_not_have_to_go_through_this_process_again__you_ll_simply_be_able_to_login____Do_not_share_your_Master_Password_with_anyone__including_LastPass_employees__we_ll_never_ask_for_it___LastPass_encrypts_your_sensitive_data_locally_so_even_LastPass_employees_do_not_have_access_to_it___You_can_get_help_by_clicking_on_the_LastPass_icon_and_going_to_Help_": {
+      "message": "LastPass jest w pe\u0142ni zainstalowany! Je\u015Bli zainstalujesz LastPass na innych komputerach, nie b\u0119dziesz musia\u0142 ponownie przechodzi\u0107 tego procesu - po prostu b\u0119dziesz m\u00F3g\u0142 si\u0119 zalogowa\u0107.   Nikomu nie udost\u0119pniaj swojego has\u0142a, nawet nam - nigdy ci\u0119 o nie nie poprosimy! LastPass szyfruje twoje poufne dane lokalnie, wi\u0119c nawet nasi pracownicy nie maj\u0105 do nich dost\u0119pu. Aby uzyska\u0107 pomoc kliknij ikon\u0119 LastPass, a nast\u0119pnie wybierz 'Pomoc...'."
+   },
+   "LastPass_is_the_last_password_you_ll_ever_have_to_remember___If_you_re_new_to_LastPass__we_ll_just_need_a_few_minutes_of_your_time_to_setup_your_account___You_ll_be_able_to_use_this_account_on_any_other_PC_you_use_to_always_keep_your_personal_data_in_sync___Hit_create_account_to_begin_": {
+      "message": "LastPass jest ostatnim has\u0142em, kt\u00F3re b\u0119dziesz musia\u0142 zapami\u0119ta\u0107. Je\u015Bli wcze\u015Bniej nie u\u017Cywa\u0142e\u015B LastPass, potrzebujesz tylko kilku minut na za\u0142o\u017Cenie konta. Po tej operacji b\u0119dziesz m\u00F3g\u0142 z niego korzysta\u0107 na dowolnym komputerze, co zapewni synchronizacj\u0119 danych. Aby rozpocz\u0105\u0107, kliknij 'Za\u0142\u00F3\u017C konto'."
+   },
+   "Left": {
+      "message": "W lewo"
+   },
+   "LoggedInOffline": {
+      "message": "LastPass nie by\u0142 w stanie po\u0142\u0105czy\u0107 si\u0119 z serwerem logowania, wi\u0119c zosta\u0142e\u015B prze\u0142\u0105czony w tryb offline.  Niekt\u00F3re funkcje mog\u0105 by\u0107 ograniczone."
+   },
+   "Login": {
+      "message": "Zaloguj"
+   },
+   "LoginError": {
+      "message": "B\u0142\u0105d logowania do LastPass. Spr\u00F3buj ponownie."
+   },
+   "Login_to_LastPass": {
+      "message": "Zaloguj si\u0119 do LastPass"
+   },
+   "Logoff": {
+      "message": "Wyloguj"
+   },
+   "Logoff_": {
+      "message": "Wyloguj:"
+   },
+   "MSI_PasswordKeeper": {
+      "message": "MSI PasswordKeeper"
+   },
+   "Male": {
+      "message": "M\u0119\u017Cczyzna"
+   },
+   "March": {
+      "message": "Marzec"
+   },
+   "Master_Password": {
+      "message": "Has\u0142o g\u0142\u00F3wne"
+   },
+   "May": {
+      "message": "Maj"
+   },
+   "Meta": {
+      "message": "Meta"
+   },
+   "Minimum_Digit_Count": {
+      "message": "Minimalna ilo\u015B\u0107 cyfr"
+   },
+   "More": {
+      "message": "Wi\u0119cej"
+   },
+   "Move_to_Group": {
+      "message": "Przenie\u015B do grupy"
+   },
+   "Mr": {
+      "message": "Pan"
+   },
+   "Mrs": {
+      "message": "Pani"
+   },
+   "Ms": {
+      "message": "Panna"
+   },
+   "MyPasswordSafe": {
+      "message": "MyPasswordSafe"
+   },
+   "My_LastPass_Vault": {
+      "message": "M\u00F3j sejf LastPass"
+   },
+   "NAME": {
+      "message": "NAZWA"
+   },
+   "Name_": {
+      "message": "Nazwa:"
+   },
+   "Nameproper": {
+      "message": "Nazwa"
+   },
+   "Never_Add_Site": {
+      "message": "Nigdy nie dodawaj strony"
+   },
+   "Never_AutoFill": {
+      "message": "Nigdy nie wype\u0142niaj automatycznie"
+   },
+   "Never_AutoLogin": {
+      "message": "Nigdy nie loguj automatycznie"
+   },
+   "Never_Fill_Forms": {
+      "message": "Nigdy nie wype\u0142niaj formularzy"
+   },
+   "Never_For_This_Domain": {
+      "message": "Nigdy dla tej domeny"
+   },
+   "Never_For_This_Page": {
+      "message": "Nigdy dla tej strony"
+   },
+   "Never_For_This_Site": {
+      "message": "Nigdy dla tej strony"
+   },
+   "Never_Generate_Password": {
+      "message": "Nigdy nie generuj hase\u0142"
+   },
+   "Never___": {
+      "message": "Nigdy..."
+   },
+   "New_Master_Password": {
+      "message": "Nowe has\u0142o g\u0142\u00F3wne"
+   },
+   "No": {
+      "message": "Nie"
+   },
+   "No_Thanks": {
+      "message": "Nie, dzi\u0119kuj\u0119"
+   },
+   "No_Updates_Are_Available": {
+      "message": "Brak dost\u0119pnych aktualizacji"
+   },
+   "No__I_do_not_want_LastPass_to_help_me_fill_forms_automatically": {
+      "message": "Nie, nie chc\u0119, aby LastPass pomaga\u0142 mi automatycznie wype\u0142nia\u0107 formularze"
+   },
+   "No__do_not_import_any_of_my_insecure_items": {
+      "message": "Nie importuj \u017Cadnej z niezabezpieczonych pozycji"
+   },
+   "None_Available": {
+      "message": "Brak dost\u0119pnych"
+   },
+   "Not_Now": {
+      "message": "Nie teraz"
+   },
+   "Notes": {
+      "message": "Notatki"
+   },
+   "Notes_": {
+      "message": "Uwagi:"
+   },
+   "Notifications": {
+      "message": "Powiadomienia"
+   },
+   "November": {
+      "message": "Listopad"
+   },
+   "OK": {
+      "message": "OK"
+   },
+   "October": {
+      "message": "Pa\u017Adziernik"
+   },
+   "Offer_to_Generate_Secure_Passwords": {
+      "message": "Pytaj czy generowa\u0107 bezpieczne has\u0142a"
+   },
+   "Old_Password": {
+      "message": "Stare has\u0142o"
+   },
+   "Open_All": {
+      "message": "Otw\u00F3rz wszystko"
+   },
+   "Open_Favorites": {
+      "message": "Otw\u00F3rz ulubione"
+   },
+   "Open_My_LastPass_Vault": {
+      "message": "Otw\u00F3rz m\u00F3j sejf LastPass"
+   },
+   "Open_New_Pages_in": {
+      "message": "Otwieraj nowe strony w"
+   },
+   "Open_login_dialog_when_start_browser": {
+      "message": "Otw\u00F3rz okno logowania podczas startu przegl\u0105darki"
+   },
+   "Other": {
+      "message": "Inne"
+   },
+   "Other_Sessions": {
+      "message": "Inne sesje"
+   },
+   "PASSWORDupper": {
+      "message": "HAS\u0141O"
+   },
+   "Page_Down": {
+      "message": "Page Down"
+   },
+   "Page_Up": {
+      "message": "Page Up"
+   },
+   "Passpack": {
+      "message": "Passpack"
+   },
+   "Password": {
+      "message": "Has\u0142o"
+   },
+   "Password_": {
+      "message": "Has\u0142o:"
+   },
+   "Password_Agent": {
+      "message": "Password Agent"
+   },
+   "Password_Keeper": {
+      "message": "Password Keeper"
+   },
+   "Password_Length": {
+      "message": "D\u0142ugo\u015B\u0107 has\u0142a"
+   },
+   "Password_Reminder": {
+      "message": "Przypomnienie has\u0142a"
+   },
+   "Password_Safe": {
+      "message": "Password Safe"
+   },
+   "Password_reminder_cannot_match_password": {
+      "message": "Przypomnienie has\u0142a i has\u0142o nie mog\u0105 by\u0107 identyczne"
+   },
+   "Please_Make_a_Selection": {
+      "message": "Wybierz"
+   },
+   "Please_enter_a_Password_Reminder": {
+      "message": "Wprowad\u017A przypomnienie has\u0142a"
+   },
+   "Please_provide_this_computer_a_name": {
+      "message": "Prosz\u0119 nada\u0107 nazw\u0119 temu komputerowi"
+   },
+   "Please_select_which_sites_you_wish_to_apply_this_change_": {
+      "message": "Wybierz do kt\u00F3rych stron ma zosta\u0107 zastosowana zmiana."
+   },
+   "Please_visit_https___lastpass_com_to_create_an_account_at_a_later_time_": {
+      "message": "Odwied\u017A stron\u0119 https://lastpass.com, aby za\u0142o\u017Cy\u0107 konto w p\u00F3\u017Aniejszym czasie."
+   },
+   "Poll_Server_for_account_changes__mins_": {
+      "message": "Odpytuj serwer na ewentualno\u015B\u0107 zmian na koncie (minuty)"
+   },
+   "Preferences": {
+      "message": "Ustawienia"
+   },
+   "Print": {
+      "message": "Drukuj"
+   },
+   "Profile": {
+      "message": "Profil"
+   },
+   "Re_enter_Password": {
+      "message": "Wprowad\u017A has\u0142o ponownie"
+   },
+   "Recently_Used": {
+      "message": "Ostatnio u\u017Cywane"
+   },
+   "Recheck_Page": {
+      "message": "Sprawd\u017A stron\u0119 ponownie"
+   },
+   "Refresh_Sites": {
+      "message": "Od\u015Bwie\u017C strony"
+   },
+   "Reject": {
+      "message": "Odrzu\u0107"
+   },
+   "Remember_Email": {
+      "message": "Pami\u0119taj e-mail"
+   },
+   "Remember_Password": {
+      "message": "Pami\u0119taj has\u0142o"
+   },
+   "Rename_Group": {
+      "message": "Zmie\u0144 nazw\u0119 grupy"
+   },
+   "Replace_Existing_Site": {
+      "message": "Zamie\u0144 istniej\u0105c\u0105 stron\u0119"
+   },
+   "Require_Every_Character_Type": {
+      "message": "Wymagaj znak\u00F3w ka\u017Cdego typu"
+   },
+   "Require_Password_Reprompt": {
+      "message": "Wymagaj wprowadzenia has\u0142a"
+   },
+   "Respect_AutoComplete_off__allow_websites_to_disable_AutoFill": {
+      "message": "Pozwalaj stronom wy\u0142\u0105cza\u0107 wype\u0142nianie automatyczne"
+   },
+   "Right": {
+      "message": "W prawo"
+   },
+   "RoboForm": {
+      "message": "RoboForm"
+   },
+   "SITE": {
+      "message": "STRONA"
+   },
+   "Save": {
+      "message": "Zapisz"
+   },
+   "Save_All_Entered_Data": {
+      "message": "Zapisz wszystkie wprowadzone dane"
+   },
+   "Save_New_Site": {
+      "message": "Zapisz now\u0105 stron\u0119"
+   },
+   "Save_Site": {
+      "message": "Zapisz stron\u0119"
+   },
+   "Save_a_disabled_One_Time_Password_locally_for_Account_Recovery": {
+      "message": "Zapisz lokalnie nieaktywne has\u0142o jednorazowe do odzyskiwania konta"
+   },
+   "Search": {
+      "message": "Wyszukaj"
+   },
+   "Secure_Notes": {
+      "message": "Bezpieczne notatki"
+   },
+   "Security": {
+      "message": "Bezpiecze\u0144stwo"
+   },
+   "Security_Check": {
+      "message": "Kontrola bezpiecze\u0144stwa"
+   },
+   "Select": {
+      "message": "Wybierz"
+   },
+   "Select_All": {
+      "message": "Wybierz wszystko"
+   },
+   "Send_anonymous_error_reporting_data_to_help_improve_LastPass": {
+      "message": "Wysy\u0142aj anonimowe raporty b\u0142\u0119d\u00F3w, aby pom\u00F3c w ulepszaniu LastPass"
+   },
+   "September": {
+      "message": "Wrzesie\u0144"
+   },
+   "SesameWrongButton": {
+      "message": "Aby wy\u015Bwietli\u0107 swoje dane w trybie offline, nale\u017Cy uruchomi\u0107 Sesame\ni klikn\u0105\u0107 'Kopiuj has\u0142o lokalne' zamiast 'Generuj has\u0142o jednorazowe'."
+   },
+   "Sesame_Multifactor_Authentication": {
+      "message": "Uwierzytelnianie wielosk\u0142adnikowe Sesame"
+   },
+   "Share": {
+      "message": "Udost\u0119pnij"
+   },
+   "Share_login_state_between_other_browsers": {
+      "message": "Stan logowania dzielony z innymi przegl\u0105darkami"
+   },
+   "Share_offer_from": {
+      "message": "Udost\u0119pnij ofert\u0119 z"
+   },
+   "Shift": {
+      "message": "Shift"
+   },
+   "Should_LastPass_remember_this_password_": {
+      "message": "Czy LastPass ma zapami\u0119ta\u0107 to has\u0142o?"
+   },
+   "Should_LastPass_remember_this_password__": {
+      "message": "Czy LastPass ma zapami\u0119ta\u0107 to has\u0142o?."
+   },
+   "Show": {
+      "message": "Poka\u017C"
+   },
+   "Show_Advanced_Options": {
+      "message": "Wy\u015Bwietl opcje zaawansowane"
+   },
+   "Show_Change_Password_Notification_Bar": {
+      "message": "Poka\u017C pasek powiadomienia o zmianie has\u0142a"
+   },
+   "Show_Deleted_Sites": {
+      "message": "Wy\u015Bwietl usuni\u0119te strony"
+   },
+   "Show_Fill_Notification_Bar": {
+      "message": "Poka\u017C pasek powiadomienia o wype\u0142nieniu"
+   },
+   "Show_Form_Fill_Notifications": {
+      "message": "Wy\u015Bwietlaj powiadomienia o wype\u0142nianiu formularzy"
+   },
+   "Show_My_LastPass_Vault_After_Login": {
+      "message": "Wy\u015Bwietl m\u00F3j sejf LastPass po zalogowaniu"
+   },
+   "Show_Notifications": {
+      "message": "Wy\u015Bwietlaj powiadomienia"
+   },
+   "Show_Save_Site_Notification_Bar": {
+      "message": "Poka\u017C pasek powiadomienia o zapisaniu strony"
+   },
+   "Show_Save_Site_Notifications": {
+      "message": "Wy\u015Bwietlaj powiadomienia o zapisywaniu strony"
+   },
+   "Show_Sites_in_Groups": {
+      "message": "Wy\u015Bwietlaj strony w grupach"
+   },
+   "Show_all_sites": {
+      "message": "Poka\u017C wszystkie strony"
+   },
+   "Show_certain_notifications_only_after_click": {
+      "message": "Wy\u015Bwietlaj niekt\u00F3re powiadomienia, ale tylko po klikni\u0119ciu"
+   },
+   "Simplify_your_life__Use_LastPass_to_autofill_in_this_site_s_login_info_": {
+      "message": "U\u0142atw sobie \u017Cycie: u\u017Cyj LastPass, aby automatycznie wype\u0142ni\u0107 pola na tej stronie!"
+   },
+   "Site_Search": {
+      "message": "Znajd\u017A stron\u0119"
+   },
+   "Sites": {
+      "message": "Strony"
+   },
+   "Special": {
+      "message": "Specjalny"
+   },
+   "State___Province": {
+      "message": "Wojew\u00F3dztwo"
+   },
+   "Submit_Form": {
+      "message": "Wy\u015Blij formularz"
+   },
+   "Tabs": {
+      "message": "Kartach"
+   },
+   "Text": {
+      "message": "Tekst"
+   },
+   "The_LastPass_master_password_you_reentered_does_not_match": {
+      "message": "Wprowadzone ponownie has\u0142o g\u0142\u00F3wne nie pasuje"
+   },
+   "The_version_of_Chrome_you_are_currently_running_does_not_have_HTML5_database_support_enabled___As_such__this_login_page_will_not_remember_your_email_and_password__and_other_features_such_as_automatic_login_on_browser_restart_will_not_work___You_may_be_able_to_fix_this_by_adding___enable_databases_as_a_parameter_to_your_Google_Chrome_browser_shortcut_": {
+      "message": "Wersja Chrome kt\u00F3rej u\u017Cywasz nie ma w\u0142\u0105czonej obs\u0142ugi bazy danych HTML5. W zwi\u0105zku z tym ta strona logowania nie b\u0119dzie pami\u0119ta\u0107 Twojego e-maila ani has\u0142a, a inne funkcje takie jak automatyczne logowanie po restarcie przegl\u0105darki nie b\u0119d\u0105 dzia\u0142a\u0107. By\u0107 mo\u017Ce dodanie parametru --enable-databases do linii polece\u0144 Chrome rozwi\u0105\u017Ce problem."
+   },
+   "This_computer_is_trusted__do_not_require_a_second_form_of_authentication_": {
+      "message": "Ten komputer nale\u017Cy do grona zaufanych, nie jest wymagana druga forma identyfikacji."
+   },
+   "This_is_a_shared_site__You_are_not_permitted_to_view_the_password_": {
+      "message": "To jest wsp\u00F3\u0142dzielona strona. Nie mo\u017Cesz obejrze\u0107 has\u0142a."
+   },
+   "Time_Zone": {
+      "message": "Strefa czasowa"
+   },
+   "Title": {
+      "message": "Tytu\u0142"
+   },
+   "To_create_your_account__please_re_enter_your_LastPass_master_password": {
+      "message": "Aby utworzy\u0107 konto, wprowad\u017A ponownie swoje has\u0142o g\u0142\u00F3wne"
+   },
+   "To_get_started_with_LastPass__you_will_need_to_add_sites_to_your_account_": {
+      "message": "Aby rozpocz\u0105\u0107 korzystanie z LastPass, musisz doda\u0107 strony do swojego konta."
+   },
+   "To_protect_your_privacy_and_keep_your_data_confidential_": {
+      "message": "Aby chroni\u0107 Twoj\u0105 prywatno\u015B\u0107 i zachowa\u0107 twoje dane poufne,"
+   },
+   "Tools": {
+      "message": "Narz\u0119dzia"
+   },
+   "Try_Again": {
+      "message": "Spr\u00F3buj ponownie"
+   },
+   "TurboPasswords": {
+      "message": "TurboPasswords"
+   },
+   "Type_": {
+      "message": "Typ:"
+   },
+   "URL_": {
+      "message": "URL:"
+   },
+   "USERNAME": {
+      "message": "NAZWA U\u017BYTKOWNIKA"
+   },
+   "Unselect_All": {
+      "message": "Odznacz wszystko"
+   },
+   "Up": {
+      "message": "W g\u00F3r\u0119"
+   },
+   "Username_": {
+      "message": "Nazwa u\u017Cytkownika:"
+   },
+   "Version_": {
+      "message": "Wersja:"
+   },
+   "Warn_before_filling_insecure_forms": {
+      "message": "Ostrzegaj przed wype\u0142nianiem niebezpiecznych formularzy"
+   },
+   "Watch_a_video_on_basic_usage": {
+      "message": "Obejrzyj wideo podstawowego u\u017Cytkowania"
+   },
+   "We_also_DO_NOT_keep_a_copy_or_backup_of_it_": {
+      "message": "NIE przechowujemy r\u00F3wnie\u017C jego kopii."
+   },
+   "Welcome_to_LastPass_": {
+      "message": "Witamy w LastPass!"
+   },
+   "Windows": {
+      "message": "Oknach"
+   },
+   "Would_you_like_to_set_up_a_Form_Filling_profile_now_": {
+      "message": "Czy chcesz za\u0142o\u017Cy\u0107 profil dla formularza?"
+   },
+   "Yes": {
+      "message": "Tak"
+   },
+   "Yes__let_me_choose_which_items_I_want_imported_into_LastPass": {
+      "message": "Tak, pozw\u00F3l mi wybra\u0107, kt\u00F3re pozycje zostan\u0105 importowane do LastPass"
+   },
+   "Yes__let_me_enter_and_review_data_that_will_be_used_when_filling_forms": {
+      "message": "Tak, pozw\u00F3l mi wprowadzi\u0107 dane, kt\u00F3re b\u0119d\u0105 u\u017Cyte w trakcie wype\u0142niania formularzy"
+   },
+   "You_cannot_assign_more_than_one_HotKey_the_same_value_": {
+      "message": "Nie mo\u017Cesz przypisa\u0107 kilku identycznych skr\u00F3t\u00F3w klawiszowych."
+   },
+   "You_currently_have_LastPass_set_to_remember_your_password___Doing_so_essentially_makes_the_automatically_logoff_options_you_ve_chosen_useless___Would_you_like_LastPass_to_stop_remembering_your_password_": {
+      "message": "Obecnie LastPass pami\u0119ta Twoje has\u0142o, co czyni opcj\u0119 automatycznego wylogowania bezu\u017Cyteczn\u0105. Czy LastPass ma przesta\u0107 pami\u0119ta\u0107 Twoje has\u0142o ?"
+   },
+   "You_have_not_yet_chosen_a_default_form_fill_profile___Would_you_like_to_choose_one_now_": {
+      "message": "Nie wybrano jeszcze domy\u015Blnego profilu wype\u0142niania formularzy. Chcesz wybra\u0107 teraz?"
+   },
+   "You_may_also_be_blocking_all_cookies__which_causes_Chrome_to_disallow_HTML5_database_access_": {
+      "message": "Mo\u017Cesz blokowa\u0107 wszystkie pliki cookie, co sprawia \u017Ce Chrome  nie pozwola na dost\u0119p do bazy danych HTML5."
+   },
+   "You_must_agree_to_send_your_encrypted_data_to_LastPass_com___LastPass_com_encrypts_your_data_and_sends_it_to_its_secure_servers__No_one_at_LastPass_can_read_your_confidential_data_since_it_is_encrypted_using_your_secret_password_and_you_are_the_only_one_who_knows_your_password_": {
+      "message": "Musisz zgodzi\u0107 si\u0119 na przesy\u0142anie zaszyfrowanych danych do LastPass.com.\n\nLastPass.com szyfruje dane i wysy\u0142a na swoje bezpieczne serwery.\nNikt w LastPass nie mo\u017Ce odczyta\u0107 twoich poufnych danych, poniewa\u017C s\u0105 one szyfrowane przy u\u017Cyciu twojego sekretnego has\u0142a i jeste\u015B jedyn\u0105 osob\u0105, kt\u00F3ra je zna."
+   },
+   "You_must_agree_to_the_terms_to_continue": {
+      "message": "Musisz wyrazi\u0107 zgod\u0119 na warunki, aby kontynuowa\u0107"
+   },
+   "You_must_enter_a_name_": {
+      "message": "Musisz wprowadzi\u0107 nazw\u0119."
+   },
+   "You_must_enter_a_unique_name_": {
+      "message": "Musisz wprowadzi\u0107 unikatow\u0105 nazw\u0119."
+   },
+   "You_must_restart_Chrome_or_logoff_and_back_in_to_get_logoff_on_browser_close_changes_to_be_reflected": {
+      "message": "Musisz zrestartowa\u0107 Chrome lub wylogowa\u0107 si\u0119 i wr\u00F3ci\u0107 aby zmiany opcji Wyloguj po zamkni\u0119ciu przegl\u0105darki zosta\u0142y wprowadzone"
+   },
+   "You_must_restart_your_browser_before_all_of_the_changes_will_take_effect_": {
+      "message": "Musisz ponownie uruchomi\u0107 przegl\u0105dark\u0119."
+   },
+   "Your_Google_Chrome_passwords_have_been_imported_successfully_": {
+      "message": "Twoje has\u0142a Google Chrome zosta\u0142y zaimportowane z powodzeniem."
+   },
+   "Your_current_settings_require_you_to_enter_your_LastPass_password_to_complete_this_action_": {
+      "message": "Twoje bie\u017C\u0105ce ustawienia wymagaj\u0105 wprowadzenia twojego has\u0142a LastPass w celu wykonania tej czynno\u015Bci."
+   },
+   "Your_password_can_not_be_the_same_as_your_email_": {
+      "message": "Has\u0142o i adres e-mail musz\u0105 r\u00F3\u017Cni\u0107 si\u0119 od siebie."
+   },
+   "Your_password_is_easily_guessable_": {
+      "message": "Twoje has\u0142o mo\u017Cna bardzo \u0142atwo odgadn\u0105\u0107."
+   },
+   "Your_password_is_too_short__It_must_be_at_least_6_characters_long": {
+      "message": "Twoje has\u0142o jest za kr\u00F3tkie. Musi mie\u0107 co najmniej 6 znak\u00F3w"
+   },
+   "Your_password_reminder_serves_to_remind_you_of_what_your": {
+      "message": "Przypomnienie has\u0142a s\u0142u\u017Cy do przypomnienia ci o tym"
+   },
+   "Your_passwords_did_not_match_": {
+      "message": "Has\u0142a nie zgadzaj\u0105 si\u0119."
+   },
+   "YubiKey_Multifactor_Authentication": {
+      "message": "Uwierzytelnianie wielosk\u0142adnikowe YubiKey"
+   },
+   "_Hide_": {
+      "message": "[Ukryj]"
+   },
+   "_New_Pending_Share_Offers_": {
+      "message": "(Nowe oczekuj\u0105ce oferty wsp\u00F3\u0142dzielenia)"
+   },
+   "_Show_": {
+      "message": "[Poka\u017C]"
+   },
+   "_domain_": {
+      "message": "(domena)"
+   },
+   "_none_": {
+      "message": "(brak)"
+   },
+   "a_zlower": {
+      "message": "a-z"
+   },
+   "actual_password_is__while_still_maintaining_its_secrecy_": {
+      "message": "jakie jest twoje aktualne has\u0142o ale jednocze\u015Bnie zachowuj\u0105c has\u0142o w tajemnicy."
+   },
+   "and": {
+      "message": "i"
+   },
+   "contact_us_and_we_will_email_you_your_password_reminder_": {
+      "message": "skontaktuj si\u0119 z nami, a my wy\u015Blemy ci przypomnienie has\u0142a e-mailem."
+   },
+   "dummy": {
+      "message": "dummy, leave this here so we don't mess up the trailing comma"
+   },
+   "ext_": {
+      "message": "wew."
+   },
+   "favorites": {
+      "message": "ulubione"
+   },
+   "hour": {
+      "message": "godz."
+   },
+   "hours": {
+      "message": "godz."
+   },
+   "minutes": {
+      "message": "min."
+   },
+   "privacy_statement": {
+      "message": "O\u015Bwiadczeniem prywatno\u015Bci"
+   },
+   "recently_usedlower": {
+      "message": "Ostatnio u\u017Cywane"
+   },
+   "seconds": {
+      "message": "sek."
+   },
+   "terms_of_service": {
+      "message": "Warunkami u\u017Cytkowania"
+   },
+   "the_current_tab": {
+      "message": "Bie\u017C\u0105ce karcie"
+   },
+   "we_DO_NOT_know_what_your_LastPass_password_is_": {
+      "message": "NIE ZNAMY twojego has\u0142a LastPass."
+   }
+}

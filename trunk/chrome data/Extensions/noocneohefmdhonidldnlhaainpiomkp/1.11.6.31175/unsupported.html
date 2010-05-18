@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Cooliris</title>
+<style>
+body 
+{
+    color: #ADADAD;
+    font-family: "Lucida Grande","Lucida Sans Unicode", verdana, gulim, Arial, Helvetica,sans-serif;
+    font-size: larger;
+    padding: 20px;
+    text-align: center;
+    background: #000;
+}
+a:link, a:visited
+{
+    color: #00ADFD;
+}
+</style>
+</head>
+<body>
+<div id="error" style="display:none">
+  Cooliris was unable to launch. Please
+  <a href="http://www.cooliris.com/beta/feedback/chrome/">submit feedback</a>
+  so that we can fix this problem.
+</div>
+<div id="unsupported_os" style="display:none">
+  <p>
+  Cooliris for Google Chrome does not yet support your operating system
+  (<script>document.write(navigator.platform)</script>). 
+  </p>
+  <p>For more information, see our
+  <a href="http://www.cooliris.com/product/#compatibility">compatibility list</a>.
+  </p>
+</div>
+<script>
+if (navigator.platform.match(/Win/)) {
+  document.getElementById("error").style.display = '';
+} else {
+  document.getElementById("unsupported_os").style.display = '';
+}
+</script>
+</body>
+</html>

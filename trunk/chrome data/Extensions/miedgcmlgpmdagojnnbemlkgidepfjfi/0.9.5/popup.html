@@ -1,0 +1,267 @@
+<html>
+	<head>
+		<script src="chromelib.js"/>
+		<script src="prefs.js"/>	
+		<style>
+		    body {
+			  padding: 0;
+			  margin: 0;
+			  font-family:arial;
+			  font-size:11px;
+			  color:#2a2e41;
+			  background-color:#ffffff;
+			  background-image:url('images/panelBG.png');
+			  background-position:bottom;
+			  background-repeat:repeat-x;
+			}
+			#main {
+				padding: 0;
+				margin: 0;
+				cursor : default;
+				//width:100%;
+			}
+			.row {
+				font-size : 12px;
+				padding-top:3px;
+				padding-bottom:3px;
+				padding-left:24px;
+				padding-right:3px;
+				cursor:pointer;
+				/*border:1px solid #e4e4e4;*/
+				-webkit-border-radius:4px;
+				margin-bottom:3px;
+			}
+			.row.checked{
+				background:url('images/yes.png') 1px 1px no-repeat;
+			//	background-repeat:no-repeat;
+			}
+			.enableAction {
+				background: -webkit-gradient(linear, left top, left bottom, from(#48ac37), to(#2e6f23));
+				color:#e7f1e6;
+			}
+			.disableAction {
+				background: -webkit-gradient(linear, left top, left bottom, from(#e10e2c), to(#9e0c21));
+				color:#e7f1e6;
+			}
+
+			.enableAction.checked{
+				background:url('images/yesOver.png') 1px 1px no-repeat,  -webkit-gradient(linear, left top, left bottom, from(#48ac37), to(#2e6f23));
+				color:#e7f1e6;
+			}
+			.disableAction.checked{
+				background: url('images/yesOver.png') 1px 1px no-repeat, -webkit-gradient(linear, left top, left bottom, from(#e10e2c), to(#9e0c21));
+				color:#e7f1e6;
+			}
+
+			div.row:not(.disable):not(.checked):hover {
+				color:#dfdfdf;
+				background-image:url('images/menuItemBGOver.png');
+				-webkit-border-radius:4px;
+			}
+			div.row.checked:not(.disable):hover {
+				color:#ffffff;
+				background-color:#dbddef;
+				background:url('images/yesOver.png') 1px 1px no-repeat, url('images/menuItemBGOver.png') top left repeat-x;
+				-webkit-border-radius:4px;
+			}
+			div.row.disable {
+				color : gray;
+				cursor : none;
+			}
+		    .separator {
+			    width:100%;
+			    height:2px;
+				background-image:url('images/separator.png');
+				background-repeat:repeat-x;
+				cursor:pointer;
+				margin-bottom:1px;
+
+			}
+			#verticalSeparaotr {
+			    width:2px;
+			    height:120px;
+				background-image:url('images/verticalSeparator.png');
+				background-repeat:repeat-y;
+				cursor:pointer;
+				position:absolute;
+				top:0px;
+				left:18px;
+				z-index:100;
+			}
+			#options {
+				background-repeat:repeat-x;
+			}
+			.q {
+			  float:right;
+			  margin-right:3px;
+			  cursor:pointer;
+			}
+			.q:hover {
+			  text-decoration:underline;
+			}
+			.enabled {
+				background: -webkit-gradient(linear, left top, left bottom, from(#48ac37), to(#2e6f23));
+				color:#e7f1e6;
+			}
+			.disabled {
+				background: -webkit-gradient(linear, left top, left bottom, from(#e10e2c), to(#9e0c21));
+				color:#e7f1e6;
+			}
+			.qa {
+			  display : none;
+			  width:260px;
+			  font-size:12px;
+			  margin-top:5px;
+			  margin-left:6px;
+			  color:#3c434f;
+			  cursor:default;
+			}			
+		</style>	
+		<script>
+			var askBeforeSetAutoLoad=prefs['options.askBeforeSetAutoLoad']
+			var bg=chrome.extension.getBackgroundPage
+			const PAGE=0;
+			const SITE=1
+			
+			// Options
+			function options(){
+				var url=chrome.extension.getURL('options.html')
+				chrome.tabs.getAllInWindow(null,function(tabs){
+					for (var i=0;i<tabs.length;i++){
+						if (tabs[i].url == url){
+							chrome.tabs.update(tabs[i].id, {selected:true})
+							window.close()
+							return;
+						}
+					}
+					chrome.tabs.create({selected:true,url:url})
+					window.close()
+				})
+			}
+
+			// AutoLoad
+			function enableOrDisableAutoLoad(){
+				prefs['general.autoLoading']=!prefs['general.autoLoading']
+				window.close()
+			}
+			
+			// 
+			var autoLoadType
+			function popupSetAutoLoad(type){
+				autoLoadType=type
+				if (askBeforeSetAutoLoad){
+					chrome.tabs.getSelected(null,function(tab){
+						document.body.style.width="270px"
+						select('#autoloadtype').innerText=type == PAGE ? 'page' : 'site'
+						select('#autoloadtype').title=type==PAGE ? bg().getActualURL(tab.url) : bg().getHost(bg().getActualURL(tab.url))
+						select('#setAutoLoad').style.display="block"
+						select('#menu').style.display="none"
+					})
+				}else
+					setAutoLoad()
+			}
+			
+			function setAutoLoad(){
+				chrome.tabs.getSelected(null,function(tab){
+					if (!askBeforeSetAutoLoad)
+						prefs['options.askBeforeSetAutoLoad']=false								
+					bg().setAutoLoad(tab.url,autoLoadType);
+					window.close()	
+				})
+			}
+			
+			function autoLoadDesc(e){
+				e.stopPropagation()
+				document.body.style.width="270px"
+				select('#menu').style.display="none"
+				select('#whatisautoloading').style.display='block'
+			}
+			
+			function switchEngine(newTab){
+				chrome.tabs.getSelected(null,function(tab){
+					bg().switchEngine(tab.id,tab.url,newTab ? tab.index+1:null)
+					window.close()
+				})
+			}
+			
+			function load(){
+				chrome.tabs.getSelected(null,function(tab){
+					var oneclick=prefs['pageAction.1click']					
+					if (oneclick){
+						bg().switchEngine(tab.id,tab.url,null)
+						window.close()
+					}else
+						document.body.style.display="block"
+					select('#menu').style.display='block';
+					var type=bg().getPageType(tab.url)					
+					switch (type){
+						case 1:
+							select('#openInChrome').style.display='block';
+							select('#openInChromeNew').style.display='block';
+							select('#sep1').style.display='block';
+							select('#setSiteAutoLoad').style.display='block';
+							select('#setPageAutoLoad').style.display='block';
+							select('#sep3').style.display='block';
+							break;
+						case 2:
+							select('#openInIE').style.display='block';
+							select('#openInIENew').style.display='block';
+							select('#sep2').style.display='block';
+							break;
+					}
+					var enableAutoLoading=prefs['general.autoLoading']
+					var autoloading=select('#enableOrDisableAutoLoad')
+					if (enableAutoLoading)
+						autoloading.className="row checked"
+					else
+						autoloading.className="row"					
+				})
+			}
+		</script>
+	</head>
+	<body onload="load()" style="width:210px;display:none">
+		<div style="display:none" class='qa' id="whatisautoloading">
+			When auto-loading is enabled, IE Tab Classic will automatically
+			open any page that was defined to "always be opened in IE".<br>
+			You can disable auto-loading altogether, and to add/remove specific web sites
+			go to:<br> Tools > Extensions > IE Tab Classic > Options
+		</div>
+		<div style="display:none" class='qa' id="setAutoLoad">
+			This&nbsp<u><span style="color:#d71338" id="autoloadtype"></span></u> will always be opened in IE<br>
+			<div style="float:left;margin-top:6px;">
+				<span style="color:#d71338;padding-top:5px;padding-right:10px;">Are you sure?</span>
+				<input type='button' style="height:20px;font-size:12px;vertical-align:middle" value="Yes" onclick="setAutoLoad()">
+				<input type='button' style="height:20px;font-size:12px;vertical-align:middle" value="No" onclick="window.close()">
+			</div>
+			<div style="float:left;margin-top:6px;">
+				<div style="float:left;">
+					<input type='checkbox' onclick="askBeforeSetAutoLoad=!this.checked" style="float:left;height:20px;margin:0px;margin-right:7px;font-size:12px;vertical-align:middle">
+					<div style="float:left;margin-top:2px;">
+						Don't ask me next time
+					</div>
+				</div>
+				<div style="float:left;margin-top:5px;">
+					<span style="width:100%;text-align:justify">
+						To disable auto loading for this page go to:<br>
+						Tools > Extensions > IE Tab Classic > Options
+					</span>
+				</div>
+			</div>
+			</center>
+		</div>
+		<div id="menu" style="display:none">
+			<div id='openInIE' style="display:none" class="row" onclick="switchEngine()">Switch to Explorer</div>
+			<div id='openInIENew' style="display:none" class="row" onclick="switchEngine(true)">Switch to Explorer (new tab)</div>
+			<div id='openInChrome' style="display:none" class="row" onclick="switchEngine()">Switch to Chrome</div>
+			<div id='openInChromeNew' style="display:none" class="row" onclick="switchEngine(true)">Switch to Chrome (new tab)</div>
+			<div id='sep1' class="separator" style="display:none"></div>			
+			<div id='setSiteAutoLoad' style="display:none;" class="row" onclick="popupSetAutoLoad(PAGE)">Auto load this page in IE</div>
+			<div id='setPageAutoLoad' style="display:none" class="row" onclick="popupSetAutoLoad(SITE)">Auto load this site in IE</div>
+			<div id='sep2' class="separator" style="display:none"></div>
+			<div id="enableOrDisableAutoLoad" class="row" onclick="enableOrDisableAutoLoad()">Auto Loading<div class="q" onclick="autoLoadDesc(event)">?</div></div>			
+			<div id='sep3' class="separator" style="display:none"></div>
+			<div id="options" class="row" onclick="options()">Options...</div>
+		</div>
+	</body>
+	</body>
+</html>

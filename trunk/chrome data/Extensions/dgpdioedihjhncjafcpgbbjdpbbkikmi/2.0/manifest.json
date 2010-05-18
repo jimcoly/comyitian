@@ -1,0 +1,28 @@
+{
+   "background_page": "background.html",
+   "chrome_url_overrides": {
+      "newtab": "speeddial.html"
+   },
+   "content_scripts": [ {
+      "js": [ "content_script.js" ],
+      "matches": [ "http://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Speed Dial for Chrome - replace Chrome new tab with your predefined visual bookmarks.",
+   "icons": {
+      "128": "icons/128.png",
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDo56bieMnHzTK0hjMXTAmqpToPrAU7nZ7vrvllxvzikaTxAsRT3wEJrTYq+qN2oE+FOOXxJo5JaVusl0E3KrPfyEyZOHFYCbl1vZMVtADCq4H+ZZvakewSVArpSaYaF2WS1iGBZtKPAKXtilej5tnvZ5pXbjyLxQJjdv/VqRL/bQIDAQAB",
+   "name": "Speed Dial",
+   "options_page": "speeddial.html#options",
+   "page_action": {
+      "icon": "icons/16.png",
+      "popup": "popup.html"
+   },
+   "permissions": [ "bookmarks", "tabs", "http://*/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "2.0"
+}

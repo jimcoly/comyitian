@@ -1,0 +1,932 @@
+{
+   "1Password": {
+      "message": "1Password"
+   },
+   "1__Insert_your_YubiKey_in_the_USB_port_with_the_USB_contact_facing_upward": {
+      "message": "1. \u63D2\u5165\u4F60\u7684 YubiKey \u5230 USB \u57E0, USB \u63A5\u89F8\u9EDE\u671D\u4E0A"
+   },
+   "1__Run_the_LastPass_Sesame_application_to_generate_a_one_time_password": {
+      "message": "1. \u57F7\u884C LastPass Sesame \u61C9\u7528\u7A0B\u5F0F\u4F86\u7522\u751F\u4E00\u500B\u4E00\u6B21\u6027\u7684\u5BC6\u78BC"
+   },
+   "2__Paste_the_one_time_password_in_the_input_box_below_and_click__Authenticate_": {
+      "message": "2. \u8CBC\u4E0A\u4E00\u6B21\u6027\u5BC6\u78BC\u5728\u4E0B\u9762\u7684\u6846\u4E2D,\u7136\u5F8C\u6309'\u9A57\u8B49'"
+   },
+   "2__Wait_until_your_YubiKey_touch_button_shines_with_a_steady_light": {
+      "message": "2. \u7B49\u5230\u4F60 YubiKey \u89F8\u63A7\u6309\u9215\u7684\u71C8\u7A69\u5B9A\u4EAE\u8457"
+   },
+   "3__Hold_your_fingertip_on_the_touch_button_for_2_seconds": {
+      "message": "3. \u7528\u4F60\u7684\u624B\u6307\u6309\u4F4F\u89F8\u63A7\u6309\u92152\u79D2\u9418"
+   },
+   "A_retry_file_has_been_found__This_likely_means_that_not_all_of_your_site_changes_have_been_saved__Would_you_like_to_delete_this_file_and_potentially_lose_some_changes_": {
+      "message": "\u91CD\u8A66\u6587\u4EF6\u5DF2\u7D93\u627E\u5230. \u9019\u53EF\u80FD\u610F\u5473\u8457,\u4E26\u975E\u6240\u6709\u7DB2\u7AD9\u6240\u505A\u7684\u66F4\u6539\u5DF2\u4FDD\u5B58. \u4F60\u60F3\u522A\u9664\u6B64\u6587\u4EF6\uFF0C\u4E26\u53EF\u80FD\u5931\u53BB\u4E00\u4E9B\u5DF2\u7D93\u66F4\u6539\u7684\u8CC7\u6599?"
+   },
+   "A_server_error_occurred_while_processing_your_request_": {
+      "message": "\u8655\u7406\u4F60\u7684\u8ACB\u6C42\u6642\u4F3A\u670D\u5668\u767C\u751F\u932F\u8AA4."
+   },
+   "About___": {
+      "message": "\u95DC\u65BC..."
+   },
+   "Accept": {
+      "message": "\u63A5\u53D7"
+   },
+   "Account_Settings": {
+      "message": "\u5E33\u865F\u8A2D\u5B9A"
+   },
+   "Actionproper": {
+      "message": "\u52D5\u4F5C"
+   },
+   "Add": {
+      "message": "\u65B0\u589E"
+   },
+   "Add_Credit_Card": {
+      "message": "\u65B0\u589E\u4FE1\u7528\u5361"
+   },
+   "Add_Field": {
+      "message": "\u65B0\u589E\u6B04\u4F4D"
+   },
+   "Add_Identity": {
+      "message": "\u65B0\u589E\u8EAB\u5206"
+   },
+   "Add_New_Site": {
+      "message": "\u65B0\u589E\u7DB2\u7AD9"
+   },
+   "Add_Profile": {
+      "message": "\u65B0\u589E\u500B\u4EBA\u8CC7\u6599"
+   },
+   "Add_Secure_Note": {
+      "message": "\u65B0\u589E\u5B89\u5168\u8A3B\u8A18"
+   },
+   "Add_Site": {
+      "message": "\u65B0\u589E\u7DB2\u7AD9"
+   },
+   "Address_1": {
+      "message": "\u5730\u57401"
+   },
+   "Address_2": {
+      "message": "\u5730\u57402"
+   },
+   "Address_3": {
+      "message": "\u5730\u5740 3"
+   },
+   "Advanced": {
+      "message": "\u9032\u968E"
+   },
+   "All": {
+      "message": "\u5168\u90E8"
+   },
+   "Allow_LastPass_to_find_insecure_data_on_your_computer_": {
+      "message": "\u5141\u8A31 LastPass \u5728\u4F60\u96FB\u8166\u4E0A\u627E\u51FA\u4E0D\u5B89\u5168\u7684\u8CC7\u6599?"
+   },
+   "Alt": {
+      "message": "Alt \u9375"
+   },
+   "Always_Choose_Profile_and_Credit_Card": {
+      "message": "\u6C38\u9060\u9078\u64C7\u500B\u4EBA\u8CC7\u6599\u548C\u4FE1\u7528\u5361"
+   },
+   "An_Update_is_Available__Would_you_like_to_install_": {
+      "message": "\u6709\u53EF\u7528\u7684\u66F4\u65B0. \u4F60\u662F\u5426\u8981\u5B89\u88DD\uFF1F"
+   },
+   "An_error_has_been_encountered_while_loading_your_sites__Please_relogin_": {
+      "message": "\u8F09\u5165\u4F60\u7684\u7DB2\u9801\u6642\u9047\u5230\u4E00\u500B\u932F\u8AA4. \u8ACB\u91CD\u65B0\u767B\u5165\u4F60\u7684\u7DB2\u9801."
+   },
+   "Appearance": {
+      "message": "\u5916\u89C0"
+   },
+   "April": {
+      "message": "4\u6708"
+   },
+   "Are_you_sure_you_want_to_have_LastPass_remember_your_password___This_will_significantly_decrease_the_security_of_your_LastPass_account_": {
+      "message": "\u4F60\u78BA\u5B9A\u8981\u8B93 LastPass \u8A18\u4F4F\u4F60\u7684\u5BC6\u78BC? \u9019\u5C07\u6703\u5927\u5927\u964D\u4F4E\u4F60 LastPass \u5E33\u6236\u7684\u5B89\u5168!"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_field_": {
+      "message": "\u4F60\u78BA\u5B9A\u8981\u522A\u9664\u9019\u500B\u6B04\u4F4D?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_form_fill_profile_": {
+      "message": "\u4F60\u78BA\u5B9A\u8981\u522A\u9664\u6B64\u7B46\u500B\u4EBA\u8CC7\u6599?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_generated_password_": {
+      "message": "\u4F60\u78BA\u5B9A\u8981\u522A\u9664\u9019\u500B\u5BC6\u78BC?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_secure_note_": {
+      "message": "\u4F60\u78BA\u5B9A\u8981\u522A\u9664\u6B64\u5B89\u5168\u8A3B\u8A18?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_site_": {
+      "message": "\u4F60\u78BA\u5B9A\u8981\u522A\u9664\u6B64\u7DB2\u7AD9\u55CE?"
+   },
+   "August": {
+      "message": "\u516B\u6708"
+   },
+   "Authenticate": {
+      "message": "\u9A57\u8B49"
+   },
+   "AutoFill": {
+      "message": "\u81EA\u52D5\u586B\u5165"
+   },
+   "AutoLogin": {
+      "message": "\u81EA\u52D5\u767B\u5165"
+   },
+   "Automatically_Fill_Login_Information": {
+      "message": "\u81EA\u52D5\u586B\u5165\u767B\u5165\u8CC7\u6599"
+   },
+   "Automatically_login_to_sites_if_time_since_last_login____seconds_": {
+      "message": "\u81EA\u52D5\u767B\u9304\u5230\u7DB2\u7AD9\u4E0A\uFF0C\u5982\u679C\u96E2\u4E0A\u6B21\u767B\u5165\u7684\u6642\u9593\u5927\u65BC (\u79D2)"
+   },
+   "Avoid_Ambiguous_Characters": {
+      "message": "\u907F\u514D\u4F7F\u7528\u4E0D\u660E\u78BA\u7684\u7684\u5B57"
+   },
+   "Birthday": {
+      "message": "\u751F\u65E5"
+   },
+   "Blacklist": {
+      "message": "\u4F60\u7684\u5E33\u6236\u5DF2\u88AB\u66AB\u505C\u4F7F\u7528(5\u5206\u9418),\u56E0\u70BA\u592A\u591A\u6B21\u7684\u767B\u5165\u5617\u8A66\u5931\u6557."
+   },
+   "Blog": {
+      "message": "\u90E8\u843D\u683C"
+   },
+   "Browse_the_web_as_you_normally_would_and_LastPass_will_automatically_remember_passwords_as_you_enter_them_": {
+      "message": "\u50CF\u5E73\u6642\u90A3\u6A23\u700F\u89BD\u7DB2\u9801 LastPass \u6703\u81EA\u52D5\u8A18\u4F4F\u4F60\u7684\u5BC6\u78BC\u8F38\u5165."
+   },
+   "Built_": {
+      "message": "\u5EFA\u7ACB:"
+   },
+   "But_I_m_a_forgetful_person___what_should_I_do_if_I_forget_my_password_": {
+      "message": "\u6211\u662F\u4E00\u500B\u5065\u5FD8\u7684\u4EBA...\u6211\u61C9\u8A72\u600E\u9EBC\u8FA6\u5982\u679C\u6211\u5FD8\u8A18\u4E86\u6211\u7684\u5BC6\u78BC?"
+   },
+   "Cancel": {
+      "message": "\u53D6\u6D88"
+   },
+   "Change": {
+      "message": "\u8B8A\u66F4"
+   },
+   "Change_Password": {
+      "message": "\u8B8A\u66F4\u5BC6\u78BC"
+   },
+   "Check_For_Updates": {
+      "message": "\u6AA2\u67E5\u66F4\u65B0"
+   },
+   "Checkbox": {
+      "message": "\u6838\u53D6\u65B9\u584A"
+   },
+   "Choose_Profile_and_Credit_Card": {
+      "message": "\u9078\u64C7\u500B\u4EBA\u8CC7\u6599\u548C\u4FE1\u7528\u5361"
+   },
+   "City___Town": {
+      "message": "\u5E02/\u93AE"
+   },
+   "Clear": {
+      "message": "\u6E05\u9664"
+   },
+   "Clear_Forms": {
+      "message": "\u6E05\u9664\u8868\u683C"
+   },
+   "Clear_Local_Cache": {
+      "message": "\u6E05\u9664\u672C\u6A5F\u5FEB\u53D6\u8A18\u61B6"
+   },
+   "Click_Continue_to_start_using_LastPass_": {
+      "message": "\u6309\u4E00\u4E0B\u7E7C\u7E8C,\u958B\u59CB\u4F7F\u7528 LastPass."
+   },
+   "Click_here_to_watch_a_video_on_basic_usage_": {
+      "message": "\u6309\u4E00\u4E0B\u9019\u88E1\u89C0\u770B\u57FA\u672C\u7528\u6CD5\u7684\u5F71\u7247."
+   },
+   "Close": {
+      "message": "\u95DC\u9589"
+   },
+   "Collapse_All": {
+      "message": "\u5168\u90E8\u647A\u758A"
+   },
+   "Company": {
+      "message": "\u516C\u53F8"
+   },
+   "Configure_Form_Fill": {
+      "message": "\u8A2D\u5B9A\u586B\u8868"
+   },
+   "Confirm": {
+      "message": "\u78BA\u8A8D"
+   },
+   "Congratulations": {
+      "message": "\u606D\u559C"
+   },
+   "Continue": {
+      "message": "\u7E7C\u7E8C"
+   },
+   "Copy": {
+      "message": "\u8907\u88FD"
+   },
+   "Copy_Password": {
+      "message": "\u8907\u88FD\u5BC6\u78BC"
+   },
+   "Copy_Username": {
+      "message": "\u8907\u88FD\u4F7F\u7528\u8005\u540D\u7A31"
+   },
+   "Country": {
+      "message": "\u570B\u5BB6"
+   },
+   "County": {
+      "message": "\u7E23"
+   },
+   "Create_Account": {
+      "message": "\u5EFA\u7ACB\u5E33\u6236"
+   },
+   "Create_Sub_Group": {
+      "message": "\u5EFA\u7ACB\u5B50\u7FA4\u7D44"
+   },
+   "Create_an_Account": {
+      "message": "\u5EFA\u7ACB\u5E33\u865F"
+   },
+   "Creating_Account___": {
+      "message": "\u5EFA\u7ACB\u5E33\u865F\u4E2D..."
+   },
+   "Ctrl": {
+      "message": "Ctrl"
+   },
+   "December": {
+      "message": "12\u6708"
+   },
+   "Delete": {
+      "message": "\u522A\u9664"
+   },
+   "Down": {
+      "message": "\u5411\u4E0B"
+   },
+   "Dr": {
+      "message": "\u535A\u58EB"
+   },
+   "Dutch": {
+      "message": "\u8377\u862D\u6587"
+   },
+   "Edit": {
+      "message": "\u7DE8\u8F2F"
+   },
+   "Edit_Form_Fields": {
+      "message": "\u7DE8\u8F2F\u8868\u683C\u6B04\u4F4D"
+   },
+   "Email": {
+      "message": "\u96FB\u5B50\u90F5\u4EF6"
+   },
+   "Email_already_in_use__have_you_forgotten_your_password_": {
+      "message": "\u96FB\u5B50\u90F5\u4EF6\u5DF2\u5728\u4F7F\u7528\u4E2D\uFF0C\u60A8\u662F\u5426\u5FD8\u8A18\u4E86\u5BC6\u78BC?"
+   },
+   "End": {
+      "message": "\u7D50\u675F"
+   },
+   "English": {
+      "message": "\u82F1\u6587"
+   },
+   "ErrorGetAcctsMsg": {
+      "message": "\u53D6\u5F97\u4F60 LastPass \u7DB2\u9801\u8CC7\u6599\u6642\u767C\u751F\u932F\u8AA4. \u8ACB\u518D\u91CD\u65B0\u5617\u8A66\u767B\u5165\u4F60\u7684\u7DB2\u9801."
+   },
+   "ErrorLoginMsg": {
+      "message": "\u767B\u9304\u5230 LastPass\u6642\u767C\u751F\u932F\u8AA4. \u8ACB\u6AA2\u67E5\u4F60\u7684\u7DB2\u969B\u7DB2\u8DEF\u9023\u63A5."
+   },
+   "ErrorSendingMsg": {
+      "message": "\u8A66\u5716\u8207\u670D\u52D9\u5668\u806F\u7E6B\u6642\u767C\u751F\u932F\u8AA4. \u8ACB\u6AA2\u67E5\u4F60\u7DB2\u969B\u7DB2\u8DEF\u7684\u9023\u63A5\u63A5."
+   },
+   "ErrorSessionMsg": {
+      "message": "\u60A8 LastPass \u671F\u9650\u5DF2\u7D93\u904E\u671F,\u8ACB\u91CD\u65B0\u767B\u5165."
+   },
+   "ExistingUsersOTPPrompt": {
+      "message": "LastPass \u73FE\u5728\u53EF\u4EE5\u5132\u5B58\u4E00\u6B21\u6027\u5BC6\u78BC(OTP)\u65BC\u4F60\u7684\u96FB\u8166,\u5982\u679C\u60A8\u5FD8\u8A18\u4E86\u4E3B\u5BC6\u78BC,\u53EF\u7528\u65BC\u91CD\u65B0\u7372\u5F97\u4F60\u7684\u5E33\u865F. \u9019\u4E00\u6B21\u6027\u5BC6\u78BC\u5C07\u4FDD\u6301\u505C\u7528,\u76F4\u5230\u5B83\u88AB\u4F3A\u670D\u5668\u555F\u52D5.\n\n\u4F60\u60F3\u8981\u555F\u52D5\u91CD\u65B0\u7372\u5F97\u4F60\u7684\u5E33\u865F\u55CE?"
+   },
+   "Expand_All": {
+      "message": "\u5168\u90E8\u5C55\u958B"
+   },
+   "Export_To": {
+      "message": "\u532F\u51FA\u5230"
+   },
+   "Favorite": {
+      "message": "\u6211\u7684\u6700\u611B"
+   },
+   "February": {
+      "message": "2\u6708"
+   },
+   "Feedback": {
+      "message": "\u610F\u898B\u53CD\u61C9"
+   },
+   "Female": {
+      "message": "\u5973\u6027"
+   },
+   "Fill_Current": {
+      "message": "\u586B\u5165\u76EE\u524D\u7684"
+   },
+   "Fill_Form": {
+      "message": "\u586B\u8868"
+   },
+   "Fill_Forms": {
+      "message": "\u586B\u8868"
+   },
+   "FillableFormDetected": {
+      "message": "\u5728\u6B64\u7DB2\u9801\u4E0A\u767C\u73FE\u4E86\u53EF\u586B\u5165\u8CC7\u6599\u7684\u8868\u683C."
+   },
+   "Firefox_Password_Manager": {
+      "message": "Firefox \u5BC6\u78BC\u7BA1\u7406\u54E1"
+   },
+   "Forums": {
+      "message": "\u8AD6\u58C7"
+   },
+   "Gender": {
+      "message": "\u6027\u5225"
+   },
+   "General": {
+      "message": "\u4E00\u822C"
+   },
+   "Generate": {
+      "message": "\u5EFA\u7ACB"
+   },
+   "GeneratePassword": {
+      "message": "\u5982\u679C\u4F60\u8981\u65B0\u589E\u4E00\u500B\u5E33\u865F\u6216\u66F4\u6539\u5BC6\u78BC,\u6309\u4E00\u4E0B LastPass \u7684'\u7522\u751F'\u4F86\u81EA\u52D5\u7522\u751F\u4E00\u500B\u7368\u7279\u5B89\u5168\u7684\u5BC6\u78BC."
+   },
+   "Generate_Secure_Password": {
+      "message": "\u5EFA\u7ACB\u5B89\u5168\u5BC6\u78BC"
+   },
+   "Generated_Password_for": {
+      "message": "\u5EFA\u7ACB\u5BC6\u78BC\u7D66"
+   },
+   "Generic_CSV_File": {
+      "message": "\u4E00\u822C\u7684 CSV \u6A94\u6848"
+   },
+   "Group_": {
+      "message": "\u7FA4\u7D44:"
+   },
+   "Help_Translate": {
+      "message": "\u5354\u52A9\u7FFB\u8B6F"
+   },
+   "Help___": {
+      "message": "\u8AAA\u660E..."
+   },
+   "History": {
+      "message": "\u6B77\u53F2"
+   },
+   "Home": {
+      "message": "\u9996\u9801"
+   },
+   "HotKeys": {
+      "message": "\u5FEB\u6377\u9375"
+   },
+   "IT_IS_CRITICAL_THAT_YOU_NEVER_FORGET_YOUR_NEW_LASTPASS_PASSWORD_": {
+      "message": "\u975E\u5E38\u91CD\u8981\u7684\u662F,\u4F60\u6C38\u9060\u4E0D\u80FD\u5FD8\u8A18\u4F60\u65B0\u7684 LASTPASS \u5BC6\u78BC."
+   },
+   "I_have_read_and_agree_with_the": {
+      "message": "\u6211\u5DF2\u7D93\u95B1\u8B80\u8207\u540C\u610F\u6B64"
+   },
+   "I_understand_that_my_encrypted_data_will_be_sent_to_LastPass": {
+      "message": "\u6211\u77E5\u9053,\u6211\u52A0\u5BC6\u7684\u8CC7\u6599\u5C07\u88AB\u9001\u5230 LastPass"
+   },
+   "Identities": {
+      "message": "\u8EAB\u5206"
+   },
+   "Identity": {
+      "message": "\u8EAB\u5206"
+   },
+   "If_you_already_have_a_LastPass_account_you_can_close_this_window_and_login_": {
+      "message": "\u5982\u679C\u4F60\u5DF2\u7D93\u6709\u4E00\u500B LastPass \u5E33\u865F, \u60A8\u53EF\u4EE5\u95DC\u9589\u6B64\u8996\u7A97, \u4E26\u767B\u5165."
+   },
+   "If_you_do_end_up_forgetting_your_LastPass_master_password_": {
+      "message": "\u5982\u679C\u4F60\u771F\u7684\u5FD8\u4E86\u4F60\u7684 LastPass \u4E3B\u5BC6\u78BC,"
+   },
+   "If_you_lost_your_Sesame_device__click_here_to_disable_Sesame_authentication": {
+      "message": "\u5982\u679C\u4F60\u907A\u5931\u4E86 Sesame \u88DD\u7F6E,\u8ACB\u6309\u9019\u88E1\u4F86\u7981\u7528 Sesame \u9A57\u8B49"
+   },
+   "If_you_lost_your_YubiKey_device__click_here_to_disable_YubiKey_authentication": {
+      "message": "\u5982\u679C\u4F60\u907A\u5931\u4E86 YubiKey,\u8ACB\u6309\u6B64\u8655\u4EE5\u505C\u7528 YubiKey \u9A57\u8B49"
+   },
+   "Import": {
+      "message": "\u532F\u5165"
+   },
+   "Import_From": {
+      "message": "\u532F\u5165\u8868\u683C"
+   },
+   "Import_Your_Data": {
+      "message": "\u532F\u5165\u4F60\u7684\u8CC7\u6599"
+   },
+   "Instructions": {
+      "message": "\u8AAA\u660E"
+   },
+   "Invalid_Password_": {
+      "message": "\u7121\u6548\u7684\u5BC6\u78BC"
+   },
+   "Invalid_email_address__try_again": {
+      "message": "\u932F\u8AA4\u96FB\u5B50\u90F5\u4EF6\u5730\u5740,\u518D\u8A66\u4E00\u6B21"
+   },
+   "January": {
+      "message": "1\u6708"
+   },
+   "July": {
+      "message": "7\u6708"
+   },
+   "June": {
+      "message": "6\u6708"
+   },
+   "KeePass": {
+      "message": "KeePass"
+   },
+   "Keep_a_history_of_my_logins_and_form_fills": {
+      "message": "\u4FDD\u5B58\u4E00\u4EFD\u767B\u5165\u548C\u8868\u683C\u586B\u5BEB\u7684\u6B77\u53F2"
+   },
+   "Language": {
+      "message": "\u8A9E\u8A00"
+   },
+   "LastPass": {
+      "message": "LastPass"
+   },
+   "LastPass_CSV_File": {
+      "message": "LastPass CSV \u6A94"
+   },
+   "LastPass_Encrypted_File": {
+      "message": "LastPass \u52A0\u5BC6\u6A94\u6848"
+   },
+   "LastPass_cannot_login_until_cookies_are_allowed_from_lastpass_com": {
+      "message": "\u9664\u975E\u5141\u8A31 Cookies \u5F9E lastpass.com\u4F86 \u5426\u5247\u7121\u6CD5\u767B\u5165 LastPass."
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_like_to_continue_": {
+      "message": "LastPass \u5075\u6E2C\u5230\u4E00\u500B\u4E0D\u5B89\u5168\u7684\u767B\u5165\u8868\u55AE.\n\n\u4F60\u8981\u7E7C\u7E8C\u55CE?"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_still_like_LastPass_to_fill_the_form_": {
+      "message": "LastPass \u5075\u6E2C\u5230\u4E00\u500B\u4E0D\u5B89\u5168\u7684\u767B\u5165\u8868\u55AE\n\n\u4F60\u4ECD\u60F3\u8B93 LastPass \u4F86\u586B\u5BEB\u8868\u683C?"
+   },
+   "LastPass_detected_a_password_change_for": {
+      "message": "LastPass \u5075\u6E2C\u5230\u4E00\u500B\u5BC6\u78BC\u66F4\u6539"
+   },
+   "LastPass_detected_a_password_change_for_domain_": {
+      "message": "LastPass \u5075\u6E2C\u5230\u4E00\u500B\u7DB2\u57DF\u5BC6\u78BC\u7684\u66F4\u6539:"
+   },
+   "LastPass_detected_a_password_change_for_user_": {
+      "message": "LastPass \u5075\u6E2C\u5230\u4E00\u500B\u7528\u6236\u5BC6\u78BC\u66F4\u6539:"
+   },
+   "LastPass_has_filled_your_login_information_into_the_form_on_this_page_": {
+      "message": "LastPass \u5DF2\u7D93\u586B\u5165\u4F60\u7684\u767B\u5165\u8CC7\u6599\u81F3\u9019\u500B\u7DB2\u9801\u7684\u8868\u683C\u4E0A."
+   },
+   "LastPass_is_fully_installed___When_you_install_LastPass_on_other_computers_you_will_not_have_to_go_through_this_process_again__you_ll_simply_be_able_to_login____Do_not_share_your_Master_Password_with_anyone__including_LastPass_employees__we_ll_never_ask_for_it___LastPass_encrypts_your_sensitive_data_locally_so_even_LastPass_employees_do_not_have_access_to_it___You_can_get_help_by_clicking_on_the_LastPass_icon_and_going_to_Help_": {
+      "message": "LastPass \u5DF2\u7D93\u5B89\u88DD\u5B8C\u7562! \u7576\u60A8\u5B89\u88DD LastPass \u81F3\u5176\u4ED6\u96FB\u8166\u4E0A\u59B3\u5C31\u4E0D\u5FC5\u518D\u6B21\u91CD\u8986\u9019\u500B\u6B65\u9A5F,\u60A8\u5F88\u8F15\u9B06\u7684\u5C31\u80FD\u767B\u5165. \u4E0D\u8981\u5C07\u4F60\u7684\u4E3B\u5BC6\u78BC\u544A\u8A34\u4EFB\u4F55\u4EBA,\u5305\u62EC LastPass \u54E1\u5DE5,\u6211\u5011\u6C7A\u4E0D\u6703\u8981\u6C42\u4F60\u63D0\u4F9B! LastPass \u5C07\u4F60\u654F\u611F\u7684\u8CC7\u6599\u52A0\u5BC6\u5B58\u5728\u4F60\u96FB\u8166\u88E1\uFF0C\u6240\u4EE5\u5373\u4F7F LastPass  \u50F1\u54E1\u4E5F\u7121\u6CD5\u5B58\u53D6\u5B83. \u7576\u4F60\u8981\u5E6B\u52A9\u6642\u6309\u4E00\u4E0B LastPass \u5716\u793A,\u6309\u4E00\u4E0B\u8AAA\u660E."
+   },
+   "LastPass_is_the_last_password_you_ll_ever_have_to_remember___If_you_re_new_to_LastPass__we_ll_just_need_a_few_minutes_of_your_time_to_setup_your_account___You_ll_be_able_to_use_this_account_on_any_other_PC_you_use_to_always_keep_your_personal_data_in_sync___Hit_create_account_to_begin_": {
+      "message": "LastPass \u662F\u6700\u5F8C\u4E00\u500B\u4F60\u5FC5\u9808\u8A18\u4F4F\u7684\u5BC6\u78BC. \u5982\u679C\u4F60\u7B2C\u4E00\u6B21\u4F7F\u7528 LastPass,\u4F60\u53EA\u9700\u8981\u82B1\u5E7E\u5206\u9418\u7684\u6642\u9593\u4F86\u8A2D\u5B9A\u4F60\u7684\u5E33\u865F. \u60A8\u53EF\u4EE5\u5728\u4EFB\u4F55\u5176\u4ED6\u500B\u4EBA\u96FB\u8166\u4F7F\u7528\u6B64\u5E33\u865F,\u5FC5\u4E14\u59CB\u7D42\u4FDD\u6301\u4F60\u7684\u500B\u4EBA\u8CC7\u6599\u540C\u6B65. \u6309\u4E00\u4E0B'\u5EFA\u7ACB\u5E33\u865F'\u4F86\u958B\u59CB."
+   },
+   "Left": {
+      "message": "\u5411\u5DE6"
+   },
+   "LoggedInOffline": {
+      "message": "LastPass \u7121\u6CD5\u8207\u767B\u5165\u4F3A\u670D\u5668\u9023\u63A5,\u6240\u4EE5\u4F60\u73FE\u5728\u662F\u8655\u65BC\u96E2\u7DDA\u6A21\u5F0F. \u6709\u4E9B\u529F\u80FD\u53EF\u80FD\u6703\u53D7\u5230\u9650\u5236."
+   },
+   "Login": {
+      "message": "\u767B\u5165"
+   },
+   "LoginError": {
+      "message": "\u932F\u8AA4\u5DF2\u8A18\u9304\u5230 LastPass. \u8ACB\u518D\u8A66\u4E00\u6B21."
+   },
+   "Login_to_LastPass": {
+      "message": "\u767B\u5165 LastPass"
+   },
+   "Logoff": {
+      "message": "\u767B\u51FA"
+   },
+   "MSI_PasswordKeeper": {
+      "message": "MSI PasswordKeeper"
+   },
+   "Male": {
+      "message": "\u7537\u6027"
+   },
+   "March": {
+      "message": "3\u6708"
+   },
+   "Master_Password": {
+      "message": "\u4E3B\u5BC6\u78BC"
+   },
+   "May": {
+      "message": "5\u6708"
+   },
+   "Meta": {
+      "message": "\u8A6E\u91CB\u8CC7\u6599"
+   },
+   "More": {
+      "message": "\u66F4\u591A"
+   },
+   "Move_to_Group": {
+      "message": "\u79FB\u81F3\u7FA4\u7D44"
+   },
+   "Mr": {
+      "message": "\u5148\u751F"
+   },
+   "Mrs": {
+      "message": "\u592B\u4EBA"
+   },
+   "Ms": {
+      "message": "\u5973\u58EB"
+   },
+   "MyPasswordSafe": {
+      "message": "MyPasswordSafe"
+   },
+   "My_LastPass_Vault": {
+      "message": "\u6211 LastPass \u5BC6\u78BC\u8CC7\u6599\u5EAB"
+   },
+   "Name_": {
+      "message": "\u59D3\u540D:"
+   },
+   "Nameproper": {
+      "message": "\u59D3\u540D"
+   },
+   "Never_AutoFill": {
+      "message": "\u6C38\u4E0D\u81EA\u52D5\u586B\u5BEB"
+   },
+   "Never_For_This_Domain": {
+      "message": "\u6392\u9664\u9019\u500B\u7DB2\u57DF"
+   },
+   "Never_For_This_Page": {
+      "message": "\u6392\u9664\u9019\u500B\u7DB2\u9801"
+   },
+   "No": {
+      "message": "\u5426"
+   },
+   "No_Thanks": {
+      "message": "\u4E0D\u8981,\u8B1D\u8B1D"
+   },
+   "No__I_do_not_want_LastPass_to_help_me_fill_forms_automatically": {
+      "message": "\u4E0D,\u6211\u4E0D\u60F3 LastPass \u5E6B\u6211\u81EA\u52D5\u586B\u5BEB\u8868\u683C"
+   },
+   "No__do_not_import_any_of_my_insecure_items": {
+      "message": "\u4E0D,\u4E0D\u532F\u5165\u4EFB\u4F55\u4E0D\u5B89\u5168\u7684\u8CC7\u6599"
+   },
+   "None_Available": {
+      "message": "\u7121\u6CD5\u4F7F\u7528"
+   },
+   "Not_Now": {
+      "message": "\u4E0D\u662F\u73FE\u5728"
+   },
+   "Notes": {
+      "message": "\u5099\u8A3B"
+   },
+   "Notes_": {
+      "message": "\u5099\u8A3B:"
+   },
+   "Notifications": {
+      "message": "\u901A\u77E5"
+   },
+   "November": {
+      "message": "11\u6708"
+   },
+   "OK": {
+      "message": "\u78BA\u8A8D"
+   },
+   "October": {
+      "message": "10\u6708"
+   },
+   "Offer_to_Generate_Secure_Passwords": {
+      "message": "\u63D0\u4F9B\u7522\u751F\u5B89\u5168\u7684\u5BC6\u78BC"
+   },
+   "Open_All": {
+      "message": "\u5168\u90E8\u958B\u555F"
+   },
+   "Open_Favorites": {
+      "message": "\u958B\u555F\u6211\u7684\u6700\u611B"
+   },
+   "Open_My_LastPass_Vault": {
+      "message": "\u958B\u555F\u6211 LastPass \u8CC7\u6599\u5EAB"
+   },
+   "Open_login_dialog_when_start_browser": {
+      "message": "\u555F\u52D5\u700F\u89BD\u5668\u6642\u6253\u958B\u767B\u5165\u5C0D\u8A71\u6846"
+   },
+   "Page_Down": {
+      "message": "\u4E0B\u4E00\u9801"
+   },
+   "Page_Up": {
+      "message": "\u4E0A\u4E00\u9801"
+   },
+   "Passpack": {
+      "message": "Passpack"
+   },
+   "Password": {
+      "message": "\u5BC6\u78BC"
+   },
+   "Password_": {
+      "message": "\u5BC6\u78BC:"
+   },
+   "Password_Agent": {
+      "message": "\u5BC6\u78BC\u7BA1\u7406\u7A0B\u5F0F"
+   },
+   "Password_Keeper": {
+      "message": "Password Keeper"
+   },
+   "Password_Reminder": {
+      "message": "\u5BC6\u78BC\u63D0\u793A"
+   },
+   "Password_Safe": {
+      "message": "Password Safe"
+   },
+   "Password_reminder_cannot_match_password": {
+      "message": "\u5BC6\u78BC\u63D0\u793A\u8207\u6B64\u5BC6\u78BC\u4E0D\u76F8\u7B26"
+   },
+   "Please_Make_a_Selection": {
+      "message": "\u8ACB\u9078\u64C7"
+   },
+   "Please_enter_a_Password_Reminder": {
+      "message": "\u8ACB\u8F38\u5165\u5BC6\u78BC\u63D0\u793A"
+   },
+   "Please_select_which_sites_you_wish_to_apply_this_change_": {
+      "message": "\u8ACB\u9078\u64C7\u8981\u61C9\u7528\u6B64\u8B8A\u66F4\u7684\u7DB2\u7AD9."
+   },
+   "Please_visit_https___lastpass_com_to_create_an_account_at_a_later_time_": {
+      "message": "\u8ACB\u53C3\u89C0 https://lastpass.com \u7DB2\u9801\u4E26\u5728\u7A0D\u5F8C\u6642\u5EFA\u7ACB\u4E00\u500B\u5E33\u865F."
+   },
+   "Preferences": {
+      "message": "\u504F\u597D"
+   },
+   "Print": {
+      "message": "\u5217\u5370"
+   },
+   "Profile": {
+      "message": "\u500B\u4EBA\u8CC7\u6599"
+   },
+   "Re_enter_Password": {
+      "message": "\u91CD\u65B0\u8F38\u5165\u5BC6\u78BC"
+   },
+   "Recently_Used": {
+      "message": "\u6700\u8FD1\u4F7F\u7528"
+   },
+   "Recheck_Page": {
+      "message": "\u518D\u6AA2\u67E5\u4E00\u6B21\u7DB2\u7AD9"
+   },
+   "Refresh_Sites": {
+      "message": "\u91CD\u65B0\u8F09\u5165\u7DB2\u7AD9"
+   },
+   "Reject": {
+      "message": "\u4E0D\u63A5\u53D7"
+   },
+   "Remember_Email": {
+      "message": "\u8A18\u4F4F\u96FB\u5B50\u90F5\u4EF6"
+   },
+   "Remember_Password": {
+      "message": "\u8A18\u4F4F\u5BC6\u78BC"
+   },
+   "Rename_Group": {
+      "message": "\u91CD\u65B0\u547D\u540D\u7FA4\u7D44"
+   },
+   "Replace_Existing_Site": {
+      "message": "\u53D6\u4EE3\u73FE\u5B58\u7DB2\u7AD9"
+   },
+   "Require_Every_Character_Type": {
+      "message": "\u9700\u8981\u6240\u6709\u5B57\u578B"
+   },
+   "Require_Password_Reprompt": {
+      "message": "\u9700\u8981\u5BC6\u78BC\u91CD\u65B0\u63D0\u793A"
+   },
+   "Respect_AutoComplete_off__allow_websites_to_disable_AutoFill": {
+      "message": "\u95DC\u65BC\u81EA\u52D5\u5B8C\u6210 = \u95DC\u9589: \u5141\u8A31\u7DB2\u7AD9\u7981\u7528\u81EA\u52D5\u586B\u5165"
+   },
+   "Right": {
+      "message": "\u5411\u53F3"
+   },
+   "RoboForm": {
+      "message": "RoboForm"
+   },
+   "Save": {
+      "message": "\u5132\u5B58"
+   },
+   "Save_All_Entered_Data": {
+      "message": "\u5132\u5B58\u6240\u6709\u8F38\u5165\u8CC7\u6599"
+   },
+   "Save_New_Site": {
+      "message": "\u5132\u5B58\u65B0\u7DB2\u9801"
+   },
+   "Save_Site": {
+      "message": "\u5132\u5B58\u7DB2\u7AD9"
+   },
+   "Save_a_disabled_One_Time_Password_locally_for_Account_Recovery": {
+      "message": "\u5132\u5B58\u7121\u6CD5\u4F7F\u7528\u7684\u4E00\u6B21\u6027\u5BC6\u78BC\u4F86\u5617\u8A66\u91CD\u65B0\u7372\u5F97\u5E33\u865F"
+   },
+   "Search": {
+      "message": "\u641C\u5C0B"
+   },
+   "Secure_Notes": {
+      "message": "\u5B89\u5168\u8A3B\u8A18"
+   },
+   "Security": {
+      "message": "\u5B89\u5168"
+   },
+   "Select": {
+      "message": "\u9078\u64C7"
+   },
+   "Select_All": {
+      "message": "\u5168\u9078"
+   },
+   "Send_anonymous_error_reporting_data_to_help_improve_LastPass": {
+      "message": "\u50B3\u9001\u533F\u540D\u932F\u8AA4\u5831\u544A\u7684\u8CC7\u6599,\u4EE5\u5354\u52A9 LastPass \u6539\u5584"
+   },
+   "September": {
+      "message": "9\u6708"
+   },
+   "Sesame_Multifactor_Authentication": {
+      "message": "Sesame \u591A\u8981\u7D20\u9A57\u8B49"
+   },
+   "Share": {
+      "message": "\u5206\u4EAB"
+   },
+   "Share_offer_from": {
+      "message": "\u5206\u4EAB\u63D0\u4F9B\u8868\u683C"
+   },
+   "Shift": {
+      "message": "Shift \u9375"
+   },
+   "Should_LastPass_remember_this_password_": {
+      "message": "\u662F\u5426\u8B93LastPass\u8A18\u4F4F\u9019\u500B\u5BC6\u78BC?"
+   },
+   "Show_Advanced_Options": {
+      "message": "\u986F\u793A\u9032\u968E\u9078\u9805"
+   },
+   "Show_Deleted_Sites": {
+      "message": "\u986F\u793A\u522A\u9664\u7DB2\u7AD9"
+   },
+   "Show_Form_Fill_Notifications": {
+      "message": "\u986F\u793A\u586B\u8868\u901A\u544A"
+   },
+   "Show_My_LastPass_Vault_After_Login": {
+      "message": "\u767B\u5165\u5F8C\u986F\u793A\u6211 LastPass \u7684\u5BC6\u78BC\u8CC7\u6599\u5EAB"
+   },
+   "Show_Notifications": {
+      "message": "\u986F\u793A\u901A\u544A"
+   },
+   "Show_Save_Site_Notifications": {
+      "message": "\u986F\u793A\u5132\u5B58\u7DB2\u7AD9\u901A\u544A"
+   },
+   "Show_Sites_in_Groups": {
+      "message": "\u4EE5\u7FA4\u7D44\u986F\u793A\u7DB2\u7AD9"
+   },
+   "Show_certain_notifications_only_after_click": {
+      "message": "\u6309\u4E00\u4E0B\u6ED1\u9F20\u5F8C\u624D\u6703\u986F\u793A\u67D0\u4E9B\u901A\u544A"
+   },
+   "Simplify_your_life__Use_LastPass_to_autofill_in_this_site_s_login_info_": {
+      "message": "\u7C21\u5316\u4F60\u7684\u751F\u6D3B: \u4F7F\u7528 LastPass \u81EA\u52D5\u5728\u9019\u500B\u7DB2\u7AD9\u8F38\u5165\u767B\u5165\u8CC7\u6599!"
+   },
+   "Site_Search": {
+      "message": "\u7DB2\u7AD9\u641C\u5C0B"
+   },
+   "Sites": {
+      "message": "\u7DB2\u7AD9"
+   },
+   "Special": {
+      "message": "\u7279\u5225"
+   },
+   "State___Province": {
+      "message": "\u5DDE / \u7701"
+   },
+   "Submit_Form": {
+      "message": "\u63D0\u4EA4\u8868\u683C"
+   },
+   "Text": {
+      "message": "\u6587\u5B57"
+   },
+   "The_LastPass_master_password_you_reentered_does_not_match": {
+      "message": "\u4F60\u91CD\u65B0\u8F38\u5165\u7684 LastPass \u4E3B\u5BC6\u78BC\u662F\u932F\u7684"
+   },
+   "This_is_a_shared_site__You_are_not_permitted_to_view_the_password_": {
+      "message": "\u9019\u662F\u4E00\u500B\u5206\u4EAB\u7684\u7DB2\u7AD9.\u4F60\u4E0D\u80FD\u67E5\u770B\u5BC6\u78BC."
+   },
+   "Time_Zone": {
+      "message": "\u6642\u5340"
+   },
+   "Title": {
+      "message": "\u6A19\u984C"
+   },
+   "To_create_your_account__please_re_enter_your_LastPass_master_password": {
+      "message": "\u8981\u5EFA\u7ACB\u4F60\u7684\u5E33\u865F,\u8ACB\u91CD\u65B0\u8F38\u5165\u4F60\u7684 LastPass \u4E3B\u5BC6\u78BC"
+   },
+   "To_get_started_with_LastPass__you_will_need_to_add_sites_to_your_account_": {
+      "message": "\u8981\u958B\u59CB\u4F7F\u7528 LastPass,\u4F60\u9700\u8981\u5C07\u7DB2\u7AD9\u65B0\u589E\u5230\u4F60\u7684\u5E33\u865F."
+   },
+   "To_protect_your_privacy_and_keep_your_data_confidential_": {
+      "message": "\u70BA\u4E86\u4FDD\u8B77\u4F60\u7684\u96B1\u79C1\u548C\u4FDD\u8B77\u4F60\u7684\u8CC7\u6599,"
+   },
+   "Tools": {
+      "message": "\u5DE5\u5177"
+   },
+   "Try_Again": {
+      "message": "\u518D\u8A66\u4E00\u6B21"
+   },
+   "TurboPasswords": {
+      "message": "TurboPasswords"
+   },
+   "URL_": {
+      "message": "\u7DB2\u5740:"
+   },
+   "Unselect_All": {
+      "message": "\u53D6\u6D88\u5168\u90E8\u9078\u64C7"
+   },
+   "Up": {
+      "message": "\u5411\u4E0A"
+   },
+   "Username_": {
+      "message": "\u4F7F\u7528\u8005\u540D\u7A31:"
+   },
+   "Version_": {
+      "message": "\u7248\u672C:"
+   },
+   "Warn_before_filling_insecure_forms": {
+      "message": "\u5728\u586B\u5BEB\u4E0D\u5B89\u5168\u8868\u683C\u6642\u5148\u8B66\u544A"
+   },
+   "Watch_a_video_on_basic_usage": {
+      "message": "\u89C0\u770B\u57FA\u672C\u4F7F\u7528\u6559\u5B78\u5F71\u7247"
+   },
+   "We_also_DO_NOT_keep_a_copy_or_backup_of_it_": {
+      "message": "\u6211\u5011\u4E5F\u4E0D\u6703\u4FDD\u6709\u4E00\u4EFD\u8907\u88FD\u6216\u5099\u4EFD\u7684."
+   },
+   "Welcome_to_LastPass_": {
+      "message": "\u6B61\u8FCE\u4F86\u5230 LastPass!"
+   },
+   "Windows": {
+      "message": "Windows"
+   },
+   "Would_you_like_to_set_up_a_Form_Filling_profile_now_": {
+      "message": "\u4F60\u60F3\u5EFA\u7ACB\u4E00\u500B\u586B\u8868\u7684\u500B\u4EBA\u8CC7\u6599\u55CE?"
+   },
+   "Yes": {
+      "message": "\u662F"
+   },
+   "Yes__let_me_choose_which_items_I_want_imported_into_LastPass": {
+      "message": "\u662F\u7684,\u8B93\u6211\u9078\u64C7\u6211\u60F3\u8981\u532F\u5165\u5230 LastPass \u7684\u9805\u76EE"
+   },
+   "Yes__let_me_enter_and_review_data_that_will_be_used_when_filling_forms": {
+      "message": "\u662F\u7684,\u8B93\u6211\u8F38\u5165\u548C\u5BE9\u67E5\u5C07\u4F7F\u7528\u65BC\u586B\u8868\u6642\u7684\u8CC7\u6599"
+   },
+   "You_must_agree_to_send_your_encrypted_data_to_LastPass_com___LastPass_com_encrypts_your_data_and_sends_it_to_its_secure_servers__No_one_at_LastPass_can_read_your_confidential_data_since_it_is_encrypted_using_your_secret_password_and_you_are_the_only_one_who_knows_your_password_": {
+      "message": "\u4F60\u5FC5\u9808\u540C\u610F\u4F60\u52A0\u5BC6\u7684\u8CC7\u6599\u50B3\u9001\u5230 LastPass.com.\n\nLastPass.com \u52A0\u5BC6\u4F60\u7684\u8CC7\u6599\u4E26\u50B3\u9001\u5230 LastPass \u5B89\u5168\u7684\u4F3A\u670D\u5668.\nLastPass \u7684\u4EFB\u4F55\u4EBA\u90FD\u7121\u6CD5\u8B80\u53D6\u4F60\u7684\u6A5F\u5BC6\u8CC7\u6599,\u56E0\u70BA\u5B83\u662F\u7528\u4F60\u7684\u5BC6\u78BC\u52A0\u5BC6,\u4F60\u662F\u552F\u4E00\u8AB0\u77E5\u9053\u4F60\u5BC6\u78BC\u7684\u4EBA."
+   },
+   "You_must_agree_to_the_terms_to_continue": {
+      "message": "\u4F60\u5FC5\u9808\u63A5\u53D7\u689D\u6B3E\u4EE5\u4FBF\u7E7C\u7E8C"
+   },
+   "You_must_enter_a_name_": {
+      "message": "\u4F60\u5FC5\u9808\u8F38\u5165\u4E00\u500B\u540D\u5B57"
+   },
+   "You_must_enter_a_unique_name_": {
+      "message": "\u4F60\u5FC5\u9808\u8F38\u5165\u4E00\u500B\u552F\u4E00\u7684\u540D\u7A31."
+   },
+   "You_must_restart_your_browser_before_all_of_the_changes_will_take_effect_": {
+      "message": "\u4F60\u5FC5\u9808\u91CD\u65B0\u555F\u52D5\u700F\u89BD\u5668,\u6240\u6709\u7684\u6539\u8B8A\u624D\u6703\u751F\u6548."
+   },
+   "Your_password_can_not_be_the_same_as_your_email_": {
+      "message": "\u4F60\u7684\u5BC6\u78BC\u4E0D\u80FD\u8207\u4F60\u7684\u96FB\u5B50\u90F5\u4EF6\u76F8\u540C."
+   },
+   "Your_password_is_easily_guessable_": {
+      "message": "\u4F60\u7684\u5BC6\u78BC\u5F88\u5BB9\u6613\u88AB\u731C\u5230."
+   },
+   "Your_password_is_too_short__It_must_be_at_least_6_characters_long": {
+      "message": "\u4F60\u7684\u5BC6\u78BC\u592A\u77ED. \u5FC5\u9808\u81F3\u5C11\u67096\u500B\u5B57\u5143"
+   },
+   "Your_password_reminder_serves_to_remind_you_of_what_your": {
+      "message": "\u4F60\u7684\u5BC6\u78BC\u63D0\u793A\u7528\u4F86\u63D0\u9192\u4F60\u6709\u95DC\u4F60\u7684"
+   },
+   "YubiKey_Multifactor_Authentication": {
+      "message": "YubiKey \u591A\u8981\u7D20\u9A57\u8B49"
+   },
+   "_Hide_": {
+      "message": "[\u96B1\u85CF]"
+   },
+   "_New_Pending_Share_Offers_": {
+      "message": "\uFF08\u65B0\u7684\u7B49\u5F85\u4E2D\u7684\u5206\u4EAB\uFF09"
+   },
+   "_Show_": {
+      "message": "[\u986F\u793A]"
+   },
+   "_none_": {
+      "message": "(\u7121)"
+   },
+   "actual_password_is__while_still_maintaining_its_secrecy_": {
+      "message": "\u5BE6\u969B\u7684\u5BC6\u78BC,\u4ECD\u7136\u4FDD\u6301\u5176\u4FDD\u5BC6."
+   },
+   "and": {
+      "message": "\u8207"
+   },
+   "contact_us_and_we_will_email_you_your_password_reminder_": {
+      "message": "\u8207\u6211\u5011\u806F\u7E6B,\u6211\u5011\u5C07\u5BC4\u7D66\u4F60\u5BC6\u78BC\u63D0\u793A."
+   },
+   "dummy": {
+      "message": "dummy, leave this here so we don't mess up the trailing comma"
+   },
+   "ext_": {
+      "message": "ext."
+   },
+   "favorites": {
+      "message": "\u6211\u7684\u6700\u611B"
+   },
+   "hour": {
+      "message": "\u5C0F\u6642"
+   },
+   "hours": {
+      "message": "\u5C0F\u6642"
+   },
+   "minutes": {
+      "message": "\u5206"
+   },
+   "privacy_statement": {
+      "message": "\u96B1\u79C1\u8072\u660E"
+   },
+   "recently_usedlower": {
+      "message": "\u6700\u8FD1\u4F7F\u7528"
+   },
+   "seconds": {
+      "message": "\u79D2"
+   },
+   "terms_of_service": {
+      "message": "\u670D\u52D9\u689D\u6B3E"
+   },
+   "we_DO_NOT_know_what_your_LastPass_password_is_": {
+      "message": "\u6211\u5011\u4E0D\u77E5\u9053\u4F60\u7684 LastPass \u5BC6\u78BC."
+   }
+}

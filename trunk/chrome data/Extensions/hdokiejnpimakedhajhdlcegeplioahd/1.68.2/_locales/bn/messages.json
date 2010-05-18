@@ -1,0 +1,44 @@
+{
+   "Add": {
+      "message": "\u09AF\u09CB\u0997 "
+   },
+   "Add_Secure_Note": {
+      "message": "\u09B8\u0982\u09B0\u0995\u09CD\u09B7\u09BF\u09A4 \u09B2\u09C7\u0996\u09BE \u09AF\u09CB\u0997 \u0995\u09B0\u09C1\u09A8 "
+   },
+   "Add_Site": {
+      "message": "\u09B8\u09BE\u0987\u099F \u09AF\u09CB\u0997 \u0995\u09B0\u09C1\u09A8 "
+   },
+   "Are_you_sure_you_want_to_have_LastPass_remember_your_password___This_will_significantly_decrease_the_security_of_your_LastPass_account_": {
+      "message": "\n\u0986\u09AA\u09A8\u09BF \u0995\u09BF \u09B8\u09A4\u09CD\u09AF\u09BF  \u0986\u09AA\u09A8\u09BE\u09B0 \u09B2\u09BE\u09B8\u09CD\u099F\u09AA\u09BE\u09B8 \u0995\u09C7 \u09AA\u09BE\u09B8\u0993\u09DF\u09BE\u09B0\u09CD\u09A1 \u09AE\u09A8\u09C7\u09B0\u09BE\u0996\u09BE\u09A4\u09C7 \u099A\u09BE\u09A8?  \u09AF\u09C7\u099F\u09BE \u0986\u09AA\u09A8\u09BE\u09B0 \u09B2\u09BE\u09B8\u09CD\u099F\u09AA\u09BE\u09B8 \u098F\u0995\u09BE\u0989\u09A8\u09CD\u099F \u098F\u09B0 \u09A8\u09BF\u09B0\u09BE\u09AA\u09A4\u09CD\u09A4\u09BE\u09B0 \u0996\u09C1\u09AC\u0987 \u0998\u09BE\u09B0\u099F\u09BF \u0995\u09B0\u09AC\u09C7! "
+   },
+   "Are_you_sure_you_would_like_to_delete_this_secure_note_": {
+      "message": "\u0986\u09AA\u09A8\u09BF \u0995\u09BF \u09B8\u09A4\u09CD\u09AF\u09BF \u098F\u0987 \u09B8\u0982\u09B0\u0995\u09CD\u09B7\u09BF\u09A4 \u09B2\u09C7\u0996\u09BE \u099F\u09BF\u0995\u09C7 \u09AE\u09C1\u099B\u09C7\u09AB\u09C7\u09B2\u09A4\u09C7 \u099A\u09BE\u09A8? "
+   },
+   "Are_you_sure_you_would_like_to_delete_this_site_": {
+      "message": "\u0986\u09AA\u09A8\u09BF \u0995\u09BF \u09B8\u09A4\u09CD\u09AF\u09BF \u098F\u0987 \u09B8\u09BE\u0987\u099F \u099F\u09BF\u0995\u09C7 \u09AE\u09C1\u099B\u09C7\u09AB\u09C7\u09B2\u09A4\u09C7 \u099A\u09BE\u09A8? "
+   },
+   "AutoFill": {
+      "message": "\u0986\u09AA\u09A8\u09BE\u0987 \u09B8\u0982\u09AA\u09C1\u09B0\u09A3 "
+   },
+   "Cancel": {
+      "message": "\u09AC\u09BE\u09A4\u09BF\u09B2 "
+   },
+   "Clear": {
+      "message": "\u09AA\u09B0\u09BF\u099B\u09A8\u09CD\u09A8 "
+   },
+   "Confirm": {
+      "message": "\u0985\u09A8\u09C1\u09AE\u09CB\u09A6\u09A8 "
+   },
+   "No": {
+      "message": "\u09A8\u09BE"
+   },
+   "Yes": {
+      "message": "\u09B9\u09CD\u09AF\u09BE\u0981"
+   },
+   "_none_": {
+      "message": "(none)"
+   },
+   "dummy": {
+      "message": "dummy, leave this here so we don't mess up the trailing comma"
+   }
+}

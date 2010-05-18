@@ -1,0 +1,110 @@
+{
+   "Add_Secure_Note": {
+      "message": "Tambahkan Catatan Aman"
+   },
+   "Add_Site": {
+      "message": "Tambahkan Situs"
+   },
+   "Are_you_sure_you_want_to_have_LastPass_remember_your_password___This_will_significantly_decrease_the_security_of_your_LastPass_account_": {
+      "message": "Apakah Anda yakin menginginkan LastPass untuk mnyimpan password anda? Ini akan mengurangin keamanan akun LastPass Anda!"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_secure_note_": {
+      "message": "Apakah Anda yakin ingin menghapus catatan aman ini?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_site_": {
+      "message": "Apakah Anda yakin ingin menghapus situs ini?"
+   },
+   "Built_": {
+      "message": "Versi:"
+   },
+   "Cancel": {
+      "message": "Batal"
+   },
+   "Confirm": {
+      "message": "Konfirmasikan"
+   },
+   "Copy_Password": {
+      "message": "Salin Sandi"
+   },
+   "Copy_Username": {
+      "message": "Salin Nama Pengguna"
+   },
+   "Delete": {
+      "message": "Menghapus"
+   },
+   "Edit": {
+      "message": "Edit"
+   },
+   "Edit_Form_Fields": {
+      "message": "Edit Formulir Isian"
+   },
+   "Favorite": {
+      "message": "Favorit"
+   },
+   "Group_": {
+      "message": "Grup:"
+   },
+   "Language": {
+      "message": "Bahasa"
+   },
+   "Login": {
+      "message": "Login"
+   },
+   "Logoff": {
+      "message": "Logoff"
+   },
+   "Name_": {
+      "message": "Nama:"
+   },
+   "No": {
+      "message": "Tidak"
+   },
+   "Notes_": {
+      "message": "Catatan:"
+   },
+   "Password_": {
+      "message": "Password:"
+   },
+   "Preferences": {
+      "message": "Pengaturan"
+   },
+   "Remember_Password": {
+      "message": "Ingat Password"
+   },
+   "Save": {
+      "message": "Simpan"
+   },
+   "Search": {
+      "message": "Cari"
+   },
+   "URL_": {
+      "message": "URL:"
+   },
+   "Username_": {
+      "message": "Nama Pengguna:"
+   },
+   "Version_": {
+      "message": "Versi:"
+   },
+   "Yes": {
+      "message": "Ya"
+   },
+   "You_must_enter_a_name_": {
+      "message": "Anda harus memasukkan nama."
+   },
+   "_none_": {
+      "message": "(kosong)"
+   },
+   "dummy": {
+      "message": "dummy, leave this here so we don't mess up the trailing comma"
+   },
+   "favorites": {
+      "message": "favorit"
+   },
+   "hour": {
+      "message": "jam"
+   },
+   "hours": {
+      "message": "jam"
+   }
+}

@@ -1,0 +1,143 @@
+﻿<html>
+<head>
+    <title>ChromeRIL Options</title>
+    <script type="text/javascript" src="jquery-1.3.2.js"></script>
+    <script type="text/javascript">
+var usernameAndPasswordChecked = false;
+
+function saveOptions() {
+    localStorage['username'] = document.getElementById('username').value;
+    localStorage['password'] = document.getElementById('password').value;
+    localStorage['authchecked'] = true;
+
+    // notify the extension to reload the options
+    var port = chrome.extension.connect();
+    port.postMessage({message: "reloadoptions"});
+
+    // Update status to let user know options were saved.
+    var status = document.getElementById("status");
+    status.innerHTML = "Options Saved.";
+    setTimeout(function() {
+        status.innerHTML = "";
+    }, 750);    
+}
+    
+function loadOptions() {
+    if (localStorage['username']) {
+        document.getElementById('username').value = localStorage['username'];
+    }
+    if (localStorage['password']) {
+        document.getElementById('password').value = localStorage['password'];
+    }
+    if (localStorage['authchecked']) {
+        usernameAndPasswordChecked = localStorage['authchecked'];
+    }
+
+    needToCheckAuth(!usernameAndPasswordChecked);
+}
+
+function checkAuthentication(username, password, callback) {
+    var xhr = new XMLHttpRequest();
+
+    try {
+        console.log("Sending request...");
+
+        // Set a timer to give up after 5 seconds
+        var timerId = window.setTimeout(function() {
+                    console.log("aborted auth after 5 seconds");
+                    xhr.abort();
+                    if (callback) {
+                        callback(false);
+                    }
+                }, 5000);    
+
+        xhr.onreadystatechange = function() {
+            if ((xhr.readyState == 4)) {
+                var authgood = false;
+
+                authgood = (xhr.status == 200);
+                if (xhr.responseText) {
+                    console.log("Got response: " + xhr.responseText);
+                    window.clearTimeout(timerId);
+                }
+
+                if (callback) {
+                    callback(authgood);
+                }                    
+            }
+        }
+
+        xhr.onerror = function(error) {
+            console.log("error: " + error);
+        }
+
+        var url = "https://readitlaterlist.com/v2/auth?" + jQuery.param(
+                {username: username, password: password, apikey: "c3cp9T5fAb3e9L5391gf4d4G5bd3t308"});
+        xhr.open("GET", url, true);
+        xhr.send(null);
+    } 
+    catch (e) 
+    {
+        console.log("ex: " + e);
+        console.error("exception: " + e);
+    }   
+}
+
+
+
+function needToCheckAuth(shouldCheck) {
+    console.log('shouldCheck=' + shouldCheck);
+    document.getElementById('checkAuth').disabled = !shouldCheck;
+    document.getElementById('save').disabled = shouldCheck;
+}
+
+function checkUsernamePassword() {
+    document.getElementById('status').innerHTML = "Checking...";
+    checkAuthentication(
+        document.getElementById('username').value,
+        document.getElementById('password').value,
+        function(auth) {
+            console.log('auth=' + auth);
+            setTimeout(function() { 
+                    document.getElementById('status').innerHTML = 
+                        (auth) ? "Username/password are good." :
+                                 "Invalid username/password.";
+                    needToCheckAuth(!auth); 
+                }, 750);
+        }
+        );
+}
+
+function authMaybeChanged() {
+    usernameAndPasswordChecked = 
+        localStorage['authchecked']
+        &&
+        (document.getElementById('username').value == localStorage['username'])
+        &&
+        (document.getElementById('password').value == localStorage['password']);
+    console.log('usernameAndPasswordChecked=' + usernameAndPasswordChecked);
+
+    needToCheckAuth(!usernameAndPasswordChecked);
+}
+
+    </script>
+</head>
+
+<body onload="loadOptions()" >
+<h1>Chrome RIL Options</h1>
+
+<form>
+    <p>
+    Please make sure the username and password for Read It Later (<a href="http://readitlaterlist.com/l/">readitlaterlist.com</a>) are correct:
+    </p>
+    Username: <input type="text" id="username" value="" onkeyup="authMaybeChanged()" /><br/>
+    Password: <input type="password" id="password" value="" onkeyup="authMaybeChanged()" />
+</form>
+
+<button onclick="checkUsernamePassword()" id="checkAuth">Check Username/Password</button>
+<button onclick="saveOptions()" id="save" disabled="true">Save</button>
+
+<div id="status"></div>
+
+</body>
+</html>

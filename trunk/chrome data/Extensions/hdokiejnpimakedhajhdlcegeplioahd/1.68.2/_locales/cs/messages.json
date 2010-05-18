@@ -1,0 +1,1148 @@
+{
+   "0_9": {
+      "message": "0-9"
+   },
+   "1Password": {
+      "message": "1Heslo"
+   },
+   "1__Insert_your_YubiKey_in_the_USB_port_with_the_USB_contact_facing_upward": {
+      "message": "1. Vlo\u017Ete do USB zd\u00ED\u0159ky sv\u016Fj YubiKey s USB kontaktem sm\u011B\u0159uj\u00EDc\u00EDm vzh\u016Fru"
+   },
+   "1__Run_the_LastPass_Sesame_application_to_generate_a_one_time_password": {
+      "message": "1. Spus\u0165te aplikaci LastPass Sesame pro vygenerov\u00E1n\u00ED jednor\u00E1zov\u00E9ho hesla"
+   },
+   "2__Paste_the_one_time_password_in_the_input_box_below_and_click__Authenticate_": {
+      "message": "2. Vlo\u017Ete jednor\u00E1zov\u00E9 heslo do kolonky n\u00ED\u017Ee a klikn\u011Bte na 'Ov\u011B\u0159it'"
+   },
+   "2__Wait_until_your_YubiKey_touch_button_shines_with_a_steady_light": {
+      "message": "2. Po\u010Dkejte dokud nebude dotekov\u00E9 tla\u010D\u00EDtko na Va\u0161em YubiKey trvale sv\u00EDtit"
+   },
+   "3__Hold_your_fingertip_on_the_touch_button_for_2_seconds": {
+      "message": "3. P\u0159ilo\u017Ete sv\u016Fj palec na dotekov\u00E9 tla\u010D\u00EDtko po dobu 2 vte\u0159in"
+   },
+   "ACTION": {
+      "message": "AKCE"
+   },
+   "A_Zupper": {
+      "message": "A-Z"
+   },
+   "A_required_update_is_available_for_LastPass__Please_press_OK_to_begin_download_and_installation_": {
+      "message": "Je dostupn\u00E1 vy\u017Eadovan\u00E1 aktualizace. Pros\u00EDm stiskn\u011Bte OK pro za\u010D\u00E1tek stahov\u00E1n\u00ED a instalace."
+   },
+   "A_retry_file_has_been_found__This_likely_means_that_not_all_of_your_site_changes_have_been_saved__Would_you_like_to_delete_this_file_and_potentially_lose_some_changes_": {
+      "message": "Obnoven\u00FD soubor byl nalezen. To zpravidla znamen\u00E1, \u017Ee ne v\u0161echny Va\u0161e str\u00E1nky byly ulo\u017Eeny. Chcete tento soubor odstranit s p\u0159\u00EDpadn\u00FDm rizikem ztr\u00E1ty n\u011Bkter\u00FDch proveden\u00FDch zm\u011Bn?"
+   },
+   "A_server_error_occurred_while_processing_your_request_": {
+      "message": "Server ohl\u00E1sil chybu p\u0159i zpracov\u00E1v\u00E1n\u00ED Va\u0161eho dotazu."
+   },
+   "About___": {
+      "message": "O programu..."
+   },
+   "Accept": {
+      "message": "P\u0159ijmout"
+   },
+   "Account_Settings": {
+      "message": "Nastaven\u00ED \u00FA\u010Dtu"
+   },
+   "Actionproper": {
+      "message": "Akce"
+   },
+   "Add": {
+      "message": "P\u0159idat"
+   },
+   "Add_Credit_Card": {
+      "message": "P\u0159idat kreditn\u00ED kartu"
+   },
+   "Add_Field": {
+      "message": "P\u0159idat pole"
+   },
+   "Add_Identity": {
+      "message": "P\u0159idat identitu"
+   },
+   "Add_New_Site": {
+      "message": "P\u0159idat novou str\u00E1nku"
+   },
+   "Add_Profile": {
+      "message": "P\u0159idat profil"
+   },
+   "Add_Secure_Note": {
+      "message": "P\u0159idat bezpe\u010Dnou pozn\u00E1mku"
+   },
+   "Add_Site": {
+      "message": "P\u0159idat str\u00E1nku"
+   },
+   "Address_1": {
+      "message": "Adresa 1"
+   },
+   "Address_2": {
+      "message": "Adresa 2"
+   },
+   "Address_3": {
+      "message": "Adresa 3"
+   },
+   "Advanced": {
+      "message": "Pokro\u010Dil\u00E9"
+   },
+   "All": {
+      "message": "V\u0161e"
+   },
+   "Allow_LastPass_to_find_insecure_data_on_your_computer_": {
+      "message": "Povolit LastPass nalezen\u00ED nezabezpe\u010Den\u00FDch dat ve Va\u0161em po\u010D\u00EDta\u010Di?"
+   },
+   "Alt": {
+      "message": "Alt"
+   },
+   "Always_Choose_Profile_and_Credit_Card": {
+      "message": "V\u017Edy zvolit profil a kreditn\u00ED kartu"
+   },
+   "An_Update_is_Available__Would_you_like_to_install_": {
+      "message": "Je dostupn\u00E1 aktualizace. Chcete ji nainstalovat?"
+   },
+   "An_error_has_been_encountered_while_loading_your_sites__Please_relogin_": {
+      "message": "P\u0159i na\u010D\u00EDt\u00E1n\u00ED str\u00E1nky do\u0161lo k chyb\u011B. Pros\u00EDm, p\u0159ihla\u0161te se znovu."
+   },
+   "An_error_occurred_while_importing_your_Google_Chrome_passwords_": {
+      "message": "Do\u0161lo k chyb\u011B p\u0159i importu hesel z Google Chrome."
+   },
+   "Appearance": {
+      "message": "Vzhled"
+   },
+   "April": {
+      "message": "Duben"
+   },
+   "Are_you_sure_you_want_to_have_LastPass_remember_your_password___This_will_significantly_decrease_the_security_of_your_LastPass_account_": {
+      "message": "Opravdu chcete, aby si LastPass zapamatovat Va\u0161e heslo? Toto opat\u0159en\u00ED znateln\u011B sn\u00ED\u017E\u00ED bezpe\u010Dnost Va\u0161e LastPass \u00FA\u010Dtu."
+   },
+   "Are_you_sure_you_would_like_to_delete_this_field_": {
+      "message": "Opravdu chcete odstranit toto pole?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_form_fill_profile_": {
+      "message": "Opravdu chcete odstranit tento profil?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_generated_password_": {
+      "message": "Opravdu chcete vymazat toto vygenerovan\u00E9 heslo?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_group_": {
+      "message": "Jste si jisti, \u017Ee chcete vymazat tuto skupinu?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_secure_note_": {
+      "message": "Opravdu chcete odstranit tuto bezpe\u010Dnou pozn\u00E1mku?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_site_": {
+      "message": "Opravdu chcete odstranit tuto str\u00E1mku?"
+   },
+   "August": {
+      "message": "Srpen"
+   },
+   "Authenticate": {
+      "message": "Ov\u011B\u0159it"
+   },
+   "Authentication_Failed_": {
+      "message": "Autentizace selhala."
+   },
+   "AutoFill": {
+      "message": "Automaticky vyplnit"
+   },
+   "AutoLogin": {
+      "message": "Automatick\u00E9 p\u0159ihl\u00E1\u0161en\u00ED"
+   },
+   "Automatically_Fill_Login_Information": {
+      "message": "Automaticky vyplnit p\u0159ihla\u0161ovac\u00ED informace"
+   },
+   "Automatically_Logoff_after_idle__mins_": {
+      "message": "Automaticky odhl\u00E1sit p\u0159i ne\u010Dinnosti (min)"
+   },
+   "Automatically_Logoff_when_all_browsers_are_closed_and_Chrome_has_been_closed_for__mins_": {
+      "message": "Automaticky odhl\u00E1sit, kdy\u017E jsou v\u0161echna okna prohl\u00ED\u017Ee\u010De zav\u0159en\u00E1 a Chrome byl zav\u0159en po dobu (minuty)"
+   },
+   "Automatically_login_to_sites_if_time_since_last_login____seconds_": {
+      "message": "Automaticky p\u0159ihl\u00E1sit na str\u00E1nky, pokud doba od posledn\u00EDho p\u0159ihl\u00E1\u0161en\u00ED \u003E (sekundy)"
+   },
+   "Avoid_Ambiguous_Characters": {
+      "message": "Nepou\u017Eivat snadno zam\u011Bniteln\u00E9 znaky"
+   },
+   "Binary_Component_": {
+      "message": "Bin\u00E1rn\u00ED slo\u017Eka:"
+   },
+   "Birthday": {
+      "message": "Narozeniny"
+   },
+   "Blacklist": {
+      "message": "V\u00E1\u0161 \u00FA\u010Det byl do\u010Dasn\u011B zablokov\u00E1n (5 minut) kv\u016Fli p\u0159\u00EDli\u0161n\u00E9mu po\u010Dtu pokus\u016F o p\u0159ihl\u00E1\u0161en\u00ED"
+   },
+   "Blog": {
+      "message": "Blog"
+   },
+   "Browse_the_web_as_you_normally_would_and_LastPass_will_automatically_remember_passwords_as_you_enter_them_": {
+      "message": "Prohl\u00ED\u017Eejte internet jako doposud, LastPass bude s\u00E1m ukl\u00E1dat V\u00E1mi vypl\u0148ovan\u00E1 hesla."
+   },
+   "Built_": {
+      "message": "Vystaven\u00FD:"
+   },
+   "But_I_m_a_forgetful_person___what_should_I_do_if_I_forget_my_password_": {
+      "message": "J\u00E1 jsem ale zapomn\u011Btliv\u00FD(\u00E1)...co m\u00E1m d\u011Blat, pokud zapomenu heslo?"
+   },
+   "Can_t_find_hidden_LastPass_window": {
+      "message": "Nelze nal\u00E9zt skryt\u00E9 okno LastPass."
+   },
+   "Cancel": {
+      "message": "Zru\u0161it"
+   },
+   "Change": {
+      "message": "Zm\u011Bna"
+   },
+   "Change_Password": {
+      "message": "Zm\u011Bnit heslo"
+   },
+   "Check_For_Updates": {
+      "message": "Zkontrolovat aktualizace"
+   },
+   "Checkbox": {
+      "message": "Checkbox"
+   },
+   "Checking_For_Updates___": {
+      "message": "Kontroluji aktualizace"
+   },
+   "Choose_Profile_and_Credit_Card": {
+      "message": "Zvolte profil a kreditn\u00ED katru"
+   },
+   "City___Town": {
+      "message": "M\u011Bsto"
+   },
+   "Clear": {
+      "message": "Vymazat"
+   },
+   "Clear_Clipboard_after_use__seconds_": {
+      "message": "Vymazat schr\u00E1nku po pou\u017Eit\u00ED (sekund)"
+   },
+   "Clear_Forms": {
+      "message": "Vy\u010Distit formul\u00E1\u0159e"
+   },
+   "Clear_Local_Cache": {
+      "message": "Vymazat m\u00EDstn\u00ED pam\u011B\u0165"
+   },
+   "Click_Continue_to_start_using_LastPass_": {
+      "message": "Klikn\u011Bte na Pokra\u010Dovat abyste mohli za\u010D\u00EDt pou\u017E\u00EDvat LastPass"
+   },
+   "Click_here_to_launch_account_settings": {
+      "message": "Klikn\u011Bte sem pro nastaven\u00ED \u00FA\u010Dtu"
+   },
+   "Click_here_to_launch_feedback": {
+      "message": "Klikn\u011Bte sem pro zanech\u00E1n\u00ED zp\u011Btn\u00E9 vazby"
+   },
+   "Click_here_to_watch_a_video_on_basic_usage_": {
+      "message": "Klikn\u011Bte sem pro uk\u00E1zkov\u00E9 video."
+   },
+   "Close": {
+      "message": "Zav\u0159\u00EDt"
+   },
+   "Collapse_All": {
+      "message": "Zav\u0159\u00EDt v\u0161e"
+   },
+   "Company": {
+      "message": "Spole\u010Dnost"
+   },
+   "Configure_Form_Fill": {
+      "message": "Nastavte vypln\u011Bn\u00ED formul\u00E1\u0159e"
+   },
+   "Confirm": {
+      "message": "Potvrdit"
+   },
+   "Congratulations": {
+      "message": "Blahop\u0159ejeme"
+   },
+   "Continue": {
+      "message": "Pokra\u010Dovat"
+   },
+   "Copy": {
+      "message": "Kop\u00EDrovat"
+   },
+   "Copy_Password": {
+      "message": "Kop\u00EDrovat heslo"
+   },
+   "Copy_Username": {
+      "message": "Kop\u00EDrovat p\u0159ihla\u0161ovac\u00ED jm\u00E9no"
+   },
+   "Copyright_2008_LastPass__All_Rights_Reserved__Portions_of_this_software_were_licensed_from_third_parties_as_described_at_": {
+      "message": "Copyright 2008 LastPass. V\u0161echna pr\u00E1va vyhrazena. Sou\u010D\u00E1sti tohoto software byly licencov\u00E1ny t\u0159et\u00EDmi stranami, jak je pops\u00E1no v:"
+   },
+   "Country": {
+      "message": "Zem\u011B"
+   },
+   "County": {
+      "message": "Kraj"
+   },
+   "Create_Account": {
+      "message": "Vytvo\u0159it \u00FA\u010Det"
+   },
+   "Create_Sub_Group": {
+      "message": "Vytvo\u0159it podskupinu"
+   },
+   "Create_an_Account": {
+      "message": "Vytvo\u0159it \u00FA\u010Det"
+   },
+   "Creating_Account___": {
+      "message": "Vytv\u00E1\u0159\u00EDm \u00FA\u010Det..."
+   },
+   "Ctrl": {
+      "message": "Ctrl"
+   },
+   "December": {
+      "message": "Prosinec"
+   },
+   "Default_Form_Fill_Profile": {
+      "message": "V\u00FDchoz\u00ED profil"
+   },
+   "Delete": {
+      "message": "Vymazat"
+   },
+   "Delete_Group": {
+      "message": "Vymazat skupinu"
+   },
+   "Disable_Insecure_Chrome_Password_Manager": {
+      "message": "Zak\u00E1zat nezabezpe\u010Den\u00E9ho Spr\u00E1vce Hesel Chrome"
+   },
+   "Disable_Multifactor_Authentication": {
+      "message": "Zak\u00E1zat v\u00EDce-faktorov\u00E9 ov\u011B\u0159ov\u00E1n\u00ED"
+   },
+   "Do_not_re_prompt_for_": {
+      "message": "Znovu neupozor\u0148ovat na"
+   },
+   "Do_you_really_want_to_quit___You_cannot_use_LastPass_without_creating_an_account_": {
+      "message": "Chcete opravdu skon\u010Dit? Bez vytvo\u0159en\u00ED \u00FA\u010Dtu nelze LastPass pou\u017E\u00EDvat."
+   },
+   "Down": {
+      "message": "Dol\u016F"
+   },
+   "Dr": {
+      "message": "Doktor"
+   },
+   "Dutch": {
+      "message": "Nizozem\u0161tina"
+   },
+   "Edit": {
+      "message": "Zm\u011Bnit"
+   },
+   "Edit_Form_Fields": {
+      "message": "Zm\u011Bnit formul\u00E1\u0159ov\u00E1 pole"
+   },
+   "Email": {
+      "message": "Email"
+   },
+   "Email_already_in_use__have_you_forgotten_your_password_": {
+      "message": "Elektronick\u00E1 adresa je ji\u017E pou\u017E\u00EDv\u00E1na, zapomn\u011Bli jste Va\u0161e heslo?"
+   },
+   "End": {
+      "message": "Konec"
+   },
+   "English": {
+      "message": "Anglicky"
+   },
+   "ErrorGetAcctsMsg": {
+      "message": "P\u0159i na\u010D\u00EDt\u00E1n\u00ED Va\u0161ich str\u00E1nek do\u0161lo k chyb\u011B. Pros\u00EDm, zkuste se p\u0159ihl\u00E1sit pozd\u011Bji."
+   },
+   "ErrorLoginMsg": {
+      "message": "P\u0159i p\u0159ihla\u0161ov\u00E1n\u00ED do LastPass do\u0161lo k chyb\u011B. Pros\u00EDm, zkontrolujte sv\u00E9 internetov\u00E9 p\u0159ipojen\u00ED."
+   },
+   "ErrorSendingMsg": {
+      "message": "P\u0159i pokusu kontaktovat server do\u0161lo k chyb\u011B. Pros\u00EDm, zkontrolujte Va\u0161e internetov\u00E9 p\u0159ipojen\u00ED."
+   },
+   "ErrorSessionMsg": {
+      "message": "Vypad\u00E1 to, \u017Ee va\u0161e LastPass relace vypr\u0161ela. P\u0159ihlaste se znovu."
+   },
+   "ExistingUsersOTPPrompt": {
+      "message": "LastPass m\u016F\u017Ee ulo\u017Eit va\u0161e jednor\u00E1zov\u00E9 heslo na lok\u00E1ln\u00ED disk, tak\u017Ee pokud v budoucnu zapomenete sv\u00E9 hlavn\u00ED heslo, budete moci obnovit \u00FA\u010Det s t\u00EDmto heslem. Jednor\u00E1zov\u00E9 heslo na disku bude zablokovan\u00E9 do t\u00E9 doy, dokud nebude odblokov\u00E1no na serveru.\n\nP\u0159ejete si spustit obnovu \u00FA\u010Dtu?"
+   },
+   "Expand_All": {
+      "message": "Rozbalit v\u0161e"
+   },
+   "Export_To": {
+      "message": "Exportovat do"
+   },
+   "Favorite": {
+      "message": "Obl\u00EDben\u00E9"
+   },
+   "February": {
+      "message": "\u00DAnor"
+   },
+   "Feedback": {
+      "message": "V\u00E1\u0161 n\u00E1zor"
+   },
+   "Female": {
+      "message": "\u017Dena"
+   },
+   "Fields_": {
+      "message": "Pole:"
+   },
+   "Fill_Current": {
+      "message": "Vyplnit sou\u010Dasn\u00FD"
+   },
+   "Fill_Form": {
+      "message": "Vyplnit formul\u00E1\u0159"
+   },
+   "Fill_Forms": {
+      "message": "Vyplnit formul\u00E1\u0159e"
+   },
+   "Fill_In_Default_Form_Fill_Profile": {
+      "message": "Vyplnit pomoc\u00ED p\u0159ednastaven\u00E9ho profilu pro vypl\u0148ov\u00E1n\u00ED formul\u00E1\u0159\u016F"
+   },
+   "Fill_In_Next_Login__When_Multiple_": {
+      "message": "Vypl\u0148te Dal\u0161\u00ED P\u0159ihla\u0161. Jm\u00E9no (Pokud je jich v\u00EDc)"
+   },
+   "Fill_In_Previous_Login__When_Multiple_": {
+      "message": "Vypl\u0148te P\u0159edchoz\u00ED P\u0159ihla\u0161. Jm\u00E9no (Pokud je jich v\u00EDc)"
+   },
+   "FillableFormDetected": {
+      "message": "Na str\u00E1nce byl detekov\u00E1n vyplniteln\u00FD prvek"
+   },
+   "Find_a_site": {
+      "message": "Naj\u00EDt str\u00E1nku"
+   },
+   "Firefox_Password_Manager": {
+      "message": "Spr\u00E1vce hesel Firefox"
+   },
+   "For_each_coordinate_listed_below__find_the_value_on_your_grid_and_enter_the_value_": {
+      "message": "Pro ka\u017Ed\u00FD n\u00ED\u017Ee uveden\u00FD koordin\u00E1t nalezn\u011Bte hodnotu na Va\u0161em gridu (\u0161ifrov\u00E9 s\u00EDti) a vlo\u017Ete ji."
+   },
+   "Form_Fill": {
+      "message": "Vyplnit formul\u00E1\u0159"
+   },
+   "Form_Name_": {
+      "message": "N\u00E1zev Formul\u00E1\u0159e"
+   },
+   "Forums": {
+      "message": "F\u00F3ra"
+   },
+   "Gender": {
+      "message": "Pohlav\u00ED"
+   },
+   "General": {
+      "message": "Hlavn\u00ED"
+   },
+   "Generate": {
+      "message": "Vygenerovat"
+   },
+   "GeneratePassword": {
+      "message": "Pokud vytv\u00E1\u0159\u00EDte \u00FA\u010Det, nebo m\u011Bn\u00EDte heslo, klikn\u011Bte na 'vytvo\u0159it' za \u00FA\u010Delem vygenerov\u00E1n\u00ED jedine\u010Dn\u00E9ho a bezpe\u010Dn\u00E9ho hesla prost\u0159ednictv\u00EDm LastPass."
+   },
+   "Generate_Secure_Password": {
+      "message": "Vygenerovat bezpe\u010Dn\u00E9 heslo"
+   },
+   "Generated_Password_for": {
+      "message": "Vygenerovan\u00E9 heslo pro"
+   },
+   "Generic_CSV_File": {
+      "message": "Obecn\u00FD CSV soubor"
+   },
+   "Go_Premium_": {
+      "message": "P\u0159ej\u00EDt na verzi Premium!"
+   },
+   "Google_Chrome": {
+      "message": "Google Chrome"
+   },
+   "Google_Chrome_Password_Manager": {
+      "message": "Spr\u00E1vce hesel Google Chrome"
+   },
+   "Group_": {
+      "message": "Skupina:"
+   },
+   "Help_Translate": {
+      "message": "Pomoci s p\u0159ekladem"
+   },
+   "Help___": {
+      "message": "Pomoc..."
+   },
+   "Highlight_input_boxes": {
+      "message": "Zv\u00FDraznit vstupn\u00ED pole"
+   },
+   "History": {
+      "message": "Historie"
+   },
+   "Home": {
+      "message": "Domov"
+   },
+   "HotKeys": {
+      "message": "Zkratky"
+   },
+   "IMPORT_": {
+      "message": "IMPORT?"
+   },
+   "IT_IS_CRITICAL_THAT_YOU_NEVER_FORGET_YOUR_NEW_LASTPASS_PASSWORD_": {
+      "message": "JE NESM\u00CDRN\u011A D\u016ELE\u017DIT\u00C9, ABYSTE NIKDY NEZAPOMN\u011ALI SV\u00C9 LASTPASS HESLO."
+   },
+   "I_forgot_my_password__Help_": {
+      "message": "Zapomn\u011Bl jsem heslo, pomoc"
+   },
+   "I_have_read_and_agree_with_the": {
+      "message": "\u010Cetl jsem a souhlas\u00EDm s"
+   },
+   "I_understand_that_my_encrypted_data_will_be_sent_to_LastPass": {
+      "message": "Rozum\u00EDm, \u017Ee m\u00E1 k\u00F3dovan\u00E1 data budou odesl\u00E1na do LastPass"
+   },
+   "Identities": {
+      "message": "Identity"
+   },
+   "Identity": {
+      "message": "Identita"
+   },
+   "If_you_already_have_a_LastPass_account_you_can_close_this_window_and_login_": {
+      "message": "Pokud ji\u017E m\u00E1te LastPass \u00FA\u010Det, m\u016F\u017Eete zav\u0159\u00EDt toho okno a p\u0159ihl\u00E1\u0161en\u00ED."
+   },
+   "If_you_do_end_up_forgetting_your_LastPass_master_password_": {
+      "message": "Pokud ji\u017E nezapomenete LastPass hlavn\u00ED heslo,"
+   },
+   "If_you_lost_your_Sesame_device__click_here_to_disable_Sesame_authentication": {
+      "message": "Pokud jste ztratili Va\u0161e za\u0159\u00EDzen\u00ED Sesame, klikn\u011Bte sem pro zak\u00E1z\u00E1n\u00ED ov\u011B\u0159ov\u00E1n\u00ED Sesame."
+   },
+   "If_you_lost_your_YubiKey_device__click_here_to_disable_YubiKey_authentication": {
+      "message": "Pokud ztrat\u00EDte sv\u016Fj YubiKey, klikn\u011Bte zde pro zablokov\u00E1n\u00ED p\u0159ihla\u0161ov\u00E1n\u00ED pomoc\u00ED tohoto za\u0159\u00EDzen\u00ED."
+   },
+   "If_you_lost_your_grid__click_here_to_disable_grid_authentication": {
+      "message": "Pokud jste ztratili V\u00E1\u0161 grid (\u0161ifrovou s\u00ED\u0165), klikn\u011Bte zde pro zru\u0161en\u00ED ov\u011B\u0159ov\u00E1n\u00ED za pomoci grid."
+   },
+   "Import": {
+      "message": "Vlo\u017Eit"
+   },
+   "Import_From": {
+      "message": "Vlo\u017Eit formul\u00E1\u0159"
+   },
+   "Import_Your_Data": {
+      "message": "Importovat va\u0161e data"
+   },
+   "Install_the_binary_version_of_LastPass_for_Chrome_to_enable_automatic_logoff_after_idle": {
+      "message": "Nainstalujte si bin\u00E1rn\u00ED verzi LastPass pro Google Chrome, pro zp\u0159\u00EDstupn\u011Bn\u00ED automatick\u00E9ho odl\u00E1\u0161en\u00ED p\u0159i ne\u010Dinnosti"
+   },
+   "Instructions": {
+      "message": "Instrukce"
+   },
+   "Invalid_Password_": {
+      "message": "Nespr\u00E1vn\u00E9 heslo."
+   },
+   "Invalid_email_address__try_again": {
+      "message": "Neplatn\u00E1 elektronick\u00E1 adresa, zkuste to znovu"
+   },
+   "January": {
+      "message": "Leden"
+   },
+   "July": {
+      "message": "\u010Cervenec"
+   },
+   "June": {
+      "message": "\u010Cerven"
+   },
+   "KeePass": {
+      "message": "KeePass"
+   },
+   "Keep_a_history_of_my_logins_and_form_fills": {
+      "message": "Zachovat historii m\u00FDch p\u0159ihla\u0161ovac\u00EDch \u00FAdaj\u016F"
+   },
+   "Language": {
+      "message": "Jazyk"
+   },
+   "LastPass": {
+      "message": "LastPass"
+   },
+   "LastPass_CSV_File": {
+      "message": "CSV Soubor LastPass"
+   },
+   "LastPass_Chrome_Toolbar": {
+      "message": "N\u00E1strojov\u00E1 li\u0161ta LastPass pro Chrome"
+   },
+   "LastPass_Encrypted_File": {
+      "message": "LastPass zakodov\u00E1n\u00FD soubor"
+   },
+   "LastPass_Grid_Multifactor_Authentication": {
+      "message": "V\u00EDce-faktorov\u00E9 ov\u011B\u0159ov\u00E1n\u00ED LastPass Grid"
+   },
+   "LastPass_can_automatically_fill_web_page_forms_with_a_single_click___Using_automatic__Form_Filling__will_not_only_save_you_time__but_will_also_enhance_your_security_when_shopping_online_": {
+      "message": "LastPass m\u016F\u017Ee automaticky vypl\u0148ovat formul\u00E1\u0159e na webov\u00FDch str\u00E1nk\u00E1ch jedin\u00FDm kliknut\u00EDm. Pou\u017Eit\u00ED automatick\u00E9ho 'Vypln\u011Bn\u00ED Formul\u00E1\u0159e' u\u0161et\u0159\u00ED V\u00E1\u0161 \u010Das a zv\u00FD\u0161\u00ED bezpe\u010Dnost p\u0159i nakupov\u00E1n\u00ED online."
+   },
+   "LastPass_cannot_login_until_cookies_are_allowed_from_lastpass_com": {
+      "message": "LastPass se nedok\u00E1\u017Ee p\u0159ipojit dokud jsou cookies na lastpass.com povoleny"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_like_to_continue_": {
+      "message": "LastPass zjistil nezabezpe\u010Den\u00FD p\u0159ihla\u0161ovac\u00ED formul\u00E1\u0159.\n\nChcete pokra\u010Dovat?"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_still_like_LastPass_to_fill_the_form_": {
+      "message": "LastPass zjistil nezabezpe\u010Den\u00FD p\u0159ila\u0161ovac\u00ED formul\u00E1\u0159.\n\nChcete p\u0159esto, aby LastPass vyplnil Va\u0161e p\u0159ihla\u0161ovac\u00ED \u00FAdaje?"
+   },
+   "LastPass_detected_a_password_change_for": {
+      "message": "LastPass detekoval zm\u011Bnu hesla na"
+   },
+   "LastPass_detected_a_password_change_for_domain_": {
+      "message": "LastPass zjistil zm\u011Bnu hesla na t\u00E9to dom\u00E9n\u011B:"
+   },
+   "LastPass_detected_a_password_change_for_user_": {
+      "message": "LastPass detekoval zm\u011Bnu hesla u u\u017Eivatele:"
+   },
+   "LastPass_has_filled_your_login_information_into_the_form_on_this_page_": {
+      "message": "LastPass vyplnil Va\u0161e p\u0159ihla\u0161ovac\u00ED \u00FAdaje na t\u00E9to str\u00E1nce."
+   },
+   "LastPass_is_fully_installed___When_you_install_LastPass_on_other_computers_you_will_not_have_to_go_through_this_process_again__you_ll_simply_be_able_to_login____Do_not_share_your_Master_Password_with_anyone__including_LastPass_employees__we_ll_never_ask_for_it___LastPass_encrypts_your_sensitive_data_locally_so_even_LastPass_employees_do_not_have_access_to_it___You_can_get_help_by_clicking_on_the_LastPass_icon_and_going_to_Help_": {
+      "message": "LastPass je nainstalov\u00E1n! Pokud budete instalovat LastPass na jin\u00FDch po\u010D\u00EDta\u010D\u00EDch, tento proces ji\u017E nebudete muset opakovat, jednodu\u0161e se pouze p\u0159ihl\u00E1s\u00EDte k \u00FA\u010Dtu. Nesd\u011Blujte nikdo sv\u00E9 Hlavn\u00ED heslo, a to ani zam\u011Bstnanc\u016Fm LastPass. Nikdo z LastPass se V\u00E1s na hesla pt\u00E1t nebude! LastPass k\u00F3duje data na lok\u00E1ln\u00EDm \u00FAlo\u017Ei\u0161ti, nikdo z LastPass k nim tedy nem\u00E1 p\u0159\u00EDstup. Pro v\u00EDce informac\u00ED klikn\u011Bte na ikonu 'Pomoc'."
+   },
+   "LastPass_is_the_last_password_you_ll_ever_have_to_remember___If_you_re_new_to_LastPass__we_ll_just_need_a_few_minutes_of_your_time_to_setup_your_account___You_ll_be_able_to_use_this_account_on_any_other_PC_you_use_to_always_keep_your_personal_data_in_sync___Hit_create_account_to_begin_": {
+      "message": "LastPass je posledn\u00ED 'heslo', kter\u00E9 budete si kdy pot\u0159ebovat zapamatovat. Pokud jste nov\u00FDm u\u017Eivatelem LastPass, budete pot\u0159ebovat pouze p\u00E1r minut pro nastaven\u00ED Va\u0161eho \u00FA\u010Dtu. Ten budete pot\u00E9 moci vyu\u017E\u00EDvat na jin\u00FDch po\u010D\u00EDta\u010D\u00EDch a p\u0159istupovat na nich k Va\u0161im dat\u016Fm. Klikn\u011Bte zde pro pokra\u010Dov\u00E1n\u00ED."
+   },
+   "Left": {
+      "message": "Doleva"
+   },
+   "LoggedInOffline": {
+      "message": "LastPass se nepoda\u0159ilo p\u0159ipojit k p\u0159ihla\u0161ovac\u00EDmu serveru. LastPass tedy p\u0159e\u0161el do offline m\u00F3du, ve kter\u00E9m nemus\u00ED b\u00FDt dostupn\u00E9 ve\u0161ker\u00E9 funkce."
+   },
+   "Login": {
+      "message": "P\u0159ihl\u00E1sit"
+   },
+   "LoginError": {
+      "message": "Chyba p\u0159i p\u0159ihla\u0161ov\u00E1n\u00ED. Zkuste to znovu."
+   },
+   "Login_to_LastPass": {
+      "message": "P\u0159ihl\u00E1sit k LastPass"
+   },
+   "Logoff": {
+      "message": "Odhl\u00E1sit"
+   },
+   "Logoff_": {
+      "message": "Odhl\u00E1sit:"
+   },
+   "MSI_PasswordKeeper": {
+      "message": "MSI PasswordKeeper"
+   },
+   "Male": {
+      "message": "Mu\u017E"
+   },
+   "March": {
+      "message": "B\u0159ezen"
+   },
+   "Master_Password": {
+      "message": "Hlavn\u00ED heslo"
+   },
+   "May": {
+      "message": "Kv\u011Bten"
+   },
+   "Meta": {
+      "message": "Meta"
+   },
+   "Minimum_Digit_Count": {
+      "message": "Minim\u00E1ln\u00ED po\u010Det \u010D\u00EDslic"
+   },
+   "More": {
+      "message": "v\u00EDce"
+   },
+   "Move_to_Group": {
+      "message": "P\u0159esunout do skupiny"
+   },
+   "Mr": {
+      "message": "Pan"
+   },
+   "Mrs": {
+      "message": "Pan\u00ED"
+   },
+   "Ms": {
+      "message": "Pan\u00ED"
+   },
+   "MyPasswordSafe": {
+      "message": "MyPasswordSafe"
+   },
+   "My_LastPass_Vault": {
+      "message": "M\u016Fj LastPass trezor"
+   },
+   "NAME": {
+      "message": "JM\u00C9NO"
+   },
+   "Name_": {
+      "message": "Jm\u00E9no:"
+   },
+   "Nameproper": {
+      "message": "Jm\u00E9no"
+   },
+   "Never_AutoFill": {
+      "message": "Nikdy automaticky nevypl\u0148ovat"
+   },
+   "Never_For_This_Domain": {
+      "message": "Nikdy pro tuto dom\u00E9nu"
+   },
+   "Never_For_This_Page": {
+      "message": "Nikdy pro tuto str\u00E1nku"
+   },
+   "Never_For_This_Site": {
+      "message": "Nikdy pro tuto str\u00E1nku"
+   },
+   "Never___": {
+      "message": "Nikdy..."
+   },
+   "No": {
+      "message": "Ne"
+   },
+   "No_Thanks": {
+      "message": "Ne d\u011Bkuji"
+   },
+   "No_Updates_Are_Available": {
+      "message": "Nejsou dostupn\u00E9 \u017E\u00E1dn\u00E9 aktualizace"
+   },
+   "No__I_do_not_want_LastPass_to_help_me_fill_forms_automatically": {
+      "message": "Ne, nechci,aby mi LastPass pom\u00E1hal automaticky vypl\u0148ovat formul\u00E1\u0159e"
+   },
+   "No__do_not_import_any_of_my_insecure_items": {
+      "message": "Ne, neimporotovat \u017E\u00E1dn\u00E1 nezabezpe\u010Den\u00E1 hesla"
+   },
+   "None_Available": {
+      "message": "Nedostupn\u00FD"
+   },
+   "Not_Now": {
+      "message": "Nyn\u00ED ne"
+   },
+   "Notes": {
+      "message": "Pozn\u00E1mov\u00FD blok"
+   },
+   "Notes_": {
+      "message": "Pozn\u00E1mky:"
+   },
+   "Notifications": {
+      "message": "Upozorn\u011Bn\u00ED"
+   },
+   "November": {
+      "message": "Listopad"
+   },
+   "OK": {
+      "message": "OK"
+   },
+   "October": {
+      "message": "\u0158\u00EDjen"
+   },
+   "Offer_to_Generate_Secure_Passwords": {
+      "message": "Nab\u00EDdka na generov\u00E1n\u00ED hesel"
+   },
+   "Open_All": {
+      "message": "Otev\u0159\u00EDt v\u0161e"
+   },
+   "Open_Favorites": {
+      "message": "Otev\u0159\u00EDt obl\u00EDben\u00E9"
+   },
+   "Open_My_LastPass_Vault": {
+      "message": "Otev\u0159\u00EDt M\u016Fj LastPass trezor"
+   },
+   "Open_New_Pages_in": {
+      "message": "Otev\u0159\u00EDt nov\u00E9 str\u00E1nky v"
+   },
+   "Open_login_dialog_when_start_browser": {
+      "message": "Otev\u0159\u00EDt p\u0159ihla\u0161ovac\u00ED okno po startu prohl\u00ED\u017Ee\u010De"
+   },
+   "Other": {
+      "message": "Ostatn\u00ED"
+   },
+   "Other_Sessions": {
+      "message": "Dal\u0161\u00ED Spu\u0161t\u011Bn\u00ED"
+   },
+   "PASSWORDupper": {
+      "message": "HESLO"
+   },
+   "Page_Down": {
+      "message": "O stranu dol\u016F"
+   },
+   "Page_Up": {
+      "message": "O str\u00E1nku v\u00E1\u0161e"
+   },
+   "Passpack": {
+      "message": "Passpack"
+   },
+   "Password": {
+      "message": "Heslo"
+   },
+   "Password_": {
+      "message": "Heslo:"
+   },
+   "Password_Agent": {
+      "message": "Heslo Agent"
+   },
+   "Password_Keeper": {
+      "message": "Password Keeper"
+   },
+   "Password_Length": {
+      "message": "D\u00E9lka Hesla"
+   },
+   "Password_Reminder": {
+      "message": "N\u00E1pov\u011Bda k heslu"
+   },
+   "Password_Safe": {
+      "message": "Bezpe\u010Dn\u00E9 heslo"
+   },
+   "Password_reminder_cannot_match_password": {
+      "message": "N\u00E1pov\u011Bda k heslu neodpov\u00EDd\u00E1 heslu"
+   },
+   "Please_Make_a_Selection": {
+      "message": "Pros\u00EDm vytvo\u0159te v\u00FDb\u011Br"
+   },
+   "Please_enter_a_Password_Reminder": {
+      "message": "Vlo\u017Ete, pros\u00EDm, n\u00E1pov\u011Bdu k heslu"
+   },
+   "Please_provide_this_computer_a_name": {
+      "message": "Pros\u00EDm nazv\u011Bte tento po\u010D\u00EDta\u010D"
+   },
+   "Please_select_which_sites_you_wish_to_apply_this_change_": {
+      "message": "Pros\u00EDm vyberte weby k uplatn\u011Bn\u00ED t\u00E9to zm\u011Bny."
+   },
+   "Please_visit_https___lastpass_com_to_create_an_account_at_a_later_time_": {
+      "message": "Za \u00FA\u010Delem vytvo\u0159en\u00ED \u00FA\u010Dtu v budoucnu, nav\u0161tivte, pros\u00EDm, https://lastpass.com."
+   },
+   "Poll_Server_for_account_changes__mins_": {
+      "message": "Dotazovat Server kv\u016Fli zm\u011Bn\u00E1m \u00FA\u010Dtu (minuty)"
+   },
+   "Preferences": {
+      "message": "P\u0159edvolby"
+   },
+   "Print": {
+      "message": "Vytisknout"
+   },
+   "Profile": {
+      "message": "Profil"
+   },
+   "Re_enter_Password": {
+      "message": "Znovu-vlo\u017Ete heslo"
+   },
+   "Recently_Used": {
+      "message": "Ned\u00E1vno pou\u017Eit\u00E9"
+   },
+   "Recheck_Page": {
+      "message": "Znovu-vyzkou\u0161et str\u00E1nku"
+   },
+   "Refresh_Sites": {
+      "message": "Na\u010D\u00EDst servery znovu"
+   },
+   "Reject": {
+      "message": "Zam\u00EDtnout"
+   },
+   "Remember_Email": {
+      "message": "Zapamatovat email"
+   },
+   "Remember_Password": {
+      "message": "Zapamatovat heslo"
+   },
+   "Rename_Group": {
+      "message": "P\u0159ejmenovat skupinu"
+   },
+   "Replace_Existing_Site": {
+      "message": "P\u0159epsat existuj\u00EDc\u00ED web"
+   },
+   "Require_Every_Character_Type": {
+      "message": "Pou\u017E\u00EDt v\u0161echny typy znak\u016F"
+   },
+   "Require_Password_Reprompt": {
+      "message": "Po\u017Eadovat znovu zad\u00E1n\u00ED hesla"
+   },
+   "Respect_AutoComplete_off__allow_websites_to_disable_AutoFill": {
+      "message": "Respektovat AutoComplete=off: povolit webov\u00FDm str\u00E1nk\u00E1m zak\u00E1z\u00E1n\u00ED automatick\u00E9ho vypl\u0148ov\u00E1n\u00ED "
+   },
+   "Right": {
+      "message": "Doprava"
+   },
+   "RoboForm": {
+      "message": "RoboForm"
+   },
+   "SITE": {
+      "message": "STR\u00C1NKA"
+   },
+   "Save": {
+      "message": "Ulo\u017Eit"
+   },
+   "Save_All_Entered_Data": {
+      "message": "Ulo\u017Eit v\u0161echna vlo\u017Een\u00E1 data"
+   },
+   "Save_New_Site": {
+      "message": "Ulo\u017Eit novou str\u00E1nku"
+   },
+   "Save_Site": {
+      "message": "Ulo\u017Eit str\u00E1nku"
+   },
+   "Save_a_disabled_One_Time_Password_locally_for_Account_Recovery": {
+      "message": "Ulo\u017Eit na lok\u00E1ln\u00ED disk zablokovan\u00E9 jednor\u00E1zov\u00E9 heslo pro obnovu \u00FA\u010Dtu?"
+   },
+   "Search": {
+      "message": "Hledat"
+   },
+   "Secure_Notes": {
+      "message": "Bezpe\u010Dn\u00E9 pozn\u00E1mky"
+   },
+   "Security": {
+      "message": "Bezpe\u010Dnost"
+   },
+   "Security_Check": {
+      "message": "Bezpe\u010Dnostn\u00ED kontrola"
+   },
+   "Select": {
+      "message": "Vybrat"
+   },
+   "Select_All": {
+      "message": "Vybrat v\u0161e"
+   },
+   "Send_anonymous_error_reporting_data_to_help_improve_LastPass": {
+      "message": "Pos\u00EDlat anonymn\u00ED hl\u00E1\u0161en\u00ED chyb a pom\u00E1hat tak ke zlep\u0161en\u00ED LastPass"
+   },
+   "September": {
+      "message": "Z\u00E1\u0159\u00ED"
+   },
+   "SesameWrongButton": {
+      "message": "Pro zobrazen\u00ED Va\u0161ich dat v re\u017Eimu offline mus\u00EDte spustit Sesame a pou\u017E\u00EDt tla\u010D\u00EDtko 'Kop\u00EDrovat Offline Heslo' m\u00EDsto tla\u010D\u00EDtka 'Generovat Jednor\u00E1zov\u00E9 Heslo'"
+   },
+   "Sesame_Multifactor_Authentication": {
+      "message": "V\u00EDce-faktorov\u00E9 ov\u011B\u0159ov\u00E1n\u00ED Sesame."
+   },
+   "Share": {
+      "message": "Sd\u00EDlet"
+   },
+   "Share_login_state_between_other_browsers": {
+      "message": "Sd\u00EDlet stav p\u0159ihl\u00E1\u0161en\u00ED mezi prohl\u00ED\u017Ee\u010Di"
+   },
+   "Share_offer_from": {
+      "message": "Sd\u00EDlet nab\u00EDdku"
+   },
+   "Shift": {
+      "message": "Shift"
+   },
+   "Should_LastPass_remember_this_password_": {
+      "message": "M\u011Bl by si LastPass toto heslo pamatovat?"
+   },
+   "Should_LastPass_remember_this_password__": {
+      "message": "M\u011Bl by si LastPass zapamatovat toto heslo?"
+   },
+   "Show": {
+      "message": "Zobrazit"
+   },
+   "Show_Advanced_Options": {
+      "message": "Zobrazit pokro\u010Dil\u00E1 nastaven\u00ED"
+   },
+   "Show_Deleted_Sites": {
+      "message": "Uk\u00E1zat vymazan\u00E9 servery"
+   },
+   "Show_Form_Fill_Notifications": {
+      "message": "Uk\u00E1zat upozorn\u011Bn\u00ED vypl\u0148ov\u00E1n\u00ED formul\u00E1\u0159\u016F"
+   },
+   "Show_My_LastPass_Vault_After_Login": {
+      "message": "Po p\u0159ihl\u00E1\u0161en\u00ED zobrazit domovskou str\u00E1nku"
+   },
+   "Show_Notifications": {
+      "message": "Uk\u00E1zat upozorn\u011Bn\u00ED"
+   },
+   "Show_Save_Site_Notifications": {
+      "message": "Zobrazovat upozorn\u011Bn\u00ED p\u0159i ukl\u00E1d\u00E1n\u00ED web\u016F"
+   },
+   "Show_Sites_in_Groups": {
+      "message": "Zobrazit servery ve skupin\u00E1ch"
+   },
+   "Show_all_sites": {
+      "message": "Zobrazit v\u0161echny str\u00E1nky"
+   },
+   "Show_certain_notifications_only_after_click": {
+      "message": "Po kliknut\u00ED uk\u00E1zat n\u011Bkter\u00E9 upozorn\u011Bn\u00ED"
+   },
+   "Simplify_your_life__Use_LastPass_to_autofill_in_this_site_s_login_info_": {
+      "message": "Usnadn\u011Bte si \u017Eivot: P\u0159ihlaste se nejd\u0159\u00EDve k LastPass a pak si nechte automaticky vyplnit p\u0159ihla\u0161ovac\u00ED \u00FAdaje pro tuto str\u00E1nku!"
+   },
+   "Site_Search": {
+      "message": "Vyhled\u00E1v\u00E1n\u00ED"
+   },
+   "Sites": {
+      "message": "Weby"
+   },
+   "Special": {
+      "message": "Speci\u00E1ln\u00ED"
+   },
+   "State___Province": {
+      "message": "St\u00E1t"
+   },
+   "Submit_Form": {
+      "message": "Potvrdit Formul\u00E1\u0159"
+   },
+   "Tabs": {
+      "message": "Z\u00E1lo\u017Eky"
+   },
+   "Text": {
+      "message": "Text"
+   },
+   "The_LastPass_master_password_you_reentered_does_not_match": {
+      "message": "Zadan\u00E9 LastPass hlavn\u00ED heslo je neplatn\u00E9."
+   },
+   "The_version_of_Chrome_you_are_currently_running_does_not_have_HTML5_database_support_enabled___As_such__this_login_page_will_not_remember_your_email_and_password__and_other_features_such_as_automatic_login_on_browser_restart_will_not_work___You_may_be_able_to_fix_this_by_adding___enable_databases_as_a_parameter_to_your_Google_Chrome_browser_shortcut_": {
+      "message": "Verze Chrome, kterou pr\u00E1v\u011B pou\u017E\u00EDv\u00E1te, nem\u00E1 povolenou podporu HTML5 datab\u00E1z\u00ED. Proto si tato p\u0159ihla\u0161ovac\u00ED str\u00E1nka nebude pamatovat V\u00E1\u0161 email a heslo a ostatn\u00ED funkce, jako automatick\u00E9 p\u0159ihl\u00E1\u0161en\u00ED p\u0159i restartu prohl\u00ED\u017Ee\u010De, nebudou fungovat. M\u016F\u017Eete zkusit opravit tento probl\u00E9m p\u0159id\u00E1n\u00EDm parametru --enable-databases k odkazu na V\u00E1\u0161 prohl\u00ED\u017Ee\u010D Google Chrome."
+   },
+   "This_computer_is_trusted__do_not_require_a_second_form_of_authentication_": {
+      "message": "Tento po\u010D\u00EDta\u010D je d\u016Fv\u011Bryhodn\u00FD, nevy\u017Eadovat druhou formu ov\u011B\u0159en\u00ED."
+   },
+   "This_is_a_shared_site__You_are_not_permitted_to_view_the_password_": {
+      "message": "Toto je sd\u00EDlen\u00E1 str\u00E1nka. Nen\u00ED povoleno zobrazen\u00ED hesla."
+   },
+   "Time_Zone": {
+      "message": "\u010Casov\u00E9 p\u00E1smo"
+   },
+   "Title": {
+      "message": "N\u00E1zev"
+   },
+   "To_create_your_account__please_re_enter_your_LastPass_master_password": {
+      "message": "Pro vytvo\u0159en\u00ED Va\u0161eho \u00FA\u010Dtu, zopakujte sv\u00E9 LastPass hlavn\u00ED heslo"
+   },
+   "To_protect_your_privacy_and_keep_your_data_confidential_": {
+      "message": "\tChcete-li chr\u00E1nit sv\u00E9 soukrom\u00ED a udr\u017Eet va\u0161e d\u016Fv\u011Brn\u00E1 data,"
+   },
+   "Tools": {
+      "message": "N\u00E1stroje"
+   },
+   "Try_Again": {
+      "message": "Zkusit znovu"
+   },
+   "TurboPasswords": {
+      "message": "TurboHesla"
+   },
+   "Type_": {
+      "message": "Typ:"
+   },
+   "URL_": {
+      "message": "URL:"
+   },
+   "USERNAME": {
+      "message": "U\u017DIVATELSK\u00C9 JM\u00C9NO"
+   },
+   "Unselect_All": {
+      "message": "Odzna\u010Dit v\u0161e"
+   },
+   "Up": {
+      "message": "Nahoru"
+   },
+   "Username_": {
+      "message": "U\u017Eivatelsk\u00E9 jm\u00E9no:"
+   },
+   "Version_": {
+      "message": "Verze:"
+   },
+   "Warn_before_filling_insecure_forms": {
+      "message": "Varovat p\u0159ed vypl\u0148ov\u00E1n\u00EDm nezabezpe\u010Den\u00FDch fomul\u00E1\u0159\u016F"
+   },
+   "Watch_a_video_on_basic_usage": {
+      "message": "Zhl\u00E9dnout video jednoduch\u00E9ho pou\u017Eit\u00ED"
+   },
+   "We_also_DO_NOT_keep_a_copy_or_backup_of_it_": {
+      "message": "Z\u00E1rove\u0148 NEVEDEME \u017E\u00E1dnou kopii nebo z\u00E1lohu."
+   },
+   "Welcome_to_LastPass_": {
+      "message": "V\u00EDtejte v LastPass"
+   },
+   "Windows": {
+      "message": "Windows"
+   },
+   "Would_you_like_to_set_up_a_Form_Filling_profile_now_": {
+      "message": "Chcete nyn\u00ED nastavit profil pro automatick\u00E9 vypl\u0148ov\u00E1n\u00ED formul\u00E1\u0159\u016F?"
+   },
+   "Yes": {
+      "message": "Ano"
+   },
+   "Yes__let_me_choose_which_items_I_want_imported_into_LastPass": {
+      "message": "Ano, nech m\u011B vybrat kter\u00E9 v\u011Bci chci improtovat do LastPass"
+   },
+   "Yes__let_me_enter_and_review_data_that_will_be_used_when_filling_forms": {
+      "message": "Ano, nechte m\u011B zkontrolovat data, kter\u00E1 budou pou\u017Eita p\u0159i vypl\u0148ov\u00E1n\u00ED formul\u00E1\u0159\u016F"
+   },
+   "You_cannot_assign_more_than_one_HotKey_the_same_value_": {
+      "message": "Nem\u016F\u017Eete p\u0159i\u0159adit v\u00EDce kl\u00E1vesov\u00FDch zkratek k jedn\u00E9 akci."
+   },
+   "You_currently_have_LastPass_set_to_remember_your_password___Doing_so_essentially_makes_the_automatically_logoff_options_you_ve_chosen_useless___Would_you_like_LastPass_to_stop_remembering_your_password_": {
+      "message": "LasPass je nyn\u00ED nastaven, aby si pamatoval Va\u0161e heslo. T\u00EDm je volba automatick\u00E9ho odhla\u0161ov\u00E1n\u00ED nepou\u017Eiteln\u00E1. Chcete, aby si LastPass p\u0159estal pamatovat Va\u0161e heslo?"
+   },
+   "You_must_agree_to_send_your_encrypted_data_to_LastPass_com___LastPass_com_encrypts_your_data_and_sends_it_to_its_secure_servers__No_one_at_LastPass_can_read_your_confidential_data_since_it_is_encrypted_using_your_secret_password_and_you_are_the_only_one_who_knows_your_password_": {
+      "message": "Mus\u00EDte souhlasit se zas\u00EDl\u00E1n\u00EDm Va\u0161ich dat do LastPass.com.\n\nLastPass.com za\u0161ifruje Va\u0161e data a po\u0161le je na zabezpe\u010Den\u00E9 servery.\nNikdo v LastPass nem\u016F\u017Ee \u010D\u00EDst va\u0161e d\u016Fv\u011Brn\u00E1 data, proto\u017Ee jsou za\u0161ifrovan\u00E1 za pou\u017Eit\u00ED Va\u0161eho tajn\u00E9ho hesla a vy jste jedin\u00FD, kdo jej zn\u00E1."
+   },
+   "You_must_agree_to_the_terms_to_continue": {
+      "message": "Pro pokra\u010Dov\u00E1n\u00ED mus\u00EDte souhlasit s ujedn\u00E1n\u00EDm"
+   },
+   "You_must_enter_a_name_": {
+      "message": "Mus\u00EDte vlo\u017Eit jm\u00E9no"
+   },
+   "You_must_enter_a_unique_name_": {
+      "message": "Mus\u00EDte vlo\u017Eit jedine\u010Dn\u00E9 jm\u00E9no"
+   },
+   "You_must_restart_Chrome_or_logoff_and_back_in_to_get_logoff_on_browser_close_changes_to_be_reflected": {
+      "message": "Mus\u00EDte restartovat Chrome nebo se odhl\u00E1sit a znovu p\u0159ihl\u00E1sit, aby se projevily zm\u011Bny nastaven\u00ED funkce odhl\u00E1\u0161en\u00ED p\u0159i zav\u0159en\u00ED prohl\u00ED\u017Ee\u010De"
+   },
+   "You_must_restart_your_browser_before_all_of_the_changes_will_take_effect_": {
+      "message": "Aby se projevily zm\u011Bny, je pot\u0159eba restartovat prohl\u00ED\u017Ee\u010D."
+   },
+   "Your_Google_Chrome_passwords_have_been_imported_successfully_": {
+      "message": "Va\u0161e hesla byla \u00FAsp\u011B\u0161n\u011B importov\u00E1na z prohl\u00ED\u017Ee\u010De Google Chrome."
+   },
+   "Your_current_settings_require_you_to_enter_your_LastPass_password_to_complete_this_action_": {
+      "message": "Va\u0161e aktu\u00E1ln\u00ED nastaven\u00ED vy\u017Eaduje vlo\u017Een\u00ED va\u0161eho LastPass hesla pro dokon\u010Den\u00ED akce"
+   },
+   "Your_password_can_not_be_the_same_as_your_email_": {
+      "message": "Va\u0161e heslo nesm\u00ED b\u00FDt toto\u017En\u00E9 se zadanou elektronickou adresou."
+   },
+   "Your_password_is_easily_guessable_": {
+      "message": "Va\u0161e heslo je snadno odhadnuteln\u00E9."
+   },
+   "Your_password_is_too_short__It_must_be_at_least_6_characters_long": {
+      "message": "Va\u0161e heslo je p\u0159\u00EDli\u0161 kr\u00E1tk\u00E9. Mus\u00ED b\u00FDt alespo\u0148 6 znak\u016F dlouh\u00E9"
+   },
+   "Your_password_reminder_serves_to_remind_you_of_what_your": {
+      "message": "N\u00E1pov\u011Bda k heslu v\u00E1m pom\u00E1h\u00E1 pamatovat si co je va\u0161e"
+   },
+   "YubiKey_Multifactor_Authentication": {
+      "message": "V\u00EDce-faktorov\u00E9 ov\u011B\u0159ov\u00E1n\u00ED YubiKey"
+   },
+   "_Hide_": {
+      "message": "[Skr\u00FDt]"
+   },
+   "_New_Pending_Share_Offers_": {
+      "message": "(\u010Cekaj\u00ED nov\u00E9 nab\u00EDdky sd\u00EDlen\u00ED)"
+   },
+   "_Show_": {
+      "message": "[Zobrazit]"
+   },
+   "_none_": {
+      "message": "(nic)"
+   },
+   "a_zlower": {
+      "message": "a-z"
+   },
+   "actual_password_is__while_still_maintaining_its_secrecy_": {
+      "message": "aktu\u00E1ln\u00ED heslo, st\u00E1le si uchov\u00E1v\u00E1 sv\u00E9 tajemstv\u00ED"
+   },
+   "and": {
+      "message": "a"
+   },
+   "contact_us_and_we_will_email_you_your_password_reminder_": {
+      "message": "kontaktujte n\u00E1s a my v\u00E1m po\u0161leme va\u0161\u00ED n\u00E1pov\u011Bdu k heslu."
+   },
+   "dummy": {
+      "message": "dummy, leave this here so we don't mess up the trailing comma"
+   },
+   "ext_": {
+      "message": "p\u0159\u00EDp."
+   },
+   "favorites": {
+      "message": "obl\u00EDben\u00E9"
+   },
+   "hour": {
+      "message": "hodina"
+   },
+   "hours": {
+      "message": "hodin"
+   },
+   "minutes": {
+      "message": "minut"
+   },
+   "privacy_statement": {
+      "message": "Prohl\u00E1\u0161en\u00ED o ochran\u011B osobn\u00EDch \u00FAdaj\u016F"
+   },
+   "recently_usedlower": {
+      "message": "naposledy pou\u017Eito"
+   },
+   "seconds": {
+      "message": "vte\u0159in"
+   },
+   "terms_of_service": {
+      "message": "podm\u00EDnky pou\u017Eit\u00ED"
+   },
+   "the_current_tab": {
+      "message": "aktu\u00E1ln\u00ED z\u00E1lo\u017Eka"
+   },
+   "we_DO_NOT_know_what_your_LastPass_password_is_": {
+      "message": "NEZN\u00C1ME va\u0161e LastPass heslo."
+   }
+}

@@ -1,0 +1,19 @@
+{
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "icon128.png",
+      "default_title": "Open ibrii"
+   },
+   "description": "Snip pictures, text and video from webpages and share everything on Twitter, Facebook, Google Buzz and More.",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC5yd2kSgzraFAfeMPcZNdzqug9VQ71hHfrgQ8adSj0j0gq8AftagwHAb1Ba6+4Le/RBnDDNOMA5bNNCdTonUQ0ZZZkNS08bmx4XoLL/VB9biF9rzT8IxNyop8XPZ6jIgOqMgrGDBR+a0KpuUzt8zDsVUtcLJI8tKSJKVp02DevTQIDAQAB",
+   "name": "Ibrii",
+   "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0.6"
+}

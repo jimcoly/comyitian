@@ -1,0 +1,174 @@
+<script src="chromelib.js"/>
+<script src="prefs.js"/>
+<script src="upgrade.js"></script>
+<script>
+	//localStorage.clear()
+	//prefs.reset()
+	prefs['general.version']="0.9.5"
+	prefs['general.firstRun']=false
+	// bind to variables
+	prefs.bind('data.sitesList','sitesList')
+	prefs.bind('data.pagesList','pagesList')
+	prefs.bind('general.autoLoading','autoloading')	
+	// bind to listeners
+	prefs.bind('data.sitesList',calcSitesMap)
+	prefs.bind('data.pagesList',calcPagesMap)
+
+	// variables
+	const TYPE_CHROMIUM = 0;
+	const TYPE_IE = 1
+	const TYPE_CHROME = 2
+	var sitesMap = {}	
+	var pagesMap = {}
+	// utility
+	function getHost(url){
+		return url.split('//')[1].split('/')[0]
+	}
+	
+	function getPageType(url){
+		if(url.indexOf("chrome-extension://") == 0 || (url.indexOf("chrome://") == 0)){
+			if (url.indexOf(chrome.extension.getURL('ie.html'))== 0)
+				return TYPE_IE;
+			else
+				return TYPE_CHROMIUM
+		}else
+			return TYPE_CHROME
+	}
+
+	function updatePageAction(tabId,tabURL){
+		switch(getPageType(tabURL)){
+			case TYPE_CHROMIUM:
+				chrome.pageAction.hide(tabId)
+				break;			
+			case TYPE_IE:
+				chrome.pageAction.setIcon({tabId:tabId,path:"ies.png"})
+				chrome.pageAction.show(tabId);
+				break;
+			case TYPE_CHROME:
+				chrome.pageAction.setIcon({tabId:tabId,path:"ie.png"})
+				chrome.pageAction.show(tabId)
+				break;
+		}
+	}
+	
+	// prefs listeners
+	function calcSitesMap(){
+		sitesMap = {}
+		for (var i=0,length=sitesList.length;i<length;i++)
+			sitesMap[sitesList[i].host]=sitesList[i]
+	}
+
+	function calcPagesMap(){
+		pagesMap = {}
+		for (var i=0,length=pagesList.length;i<length;i++)
+			pagesMap[pagesList[i].page]=pagesList[i]
+	}
+	
+	function showStatus(){
+		eachTab(function(tab){
+			try{
+				updatePageAction(tab.id,tab.url)
+			}catch(e){console.log(e)}
+		})
+	}
+				
+	var stopAutoLoadTabs = {}
+	// popup actions 
+	function switchEngine(id,url,index,autoloaded){
+		var type = getPageType(url)
+		switch (type){
+			case TYPE_CHROMIUM:break;
+			case TYPE_CHROME:
+				var _url ="ie.html#"+encodeURIComponent(url);
+				//if (autoloaded)
+					stopAutoLoadTabs[id]={}				
+				break;
+			case TYPE_IE:
+				// switch back from ie
+				var _url = decodeURIComponent(url).substring(chrome.extension.getURL('ie.tab').length+2)
+				break;
+		}
+		if (index != null)
+			chrome.tabs.create({index:index,url:_url,selected:true})
+		else{
+			chrome.tabs.update(id,{url:_url,selected:true})
+		}
+	}
+
+	function getActualURL(url){
+		var type = getPageType(url)
+		switch (type){
+			case TYPE_CHROMIUM:break;
+			case TYPE_CHROME:
+				return url
+				break;
+			case TYPE_IE:
+				return decodeURIComponent(url).substring(chrome.extension.getURL('ie.tab').length+2)
+				break;
+		}	
+	}
+	
+	function setAutoLoad(url,group){
+		var _url = getActualURL(url)
+		var list = group == 0 ? pagesList : sitesList 
+		var map = group == 0 ? pagesMap : sitesMap 
+		var key = group == 0 ? _url : getHost(_url)
+		if(map[key] != null){
+			map[key].enabled=true
+		}else{
+			if (group == 0)
+				list.push({page:key,enabled:true,description:""})
+			else
+				list.push({host:key,enabled:true,description:""})
+			map[key]=list[list.length-1]
+		}
+		if (group == 0){
+			prefs['data.pagesList']=[] // workaround to force update on all views
+			prefs['data.pagesList']=pagesList		
+		}else if (group == 1){
+			prefs['data.sitesList']=[] // workaround to force update on all views
+			prefs['data.sitesList']=sitesList
+		}
+	}
+	
+	// and now..
+	showStatus()
+	calcSitesMap()	
+	calcPagesMap()	
+		
+	chrome.tabs.onUpdated.addListener(function(tabId,info,tab){
+		updatePageAction(tab.id,tab.url)
+		if (!autoloading)
+			return
+		if (stopAutoLoadTabs[tabId])
+			return;
+		var type=getPageType(tab.url);
+		if (type == TYPE_IE || type == TYPE_CHROMIUM)
+			return;
+		if (tab.status == 'loading'){
+			var host=getHost(tab.url)
+			if (sitesMap[host] && sitesMap[host].enabled){
+				switchEngine(tab.id,tab.url,null,{host:host})
+				return
+			}else{
+				for (var i=0;i<pagesList.length;i++){
+					try{
+						var pageDef=pagesList[i]
+						if (!pageDef.enabled)
+							continue;
+						if (pageDef.page.indexOf('regexp:') == 0){
+							var re = new RegExp(pageDef.page.substring('regexp:'.length))
+						}else							
+							var re=new RegExp('^'+pageDef.page.replace(/\./g,'\\.').replace(/\*/g,'.*')+'$')
+						if (re.test(tab.url)){
+							switchEngine(tab.id,tab.url,null,{page:pageDef.page})
+							return;
+						}
+					}catch(e){
+						console.log(e)
+					}
+				}
+			}
+		}
+	});		
+</script>

@@ -1,0 +1,748 @@
+{
+   "BrowserActionTitle": {
+      "description": "Title for the browser action that's visible to the user of extension",
+      "message": "Clip to Evernote"
+   },
+   "EDAMError_1": {
+      "description": "Used to describe an unknown EDAM error",
+      "message": "Uknown error"
+   },
+   "EDAMError_10": {
+      "description": "Indicates that there was a conflict in data",
+      "message": "Data conflict ($parameter$)",
+      "placeholders": {
+         "parameter": {
+            "content": "$1",
+            "example": "url"
+         }
+      }
+   },
+   "EDAMError_11": {
+      "description": "Indicates invalid ENML",
+      "message": "ENML validation error ($parameter$)",
+      "placeholders": {
+         "parameter": {
+            "content": "$1",
+            "example": "url"
+         }
+      }
+   },
+   "EDAMError_12": {
+      "description": "Indicates that given shard is unavailable",
+      "message": "Shard unavailable"
+   },
+   "EDAMError_2": {
+      "description": "Data was transmitted in invalid format",
+      "message": "Bad data format ($parameter$)",
+      "placeholders": {
+         "parameter": {
+            "content": "$1",
+            "example": "url"
+         }
+      }
+   },
+   "EDAMError_2_url": {
+      "description": "Indicates that user tried to submit invalid or unsupported URL",
+      "message": "Invalid or unsupported URL"
+   },
+   "EDAMError_3": {
+      "description": "Indicates that permission was denied for request by the server",
+      "message": "Permission denied"
+   },
+   "EDAMError_3_User_active": {
+      "description": "Indicates that a user tried to login but their account is inactive",
+      "message": "Permission denied because user is inactive"
+   },
+   "EDAMError_4": {
+      "description": "Indicates internal error",
+      "message": "Internal error"
+   },
+   "EDAMError_5": {
+      "description": "Indicates that some data was required in the request by the server, but wasn't found",
+      "message": "Data required ($parameter$)",
+      "placeholders": {
+         "parameter": {
+            "content": "$1",
+            "example": "url"
+         }
+      }
+   },
+   "EDAMError_5_password": {
+      "description": "Indicates that password field needs to be filled in",
+      "message": "Password is a required field"
+   },
+   "EDAMError_5_username": {
+      "description": "Indicates that username field needs to be filled in",
+      "message": "Username is a required field"
+   },
+   "EDAMError_6": {
+      "description": "Indicates that some kind of limit was reached",
+      "message": "Limit reached"
+   },
+   "EDAMError_7": {
+      "description": "Indicates that user has exceeded their quota",
+      "message": "Quota exceeded"
+   },
+   "EDAMError_8": {
+      "description": "Indicates that authentication was invalid",
+      "message": "Invalid authentication"
+   },
+   "EDAMError_8_password": {
+      "description": "Indicates that user tried to sign in with incorrect username/password",
+      "message": "Username and password do not match existing user"
+   },
+   "EDAMError_8_username": {
+      "description": "Indicates that user tried to sign in with incorrect username/password",
+      "message": "Not a valid, active user"
+   },
+   "EDAMError_9": {
+      "description": "Indicates that current session was expired",
+      "message": "Authentication expired"
+   },
+   "EDAMResponseError_1": {
+      "description": "Indicates an unknown error associated with response from the request made to the server",
+      "message": "Unknown response error"
+   },
+   "EDAMResponseError_2": {
+      "description": "Indicates that the response from server was not recognizable",
+      "message": "Invalid response"
+   },
+   "Error_HTTP_Transport": {
+      "description": "Generic error indicating that the extension could not get a response from a server",
+      "message": "Problem communicating with server [$status$]. $errorText$",
+      "placeholders": {
+         "errorText": {
+            "content": "$2",
+            "example": "http error response"
+         },
+         "status": {
+            "content": "HTTP $1",
+            "example": "404"
+         }
+      }
+   },
+   "ExtensionDescription": {
+      "description": "Description of the extension as it's visible to the outside world",
+      "message": "Use the Evernote extension to save things you see on the web into your Evernote account. It even lets you search through your notes."
+   },
+   "ExtensionName": {
+      "description": "Name of the extension as it's visible to the outside world",
+      "message": "Clip to Evernote"
+   },
+   "FormParsingError": {
+      "description": "Indicates that there was an error parsing submitted form",
+      "message": "Could not parse form data: $error$",
+      "placeholders": {
+         "error": {
+            "content": "$1",
+            "example": "sample error message"
+         }
+      }
+   },
+   "UnknownError": {
+      "description": "Used to describe an unknown error of any kind",
+      "message": "Unknown error"
+   },
+   "autoSaving": {
+      "description": "Message indicating the the extension is currently auto-saving changes user made to the note",
+      "message": "Saving..."
+   },
+   "clippingPageContent": {
+      "description": "Message indicating that the extension is currently clipping text from a tab",
+      "message": "Clipping page content..."
+   },
+   "clippingToEvernote": {
+      "description": "Message indicating that the extensions is currently sending clip to Evernote",
+      "message": "Sending clip to Evernote..."
+   },
+   "contentClipped": {
+      "description": "Title indicating that content was successfully clipped",
+      "message": "Content successfully clipped"
+   },
+   "copyright": {
+      "description": "Copyright statement",
+      "message": "&copy; 2010, Evernote Corporation."
+   },
+   "debugLevel_0": {
+      "description": "Debug log level",
+      "message": "Debug"
+   },
+   "debugLevel_1": {
+      "description": "Debug log level",
+      "message": "Info"
+   },
+   "debugLevel_2": {
+      "description": "Debug log level",
+      "message": "Warn"
+   },
+   "debugLevel_3": {
+      "description": "Debug log level",
+      "message": "Error"
+   },
+   "debugLevel_4": {
+      "description": "Debug log level",
+      "message": "Exception"
+   },
+   "debugLevel_5": {
+      "description": "Debug log level",
+      "message": "Off"
+   },
+   "deleteSuccess": {
+      "description": "Message indication that previously clipped note was successfully deleted",
+      "message": "Successfully delete note..."
+   },
+   "deleting": {
+      "description": "Message indicating that the extension is deleting previously clipped note from the server",
+      "message": "Deleting clipped note..."
+   },
+   "dismiss": {
+      "description": "Message shown on buttons to dismiss a widget of some kind",
+      "message": "Dismiss"
+   },
+   "fileForm_comment": {
+      "description": "Label for additional text to be added to the note",
+      "message": "Add text"
+   },
+   "fileForm_delete": {
+      "description": "Label for deleting previously clipped note",
+      "message": "Delete"
+   },
+   "fileForm_done": {
+      "description": "Label for filing previously clipped note and/or dismissing the filing dialog",
+      "message": "Done"
+   },
+   "fileForm_notebook": {
+      "description": "Label for selection of note's notebook",
+      "message": "Notebook"
+   },
+   "fileForm_sourceURL": {
+      "description": "Label for source URL",
+      "message": "Source:"
+   },
+   "fileForm_tagNames": {
+      "description": "Label for note's tags",
+      "message": "Tags"
+   },
+   "fileForm_title": {
+      "description": "Label for note title",
+      "message": "Title"
+   },
+   "fileForm_viewInEvernote": {
+      "description": "Title of a link to a note in Evernote",
+      "message": "View in Evernote"
+   },
+   "fileSuccess": {
+      "description": "Message indicating that changes to clipped note were successfully filed",
+      "message": "Succesfully filed note..."
+   },
+   "filing": {
+      "description": "Message indicating that the extension is filing changes made to previously clipped note on the server",
+      "message": "Filing note..."
+   },
+   "findingNotes": {
+      "description": "Message indicating that the extension is currently searching notes based on user provided query",
+      "message": "Searching..."
+   },
+   "fullPageClipFailure": {
+      "description": "Message shown to user when full page clip wasn't possible",
+      "message": "Sorry, Evernote cannot clip this entire page. Please select the portion you wish to clip."
+   },
+   "fullPageClipTooBig": {
+      "description": "Message shown to user when the full page clip is too big to POST to the server",
+      "message": "Sorry, the entire page is too big for Evernote to clip. \u003Cbr/\u003EPlease select the portion you wish to clip."
+   },
+   "header_register": {
+      "description": "Registration link in header",
+      "message": "&raquo; Create an account"
+   },
+   "introPageUrl": {
+      "description": "URL to the intro page for the extension",
+      "message": "http://www.evernote.com/about/download/#Chrome"
+   },
+   "invalidAutoSaveClipNoteOptionValue": {
+      "description": "Error indicating that the user selected invalid option for the auto-save behavior",
+      "message": "Invalid option"
+   },
+   "invalidExpression": {
+      "description": "Indicates that form's input value contains invalid expression",
+      "message": "Invalid expression"
+   },
+   "invalidFullPageOptionValue": {
+      "description": "Error indicating that the user selected invalid option for full page behavior",
+      "message": "Invalid option"
+   },
+   "invalidMask": {
+      "description": "Indicates that user entered an expression that does not match given mask.",
+      "message": "Invalid expression entered."
+   },
+   "invalidNoteListOptionValue": {
+      "description": "Error indicating that the user selected invalid option for note list behavior",
+      "message": "Invalid option"
+   },
+   "invalidPassword": {
+      "description": "Specific validation error message indicating that entered password contains invalid characters",
+      "message": "Password must be between 6 and 64 characters long, and consist of letters, numbers and punctuation."
+   },
+   "invalidServiceProto": {
+      "description": "Indicates that the supplied service protocol is invalid",
+      "message": "Invalid service protocol. Must be either http:// or https://"
+   },
+   "invalidTagName": {
+      "description": "Indicates that at least one tag name contains at least one invalid character",
+      "message": "Tag names cannot contain any control characters and must not begin or end with white space"
+   },
+   "invalidTitle": {
+      "description": "Indicates that user entered title with invalid characters",
+      "message": "Title should not contain any control characters and must not begin or end with white space."
+   },
+   "invalidUsername": {
+      "description": "Specific validation error message indicating that entered username is not valid",
+      "message": "Your username must start and end with a letter or number, it can contain hyphens and underscores."
+   },
+   "loading": {
+      "description": "Message shown when extension is loading...",
+      "message": "Loading..."
+   },
+   "loggingIn": {
+      "description": "Message indicating that the extension is currently attempting to sign in user",
+      "message": "Signing in to Evernote"
+   },
+   "loggingOut": {
+      "description": "Message indicating that the extension is currently attempting to sign out user",
+      "message": "Signing out"
+   },
+   "loginForm_login": {
+      "description": "Sign in button label for login form",
+      "message": "Sign in"
+   },
+   "loginForm_password": {
+      "description": "Label for entering password into login form",
+      "message": "Password"
+   },
+   "loginForm_passwordError_2": {
+      "description": "",
+      "message": "Password contains bad characters. Please correct first."
+   },
+   "loginForm_passwordError_5": {
+      "description": "",
+      "message": "Password is required"
+   },
+   "loginForm_passwordError_8": {
+      "description": "",
+      "message": "Username and password do not match existing user."
+   },
+   "loginForm_register": {
+      "description": "Registration button label in login form",
+      "message": "Register"
+   },
+   "loginForm_rememberMe": {
+      "description": "Label for extending login session",
+      "message": "Remember me for a week"
+   },
+   "loginForm_username": {
+      "description": "Label for entering username into login form",
+      "message": "Username"
+   },
+   "loginForm_usernameError_2": {
+      "description": "",
+      "message": "Username contains bad characters. Please correct first."
+   },
+   "loginForm_usernameError_5": {
+      "description": "",
+      "message": "Username is required."
+   },
+   "loginForm_usernameError_8": {
+      "description": "",
+      "message": "Username and password do not match existing user."
+   },
+   "loginToEvernote": {
+      "description": "Title prompting user to login",
+      "message": "Sign in to Evernote"
+   },
+   "multipleErrorsTitle": {
+      "description": "Title for displaying a list of errors",
+      "message": "The following errors have occurred:"
+   },
+   "noteList_modifySearch": {
+      "description": "Message instructing user to modify their note search criteria",
+      "message": "Try modifying your search"
+   },
+   "noteList_nothingFound": {
+      "description": "Message shown when there's no search results",
+      "message": "No notes found..."
+   },
+   "noteSortOrder_createdAscending": {
+      "description": "Description of sort order used in listing notes where notes are sorted from oldest to newest by creation time",
+      "message": "Created (oldest first)"
+   },
+   "noteSortOrder_createdDescending": {
+      "description": "Description of sort order used in listing notes where notes are sorted from newest to oldset by creation time",
+      "message": "Created (newest first)"
+   },
+   "noteSortOrder_updatedAscending": {
+      "description": "Description of sort order used in listing notes where notes are sorted from oldest to newest by updated time",
+      "message": "Updated (oldest first)"
+   },
+   "noteSortOrder_updatedDescending": {
+      "description": "Description of sort order used in listing notes where notes are sorted from newest to oldest by updated time",
+      "message": "Updated (newest first)"
+   },
+   "notesList_loading": {
+      "description": "Message shown when searching for notes",
+      "message": "Searching notes..."
+   },
+   "notesSearch_search": {
+      "description": "Label for note search input",
+      "message": "Search"
+   },
+   "notesSearch_submit": {
+      "description": "Label for submitting note search",
+      "message": "Search notes"
+   },
+   "notes_title": {
+      "description": "Title for the note list",
+      "message": "Notes"
+   },
+   "notes_titleWithCount": {
+      "description": "Title for the note list with note count",
+      "message": "Notes ($count$)",
+      "placeholders": {
+         "count": {
+            "content": "$1",
+            "example": "10"
+         }
+      }
+   },
+   "options_autoSaveClipNote": {
+      "description": "Label for auto-saving options",
+      "message": "Quicknote auto-saving"
+   },
+   "options_autoSaveClipNote_always": {
+      "description": "Option for preserving changes to the note between invocations of the extension",
+      "message": "Remember changes"
+   },
+   "options_autoSaveClipNote_never": {
+      "description": "Option for discarding changes",
+      "message": "Discard unsaved changes"
+   },
+   "options_cancel": {
+      "description": "Label for cancelling options",
+      "message": "Cancel"
+   },
+   "options_clipNotebook": {
+      "description": "Option for selecting default destination notebook for the clips",
+      "message": "Clipping destination notebook"
+   },
+   "options_clipNotebook_defaultNotebook": {
+      "description": "Option for using service-default notebook",
+      "message": "Use default notebook"
+   },
+   "options_clipNotebook_remember": {
+      "description": "Option for remembering previously used notebook",
+      "message": "Remember"
+   },
+   "options_clipNotebook_selected": {
+      "description": "Option for specifying which notebook to clip to by default",
+      "message": "Use the following"
+   },
+   "options_clipStyle": {
+      "description": "Label for various options regarding preservation of element styles of clipped content",
+      "message": "Clip styling"
+   },
+   "options_clipStyle_full": {
+      "description": "Option for preserving all of the element styles of clipped content",
+      "message": "Preserve all styles"
+   },
+   "options_clipStyle_none": {
+      "description": "Options for ignoring element styles of clipped content",
+      "message": "Plain, without any styles"
+   },
+   "options_clipStyle_text": {
+      "description": "Option for preserving styles only for the clipped text",
+      "message": "Preserve style only for text"
+   },
+   "options_debugLevel": {
+      "description": "Label for debugging level option",
+      "message": "Debugging level"
+   },
+   "options_developer_title": {
+      "description": "Title for developer options",
+      "message": "Developer Options"
+   },
+   "options_failedToSave": {
+      "description": "Error message shown when options couldn't be saved",
+      "message": "Could not save options!"
+   },
+   "options_formReset": {
+      "description": "Message indicating to user that they reset options to defaults",
+      "message": "Options reset!"
+   },
+   "options_formSaved": {
+      "description": "Message indicating to user that they successfully updated options",
+      "message": "Options saved."
+   },
+   "options_fullPage": {
+      "description": "Label for full page clipping option",
+      "message": "Clip full page"
+   },
+   "options_fullPage_always": {
+      "description": "Option for always clipping full page",
+      "message": "Always"
+   },
+   "options_fullPage_never": {
+      "description": "Options for never clipping full page",
+      "message": "Never"
+   },
+   "options_fullPage_remember": {
+      "description": "Option for remembering previously used setting regarding full page clipping",
+      "message": "Remember"
+   },
+   "options_insecureProto": {
+      "description": "Label for specifying insecure protocol option.",
+      "message": "Insecure protocol"
+   },
+   "options_noteList": {
+      "description": "Label for choosing note list behavior option",
+      "message": "Show note browser"
+   },
+   "options_noteList_always": {
+      "description": "Option to always show note browser",
+      "message": "Always"
+   },
+   "options_noteList_never": {
+      "description": "Option to never show note browser",
+      "message": "Never"
+   },
+   "options_noteList_remember": {
+      "description": "Option to remember whether note list was open between invocations of the extension",
+      "message": "Remember"
+   },
+   "options_noteSortOrder": {
+      "description": "Label for selecting note sort order",
+      "message": "Sort notes by"
+   },
+   "options_reset": {
+      "description": "Label for resetting options",
+      "message": "Reset"
+   },
+   "options_secureProto": {
+      "description": "Label specifying secure protocol option.",
+      "message": "Secure protocol"
+   },
+   "options_serviceDomain": {
+      "description": "Label specifying service domain option.",
+      "message": "Service domain"
+   },
+   "options_submit": {
+      "description": "Label for saving options",
+      "message": "Save"
+   },
+   "options_title": {
+      "description": "Title of the options page",
+      "message": "Options"
+   },
+   "partLengthNotInRange": {
+      "description": "Indicates that each value, out of a list of values, should be between min and max characters long",
+      "message": "Each $fieldName$ should be between $min$ and $max$ characters long.",
+      "placeholders": {
+         "fieldName": {
+            "content": "$1",
+            "example": "Tag"
+         },
+         "max": {
+            "content": "$3",
+            "example": "10"
+         },
+         "min": {
+            "content": "$2",
+            "example": "1"
+         }
+      }
+   },
+   "quickNote": {
+      "description": "Title for creating quick note",
+      "message": "Quicknote"
+   },
+   "quickNoteAutoSavedDescription": {
+      "description": "description of auto saved quick note",
+      "message": "(click \u003Ci\u003E\u003Cb\u003ESave\u003C/b\u003E\u003C/i\u003E to submit this note to the server, or \u003Ci\u003E\u003Cb\u003EDiscard\u003C/b\u003E\u003C/i\u003E to dispose of it)"
+   },
+   "quickNoteDescription": {
+      "description": "description of quick note",
+      "message": "(to clip the content of this page, check the \u003Ci\u003E\u003Cb\u003EClip full\u003C/b\u003E\u003C/i\u003E page checkbox)"
+   },
+   "quickNote_cancel": {
+      "description": "Label for dismissing quick note composition dialog",
+      "message": "Cancel"
+   },
+   "quickNote_comment": {
+      "description": "Label for additional text to be added to the note",
+      "message": "Add text"
+   },
+   "quickNote_discard": {
+      "description": "Label for dismissing auto-saved quick note",
+      "message": "Discard"
+   },
+   "quickNote_fullPage": {
+      "description": "Label for allowing to clip contents of the entire page",
+      "message": "Clip full page"
+   },
+   "quickNote_notebook": {
+      "description": "Label for selection of note's notebook",
+      "message": "Notebook"
+   },
+   "quickNote_saveUrl": {
+      "description": "Label for allowing to save URL with a clip",
+      "message": "Save page URL"
+   },
+   "quickNote_submit": {
+      "description": "Label for saving quick note",
+      "message": "Save"
+   },
+   "quickNote_tagNames": {
+      "description": "Label for note's tags",
+      "message": "Tags"
+   },
+   "quickNote_title": {
+      "description": "Label for note title",
+      "message": "Title"
+   },
+   "signout": {
+      "description": "Text on a link prompting for signing out currently logged in user",
+      "message": "Sign out"
+   },
+   "syncError": {
+      "description": "Error message shown to user when the extension fails to synchronize",
+      "message": "Sorry, could not synchronize ($details$)",
+      "placeholders": {
+         "details": {
+            "content": "$1",
+            "example": "illegal access"
+         }
+      }
+   },
+   "synchronizing": {
+      "description": "Message shown when the extension is synchronizing",
+      "message": "Synchronizing..."
+   },
+   "tagNameNotInRange": {
+      "description": "Indicates that user entered a tag that's not valid in length",
+      "message": "Each tag should be between $min$ and $max$ characters long.",
+      "placeholders": {
+         "max": {
+            "content": "$2",
+            "example": "10"
+         },
+         "min": {
+            "content": "$1",
+            "example": "1"
+         }
+      }
+   },
+   "tagNamesNotInRange": {
+      "description": "Indicates that user entered an abnormal number of tags",
+      "message": "Please enter anywhere from $min$ to $max$ tags.",
+      "placeholders": {
+         "max": {
+            "content": "$2",
+            "example": "10"
+         },
+         "min": {
+            "content": "$1",
+            "example": "1"
+         }
+      }
+   },
+   "totalPartsNotInRange": {
+      "description": "Indicates that total number of things listed is either below minimum or above maximum number allowed",
+      "message": "Total number of $fieldName$s should be between $min$ and $max$.",
+      "placeholders": {
+         "fieldName": {
+            "content": "$1",
+            "example": "Tag"
+         },
+         "max": {
+            "content": "$3",
+            "example": "10"
+         },
+         "min": {
+            "content": "$2",
+            "example": "1"
+         }
+      }
+   },
+   "unclippablePage": {
+      "description": "Message inticating that the extension cannot obtain contents of a page",
+      "message": "The page you're trying to clip is constructed in a way that Evernote cannot clip it!"
+   },
+   "valueDoesNotMatch": {
+      "description": "Generic validation error message for fields with value not matching expected pattern",
+      "message": "$fieldName$ is not valid.",
+      "placeholders": {
+         "fieldName": {
+            "content": "$1",
+            "example": "username"
+         }
+      }
+   },
+   "valueNotInRange": {
+      "description": "Generic validation error message for values whose lenghts are outside of given range",
+      "message": "$fieldName$ should be between $min$ and $max$ characters long",
+      "placeholders": {
+         "fieldName": {
+            "content": "$1",
+            "example": "username"
+         },
+         "max": {
+            "content": "$3",
+            "example": "64"
+         },
+         "min": {
+            "content": "$2",
+            "example": "1"
+         }
+      }
+   },
+   "valueNotPresent": {
+      "description": "Generic validation error message for required form field",
+      "message": "$fieldName$ is a required field.",
+      "placeholders": {
+         "fieldName": {
+            "content": "$1",
+            "example": "username"
+         }
+      }
+   },
+   "valueTooLong": {
+      "description": "Generic validation error message for fields with length above maximum",
+      "message": "$fieldName$ cannot be longer than $num$ characters.",
+      "placeholders": {
+         "fieldName": {
+            "content": "$1",
+            "example": "username"
+         },
+         "num": {
+            "content": "$2",
+            "example": "6"
+         }
+      }
+   },
+   "valueTooShort": {
+      "description": "Generic validation error message for fields with length below minimum",
+      "message": "$fieldName$ must be at least $num$ characters long.",
+      "placeholders": {
+         "fieldName": {
+            "content": "$1",
+            "example": "username"
+         },
+         "num": {
+            "content": "$2",
+            "example": "6"
+         }
+      }
+   },
+   "viewNoteInEvernote": {
+      "description": "Link to a note in Evernote",
+      "message": "View in Evernote"
+   }
+}

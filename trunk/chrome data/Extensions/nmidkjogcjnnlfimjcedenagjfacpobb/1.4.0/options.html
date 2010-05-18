@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title id="title">FreshStart Options</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" rel="text/css" href="options.css"/>
+        <style type="text/css">
+            body {
+                background: -webkit-gradient(linear, left top, left bottom,
+                                             from(#fff), to(#dcd));
+            }
+            #pagetitle {
+                color: black;
+            }
+            #feature {
+                background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#888));
+                color: white;
+            }
+            #options-saved {
+                margin-left: 5px;
+                display: none;
+            }
+
+            #optionsBackupPeriodWrapper {
+                margin-left: 25px;
+            }
+
+            #optionsNewUserTips a{
+                color: #ddd;
+            }
+            #optionsNewUserTips a:hover {
+                color: #bbb;
+            }
+        </style>
+        <script type="text/javascript" src="options.js"></script>
+    </head>
+    <body onload="init();restoreSetting()">
+        <div id="wrapper">
+            <div id="header">
+                <div id="logo"></div>
+                <div id="pagetitle"></div>
+            </div>
+
+            <br style="clear:both">
+
+            <div id="feature">
+                <div style="float: right; height: 110px; margin: -5px; padding: 5px; -moz-border-radius: 10px; -webkit-border-radius: 10px; border: 1px solid #ddd; background: -moz-linear-gradient(top, rgba(255,255,255,0.05), rgba(255,255,255,0.2)); background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.05)), to(rgba(255,255,255,0.2))); -moz-box-shadow: 0px 0px 2px black; -webkit-box-shadow: 0px 0px 2px black;">
+                    <div style="position: relative; z-index:3; ">
+                        <div style="color: white; font: 16px Tahoma, Arial, sans-serif; line-height: 25px; margin-left: 5px;" id="supportUs">
+                        </div>
+                        <div style="margin-top: -20px; margin-left: 195px">
+                            <a href="http://twitter.com/home?status=I%20am%20using%20FreshStart%20-%20A%20Chrome%20Cross-Browser%20Session%20manager.%20Check%20it%20out!%20http%3A%2F%2Fbit.ly%2F9hJS4g" target="_blank"><img src="twitter.png" style="border: 0"></a>
+                            <a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.visibotech.com%2FFreshStart%2F&t=FreshStart%20Session%20Manager%20for%20Chrome" target="_blank"><img src="facebook.png" style="border: 0"></a>
+                        </div>
+                    </div>
+                    <img src="arrow.png" style="position: relative; left: 250px; top: -210px; z-index: 5">
+                </div>
+
+                <span id="optionsNewUserTips"></span><br><br>
+                <input type="checkbox" id="crashRestore" onclick="togglePeriod()">
+                <span id="optionsEnableCrashRecovery"></span><br>
+                <div id="optionsBackupPeriodWrapper">
+                    <span id="optionsBackupPeriod"></span> <input id="backupPeriod" maxlength="3" style="width: 50px;"> <span id="stringMinutes"></span>
+                </div>
+                <br>
+                <span id="optionsDateFormat"></span>
+                <select id="dateFormatSelect" name="dateFormat" size="1">
+                    <option selected="selected" value="1">dd/mm/yyyy</option>
+                    <option value="2">mm/dd/yyyy</option>
+                    <option value="3">yyyy-mm-dd</option>
+                </select> 
+                <br>
+                <br>
+                <button onclick="save_options()"><span id="stringSave"></span></button>
+                <span id="options-saved"></span>
+                <br><br>
+                <div id="middleClickTips"></div>
+            </div>
+
+            <div>
+                <br>
+                <h3><span id="contactUs"></span></h3>
+                <ul>
+                    <li><span id="contactUs2"></span></li>
+                    <li><span id="contactUs3"></span></li>
+                    <li><span id="contactUs4"></span></li>
+                </ul>
+            </div>
+
+            <div id="copyright"></div>
+        </div>
+    </body>
+</html>
+

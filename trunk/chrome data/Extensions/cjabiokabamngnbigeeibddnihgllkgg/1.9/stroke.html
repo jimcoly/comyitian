@@ -1,0 +1,472 @@
+<!doctype html>
+<html>
+<head>
+<script src="essentials.js"></script>
+<script src="locales/locales.js"></script>
+<script>
+/* the container of global data, shared by all tabs */
+var _heap = {};
+
+const LEFT = $.LEFT;
+const RIGHT = $.RIGHT;
+const UP = $.UP;
+const DOWN = $.DOWN;
+
+/* all living tabs, including recently closed ones */
+var _tabs = {
+	/* number of revivable tabs */
+	SIZE: 10,
+	/* the stack of revivable tabs' id */
+	closed: [],
+	/* all tabs, opened and revivables */
+	all: {},
+	/* should be called when a tab's URL is updated */
+	update: function(tab) {
+		if (cjs_avail(tab.url))
+			_tabs.all[tab.id] = tab;
+	},
+	/* should be called when a tab is remove */
+	remove: function(id) {
+		/* push to the stack of recently closed tabs */
+		if (!!_tabs.all[id]) {
+			_tabs.closed.push(id);
+			while (_tabs.SIZE < _tabs.closed.length) {
+				/* discard tabs closed earlier */
+				delete _tabs.all[_tabs.closed.splice(0, 1)[0]];
+			}
+		}
+	}
+};
+
+/* effective config */
+var _cfg;
+
+/* default config */
+var _defcfg = {
+	'version': 1.9,
+	'locale': null,				// set later
+	'trigger': $.WIN ? $.RBUTTON:$.MBUTTON,	// mouse button to trigger stroke
+	'timeout': 1000,			// a stroke sequence expires after timeout (milliseconds)
+	'minstep': 20,				// minimum moving distance of a stroke (in px)
+	'trail': 'black',			// show trails when doing mouse strokes
+	'suppress': true,			// suppress stroke actions when holding ALT
+	'newtab_target': 'chrome://newtab/',	// the page to open when issue a new tab command
+	'newtab_position': '+1',		// where to put the new tab
+	'last_tab_close_win': true,		// when close the last tab, also close the window
+	'trail_width': 1,			// trail width
+	'categories': {
+		'navigation': {
+			'to-page-top': [UP],
+			'to-page-bottom': [DOWN],
+			'scroll-up-one-page': [UP, RIGHT, DOWN],
+			'scroll-down-one-page': [DOWN, RIGHT, UP],
+			'history-back': [LEFT],
+			'history-forward': [RIGHT],
+			'previous-tab': [UP, LEFT],
+			'next-tab': [UP, RIGHT],
+			'first-tab': [],
+			'last-tab': [],
+			'upper-level-in-url': [],
+			'increase-number-in-url': [],
+			'decrease-number-in-url': []
+		},
+
+		'window': {
+			'new-window': [UP, DOWN, RIGHT, UP],
+			'close-window': [LEFT, DOWN, RIGHT],
+			//'minimize-window': [DOWN, LEFT],
+			'maximize-window': [RIGHT, UP]
+		},
+
+		'tab': {
+			'new-tab': [RIGHT, DOWN],
+			'close-tab': [LEFT, UP, RIGHT],
+			'undo-close-tab': [DOWN, RIGHT],
+			'detach-tab': [LEFT, UP],
+			'duplicate-tab': [],
+			'close-tab-to-the-left': [],
+			'close-tab-to-the-right': [],
+			'close-all-tabs-to-the-left': [],
+			'close-all-tabs-to-the-right': [],
+			'close-other-tabs': []
+		},
+
+		'link': {
+			'open-link-in-new-window': [DOWN, RIGHT, UP, RIGHT],
+			'open-link-in-new-background-tab': [DOWN, RIGHT, DOWN],
+			'open-link-in-new-foreground-tab': [DOWN, RIGHT, DOWN, UP],
+			'bookmark-this-link': []
+		},
+
+		'image': {
+			//'save-image': [],
+			'view-image': [UP, RIGHT, DOWN, UP]
+		},
+
+		'bookmark': {
+			'bookmark-this-page': [DOWN, RIGHT, UP, LEFT],
+			'remove-bookmark': [LEFT, DOWN, RIGHT, UP]
+		},
+
+		'utilities': {
+			'reload': [UP, DOWN],
+			'skip-cache-reload': [UP, DOWN, UP],
+			'stop-page-loading': [UP, DOWN, UP, RIGHT],
+			'text-zoom-in': [],
+			'text-zoom-out': [],
+			'text-zoom-reset': [],
+			'search-selected-text': [LEFT, DOWN, RIGHT, UP, LEFT],
+			'view-source': [LEFT, DOWN, RIGHT, DOWN, LEFT],
+			'take-screenshot': [RIGHT, LEFT, RIGHT, LEFT]
+		},
+
+		'other': {
+			'mouse-stroke-options': [DOWN, UP, RIGHT, DOWN]
+		}
+	},
+	'customs': {
+		/* user defined strokes:
+		'user-defined-stroke': [UP, UP, UP]
+		 */
+		'userdef#Hide%20all%20images%20%28example%29': [UP],
+		'userdef#Search%20in%20YouTube%20%28example%29': [DOWN]
+	},
+	'scripts': {
+		/* scripts of user defined strokes, like $.actions to built-in
+		 * strokes:
+		'user-defined-stroke': 'alert("hello")'
+		 */
+		'userdef#Hide%20all%20images%20%28example%29': "var imgs = document.getElementsByTagName('img');\nfor (var i = imgs.length - 1; i >= 0; --i) {\n\timgs[i].parentNode.removeChild(imgs[i])\n}",
+		'userdef#Search%20in%20YouTube%20%28example%29': "location.href = 'http://www.youtube.com/results?search_query=' + _env.seltext;"
+	},
+	'rockers': {
+		'R': 'next-tab',
+		'L': 'previous-tab'
+	},
+	'wheels': {
+		'U': 'text-zoom-in',
+		'D': 'text-zoom-out',
+		'L': '',
+		'R': ''
+	},
+	'drags': {
+		'U': 'open-link-in-new-window',
+		'D': 'bookmark-this-link',
+		'L': 'open-link-in-new-background-tab',
+		'R': 'open-link-in-new-foreground-tab'
+	}
+};
+
+/* compare stroke sequences */
+var match = function(seq1, seq2) {
+	if (seq1 === seq2 || !seq1 && !seq2)
+		return true;
+	if (!seq1 && seq2 || seq1 && !seq2 || seq1.length != seq2.length)
+		return false;
+
+	return seq1.join(' ') == seq2.join(' ');
+}
+
+/* execute the given script in the given tab */
+var tab_exec = function(tab, arg) {
+	chrome.tabs.sendRequest(tab.id, {
+		type: 'local-eval', data: arg
+	});
+}
+
+/* test if content scripts are injected in the given url */
+var cjs_avail = function(url) {
+	return !!url.match(/^(http|https|ftp|file):/) ||
+		/* options.html also has content scripts */
+		0 == url.indexOf($.OPTION_URL);
+}
+
+/* mirror object o2 to object o1, all defined properties values of o2 are
+ * copied to o1, properties which are not in o1 are ignored, properties in
+ * the mandatory list, if defined, are copied */
+var mirror = function(o1, o2, whitelist) {
+	if (iterable(o1) && iterable(o2)) {
+		/* build list */
+		whitelist = !!whitelist ? [].concat(whitelist) : [];
+		for (var k in o1)
+			if (-1 != whitelist.indexOf(k) && undefined != o2[k])
+				o1[k] = o2[k];
+			else
+				o1[k] = mirror(o1[k], o2[k], whitelist);
+	} else if (undefined != o2 && !iterable(o1) && !iterable(o2)) {
+		o1 = o2;
+	}
+	return o1;
+}
+
+/* is object but not array */
+var iterable = function(o) {
+	return !!o && o.constructor == {}.constructor;
+}
+
+/* translate older version configurations to the newest version */
+var sync_config = function(cfg) {
+	/* merge with _defcfg, but keep custom stroke settings */
+	cfg = mirror($.copy(_defcfg), cfg, ['customs', 'scripts']);
+
+	/* flat stroke categories for easy referring */
+	cfg.strokes = {};
+	for (var k in cfg.categories) {
+		for (var k2 in cfg.categories[k]) {
+			cfg.strokes[k2] = cfg.categories[k][k2];
+		}
+	}
+	return cfg;
+}
+
+/* load user config */
+var load_config = function(update_tabs) {
+	try {
+		if (!(_cfg = JSON.parse(localStorage.getItem('config')))) {
+			_cfg = _defcfg;
+		}
+	} catch (ex) {
+		console.error(ex);
+		_cfg = _defcfg;
+	}
+
+	if (!_cfg.version || _cfg.version < _defcfg.version) {
+		/* just upgraded */
+		_cfg = sync_config(_cfg);
+		_cfg.version = _defcfg.version;
+		save_config(_cfg);
+		version_highlight();
+	}
+
+	/* set locale */
+	if (!_cfg.locale) {
+		chrome.i18n.getAcceptLanguages(function(langs) {
+			for (var i = 0; i < langs.length; ++i) {
+				if (!!_locales[langs[i]]) {
+					_cfg.locale = langs[i];
+					break;
+				}
+			}
+			/* default locale */
+			if (!_cfg.locale) _cfg.locale = 'en-US';
+		});
+	}
+
+	if (!update_tabs) return;
+
+	/* update config in all tabs */
+	for (var id in _tabs.all) {
+		if (-1 == _tabs.closed.indexOf(id))
+			chrome.tabs.sendRequest(_tabs.all[id].id, {
+				type: 'update-config', data: _cfg
+			});
+	}
+}
+
+/* save user config */
+var save_config = function(cfg, check)
+{
+	if (check) {
+		cfg = sync_config(cfg);
+		cfg.version = _defcfg.version;
+	}
+	localStorage.setItem('config', JSON.stringify(cfg));
+	_cfg = cfg;
+}
+
+/* show version highlight */
+var version_highlight = function()
+{
+	var html = '\
+<strong>Mouse Stroke</strong> was just upgraded to the latest version!<br/>\
+Some highlights of this release: Backup and restore settings, new icon, new tab open strokes and new tab options.<br/>\
+<a target="_blank" href="' + chrome.extension.getURL('options.html') + '">Explore</a> |\
+<a target="_blank" href="https://chrome.google.com/extensions/detail/aeaoofnhgocdbnbeljkmbjdmhbcokfdb">Home</a> |\
+<a target="_blank" href="http://code.google.com/p/chrome-mouse-stroke/wiki/FAQs">FAQs</a> |\
+<a target="_blank" href="http://code.google.com/p/chrome-mouse-stroke/issues/list">Support</a>';
+
+	var send = function(id, info) {
+		chrome.tabs.get(id, function(tab) {
+			if (!cjs_avail(tab.url)) return;
+
+			chrome.tabs.sendRequest(id, {
+				type: 'show-message', data: { html: html }
+			});
+			chrome.tabs.onSelectionChanged.removeListener(send);
+		});
+	}
+	chrome.tabs.onSelectionChanged.addListener(send);
+}
+
+/* process stroke */
+var process = function(msg, tab) {
+	var id, handler, custom, event = msg.data;
+
+	if ('stroke' != event.type) {
+		id = 'wheel' == event.type ?
+			_cfg.wheels[event.wheel] :
+			'rocker' == event.type ?
+			_cfg.rockers[event.rocker] :
+			_cfg.drags[event.drag];
+		if (!!(handler = $.actions[id])) {
+			custom = false;
+		} else if (!!(handler = _cfg.scripts[id])) {
+			custom = true;
+		}
+	} else if ('stroke' == event.type) {
+		custom = event.custom;
+		var stroke = event.stroke,
+			strokes = custom ? _cfg.customs : _cfg.strokes,
+			handlers = custom ? _cfg.scripts : $.actions;
+
+		for (id in strokes) {
+			if (match(stroke, strokes[id])) {
+				handler = handlers[id];
+				break;
+			}
+		}
+	}
+
+	if (!handler) return;
+
+	if (custom || handler.local) {
+		/* exec locally in content script */
+		tab_exec(tab, {
+			id: id, tab: tab, event: event, custom: custom,
+			script: custom ? handler : ''
+		});
+	} else {
+		/* call directly */
+		handler.call(tab, tab, event);
+	}
+}
+
+/* synchronize global variables between tabs */
+chrome.tabs.onSelectionChanged.addListener(function(id, info) {
+	/* share global variables between tabs, this is how it works:
+	 * when tabs got selected, the _heap variable (contains all global
+	 * data) is injected into it; tabs can read _heap like normal variable,
+	 * but when they update _heap, the background page must be notified
+	 * (by receiving 'set-global' messages), so changes can be reflected
+	 * to other tabs */
+	chrome.tabs.get(id, function(tab) {
+		if (!cjs_avail(tab.url)) {
+			/* out of extension land, reset heap */
+			_heap = {}
+		} else {
+			chrome.tabs.sendRequest(id, {
+				type: 'put-globals', data: _heap
+			});
+		}
+	});
+});
+
+/* routine to execute when a tab is created */
+chrome.tabs.onCreated.addListener(function(tab) {
+	/* record all opened tabs */
+	_tabs.update(tab);
+});
+
+/* routine to execute when a tab is updated */
+chrome.tabs.onUpdated.addListener(function(id, info, tab) {
+	/* only add to _tabs when url is updated, note that if url is
+	 * specified when open a new tab, no onUpdate events will contain
+	 * info.url, in such cases, we need to update _tabs in onCreated
+	 * events
+	 * ISSUE=28 */
+	if (info.url) _tabs.update(tab);
+});
+
+/* routine to execute when a tab is destroied */
+chrome.tabs.onRemoved.addListener(function(id) {
+	_tabs.remove(id);
+});
+
+/* listen to the content script */
+chrome.extension.onConnect.addListener(function(port) {
+	if ('stroke.html-stroke' != port.name) return;
+
+	port.onMessage.addListener(function(msg) {
+		var tab = port.sender.tab;
+
+		if ('pull-config' == msg.type) {
+			/* stroke.js is requesting for _cfg */
+			chrome.tabs.sendRequest(tab.id, {
+				type: 'update-config', data: _cfg
+			});
+			return;
+		} else if ('get-globals' == msg.type) {
+			chrome.tabs.sendRequest(tab.id, {
+				type: 'put-globals', data: _heap
+			});
+			return;
+		} else if ('set-global' == msg.type) {
+			_heap[msg.data.name] = msg.data.value;
+			/* When using wheel strokes to navigate from tab A to
+			 * tab B, the 'mouseup' event of the right mouse button
+			 * is always fired from tab A, where the 'mousedown'
+			 * event occured, while the currently selected tab
+			 * have been changed to tab B, it causes tab B's _heap
+			 * be un-synced with the global _heap because _heap
+			 * syncs happen on chrome.tabs.onUpdate events, which
+			 * occur before the 'mouseup' events been fired, so
+			 * we need to re-sync _heap of tab B here
+			 * ISSUE=30 */
+			chrome.tabs.getSelected(null, function(tab) {
+				if (tab.id != tab.id && cjs_avail(tab.url)) {
+					chrome.tabs.sendRequest(tab.id, {
+						type: 'put-globals',
+						data: _heap
+					});
+				}
+			});
+			return;
+		} else if ('stroke' != msg.type) return;
+
+		if (0 == tab.url.indexOf($.OPTION_URL)) {
+			/* ask the options page if it wants to accept strokes,
+			 * when in setting mode (the black screen), options
+			 * page process strokes by itself */
+			chrome.tabs.sendRequest(tab.id, {
+				type: 'accept-stroke',
+				data: msg.data
+			}, function(resp) {
+				if (true === resp) {
+					chrome.tabs.get(tab.id, function(tab) {
+						process(msg, tab);
+					});
+				}
+			});
+		} else {
+			/* make sure the stroke handler has the up to date tab
+			 * object, port.sender.tab is not always up to date */
+			chrome.tabs.get(tab.id, function(tab) {
+				process(msg, tab);
+			});
+		}
+	});
+});
+
+/* listen to the config page */
+chrome.extension.onConnect.addListener(function(port) {
+	if ('stroke.html-config' != port.name) return;
+
+	port.onMessage.addListener(function(msg) {
+		if ('reload' == msg.type) {
+			/* asks all tabs to update config */
+			load_config(true);
+		} else if ('save' == msg.type) {
+			/* save config locally */
+			save_config(msg.data, true);
+			load_config(true);
+		}
+	});
+});
+
+/* always refresh _defcfg */
+localStorage.setItem('def_config', JSON.stringify(_defcfg));
+/* get user config */
+load_config();
+</script>
+</head>
+</html>

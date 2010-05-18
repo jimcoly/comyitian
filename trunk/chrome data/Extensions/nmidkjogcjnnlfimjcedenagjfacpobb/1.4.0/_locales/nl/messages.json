@@ -1,0 +1,136 @@
+{
+   "clickToRestore": {
+      "message": "Klik hier om Sessie '$name$' te herstellen in een nieuw window",
+      "placeholders": {
+         "name": {
+            "content": "$1"
+         }
+      }
+   },
+   "contactUs": {
+      "message": "Neem contact met ons op:"
+   },
+   "contactUs2": {
+      "message": "Suggesties of Wensen? Bezoek onze website\u003Ca href='http://getsatisfaction.com/visibo/products/visibo_freshstart_session_manager' target='_blank'\u003Ehier\u003C/a\u003E!"
+   },
+   "contactUs3": {
+      "message": "Problemen? Bezoek onze website\u003Ca href='http://getsatisfaction.com/visibo/products/visibo_freshstart_session_manager' target='_blank'\u003Ehier\u003C/a\u003E. Vaak hebben een screenshot en je versienummer van je OS en Chrome nodig."
+   },
+   "contactUs4": {
+      "message": "We welcome all constructive feedbacks in civilized languages. *wink*"
+   },
+   "copyright": {
+      "message": "\u003Ca href='http://www.visibotech.com/' target='_blank'\u003EHome\u003C/a\u003E | \u003Ca href='http://blog.visibotech.com/' target='_blank'\u003EBlog\u003C/a\u003E | \u003Ca href='http://twitter.com/visibo' target='_blank'\u003ETwitter\u003C/a\u003E | Copyright 2010 Visibo Ltd. All rights reserved."
+   },
+   "crashRestoreTitle": {
+      "message": "Herstel vorige Sessie"
+   },
+   "description": {
+      "description": "De beschrijving van de extensie",
+      "message": "Kunt u wel een simpele Sessie manager gebruiken? Heeft u meerdere gebruikers op Chrome? Dan is FreshStart de oplossingen, de simpele Sessie manager."
+   },
+   "edit": {
+      "message": "Bewerk"
+   },
+   "enableCrashRecovery": {
+      "message": "Zet Crash Herstellen aan."
+   },
+   "extensionBrowserActionTitle": {
+      "message": "FreshStart - Meerdere Browsers Sessie Manager"
+   },
+   "minutes": {
+      "message": "minuten"
+   },
+   "mySession": {
+      "message": "Mijn Sessie"
+   },
+   "name": {
+      "description": "De naam van de extensie",
+      "message": "FreshStart - Meerdere Browsers Sessie Manager"
+   },
+   "noSessionSaved": {
+      "message": "Geen Sessies Opgeslagen"
+   },
+   "options": {
+      "message": "Opties"
+   },
+   "optionsBackupPeriod": {
+      "message": "Sla alle windows en tabs op elke "
+   },
+   "optionsBackupPeriodOutOfRange": {
+      "message": "De back-up periode kan niet korter zijn dan 1 minuut of langer 999 minuten"
+   },
+   "optionsEnableCrashRecovery": {
+      "message": "Zet Crash Herstellen aan"
+   },
+   "optionsNewUserTips": {
+      "message": "Nieuw met FreshStart? Bezoek dan onze website \u003Ca href='http://www.visibotech.com/FreshStart/welcome.html' target='_blank'\u003EWelcome Page\u003C/a\u003E!"
+   },
+   "optionsPageTitle": {
+      "message": "FreshStart Opties"
+   },
+   "optionsSaved": {
+      "message": "Uw Opties zijn opgeslagen"
+   },
+   "remove": {
+      "message": "Verwijder"
+   },
+   "restorePreviousSession": {
+      "message": "Herstel laatste Sessie"
+   },
+   "restoreSavedWindow": {
+      "message": "Opgeslagen window ($count$) - klik hier om hem te herstellen",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "restoreSession": {
+      "message": "Sessie Herstellen"
+   },
+   "restoreSession2": {
+      "message": "Klik om te openen in nieuwe window, ctrl-click (Win, Linux) of cmd-click (Mac) om te openen in huidige window."
+   },
+   "save": {
+      "message": "Opslaan"
+   },
+   "saveSession": {
+      "message": "Sessie Opslaan"
+   },
+   "smEditCancel": {
+      "message": "Cancel"
+   },
+   "smEditSave": {
+      "message": "Opslaan"
+   },
+   "smHeadingNew": {
+      "message": "Tabbladen toevoegen (vink aan om toe tevoegen)"
+   },
+   "smHeadingSaved": {
+      "message": "Opgeslagen Tabbladden (Deselecteer om te verwijderen)"
+   },
+   "smHeadingTitle": {
+      "message": "Tietel"
+   },
+   "smSaveList": {
+      "message": "Deselecteer de Tabs die je niet wilt opslaan."
+   },
+   "smSaveToggle": {
+      "message": "Wissel Selectie"
+   },
+   "supportUs": {
+      "message": "Ondersteun onze ontwikkeling en \u003Cbr\u003E vertel het je vrienden!"
+   },
+   "tabsCount": {
+      "message": " ($count$ tabs)",
+      "placeholders": {
+         "count": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedMessage": {
+      "message": "FreshStart is bijgewerk, klik hier op te zien wat er nieuw is"
+   }
+}

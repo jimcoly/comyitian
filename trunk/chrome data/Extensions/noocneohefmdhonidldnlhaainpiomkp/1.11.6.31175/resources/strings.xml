@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Strings culture="en-US">
+    <String>
+        <Key>core.addon-description</Key>
+        <Value>Cooliris transforms your browser into a full-screen 3D Wall for searching, viewing and sharing the Web.</Value>
+    </String>
+    <String>
+        <Key>core.cancel-load</Key>
+        <Value>Cancel load</Value>
+    </String>
+    <String>
+        <Key>core.close-this</Key>
+        <Value>Close</Value>
+    </String>
+    <String>
+        <Key>core.launch-cooliris</Key>
+        <Value>Launch Cooliris</Value>
+    </String>
+    <String>
+        <Key>core.version</Key>
+        <Value>Version</Value>
+    </String>
+    <String>
+        <Key>fail-panel.cancel-button</Key>
+        <Value>Cancel</Value>
+    </String>
+    <String>
+        <Key>fail-panel.host-timeout</Key>
+        <Value>Cooliris was unable to load this channel, probably due to unusually high demand.  Please try again later.</Value>
+    </String>
+    <String>
+        <Key>fail-panel.no-network</Key>
+        <Value>Cooliris was unable to load this channel.  Ensure you are connected to the Internet and try again.</Value>
+    </String>
+    <String>
+        <Key>fail-panel.retry-button</Key>
+        <Value>Retry</Value>
+    </String>
+    <String>
+        <Key>graphics.initialization-failed</Key>
+        <Value>Cooliris graphics module failed to initialize. Please ensure that your OpenGL drivers are up to date.</Value>
+    </String>
+    <String>
+        <Key>graphics.out-of-memory.description</Key>
+        <Value>There is not enough memory to create a new Cooliris session.  Please close any existing Cooliris tabs or windows, or other 3-D graphical applications running.
+
+If the problem persists, press &quot;Help&quot; for possible solutions.</Value>
+        <Comment>&quot;Help&quot; should be the same text that Windows uses for the standard dialog button.</Comment>
+    </String>
+    <String>
+        <Key>graphics.out-of-memory.title</Key>
+        <Value>Cooliris error</Value>
+    </String>
+    <String>
+        <Key>hint.email-address</Key>
+        <Value>Email</Value>
+    </String>
+    <String>
+        <Key>hint.full-name</Key>
+        <Value>Full name</Value>
+    </String>
+    <String>
+        <Key>hint.password</Key>
+        <Value>Password</Value>
+    </String>
+    <String>
+        <Key>hint.search</Key>
+        <Value>Search</Value>
+    </String>
+    <String>
+        <Key>hint.type-message</Key>
+        <Value>Type a message and drag content here</Value>
+    </String>
+    <String>
+        <Key>hint.type-recipient-emails</Key>
+        <Value>Type recipient email addresses here</Value>
+    </String>
+    <String>
+        <Key>install.restart-ie</Key>
+        <Value>You will need to restart Internet Explorer before using Cooliris.</Value>
+    </String>
+    <String>
+        <Key>iphoto.albums</Key>
+        <Value>Albums</Value>
+    </String>
+    <String>
+        <Key>iphoto.all-photos</Key>
+        <Value>All Photos</Value>
+        <Comment>This should be the same text as the &quot;All Photos&quot; element of the iPhoto sidebar.</Comment>
+    </String>
+    <String>
+        <Key>iphoto.events</Key>
+        <Value>Events</Value>
+    </String>
+    <String>
+        <Key>iphoto.flagged</Key>
+        <Value>Flagged</Value>
+        <Comment>This should be the same text as the &quot;Flagged&quot; element of the iPhoto sidebar.</Comment>
+    </String>
+    <String>
+        <Key>iphoto.last-12-months</Key>
+        <Value>Last 12 Months</Value>
+        <Comment>This should be the same text as the &quot;Last 12 Months&quot; element of the iPhoto sidebar.</Comment>
+    </String>
+    <String>
+        <Key>iphoto.last-import</Key>
+        <Value>Last Import</Value>
+        <Comment>This should be the same text as the &quot;Last Import&quot; element of the iPhoto sidebar.</Comment>
+    </String>
+    <String>
+        <Key>linux.setup.decide-later</Key>
+        <Value>Decide later</Value>
+        <Comment>Response to linux.setup.flash-message</Comment>
+    </String>
+    <String>
+        <Key>linux.setup.don&apos;t-install</Key>
+        <Value>Don&apos;t install</Value>
+        <Comment>Response to linux.setup.flash-message</Comment>
+    </String>
+    <String>
+        <Key>linux.setup.flash-message</Key>
+        <Value>To experience video in Cooliris, you need to install Adobe Flash player.</Value>
+    </String>
+    <String>
+        <Key>linux.setup.install-flash</Key>
+        <Value>Install Flash...</Value>
+        <Comment>Response to linux.setup.flash-message</Comment>
+    </String>
+    <String>
+        <Key>linux.setup.title</Key>
+        <Value>Cooliris Setup</Value>
+    </String>
+    <String>
+        <Key>login-panel.create-account-button</Key>
+        <Value>Sign Up</Value>
+    </String>
+    <String>
+        <Key>login-panel.forgot-password</Key>
+        <Value>Forgot password?</Value>
+    </String>
+    <String>
+        <Key>login-panel.login-button</Key>
+        <Value>Login</Value>
+    </String>
+    <String>
+        <Key>login-panel.login-teaser</Key>
+        <Value>Log in to save favorites on your personal wall, send messages, and more.</Value>
+    </String>
+    <String>
+        <Key>notification-panel.download-succeeded</Key>
+        <Value>Image has been saved to {0}.</Value>
+    </String>
+    <String>
+        <Key>notification-panel.goto-last-feed</Key>
+        <Value>Below is the Cooliris feed for the current browser page. Click {0:here} to go back to your previous feed instead.</Value>
+        <Comment>Please translate {0:here} into the appropriate word at the appropriate point in the sentence, keeping the braces and the beginning 0:.  For example, in Spanish it would look like {0:aqui}.</Comment>
+    </String>
+    <String>
+        <Key>notification-panel.launch-feed-failed</Key>
+        <Value>Welcome! Try Cooliris on {0:hundreds of supported sites} or enjoy the Discover feed below.</Value>
+        <Comment>Please translate {0:hundreds of supported sites} into the appropriate word at the appropriate point in the sentence, keeping the braces.</Comment>
+    </String>
+    <String>
+        <Key>notification-panel.message-sent</Key>
+        <Value>Your message has been sent.</Value>
+    </String>
+    <String>
+        <Key>notification-panel.successfully-logged-in</Key>
+        <Value>You have successfully logged in.</Value>
+    </String>
+    <String>
+        <Key>notification-panel.unable-to-connect</Key>
+        <Value>Unable to connect to Cooliris.</Value>
+    </String>
+    <String>
+        <Key>notification-panel.unable-to-connect-click-to-retry</Key>
+        <Value>Unable to connect to Cooliris. Click {0:here} to retry.</Value>
+        <Comment>Please translate {0:here} into the appropriate word at the appropriate point in the sentence, keeping the braces.</Comment>
+    </String>
+    <String>
+        <Key>registration-panel.already-signed-up</Key>
+        <Value>Already signed up?</Value>
+    </String>
+    <String>
+        <Key>registration-panel.keep-me-in-the-loop</Key>
+        <Value>Keep me in the loop with email updates.</Value>
+    </String>
+    <String>
+        <Key>registration-panel.register-now-button</Key>
+        <Value>Register Now</Value>
+    </String>
+    <String>
+        <Key>registration-panel.setup-teaser</Key>
+        <Value>Set up your account to save favorites on your personal wall, send messages, and more. We will never use your email address without your permission.</Value>
+    </String>
+    <String>
+        <Key>registration-panel.tos</Key>
+        <Value>By clicking register, you indicate you have read and agree to the {0:terms of service} and {1:privacy policy}.</Value>
+    </String>
+    <String>
+        <Key>send-panel.send-button</Key>
+        <Value>Send Message</Value>
+    </String>
+    <String>
+        <Key>sidebar.desktop</Key>
+        <Value>Desktop</Value>
+    </String>
+    <String>
+        <Key>sidebar.disks</Key>
+        <Value>Disks</Value>
+    </String>
+    <String>
+        <Key>sidebar.home-folder</Key>
+        <Value>Home</Value>
+    </String>
+    <String>
+        <Key>sidebar.iphoto</Key>
+        <Value>iPhoto Library</Value>
+    </String>
+    <String>
+        <Key>status-panel.content-load-fail</Key>
+        <Value>The content could not be loaded.</Value>
+    </String>
+    <String>
+        <Key>status-panel.empty-favorites-wall</Key>
+        <Value>Your Favorites wall is empty. Add items to this wall by clicking the star.</Value>
+    </String>
+    <String>
+        <Key>status-panel.loading-general</Key>
+        <Value>Loading...</Value>
+    </String>
+    <String>
+        <Key>status-panel.loading-local</Key>
+        <Value>Loading photos from My Computer...</Value>
+    </String>
+    <String>
+        <Key>status-panel.no-items-in-feed</Key>
+        <Value>This feed has no items.</Value>
+    </String>
+    <String>
+        <Key>status-panel.no-search-results</Key>
+        <Value>Your search returned no results.</Value>
+    </String>
+    <String>
+        <Key>status-panel.searching</Key>
+        <Value>Searching {0}...</Value>
+        <Comment>No need to replace the {0}. {0} will be replaced by a search provider at runtime.</Comment>
+    </String>
+    <String>
+        <Key>status-panel.searching-for</Key>
+        <Value>Searching for &quot;{0}&quot; on {1}...</Value>
+        <Comment>No need to replace the {0} or {1}. {0} will be replaced by a query, {1} will be replaced by a search provider at runtime.</Comment>
+    </String>
+    <String>
+        <Key>tooltip.attempting-login</Key>
+        <Value>Attempting login...</Value>
+    </String>
+    <String>
+        <Key>tooltip.back</Key>
+        <Value>Back</Value>
+    </String>
+    <String>
+        <Key>tooltip.contact-cooliris</Key>
+        <Value>Contact Cooliris</Value>
+    </String>
+    <String>
+        <Key>tooltip.discover</Key>
+        <Value>TV, movies, and news</Value>
+    </String>
+    <String>
+        <Key>tooltip.favorites</Key>
+        <Value>Your favorites</Value>
+    </String>
+    <String>
+        <Key>tooltip.forward</Key>
+        <Value>Forward</Value>
+    </String>
+    <String>
+        <Key>tooltip.goto-full-screen-mode</Key>
+        <Value>Slideshow</Value>
+    </String>
+    <String>
+        <Key>tooltip.goto-preferences</Key>
+        <Value>Preferences</Value>
+    </String>
+    <String>
+        <Key>tooltip.goto-wall-mode</Key>
+        <Value>Return to wall</Value>
+    </String>
+    <String>
+        <Key>tooltip.help</Key>
+        <Value>Help</Value>
+    </String>
+    <String>
+        <Key>tooltip.local</Key>
+        <Value>View images from this computer</Value>
+    </String>
+    <String>
+        <Key>tooltip.login-to-cooliris</Key>
+        <Value>Login to Cooliris</Value>
+    </String>
+    <String>
+        <Key>tooltip.logout</Key>
+        <Value>Logout</Value>
+    </String>
+    <String>
+        <Key>tooltip.logout-specific</Key>
+        <Value>Logout {0}</Value>
+    </String>
+    <String>
+        <Key>tooltip.maximize</Key>
+        <Value>Maximize</Value>
+    </String>
+    <String>
+        <Key>tooltip.minimize</Key>
+        <Value>Minimize</Value>
+    </String>
+    <String>
+        <Key>tooltip.next-image</Key>
+        <Value>Next</Value>
+    </String>
+    <String>
+        <Key>tooltip.next-page</Key>
+        <Value>Next page</Value>
+    </String>
+    <String>
+        <Key>tooltip.pause</Key>
+        <Value>Pause</Value>
+    </String>
+    <String>
+        <Key>tooltip.play-slideshow</Key>
+        <Value>Play slideshow</Value>
+    </String>
+    <String>
+        <Key>tooltip.previous-image</Key>
+        <Value>Previous</Value>
+    </String>
+    <String>
+        <Key>tooltip.previous-page</Key>
+        <Value>Previous page</Value>
+    </String>
+    <String>
+        <Key>tooltip.restore</Key>
+        <Value>Restore</Value>
+    </String>
+    <String>
+        <Key>tooltip.scroll-left</Key>
+        <Value>Scroll left</Value>
+    </String>
+    <String>
+        <Key>tooltip.scroll-nub</Key>
+        <Value>Scroll the wall</Value>
+    </String>
+    <String>
+        <Key>tooltip.scroll-right</Key>
+        <Value>Scroll right</Value>
+    </String>
+    <String>
+        <Key>tooltip.search</Key>
+        <Value>Search</Value>
+    </String>
+    <String>
+        <Key>tooltip.send-message</Key>
+        <Value>Send message</Value>
+    </String>
+    <String>
+        <Key>tooltip.shopping</Key>
+        <Value>Window shop retailers</Value>
+    </String>
+    <String>
+        <Key>tooltip.view-desktop</Key>
+        <Value>View images from your desktop</Value>
+    </String>
+    <String>
+        <Key>tooltip.view-devices</Key>
+        <Value>View images from devices attached to this computer</Value>
+    </String>
+    <String>
+        <Key>tooltip.view-home-folder</Key>
+        <Value>View images from your home folder</Value>
+    </String>
+    <String>
+        <Key>tooltip.view-iphoto</Key>
+        <Value>View images from your iPhoto library</Value>
+    </String>
+    <String>
+        <Key>tooltip.view-pictures</Key>
+        <Value>View images from your pictures folder</Value>
+    </String>
+    <String>
+        <Key>tooltip.view-root</Key>
+        <Value>View images from the root folder</Value>
+    </String>
+    <String>
+        <Key>update.click-update-to-restart</Key>
+        <Value>Your browser will restart upon clicking Update Now.</Value>
+        <Comment>This text should be the same as the text for -Update Now- in the -Update Now- key</Comment>
+    </String>
+    <String>
+        <Key>update.click-will-restart</Key>
+        <Value>Clicking Update Now will update Cooliris and restart your browser.</Value>
+    </String>
+    <String>
+        <Key>update.cooliris-will-fail</Key>
+        <Value>Cooliris disabled</Value>
+    </String>
+    <String>
+        <Key>update.cooliris-will-fail-in-64bit</Key>
+        <Value>Your Safari settings were not changed, and Cooliris will not be available. To enable Cooliris at anytime, set Safari to run in 32-bit mode using the File -&gt; Get Info menu option.</Value>
+    </String>
+    <String>
+        <Key>update.cooliris-wont-work-in-64bit</Key>
+        <Value>Cooliris needs Safari to run in 32-bit mode to work properly. Click Continue to automatically configure Safari and finish installation.</Value>
+    </String>
+    <String>
+        <Key>update.downloaded-and-verified</Key>
+        <Value>Cooliris has downloaded and verified an update (version {0}). Safari must be restarted to complete the update.</Value>
+    </String>
+    <String>
+        <Key>update.ie8-bundled-msn-de</Key>
+        <Value>This version of IE8 came bundled with Cooliris.</Value>
+    </String>
+    <String>
+        <Key>update.install-and-restart</Key>
+        <Value>Install and Restart Safari</Value>
+        <Comment>This is the Safari equivalent of -Update Now-, the dialog button the user clicks to complete an auto-upgrade to a new version of Cooliris.</Comment>
+    </String>
+    <String>
+        <Key>update.keep-64bit</Key>
+        <Value>Cancel</Value>
+    </String>
+    <String>
+        <Key>update.no-worky-in-64bit</Key>
+        <Value>Safari compatibility</Value>
+    </String>
+    <String>
+        <Key>update.okay</Key>
+        <Value>OK</Value>
+    </String>
+    <String>
+        <Key>update.remind-me-later</Key>
+        <Value>Remind Me Later</Value>
+    </String>
+    <String>
+        <Key>update.restart-later</Key>
+        <Value>Later</Value>
+    </String>
+    <String>
+        <Key>update.restart-needed</Key>
+        <Value>Safari must be restarted in order to enable Cooliris.</Value>
+    </String>
+    <String>
+        <Key>update.restart-ok</Key>
+        <Value>OK</Value>
+    </String>
+    <String>
+        <Key>update.restart-safari</Key>
+        <Value>Restart Safari</Value>
+    </String>
+    <String>
+        <Key>update.set-32bit</Key>
+        <Value>Continue</Value>
+    </String>
+    <String>
+        <Key>update.skip-version</Key>
+        <Value>Skip</Value>
+        <Comment>This refers to skipping an update to a new version of Cooliris.</Comment>
+    </String>
+    <String>
+        <Key>update.update-available</Key>
+        <Value>An update for Cooliris is available.</Value>
+    </String>
+    <String>
+        <Key>update.update-cooliris</Key>
+        <Value>Update Cooliris</Value>
+    </String>
+    <String>
+        <Key>update.update-now</Key>
+        <Value>Update Now</Value>
+        <Comment>This text should be the same as the text for -Update Now- in the -Your browser will restart upon clicking Update Now- key</Comment>
+    </String>
+</Strings>

@@ -1,0 +1,491 @@
+{
+   "1Password": {
+      "message": "1. Parole"
+   },
+   "1__Insert_your_YubiKey_in_the_USB_port_with_the_USB_contact_facing_upward": {
+      "message": "1. Ievietjiet savu YubiKey  USB-port\u0101, t\u0101, lai USB kontakts v\u0113rsts uz aug\u0161u"
+   },
+   "2__Wait_until_your_YubiKey_touch_button_shines_with_a_steady_light": {
+      "message": "2. Pagaidiet, kam\u0113r J\u016Bsu YubiKey pogas gaisma sp\u012Bd patst\u0101v\u012Bgi"
+   },
+   "3__Hold_your_fingertip_on_the_touch_button_for_2_seconds": {
+      "message": "3. Turiet savu pirkstu uz pogas 2 sekundes"
+   },
+   "A_retry_file_has_been_found__This_likely_means_that_not_all_of_your_site_changes_have_been_saved__Would_you_like_to_delete_this_file_and_potentially_lose_some_changes_": {
+      "message": "Otrreiz izskat\u012B\u0161anas fails atrasts. Tas noz\u012Bm\u0113, ka ne visas izmai\u0146as tiks saglab\u0101tas.  Vai v\u0113laties izdz\u0113st \u0161o failu, un, iesp\u0113jams pazaud\u0113t da\u017Eas izmai\u0146as?"
+   },
+   "A_server_error_occurred_while_processing_your_request_": {
+      "message": "Servera k\u013C\u016Bda, apstr\u0101d\u0101jot j\u016Bsu piepras\u012Bjumu."
+   },
+   "About___": {
+      "message": "Par ..."
+   },
+   "Accept": {
+      "message": "Apstiprin\u0101t"
+   },
+   "Account_Settings": {
+      "message": "Konta uzst\u0101d\u012Bjumi"
+   },
+   "Actionproper": {
+      "message": "Darb\u012Bba"
+   },
+   "Add": {
+      "message": "Pievienot"
+   },
+   "Add_Credit_Card": {
+      "message": "Pievienot kred\u012Btkarti"
+   },
+   "Add_Field": {
+      "message": "Pievienot lauku"
+   },
+   "Add_Identity": {
+      "message": "Pievienot identit\u0101ti"
+   },
+   "Add_New_Site": {
+      "message": "Pievienot jaunu vietni"
+   },
+   "Add_Profile": {
+      "message": "Pievienot profilu"
+   },
+   "Add_Secure_Note": {
+      "message": "Pievienot dro\u0161\u012Bbas pazi\u0146ojumu"
+   },
+   "Add_Site": {
+      "message": "Pievienot vietni"
+   },
+   "Address_1": {
+      "message": "Adrese 1"
+   },
+   "Address_2": {
+      "message": "Adrese 2"
+   },
+   "Address_3": {
+      "message": "Adrese 3"
+   },
+   "Advanced": {
+      "message": "Advanc\u0113ts"
+   },
+   "All": {
+      "message": "Viss"
+   },
+   "Allow_LastPass_to_find_insecure_data_on_your_computer_": {
+      "message": "\u013Baut LastPass atrast nedro\u0161us datus j\u016Bsu dator\u0101?"
+   },
+   "Alt": {
+      "message": "Alt"
+   },
+   "Always_Choose_Profile_and_Credit_Card": {
+      "message": "Vienm\u0113r Izv\u0113lieties profilu un kred\u012Btkarti"
+   },
+   "An_Update_is_Available__Would_you_like_to_install_": {
+      "message": "Pieejams atjaunin\u0101jums. Vai v\u0113laties instal\u0113t?"
+   },
+   "An_error_has_been_encountered_while_loading_your_sites__Please_relogin_": {
+      "message": "Iel\u0101d\u0113jot J\u016Bsu lapas, radusies k\u013C\u016Bda. L\u016Bdzu piesl\u0113dzieties no jauna."
+   },
+   "Appearance": {
+      "message": "Izskats"
+   },
+   "April": {
+      "message": "Apr\u012Blis"
+   },
+   "Are_you_sure_you_want_to_have_LastPass_remember_your_password___This_will_significantly_decrease_the_security_of_your_LastPass_account_": {
+      "message": "Vai j\u016Bs tie\u0161\u0101m v\u0113laties, lai LastPass atcer\u0113tos J\u016Bsu paroli? Tas iev\u0113rojami samazin\u0101s J\u016Bsu LastPass konta dro\u0161\u012Bbu!"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_field_": {
+      "message": "Vai j\u016Bs tie\u0161\u0101m v\u0113laties izdz\u0113st \u0161o lauku?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_form_fill_profile_": {
+      "message": "Vai j\u016Bs tie\u0161\u0101m v\u0113laties izdz\u0113st \u0161o veidlapu?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_generated_password_": {
+      "message": "Vai j\u016Bs tie\u0161\u0101m v\u0113laties izdz\u0113st \u0161o rad\u012Bto paroli?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_secure_note_": {
+      "message": "Vai j\u016Bs tie\u0161\u0101m v\u0113laties izdz\u0113st \u0161o dro\u0161o piez\u012Bmi?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_site_": {
+      "message": "Vai esat p\u0101rliecin\u0101ts, ka v\u0113laties dz\u0113st \u0161o vietni?"
+   },
+   "August": {
+      "message": "Augusts"
+   },
+   "AutoFill": {
+      "message": "Autom\u0101tisk\u0101 aizpild\u012B\u0161ana"
+   },
+   "AutoLogin": {
+      "message": "Autom\u0101tisk\u0101 piesl\u0113g\u0161an\u0101s"
+   },
+   "Automatically_Fill_Login_Information": {
+      "message": "Autom\u0101tiski aizpild\u012Bt piesl\u0113g\u0161an\u0101s nform\u0101ciju"
+   },
+   "Avoid_Ambiguous_Characters": {
+      "message": "Izvair\u012Bties no neprec\u012Bz\u0101m z\u012Bm\u0113m"
+   },
+   "Birthday": {
+      "message": "Dzim\u0161anas diena"
+   },
+   "Blog": {
+      "message": "Interneta dienasgr\u0101mata"
+   },
+   "Browse_the_web_as_you_normally_would_and_LastPass_will_automatically_remember_passwords_as_you_enter_them_": {
+      "message": "P\u0101rl\u016Bkojiet t\u012Bmekli, k\u0101 j\u016Bs parasti to dar\u0101t un LastPass autom\u0101tiski atcer\u0113sies j\u016Bsu paroles, kad ievad\u012Bsiet t\u0101s."
+   },
+   "Built_": {
+      "message": "Izveidots:"
+   },
+   "But_I_m_a_forgetful_person___what_should_I_do_if_I_forget_my_password_": {
+      "message": "Bet es esmu aizm\u0101r\u0161\u012Bga persona ... ko man dar\u012Bt, ja esmu aizmirsis savu paroli?"
+   },
+   "Cancel": {
+      "message": "Atcelt"
+   },
+   "Change": {
+      "message": "Main\u012Bt"
+   },
+   "Change_Password": {
+      "message": "Main\u012Bt paroli"
+   },
+   "Check_For_Updates": {
+      "message": "P\u0101rbaud\u012Bt atjaunin\u0101jumus"
+   },
+   "Checkbox": {
+      "message": "Izv\u0113les r\u016Bti\u0146a"
+   },
+   "Choose_Profile_and_Credit_Card": {
+      "message": "Izv\u0113lieties profilu un kred\u012Btkarti"
+   },
+   "Clear": {
+      "message": "Not\u012Br\u012Bt"
+   },
+   "Clear_Forms": {
+      "message": "Not\u012Br\u012Bt formas"
+   },
+   "Clear_Local_Cache": {
+      "message": "Not\u012Br\u012Bt viet\u0113jo ke\u0161atmi\u0146u"
+   },
+   "Click_Continue_to_start_using_LastPass_": {
+      "message": "Noklik\u0161\u0137iniet uz Turpin\u0101t, lai s\u0101ktu lietot LastPass."
+   },
+   "Click_here_to_watch_a_video_on_basic_usage_": {
+      "message": "Klik\u0161\u0137iniet \u0161eit, lai skat\u012Btos video par pamata lieto\u0161anu"
+   },
+   "Close": {
+      "message": "Aizv\u0113rt"
+   },
+   "Collapse_All": {
+      "message": "Sab\u012Bd\u012Bt visus"
+   },
+   "Company": {
+      "message": "Uz\u0146\u0113mums"
+   },
+   "Configure_Form_Fill": {
+      "message": "Konfigur\u0113t veidlapu aizpild\u012B\u0161anu"
+   },
+   "Confirm": {
+      "message": "Apstiprin\u0101t"
+   },
+   "Congratulations": {
+      "message": "Apsveicam"
+   },
+   "Continue": {
+      "message": "Turpin\u0101t"
+   },
+   "Copy": {
+      "message": "Kop\u0113t"
+   },
+   "Copy_Password": {
+      "message": "Kop\u0113t Paroli"
+   },
+   "Copy_Username": {
+      "message": "Kop\u0113t lietot\u0101jv\u0101rdu"
+   },
+   "Country": {
+      "message": "Valsts"
+   },
+   "County": {
+      "message": "Apgabals"
+   },
+   "Create_Sub_Group": {
+      "message": "Izveidot Apak\u0161grupu"
+   },
+   "Create_an_Account": {
+      "message": "Izveidot kontu"
+   },
+   "Creating_Account___": {
+      "message": "Izveido kontu ..."
+   },
+   "Ctrl": {
+      "message": "Ctrl"
+   },
+   "December": {
+      "message": "Decembris"
+   },
+   "Delete": {
+      "message": "Dz\u0113st"
+   },
+   "Down": {
+      "message": "Lejup"
+   },
+   "Dr": {
+      "message": "Dr"
+   },
+   "Edit": {
+      "message": "Redi\u0123\u0113t"
+   },
+   "Edit_Form_Fields": {
+      "message": "Redi\u0123\u0113t formas laukus"
+   },
+   "Email": {
+      "message": "E-pasts"
+   },
+   "Email_already_in_use__have_you_forgotten_your_password_": {
+      "message": "E-pastu jau izmanto, vai j\u016Bs esat aizmirsis savu paroli?"
+   },
+   "End": {
+      "message": "Beigas"
+   },
+   "ErrorGetAcctsMsg": {
+      "message": "Radusies k\u013C\u016Bda, iel\u0101d\u0113jot J\u016Bsu LastPass vietnes. L\u016Bdzu, m\u0113\u0123iniet ieiet atpaka\u013C, lai iel\u0101d\u0113tu j\u016Bsu vietnes."
+   },
+   "ErrorLoginMsg": {
+      "message": "Radusies k\u013C\u016Bda, piesl\u0113dzoties LastPass. L\u016Bdzu, p\u0101rbaudiet j\u016Bsu interneta savienojumu."
+   },
+   "ErrorSendingMsg": {
+      "message": "Radisues k\u013C\u016Bda, sazinoties ar serveri. L\u016Bdzu, p\u0101rbaudiet j\u016Bsu interneta savienojumu."
+   },
+   "Expand_All": {
+      "message": "Izv\u0113rst visus"
+   },
+   "Export_To": {
+      "message": "Eksport\u0113t uz"
+   },
+   "Favorite": {
+      "message": "Favor\u012Bts"
+   },
+   "February": {
+      "message": "Febru\u0101ris"
+   },
+   "Feedback": {
+      "message": "Atsauksmes"
+   },
+   "Female": {
+      "message": "Sieviete"
+   },
+   "Fill_Current": {
+      "message": "Aizpild\u012Bt eso\u0161os"
+   },
+   "Fill_Form": {
+      "message": "Aizpild\u012Bt anketu"
+   },
+   "Fill_Forms": {
+      "message": "Aizpild\u012Bt anketas"
+   },
+   "FillableFormDetected": {
+      "message": "\u0160aj\u0101 lap\u0101 tika konstat\u0113ta aizpild\u0101ma veidlapa."
+   },
+   "Firefox_Password_Manager": {
+      "message": "Firefox paro\u013Cu mened\u017Eeris"
+   },
+   "Forums": {
+      "message": "Forumi"
+   },
+   "Gender": {
+      "message": "Dzimums"
+   },
+   "General": {
+      "message": "Visp\u0101r\u0113ji"
+   },
+   "Generate": {
+      "message": "\u0122ener\u0113t"
+   },
+   "GeneratePassword": {
+      "message": "Ja j\u016Bs veidojat kontu vai main\u0101t savu paroli, spiediet rad\u012Bt, lai rad\u012Btu unik\u0101lu, dro\u0161u paroli ar LastPass."
+   },
+   "Generate_Secure_Password": {
+      "message": "Rad\u012Bt dro\u0161u paroli"
+   },
+   "Generated_Password_for": {
+      "message": "Rad\u012Bta parole priek\u0161"
+   },
+   "Help_Translate": {
+      "message": "Pal\u012Bdz\u0113t tulkot"
+   },
+   "Help___": {
+      "message": "Pal\u012Bdz\u012Bba ..."
+   },
+   "History": {
+      "message": "V\u0113sture"
+   },
+   "Home": {
+      "message": "M\u0101jas"
+   },
+   "HotKeys": {
+      "message": "Karstie tausti\u0146i"
+   },
+   "IT_IS_CRITICAL_THAT_YOU_NEVER_FORGET_YOUR_NEW_LASTPASS_PASSWORD_": {
+      "message": "IR \u013BOTI SVAR\u012AGI, LAI J\u016AS NEKAD NEAIZMIRSTU SAVU JAUNO LASTPASS PAROLI."
+   },
+   "I_have_read_and_agree_with_the": {
+      "message": "Esmu izlas\u012Bjis un piekr\u012Btu"
+   },
+   "I_understand_that_my_encrypted_data_will_be_sent_to_LastPass": {
+      "message": "Es saprotu, ka mani \u0161ifr\u0113tie dati tiks nos\u016Bt\u012Bti LastPass"
+   },
+   "Identities": {
+      "message": "Identit\u0101tes"
+   },
+   "Identity": {
+      "message": "Identit\u0101te"
+   },
+   "If_you_already_have_a_LastPass_account_you_can_close_this_window_and_login_": {
+      "message": "Ja Jums jau ir LastPass konts, J\u016Bs varat aizv\u0113rt \u0161o logu un autoriz\u0113ties."
+   },
+   "If_you_do_end_up_forgetting_your_LastPass_master_password_": {
+      "message": "Ja j\u016Bs beidzat aizmirst savu LastPass galveno paroli,"
+   },
+   "If_you_lost_your_YubiKey_device__click_here_to_disable_YubiKey_authentication": {
+      "message": "Ja esat pazaud\u0113jis savu YubiKey ier\u012Bci, uzklik\u0161\u0137iniet \u0161eit, lai izsl\u0113gtu YubiKey autentifik\u0101ciju"
+   },
+   "Import": {
+      "message": "Import\u0113t"
+   },
+   "Import_From": {
+      "message": "Import\u0113t no"
+   },
+   "Import_Your_Data": {
+      "message": "Import\u0113t J\u016Bsu datus"
+   },
+   "Instructions": {
+      "message": "Instrukcijas"
+   },
+   "Invalid_Password_": {
+      "message": "Nepareiza parola."
+   },
+   "Invalid_email_address__try_again": {
+      "message": "Neder\u012Bga e-pasta adrese, m\u0113\u0123iniet v\u0113lreiz"
+   },
+   "January": {
+      "message": "Janv\u0101ris"
+   },
+   "July": {
+      "message": "J\u016Blijs"
+   },
+   "June": {
+      "message": "J\u016Bnijs"
+   },
+   "Keep_a_history_of_my_logins_and_form_fills": {
+      "message": "Saglab\u0101jiet manu autoriz\u0101ciju un formu aizpildes v\u0113sturi"
+   },
+   "Language": {
+      "message": "Valoda"
+   },
+   "LastPass": {
+      "message": "LastPass"
+   },
+   "LastPass_Encrypted_File": {
+      "message": "LastPass \u0160ifr\u0113tais fails"
+   },
+   "LastPass_cannot_login_until_cookies_are_allowed_from_lastpass_com": {
+      "message": "LastPass nevar autoriz\u0113ties, kam\u0113r 'cookies' priek\u0161 lastpass.com nav at\u013Cauti"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_like_to_continue_": {
+      "message": "LastPass konstat\u0113ja autoriz\u0101cijas veidlapu, kas ir nedro\u0161a.\n\nVai J\u016Bs v\u0113laties turpin\u0101t?"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_still_like_LastPass_to_fill_the_form_": {
+      "message": "LastPass konstat\u0113ja pieteik\u0161an\u0101s veidlapu, kas ir nedro\u0161a.\n\nVai J\u016Bs joproj\u0101m v\u0113laties, lai LastPass aizpilda formu?"
+   },
+   "LastPass_detected_a_password_change_for": {
+      "message": "LastPass atkl\u0101ja paro\u013Cu izmai\u0146as"
+   },
+   "LastPass_detected_a_password_change_for_domain_": {
+      "message": "LastPass konstat\u0113ja paroles mai\u0146u dom\u0113nam:"
+   },
+   "LastPass_detected_a_password_change_for_user_": {
+      "message": "LastPass konstat\u0113ja paroles izmai\u0146as lietot\u0101jam:"
+   },
+   "LastPass_has_filled_your_login_information_into_the_form_on_this_page_": {
+      "message": "LastPass ir aizpild\u012Bjis J\u016Bsu pieteik\u0161an\u0101s inform\u0101ciju \u0161\u012Bs vietnes veidlap\u0101."
+   },
+   "LastPass_is_fully_installed___When_you_install_LastPass_on_other_computers_you_will_not_have_to_go_through_this_process_again__you_ll_simply_be_able_to_login____Do_not_share_your_Master_Password_with_anyone__including_LastPass_employees__we_ll_never_ask_for_it___LastPass_encrypts_your_sensitive_data_locally_so_even_LastPass_employees_do_not_have_access_to_it___You_can_get_help_by_clicking_on_the_LastPass_icon_and_going_to_Help_": {
+      "message": "LastPass tika piln\u012Bb\u0101 uzst\u0101d\u012Bts! Ja instal\u0113siet LastPass uz citiem datoriem, Jums nevajadz\u0113s iet caur \u0161o procesu v\u0113lreiz, J\u016Bs vienk\u0101r\u0161i var\u0113siet autoriz\u0113ties. Nedodiet savu Galveno Paroli nevienam, taj\u0101 skait\u0101 LastPass darbiniekiem, m\u0113s Jums to nekad nejaut\u0101sim! LastPass \u0161ifr\u0113 J\u016Bsu datus lok\u0101li, pat LastPass darbiniekiem tie nav pieejami. Jums ir pieejama pal\u012Bdz\u012Bba, ko varat sa\u0146emt, nospie\u017Eot uz LastPass ikonas."
+   },
+   "LoginError": {
+      "message": "K\u013C\u016Bda ieejot LastPass. L\u016Bdzu m\u0113\u0123iniet v\u0113lreiz."
+   },
+   "Logoff": {
+      "message": "Atsl\u0113gties"
+   },
+   "More": {
+      "message": "Vair\u0101k"
+   },
+   "My_LastPass_Vault": {
+      "message": "Mans LastPass seifs"
+   },
+   "Nameproper": {
+      "message": "Nosaukums"
+   },
+   "October": {
+      "message": "Oktobris"
+   },
+   "Offer_to_Generate_Secure_Passwords": {
+      "message": "Pied\u0101v\u0101t \u0123ener\u0113t dro\u0161as paroles"
+   },
+   "Open_All": {
+      "message": "Atv\u0113rt visus"
+   },
+   "Open_My_LastPass_Vault": {
+      "message": "Atv\u0113rt LastPass seifu"
+   },
+   "Open_login_dialog_when_start_browser": {
+      "message": "Atv\u0113rt piesl\u0113g\u0161an\u0101s dialogu p\u0101rl\u016Bkprogrammai s\u0101kot darbu"
+   },
+   "Password": {
+      "message": "Parole"
+   },
+   "Password_Agent": {
+      "message": "Paro\u013Cu a\u0123ents"
+   },
+   "Password_Reminder": {
+      "message": "Paroles atg\u0101din\u0101jums"
+   },
+   "Recently_Used": {
+      "message": "Nesen lietots"
+   },
+   "Recheck_Page": {
+      "message": "V\u0113lreiz p\u0101rbaud\u012Bt lapu"
+   },
+   "Save_All_Entered_Data": {
+      "message": "Saglab\u0101t visus ievad\u012Btos datus"
+   },
+   "Search": {
+      "message": "Mekl\u0113t"
+   },
+   "Secure_Notes": {
+      "message": "Dro\u0161\u0101s piez\u012Bmes"
+   },
+   "Show_My_LastPass_Vault_After_Login": {
+      "message": "Atv\u0113rt LastPass seifu p\u0113c piesl\u0113g\u0161an\u0101s"
+   },
+   "Site_Search": {
+      "message": "Viet\u0146u mekl\u0113t\u0101js"
+   },
+   "Sites": {
+      "message": "Vietnes"
+   },
+   "Tools": {
+      "message": "R\u012Bki"
+   },
+   "_New_Pending_Share_Offers_": {
+      "message": "(Jauni koplieto\u0161anas pied\u0101v\u0101jumu)"
+   },
+   "_none_": {
+      "message": "(tuk\u0161\u0161)"
+   },
+   "dummy": {
+      "message": "dummy, leave this here so we don't mess up the trailing comma"
+   },
+   "recently_usedlower": {
+      "message": "nesen lietots"
+   }
+}

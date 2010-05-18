@@ -1,0 +1,39 @@
+{
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "resources/launch.normal.png",
+      "default_title": "Launch Cooliris"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "init.js", "content_start.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "init.js", "content_end.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "js": [ "init.js", "content_end_all_frames.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Cooliris transforms your browser into a full-screen 3D Wall for searching, viewing and sharing the Web.",
+   "icons": {
+      "128": "resources/cooliris-logo-128.png",
+      "16": "resources/cooliris-logo-16.png",
+      "32": "resources/cooliris-logo-32.png",
+      "48": "resources/cooliris-logo-48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCOZWuGIXpl00zIopIXOMNdnCwPennaEN7l0K0tStf2Bafqhrl8IangAm+4ssAmr0TZshzZaKSIK1YWrkETS56ecAWSMBPTJz2VF7TtmE16lW12487pzjHYxAvLveNgC53aBuYuS5Duw1gDhNjIsQtwxcQzbcSKnl52Tf6tk0U2XQIDAQAB",
+   "name": "Cooliris",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+   "plugins": [ {
+      "path": "lib/cooliris.dll",
+      "public": true
+   } ],
+   "update_url": "http://update.cooliris.com/chrome/crx_update.xml",
+   "version": "1.11.6.31175"
+}

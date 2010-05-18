@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+
+.ChromeGoogleTasks,
+.ChromeGoogleTasks *{
+	background: none;
+	border: none;
+	color: none;
+	cursor: default;
+	font-family: Verdana, Geneva, sans-serif !important;
+	font-size: 12px !important;
+	padding: 0 !important;
+}
+
+.ChromeGoogleTasks{
+	width: 250px !important;
+	position: fixed !important;
+	bottom: 0 !important;
+	right: 20px !important;
+	z-index: 9999 !important;
+	display: none;
+}
+
+.ChromeGoogleTasks .Tab{
+	height: 18px;
+	padding-top: 2px !important;
+	cursor: pointer;
+	background: #83aef7;
+	color: #fff;
+	padding-left: 10px !important;
+	font-weight: bold !important;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-top-right-radius: 2px;
+	text-align: left !important;
+}
+
+.ChromeGoogleTasks .Tab .Close,
+.ChromeGoogleTasks .Tab .Minimise{
+	float: right !important;
+	width: 20px !important;
+	text-align: center !important;
+}
+
+.ChromeGoogleTasks .Content{
+	height: 0px;
+	border-left: 1px solid #333;
+	border-right: 1px solid #333;
+	background: #fff;
+}
+
+.ChromeGoogleTasks iframe{
+	width: 100%;
+	border: 0;
+	overflow: hidden;
+	height: 100%;
+}

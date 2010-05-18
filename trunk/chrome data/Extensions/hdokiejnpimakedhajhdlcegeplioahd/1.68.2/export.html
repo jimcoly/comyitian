@@ -1,0 +1,5 @@
+<html><head><link rel="stylesheet" type="text/css" href="general.css">
+<script type='text/javascript' src="lpfulllib.js"></script>
+<script type="text/javascript">function doexport(J){var E=getBG();if(!J){E.security_prompt(function(){doexport(true)});return}var C=document.createElement("pre");C.innerHTML="url,username,password,extra,name,grouping,fav\n";var A=new Array();for(var B in E.g_sites){if(E.check_ident_aid(B)){if(E.g_sites[B].url!="http://group"){A[A.length]=E.g_sites[B]}}}for(var B in E.g_securenotes){if(E.check_ident_aid(B)){A[A.length]=E.g_securenotes[B]}}for(var F=0;F<A.length;F++){var I=A[F];if(I.sharedfromaid!=null&&I.sharedfromaid!=""&&I.sharedfromaid!="0"){continue
+}var G=new Array();G[0]=I.url;G[1]=E.getusernamefromacct(I);G[2]=E.getpasswordfromacct(I);G[3]=E.lpmdec(I.extra,true);G[4]=I.name;G[5]=I.group;G[6]=I.fav;var H="";var L="";for(var D=0;D<G.length;D++){var K=G[D];if(K.match(/,|\r|\n|"/)){K='"'+K.replace(/"/g,'""')+'"'}H+=L+K;L=","}H+="\n";C.innerHTML+=H}document.body.appendChild(C)};</script>
+</head><body onload="doexport();"></body></html>

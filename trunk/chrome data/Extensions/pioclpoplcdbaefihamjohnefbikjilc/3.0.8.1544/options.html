@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/evernote.css" />
+    <!-- 3rd party libs -->
+    <script type="text/javascript" src="libs/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="libs/json2.js"></script>
+    <script type="text/javascript" src="libs/jquery.validate.pack.js"></script>
+    <script type="text/javascript" src="libs/jquery.validate.methods.js"></script>
+    <script type="text/javascript" src="libs/jquery.observeform.js"></script>
+    
+    <!-- Evernote essential libs -->
+    <script type="text/javascript" src="libs/FunctionOverrides.js"></script>
+    <script type="text/javascript" src="constants.js"></script>
+    <script type="text/javascript" src="utils.js"></script>
+    
+    <!--  make some types available beforehand -->
+    <script type="text/javascript">
+      var LOG = chrome.extension.getBackgroundPage().LOG;
+      Utils.importConstructs(chrome.extension.getBackgroundPage(), window, ["Logger", "LoggerImpl", "LoggerImplFactory", "LocalStore"]);
+    </script>
+    
+    <!-- Evernote libs -->
+    <script type="text/javascript" src="evernote.js"></script>
+    <script type="text/javascript" src="models/AppModel.js"></script>
+    <script type="text/javascript" src="models/AppDataModel.js"></script>
+    <script type="text/javascript" src="models/NoteFilter.js"></script>
+    <script type="text/javascript" src="models/Notebook.js"></script>
+    <script type="text/javascript" src="models/SyncState.js"></script>
+    
+    <!-- Chrome and other libs -->
+    <script type="text/javascript" src="models/ModelForm.js"></script>
+    <script type="text/javascript" src="models/Options.js"></script>
+    <script type="text/javascript" src="models/AppState.js"></script>
+    <script type="text/javascript" src="viewManager.js"></script>
+    
+    <!-- startup -->
+    <script type="text/javascript">
+      var optionsForm = null;
+      var options = null;
+      var optionsValidator = null;
+      var SUBMIT_MESSAGE_TIMEOUT = 1000;
+      var pageOptions = {};
+      
+      function init() {
+        initContext();
+        initPageOptions();
+        initOptions();
+        initViews();
+        initForms();
+      };
+      function getContext() {
+        return Evernote.getContext();
+      };
+      function initContext() {
+        LOG.debug("Options.initContext");
+        try {
+          if (getContext().store == null && chrome.extension.getBackgroundPage().LOCAL_STORE) {
+            LOG.debug("Initializing local store");
+            getContext().store = chrome.extension.getBackgroundPage().LOCAL_STORE;
+          }
+          if (getContext().store) {
+            LOG.debug("Local storage initialized");
+          } else {
+            LOG.warn("Could not initialize local storage");
+          }
+        } catch (e) {
+          LOG.error("Error initializing context: " + e.message);
+        }
+      };
+      function initPageOptions() {
+        var hash = document.location.search;
+        function getHashValue(val) {
+          if (typeof val == 'undefined' || val == null) {
+            return null;
+          } else if (val == "0") {
+            return 0;
+          } else if (parseInt(val) > 0) {
+            return parseInt(val);
+          } else if (val.toLowerCase() == "true") {
+            return true;
+          } else if (val.toLowerCase() == "false") {
+            return false;
+          } else {
+            return val;
+          }
+        }
+        if (typeof hash == 'string' && hash.length > 0) {
+          hash = hash.substring(1);
+          var parts = hash.split("&");
+          for (var i=0; i<parts.length; i++) {
+            var kv = parts[i].split("=", 2);
+            pageOptions[kv[0]] = getHashValue(kv[1]);
+          }
+        }
+      };
+      function initOptions() {
+        LOG.debug("Options.initOptions");
+        try {
+          if (getContext().store && getContext().options instanceof Options) {
+            options = getContext().options;
+            LOG.level = options.debugLevel;
+          }
+        } catch (e) {
+          LOG.warn("Could not retrieve options");
+        }
+      };
+      var opts;
+      function initForms() {
+        LOG.debug("Options.initForms");
+        $.validator.addMethod("serviceProto", EvernoteContext.isValidServiceProto, chrome.i18n.getMessage("invalidExpression"));
+        $.validator.addMethod("fullPage", Options.isValidFullPageOptionValue, chrome.i18n.getMessage("invalidExpression"));
+        $.validator.addMethod("noteList", Options.isValidNoteListOptionValue, chrome.i18n.getMessage("invalidExpression"));
+        $.validator.addMethod("autoSaveClipNote", Options.isValidAutoSaveClipNoteOptionValue, chrome.i18n.getMessage("invalidExpression"));
+        $.validator.addMethod("formatServiceProto", function(value, element) {
+          $(element).val(EvernoteContext.formatServiceProto(value).toLowerCase());
+          return true;
+        }, chrome.i18n.getMessage("invalidExpression"));
+        var form = $("form[name=optionsForm]");
+        opts = {
+            submitHandler: function(form) {
+              submitOptionsForm();
+            },
+            errorClass: ViewManager.FORM_FIELD_ERROR_MESSAGE_CLASS,
+            errorElement: "div",
+            onkeyup: false,
+            onfocusout: false,
+            onsubmit: true,
+            rules: {
+              insecureProto: {
+                required: true,
+                formatServiceProto: true,
+                serviceProto: true
+              },
+              secureProto: {
+                required: true,
+                formatServiceProto: true,
+                serviceProto: true
+              },
+              serviceDomain: {
+                required: true,
+                minlength: Limits.SERVICE_DOMAIN_LEN_MIN,
+                maxlength: Limits.SERVICE_DOMAIN_LEN_MAX
+              },
+              fullPage: {
+                fullPage: true
+              },
+              noteList: {
+                noteList: true
+              },
+              autoSaveClipNote: {
+                autoSaveClipNote: true
+              }
+            },
+            messages: {
+              insecureProto: {
+                serviceProto: chrome.i18n.getMessage("invalidServiceProto")
+              },
+              secureProto: {
+                serviceProto: chrome.i18n.getMessage("invalidServiceProto")
+              },
+              serviceDomain: {
+                minlength: chrome.i18n.getMessage("valueTooShort", [chrome.i18n.getMessage("options_serviceDomain"), Limits.SERVICE_DOMAIN_LEN_MIN]),
+                maxlength: chrome.i18n.getMessage("valueTooLong", [chrome.i18n.getMessage("options_serviceDomain"), Limits.SERVICE_DOMAIN_LEN_MAX])
+              },
+              fullPage: {
+                fullPage: chrome.i18n.getMessage("invalidFullPageOptionValue")
+              },
+              noteList: {
+                noteList: chrome.i18n.getMessage("invalidNoteListOptionValue")
+              },
+              autoSaveClipNote: {
+                autoSaveClipNote: chrome.i18n.getMessage("invalidAutoSaveClipNoteOptionValue")
+              }
+            }
+          }
+          LOG.debug("Setting up validation on login form");
+          optionsValidator = form.validate(opts);
+          LOG.debug("OPTIONSVALIDATOR: " + optionsValidator);
+          form = form.observeform({
+            onSubmit: function() {
+              LOG.debug(">>>>>>> " + (optionsValidator && optionsValidator.numberOfInvalids() == 0));
+              return (optionsValidator && optionsValidator.numberOfInvalids() == 0);
+            }
+          });
+          optionsForm =  ModelForm.onForm(form);
+          populateOptionsForm();
+      };
+      
+      function initViews() {
+        LOG.debug("Options.initViews");
+        if (isDeveloperMode()) {
+          $("#developerContainer").show();
+        } else {
+          $("#developerContainer").hide();
+        }
+        if (getContext().isInSync() && getContext().notebooks instanceof Array && getContext().notebooks.length > 0) {
+          var notebooks = getContext().notebooks.sort(function(a, b) {
+            return a.name.toLowerCase() > b.name.toLowerCase();
+          });
+          var notebookGuids = $("#clipNotebookGuid");
+          for (var i=0; i<notebooks.length; i++) {
+            var n = notebooks[i];
+            var nName = $("<div/>").text(n.name).html();
+            notebookGuids.append($("<option value='"+n.guid+"'>"+nName+"</option>"));
+          }
+          $("#clipNotebookSelect").show();
+        } else {
+          $("#clipNotebookSelect").hide();
+        }
+      };
+      function isDeveloperMode() {
+        if (typeof pageOptions['developerMode'] != 'undefined') {
+          return (pageOptions['developerMode']) ? true : false;
+        } else if (options) {
+          return options.developerMode;
+        }
+        return false;
+      };
+      function populateOptionsForm() {
+        if (options) {
+          optionsForm.populateWith(options);
+          if (options.noteSortOrder) {
+            optionsForm.noteSortOrder = JSON.stringify(options.noteSortOrder);
+          }
+          var preferredNotebook = getContext().getPreferredNotebook();
+          if (preferredNotebook) {
+            optionsForm.clipNotebookGuid = preferredNotebook.guid;
+          }
+        }
+      };
+      function updateOptions() {
+        LOG.debug("Options.updateOptions");
+        try {
+          if (optionsForm) {
+            var o = optionsForm.toStorable();
+            o.noteSortOrder = new NoteSortOrder(JSON.parse(o.noteSortOrder));
+            LOG.debug(">>> optionsForm: " + JSON.stringify(o));
+            options = new Options(getContext(), o);
+            LOG.debug(">>> new options: " + JSON.stringify(options));
+            options.apply();
+            getContext().options = options;
+            return true;
+          } else {
+            LOG.error("Cannot find options form");
+          }
+        } catch (e) {
+          LOG.error("Could not save options: " + e.message);
+        }
+        return false;
+      };
+      function resetOptions() {
+        LOG.debug("Options.resetOptions");
+        options.reset();
+        LOG.debug(">>> Clean options: " + JSON.stringify(options));
+        populateOptionsForm();
+        return updateOptions();
+      };
+      function showSubmitMessage(msg) {
+        var msgBlock = $("#submitMessage");
+        msgBlock.html(msg);
+        msgBlock.removeClass();
+        msgBlock.addClass("success");
+        msgBlock.show();
+        hideSubmitMessage();
+      };
+      function showSubmitError(msg) {
+        var msgBlock = $("#submitMessage");
+        msgBlock.html(msg);
+        msgBlock.removeClass();
+        msgBlock.addClass("error");
+        msgBlock.show();
+        hideSubmitMessage();
+      };
+      function hideSubmitMessage() {
+        setTimeout(function() {
+          $("#submitMessage").fadeOut(300);
+        }, SUBMIT_MESSAGE_TIMEOUT);
+      };
+      function submitOptionsForm() {
+        if (optionsValidator.numberOfInvalids() > 0) {
+          LOG.debug("Not submitting options form cuz it has errors");
+          return false;
+        }
+        LOG.info("Submitting options form");
+        if (updateOptions()) {
+          showSubmitMessage(chrome.i18n.getMessage("options_formSaved"));
+        } else {
+          showSubmitError(chrome.i18n.getMessage("options_failedToSave"));
+        }
+        // preventing actual form submit
+        return false;
+      };
+      function resetOptionsForm() {
+        LOG.debug("Resetting options form");
+        if (resetOptions()) {
+          showSubmitMessage(chrome.i18n.getMessage("options_formReset"));
+        } else {
+          showSubmitError(chrome.i18n.getMessage("options_failedToSave"));
+        }
+        // preventing actual form submit
+        return false;
+      };
+      $(document).ready(function() {
+        init();
+        Utils.localizeBlock($("body"));
+      });
+    </script>
+  </head>
+  <body class="options">
+    <div id="optionsView" class="vignette">
+    <div class="vignetteContent">
+      <div id="optionsHeader">
+        <img src="images/logo.png"/>
+      </div>
+      <form name="optionsForm" class="optionsForm" action="#">
+        <div id="optionsContainer">
+        <h2 message="options_title"></h2>
+        <table class="simpleOptions">
+          <tr id="noteSortOrderContainer">
+            <td>
+              <label for="noteSortOrder" message="options_noteSortOrder"></label>
+            </td>
+            <td>
+              <select name="noteSortOrder">
+                <option value='{"order":1,"ascending":false}' message="noteSortOrder_createdDescending"></option>
+                <option value='{"order":1,"ascending":true}' message="noteSortOrder_createdAscending"></option>
+                <option value='{"order":2,"ascending":false}' message="noteSortOrder_updatedDescending"></option>
+                <option value='{"order":2,"ascending":true}' message="noteSortOrder_updatedAscending"></option>
+              </select>      
+            </td>
+          </tr>
+        
+          <tr id="fullPageContainer">
+            <td>
+              <label for="fullPage" message="options_fullPage"></label>
+            </td>
+            <td>
+              <div class="radioGroup">
+                <input type="radio" name="fullPage" value="0" id="fullPage0"/><label for="fullPage0" message="options_fullPage_never"></label><br/>
+                <input type="radio" name="fullPage" value="1" id="fullPage1"/><label for="fullPage1" message="options_fullPage_always"></label><br/>
+                <input type="radio" name="fullPage" value="2" id="fullPage2"/><label for="fullPage2" message="options_fullPage_remember"></label><br/>
+              </div>
+            </td>
+          </tr>
+        
+          <tr id="clipNotebookContainer">
+            <td>
+              <label for="clipNotebook" message="options_clipNotebook"></label>
+            </td>
+            <td>
+              <div class="radioGroup">
+                <input type="radio" name="clipNotebook" value="0" id="clipNotebook0"/><label for="clipNotebook0" message="options_clipNotebook_defaultNotebook"></label><br/>
+                <div id="clipNotebookSelect">
+                  <input type="radio" name="clipNotebook" value="1" id="clipNotebook1"/><label for="clipNotebook1" message="options_clipNotebook_selected"></label>:&nbsp;
+                  <select name="clipNotebookGuid" id="clipNotebookGuid">
+                  </select>
+                </div>
+                <input type="radio" name="clipNotebook" value="2" id="clipNotebook2"/><label for="clipNotebook2" message="options_clipNotebook_remember"></label>
+              </div>
+            </td>
+          </tr>
+          
+          <tr id="clipStyleContainer">
+            <td>
+              <label for="clipStyle" message="options_clipStyle"></label>
+            </td>
+            <td>
+              <div class="radioGroup">
+                <input type="radio" name="clipStyle" value="0" id="clipStyle0"/><label for="clipStyle0" message="options_clipStyle_none"></label><br/>
+                <input type="radio" name="clipStyle" value="1" id="clipStyle1"/><label for="clipStyle1" message="options_clipStyle_text"></label><br/>
+                <input type="radio" name="clipStyle" value="2" id="clipStyle2"/><label for="clipStyle2" message="options_clipStyle_full"></label>
+              </div>
+            </td>
+          </tr>
+        
+          <tr id="noteListContainer">
+            <td>
+              <label for="noteList" message="options_noteList"></label>
+            </td>
+            <td>
+              <div class="radioGroup">
+                <input type="radio" value="0" name="noteList" id="noteList0"/><label for="noteList0" message="options_noteList_never"></label><br/>
+                <input type="radio" value="1" name="noteList" id="noteList1"/><label for="noteList1" message="options_noteList_always"></label><br/>
+                <input type="radio" value="2" name="noteList" id="noteList2"/><label for="noteList2" message="options_noteList_remember"></label><br/>
+              </div>
+            </td>
+          </tr>
+          
+          <tr id="autoSaveContainer">
+            <td>
+              <label for="autoSaveClipNote" message="options_autoSaveClipNote"></label>
+            </td>
+            <td>
+              <div class="radioGroup">
+                <input type="radio" value="0" name="autoSaveClipNote" id="autoSaveClipNote0"/><label for="autoSaveClipNote0" message="options_autoSaveClipNote_never"></label><br/>
+                <input type="radio" value="1" name="autoSaveClipNote" id="autoSaveClipNote1"/><label for="autoSaveClipNote1" message="options_autoSaveClipNote_always"></label><br/>
+              </div>
+            </td>
+          </tr>
+        </table>
+        </div>
+        
+        <div id="developerContainer">
+        <h2 message="options_developer_title"></h2>
+        <table class="simpleOptions">
+          <tr>
+            <td>
+              <label for="insecureProto" message="options_insecureProto"></label>
+            </td>
+            <td>
+              <input type="text" name="insecureProto"/>
+            </td>
+          </tr><tr>
+            <td>
+              <label for="secureProto" message="options_secureProto"></label>
+            </td>
+            <td>
+              <input type="text" name="secureProto"/>
+            </td>
+          </tr><tr>
+            <td>
+              <label for="serviceDomain" message="options_serviceDomain"></label>
+            </td>
+            <td>
+            <input type="text" name="serviceDomain"/>
+            </td>
+          </tr><tr>
+            <td>
+              <label for="debugLevel" message="options_debugLevel"></label>
+            </td>
+            <td>
+              <select name="debugLevel">
+                <option value="0" message="debugLevel_0"></option>
+                <option value="1" message="debugLevel_1"></option>
+                <option value="2" message="debugLevel_2"></option>
+                <option value="3" message="debugLevel_3"></option>
+                <option value="4" message="debugLevel_4"></option>
+                <option value="5" message="debugLevel_5"></option>
+              </select>
+            </td>
+          </tr>
+        </table>
+        </div>
+        <input type="submit" message="options_submit"/>&nbsp;
+        <input type="button" message="options_reset" value="reset" onclick="resetOptionsForm(); return false;"/>&nbsp;
+        <span id="submitMessage"></span>
+      </form>
+    </div> <!-- /vignetteContent -->
+    </div> <!-- /vignette -->
+    <div class="copyright" message="copyright"></div>
+  </body>
+</html>

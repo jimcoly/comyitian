@@ -1,0 +1,1004 @@
+{
+   "1Password": {
+      "message": "1Password"
+   },
+   "1__Insert_your_YubiKey_in_the_USB_port_with_the_USB_contact_facing_upward": {
+      "message": "1. S\u00E6t din YubiKey i en USB-port med kontakten opad"
+   },
+   "1__Run_the_LastPass_Sesame_application_to_generate_a_one_time_password": {
+      "message": "1. K\u00F8r programmet LastPass Sesame for at danne en engangs-adgangskode"
+   },
+   "2__Paste_the_one_time_password_in_the_input_box_below_and_click__Authenticate_": {
+      "message": "2. Inds\u00E6t en engangs-adgangskode i tekstboksen nedenfor og klik p\u00E5 'Bekr\u00E6ft'"
+   },
+   "2__Wait_until_your_YubiKey_touch_button_shines_with_a_steady_light": {
+      "message": "2. Vent indtil din YubiKey\u00B4s ber\u00F8ringsf\u00F8lsomme knap lyser konstant"
+   },
+   "3__Hold_your_fingertip_on_the_touch_button_for_2_seconds": {
+      "message": "3. Hold din fingerspids p\u00E5 den ber\u00F8ringsf\u00F8lsomme knap i 2 sekunder"
+   },
+   "A_retry_file_has_been_found__This_likely_means_that_not_all_of_your_site_changes_have_been_saved__Would_you_like_to_delete_this_file_and_potentially_lose_some_changes_": {
+      "message": "En 'fors\u00F8g igen'-fil er blevet fundet. Dette betyder sandsynligvis, at ikke alle dine \u00E6ndringer er blevet gemt. \u00D8nsker du at slette denne fil og m\u00E5ske miste nogle \u00E6ndringer?"
+   },
+   "A_server_error_occurred_while_processing_your_request_": {
+      "message": "Der opstod en serverfejl ved behandlingen af din foresp\u00F8rgsel."
+   },
+   "About___": {
+      "message": "Om..."
+   },
+   "Accept": {
+      "message": "Accept\u00E9r"
+   },
+   "Account_Settings": {
+      "message": "Kontoindstillinger"
+   },
+   "Actionproper": {
+      "message": "Handling"
+   },
+   "Add": {
+      "message": "Tilf\u00F8j"
+   },
+   "Add_Credit_Card": {
+      "message": "Tilf\u00F8j Kreditkort"
+   },
+   "Add_Field": {
+      "message": "Tilf\u00F8j Felt"
+   },
+   "Add_Identity": {
+      "message": "Tilf\u00F8j Identitet"
+   },
+   "Add_New_Site": {
+      "message": "Tilf\u00F8j Nyt Websted"
+   },
+   "Add_Profile": {
+      "message": "Tilf\u00F8j Profil"
+   },
+   "Add_Secure_Note": {
+      "message": "Tilf\u00F8j Sikker Note"
+   },
+   "Add_Site": {
+      "message": "Tilf\u00F8j Websted"
+   },
+   "Address_1": {
+      "message": "Adresse 1"
+   },
+   "Address_2": {
+      "message": "Adresse 2"
+   },
+   "Address_3": {
+      "message": "Adresse 3"
+   },
+   "Advanced": {
+      "message": "Avanceret"
+   },
+   "All": {
+      "message": "Alle"
+   },
+   "Allow_LastPass_to_find_insecure_data_on_your_computer_": {
+      "message": "Tillad LastPass at s\u00F8ge efter usikre data p\u00E5 din computer?"
+   },
+   "Alt": {
+      "message": "Alt"
+   },
+   "Always_Choose_Profile_and_Credit_Card": {
+      "message": "V\u00E6lg altid Profil og Kreditkort"
+   },
+   "An_Update_is_Available__Would_you_like_to_install_": {
+      "message": "En opdatering er tilg\u00E6ngelig. Vil du installere?"
+   },
+   "An_error_has_been_encountered_while_loading_your_sites__Please_relogin_": {
+      "message": "Der opstod en fejl mens vi hentede dine websteder. Log venligst ind igen."
+   },
+   "Appearance": {
+      "message": "Udseende"
+   },
+   "April": {
+      "message": "April"
+   },
+   "Are_you_sure_you_want_to_have_LastPass_remember_your_password___This_will_significantly_decrease_the_security_of_your_LastPass_account_": {
+      "message": "Er du sikker p\u00E5, at du \u00F8nsker, at LastPass skal huske din adgangskode?  Dette vil s\u00E6nke sikkerhedsniveauet for din LastPass-konto betydeligt!"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_field_": {
+      "message": "Er du sikker p\u00E5 at du vil slette dette felt?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_form_fill_profile_": {
+      "message": "Er du sikker p\u00E5 at du vil slette denne formular udfyldelses profil?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_generated_password_": {
+      "message": "Er du sikker p\u00E5, at du vil slette denne autogenererede adgangskode?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_group_": {
+      "message": "Er du sikker p\u00E5, du vil slette denne gruppe?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_secure_note_": {
+      "message": "Er du sikker p\u00E5 at du vil slette denne sikre note?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_site_": {
+      "message": "Er du sikker p\u00E5 du vil slette dette sted?"
+   },
+   "August": {
+      "message": "August"
+   },
+   "Authenticate": {
+      "message": "Bekr\u00E6ftelse"
+   },
+   "Authentication_Failed_": {
+      "message": "Bekr\u00E6ftelse mislykkedes"
+   },
+   "AutoFill": {
+      "message": "Autoudfyld"
+   },
+   "AutoLogin": {
+      "message": "AutoLogind"
+   },
+   "Automatically_Fill_Login_Information": {
+      "message": "Udfyld automatisk logind oplysninger"
+   },
+   "Automatically_login_to_sites_if_time_since_last_login____seconds_": {
+      "message": "Log automatisk ind p\u00E5 websteder, hvis tiden siden sidste login \u003E (sekunder)"
+   },
+   "Avoid_Ambiguous_Characters": {
+      "message": "Undg\u00E5 Karaterer med flere betydninger"
+   },
+   "Birthday": {
+      "message": "F\u00F8dselsdag"
+   },
+   "Blacklist": {
+      "message": "Din konto er midlertidigt sp\u00E6rret (i 5 minutter) p.g.a. for mange forfejlede logind fors\u00F8g."
+   },
+   "Blog": {
+      "message": "Blog"
+   },
+   "Browse_the_web_as_you_normally_would_and_LastPass_will_automatically_remember_passwords_as_you_enter_them_": {
+      "message": "Surf p\u00E5 nettet som normalt og LastPass vil automatisk huske adgangskoder n\u00E5r du indtaster dem."
+   },
+   "Built_": {
+      "message": "Bygget:"
+   },
+   "But_I_m_a_forgetful_person___what_should_I_do_if_I_forget_my_password_": {
+      "message": "Men jeg glemmer altid ting... Hvad skal jeg g\u00F8re, hvis jeg glemmer min adgangskode?"
+   },
+   "Cancel": {
+      "message": "Annuller"
+   },
+   "Change": {
+      "message": "\u00C6ndring"
+   },
+   "Change_Password": {
+      "message": "Skift adgangskode"
+   },
+   "Check_For_Updates": {
+      "message": "Check for opdateringer"
+   },
+   "Checkbox": {
+      "message": "Afkrydsningsfelt"
+   },
+   "Choose_Profile_and_Credit_Card": {
+      "message": "V\u00E6lg Profil og Kredit Kort"
+   },
+   "City___Town": {
+      "message": "By"
+   },
+   "Clear": {
+      "message": "Slet"
+   },
+   "Clear_Clipboard_after_use__seconds_": {
+      "message": "T\u00F8m udklipsholderen efter brug (sekunder)"
+   },
+   "Clear_Forms": {
+      "message": "T\u00F8m Formularer"
+   },
+   "Clear_Local_Cache": {
+      "message": "Slet Lokal Cache"
+   },
+   "Click_Continue_to_start_using_LastPass_": {
+      "message": "Klik p\u00E5 Fors\u00E6t for bruge LastPass."
+   },
+   "Click_here_to_watch_a_video_on_basic_usage_": {
+      "message": "Klik her for at se en video om grundl\u00E6ggende brug."
+   },
+   "Close": {
+      "message": "Luk"
+   },
+   "Collapse_All": {
+      "message": "Luk Alt Sammen"
+   },
+   "Company": {
+      "message": "Firma"
+   },
+   "Configure_Form_Fill": {
+      "message": "Ops\u00E6t Formularudfyldelse"
+   },
+   "Confirm": {
+      "message": "Bekr\u00E6ft"
+   },
+   "Confirm_Password": {
+      "message": "Bekr\u00E6ft adgangskode"
+   },
+   "Congratulations": {
+      "message": "Tillykke"
+   },
+   "Continue": {
+      "message": "Fots\u00E6t"
+   },
+   "Copy": {
+      "message": "kopier"
+   },
+   "Copy_Password": {
+      "message": "Kopier adgangskode"
+   },
+   "Copy_Username": {
+      "message": "Kopier Brugernavn"
+   },
+   "Country": {
+      "message": "Land"
+   },
+   "County": {
+      "message": "Egn"
+   },
+   "Create_Account": {
+      "message": "Opret konto"
+   },
+   "Create_Sub_Group": {
+      "message": "Opret undergruppe"
+   },
+   "Create_an_Account": {
+      "message": "Opret Konto"
+   },
+   "Creating_Account___": {
+      "message": "Opretter Konto..."
+   },
+   "Ctrl": {
+      "message": "Ctrl"
+   },
+   "December": {
+      "message": "December"
+   },
+   "Default_Form_Fill_Profile": {
+      "message": "Standard-formularudfyldelses-profil"
+   },
+   "Delete": {
+      "message": "Slet"
+   },
+   "Delete_Group": {
+      "message": "Slet gruppe"
+   },
+   "Disable_Multifactor_Authentication": {
+      "message": "Sl\u00E5 Multifaktor-bekr\u00E6ftelse fra"
+   },
+   "Disable_Single_factor_Authentication": {
+      "message": "Sl\u00E5 Enkeltfaktor-bekr\u00E6ftelse fra"
+   },
+   "Do_not_overwrite_fields_that_are_already_filled": {
+      "message": "Overskriv ikke felter, som allerede er udfyldt"
+   },
+   "Down": {
+      "message": "Ned"
+   },
+   "Dr": {
+      "message": "Dr"
+   },
+   "Dutch": {
+      "message": "Hollandsk"
+   },
+   "Edit": {
+      "message": "Ret"
+   },
+   "Edit_Form_Fields": {
+      "message": "Ret Formular Felter"
+   },
+   "Email": {
+      "message": "E-mail"
+   },
+   "Email_already_in_use__have_you_forgotten_your_password_": {
+      "message": "E-mail-adressen bruges allerede, har du glemt din adgangskode?"
+   },
+   "End": {
+      "message": "Slut"
+   },
+   "English": {
+      "message": "Engelsk"
+   },
+   "ErrorGetAcctsMsg": {
+      "message": "Der skete en fejl i mens vi hentede dine LastPass steder. Log venligst ind igen for at hente dem."
+   },
+   "ErrorLoginMsg": {
+      "message": "Der opstod en fejl under login til LastPass. Tjek venligst din internetforbindelse."
+   },
+   "ErrorSendingMsg": {
+      "message": "Der opstod en fejl under fors\u00F8g p\u00E5 at kontakte serveren. Tjek venligst din internetforbindelse."
+   },
+   "ErrorSessionMsg": {
+      "message": "Dit LastPass logind synes at v\u00E6re udl\u00F8bet. Log venligst ind igen."
+   },
+   "ExistingUsersOTPPrompt": {
+      "message": "LastPass kan nu gemme et engangskodeord lokalt, som kan bruges til at gendanne din konto hvis du glemmer din hovedadgangskode. Dette engangskodeord er deaktiveret, indtil det bliver aktiveret p\u00E5 serveren.\n\nVil du aktivere kontogendannelse?"
+   },
+   "Expand_All": {
+      "message": "Udvid Alt"
+   },
+   "Export_To": {
+      "message": "Eksport\u00E9r Til"
+   },
+   "Favorite": {
+      "message": "Favorit"
+   },
+   "February": {
+      "message": "Februar"
+   },
+   "Feedback": {
+      "message": "Tilbagemelding"
+   },
+   "Female": {
+      "message": "Kvinde"
+   },
+   "Fill_Current": {
+      "message": "Udfyld nuv\u00E6rende"
+   },
+   "Fill_Form": {
+      "message": "Udfyld Formular"
+   },
+   "Fill_Forms": {
+      "message": "Udfyld Formularer"
+   },
+   "Fill_In_Default_Form_Fill_Profile": {
+      "message": "Udfyld med standard-formudfyldelses-profil"
+   },
+   "FillableFormDetected": {
+      "message": "Der blev registreret en formular p\u00E5 denne side."
+   },
+   "Firefox_Password_Manager": {
+      "message": "Firefox Adgangskodebestyrer"
+   },
+   "For_each_coordinate_listed_below__find_the_value_on_your_grid_and_enter_the_value_": {
+      "message": "Find hvert af koordinaterne nedenfor i skemaet og indtast den tilsvarende v\u00E6rdi."
+   },
+   "Form_Fill": {
+      "message": "Udfyld Formular"
+   },
+   "Forums": {
+      "message": "Forum\u00B4s"
+   },
+   "Gender": {
+      "message": "K\u00F8n"
+   },
+   "General": {
+      "message": "Generel"
+   },
+   "Generate": {
+      "message": "Gener\u00E9r"
+   },
+   "GeneratePassword": {
+      "message": "Hvis du skal oprette en konto eller skifte adgangskode, kan du klikke p\u00E5 Gener\u00E9r, for at lade LastPass danne en unik, sikker adgangskode."
+   },
+   "Generate_Secure_Password": {
+      "message": "Dan sikker adgangskode"
+   },
+   "Generated_Password_for": {
+      "message": "Genererede adgangskoder for"
+   },
+   "Generic_CSV_File": {
+      "message": "Generisk CSV Fil"
+   },
+   "Go_Premium_": {
+      "message": "Opgrader til Premium!"
+   },
+   "Go_to_URL": {
+      "message": "G\u00E5 til URL"
+   },
+   "Google_Chrome": {
+      "message": "Google Chrome"
+   },
+   "Help_Translate": {
+      "message": "Hj\u00E6lp med at overs\u00E6tte"
+   },
+   "Help___": {
+      "message": "Hj\u00E6lp..."
+   },
+   "History": {
+      "message": "Historik"
+   },
+   "Home": {
+      "message": "Hjem"
+   },
+   "HotKeys": {
+      "message": "Genvejstaster"
+   },
+   "IT_IS_CRITICAL_THAT_YOU_NEVER_FORGET_YOUR_NEW_LASTPASS_PASSWORD_": {
+      "message": "DET ER MEGET VIGTIGT, AT DU ALDRIG GLEMMER DIN NYE LASTPASS-ADGANGSKODE."
+   },
+   "I_have_read_and_agree_with_the": {
+      "message": "Jeg har l\u00E6st og erkl\u00E6rer mig enig med"
+   },
+   "I_understand_that_my_encrypted_data_will_be_sent_to_LastPass": {
+      "message": "Jeg har forst\u00E5et, at mine krypterede data bliver sendt til LastPass"
+   },
+   "Identities": {
+      "message": "Identiteter"
+   },
+   "Identity": {
+      "message": "Identitet"
+   },
+   "If_you_already_have_a_LastPass_account_you_can_close_this_window_and_login_": {
+      "message": "Hvis du allerede har en LastPass konto kan du lukke dette vindue og logge ind."
+   },
+   "If_you_do_end_up_forgetting_your_LastPass_master_password_": {
+      "message": "Hvis du glemmer din LastPass-hoved-adgangskode,"
+   },
+   "If_you_lost_your_Sesame_device__click_here_to_disable_Sesame_authentication": {
+      "message": "Hvis du har mistet din Sesame enhed, klik her for at deaktivere Sesame autentificering."
+   },
+   "If_you_lost_your_YubiKey_device__click_here_to_disable_YubiKey_authentication": {
+      "message": "Hvis du har mistet din YubiKey-n\u00F8gle, s\u00E5 klik her for at forhindre brug af YubiKey-bekr\u00E6ftelse"
+   },
+   "If_you_lost_your_grid__click_here_to_disable_grid_authentication": {
+      "message": "Har du mistet dit skema, s\u00E5 klik her for at sl\u00E5 skema-bekr\u00E6ftelse fra"
+   },
+   "Import": {
+      "message": "Import\u00E9r"
+   },
+   "Import_From": {
+      "message": "Import\u00E9r Fra"
+   },
+   "Import_Your_Data": {
+      "message": "Importer Dine Data"
+   },
+   "Instructions": {
+      "message": "Instruktioner"
+   },
+   "Invalid_Password_": {
+      "message": "Ugyldig adgangskode"
+   },
+   "Invalid_email_address__try_again": {
+      "message": "Ugyldig email adresse, pr\u00F8v igen"
+   },
+   "January": {
+      "message": "Januar"
+   },
+   "July": {
+      "message": "Juli"
+   },
+   "June": {
+      "message": "Juni"
+   },
+   "KeePass": {
+      "message": "KeePass"
+   },
+   "Keep_a_history_of_my_logins_and_form_fills": {
+      "message": "Gem historik over login og formularudfyldelser"
+   },
+   "Language": {
+      "message": "Sprog"
+   },
+   "LastPass": {
+      "message": "LastPass"
+   },
+   "LastPass_CSV_File": {
+      "message": "LastPass CSV-fil"
+   },
+   "LastPass_Encrypted_File": {
+      "message": "LastPass krypteret fil"
+   },
+   "LastPass_Grid_Multifactor_Authentication": {
+      "message": "LastPass Multifaktor-skema-bekr\u00E6ftelse"
+   },
+   "LastPass_cannot_login_until_cookies_are_allowed_from_lastpass_com": {
+      "message": "LastPass kan ikke logge ind medmindre cookies tillades for LastPass.com"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_like_to_continue_": {
+      "message": "LastPass registrerede en usikker logind formular.\n\n\u00D8nsker du at forts\u00E6tte?"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_still_like_LastPass_to_fill_the_form_": {
+      "message": "LastPass opdagede en usikker logind formular.\n\nVil du stadig have LastPass til at udfykde den?"
+   },
+   "LastPass_detected_a_password_change_for": {
+      "message": "LastPass opdagede en adgangskode-\u00E6ndring for"
+   },
+   "LastPass_detected_a_password_change_for_domain_": {
+      "message": "LastPass opdagede en adgangskode-\u00E6ndring for dette dom\u00E6ne:"
+   },
+   "LastPass_detected_a_password_change_for_user_": {
+      "message": "LastPass opdagede en adgangskode-\u00E6ndring for bruger:"
+   },
+   "LastPass_has_filled_your_login_information_into_the_form_on_this_page_": {
+      "message": "LastPass har udfyldt formularen p\u00E5 denne side med dine logind informationer."
+   },
+   "LastPass_is_fully_installed___When_you_install_LastPass_on_other_computers_you_will_not_have_to_go_through_this_process_again__you_ll_simply_be_able_to_login____Do_not_share_your_Master_Password_with_anyone__including_LastPass_employees__we_ll_never_ask_for_it___LastPass_encrypts_your_sensitive_data_locally_so_even_LastPass_employees_do_not_have_access_to_it___You_can_get_help_by_clicking_on_the_LastPass_icon_and_going_to_Help_": {
+      "message": "LastPass er fuldt installeret! N\u00E5r du installerer LastPass p\u00E5 andre computere, beh\u00F8ver du ikke at gennemg\u00E5 denne procedure igen. Du kan bare logge ind. Del ikke din Hoved-adgangskode med nogen. Heller ikke LastPass-medarbejdere - vi vil aldrig bede om det! LastPass krypterer dine f\u00F8lsomme data lokalt, s\u00E5 selv LastPass-ansatte ikke har adgang til dem. Du kan f\u00E5 hj\u00E6lp ved at klikke p\u00E5 LastPass-ikonet og v\u00E6lge hj\u00E6lpemenuen."
+   },
+   "LastPass_is_the_last_password_you_ll_ever_have_to_remember___If_you_re_new_to_LastPass__we_ll_just_need_a_few_minutes_of_your_time_to_setup_your_account___You_ll_be_able_to_use_this_account_on_any_other_PC_you_use_to_always_keep_your_personal_data_in_sync___Hit_create_account_to_begin_": {
+      "message": "LastPass er den sidste adgangskode, du nogensinde beh\u00F8ver at huske.  Hvis LastPass er nyt for dig, skal vi bare bruge et par minutter af din tid, for at oprette din konto.  Du kan bruge denne konto p\u00E5 en hvilken som helst PC, for altid at holde dine personlige data synkroniseret.  Tryk Opret Konto for at starte."
+   },
+   "Left": {
+      "message": "Venstre"
+   },
+   "LoggedInOffline": {
+      "message": "LastPass var ikke i stand til kontakte logind serveren, s\u00E5 du arbejder nu offline. Funktioner kan v\u00E6re begr\u00E6nsede."
+   },
+   "Login": {
+      "message": "Log ind"
+   },
+   "LoginError": {
+      "message": "Fejl ved logind p\u00E5 LastPass. Pr\u00F8v venligst igen."
+   },
+   "Login_to_LastPass": {
+      "message": "Logind til LastPass"
+   },
+   "Logoff": {
+      "message": "Log af"
+   },
+   "MSI_PasswordKeeper": {
+      "message": "MSI PasswordKeeper"
+   },
+   "Male": {
+      "message": "Mand"
+   },
+   "March": {
+      "message": "Marts"
+   },
+   "Master_Password": {
+      "message": "Hoved-adgangskode"
+   },
+   "May": {
+      "message": "Maj"
+   },
+   "Meta": {
+      "message": "Meta"
+   },
+   "More": {
+      "message": "Mere"
+   },
+   "Move_to_Group": {
+      "message": "Flyt til Gruppe"
+   },
+   "Mr": {
+      "message": "Hr"
+   },
+   "Mrs": {
+      "message": "Fru"
+   },
+   "Ms": {
+      "message": "Fr"
+   },
+   "MyPasswordSafe": {
+      "message": "MyPasswordSafe"
+   },
+   "My_LastPass_Vault": {
+      "message": "Min LastPass-Boks"
+   },
+   "Nameproper": {
+      "message": "Navn"
+   },
+   "Never_AutoFill": {
+      "message": "Autoudfyld Aldrig"
+   },
+   "Never_For_This_Domain": {
+      "message": "Aldrig For Dette Dom\u00E6ne"
+   },
+   "Never_For_This_Page": {
+      "message": "Aldrig For Denne Side"
+   },
+   "No": {
+      "message": "Nej"
+   },
+   "No_Thanks": {
+      "message": "Nej Tak"
+   },
+   "No__I_do_not_want_LastPass_to_help_me_fill_forms_automatically": {
+      "message": "Nej, jeg \u00F8nsker ikke, at LastPass udfylder formularer automatisk"
+   },
+   "No__do_not_import_any_of_my_insecure_items": {
+      "message": "Nej, importer ikke mine usikre data"
+   },
+   "None_Available": {
+      "message": "Ingen tilg\u00E6ngelig"
+   },
+   "Not_Now": {
+      "message": "Ikke Nu"
+   },
+   "Notes": {
+      "message": "Noter"
+   },
+   "Notes_": {
+      "message": "Noter:"
+   },
+   "Notifications": {
+      "message": "Beskeder"
+   },
+   "November": {
+      "message": "November"
+   },
+   "OK": {
+      "message": "OK"
+   },
+   "October": {
+      "message": "Oktober"
+   },
+   "Offer_to_Generate_Secure_Passwords": {
+      "message": "Tilbyd at danne sikre adgangskoder"
+   },
+   "Open_All": {
+      "message": "\u00C5bn Alle"
+   },
+   "Open_Favorites": {
+      "message": "\u00C5ben Favoritter"
+   },
+   "Open_My_LastPass_Vault": {
+      "message": "\u00C5ben Min LastPass Boks"
+   },
+   "Open_New_Pages_in": {
+      "message": "\u00C5bn nye sider i"
+   },
+   "Open_login_dialog_when_start_browser": {
+      "message": "\u00C5ben logind dialogboks n\u00E5r browseren starter "
+   },
+   "Other": {
+      "message": "Anden"
+   },
+   "Other_Sessions": {
+      "message": "Andre Sessioner"
+   },
+   "Page_Down": {
+      "message": "Side Ned"
+   },
+   "Page_Up": {
+      "message": "Side op"
+   },
+   "Passpack": {
+      "message": "Passpack"
+   },
+   "Password": {
+      "message": "Adgangskode"
+   },
+   "Password_Agent": {
+      "message": "Password Agent"
+   },
+   "Password_Keeper": {
+      "message": "Password Keeper"
+   },
+   "Password_Reminder": {
+      "message": "Adgangskode-p\u00E5mindelse"
+   },
+   "Password_Safe": {
+      "message": "Adgangskodeboks"
+   },
+   "Password_reminder_cannot_match_password": {
+      "message": "Adgangskode-p\u00E5mindelse kan ikke finde adgangskoden"
+   },
+   "Please_Make_a_Selection": {
+      "message": "V\u00E6lg venligst"
+   },
+   "Please_enter_a_Password_Reminder": {
+      "message": "Udfyld venligst en adgangskode-p\u00E5mindelse"
+   },
+   "Please_provide_this_computer_a_name": {
+      "message": "Angiv et navn til denne computer"
+   },
+   "Please_select_which_sites_you_wish_to_apply_this_change_": {
+      "message": "V\u00E6lg venligst hvilke steder du \u00F8nsker at foretage denne \u00E6ndring."
+   },
+   "Please_visit_https___lastpass_com_to_create_an_account_at_a_later_time_": {
+      "message": "Bes\u00F8g os p\u00E5 https://lastpass.com for at oprette en konto p\u00E5 et senere tidspunkt."
+   },
+   "Preferences": {
+      "message": "Indstillinger"
+   },
+   "Print": {
+      "message": "Print"
+   },
+   "Profile": {
+      "message": "Profil"
+   },
+   "Re_enter_Password": {
+      "message": "Indtast adgangskode igen"
+   },
+   "Recently_Used": {
+      "message": "Senest brugt"
+   },
+   "Recheck_Page": {
+      "message": "Tjek siden igen"
+   },
+   "Refresh_Sites": {
+      "message": "Opdat\u00E9r Steder"
+   },
+   "Reject": {
+      "message": "Afvis"
+   },
+   "Remember_Email": {
+      "message": "Husk Email"
+   },
+   "Remember_Password": {
+      "message": "Husk adgangskode"
+   },
+   "Rename_Group": {
+      "message": "Omd\u00F8b gruppe"
+   },
+   "Replace_Existing_Site": {
+      "message": "Erstat Eksisterende Sted"
+   },
+   "Require_Every_Character_Type": {
+      "message": "Alle Typer af bogstaver/tal Kr\u00E6ves"
+   },
+   "Require_Password_Reprompt": {
+      "message": "Kr\u00E6v genindtastning af adgangskode"
+   },
+   "Respect_AutoComplete_off__allow_websites_to_disable_AutoFill": {
+      "message": "Respekt\u00E9r AutoComplete=off: tillad websteder at sl\u00E5 autofyld fra"
+   },
+   "Right": {
+      "message": "H\u00F8jre"
+   },
+   "RoboForm": {
+      "message": "RoboForm"
+   },
+   "Save": {
+      "message": "Gem"
+   },
+   "Save_All_Entered_Data": {
+      "message": "Gem alle udfyldte data"
+   },
+   "Save_New_Site": {
+      "message": "Gem Nyt Sted"
+   },
+   "Save_Site": {
+      "message": "Gem Sted"
+   },
+   "Save_a_disabled_One_Time_Password_locally_for_Account_Recovery": {
+      "message": "Gem en deaktiveret engangskode lokalt til kontogendannelse."
+   },
+   "Search": {
+      "message": "S\u00F8g"
+   },
+   "Secure_Notes": {
+      "message": "Sikre Noter"
+   },
+   "Security": {
+      "message": "Sikkerhed"
+   },
+   "Security_Check": {
+      "message": "Sikkerhedstjek"
+   },
+   "Select": {
+      "message": "V\u00E6lg"
+   },
+   "Select_All": {
+      "message": "V\u00E6lg Alt"
+   },
+   "Send_anonymous_error_reporting_data_to_help_improve_LastPass": {
+      "message": "Send anonyme fejl rapporter for at hj\u00E6lpe med at forbedre LastPass"
+   },
+   "September": {
+      "message": "September"
+   },
+   "SesameWrongButton": {
+      "message": "For at se data offline skal du starte Sesame\nog klikke p\u00E5 'Kopier offline adgangskode'-knappen, i stedet for 'Generer engangskodeord'-knappen."
+   },
+   "Sesame_Multifactor_Authentication": {
+      "message": "Sesame multifaktor-godkendelse"
+   },
+   "Share": {
+      "message": "Del"
+   },
+   "Share_login_state_between_other_browsers": {
+      "message": "Del login-status med andre browsere"
+   },
+   "Share_offer_from": {
+      "message": "Del tilbud fra"
+   },
+   "Shift": {
+      "message": "Skift"
+   },
+   "Should_LastPass_remember_this_password_": {
+      "message": "Skal LastPass huske denne adgangskode?"
+   },
+   "Show_Advanced_Options": {
+      "message": "Vis Avancerede Indstillinger"
+   },
+   "Show_Deleted_Sites": {
+      "message": "Vis Slettede Steder"
+   },
+   "Show_Form_Fill_Notifications": {
+      "message": "Vis Formular Udfyldelses Beskeder"
+   },
+   "Show_My_LastPass_Vault_After_Login": {
+      "message": "Vis Min LastPass Boks Efter Logind"
+   },
+   "Show_Notifications": {
+      "message": "Vis Meddelelser"
+   },
+   "Show_Save_Site_Notifications": {
+      "message": "Vis Gem Sted Beskeder"
+   },
+   "Show_Sites_in_Groups": {
+      "message": "Vis Steder i Grupper"
+   },
+   "Show_certain_notifications_only_after_click": {
+      "message": "Vis kun bestemte beskeder efter klik"
+   },
+   "Simplify_your_life__Use_LastPass_to_autofill_in_this_site_s_login_info_": {
+      "message": "G\u00F8r livet nemmere: Brug LastPass til at autoudfylde dette sted\u00B4s logind info!"
+   },
+   "Site_Search": {
+      "message": "Sted S\u00F8gning"
+   },
+   "Sites": {
+      "message": "Steder"
+   },
+   "Special": {
+      "message": "Keine Netzwerkverbindung wird erkannt, und keine lokalen Cache-Daten gefunden oder aktivierte drahtlose oder Wi-Fi-Verbindung"
+   },
+   "State___Province": {
+      "message": "Stat/Provins"
+   },
+   "Submit_Form": {
+      "message": "Indsend formular"
+   },
+   "Tabs": {
+      "message": "Faner"
+   },
+   "Text": {
+      "message": "tekst"
+   },
+   "The_LastPass_master_password_you_reentered_does_not_match": {
+      "message": "Den LastPass hoved-adgangkode du indtastede passer ikke"
+   },
+   "This_computer_is_trusted__do_not_require_a_second_form_of_authentication_": {
+      "message": "Dette er en betroet computer - kr\u00E6v ikke en anden form for bekr\u00E6ftelse."
+   },
+   "This_is_a_shared_site__You_are_not_permitted_to_view_the_password_": {
+      "message": "Dette er et delt websted. Du har ikke tilladelse til at se adgangskoden."
+   },
+   "Time_Zone": {
+      "message": "Tidszone"
+   },
+   "Title": {
+      "message": "Titel"
+   },
+   "To_create_your_account__please_re_enter_your_LastPass_master_password": {
+      "message": "Indtast venligst din LastPass hoved-adgangskode igen, for at oprette din konto"
+   },
+   "To_get_started_with_LastPass__you_will_need_to_add_sites_to_your_account_": {
+      "message": "For at komme igang med LastPass, skal der tilf\u00F8jes steder til din konto."
+   },
+   "To_protect_your_privacy_and_keep_your_data_confidential_": {
+      "message": "For at beskytte dit privatliv og bevare dine data fortrolige,"
+   },
+   "Tools": {
+      "message": "V\u00E6rkt\u00F8j"
+   },
+   "Try_Again": {
+      "message": "Pr\u00F8v Igen"
+   },
+   "TurboPasswords": {
+      "message": "TurboPasswords"
+   },
+   "Unselect_All": {
+      "message": "Frav\u00E6lg Alt"
+   },
+   "Up": {
+      "message": "Op"
+   },
+   "Version_": {
+      "message": "Version:"
+   },
+   "Warn_before_filling_insecure_forms": {
+      "message": "Advar f\u00F8r usikre formularer udfyldes"
+   },
+   "Watch_a_video_on_basic_usage": {
+      "message": "Se en video om grundl\u00E6ggende brug"
+   },
+   "We_also_DO_NOT_keep_a_copy_or_backup_of_it_": {
+      "message": "Vi gemmer HELLER IKKE en kopi eller backup af det."
+   },
+   "Welcome_to_LastPass_": {
+      "message": "Velkommen til LastPass!"
+   },
+   "Windows": {
+      "message": "Windows"
+   },
+   "Would_you_like_to_set_up_a_Form_Filling_profile_now_": {
+      "message": "\u00D8nsker du at oprette en Formular udfyldelsesprofil nu?"
+   },
+   "Yes": {
+      "message": "Ja"
+   },
+   "Yes__let_me_choose_which_items_I_want_imported_into_LastPass": {
+      "message": "Ja, lad mig v\u00E6lge hvilke emner, jeg \u00F8nsker at importere til LastPass"
+   },
+   "Yes__let_me_enter_and_review_data_that_will_be_used_when_filling_forms": {
+      "message": "Ja, lad mig indtaste og gennemse data, som vil blive brugt ved udfyldelse af formularer"
+   },
+   "You_cannot_assign_more_than_one_HotKey_the_same_value_": {
+      "message": "Du kan ikke tildele mere end \u00E9n genvej samme v\u00E6rdi."
+   },
+   "You_have_not_yet_chosen_a_default_form_fill_profile___Would_you_like_to_choose_one_now_": {
+      "message": "Du har endnu ikke valgt en standard-formularudfyldnings-profil. \u00D8nsker du at v\u00E6lge en nu?"
+   },
+   "You_must_agree_to_send_your_encrypted_data_to_LastPass_com___LastPass_com_encrypts_your_data_and_sends_it_to_its_secure_servers__No_one_at_LastPass_can_read_your_confidential_data_since_it_is_encrypted_using_your_secret_password_and_you_are_the_only_one_who_knows_your_password_": {
+      "message": "Du skal indvillige i at sende dine krypterede data til LastPass.com.\n\nLastPass.com krypterer dine data og sender dem til sine sikre servere.\nIngen hos LastPass kan l\u00E6se dine fortrolige data, da de er krypterede med din hemmelige adgangskode og du er den eneste som kender denne."
+   },
+   "You_must_agree_to_the_terms_to_continue": {
+      "message": "Du skal acceptere betingelserne for at forts\u00E6tte"
+   },
+   "You_must_enter_a_name_": {
+      "message": "Du skal skrive et navn."
+   },
+   "You_must_enter_a_unique_name_": {
+      "message": "Du skal indtaste et unikt navn."
+   },
+   "You_must_restart_your_browser_before_all_of_the_changes_will_take_effect_": {
+      "message": "Du skal genstarte din bowser f\u00F8r \u00E6ndringerne tr\u00E6der i kraft."
+   },
+   "Your_password_can_not_be_the_same_as_your_email_": {
+      "message": "Din adgangskode m\u00E5 ikke v\u00E6re det samme som din e-mail-adresse."
+   },
+   "Your_password_is_easily_guessable_": {
+      "message": "Din adgangskode er nem at g\u00E6tte."
+   },
+   "Your_password_is_too_short__It_must_be_at_least_6_characters_long": {
+      "message": "Din adgangskode er for kort. Den skal best\u00E5 af mindst 6 tegn"
+   },
+   "Your_password_reminder_serves_to_remind_you_of_what_your": {
+      "message": "Din adgangskode-p\u00E5mindelse hj\u00E6lper dig med at huske, hvad din"
+   },
+   "YubiKey_Multifactor_Authentication": {
+      "message": "Yubikey multifaktor-godkendelse"
+   },
+   "_Hide_": {
+      "message": "[Gem]"
+   },
+   "_New_Pending_Share_Offers_": {
+      "message": "(Nye delings-tilbud)"
+   },
+   "_Show_": {
+      "message": "[Vis]"
+   },
+   "_none_": {
+      "message": "(ingen)"
+   },
+   "actual_password_is__while_still_maintaining_its_secrecy_": {
+      "message": "aktuelle adgangskode er, samtidig med, at den bevares hemmelig."
+   },
+   "and": {
+      "message": "og"
+   },
+   "contact_us_and_we_will_email_you_your_password_reminder_": {
+      "message": "s\u00E5 kontakt os og vi vil sende dig din adgangskode-p\u00E5mindelse."
+   },
+   "dummy": {
+      "message": "dummy, leave this here so we don't mess up the trailing comma"
+   },
+   "ext_": {
+      "message": "lok."
+   },
+   "favorites": {
+      "message": "favoritter"
+   },
+   "hour": {
+      "message": "time"
+   },
+   "hours": {
+      "message": "timer"
+   },
+   "minutes": {
+      "message": "minutter"
+   },
+   "privacy_statement": {
+      "message": "erkl\u00E6ring om personlige oplysninger"
+   },
+   "recently_usedlower": {
+      "message": "senest anvendte"
+   },
+   "seconds": {
+      "message": "sekunder"
+   },
+   "terms_of_service": {
+      "message": "Betingelser"
+   },
+   "the_current_tab": {
+      "message": "det aktuelle faneblad"
+   },
+   "we_DO_NOT_know_what_your_LastPass_password_is_": {
+      "message": "ved vi IKKE hvad dim LastPass-adgangskode er."
+   }
+}

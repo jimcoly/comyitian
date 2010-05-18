@@ -1,0 +1,27 @@
+{
+   "background_page": "background.html",
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "chromeTouch.js" ],
+      "matches": [ "http://*/*", "https://*/*", "file:///*/*" ],
+      "run_at": "document_start"
+   } ],
+   "default_locale": "en_US",
+   "description": "Enable iPhone like touch scroll interface. if you make translation text and all that, contact smilkobuta@gmail.com",
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png",
+      "32": "icon_32.png",
+      "48": "icon_48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDEIri0tMm5aXJMHJSRGCuGVxmkK/sy3Pe5Vifg2zPtH6VviG41lbJCWfyondX54JGioHpkGwEPOjVxwwAvCA1BS+ubyTkfbN7yIQToceGh1ZHoDEIcyybjdkGzWGp33M6wWkBn/5HUCfHDqIzG+eWcF7GMvVK9FtewxwVy4j3qBQIDAQAB",
+   "name": "chromeTouch",
+   "options_page": "setting.html",
+   "page_action": {
+      "default_icon": "icon_32.png",
+      "default_title": "chromeTouch"
+   },
+   "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+   "update_url": "http://hello.lumiere-couleur.com/app/chrome_extensions/chromeTouch/updates.xml",
+   "version": "2.6"
+}

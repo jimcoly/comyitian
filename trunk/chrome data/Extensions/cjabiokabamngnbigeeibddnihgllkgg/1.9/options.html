@@ -1,0 +1,823 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Mouse Stroke - Options</title>
+<link rel="icon" href="icons/icon-16.png"/>
+<link rel="stylesheet" href="960.css"/>
+<link rel="stylesheet" href="options.css"/>
+<script src="essentials.js"></script>
+<script src="stroke.js"></script>
+<script src="locales/locales.js"></script>
+<script>
+/* the id of the selected stroke command */
+var _stroke_id = null;
+
+/* stroke event from stroke.js */
+var _event;
+
+/* config object */
+var _cfg;
+
+/* when not in setting mode (black screen), respond to strokes like normal
+ * webpage */
+var _respond = true;
+
+/* port to the background page */
+var _port = chrome.extension.connect({name: 'stroke.html-config'});
+
+/* distinguish built-in strokes and user defined strokes.
+ * user defined strokes' IDs are prefixed with CUS_PFX, there are no conflicts
+ * as long as built-in strokes' IDs don't use this prefix */
+var iscus = function(id) {
+	return !!id.match(new RegExp('^' + $.CUS_PFX));
+}
+
+/* convert id to a readable label */
+var id2label = function(id) {
+	if (iscus(id))
+		return unescape(id.replace(new RegExp('^' + $.CUS_PFX), ''));
+	else
+		return id.replace(/\-/g, ' ').replace(/\w+/g, function(s) {
+			return s.charAt(0).toUpperCase() + s.substring(1);
+		});
+}
+
+/* convert label to id, only used by user defined strokes */
+var label2id = function(label) {
+	return $.CUS_PFX + escape(label);
+}
+
+/* pack stroke sequence into a space separated string */
+var pack = function(seq) {
+	return (!!seq && seq.join) ? seq.join(' ').trim() : '';
+}
+
+/* generate element IDs based on the user defined stroke id */
+var cus_label_id = function(id) {
+	return id + '-label';
+}
+var cus_row_id = function(id) {
+	return id + '-row';
+}
+
+/* construct the config form */
+var construct = function(cfg)
+{
+	var id, loc, outer, inner, title, box, input, set, unset, cat;
+
+	/* restore options */
+	$.get('trigger').value = cfg.trigger;
+	$.get('timeout').value = cfg.timeout;
+	$.get('minstep').value = cfg.minstep;
+	$.get('trail').value = cfg.trail;
+	$.get('suppress').checked = !!cfg.suppress;
+	$.get('newtab_target').value = cfg.newtab_target;
+	$.get('newtab_position').value = cfg.newtab_position;
+	$.get('last_tab_close_win').checked = !!cfg.last_tab_close_win;
+	$.get('trail_width').value = cfg.trail_width
+
+	/* fill in available languages */
+	loc = $.get('locale');
+	for (id in _locales) {
+		loc.appendChild($.create('option', {
+			value: id, textContent: _locales[id]
+		}));
+	}
+	loc.value = cfg.locale;
+
+	/* stroke categories will be flatted for easy referring */
+	cfg.strokes = {};
+
+	/* restore built-in stroke settings */
+	outer = $.get('built-in-strokes');
+	for (id in cfg.categories) {
+		title = outer.appendChild($.create('p', {
+			className: 'title',
+			textContent: id2label(id)
+		}));
+		inner = outer.appendChild($.create('div', {
+			className: 'group'
+		}));
+
+		/* strokes */
+		cat = cfg.categories[id];
+		for (id in cat) {
+			box = inner.appendChild($.create('div', {
+				className: 'row clear'
+			}));
+			box.appendChild($.create('p', {
+				className: 'label grid_3 alpha',
+				textContent: id2label(id)
+			}));
+			box = box.appendChild($.create('p', {
+				className: 'field grid_5 omega'
+			}));
+			/* stroke field */
+			input = $.create('input', {
+				id: id, type: 'text', disabled: true,
+				className: 'stroke-field', value: pack(cat[id])
+			});
+			/* set button */
+			set = $.create('button', {
+				className: 'set-stroke-btn', 'for': id,
+				textContent: 'Set'
+			});
+			set.addEventListener('click', set_stroke, false);
+			/* unset button */
+			unset = $.create('button', {
+				className: 'unset-stroke-btn', 'for': id,
+				textContent: 'Unset'
+			});
+			unset.addEventListener('click', unset_stroke, false);
+
+			box.appendChild(input);
+			box.appendChild(set);
+			box.appendChild(unset);
+
+			/* flat categories, all operations on cfg.strokes
+			 * should done by reference, so that changes can be
+			 * reflected on their counterparts in cfg.categories */
+			cfg.strokes[id] = cat[id];
+		}
+
+		/* built-in strokes are too many, make them fold-able */
+		title.addEventListener('click', function(ev) {
+			var title = ev.target;
+			if (!title.folded) {
+				$.slide_up(title.nextElementSibling);
+				title.folded = true;
+			} else {
+				$.slide_down(title.nextElementSibling);
+				title.folded = false;
+			}
+		}, false);
+		/* by default fold all but the first category */
+		if (title.previousElementSibling) {
+			$.slide_up(title.nextElementSibling);
+			title.folded = true;
+		}
+	}
+
+	/* rocker and wheel strokes */
+	pxy_construct(cfg);
+
+	/* restore user defined stroke settings */
+	box = $.get('custom-strokes');
+	for (id in cfg.customs) {
+		box.appendChild(cus_construct(id));
+	}
+
+	/* bind restore/save button listener */
+	$.get('top-restore-btn').addEventListener('click', restore_default, false);
+	$.get('bot-restore-btn').addEventListener('click', restore_default, false);
+	$.get('top-save-btn').addEventListener('click', harvest, false);
+	$.get('bot-save-btn').addEventListener('click', harvest, false);
+}
+
+var pxy_construct = function(cfg) {
+	var proxies = ['rockers-L', 'rockers-R',
+		'wheels-U', 'wheels-D', 'wheels-L', 'wheels-R',
+		'drags-U', 'drags-D', 'drags-L', 'drags-R'],
+		i, id, sel, grp, types, main, sub;
+	for (i = 0; i < proxies.length; ++i) {
+		sel = $.get(proxies[i]);
+		types = sel.id.split('-');
+		main = types[0], sub = types[1];
+
+		sel.appendChild($.create('option', {
+			value: '', textContent: 'None'
+		}));
+
+		if (main == 'drags') {
+			/* for drags, only link type strokes are supported */
+			for (id in cfg.categories.link) {
+				sel.appendChild($.create('option', {
+					value: id, textContent: id2label(id)
+				}));
+			}
+		} else {
+			/* rockers and wheels support them all */
+			/* fill in built-in strokes */
+			sel.appendChild(grp = $.create('optgroup', {
+				label: 'Built-in Strokes'
+			}));
+			for (id in cfg.strokes) {
+				grp.appendChild($.create('option', {
+					value: id, textContent: id2label(id)
+				}));
+			}
+
+			/* fill in custom strokes */
+			sel.appendChild(grp = $.create('optgroup', {
+				label: 'User Defined Strokes'
+			}));
+			for (id in cfg.customs) {
+				grp.appendChild($.create('option', {
+					value: id, textContent: id2label(id)
+				}));
+			}
+		}
+
+		sel.value = cfg[main][sub];
+		sel.addEventListener('change', function(ev) {
+			var ids = ev.srcElement.id.split('-');
+			_cfg[ids[0]][ids[1]] = ev.srcElement.value;
+		}, false);
+	}
+	if (!$.WIN) {
+		$.hide('windows-exclusive');
+	}
+}
+
+/* create UI for user defined strokes */
+var cus_construct = function(id) {
+	var row, box, input, set, unset, remove, stroke = _cfg.customs[id];
+
+	row = $.create('div', { id: cus_row_id(id), className: 'row clear' });
+	/* label text */
+	row.appendChild($.create('p', {
+		id: cus_label_id(id), className: 'label grid_3 alpha',
+		textContent: id2label(id)
+	}));
+	box = row.appendChild($.create('p', {
+		className: 'field grid_5 omega'
+	}));
+	/* stroke field */
+	input = $.create('input', {
+		id: id, type: 'text', disabled: true,
+		className: 'stroke-field', value: pack(stroke)
+	});
+	/* set button */
+	set = $.create('button', {
+		className: 'set-stroke-btn', 'for': id, textContent: 'Set'
+	});
+	set.addEventListener('click', set_stroke, false);
+	/* unset button */
+	unset = $.create('button', {
+		className: 'unset-stroke-btn', 'for': id, textContent: 'Unset'
+	});
+	unset.addEventListener('click', unset_stroke, false);
+	/* remove button */
+	remove = $.create('button', {
+		className: 'remove-stroke-btn', 'for': id, textContent: 'Remove'
+	});
+	remove.addEventListener('click', remove_stroke, false);
+
+	box.appendChild(input);
+	box.appendChild(set);
+	box.appendChild(unset);
+	box.appendChild(remove);
+
+	return row;
+}
+
+/* save settings */
+var harvest = function()
+{
+	var i, el, customs;
+
+	_cfg.trigger = parseInt($.get('trigger').value);
+	_cfg.timeout = parseInt($.get('timeout').value);
+	_cfg.minstep = parseInt($.get('minstep').value);
+	_cfg.trail = $.get('trail').value;
+	_cfg.locale = $.get('locale').value;
+	_cfg.suppress = $.get('suppress').checked;
+	_cfg.newtab_target = $.get('newtab_target').value;
+	_cfg.newtab_position = $.get('newtab_position').value;
+	_cfg.last_tab_close_win = $.get('last_tab_close_win').checked;
+	_cfg.trail_width = Math.max(1, Math.min(9, parseInt($.get('trail_width').value)));
+
+	/* if the label of a user defined stroke was changed, its internal
+	 * order within _cfg.customs will also change, so we need to re-sort
+	 * _cfg.customs by elements order here */
+	for (el = $.get('custom-strokes').getElementsByClassName('stroke-field'),
+		i = 0, customs = {};
+		i < el.length;
+		customs[el[i].id] = _cfg.customs[el[i++].id]);
+	_cfg.customs = customs;
+
+	/* save locally */
+	_port.postMessage({ type: 'save', data: _cfg });
+	$.notify(_('Save complete'), 2);
+}
+
+/* restore default settings */
+var restore_default = function()
+{
+	if (!confirm(_('All settings will be reset, except user defined strokes, proceed?')))
+		return;
+
+	_port.postMessage({
+		type: 'save',
+		data: { customs: _cfg.customs, scripts: _cfg.scripts }
+	});
+	location.reload(true);
+}
+
+/* event handler for setting stroke */
+var set_stroke = function(e)
+{
+	var is_custom, stroke;
+
+	/* set the command id, so the stroke listener knows which stroke
+	 * should be set */
+	_stroke_id = e.target['for'];
+	_respond = false;
+	is_custom = iscus(_stroke_id);
+	stroke = is_custom ? _cfg.customs[_stroke_id] : _cfg.strokes[_stroke_id];
+
+	if (is_custom) {
+		$.get('custom-label').value = id2label(_stroke_id);
+		$.get('custom-script').value = _cfg.scripts[_stroke_id] || '';
+		$.show('custom-content');
+	}
+	/* display the overlay, waiting for input */
+	$.get('which-stroke').textContent = id2label(_stroke_id);
+	$.get('old-stroke').textContent = pack(stroke);
+	$.get('new-stroke').textContent = '';
+	$.show('overlay-stroke');
+	$.hide('overlay-backup');
+	$.show('overlay');
+}
+
+/* event handler for unsetting stroke */
+var unset_stroke = function(e) {
+	var k = e.target['for'],
+		s = iscus(k) ? _cfg.customs[k] : _cfg.strokes[k];
+	/* unset the stroke */
+	$.get(k).value = '';
+	/* empty the stroke array */
+	s.splice(0, s.length);
+}
+
+/* event handler for remove user defined stroke */
+var remove_stroke = function(e) {
+	var k = e.target['for'], tr;
+	if (confirm(_('Remove user defined stroke: "%"?', id2label(k)))) {
+		tr = $.get(cus_row_id(k));
+		tr.parentNode.removeChild(tr);
+		delete _cfg.customs[k];
+		delete _cfg.scripts[k];
+	}
+}
+
+/* event handler for add new user defined stroke */
+var add_stroke = function(e) {
+	var id, i = 1, label = 'New User Defined Stroke ';
+
+	do { id = label2id(label + i++) }
+	while (!!_cfg.customs[id]);
+	/* push a special new stroke to customs */
+	_cfg.customs[id] = [];
+	_cfg.customs[id].neo = true;
+	/* tell a lie */
+	e.target['for'] = id;
+	set_stroke(e);
+}
+
+/* event handler for the confirm button */
+var confirm_change = function(e) {
+	var k, tr, label, script, newstk, is_custom = iscus(_stroke_id),
+		bucket = is_custom ? _cfg.customs : _cfg.strokes,
+		stroke = bucket[_stroke_id],
+		id = _stroke_id;
+
+	/* label and script */
+	if (is_custom) {
+		label = $.get('custom-label').value.trim();
+		script = $.get('custom-script').value;
+		if (!label || !script.trim()) {
+			$.notify(_('Both [Label] and [Script] can not be empty'), 4);
+			return;
+		}
+		/*if (!evaluate(script)) return;*/
+
+		/* id does not equal to _stroke_id if label is changed */
+		id = label2id(label);
+		/* notify conflicts */
+		if (_stroke_id != id && !!bucket[id] && !confirm(_('"%" already exists, overwrite?', label)))
+			return;
+	}
+
+	/* update stroke setting */
+	if (!!_event && !!_event.stroke) {
+		newstk = pack(_event.stroke);
+		/* check duplicates */
+		for (k in bucket) {
+			if (id != k && newstk == pack(bucket[k])) {
+				if (confirm(_('[%] has been assigned to "%", overwrite?', newstk, id2label(k)))) {
+					/* clear conflicted settings */
+					$.get(k).value = '';
+					bucket[k].splice(0, bucket[k].length);
+					break;
+				} else {
+					return;
+				}
+			}
+		}
+		/* operate on the array reference, replace array elements
+		 * with elements of _event.stroke */
+		stroke.splice.apply(stroke, [0, stroke.length].concat(_event.stroke));
+	}
+
+	/* handle label change, update page elements */
+	if (_stroke_id != id || stroke.neo) {
+		/* a new stroke, or label changed */
+		bucket[id] = stroke;
+		tr = $.get(cus_row_id(_stroke_id));
+		/* this row exists when the user confirmed overwriting an
+		 * existing label */
+		if (!$.get(cus_row_id(id)))
+			$.get('custom-strokes').insertBefore(cus_construct(id), tr);
+		if (_stroke_id != id) {
+			delete bucket[_stroke_id];
+			delete _cfg.scripts[_stroke_id];
+			/* tr is null if this is a new stroke */
+			if (!!tr) tr.parentNode.removeChild(tr);
+		}
+		/* from now on _stroke_id is replaced by new id, later
+		 * references to _stroke_id should be pointed to the new id */
+		_stroke_id = id;
+	}
+	if (!!newstk || stroke.neo) $.get(id).value = newstk || pack(stroke);
+
+	if (is_custom) _cfg.scripts[id] = script;
+	if (stroke.neo) delete stroke.neo;
+
+	cancel_change(e);
+}
+
+/* event handler for the cancel button */
+var cancel_change = function(e) {
+	/* cancel setting stroke */
+	if (!!_cfg.customs[_stroke_id] && _cfg.customs[_stroke_id].neo) {
+		/* a new stroke is cancelled */
+		delete _cfg.customs[_stroke_id];
+		delete _cfg.scripts[_stroke_id];
+	}
+	$.hide('overlay');
+	$.hide('custom-content');
+	_stroke_id = null;
+	_event = null;
+	_respond = true;
+}
+
+/* backup config */
+var backup_config = function(e) {
+	var ta = $.get('backup-ta');
+	ta.value = JSON.stringify(_cfg);
+	ta.focus();
+	ta.select();
+}
+
+/* restore config */
+var restore_config = function(e) {
+	var cfg;
+	try {
+		cfg = JSON.parse($.get('backup-ta').value)
+		_port.postMessage({ type: 'save', data: cfg });
+		$.notify(_('Restored complete'), null, function() {
+			location.reload(true);
+		});
+	} catch (e) {
+		$.notify(_('Corrupted data detected, restore backup settings stopped'));
+		return;
+	}
+}
+
+/* evaluate scripts of user defined strokes */
+var evaluate = function(script) {
+	var ex, msg, line, sbox = $.get('sandbox').contentWindow;
+	if (true !== (ex = sbox.sandbox.call({}, {}, script))) {
+		/* extract compiler messages */
+		ex = ex.stack.split("\n");
+		line = ex[1].replace(/.+actions\.js:\d+:(\d+).+$/, '$1');
+		msg = "The compiler reported a script error.\n\n";
+		msg += ex[0]/* + "\nAt line: " + (line ? line : '<unknown>')*/;
+		msg += "\n\nProceed with errors?";
+
+		return confirm(msg);
+	}
+	return true;
+}
+
+chrome.extension.onRequest.addListener(function(msg, sender, send_resp) {
+	var resp = {}
+
+	/* stroke.js will fire a pull-config command to stroke.html at
+	 * start up, we listen to the response too */
+	if (!_cfg && 'update-config' == msg.type) {
+		/* apply only once */
+		construct(_cfg = msg.data);
+	} else if ('accept-stroke' == msg.type) {
+		/* tell stroke.html whether we are responding to strokes */
+		if (!(resp = _respond) &&
+			/* when in setting mode, we'd process strokes ourselves */
+			!!_stroke_id &&
+			!!_cfg[iscus(_stroke_id) ? 'customs' : 'strokes'][_stroke_id]) {
+
+			/* valid _stroke_id */
+			_event = msg.data;
+			$.get('new-stroke').textContent = pack(_event.stroke);
+		}
+	} else {
+		return;
+	}
+	send_resp(resp);
+});
+
+window.addEventListener('load', function() {
+	var sbox;
+	$.get('confirm-btn').addEventListener('click', confirm_change, false);
+	$.get('cancel-btn').addEventListener('click', cancel_change, false);
+	$.get('add-custom-btn').addEventListener('click', add_stroke, false);
+	$.get('backup-config-btn').addEventListener('click', backup_config, false);
+	$.get('restore-config-btn').addEventListener('click', restore_config, false);
+	$.get('open-backup-ui').addEventListener('click', function() {
+		/* show UI for backup/restore settings */
+		$.hide('overlay-stroke');
+		$.show('overlay-backup');
+		$.show('overlay');
+	}, false);
+	$.get('close-backup-ui').addEventListener('click', function() {
+		$.hide('overlay');
+	}, false);
+	/* prepare the sandbox for evaluating user script
+	sbox = $.get('sandbox').contentWindow;
+	sbox.document.head.appendChild($.create('script', {
+		type: 'text/javascript', src: 'actions.js'
+	}));
+	sbox.parent = sbox;
+	sbox.alert = sbox.confirm = function() {}*/
+});
+</script>
+</head>
+<body class="container_16">
+
+<div id="overlay" class="overlay hidden">
+ <div id="overlay-stroke" class="overlay-stroke">
+  <h1 id="which-stroke"></h1>
+  <p>Previous<br/>[ <span id="old-stroke" class="old-stroke"></span> ]</p>
+  <p>Current<br/>[ <span id="new-stroke" class="new-stroke"></span> ]</p>
+  <div id="custom-content" class="custom-content hidden">
+   <p><em>Label</em> *<br/>
+    <input id="custom-label" class="custom-label" type="text" maxlength="64"/>
+   </p>
+   <p><em>Script</em> *<br/>
+    <textarea id="custom-script" class="custom-script" spellcheck="false"></textarea>
+   </p>
+  </div>
+  <p>
+   <button id="confirm-btn">Confirm</button>
+   <button id="cancel-btn">Cancel</button>
+  </p>
+ </div>
+
+ <div id="overlay-backup" class="overlay-backup">
+  <h1>Backup / Restore Settings</h1>
+  <div class="backup-form">
+    <ol id="backup-prompt" class="backup-prompt">
+     <li>To backup settings, hit the "Backup" button then <strong>copy the text
+      content to a safe place</strong>. Hit the button alone will not save
+      your settings.
+     </li>
+     <li>To restore settings, paste previously saved content in the text area
+      then hit the "Restore" button. Your backup data will be merged with the
+      default settings to avoid incompatibility or data corruption.
+     </li>
+    </ol>
+   <p>
+    <textarea id="backup-ta" class="backup-ta" spellcheck="false"></textarea>
+   </p>
+  </div>
+  <p>
+   <button id="backup-config-btn">Backup</button>
+   <button id="restore-config-btn">Restore</button>
+   <button id="close-backup-ui">Close</button>
+  </p>
+ </div>
+</div>
+
+<!--iframe id="sandbox" class="hidden"></iframe-->
+
+<div id="header" class="header grid_16">
+ <h1>Mouse Stroke Options</h1>
+</div>
+
+<div class="submit grid_16">
+ <button id="top-restore-btn">Restore to default</button>
+ <button id="top-save-btn">Save</button>
+</div>
+
+<div id="options" class="options grid_16">
+ <p class="title">Options
+  <a id="open-backup-ui" class="open-backup-ui" href="javscript:void(0)">
+   Backup or restore settings
+  </a>
+ </p>
+ <div class="group">
+  <div class="row clear hidden">
+   <p class="label grid_4 alpha">Language</p>
+   <p class="field grid_12 omega">
+    <select id="locale">
+    </select>
+   </p>
+  </div>
+
+  <div class="row clear">
+   <p class="label grid_4 alpha">Stroke Trigger</p>
+   <p class="field grid_12 omega">
+    <select id="trigger">
+     <!--option value="0">Left Mouse Button</option-->
+     <option value="1">Middle Mouse Button (Linux and Mac)</option>
+     <option value="2">Right Mouse Button (Windows)</option>
+    </select>
+   </p>
+  </div>
+
+  <div class="row clear">
+   <p class="label grid_4 alpha">Stroke Timeout (Milliseconds)</p>
+   <p class="field grid_12 omega">
+    <input id="timeout" type="text"/>
+    <em><sub>Try >1000 if you feel difficult to perform strokes</sub></em>
+   </p>
+  </div>
+
+  <div class="row clear">
+   <p class="label grid_4 alpha">Minimal Step (Pixels)</p>
+   <p class="field grid_12 omega"><input id="minstep" type="text"/></p>
+  </div>
+
+  <div class="row clear">
+   <p class="label grid_4 alpha">Draw Trails</p>
+   <p class="field grid_12 omega">
+    <select id="trail">
+     <option value="">None</option>
+     <option value="black" style="color:black">Black</option>
+     <option value="red" style="color:red">Red</option>
+     <option value="green" style="color:green">Green</option>
+     <option value="yellow" style="color:yellow">Yellow</option>
+     <option value="blue" style="color:blue">Blue</option>
+     <option value="magenta" style="color:magenta">Magenta</option>
+     <option value="cyan" style="color:cyan">Cyan</option>
+    </select>
+    Trial Width
+    <input id="trail_width" type="text" size="1"/>
+    (1 - 9)
+   </p>
+  </div>
+
+  <div class="row clear">
+   <p class="label grid_4 alpha">When open new tabs, open</p>
+   <p class="field grid_12 omega">
+    <select id="newtab_target">
+     <option value="">My Homepage</option>
+     <option value="about:blank">Blank page</option>
+     <option value="chrome://newtab/">Chrome's New Tab page</option>
+    </select>
+   </p>
+  </div>
+
+  <div class="row clear">
+   <p class="label grid_4 alpha">When open new tabs, open</p>
+   <p class="field grid_12 omega">
+    <select id="newtab_position">
+     <option value="+0">At the left of the current page</option>
+     <option value="+1">At the right of the current page</option>
+     <option value="*0">As the first tab</option>
+     <option value="/0">As the last tab</option>
+    </select>
+   </p>
+  </div>
+
+  <div class="row clear">
+   <p class="label grid_4 alpha">Alt key suppresses strokes</p>
+   <p class="field grid_12 omega"><input id="suppress" type="checkbox"/></p>
+  </div>
+
+  <div class="row clear">
+   <p class="label grid_4 alpha">Close window with last tab</p>
+   <p class="field grid_12 omega"><input id="last_tab_close_win" type="checkbox"/></p>
+  </div>
+ </div>
+</div>
+
+<div id="built-in-strokes" class="grid_8"></div>
+
+<div class="grid_8">
+ <div id="windows-exclusive">
+  <p class="title">Rocker Strokes</p>
+  <div id="rocker-strokes" class="group">
+   <div class="row clear">
+    <p class="label grid_3 alpha">Left click while holding the right button</p>
+    <p class="field grid_5 omega"><select id="rockers-L"></select></p>
+   </div>
+
+   <div class="row clear">
+    <p class="label grid_3 alpha">Right click while holding the left button</p>
+    <p class="field grid_5 omega"><select id="rockers-R"></select></p>
+   </div>
+  </div>
+
+  <p class="title">Mouse Wheel Strokes (Scroll while holding the right button)</p>
+  <div id="wheel-strokes" class="group">
+   <div class="row clear">
+    <p class="label grid_3 alpha">Mouse wheel up</p>
+    <p class="field grid_5 omega"><select id="wheels-U"></select></p>
+   </div>
+
+   <div class="row clear">
+    <p class="label grid_3 alpha">Mouse wheel down</p>
+    <p class="field grid_5 omega"><select id="wheels-D"></select></p>
+   </div>
+
+   <div class="row clear">
+    <p class="label grid_3 alpha">Mouse wheel left</p>
+    <p class="field grid_5 omega"><select id="wheels-L"></select></p>
+   </div>
+
+   <div class="row clear">
+    <p class="label grid_3 alpha">Mouse wheel right</p>
+    <p class="field grid_5 omega"><select id="wheels-R"></select></p>
+   </div>
+  </div>
+ </div>
+
+ <p class="title">Drag'n'Drop Strokes (Drag links by left mouse key)</p>
+ <div id="drag-strokes" class="group">
+  <div class="row clear">
+   <p class="label grid_3 alpha">Drop up</p>
+   <p class="field grid_5 omega"><select id="drags-U"></select></p>
+  </div>
+
+  <div class="row clear">
+   <p class="label grid_3 alpha">Drop down</p>
+   <p class="field grid_5 omega"><select id="drags-D"></select></p>
+  </div>
+
+  <div class="row clear">
+   <p class="label grid_3 alpha">Drop left</p>
+   <p class="field grid_5 omega"><select id="drags-L"></select></p>
+  </div>
+
+  <div class="row clear">
+   <p class="label grid_3 alpha">Drop right</p>
+   <p class="field grid_5 omega"><select id="drags-R"></select></p>
+  </div>
+ </div>
+
+ <p class="title">
+  User Defined Strokes (Ctrl key + drawing strokes)
+  <a id="add-custom-btn" class="new-custom-stroke" href="javascript:void(0)">Create</a> |
+  <a href="http://code.google.com/p/chrome-mouse-stroke/wiki/UserDefinedStrokeGallery">Share</a> |
+  <a href="http://code.google.com/p/chrome-mouse-stroke/wiki/FAQs#How_to_create_my_own_strokes?">Help</a>
+ </p>
+ <div id="custom-strokes" class="group"></div>
+</div>
+
+<div class="submit grid_16">
+ <button id="bot-restore-btn">Restore to default</button>
+ <button id="bot-save-btn">Save</button>
+</div>
+
+<div id="footer" class="footer grid_16">
+ <hr/>
+
+ <p>
+  This is a Google Chrome extension which enables
+  <a href="http://en.wikipedia.org/wiki/Mouse_gesture">mouse strokes</a>
+  (also known as mouse gestures) in the browser. With this extension, you can
+  perform common tasks by simply moving your mouse.
+ </p>
+
+ <ol class="eye-catcher">
+  <li><strong>New in 1.9</strong>:
+   Backup and restore settings, new strokes, new options, numeric enhancements
+   and some bug fixes.
+  </li>
+  <li><strong>Linux support</strong>:
+   Please use the middle mouse button as the trigger key.
+  </li>
+  <li><strong>The new icon!</strong>:
+   Thank you
+   <a href="http://code.google.com/u/freeeg/">freeeg</a>,
+   <a href="http://code.google.com/u/OldschoolCool/">OldschoolCool</a>,
+   <a href="http://code.google.com/u/kjetil.wikestad/">kjetil.wikestad</a>,
+   <a href="http://code.google.com/u/lostdesign/">lostdesign</a>,
+   and the designer of the chosen icon,
+   <a href="http://cuzmich.daportfolio.com/">cuzmichmail</a>.
+  </li>
+ </ol>
+
+ <p class="nav">
+  <span class="icon-author">Icon designed by <a href="http://cuzmich.daportfolio.com/">cuzmichmail</a></span>
+  <a href="https://chrome.google.com/extensions/detail/aeaoofnhgocdbnbeljkmbjdmhbcokfdb">Home</a> |
+  <a href="http://code.google.com/p/chrome-mouse-stroke/issues/list">Support</a> |
+  <a href="http://code.google.com/p/chrome-mouse-stroke/wiki/">Wiki</a> |
+  <a href="http://code.google.com/p/chrome-mouse-stroke/wiki/FAQs">FAQs</a>
+ </p>
+</div>
+
+</body>
+</html>

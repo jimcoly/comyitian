@@ -1,0 +1,1238 @@
+{
+   "alternate_error_pages": {
+      "enabled": true
+   },
+   "autofill": {
+      "auxiliary_profiles_enabled": false,
+      "default_profile": "",
+      "enabled": true,
+      "infobar_shown": true
+   },
+   "bookmark_bar": {
+      "show_on_all_tabs": true
+   },
+   "bookmark_table": {
+      "name_width_1": 296,
+      "name_width_2": 296,
+      "path_width": 148,
+      "url_width_1": 296,
+      "url_width_2": 148
+   },
+   "browser": {
+      "clear_data": {
+         "browsing_history": true,
+         "cache": true,
+         "cookies": true,
+         "download_history": true,
+         "form_data": false,
+         "passwords": false,
+         "time_period": 4
+      },
+      "enable_spellchecking": true,
+      "ntp": {
+         "promo_image_remaining": -67,
+         "promo_line_remaining": -67,
+         "promo_remaining": -22,
+         "theme_promo_remaining": -123
+      },
+      "show_home_button": false
+   },
+   "content_settings_window": {
+      "last_tab_index": 5
+   },
+   "countryid_at_install": 17230,
+   "default_search_provider": {
+      "id": "96",
+      "name": "google.cn",
+      "prepopulate_id": "0",
+      "search_url": "http://www.google.cn/search?hl=zh-CN&source=hp&q={searchTerms}&btnG=Google+%E6%90%9C%E7%B4%A2&aq=f&oq=",
+      "suggest_url": ""
+   },
+   "devtools": {
+      "open_docked": false
+   },
+   "dns_prefetching": {
+      "enabled": true
+   },
+   "download": {
+      "directory_upgrade": true,
+      "extensions_to_open": "",
+      "prompt_for_download": true
+   },
+   "extensions": {
+      "autoupdate": {
+         "last_check": "12918635294663625",
+         "next_check": "12918651984284625"
+      },
+      "blacklistupdate": {
+         "lastpingday": "12918553203875780"
+      },
+      "browseractions": {
+         "container": {
+            "width": 113
+         }
+      },
+      "chrome_url_overrides": {
+         "bookmarks": [ "chrome-extension://eemcgdkfndhakfknompkggombfjjjeno/main.html" ],
+         "newtab": [ "chrome-extension://dgpdioedihjhncjafcpgbbjdpbbkikmi/speeddial.html" ]
+      },
+      "settings": {
+         "amigcgbheognjmfkaieeeadojiibgbdp": {
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "browser_action": {
+                  "default_icon": "tmtchrome_browserbutton.png",
+                  "default_title": "TooManyTabs for Chrome",
+                  "popup": "popup.html"
+               },
+               "content_scripts": [ {
+                  "js": [ "tmtfocus.js" ],
+                  "matches": [ "http://*/*" ],
+                  "run_at": "document_start"
+               }, {
+                  "js": [ "tmtfocus.js" ],
+                  "matches": [ "https://*/*" ],
+                  "run_at": "document_start"
+               } ],
+               "description": "Manage your tabs, improve your browsing, and maintain your sanity when you have many tabs open.",
+               "icons": {
+                  "128": "tmtchrome_logo128.png",
+                  "16": "tmtchrome_logo16.png",
+                  "32": "tmtchrome_logo32.png",
+                  "48": "tmtchrome_logo48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDWX/cfO3ls3pe/TJbtcRSyiH6w1Qu84sfzmaebphivBfMXpt363mjc0NmivLITvrWZ20/fPv6+vaZx8ozeUnL7a9dEghFq2skxiMCxGJYPnrjLTbJ1QbIG9+rZ+GYIjmBTugMUWDgSLIUtQLg0pDiPfd9sAJ9us0w8Ud+xKlTpqwIDAQAB",
+               "name": "TooManyTabs for Chrome",
+               "options_page": "options.html",
+               "permissions": [ "tabs" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "1.2.8"
+            },
+            "path": "amigcgbheognjmfkaieeeadojiibgbdp\\1.2.8",
+            "state": 0
+         },
+         "biaphbpdaodeegbnfphkmdldbflhfinh": {
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "content_scripts": [ {
+                  "js": [ "javascript/check.js" ],
+                  "matches": [ "http://*/*", "https://*/*" ]
+               } ],
+               "description": "Adds or removes a Read It Later bookmark with just one click.",
+               "icons": {
+                  "128": "images/icon128.png",
+                  "48": "images/icon48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDC/P967IVnbprRJUEPpMTlnTTlcMlCfY1tQFiGqwP1oDNtuNHteVDJTVu1l6T9SYPaUxueH0VjaUAuWZRuDjLIU9DLZSvFAZl+jQvTnf+6XrkrO870ZvRGk2MoBsP2cPlY+yM86LhF+VqASDWSvpHKqQakujhnUntPGV26qvUYQwIDAQAB",
+               "name": "Mark for Later",
+               "options_page": "options.html",
+               "page_action": {
+                  "default_icon": "images/check-mark-empty.png",
+                  "default_title": "mark this site for later"
+               },
+               "permissions": [ "tabs", "https://readitlaterlist.com/" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "0.3.0"
+            },
+            "path": "biaphbpdaodeegbnfphkmdldbflhfinh\\0.3.0",
+            "state": 1
+         },
+         "bmgmmpaeaejgonhmhkccdfjfgoncadah": {
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "content_scripts": [ {
+                  "all_frames": true,
+                  "js": [ "chromeTouch.js" ],
+                  "matches": [ "http://*/*", "https://*/*", "file:///*/*" ],
+                  "run_at": "document_start"
+               } ],
+               "current_locale": "zh_CN",
+               "default_locale": "en_US",
+               "description": "Enable iPhone like touch scroll interface. if you make translation text and all that, contact smilkobuta@gmail.com",
+               "icons": {
+                  "128": "icon_128.png",
+                  "16": "icon_16.png",
+                  "32": "icon_32.png",
+                  "48": "icon_48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDEIri0tMm5aXJMHJSRGCuGVxmkK/sy3Pe5Vifg2zPtH6VviG41lbJCWfyondX54JGioHpkGwEPOjVxwwAvCA1BS+ubyTkfbN7yIQToceGh1ZHoDEIcyybjdkGzWGp33M6wWkBn/5HUCfHDqIzG+eWcF7GMvVK9FtewxwVy4j3qBQIDAQAB",
+               "name": "chromeTouch",
+               "options_page": "setting.html",
+               "page_action": {
+                  "default_icon": "icon_32.png",
+                  "default_title": "chromeTouch"
+               },
+               "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+               "update_url": "http://hello.lumiere-couleur.com/app/chrome_extensions/chromeTouch/updates.xml",
+               "version": "2.6"
+            },
+            "path": "bmgmmpaeaejgonhmhkccdfjfgoncadah\\2.6",
+            "state": 1
+         },
+         "bohahkiiknkelflnjjlipnaeapefmjbh": {
+            "lastpingday": "12918553203309780",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "browser_action": {
+                  "default_icon": "asset/note-22.png",
+                  "default_title": "Note AnyWhere"
+               },
+               "content_scripts": [ {
+                  "css": [ "asset/stickies.css" ],
+                  "js": [ "asset/stickies.js" ],
+                  "matches": [ "http://*/*", "https://*/*" ],
+                  "run_at": "document_end"
+               } ],
+               "description": "with this ext, you can make notes on any web page, any position. when you open that page again, the notes get loaded automaticly.",
+               "icons": {
+                  "32": "asset/note-32.png",
+                  "48": "asset/note-48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDPbEuvgJoShOyZYrsPQaahVj8O7R6mq3B8HOmYJW14C0PklzPEf2UssB4Jepk6Sy5pKvvNE3eE4x+7LXFsuHKDUGPfKkXTngJY9PFGNAl0SL7uJWtx6EmtpzMAFnOcL2lpm7WPJPbQ1S14IFBiyp/ewt5iF+xmVWkv0Mq3Nr44EwIDAQAB",
+               "name": "Note Anywhere",
+               "options_page": "options.html",
+               "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "0.5.1"
+            },
+            "path": "bohahkiiknkelflnjjlipnaeapefmjbh\\0.5.1",
+            "state": 1
+         },
+         "caehdcpeofiiigpdhbabniblemipncjj": {
+            "lastpingday": "12910176001546500",
+            "location": 1,
+            "manifest": {
+               "background_page": "main.html",
+               "browser_action": {
+                  "default_icon": "assets/images/icon-blue.png",
+                  "default_title": "Proxy Switchy!",
+                  "popup": "popup.html"
+               },
+               "description": "Manage and switch between multiple proxy profiles quickly and easily.",
+               "icons": {
+                  "128": "assets/images/icon-128.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCrBRp20Di/h1YjrhEqZKoEb16xr4VT21Okg097rsKpMB0BqecdAGSrfPOyiqGpa6aWHesJJ+IDpQOE//03lm9C0rpFE7LTtAyTTuDJlleRoEPQhRGGkluQRwEPHWf5R90KOExXollvlqnQuvaerewVkYhg6DWsi4zO9ScbLtU8owIDAQAB",
+               "name": "Proxy Switchy!",
+               "options_page": "options.html",
+               "permissions": [ "tabs", "bookmarks", "http://*/", "https://*/" ],
+               "plugins": [ {
+                  "path": "plugins/npSwitchy.dll"
+               }, {
+                  "path": "plugins/npSwitchy.so"
+               }, {
+                  "path": "plugins/npSwitchy64.so"
+               } ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "1.5.0.8"
+            },
+            "path": "caehdcpeofiiigpdhbabniblemipncjj\\1.5.0.8",
+            "state": 0
+         },
+         "cfalmamgbiaipibeangdiekjodjjmndm": {
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "browser_action": {
+                  "default_icon": "icon.png",
+                  "default_title": "Toggle Google Tasks",
+                  "popup": "popup.html"
+               },
+               "content_scripts": [ {
+                  "css": [ "contentstyles.css" ],
+                  "js": [ "jquery.js", "contentscripts.js" ],
+                  "matches": [ "http://*/*" ]
+               } ],
+               "description": "Access Google Tasks directly from within Chrome.",
+               "icons": {
+                  "128": "icon128.png",
+                  "16": "icon16.png",
+                  "32": "icon32.png",
+                  "48": "icon48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDHqwBVzmV4VnRMyWpOML4vivMiGLkVUdToIyFdCceuSiDclXdGDQvo+QKeNrCKUCDiIxxCTtCtrb+xom7aL1X9cp9UyevwNzbBneckWQw0I7dY5ApY6CNf+qdzrI504HQZJmqf3S0snTIV1mgnTw+w+dhlhNHjFxhWAucCz2cn7QIDAQAB",
+               "name": "Google Tasks",
+               "options_page": "options.html",
+               "permissions": [ "https://mail.google.com/*", "tabs" ],
+               "update_url": "http://www.joestrong.co.uk/chrome-extensions/updates.xml",
+               "version": "0.4"
+            },
+            "path": "cfalmamgbiaipibeangdiekjodjjmndm\\0.4",
+            "state": 1
+         },
+         "cfkohgkpafhkpdcnfadadcibfboapggi": {
+            "lastpingday": "12918553203309780",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "browser_action": {
+                  "default_icon": "images/browser_action/none.png",
+                  "default_title": "One Number",
+                  "popup": "popup.html"
+               },
+               "current_locale": "zh_CN",
+               "default_locale": "en_US",
+               "description": "Check GMail, Google Reader, Google Voice, and Google Wave.  Four sources, one number.",
+               "icons": {
+                  "128": "images/icon/128.png",
+                  "16": "images/icon/16.png",
+                  "256": "images/icon/256.png",
+                  "32": "images/icon/32.png",
+                  "48": "images/icon/48.png",
+                  "64": "images/icon/64.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDCOctfBqLo7/RDDK924C35vIP6E+6+DAEXoU8BtpbZaVwnzz9zUauaa+uEgnBUFcFE1t9Z5Fq6DyLhVffLV5NZN5+h68ncrXIFGIyiN5jbCO5d3RHFZ23FnDfQeLdzTHkwEQIwm5OZOu4aX/w4sn7wfClvFG8+rh92RbdoWNguEQIDAQAB",
+               "name": "One Number",
+               "options_page": "options.html",
+               "permissions": [ "tabs", "http://mail.google.com/*", "https://mail.google.com/*", "http://www.google.com/reader/*", "https://www.google.com/reader/*", "http://www.google.com/voice/*", "https://www.google.com/voice/*", "http://wave.google.com/*", "https://wave.google.com/*" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "1.3.0.11"
+            },
+            "path": "cfkohgkpafhkpdcnfadadcibfboapggi\\1.3.0.11",
+            "state": 1
+         },
+         "cjabiokabamngnbigeeibddnihgllkgg": {
+            "install_warning_on_enable": false,
+            "location": 1,
+            "manifest": {
+               "background_page": "stroke.html",
+               "content_scripts": [ {
+                  "all_frames": true,
+                  "js": [ "essentials.js", "stroke.js" ],
+                  "matches": [ "http://*/*", "https://*/*", "ftp://*/*", "file:///*" ],
+                  "permissions": [ "tabs", "bookmarks" ],
+                  "run_at": "document_end"
+               } ],
+               "description": "Use mouse strokes to accelerate your operations.",
+               "icons": {
+                  "128": "icons/icon-128.png",
+                  "16": "icons/icon-16.png",
+                  "32": "icons/icon-32.png",
+                  "48": "icons/icon-48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDCXSznHrjBd7n0iXeodOeUwA+ronr385ZhumSe307IhUjnQlfCkKCkAE7QarKzE7acl3ZDBrBtZ6fCedv9cB/Oy9er5IfOGeahH3xUax6q05VjyyHr/3LWaGHtb72QC7DKG+UliRI6NWNmSI/lWcy7JxbkbfUJEDoa8osTZ7D91wIDAQAB",
+               "name": "Mouse Stroke",
+               "options_page": "options.html",
+               "permissions": [ "tabs", "bookmarks", "http://*/*", "https://*/*" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "1.9"
+            },
+            "path": "cjabiokabamngnbigeeibddnihgllkgg\\1.9",
+            "state": 0
+         },
+         "dgfcfaphlkpmjckhllcdkandgdjbbiib": {
+            "install_warning_on_enable": false,
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "description": "Read It Later extension for Chrome",
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwbh2eeQC/QNsLrMy68ddyRpSYfEQ0Czd8Cm30yeTBIxoys0WGG5QB6M7pJhVR5QvEhRX+ZhM13T0+aNHEWoPi5M0F48T0p2zaRMwPBrfhc8ZLRPSo+YuZiV2k4QCuVNag6DDy9S/x4afyZ6vx4NyDPPqHLJDztv/oegFKGGztVwIDAQAB",
+               "name": "ChromeRIL",
+               "options_page": "options.html",
+               "page_actions": [ {
+                  "icons": [ "checkmark-notadded.png", "checkmark-red.png", "notauthenticated.png" ],
+                  "id": "addforlater",
+                  "name": "Read This Page Later"
+               } ],
+               "permissions": [ "https://readitlaterlist.com/v2/*", "tabs", "bookmarks" ],
+               "version": "1.0.0"
+            },
+            "path": "dgfcfaphlkpmjckhllcdkandgdjbbiib\\1.0.0",
+            "state": 0
+         },
+         "dgpdioedihjhncjafcpgbbjdpbbkikmi": {
+            "lastpingday": "12918553203309780",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "chrome_url_overrides": {
+                  "newtab": "speeddial.html"
+               },
+               "content_scripts": [ {
+                  "js": [ "content_script.js" ],
+                  "matches": [ "http://*/*" ],
+                  "run_at": "document_end"
+               } ],
+               "description": "Speed Dial for Chrome - replace Chrome new tab with your predefined visual bookmarks.",
+               "icons": {
+                  "128": "icons/128.png",
+                  "16": "icons/16.png",
+                  "32": "icons/32.png",
+                  "48": "icons/48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDo56bieMnHzTK0hjMXTAmqpToPrAU7nZ7vrvllxvzikaTxAsRT3wEJrTYq+qN2oE+FOOXxJo5JaVusl0E3KrPfyEyZOHFYCbl1vZMVtADCq4H+ZZvakewSVArpSaYaF2WS1iGBZtKPAKXtilej5tnvZ5pXbjyLxQJjdv/VqRL/bQIDAQAB",
+               "name": "Speed Dial",
+               "options_page": "speeddial.html#options",
+               "page_action": {
+                  "icon": "icons/16.png",
+                  "popup": "popup.html"
+               },
+               "permissions": [ "bookmarks", "tabs", "http://*/*" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "2.0"
+            },
+            "path": "dgpdioedihjhncjafcpgbbjdpbbkikmi\\2.0",
+            "state": 1
+         },
+         "ecpmglppfdncfdfcpfglgblaphkpnkhp": {
+            "lastpingday": "12918553203309780",
+            "location": 1,
+            "manifest": {
+               "content_scripts": [ {
+                  "all_frames": false,
+                  "css": [ "main.css" ],
+                  "js": [ "sizzle.js", "main.js" ],
+                  "matches": [ "http://www.google.com/reader/*", "https://www.google.com/reader/*" ]
+               } ],
+               "description": "We want more reading area, with all Reader feature still available on one click.",
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDnpl0Ke2tBjACpg8OtvJ+DSuPUMM1b/pLHYXvJBhjb2jPwsbb7usn0ExV4tJqXZUFXTKhm3KPI4jVj17X/MKr8LKrAusitCMjNd9fMYcqDPKDrEWpgudZ91iIDsyiwzdMV1BWUu1KhqQ6h9928wj6aiEvm6GLOE3h54qnrFbzAKwIDAQAB",
+               "name": "Google Reader Compact",
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "1.3.1"
+            },
+            "path": "ecpmglppfdncfdfcpfglgblaphkpnkhp\\1.3.1",
+            "state": 1
+         },
+         "edgbhipncfdgcekflcoelhmnkcfdfjcl": {
+            "lastpingday": "12918553203309780",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "content_scripts": [ {
+                  "all_frames": true,
+                  "js": [ "js/jquery.js", "js/jquery.contextmenu.js", "js/jquery.linkparser.js" ],
+                  "matches": [ "http://*/*", "https://*/*" ]
+               } ],
+               "description": "Allows you to view doc, docx, pdf, ppt, pps files with Google Docs Viewer and directly download the files to your computer.",
+               "icons": {
+                  "128": "images/icon128.png",
+                  "48": "images/icon48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwIQX8p/quoInZ1E2vP2ue8gDJo2zjSNc9h4jHCKamoJR1oRz0YMQEDWluPgWdj0TzTTYNe1JvdwBOXyiEAwLtGqjKid8bKFL87ezP8EXyzORrHO5A5Th53Jn9nfI1RHQdnp6h2SBHyWySUCwnqgQH2TC1PhEDrdmMLJ6S8YJNMQIDAQAB",
+               "name": "Ultimate Google Docs Viewer",
+               "options_page": "options.html",
+               "permissions": [ "tabs" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "0.8.3"
+            },
+            "path": "edgbhipncfdgcekflcoelhmnkcfdfjcl\\0.8.3",
+            "state": 1
+         },
+         "eldlioebcnieclblmfabhdolhbiddgmk": {
+            "lastpingday": "12914319598796044",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "browser_action": {
+                  "default_title": "Coriander - \u65B0\u6D6A\u5FAE\u535A\u63D2\u4EF6",
+                  "popup": "list.html"
+               },
+               "description": "Coriander - \u65B0\u6D6A\u5FAE\u535A\uFF08t.sina.com.cn)\u63D2\u4EF6\u6D4B\u8BD5\u7248,\u63D0\u793A\u65B0\u5FAE\u535A\u3001\u65B0\u8BC4\u8BBA\u3001\u65B0\u6D88\u606F\u3001\u65B0\u5173\u6CE8\u3001\u65B0\u8F6C\u53D1\u6570\n\u652F\u6301\u5FAE\u535A\u53D1\u5E03\u3001\u8F6C\u53D1\u3001\u6536\u85CF\u3001\u8BC4\u8BBA\u3001\u5206\u4EAB\u7B49\u529F\u80FD\u3002",
+               "icons": {
+                  "128": "img/coriander.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDhUBr+EWtyjogwmzhoBVZRXpR+hTK3vKNA/AUg2XOis9amdskJKR9i2DoA1aMl6x07m0gBZc6WI7ui4e2TC/dZYuQgVld3EeAor6OEjydWIjfwiPHcXmWobK6FN70CWMpjmiYl7ibPqL2M/kkFiacuiXIZ3Wi0lblFX0dEHfUNowIDAQAB",
+               "name": "Coriander",
+               "options_page": "options.html",
+               "permissions": [ "tabs", "http://*.sina.com.cn/", "https://*.sina.com,cn/" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "1.5.4"
+            },
+            "path": "eldlioebcnieclblmfabhdolhbiddgmk\\1.5.4",
+            "state": 0
+         },
+         "fafldeedegmfkdkolgpcopgfcdidgbjk": {
+            "lastpingday": "12918553203309780",
+            "location": 1,
+            "manifest": {
+               "browser_action": {
+                  "default_icon": "media/logo/icon.png",
+                  "default_title": "Symtica",
+                  "popup": "menu.html"
+               },
+               "description": "Symtica helps you to access quickly to all your google's apps. You can now get the best shortcut you have ever wanted.",
+               "icons": {
+                  "128": "media/logo/icon.128.png",
+                  "16": "media/logo/icon.16.png",
+                  "32": "media/logo/icon.32.png",
+                  "48": "media/logo/icon.48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3ncfGdtIYrU82r+m7zGHP5K01QjjZHUQGfNxV+FE8EQuW9Jj9ujAa5ijw4u4EO8T3tfM4xdAhf1ddfzl3XngYioTfzXzRuH1V5rYOfPzObrs8956YkyLbenWJ0tu7rsd7XFwDYdzuEgLPx/lGEFh1jrouP/u3s7XLvIeq+BkWqwIDAQAB",
+               "name": "Symtica",
+               "options_page": "settings.html",
+               "permissions": [ "tabs" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "1"
+            },
+            "path": "fafldeedegmfkdkolgpcopgfcdidgbjk\\1",
+            "state": 1
+         },
+         "fajkpbphiejhldakjboejnabfchhccnn": {
+            "lastpingday": "12910262401786375",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "browser_action": {
+                  "default_icon": "proxy_off.png",
+                  "default_title": "Toggle HTTP Proxy"
+               },
+               "description": "Switch Chrome proxy setting with one click.",
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC7VS5DLIGqIg6O4hcnp8Y7PIMolY1+EcdO/9kSWYkq3LqtAWEd4lHI/FeEe5kdhgSfFutR/CsSyGeSRadvucv0vgSyd8t+dOX2tdVNSqYMpydbu7xFcr5v1s4O7LRl6K4cswf0eTYIoZ7GSKzp+Oc1cwTQN/fP1TGS44rejbUQYQIDAQAB",
+               "name": "Switch HTTP Proxy",
+               "permissions": [ "tabs" ],
+               "plugins": [ {
+                  "path": "plugin/npswitchproxy.dll",
+                  "public": true
+               } ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "1.4.1"
+            },
+            "path": "fajkpbphiejhldakjboejnabfchhccnn\\1.4.1",
+            "state": 0
+         },
+         "fhaicgmeeafgboeobjagfmlcdhbkijhf": {
+            "lastpingday": "12918553203309780",
+            "location": 1,
+            "manifest": {
+               "background_page": "background/background.html",
+               "browser_action": {
+                  "default_icon": "public/folder32.png",
+                  "default_title": "Google Bookmarks",
+                  "popup": "ui/bookmark.html"
+               },
+               "description": "Google bookmarks extension for Chrome",
+               "icons": {
+                  "128": "public/folder128.png",
+                  "16": "public/folder16.png",
+                  "32": "public/folder32.png",
+                  "48": "public/folder48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCyv+AoaQ4ux6dbUEme2NUxj/cBXSIDsKhQ9QBm+YiLTfSUuYXZEdWkUMmcWZqTtk/MsC8ufjxb2PN34UxjRe8sKRjLH3g7aOfHIMuKMGG5RZviBT1Mbvv9ExLAFktgpVieDRKKrOGhbWjru3dCIswcFELJks0Bj3BeIsbOZ8HaPQIDAQAB",
+               "name": "Google bookmarks",
+               "options_page": "options/options.html",
+               "permissions": [ "tabs", "bookmarks", "http://www.google.com/", "https://www.google.com/" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "3.2.0"
+            },
+            "path": "fhaicgmeeafgboeobjagfmlcdhbkijhf\\3.2.0",
+            "state": 1
+         },
+         "fldmleagmkblgoeodhdlhdejhhngdihi": {
+            "lastpingday": "12913542001289408",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "browser_action": {
+                  "default_icon": "sidewiki-active.gif",
+                  "default_title": "Google Sidewiki: Read and contribute helpful information next to any webpage",
+                  "popup": "popup.html"
+               },
+               "description": "Contribute and read helpful information next to any webpage.",
+               "icons": {
+                  "128": "sidewiki128x128.png",
+                  "16": "sidewiki16x16.png",
+                  "32": "sidewiki32x32.png",
+                  "48": "sidewiki48x48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDrMh7VcjJhaJBRsmSKJPI/EYx/Hy2i9TgOmVgJFWCMHj0nLabWBCvAEP+Uv4LLjL+Nge52SWa98s2Ymn7ZVgLv1pP9vMozqT0fx90hHzk4Zvcb0LYxYwk24T6THhXIQv3bYN5m9h0rTtyynnkaQyLEZqMkQ99SxlhQFy+DEaLdWQIDAQAB",
+               "name": "Google Sidewiki",
+               "permissions": [ "tabs", "http://*.google.com/*", "https://*.google.com/*" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "1.1"
+            },
+            "path": "fldmleagmkblgoeodhdlhdejhhngdihi\\1.1",
+            "state": 0
+         },
+         "ghmijakhafljpafmljgjekmplnnechcj": {
+            "lastpingday": "12913628402544281",
+            "location": 1,
+            "manifest": {
+               "content_scripts": [ {
+                  "js": [ "syoutube.js" ],
+                  "matches": [ "http://*.youtube.com/watch?v=*" ],
+                  "run_at": "document_end"
+               } ],
+               "description": "Scans the YouTube page for all formats, including 1080p on selected videos.",
+               "icons": {
+                  "128": "128.png",
+                  "16": "16.png",
+                  "32": "32.png",
+                  "48": "48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDiIZirzKSrnmruIMFQYmSYO7EllLqWoZYWDpQL3UE+0a1O/t8LTRkRwg97oA5n5g66cEg4HbHMBcL48Yt8A13rPb4HF2dZqurNV8oLNmHC5vaeIbORbL5fUM7tlQF2bbdMQh7yLIwglpaVkvN/C4eB7en2hfgRaHbmP7x9p0h2owIDAQAB",
+               "name": "S-YouTube Downloader",
+               "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "0.0.2"
+            },
+            "path": "ghmijakhafljpafmljgjekmplnnechcj\\0.0.2",
+            "state": 0
+         },
+         "gmpllenfapkfpdkahamlbmbichihpmmg": {
+            "lastpingday": "12913628402544281",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "browser_action": {
+                  "default_icon": "img/icon-half.png",
+                  "default_title": "Show virtual link.",
+                  "popup": "popup.html"
+               },
+               "content_scripts": [ {
+                  "all_frames": true,
+                  "js": [ "js/jquery-1.3.2.min.js", "js/content-scripts.js" ],
+                  "matches": [ "http://*/*", "https://*/*" ]
+               } ],
+               "description": "\u81EA\u52A8\u628A\u9875\u9762\u91CC\u7684\u8FC5\u96F7,\u5FEB\u8F66Flashget,\u65CB\u98CE\u94FE\u63A5\u66FF\u6362\u4E3A\u771F\u5B9E\u5730\u5740,\u4F7F\u7528\u4F60\u81EA\u5DF1\u559C\u6B22\u7684\u4E0B\u8F7D\u65B9\u5F0F\u6765\u4E0B\u8F7D.",
+               "icons": {
+                  "128": "img/logo-128.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDmsfHyBVZSyo6DL2oIqwctUHvFXF5/nusrt8468DK+XTo6CABzuZax9ilg/zfwFEtk3sSQs8JsI0ABHgptrcc6WpTdGVfUUbkr/GghonZwDyQG4RE/NR3a/cEiappW7a0gpBwsebj9TL6KbuwGm89/LI7DWYZPa7K3Hx/w17Q+QwIDAQAB",
+               "name": "Thunder,QQDownload,FlashGet Files Downloader ",
+               "options_page": "options.html",
+               "permissions": [ "tabs" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "2.1.0"
+            },
+            "path": "gmpllenfapkfpdkahamlbmbichihpmmg\\2.1.0",
+            "state": 0
+         },
+         "habcedkcgfkbaepghobppkboblomakhe": {
+            "location": 1,
+            "manifest": {
+               "background_page": "monitor.html",
+               "content_scripts": [ {
+                  "js": [ "monitor.js" ],
+                  "matches": [ "http://*.taobao.com/*" ],
+                  "run_at": "document_end"
+               } ],
+               "description": "Chrome WangWang Handler Extension by Taobao UED, ChongHou",
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9jnShzS8x2RFzIPyuyamZAb/hfjdEHc0RE4xhGFcMA4zkICUa2IweQwxZf09AgfIyPARih4OTqVesuc2KrMY0C8bkrtMk6VFB8CGlBdFse8JkfbaiaBFu5ixp2PhUhNj9u1yWutQtwZQyB/AVkUdsfpsz46LNGBWcN0KNJmhidQIDAQAB",
+               "name": "Chrome WangWang Handler Extension",
+               "plugins": [ {
+                  "path": "npwangwang.dll"
+               } ],
+               "update_url": "http://ued.taobao.com/lab/cww/update.xml",
+               "version": "0.3"
+            },
+            "path": "habcedkcgfkbaepghobppkboblomakhe\\0.3",
+            "state": 0
+         },
+         "hdokiejnpimakedhajhdlcegeplioahd": {
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "browser_action": {
+                  "default_icon": "icon_gray2.gif",
+                  "default_title": "LastPass",
+                  "popup": "lp_toolstrip.html?browseraction=1"
+               },
+               "content_scripts": [ {
+                  "all_frames": true,
+                  "js": [ "onloadwff.js" ],
+                  "matches": [ "http://*/*", "https://*/*" ],
+                  "run_at": "document_end"
+               } ],
+               "current_locale": "zh_CN",
+               "default_locale": "en_US",
+               "description": "LastPass is a free password manager and form filler.  LastPass is also available for Firefox, Internet Explorer and Safari (Mac).",
+               "icons": {
+                  "128": "images/icon128.png",
+                  "16": "images/icon16.png",
+                  "32": "images/icon32.png",
+                  "48": "images/icon48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCiL9y2jziKp5kjb13uYG1bAXsuemUKAYUAwR/N9qTuhMIuly02Ecm63dOkn+M2r26IGfDE/lbPv/dB/W+d34pqGo5uJJY+Omt9t3xsIuz7mQwuvF1H5ozj0OHok5XDFRaBIfPa06RhQw3M7sSZJvQ+qqD3+dr0aLX+mvi0LQ11uQIDAQAB",
+               "name": "LastPass",
+               "options_page": "prefs.html",
+               "permissions": [ "tabs", "http://*.lastpass.com/*", "https://*.lastpass.com/*", "http://*.lastpass.net/*", "https://*.lastpass.net/*" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "1.68.2"
+            },
+            "path": "hdokiejnpimakedhajhdlcegeplioahd\\1.68.2",
+            "state": 0
+         },
+         "hhcknjkmaaeinhdjgimjnophgpbdgfmg": {
+            "lastpingday": "12918553203309780",
+            "location": 1,
+            "manifest": {
+               "_description": "__MSG_extension_description__",
+               "_name": "__MSG_extension_name__",
+               "background_page": "bg.html",
+               "content_scripts": [ {
+                  "js": [ "lib/util.js", "lib/greasekit.js", "lib/entry.js", "lib/i18n.js", "lib/external.js", "lib/jquery.min.js", "version.js", "features.js", "api/entry.js", "api/readit.js", "general.js", "fixlayout.js", "unreadcount.js", "mark.js", "removeads.js", "favicons.js", "column.js", "jump.js", "preview.js", "openbackground.js", "filter.js", "count.js", "counticon.js", "readbymouse.js", "menu.js", "facebook.js", "twitter.js", "readitlater.js", "instapaper.js", "closeentry.js", "fitheight.js", "limit.js", "replacer.js", "relook.js", "translate.js", "theme.js", "skin/mytheme.js", "skin/ig.js", "skin/aero.js", "skin/air.js", "skin/aircomic.js", "skin/black.js", "skin/darkgray.js", "skin/dark.js", "skin/helvetireader.js", "skin/minimal.js", "skin/optimized.js", "skin/portal.js", "skin/osxblue.js", "skin/osxblack.js", "skin/player.js", "skin/calibri.js", "skin/glassblackgold.js", "colorful.js", "greaderplus.js" ],
+                  "matches": [ "http://*.google.com/reader/view/*", "http://*.google.ae/reader/view/*", "http://*.google.com.af/reader/view/*", "http://*.google.com.ag/reader/view/*", "http://*.google.off.ai/reader/view/*", "http://*.google.am/reader/view/*", "http://*.google.com.ar/reader/view/*", "http://*.google.as/reader/view/*", "http://*.google.at/reader/view/*", "http://*.google.com.au/reader/view/*", "http://*.google.az/reader/view/*", "http://*.google.ba/reader/view/*", "http://*.google.com.bd/reader/view/*", "http://*.google.be/reader/view/*", "http://*.google.bg/reader/view/*", "http://*.google.bi/reader/view/*", "http://*.google.com.bo/reader/view/*", "http://*.google.com.br/reader/view/*", "http://*.google.bs/reader/view/*", "http://*.google.co.bw/reader/view/*", "http://*.google.com.bz/reader/view/*", "http://*.google.ca/reader/view/*", "http://*.google.cd/reader/view/*", "http://*.google.cg/reader/view/*", "http://*.google.ch/reader/view/*", "http://*.google.ci/reader/view/*", "http://*.google.co.ck/reader/view/*", "http://*.google.cl/reader/view/*", "http://*.google.com.co/reader/view/*", "http://*.google.co.cr/reader/view/*", "http://*.google.com.cu/reader/view/*", "http://*.google.de/reader/view/*", "http://*.google.dj/reader/view/*", "http://*.google.dk/reader/view/*", "http://*.google.dm/reader/view/*", "http://*.google.com.do/reader/view/*", "http://*.google.com.ec/reader/view/*", "http://*.google.es/reader/view/*", "http://*.google.com.et/reader/view/*", "http://*.google.fi/reader/view/*", "http://*.google.com.fj/reader/view/*", "http://*.google.fm/reader/view/*", "http://*.google.fr/reader/view/*", "http://*.google.gg/reader/view/*", "http://*.google.com.gi/reader/view/*", "http://*.google.gl/reader/view/*", "http://*.google.gm/reader/view/*", "http://*.google.gr/reader/view/*", "http://*.google.com.gt/reader/view/*", "http://*.google.com.hk/reader/view/*", "http://*.google.hn/reader/view/*", "http://*.google.hr/reader/view/*", "http://*.google.co.hu/reader/view/*", "http://*.google.co.id/reader/view/*", "http://*.google.ie/reader/view/*", "http://*.google.co.il/reader/view/*", "http://*.google.co.im/reader/view/*", "http://*.google.co.in/reader/view/*", "http://*.google.is/reader/view/*", "http://*.google.it/reader/view/*", "http://*.google.co.je/reader/view/*", "http://*.google.com.jm/reader/view/*", "http://*.google.jo/reader/view/*", "http://*.google.co.jp/reader/view/*", "http://*.google.co.ke/reader/view/*", "http://*.google.kg/reader/view/*", "http://*.google.co.kr/reader/view/*", "http://*.google.kz/reader/view/*", "http://*.google.li/reader/view/*", "http://*.google.lk/reader/view/*", "http://*.google.co.ls/reader/view/*", "http://*.google.lt/reader/view/*", "http://*.google.lu/reader/view/*", "http://*.google.lv/reader/view/*", "http://*.google.com.ly/reader/view/*", "http://*.google.mn/reader/view/*", "http://*.google.ms/reader/view/*", "http://*.google.com.mt/reader/view/*", "http://*.google.mu/reader/view/*", "http://*.google.mw/reader/view/*", "http://*.google.com.mx/reader/view/*", "http://*.google.com.my/reader/view/*", "http://*.google.com.na/reader/view/*", "http://*.google.com.nf/reader/view/*", "http://*.google.com.ni/reader/view/*", "http://*.google.nl/reader/view/*", "http://*.google.no/reader/view/*", "http://*.google.com.np/reader/view/*", "http://*.google.nr/reader/view/*", "http://*.google.nu/reader/view/*", "http://*.google.co.nz/reader/view/*", "http://*.google.com.om/reader/view/*", "http://*.google.com.pa/reader/view/*", "http://*.google.com.pe/reader/view/*", "http://*.google.com.ph/reader/view/*", "http://*.google.com.pk/reader/view/*", "http://*.google.pl/reader/view/*", "http://*.google.pn/reader/view/*", "http://*.google.com.pr/reader/view/*", "http://*.google.pt/reader/view/*", "http://*.google.com.py/reader/view/*", "http://*.google.ro/reader/view/*", "http://*.google.ru/reader/view/*", "http://*.google.rw/reader/view/*", "http://*.google.com.sa/reader/view/*", "http://*.google.com.sb/reader/view/*", "http://*.google.sc/reader/view/*", "http://*.google.se/reader/view/*", "http://*.google.com.sg/reader/view/*", "http://*.google.sh/reader/view/*", "http://*.google.sk/reader/view/*", "http://*.google.sn/reader/view/*", "http://*.google.sm/reader/view/*", "http://*.google.com.sv/reader/view/*", "http://*.google.co.th/reader/view/*", "http://*.google.com.tj/reader/view/*", "http://*.google.tm/reader/view/*", "http://*.google.to/reader/view/*", "http://*.google.tp/reader/view/*", "http://*.google.com.tr/reader/view/*", "http://*.google.tt/reader/view/*", "http://*.google.com.tw/reader/view/*", "http://*.google.com.ua/reader/view/*", "http://*.google.co.ug/reader/view/*", "http://*.google.co.uk/reader/view/*", "http://*.google.com.uy/reader/view/*", "http://*.google.uz/reader/view/*", "http://*.google.com.vc/reader/view/*", "http://*.google.co.ve/reader/view/*", "http://*.google.vg/reader/view/*", "http://*.google.co.vi/reader/view/*", "http://*.google.com.vn/reader/view/*", "http://*.google.vu/reader/view/*", "http://*.google.ws/reader/view/*", "http://*.google.co.za/reader/view/*", "http://*.google.co.zm/reader/view/*", "https://*.google.com/reader/view/*", "https://*.google.ae/reader/view/*", "https://*.google.com.af/reader/view/*", "https://*.google.com.ag/reader/view/*", "https://*.google.off.ai/reader/view/*", "https://*.google.am/reader/view/*", "https://*.google.com.ar/reader/view/*", "https://*.google.as/reader/view/*", "https://*.google.at/reader/view/*", "https://*.google.com.au/reader/view/*", "https://*.google.az/reader/view/*", "https://*.google.ba/reader/view/*", "https://*.google.com.bd/reader/view/*", "https://*.google.be/reader/view/*", "https://*.google.bg/reader/view/*", "https://*.google.bi/reader/view/*", "https://*.google.com.bo/reader/view/*", "https://*.google.com.br/reader/view/*", "https://*.google.bs/reader/view/*", "https://*.google.co.bw/reader/view/*", "https://*.google.com.bz/reader/view/*", "https://*.google.ca/reader/view/*", "https://*.google.cd/reader/view/*", "https://*.google.cg/reader/view/*", "https://*.google.ch/reader/view/*", "https://*.google.ci/reader/view/*", "https://*.google.co.ck/reader/view/*", "https://*.google.cl/reader/view/*", "https://*.google.com.co/reader/view/*", "https://*.google.co.cr/reader/view/*", "https://*.google.com.cu/reader/view/*", "https://*.google.de/reader/view/*", "https://*.google.dj/reader/view/*", "https://*.google.dk/reader/view/*", "https://*.google.dm/reader/view/*", "https://*.google.com.do/reader/view/*", "https://*.google.com.ec/reader/view/*", "https://*.google.es/reader/view/*", "https://*.google.com.et/reader/view/*", "https://*.google.fi/reader/view/*", "https://*.google.com.fj/reader/view/*", "https://*.google.fm/reader/view/*", "https://*.google.fr/reader/view/*", "https://*.google.gg/reader/view/*", "https://*.google.com.gi/reader/view/*", "https://*.google.gl/reader/view/*", "https://*.google.gm/reader/view/*", "https://*.google.gr/reader/view/*", "https://*.google.com.gt/reader/view/*", "https://*.google.com.hk/reader/view/*", "https://*.google.hn/reader/view/*", "https://*.google.hr/reader/view/*", "https://*.google.co.hu/reader/view/*", "https://*.google.co.id/reader/view/*", "https://*.google.ie/reader/view/*", "https://*.google.co.il/reader/view/*", "https://*.google.co.im/reader/view/*", "https://*.google.co.in/reader/view/*", "https://*.google.is/reader/view/*", "https://*.google.it/reader/view/*", "https://*.google.co.je/reader/view/*", "https://*.google.com.jm/reader/view/*", "https://*.google.jo/reader/view/*", "https://*.google.co.jp/reader/view/*", "https://*.google.co.ke/reader/view/*", "https://*.google.kg/reader/view/*", "https://*.google.co.kr/reader/view/*", "https://*.google.kz/reader/view/*", "https://*.google.li/reader/view/*", "https://*.google.lk/reader/view/*", "https://*.google.co.ls/reader/view/*", "https://*.google.lt/reader/view/*", "https://*.google.lu/reader/view/*", "https://*.google.lv/reader/view/*", "https://*.google.com.ly/reader/view/*", "https://*.google.mn/reader/view/*", "https://*.google.ms/reader/view/*", "https://*.google.com.mt/reader/view/*", "https://*.google.mu/reader/view/*", "https://*.google.mw/reader/view/*", "https://*.google.com.mx/reader/view/*", "https://*.google.com.my/reader/view/*", "https://*.google.com.na/reader/view/*", "https://*.google.com.nf/reader/view/*", "https://*.google.com.ni/reader/view/*", "https://*.google.nl/reader/view/*", "https://*.google.no/reader/view/*", "https://*.google.com.np/reader/view/*", "https://*.google.nr/reader/view/*", "https://*.google.nu/reader/view/*", "https://*.google.co.nz/reader/view/*", "https://*.google.com.om/reader/view/*", "https://*.google.com.pa/reader/view/*", "https://*.google.com.pe/reader/view/*", "https://*.google.com.ph/reader/view/*", "https://*.google.com.pk/reader/view/*", "https://*.google.pl/reader/view/*", "https://*.google.pn/reader/view/*", "https://*.google.com.pr/reader/view/*", "https://*.google.pt/reader/view/*", "https://*.google.com.py/reader/view/*", "https://*.google.ro/reader/view/*", "https://*.google.ru/reader/view/*", "https://*.google.rw/reader/view/*", "https://*.google.com.sa/reader/view/*", "https://*.google.com.sb/reader/view/*", "https://*.google.sc/reader/view/*", "https://*.google.se/reader/view/*", "https://*.google.com.sg/reader/view/*", "https://*.google.sh/reader/view/*", "https://*.google.sk/reader/view/*", "https://*.google.sn/reader/view/*", "https://*.google.sm/reader/view/*", "https://*.google.com.sv/reader/view/*", "https://*.google.co.th/reader/view/*", "https://*.google.com.tj/reader/view/*", "https://*.google.tm/reader/view/*", "https://*.google.to/reader/view/*", "https://*.google.tp/reader/view/*", "https://*.google.com.tr/reader/view/*", "https://*.google.tt/reader/view/*", "https://*.google.com.tw/reader/view/*", "https://*.google.com.ua/reader/view/*", "https://*.google.co.ug/reader/view/*", "https://*.google.co.uk/reader/view/*", "https://*.google.com.uy/reader/view/*", "https://*.google.uz/reader/view/*", "https://*.google.com.vc/reader/view/*", "https://*.google.co.ve/reader/view/*", "https://*.google.vg/reader/view/*", "https://*.google.co.vi/reader/view/*", "https://*.google.com.vn/reader/view/*", "https://*.google.vu/reader/view/*", "https://*.google.ws/reader/view/*", "https://*.google.co.za/reader/view/*", "https://*.google.co.zm/reader/view/*" ]
+               } ],
+               "current_locale": "zh_CN",
+               "default_locale": "en",
+               "description": "Enhance Google Reader by adding missing favicons and a collection of others features",
+               "icons": {
+                  "128": "images/128.png",
+                  "16": "images/16.png",
+                  "32": "images/32.png",
+                  "48": "images/48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDel+Jcwrmf1MVAwB+0jQnqa6bKaSCx1N+mQJPiIELLFM2CfyS7SYvMP4lt6bcHPJ7ZHwMZKhbsRrpV/9cujoyItfDu2Css2QDhALCU5zwSJn3JUBmthSxNfjcAHSQk175dVcs5NyemUf/tYafs07X6A5cFsH+ZBjPXP1gpDUQC6QIDAQAB",
+               "name": "Reader Plus",
+               "options_page": "preferences.html",
+               "permissions": [ "tabs", "http://*/", "https://*/" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "3.1.5"
+            },
+            "path": "hhcknjkmaaeinhdjgimjnophgpbdgfmg\\3.1.5",
+            "state": 1
+         },
+         "hoocokamndpllladnpheiblfelnefkpm": {
+            "lastpingday": "12916997994454429",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "browser_action": {
+                  "default_icon": "img/icon.png",
+                  "default_title": "Hot Bookmarks!",
+                  "popup": "popup.html"
+               },
+               "description": "\u667A\u80FD\u4E66\u7B7E\u3002\u81EA\u52A8\u6536\u96C6\u4F60\u7ECF\u5E38\u8BBF\u95EE\u7684\u4E66\u7B7E\uFF0C\u5E76\u653E\u7F6E\u5728\u5DE5\u5177\u680F\u4E0B\u62C9\u83DC\u5355\u91CC",
+               "icons": {
+                  "128": "img/logo.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDDyf8zbs9/dCln7tm/ctlARvth6bavxiXNKWColO+h9Dgk4JBeK9Ico1SQ76AlffhK36pgR6j1gb+aonEcCAzpWKaFfx7UUmf05vpq4vaxC80IkHf5DID4XxDBlUcVGhApU2c3Ylp/v0Zlz6O0NPcf+DTMIXX3Axw8QrXbLzEgzwIDAQAB",
+               "name": "SmartBookmarks",
+               "options_page": "options.html",
+               "permissions": [ "tabs", "bookmarks" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "0.1"
+            },
+            "path": "hoocokamndpllladnpheiblfelnefkpm\\0.1",
+            "state": 0
+         },
+         "ibhehjeahclandhcpbajhdfjeffnbcoa": {
+            "lastpingday": "12918553203309780",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "description": "Lets Google Web History work in Chrome",
+               "icons": {
+                  "128": "images/icon128.png",
+                  "48": "images/icon48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDdn3eW7F7qjQrwER+PX8kNZDTBHmHargL9f5Hfa8Pa+q2RYG11H3JUBLyWbqH6pqyRnweWFoCI3Zn4XGZIicNgtzco6dB8RJ8wvavKotmnd5D8xAFHpGRDJFjDnYmg1swivldz+2VJWckT5LwIMWN1i5UTvxRQ+W3v4SNtdFTeMwIDAQAB",
+               "name": "Google Web History Updater",
+               "permissions": [ "tabs", "http://www.google.com/" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "0.4.3"
+            },
+            "path": "ibhehjeahclandhcpbajhdfjeffnbcoa\\0.4.3",
+            "state": 1
+         },
+         "jaikcnhlohebodlpkmjepipngegjbfpg": {
+            "lastpingday": "12911126391539875",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.htm",
+               "content_scripts": [ {
+                  "js": [ "dragandgo.js" ],
+                  "matches": [ "http://*/*", "https://*/*", "ftp://*/*" ],
+                  "permissions": [ "tabs" ],
+                  "run_at": "document_start"
+               } ],
+               "description": "Drag and Go",
+               "icons": {
+                  "128": "dragandgo_128x128.png",
+                  "32": "dragandgo_32x32.png",
+                  "48": "dragandgo_48x48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD3WQIHTm42jhvC4G9RH7rEt54IQiiLG9+zojd/6eRnYYVsolZkNqx0DZr/GLNZm+zW/MGb0Q785qeB23PhX9kC7Q14C6tKW2l/90fvhR65BrbBEKtHAwu7bu1t+3AQRxfiQbmQ9CY392wbrqV2Y4xqQFxCVMSgz4gs/03oLU4OGwIDAQAB",
+               "name": "Drag and Go",
+               "options_page": "options.html",
+               "permissions": [ "tabs" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "1.4.6"
+            },
+            "path": "jaikcnhlohebodlpkmjepipngegjbfpg\\1.4.6",
+            "state": 0
+         },
+         "jibehoijjhabehkjkgekmkekkjconbde": {
+            "lastpingday": "12918553203309780",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "browser_action": {
+                  "default_icon": "icon128.png",
+                  "default_title": "Open ibrii"
+               },
+               "description": "Snip pictures, text and video from webpages and share everything on Twitter, Facebook, Google Buzz and More.",
+               "icons": {
+                  "128": "icon128.png",
+                  "16": "icon16.png",
+                  "32": "icon32.png",
+                  "48": "icon48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC5yd2kSgzraFAfeMPcZNdzqug9VQ71hHfrgQ8adSj0j0gq8AftagwHAb1Ba6+4Le/RBnDDNOMA5bNNCdTonUQ0ZZZkNS08bmx4XoLL/VB9biF9rzT8IxNyop8XPZ6jIgOqMgrGDBR+a0KpuUzt8zDsVUtcLJI8tKSJKVp02DevTQIDAQAB",
+               "name": "Ibrii",
+               "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "1.0.6"
+            },
+            "path": "jibehoijjhabehkjkgekmkekkjconbde\\1.0.6",
+            "state": 1
+         },
+         "lojpenhmoajbiciapkjkiekmobleogjc": {
+            "lastpingday": "12918553203309780",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "content_scripts": [ {
+                  "exclude_globs": [ "http://www.google.com/reader/*", "https://www.google.com/reader/*" ],
+                  "js": [ "js/content_script.js" ],
+                  "matches": [ "http://*/*", "https://*/*" ]
+               } ],
+               "icons": {
+                  "48": "png/logo.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCjvF5pjuK8gRaw/2LoRYi37QqRd48B/FeO9yFtT6ueY84z/u0NrJ/xbPFc9OCGBi8RKIblVvcbY0ySGqdmp0QsUr/oXN0b06GL4iB8rMhlO082HhMzrClV8OKRJ+eJNhNBl8viwmtJs3MN0x9ljA4HQLaAPBA9a14IUKLjP0pWuwIDAQAB",
+               "name": "Chrome Reader",
+               "page_action": {
+                  "default_icon": "png/page_action.png",
+                  "default_title": "Chrome Reader",
+                  "popup": "popup.html",
+                  "type": "tab"
+               },
+               "permissions": [ "tabs", "http://www.google.com/reader/*" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "1.1"
+            },
+            "path": "lojpenhmoajbiciapkjkiekmobleogjc\\1.1",
+            "state": 1
+         },
+         "miedgcmlgpmdagojnnbemlkgidepfjfi": {
+            "lastpingday": "12918553203309780",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "description": "Internet Explorer inside Chrome",
+               "icons": {
+                  "128": "icons/icon128.png",
+                  "16": "icons/icon16.png",
+                  "32": "icons/icon32.png",
+                  "48": "icons/icon48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCsf6ygYHdZ+sg47/I3kFz1RviubsFnoQo74RokwC/mWIQiq4z/RfkMoOwwhstmZeGeM4QH9lmlOD75HNB2ymgdnptCKK4NwmSSCVDzhmfxc1SlSIOgosfQJVY5TGEboLG017L3mxVHySPt3dvC/gFkILoCxy2+zzLw27LR1xxcXQIDAQAB",
+               "name": "IE Tab Classic",
+               "options_page": "options.html",
+               "page_action": {
+                  "default_icon": "ie.png",
+                  "popup": "popup.html"
+               },
+               "permissions": [ "tabs" ],
+               "plugins": [ {
+                  "path": "plugin/NPIETab.dll"
+               } ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "0.9.5"
+            },
+            "path": "miedgcmlgpmdagojnnbemlkgidepfjfi\\0.9.5",
+            "state": 1
+         },
+         "ndhinffkekpekljifjkkkkkhopnjodja": {
+            "location": 1,
+            "manifest": {
+               "background_page": "gc-background.htm",
+               "browser_action": {
+                  "default_icon": "gc-feedly.png",
+                  "name": "Feedly"
+               },
+               "content_scripts": [ {
+                  "js": [ "extension/chromeOnLogin.js" ],
+                  "matches": [ "http://www.google.com/reader/view/feedly" ],
+                  "run_at": "document_start"
+               }, {
+                  "js": [ "extension/chromeOnLogout.js" ],
+                  "matches": [ "http://www.google.com/reader/feedly.logout" ],
+                  "run_at": "document_start"
+               }, {
+                  "js": [ "extension/chromeLogin.js" ],
+                  "matches": [ "https://*.google.com/*continue=http%3A%2F%2Fwww.google.com%2Freader%2Fview%2Ffeedly" ],
+                  "run_at": "document_end"
+               }, {
+                  "js": [ "scripts/version.js", "extension/chromeOnBeforeHome.js" ],
+                  "matches": [ "http://www.feedly.com/dev", "http://www.feedly.com/home" ],
+                  "run_at": "document_start"
+               }, {
+                  "js": [ "js/10101_gc-all_5146.js" ],
+                  "matches": [ "http://www.feedly.com/dev", "http://www.feedly.com/home" ],
+                  "run_at": "document_end"
+               } ],
+               "description": "Feedly organizes your favorite sources in a magazine-like start page.",
+               "icons": {
+                  "128": "feedly-128.png",
+                  "16": "feedly-16.png",
+                  "32": "feedly-32.png",
+                  "48": "feedly-48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC+NvNN2i26wtX/a5soQkoDLTNcuQy2pe++2JzlY9D9gdmkcnXr6RvVd3VswtJg6hlkf6Gfl96VPEwuN5jO1XUWEhUzn98PLz1fvffb0aOWdw5FWsitp6STLLYPNchiwZ+tsJhLS9fWu4nggeQnEgdgqh3pmgUjxAXu0kKQeOKk7QIDAQAB",
+               "name": "Feedly",
+               "permissions": [ "tabs", "http://*.google.com/", "https://*.google.com/", "http://*/*" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "2.9.178"
+            },
+            "path": "ndhinffkekpekljifjkkkkkhopnjodja\\2.9.178",
+            "state": 0
+         },
+         "ngjdkiihbphbiaeaaghhlacjnoekdcfe": {
+            "lastpingday": "12918553203309780",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "content_scripts": [ {
+                  "css": [ "fullfeed.css" ],
+                  "js": [ "fullfeed.js" ],
+                  "matches": [ "http://www.google.com/reader/*", "http://www.google.co.jp/reader/*", "https://www.google.com/reader/*", "https://www.google.co.jp/reader/*" ]
+               } ],
+               "description": "show full story of the current entry in google reader.",
+               "id": "findpbebkoafnmdflhoofbjmamacnneb",
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtFpAQQ2wi2/rRj8Z/sSslOyyzVigiOz3uybp3o24CMhOD60GlgR5QDy50KxirISxznlg+fn7d4NFzTpJ5lytFCzq7ozW9RWri4BkCEUWAhQSky0Ffye5KSnPFx3yn2Tb8CQ8U7WhWfr0iHcOQp3udpFGWCZQW0xXMztrlv7k5nwIDAQAB",
+               "name": "Google Reader Full Feed",
+               "page_action": {
+                  "default_icon": "btn.gif",
+                  "default_title": "Fetch SITEINFO"
+               },
+               "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "0.0.9"
+            },
+            "path": "ngjdkiihbphbiaeaaghhlacjnoekdcfe\\0.0.9",
+            "state": 1
+         },
+         "nlbjncdgjeocebhnmkbbbdekmmmcbfjd": {
+            "lastpingday": "12918466802511703",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "content_scripts": [ {
+                  "js": [ "sniff_common.js", "doc_start.js" ],
+                  "matches": [ "http://*/*", "https://*/*" ],
+                  "run_at": "document_start"
+               }, {
+                  "js": [ "sniff_common.js", "feed_finder.js" ],
+                  "matches": [ "http://*/*", "https://*/*" ]
+               } ],
+               "current_locale": "zh_CN",
+               "default_locale": "en",
+               "description": "\u5728\u60A8\u7684\u5DE5\u5177\u680F\u4E0A\u6DFB\u52A0\u4E00\u952E\u8BA2\u9605\u3002",
+               "icons": {
+                  "128": "feed-icon-128x128.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD9WxY2FweiM38uzRRx3RRgb7fboUR77ehEKcTwJ/ZdZ21mcasL1xGmNMB73mMDfqHVrm1P1dXM8W8smXdvgd89djAeUSspnglJlV59zJYkzVHQzDgX7wOyzzy4oH5JmyHfXas2DD2/Hnu1QQvCkUQDHdHmIUuByG/RZ1x36EQ07QIDAQAB",
+               "name": "RSS Subscription Extension\uFF08\u7531 Google \u63D0\u4F9B\uFF09",
+               "options_page": "options.html",
+               "page_action": {
+                  "default_icon": "feed-icon-16x16.png",
+                  "default_title": "\u8BA2\u9605\u6B64\u4F9B\u7A3F",
+                  "popup": "popup.html"
+               },
+               "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "2.1.1"
+            },
+            "path": "nlbjncdgjeocebhnmkbbbdekmmmcbfjd\\2.1.1",
+            "state": 0
+         },
+         "nmidkjogcjnnlfimjcedenagjfacpobb": {
+            "lastpingday": "12918553203309780",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "browser_action": {
+                  "default_icon": "freshstart_icon.png",
+                  "default_title": "FreshStart - Cross Browser Session Manager",
+                  "popup": "popup.html"
+               },
+               "current_locale": "zh_CN",
+               "default_locale": "en",
+               "description": "Need simple session management? Several users on the same Chrome? FreshStart is a simple cross browser session manager.",
+               "icons": {
+                  "16": "freshstart_icon.png",
+                  "32": "freshstart32.png",
+                  "48": "freshstart48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCyy/BBk2WKAzDxUpPEZBXHF28UhUbQHc+A1ZfaFV24hO65tWEPNX7VeN4Qf+uPTJprQYkJYmB9niXoMdBu7gQAaymWscnASh1v0vf9onzN1HWHxLE4cICZzszlj6YK2xa5Whjqkn8jsklrWUQjhHtgAKTCB49pgN9Y1XYpKLHDewIDAQAB",
+               "name": "FreshStart - Cross Browser Session Manager",
+               "options_page": "options.html",
+               "permissions": [ "tabs", "bookmarks" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "1.4.0"
+            },
+            "path": "nmidkjogcjnnlfimjcedenagjfacpobb\\1.4.0",
+            "state": 1
+         },
+         "noocneohefmdhonidldnlhaainpiomkp": {
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "browser_action": {
+                  "default_icon": "resources/launch.normal.png",
+                  "default_title": "Launch Cooliris"
+               },
+               "content_scripts": [ {
+                  "all_frames": true,
+                  "js": [ "init.js", "content_start.js" ],
+                  "matches": [ "http://*/*", "https://*/*" ],
+                  "run_at": "document_start"
+               }, {
+                  "js": [ "init.js", "content_end.js" ],
+                  "matches": [ "http://*/*", "https://*/*" ],
+                  "run_at": "document_end"
+               }, {
+                  "all_frames": true,
+                  "js": [ "init.js", "content_end_all_frames.js" ],
+                  "matches": [ "http://*/*", "https://*/*" ],
+                  "run_at": "document_end"
+               } ],
+               "description": "Cooliris transforms your browser into a full-screen 3D Wall for searching, viewing and sharing the Web.",
+               "icons": {
+                  "128": "resources/cooliris-logo-128.png",
+                  "16": "resources/cooliris-logo-16.png",
+                  "32": "resources/cooliris-logo-32.png",
+                  "48": "resources/cooliris-logo-48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCOZWuGIXpl00zIopIXOMNdnCwPennaEN7l0K0tStf2Bafqhrl8IangAm+4ssAmr0TZshzZaKSIK1YWrkETS56ecAWSMBPTJz2VF7TtmE16lW12487pzjHYxAvLveNgC53aBuYuS5Duw1gDhNjIsQtwxcQzbcSKnl52Tf6tk0U2XQIDAQAB",
+               "name": "Cooliris",
+               "options_page": "options.html",
+               "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+               "plugins": [ {
+                  "path": "lib/cooliris.dll",
+                  "public": true
+               } ],
+               "update_url": "http://update.cooliris.com/chrome/crx_update.xml",
+               "version": "1.11.6.31175"
+            },
+            "path": "noocneohefmdhonidldnlhaainpiomkp\\1.11.6.31175",
+            "state": 0
+         },
+         "okanipcmceoeemlbjnmnbdibhgpbllgc": {
+            "lastpingday": "12918553203309780",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "content_scripts": [ {
+                  "js": [ "search-experiment-redirector_content_script.js" ],
+                  "matches": [ "http://www.google.com/search?*", "http://www.google.ae/search?*", "http://www.google.at/search?*", "http://www.google.be/search?*", "http://www.google.bg/search?*", "http://www.google.ca/search?*", "http://www.google.ch/search?*", "http://www.google.cl/search?*", "http://www.google.cn/search?*", "http://www.google.co.id/search?*", "http://www.google.co.il/search?*", "http://www.google.co.in/search?*", "http://www.google.co.kr/search?*", "http://www.google.co.jp/search?*", "http://www.google.co.th/search?*", "http://www.google.co.uk/search?*", "http://www.google.co.ve/search?*", "http://www.google.co.za/search?*", "http://www.google.com.ar/search?*", "http://www.google.com.au/search?*", "http://www.google.com.br/search?*", "http://www.google.com.co/search?*", "http://www.google.com.eg/search?*", "http://www.google.com.hk/search?*", "http://www.google.com.mx/search?*", "http://www.google.com.my/search?*", "http://www.google.com.pe/search?*", "http://www.google.com.ph/search?*", "http://www.google.com.sa/search?*", "http://www.google.com.tr/search?*", "http://www.google.com.tw/search?*", "http://www.google.com.ua/search?*", "http://www.google.com.vn/search?*", "http://www.google.cz/search?*", "http://www.google.de/search?*", "http://www.google.dk/search?*", "http://www.google.ee/search?*", "http://www.google.es/search?*", "http://www.google.fi/search?*", "http://www.google.fr/search?*", "http://www.google.gr/search?*", "http://www.google.hr/search?*", "http://www.google.hu/search?*", "http://www.google.ie/search?*", "http://www.google.it/search?*", "http://www.google.lt/search?*", "http://www.google.lv/search?*", "http://www.google.nl/search?*", "http://www.google.no/search?*", "http://www.google.pl/search?*", "http://www.google.pt/search?*", "http://www.google.ro/search?*", "http://www.google.rs/search?*", "http://www.google.ru/search?*", "http://www.google.se/search?*", "http://www.google.si/search?*", "http://www.google.sk/search?*" ],
+                  "run_at": "document_start"
+               }, {
+                  "js": [ "jquery_do_not_compile.js", "in-search-results_content_script.js" ],
+                  "matches": [ "http://www.google.com/search?*", "http://www.google.ae/search?*", "http://www.google.at/search?*", "http://www.google.be/search?*", "http://www.google.bg/search?*", "http://www.google.ca/search?*", "http://www.google.ch/search?*", "http://www.google.cl/search?*", "http://www.google.cn/search?*", "http://www.google.co.id/search?*", "http://www.google.co.il/search?*", "http://www.google.co.in/search?*", "http://www.google.co.kr/search?*", "http://www.google.co.jp/search?*", "http://www.google.co.th/search?*", "http://www.google.co.uk/search?*", "http://www.google.co.ve/search?*", "http://www.google.co.za/search?*", "http://www.google.com.ar/search?*", "http://www.google.com.au/search?*", "http://www.google.com.br/search?*", "http://www.google.com.co/search?*", "http://www.google.com.eg/search?*", "http://www.google.com.hk/search?*", "http://www.google.com.mx/search?*", "http://www.google.com.my/search?*", "http://www.google.com.pe/search?*", "http://www.google.com.ph/search?*", "http://www.google.com.sa/search?*", "http://www.google.com.tr/search?*", "http://www.google.com.tw/search?*", "http://www.google.com.ua/search?*", "http://www.google.com.vn/search?*", "http://www.google.cz/search?*", "http://www.google.de/search?*", "http://www.google.dk/search?*", "http://www.google.ee/search?*", "http://www.google.es/search?*", "http://www.google.fi/search?*", "http://www.google.fr/search?*", "http://www.google.gr/search?*", "http://www.google.hr/search?*", "http://www.google.hu/search?*", "http://www.google.ie/search?*", "http://www.google.it/search?*", "http://www.google.lt/search?*", "http://www.google.lv/search?*", "http://www.google.nl/search?*", "http://www.google.no/search?*", "http://www.google.pl/search?*", "http://www.google.pt/search?*", "http://www.google.rs/search?*", "http://www.google.ro/search?*", "http://www.google.ru/search?*", "http://www.google.se/search?*", "http://www.google.si/search?*", "http://www.google.sk/search?*" ]
+               }, {
+                  "js": [ "in-document-start_content_script.js" ],
+                  "matches": [ "http://*/*", "https://*/*" ],
+                  "run_at": "document_start"
+               } ],
+               "current_locale": "zh_CN",
+               "default_locale": "en",
+               "description": "Google Quick Scroll \u53EF\u8BA9\u60A8\u76F4\u63A5\u8DF3\u8F6C\u81F3 Google \u641C\u7D22\u7ED3\u679C\u4E2D\u7684\u76F8\u5173\u5185\u5BB9\u3002",
+               "icons": {
+                  "128": "images/icon128x128.png",
+                  "16": "images/icon16x16.png",
+                  "19": "images/icon19x19.png",
+                  "32": "images/icon32x32.png",
+                  "48": "images/icon48x48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCi4GP4r1JFcIaaYWTKGPHjPV7OXP8n7d3JEYlGW+eRz9b1cnLLUqFNkEdrvuhId0MlQi40HT8NC+W2vcqpk2aItSgAdKhkF0X0Ce1M849nDlcscQGQ0UxINJLvF2jQ6PM/Q7PdmRIqK9nwadTB3uJFNoZaFj8JvM88TJwX0cSQWQIDAQAB",
+               "name": "Google Quick Scroll",
+               "options_page": "about.html",
+               "page_action": {
+                  "default_icon": "images/page-action-active.png"
+               },
+               "permissions": [ "tabs", "http://*.google.com/search*", "http://*/*", "https://*/*" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "1.2.1"
+            },
+            "path": "okanipcmceoeemlbjnmnbdibhgpbllgc\\1.2.1",
+            "state": 1
+         },
+         "ompnlcidediacaebamemlmimodbpldec": {
+            "install_warning_on_enable": false,
+            "location": 1,
+            "manifest": {
+               "content_scripts": [ {
+                  "js": [ "gdocs.js" ],
+                  "matches": [ "http://*/*" ]
+               } ],
+               "description": "Replace link with pdf/tiff/ppt files to google docs and open as html",
+               "icons": {
+                  "128": "128.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDWQjuTjWdPjuiBOGOFmQZPNBpuRP54fMGXVUR04IOJd7aNlhcDTo8+K3uyVwphjVYq8xF1G8/LI4FAGsnVjf+Q90L5StgjHBi53NR0tnzIHUWsIcop4mROCFpz6P1KLroQG5MczLD/YyHMbavcmEMfAEzGKOXWBLctxuKMFuhsgwIDAQAB",
+               "name": "GDocs.",
+               "update_url": "http://chromeplugins.googlecode.com/files/update.xml",
+               "version": "1.0"
+            },
+            "path": "ompnlcidediacaebamemlmimodbpldec\\1.0",
+            "state": 0
+         },
+         "pioclpoplcdbaefihamjohnefbikjilc": {
+            "lastpingday": "12918207599973023",
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "browser_action": {
+                  "default_icon": "images/evernote-icon-19.png",
+                  "default_title": "Clip to Evernote",
+                  "popup": "popup.html"
+               },
+               "current_locale": "zh_CN",
+               "default_locale": "en",
+               "description": "Use the Evernote extension to save things you see on the web into your Evernote account. It even lets you search through your notes.",
+               "icons": {
+                  "128": "images/en_app_icon-128.png",
+                  "16": "images/en_app_icon-16.png",
+                  "32": "images/en_app_icon-32.png",
+                  "48": "images/en_app_icon-48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDagHdvA7LfpgVcEBFjt6ADW0PMXRJpeSnRsjAJWdapZYbS2LAIMB5lftI0ZjGZyyH2obL2coYBgcULJkidtZ8YIX9yP5tbB7mh1RzHj2oNfXBlh2yzJm/4/QELGmHhOy3S6x/2102Zo+Q7AgBtPN5RPX1X2FJbasBT02O4DvvRcwIDAQAB",
+               "minimum_chrome_version": "4.1",
+               "name": "Clip to Evernote",
+               "options_page": "options.html",
+               "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "3.0.8.1544"
+            },
+            "path": "pioclpoplcdbaefihamjohnefbikjilc\\3.0.8.1544",
+            "state": 0
+         },
+         "pjnfggphgdjblhfjaphkjhfpiiekbbej": {
+            "location": 1,
+            "manifest": {
+               "background_page": "background.html",
+               "browser_action": {
+                  "default_icon": "images/sp-19.png",
+                  "default_title": "See Google Similar Pages",
+                  "popup": "popup.html"
+               },
+               "description": "Discover webpages similar to the page you're currently browsing.",
+               "icons": {
+                  "128": "images/sp-128.png",
+                  "19": "images/sp-19.png",
+                  "32": "images/sp-32.png",
+                  "48": "images/sp-48.png"
+               },
+               "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDnX9ymVKuyePPFZymXCCey1i2EUpZL8WDwB9ShsoH0FUGj8E2nIL+/gtZvD4lAlgxeX6sVteP4L7DENOyWqsHdTo6Ap4SnhdQBZdGa4RAfTHVk+ff+bzb4Jd5ZJnWgXzGxSVcYUy6mkAFjh8x+zpInj2EndzTWKRVrml8u2dqFTwIDAQAB",
+               "name": "Google Similar Pages beta (by Google)",
+               "options_page": "options.html",
+               "permissions": [ "tabs", "https://www.google.com/", "http://*/" ],
+               "update_url": "http://clients2.google.com/service/update2/crx",
+               "version": "0.5.2.19"
+            },
+            "path": "pjnfggphgdjblhfjaphkjhfpiiekbbej\\0.5.2.19",
+            "state": 0
+         }
+      },
+      "theme": {
+         "id": ""
+      },
+      "toolbar": [ "cfkohgkpafhkpdcnfadadcibfboapggi", "fafldeedegmfkdkolgpcopgfcdidgbjk", "jibehoijjhabehkjkgekmkekkjconbde", "bohahkiiknkelflnjjlipnaeapefmjbh", "nmidkjogcjnnlfimjcedenagjfacpobb", "fhaicgmeeafgboeobjagfmlcdhbkijhf", "cfalmamgbiaipibeangdiekjodjjmndm" ],
+      "toolbarsize": 4,
+      "ui": {
+         "developer_mode": true
+      }
+   },
+   "geolocation": {
+      "default_content_setting": 3
+   },
+   "homepage": "chrome://newtab",
+   "homepage_is_newtabpage": true,
+   "intl": {
+      "accept_languages": "zh-CN,zh",
+      "charset_default": "GBK"
+   },
+   "ntp": {
+      "pref_version": 2,
+      "shown_sections": 29,
+      "tips_cache": {
+         "current_tip": 8,
+         "tips": [ "\u501F\u52A9\u4E3B\u9898\uFF0C\u5C06\u60A8\u7684\u8C37\u6B4C\u6D4F\u89C8\u5668\u626E\u9753\u3001\u626E\u9177\uFF01\u8BF7\u5230\u003Ca href=\"https://tools.google.com/chrome/intl/zh_CN/themes/index.html\" target=\"_blank\"\u003E\u4E3B\u9898\u5E93\u003C/a\u003E\u4E2D\u77A7\u77A7\u5404\u5177\u98CE\u683C\u7684\u4E3B\u9898\u3002", "\u501F\u52A9\u4E3B\u9898\uFF0C\u5C06\u60A8\u7684\u8C37\u6B4C\u6D4F\u89C8\u5668\u626E\u9753\u3001\u626E\u9177\uFF01\u8BF7\u5230\u003Ca href=\"https://tools.google.com/chrome/intl/zh_CN/themes/index.html\" target=\"_blank\"\u003E\u4E3B\u9898\u5E93\u003C/a\u003E\u4E2D\u77A7\u77A7\u6211\u4EEC\u7CBE\u5FC3\u6311\u9009\u7684\u827A\u672F\u5BB6\u4E3B\u9898\u3002", "\u6309 \u003Cstrong\u003ECtrl+Shift+B\u003C/strong\u003E \u53EF\u6253\u5F00\u4E66\u7B7E\u7BA1\u7406\u5668\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95743&ctx=tip\"\u003E\u952E\u76D8\u5FEB\u6377\u952E\u003C/a\u003E\u3002", "\u6BCF\u5F53\u4F7F\u7528\u67E5\u627E\u680F\u65F6\uFF0C\u90FD\u53EF\u7528\u6EDA\u52A8\u6761\u4E0A\u7684\u9EC4\u8272\u6807\u8BB0\u5FEB\u901F\u627E\u5230\u7F51\u9875\u4E2D\u4E0E\u4E4B\u5BF9\u5E94\u7684\u5185\u5BB9\u3002\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95635&ctx=tip\"\u003E\u4E86\u89E3\u8BE6\u60C5\u003C/a\u003E", "\u60A8\u53EF\u4EE5\u5728\u5730\u5740\u680F\u4E2D\u641C\u7D22\u4E66\u7B7E\u548C\u6D4F\u89C8\u5386\u53F2\u8BB0\u5F55\u3002\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?answer=95440&hl=zh_CN&ctx=tip\"\u003E\u4E86\u89E3\u8BE6\u60C5\u003C/a\u003E", "\u6309\u81EA\u5DF1\u7684\u65B9\u5F0F\u6392\u5217\u6807\u7B7E\u9875\u3002\u8BF7\u70B9\u51FB\u6807\u7B7E\u9875\u7684\u6807\u7B7E\uFF0C\u5E76\u6CBF\u6D4F\u89C8\u5668\u7A97\u53E3\u9876\u90E8\u5C06\u5B83\u62D6\u52A8\u5230\u76EE\u6807\u4F4D\u7F6E\u3002\u4E86\u89E3\u6709\u5173\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95622&ctx=tips\"\u003E\u6807\u7B7E\u9875\u4F7F\u7528\u65B9\u6CD5\u003C/a\u003E\u7684\u8BE6\u60C5\u3002", "\u5C06\u6807\u7B7E\u9875\u62D6\u5230\u663E\u793A\u5668\u6216\u6D4F\u89C8\u5668\u7A97\u53E3\u7684\u505C\u9760\u4F4D\u7F6E\uFF0C\u53EF\u5FEB\u901F\u8C03\u6574\u6807\u7B7E\u9875\u5927\u5C0F\u3002\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95622#resize&ctx=tip\"\u003E\u4E86\u89E3\u8BE6\u60C5\u003C/a\u003E", "\u5C06\u94FE\u63A5\u62D6\u5230\u8C37\u6B4C\u6D4F\u89C8\u5668\u7A97\u53E3\u9876\u90E8\u7684\u6807\u7B7E\u680F\u4E2D\u53EF\u5728\u65B0\u6807\u7B7E\u9875\u4E2D\u6253\u5F00\u8BE5\u94FE\u63A5\u3002", "\u6309 \u003Cstrong\u003ECtrl+T\u003C/strong\u003E \u53EF\u6253\u5F00\u65B0\u6807\u7B7E\u9875\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95743&ctx=tip\"\u003E\u952E\u76D8\u5FEB\u6377\u952E\u003C/a\u003E\u3002", "\u6309 \u003Cstrong\u003ECtrl+N\u003C/strong\u003E \u53EF\u6253\u5F00\u65B0\u6D4F\u89C8\u5668\u7A97\u53E3\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95743&ctx=tip\"\u003E\u952E\u76D8\u5FEB\u6377\u952E\u003C/a\u003E\u3002", "\u8981\u5728\u5730\u5740\u680F\u4E2D\u641C\u7D22\u7F51\u7AD9\uFF0C\u8BF7\u5148\u952E\u5165\u7F51\u7AD9\u7684\u7F51\u5740\uFF0C\u7136\u540E\u5728\u7CFB\u7EDF\u63D0\u793A\u65F6\u6309 \u003Cstrong\u003ETab\u003C/strong\u003E\u3002\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh-CN&answer=95655&ctx=tip\"\u003E\u641C\u7D22\u63D0\u793A\u003C/a\u003E\u7684\u8BE6\u60C5\u3002", "\u60A8\u53EF\u4EE5\u4E3A\u60A8\u5E38\u7528\u7684\u641C\u7D22\u5F15\u64CE\u521B\u5EFA\u5730\u5740\u680F\u5173\u952E\u5B57\u3002\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95653&ctx=tips\"\u003E\u4E86\u89E3\u521B\u5EFA\u65B9\u6CD5\u003C/a\u003E", "\u6309 \u003Cstrong\u003ECtrl\u003C/strong\u003E \u548C + \u53EF\u653E\u5927\u7F51\u9875\uFF1B\u6309 \u003Cstrong\u003ECtrl\u003C/strong\u003E \u548C - \u53EF\u7F29\u5C0F\u7F51\u9875\uFF1B\u6309 \u003Cstrong\u003ECtrl+0\u003C/strong\u003E \u5219\u53EF\u4F7F\u7F51\u9875\u6062\u590D\u6B63\u5E38\u5927\u5C0F\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95743&ctx=tip\"\u003E\u952E\u76D8\u5FEB\u6377\u952E\u003C/a\u003E\u3002", "\u8981\u5728\u6240\u67E5\u770B\u7684\u7F51\u9875\u4E2D\u5FEB\u901F\u8FDB\u884C\u641C\u7D22\uFF1F\u6309 \u003Cstrong\u003ECtrl+F\u003C/strong\u003E \u53EF\u6253\u5F00\u67E5\u627E\u680F\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95635&ctx=tip\"\u003E\u67E5\u627E\u680F\u7684\u7528\u6CD5\u003C/a\u003E\u3002", "\u6309 \u003Cstrong\u003ECtrl+S\u003C/strong\u003E \u53EF\u4FDD\u5B58\u5F53\u524D\u7F51\u9875\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95743&ctx=tip\"\u003E\u952E\u76D8\u5FEB\u6377\u952E\u003C/a\u003E\u3002", "\u6309 \u003Cstrong\u003ECtrl+P\u003C/strong\u003E \u53EF\u6253\u5370\u5F53\u524D\u7F51\u9875\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95743&ctx=tip\"\u003E\u952E\u76D8\u5FEB\u6377\u952E\u003C/a\u003E\u3002", "\u6309 \u003Cstrong\u003ECtrl+J\u003C/strong\u003E \u53EF\u5217\u51FA\u5DF2\u4E0B\u8F7D\u7684\u6587\u4EF6\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95743&ctx=tip\"\u003E\u952E\u76D8\u5FEB\u6377\u952E\u003C/a\u003E\u3002", "\u6309 \u003Cstrong\u003ECtrl+H\u003C/strong\u003E \u53EF\u67E5\u770B\u6D4F\u89C8\u5386\u53F2\u8BB0\u5F55\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95743&ctx=tip\"\u003E\u952E\u76D8\u5FEB\u6377\u952E\u003C/a\u003E\u3002", "\u60A8\u53EF\u4EE5\u5C06\u6807\u7B7E\u9875\u62D6\u51FA\u6807\u7B7E\u680F\uFF0C\u4EE5\u4FBF\u5728\u65B0\u7A97\u53E3\u4E2D\u6253\u5F00\u6807\u7B7E\u9875\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95622&ctx=tips\"\u003E\u6807\u7B7E\u9875\u7684\u7528\u6CD5\u003C/a\u003E\u3002", "\u6309 \u003Cstrong\u003ECtrl+Shift+N\u003C/strong\u003E \u53EF\u5728\u9690\u8EAB\u6A21\u5F0F\u4E0B\u6253\u5F00\u65B0\u7A97\u53E3\u3002\u5728\u9690\u8EAB\u6A21\u5F0F\u4E0B\u8BBF\u95EE\u7684\u7F51\u9875\u4E0D\u4F1A\u5B58\u50A8\u5728\u6D4F\u89C8\u5386\u53F2\u8BB0\u5F55\u4E2D\u3002\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?answer=95464&hl=zh_CN&ctx=tip\"\u003E\u4E86\u89E3\u8BE6\u60C5\u003C/a\u003E", "\u6309 \u003Cstrong\u003ECtrl+O\u003C/strong\u003E \u53EF\u5728\u8C37\u6B4C\u6D4F\u89C8\u5668\u4E2D\u6253\u5F00\u6587\u4EF6\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95743&ctx=tip\"\u003E\u952E\u76D8\u5FEB\u6377\u952E\u003C/a\u003E\u3002", "\u6309 \u003Cstrong\u003EF11\u003C/strong\u003E \u53EF\u8FDB\u5165\u5168\u5C4F\u6A21\u5F0F\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95743&ctx=tip\"\u003E\u952E\u76D8\u5FEB\u6377\u952E\u003C/a\u003E\u3002", "\u70B9\u51FB\u5730\u5740\u680F\u65C1\u8FB9\u7684\u661F\u5F62\u56FE\u6807\u53EF\u4E3A\u6240\u67E5\u770B\u7684\u7F51\u9875\u6DFB\u52A0\u4E66\u7B7E\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95739&ctx=tip\"\u003E\u4E66\u7B7E\u521B\u5EFA\u6280\u5DE7\u003C/a\u003E\u3002", "\u5C06\u6240\u559C\u7231\u7684\u7F51\u7AD9\u7684\u5FEB\u6377\u65B9\u5F0F\u653E\u5728\u8BA1\u7B97\u673A\u684C\u9762\u4E0A\u3002\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95710&ctx=tip\"\u003E\u4E86\u89E3\u8BE6\u60C5\u003C/a\u003E", "\u8981\u9690\u85CF\"\u65B0\u6807\u7B7E\u9875\"\u9875\u9762\u4E2D\u7684\u7F29\u7565\u56FE\uFF1F\u70B9\u51FB\u7F51\u9875\u9876\u90E8\u7684\u7F29\u7565\u56FE\u56FE\u6807\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?answer=95451&hl=zh_CN&ctx=tip\"\u003E\u9875\u9762\u663E\u793A\u65B9\u5F0F\u7684\u66F4\u6539\u65B9\u6CD5\u003C/a\u003E\u3002", "\u60A8\u77E5\u9053\u5417\uFF1F\u5C06\u661F\u5F62\u56FE\u6807\u62D6\u5230\u4E66\u7B7E\u680F\u4E2D\uFF0C\u5C31\u53EF\u4EE5\u4E3A\u7F51\u9875\u521B\u5EFA\u4E66\u7B7E\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95739&ctx=tip\"\u003E\u4E66\u7B7E\u521B\u5EFA\u6280\u5DE7\u003C/a\u003E\u3002", "\u60A8\u77E5\u9053\u5417\uFF1F\u5C06\u94FE\u63A5\u62D6\u5230\u4E66\u7B7E\u680F\u4E2D\uFF0C\u5C31\u53EF\u4EE5\u7ACB\u5373\u521B\u5EFA\u4E66\u7B7E\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95739&ctx=tip\"\u003E\u4E66\u7B7E\u521B\u5EFA\u6280\u5DE7\u003C/a\u003E\u3002", "\u6309 \u003Cstrong\u003ECtrl+Shift+T\u003C/strong\u003E \u53EF\u91CD\u65B0\u6253\u5F00\u4E0A\u6B21\u5173\u95ED\u7684\u6807\u7B7E\u9875\u3002\u60A8\u53EF\u4EE5\u53CD\u590D\u4F7F\u7528\u6B64\u5FEB\u6377\u952E\u91CD\u65B0\u6253\u5F00\u66F4\u591A\u5DF2\u5173\u95ED\u7684\u6807\u7B7E\u9875\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95743&ctx=tip\"\u003E\u952E\u76D8\u5FEB\u6377\u952E\u003C/a\u003E\u3002", "\u4E0D\u60F3\u7559\u4E0B\u4E00\u4E01\u70B9\u7684\u6D4F\u89C8\u8BB0\u5F55\uFF1F\u53EF\u5728\u9690\u8EAB\u6A21\u5F0F\u4E0B\u8FDB\u884C\u6D4F\u89C8\u3002\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?answer=95464&hl=zh_CN&ctx=tip\"\u003E\u4E86\u89E3\u8BE6\u60C5\u003C/a\u003E", "\u610F\u5916\u5173\u95ED\u5305\u542B\u8BB8\u591A\u6807\u7B7E\u9875\u7684\u7A97\u53E3\uFF1F\u53EF\u5728\"\u65B0\u6807\u7B7E\u9875\"\u9875\u9762\u7684\u003Cstrong\u003E\u6700\u8FD1\u5173\u95ED\u7684\u6807\u7B7E\u9875\u003C/strong\u003E\u90E8\u5206\u4E2D\u627E\u5230\u8FD9\u4E9B\u6807\u7B7E\u9875\u3002", "\u5C06\u4F7F\u7528\u4FBF\u5229\u7684\u4E3B\u9875\u6309\u94AE\u6DFB\u52A0\u5230\u5730\u5740\u680F\u65C1\u8FB9\u3002\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?answer=95314&hl=zh_CN&ctx=tip\"\u003E\u4E86\u89E3\u8BE6\u60C5\u003C/a\u003E", "\u76F4\u63A5\u5728\u5730\u5740\u680F\u4E2D\u641C\u7D22\u3002\u8F93\u5165\u641C\u7D22\u5B57\u8BCD\uFF0C\u7136\u540E\u6309 \u003Cstrong\u003EEnter\u003C/strong\u003E \u5373\u53EF\u76F4\u63A5\u770B\u5230\u641C\u7D22\u7ED3\u679C\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95655&ctx=tip\"\u003E\u641C\u7D22\u63D0\u793A\u003C/a\u003E\u3002", "\u6309 \u003Cstrong\u003ECtrl+B\u003C/strong\u003E \u53EF\u5C06\u4E66\u7B7E\u680F\u505C\u9760\u5728\u5730\u5740\u680F\u4E0B\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95743&ctx=tip\"\u003E\u952E\u76D8\u5FEB\u6377\u952E\u003C/a\u003E\u3002", "\u6309 \u003Cstrong\u003EF6\u003C/strong\u003E \u53EF\u5C06\u5149\u6807\u5FEB\u901F\u653E\u5728\u5730\u5740\u680F\u4E2D\u3002\u8BE6\u7EC6\u4E86\u89E3\u003Ca href=\"http://www.google.com/support/chrome/bin/answer.py?hl=zh_CN&answer=95743&ctx=tip\"\u003E\u952E\u76D8\u5FEB\u6377\u952E\u003C/a\u003E\u3002" ],
+         "topic_id": "24013"
+      },
+      "tips_cache_update": "1269873851.54035",
+      "tips_server": "https://clients2.google.com/tools/service/npredir?r=chrometips_win&hl=zh-CN"
+   },
+   "profile": {
+      "block_third_party_cookies": false,
+      "clear_site_data_on_exit": false,
+      "content_settings": {
+         "patterns": {
+            "[*.]0-wave-opensocial.googleusercontent.com": {
+               "popups": 1
+            },
+            "[*.]1-wave-opensocial.googleusercontent.com": {
+               "popups": 1
+            },
+            "[*.]2-wave-opensocial.googleusercontent.com": {
+               "popups": 1
+            },
+            "[*.]3-wave-opensocial.googleusercontent.com": {
+               "popups": 1
+            },
+            "[*.]5-wave-opensocial.googleusercontent.com": {
+               "popups": 1
+            },
+            "[*.]6-wave-opensocial.googleusercontent.com": {
+               "popups": 1
+            },
+            "[*.]7-wave-opensocial.googleusercontent.com": {
+               "popups": 1
+            }
+         },
+         "pref_version": 1
+      },
+      "exited_cleanly": false,
+      "id": "not-signed-in",
+      "name": "",
+      "nickname": "",
+      "password_manager_enabled": true,
+      "per_host_zoom_levels": {
+         "blog.csdn.net": -2,
+         "blog.sina.com.cn": 1,
+         "lucifr.com": 4,
+         "www.blueidea.com": 1,
+         "www.dongua.com": -2,
+         "www.google.org.cn": 3
+      }
+   },
+   "safebrowsing": {
+      "enabled": true
+   },
+   "savefile": {
+      "default_directory": "J:\\Users\\sun\\Desktop"
+   },
+   "search": {
+      "suggest_enabled": true
+   },
+   "session": {
+      "restore_on_startup": 0
+   },
+   "sync": {
+      "bookmarks": true,
+      "has_setup_completed": true,
+      "last_synced_time": "12918629702541750",
+      "preferences": true,
+      "themes": false
+   },
+   "tabs": {
+      "use_vertical_tabs": false
+   },
+   "translate": {
+      "enabled": true
+   },
+   "translate_site_blacklist": [ "www.google.com", "twitter.com", "www.ibrii.com" ],
+   "webkit": {
+      "webprefs": {
+         "inspector_settings": "lastActivePanel:string:elements\n",
+         "uses_universal_detector": false
+      }
+   }
+}

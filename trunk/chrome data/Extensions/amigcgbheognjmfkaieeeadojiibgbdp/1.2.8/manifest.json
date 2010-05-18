@@ -1,0 +1,30 @@
+{
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "tmtchrome_browserbutton.png",
+      "default_title": "TooManyTabs for Chrome",
+      "popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "tmtfocus.js" ],
+      "matches": [ "http://*/*" ],
+      "run_at": "document_start"
+   }, {
+      "js": [ "tmtfocus.js" ],
+      "matches": [ "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Manage your tabs, improve your browsing, and maintain your sanity when you have many tabs open.",
+   "icons": {
+      "128": "tmtchrome_logo128.png",
+      "16": "tmtchrome_logo16.png",
+      "32": "tmtchrome_logo32.png",
+      "48": "tmtchrome_logo48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDWX/cfO3ls3pe/TJbtcRSyiH6w1Qu84sfzmaebphivBfMXpt363mjc0NmivLITvrWZ20/fPv6+vaZx8ozeUnL7a9dEghFq2skxiMCxGJYPnrjLTbJ1QbIG9+rZ+GYIjmBTugMUWDgSLIUtQLg0pDiPfd9sAJ9us0w8Ud+xKlTpqwIDAQAB",
+   "name": "TooManyTabs for Chrome",
+   "options_page": "options.html",
+   "permissions": [ "tabs" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.2.8"
+}

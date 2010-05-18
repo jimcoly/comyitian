@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>GreenGoogle</title>
+<style type="text/css">
+body{width:250px;background-color:#D2E1F6;font-family:arial, sans-serif;font-size:14px;margin:5px 0;}
+#bookMarksList{overflow:hidden;}
+#bookMarksListUL{list-style:none;min-height:20px;padding:0;}
+#bookMarksListUL li{height:25px;overflow:hidden;line-height:25px;}
+#bookMarksListUL li:hover{background-color:#F93;}
+#bookMarksListUL li span{display:block;float:left;overflow:hidden;cursor:pointer;}
+.bookmarkLinks{width:200px;}
+a:link{color:#00F;text-decoration:none;}
+.bookmarkNewTab,.bookmarkIcon{width:25px;}
+a:visited,a:hover,a:active{text-decoration:none;color:#00F;}
+</style>
+<script type="text/javascript">
+var bookmarks=null;function openURL(a){chrome.extension.sendRequest({hope:"openURL",nexturl:a})}
+function setBookmarksList(){var a=document.getElementById("bookMarksListUL"),d=15;if(d>bookmarks.length)d=bookmarks.length;for(var b=0;b<d;b++){var g=bookmarks[b].id+"";console.log("I:",b,"idStr:",g);chrome.bookmarks.get(g,function(e){console.log(e);try{var f=e[0].url,c=e[0].title;if(typeof f!="undefined"&&typeof c!="undefined")a.innerHTML+='<li><span class="bookmarkNewTab"><a href="'+f+'" title="'+c+'" target="_blank"><img src="./img/newTab.gif" alt="N" title="Open weith new Tab"/></a></span><span class="bookmarkLinks" onclick=openURL("'+f+
+'") title="'+c+'">'+c+'</span><span class="bookmarkIcon"></span></li>'}catch(h){console.log(h.message)}})}}function loadBookmarks(){console.log("loadBookmarks_begin");chrome.extension.sendRequest({hope:"getBookmarksArray"},function(a){console.log(a);bookmarks=a.getBookmarksArray;console.log("response:",bookmarks);setBookmarksList()});console.log("loadBookmarks_end")}function loadset(){loadBookmarks();console.log("loadset")};</script>
+</head>
+
+<body onload="loadset()">
+
+<div id="menu"></div>
+<div id="bookMarksList"><ul id="bookMarksListUL"></ul></div>
+</body>
+</html>

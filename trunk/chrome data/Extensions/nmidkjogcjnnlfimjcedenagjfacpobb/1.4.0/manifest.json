@@ -1,0 +1,21 @@
+{
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "freshstart_icon.png",
+      "default_title": "FreshStart - Cross Browser Session Manager",
+      "popup": "popup.html"
+   },
+   "default_locale": "en",
+   "description": "Need simple session management? Several users on the same Chrome? FreshStart is a simple cross browser session manager.",
+   "icons": {
+      "16": "freshstart_icon.png",
+      "32": "freshstart32.png",
+      "48": "freshstart48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCyy/BBk2WKAzDxUpPEZBXHF28UhUbQHc+A1ZfaFV24hO65tWEPNX7VeN4Qf+uPTJprQYkJYmB9niXoMdBu7gQAaymWscnASh1v0vf9onzN1HWHxLE4cICZzszlj6YK2xa5Whjqkn8jsklrWUQjhHtgAKTCB49pgN9Y1XYpKLHDewIDAQAB",
+   "name": "FreshStart - Cross Browser Session Manager",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "bookmarks" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.4.0"
+}

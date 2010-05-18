@@ -1,0 +1,22 @@
+{
+   "background_page": "background.html",
+   "content_scripts": [ {
+      "js": [ "javascript/check.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "description": "Adds or removes a Read It Later bookmark with just one click.",
+   "icons": {
+      "128": "images/icon128.png",
+      "48": "images/icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDC/P967IVnbprRJUEPpMTlnTTlcMlCfY1tQFiGqwP1oDNtuNHteVDJTVu1l6T9SYPaUxueH0VjaUAuWZRuDjLIU9DLZSvFAZl+jQvTnf+6XrkrO870ZvRGk2MoBsP2cPlY+yM86LhF+VqASDWSvpHKqQakujhnUntPGV26qvUYQwIDAQAB",
+   "name": "Mark for Later",
+   "options_page": "options.html",
+   "page_action": {
+      "default_icon": "images/check-mark-empty.png",
+      "default_title": "mark this site for later"
+   },
+   "permissions": [ "tabs", "https://readitlaterlist.com/" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "0.3.0"
+}

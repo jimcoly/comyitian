@@ -1,0 +1,500 @@
+{
+   "1Password": {
+      "message": "1Lozinka"
+   },
+   "1__Insert_your_YubiKey_in_the_USB_port_with_the_USB_contact_facing_upward": {
+      "message": "1. Ubacite YubiKey u USB utor"
+   },
+   "1__Run_the_LastPass_Sesame_application_to_generate_a_one_time_password": {
+      "message": "1. Pokrenite LastPass Sesame aplikaciju da bi generirali jednokratnu lozinku"
+   },
+   "2__Paste_the_one_time_password_in_the_input_box_below_and_click__Authenticate_": {
+      "message": "2. Zaljepite jednokratnu lozinku u okvir za unos teksta i kliknite na 'Provjeri (Authenticate)'"
+   },
+   "2__Wait_until_your_YubiKey_touch_button_shines_with_a_steady_light": {
+      "message": "2. Pri\u010Dekajte dok se YubiKey tipka ne po\u010Dne neprekidno svijetliti"
+   },
+   "3__Hold_your_fingertip_on_the_touch_button_for_2_seconds": {
+      "message": "3. Dr\u017Eite vrh prsta na gumb oko 2 sekunde"
+   },
+   "Accept": {
+      "message": "Prihvati"
+   },
+   "Account_Settings": {
+      "message": "Postavke ra\u010Duna"
+   },
+   "Actionproper": {
+      "message": "Akcija"
+   },
+   "Add": {
+      "message": "Dodaj"
+   },
+   "Add_Credit_Card": {
+      "message": "Dodaj kreditnu karticu"
+   },
+   "Add_Field": {
+      "message": "Dodaj polje"
+   },
+   "Add_Profile": {
+      "message": "Dodaj profil"
+   },
+   "Add_Secure_Note": {
+      "message": "Dodaj sigurnu zabilje\u0161ku"
+   },
+   "Add_Site": {
+      "message": "Dodaj stranicu"
+   },
+   "Address_1": {
+      "message": "Adresa 1"
+   },
+   "Address_2": {
+      "message": "Adresa 2"
+   },
+   "Address_3": {
+      "message": "Adresa 3"
+   },
+   "Advanced": {
+      "message": "Napredno"
+   },
+   "All": {
+      "message": "Sve"
+   },
+   "Allow_LastPass_to_find_insecure_data_on_your_computer_": {
+      "message": "Dopustiti da LastPass prona\u0111e nesigurne podatke na va\u0161em ra\u010Dunalu?"
+   },
+   "Alt": {
+      "message": "Alt"
+   },
+   "Always_Choose_Profile_and_Credit_Card": {
+      "message": "Uvijek odaberi profil i kreditnu karticu"
+   },
+   "April": {
+      "message": "Travanj"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_generated_password_": {
+      "message": "Jeste li sigurni da \u017Eelite obrisati ovu generiranu lozinku?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_never_URL_": {
+      "message": "Jeste li sigurni da \u017Eelite obrisati ovaj Nikad URL?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_secure_note_": {
+      "message": "Jeste li sigurni da \u017Eelite obrisati ovaj sigurnu bilje\u0161ku?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_site_": {
+      "message": "Jeste li sigurni da \u017Eelite obrisati ovaj site?"
+   },
+   "August": {
+      "message": "Kolovoz"
+   },
+   "AutoFill": {
+      "message": "Automatsko popunjavanje"
+   },
+   "AutoLogin": {
+      "message": "Automatsko prijavljivanje"
+   },
+   "But_I_m_a_forgetful_person___what_should_I_do_if_I_forget_my_password_": {
+      "message": "Ali ja sam zaboravna osoba...\u0161to trebam u\u010Diniti ako sam zaboravio lozinku?"
+   },
+   "Cancel": {
+      "message": "Odustani"
+   },
+   "Checkbox": {
+      "message": "Kvadrati\u0107 (eng. checkbox)"
+   },
+   "City___Town": {
+      "message": "Grad / Mjesto"
+   },
+   "Clear_Forms": {
+      "message": "Obri\u0161i obrasce"
+   },
+   "Close": {
+      "message": "Zatvori"
+   },
+   "Collapse_All": {
+      "message": "Smanji sve"
+   },
+   "Company": {
+      "message": "Tvrtka"
+   },
+   "Confirm": {
+      "message": "Potvrdi"
+   },
+   "Congratulations": {
+      "message": "\u010Cestitamo"
+   },
+   "Continue": {
+      "message": "Nastavi"
+   },
+   "Copy": {
+      "message": "Kopiraj"
+   },
+   "Copy_Password": {
+      "message": "Kopiraj lozinku"
+   },
+   "Copy_Username": {
+      "message": "Kopiraj korisni\u010Dko ime"
+   },
+   "Country": {
+      "message": "Dr\u017Eava"
+   },
+   "County": {
+      "message": "\u017Dupanija"
+   },
+   "Create_Account": {
+      "message": "Kreiraj ra\u010Dun"
+   },
+   "Create_Sub_Group": {
+      "message": "Kreiraj podgrupu"
+   },
+   "Create_an_Account": {
+      "message": "Kreiraj korisni\u010Dki ra\u010Dun"
+   },
+   "Creating_Account___": {
+      "message": "Kreiranje ra\u010Duna..."
+   },
+   "December": {
+      "message": "Prosinac"
+   },
+   "Delete": {
+      "message": "Obri\u0161i"
+   },
+   "Down": {
+      "message": "Dolje"
+   },
+   "Dr": {
+      "message": "Dr."
+   },
+   "Dutch": {
+      "message": "Nizozemski"
+   },
+   "Edit": {
+      "message": "Uredi"
+   },
+   "Email": {
+      "message": "Email"
+   },
+   "Email_already_in_use__have_you_forgotten_your_password_": {
+      "message": "Email je ve\u0107 u upotrebi, da li ste zaboravili lozinku?"
+   },
+   "End": {
+      "message": "Kraj"
+   },
+   "English": {
+      "message": "Engleski"
+   },
+   "Expand_All": {
+      "message": "Pro\u0161iri sve"
+   },
+   "February": {
+      "message": "Velja\u010Da"
+   },
+   "Feedback": {
+      "message": "Povratna informacija"
+   },
+   "Female": {
+      "message": "\u017Densko"
+   },
+   "Fill_Form": {
+      "message": "Ispunite obrazac"
+   },
+   "Fill_Forms": {
+      "message": "Ispunite obrasce"
+   },
+   "Firefox_Password_Manager": {
+      "message": "Firefox Password Manager"
+   },
+   "Forums": {
+      "message": "Forumi"
+   },
+   "Gender": {
+      "message": "Spol"
+   },
+   "General": {
+      "message": "Op\u0107enito"
+   },
+   "Generate": {
+      "message": "Generirati"
+   },
+   "Generate_Secure_Password": {
+      "message": "Generiraj sigurnu lozinku"
+   },
+   "Generated_Password_for": {
+      "message": "Generirane lozinke za"
+   },
+   "Generic_CSV_File": {
+      "message": "Op\u0107enita CSV datoteka"
+   },
+   "Group_": {
+      "message": "Grupa:"
+   },
+   "Help_Translate": {
+      "message": "Pomognite prevesti"
+   },
+   "Help___": {
+      "message": "Pomo\u0107..."
+   },
+   "History": {
+      "message": "Povijest"
+   },
+   "Home": {
+      "message": "Po\u010Detna stranica"
+   },
+   "IT_IS_CRITICAL_THAT_YOU_NEVER_FORGET_YOUR_NEW_LASTPASS_PASSWORD_": {
+      "message": "KLJU\u010CNO JE DA NIKADA NE ZABORAVITE VA\u0160U LASTPASS LOZINKU."
+   },
+   "I_have_read_and_agree_with_the": {
+      "message": "Pro\u010Ditao sam i suglasan sa"
+   },
+   "I_understand_that_my_encrypted_data_will_be_sent_to_LastPass": {
+      "message": "Shva\u0107am da \u0107e moj kriptirani podaci biti poslani LastPassu"
+   },
+   "If_you_do_end_up_forgetting_your_LastPass_master_password_": {
+      "message": "Ako zaboravite svoju glavnu LastPass lozinku,"
+   },
+   "If_you_lost_your_YubiKey_device__click_here_to_disable_YubiKey_authentication": {
+      "message": "Ako ste izgubili YubiKey ure\u0111aj, kliknite ovdje da onemogu\u0107ite YubiKey provjeru"
+   },
+   "Import": {
+      "message": "Uvoz"
+   },
+   "Import_From": {
+      "message": "Uvezi od"
+   },
+   "Import_Your_Data": {
+      "message": "Uvezite svoje podatke"
+   },
+   "Instructions": {
+      "message": "Upute"
+   },
+   "Invalid_Password_": {
+      "message": "Neispravna lozinka."
+   },
+   "Invalid_email_address__try_again": {
+      "message": "Neispravna email adresa, poku\u0161ajte ponovno"
+   },
+   "January": {
+      "message": "Sije\u010Danj"
+   },
+   "July": {
+      "message": "Srpanj"
+   },
+   "June": {
+      "message": "Lipnja"
+   },
+   "Keep_a_history_of_my_logins_and_form_fills": {
+      "message": "Pamti povijest mojih prijava i popunjavanja obrazaca"
+   },
+   "Language": {
+      "message": "Jezik"
+   },
+   "LastPass": {
+      "message": "LastPass"
+   },
+   "Login": {
+      "message": "Prijava"
+   },
+   "Logoff": {
+      "message": "Odjava"
+   },
+   "Male": {
+      "message": "Mu\u0161ko"
+   },
+   "March": {
+      "message": "O\u017Eujak"
+   },
+   "Master_Password": {
+      "message": "Glavna lozinka"
+   },
+   "May": {
+      "message": "Svibanj"
+   },
+   "Mr": {
+      "message": "G."
+   },
+   "Mrs": {
+      "message": "Gospo\u0111a"
+   },
+   "Ms": {
+      "message": "Gospodi\u010Dna"
+   },
+   "My_LastPass_Vault": {
+      "message": "Moj LastPass sef"
+   },
+   "Name_": {
+      "message": "Ime:"
+   },
+   "Nameproper": {
+      "message": "Ime"
+   },
+   "Never_Add_Site": {
+      "message": "Nikada ne dodaj stranicu"
+   },
+   "Never_AutoLogin": {
+      "message": "Nikada se nemoj sam prijaviti"
+   },
+   "Never_Fill_Forms": {
+      "message": "Nikada nemoj popuniti obrasce"
+   },
+   "Never_Generate_Password": {
+      "message": "Nikada nemoj generirati lozinku"
+   },
+   "No": {
+      "message": "Ne"
+   },
+   "No__I_do_not_want_LastPass_to_help_me_fill_forms_automatically": {
+      "message": "Ne, ne \u017Eelim da mi LastPass automatski poma\u017Ee u popunjavanju obrazaca"
+   },
+   "No__do_not_import_any_of_my_insecure_items": {
+      "message": "Ne, ne \u017Eelim uvesti svoje nesigurne podatke"
+   },
+   "Notes": {
+      "message": "Napomene"
+   },
+   "Notes_": {
+      "message": "Napomene:"
+   },
+   "November": {
+      "message": "Studeni"
+   },
+   "OK": {
+      "message": "U redu"
+   },
+   "October": {
+      "message": "Listopad"
+   },
+   "Old_Password": {
+      "message": "Stara lozinka"
+   },
+   "Other": {
+      "message": "Drugo"
+   },
+   "Password": {
+      "message": "Lozinka"
+   },
+   "Password_": {
+      "message": "Lozinka:"
+   },
+   "Password_Reminder": {
+      "message": "Podsjetnik na lozinku"
+   },
+   "Password_reminder_cannot_match_password": {
+      "message": "Podsjetnik na lozinku ne mo\u017Ee biti isti kao i lozinka"
+   },
+   "Please_enter_a_Password_Reminder": {
+      "message": "Molimo vas da unesete podsjetnik na lozinku"
+   },
+   "Preferences": {
+      "message": "Postavke"
+   },
+   "Print": {
+      "message": "Ispi\u0161i"
+   },
+   "Re_enter_Password": {
+      "message": "Ponovo unesite lozinku"
+   },
+   "Recheck_Page": {
+      "message": "Ponovo provjeriti stranicu"
+   },
+   "Remember_Password": {
+      "message": "Zapamti lozinku"
+   },
+   "Save": {
+      "message": "Spremi"
+   },
+   "Save_All_Entered_Data": {
+      "message": "Spremi sve unesene podatke"
+   },
+   "Search": {
+      "message": "Pretra\u017Eivanje"
+   },
+   "Security": {
+      "message": "Sigurnost"
+   },
+   "September": {
+      "message": "Rujna"
+   },
+   "Sites": {
+      "message": "Stranice"
+   },
+   "State___Province": {
+      "message": "Dr\u017Eava / Pokrajina"
+   },
+   "Submit_Form": {
+      "message": "Po\u0161alji obrazac"
+   },
+   "Text": {
+      "message": "Tekst"
+   },
+   "Time_Zone": {
+      "message": "Vremenska zona"
+   },
+   "Title": {
+      "message": "Titula"
+   },
+   "To_create_your_account__please_re_enter_your_LastPass_master_password": {
+      "message": "Kako bi kreirali korisni\u010Dki ra\u010Dun, ponovo unesite glavnu LastPass lozinku."
+   },
+   "To_protect_your_privacy_and_keep_your_data_confidential_": {
+      "message": "Da bi za\u0161titili va\u0161u privatnost i \u010Duvali tajnost va\u0161ih podataka,"
+   },
+   "URL_": {
+      "message": "URL:"
+   },
+   "Username_": {
+      "message": "Korisni\u010Dko ime:"
+   },
+   "Version_": {
+      "message": "Ina\u010Dica:"
+   },
+   "We_also_DO_NOT_keep_a_copy_or_backup_of_it_": {
+      "message": "Tako\u0111er, mi NE \u010CUVAMO kopiju ili backup."
+   },
+   "Windows": {
+      "message": "Windows"
+   },
+   "Yes": {
+      "message": "Da"
+   },
+   "Yes__let_me_choose_which_items_I_want_imported_into_LastPass": {
+      "message": "Da, dopusti mi da odaberem koje stavke \u017Eelim uvesti u LastPass"
+   },
+   "You_must_enter_a_name_": {
+      "message": "Morate unijeti ime."
+   },
+   "Your_password_can_not_be_the_same_as_your_email_": {
+      "message": "Va\u0161a lozinka ne mo\u017Ee biti ista kao i va\u0161 email."
+   },
+   "Your_password_is_easily_guessable_": {
+      "message": "Va\u0161a lozinka se mo\u017Ee lako pogoditi."
+   },
+   "Your_password_is_too_short__It_must_be_at_least_6_characters_long": {
+      "message": "Va\u0161a lozinka je prekratka. Mora imati najmanje 6 znakova."
+   },
+   "Your_password_reminder_serves_to_remind_you_of_what_your": {
+      "message": "Podsjetnik na lozinku slu\u017Ei kako bi vas podsjetio na"
+   },
+   "_none_": {
+      "message": "(nema)"
+   },
+   "actual_password_is__while_still_maintaining_its_secrecy_": {
+      "message": "va\u0161u lozinku, istovremeno sa\u010Duvaju\u0107i njenu tajnost."
+   },
+   "contact_us_and_we_will_email_you_your_password_reminder_": {
+      "message": "kontaktirajte nas i mi \u0107emo vam poslati va\u0161 podsjetnik na lozinku."
+   },
+   "dummy": {
+      "message": "dummy, leave this here so we don't mess up the trailing comma"
+   },
+   "favorites": {
+      "message": "favoriti"
+   },
+   "hour": {
+      "message": "sat"
+   },
+   "hours": {
+      "message": "sati"
+   },
+   "we_DO_NOT_know_what_your_LastPass_password_is_": {
+      "message": "mi NE ZNAMO koja je va\u0161a glavna LastPass lozinka."
+   }
+}

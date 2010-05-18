@@ -1,0 +1,1520 @@
+{
+   "0_9": {
+      "message": "0-9"
+   },
+   "1Password": {
+      "message": "1Password"
+   },
+   "1__Insert_your_YubiKey_in_the_USB_port_with_the_USB_contact_facing_upward": {
+      "message": "1. Csatlakoztasd YubiKey-edet az USB portba \u00FAgy, hogy az f\u00F6lfel\u00E9 n\u00E9zzen."
+   },
+   "1__Run_the_LastPass_Sesame_application_to_generate_a_one_time_password": {
+      "message": "1. Futtassa a LastPass Sesame alkalmaz\u00E1s\u00E1t hogy l\u00E9trehozzon egy egyszeri jelsz\u00F3t"
+   },
+   "2__Paste_the_one_time_password_in_the_input_box_below_and_click__Authenticate_": {
+      "message": "2. Illessze be az egyszeri jelsz\u00F3taz al\u00E1bbi beviteli mez\u0151be \u00E9s kattintson a 'hiteles\u00EDt\u00E9s're "
+   },
+   "2__Wait_until_your_YubiKey_touch_button_shines_with_a_steady_light": {
+      "message": "2. V\u00E1rjon, am\u00EDg a YubiKey \u00E9rint\u0151je folyamatosan kezd vil\u00E1g\u00EDtani."
+   },
+   "3__Hold_your_fingertip_on_the_touch_button_for_2_seconds": {
+      "message": "3. Tartsa az ujjhegy\u00E9t az \u00E9rint\u0151 gombon 2 m\u00E1sodpercig."
+   },
+   "ACTION": {
+      "message": "ESEM\u00C9NY"
+   },
+   "A_Zupper": {
+      "message": "A-Z"
+   },
+   "A_required_update_is_available_for_LastPass__Please_press_OK_to_begin_download_and_installation_": {
+      "message": "Egy sz\u00FCks\u00E9ges LastPass friss\u00EDt\u00E9s \u00E9rhet\u0151 el. K\u00E9rj\u00FCk, nyomja meg az OK gombot a let\u00F6lt\u00E9s \u00E9s telep\u00EDt\u00E9s elkezd\u00E9s\u00E9hez."
+   },
+   "A_retry_file_has_been_found__This_likely_means_that_not_all_of_your_site_changes_have_been_saved__Would_you_like_to_delete_this_file_and_potentially_lose_some_changes_": {
+      "message": "Egy helyre\u00E1ll\u00EDt\u00E1si f\u00E1jl tal\u00E1lhat\u00F3 a rendszerben. Val\u00F3sz\u00EDn\u0171leg nem minden oldal v\u00E1ltoz\u00E1sa ker\u00FClt ment\u00E9sre. Szeretn\u00E9 t\u00F6r\u00F6lni ezt a f\u00E1jlt \u00E9s a lehets\u00E9ges v\u00E1ltoz\u00E1sokat elvesz\u00EDteni?"
+   },
+   "A_server_error_occurred_while_processing_your_request_": {
+      "message": "Hiba t\u00F6rt\u00E9nt a szerveren a k\u00E9r\u00E9s feldolgoz\u00E1sa k\u00F6zben."
+   },
+   "About___": {
+      "message": "N\u00E9vjegy..."
+   },
+   "Accept": {
+      "message": "Alkalmaz"
+   },
+   "Account_Settings": {
+      "message": "Fi\u00F3kbe\u00E1ll\u00EDt\u00E1sok"
+   },
+   "Account_number": {
+      "message": "Sz\u00E1mlasz\u00E1m"
+   },
+   "Actionproper": {
+      "message": "M\u0171velet"
+   },
+   "Add": {
+      "message": "Hozz\u00E1ad\u00E1s"
+   },
+   "Add_Credit_Card": {
+      "message": "Hitelk\u00E1rtya hozz\u00E1ad\u00E1sa"
+   },
+   "Add_Credit_Card_profile": {
+      "message": "Hitelk\u00E1rtya profil hozz\u00E1ad\u00E1sa"
+   },
+   "Add_Field": {
+      "message": "Mez\u0151 hozz\u00E1ad\u00E1sa"
+   },
+   "Add_Form_Fill_profile": {
+      "message": "\u0170rlap kit\u00F6lt\u00E9si profil hozz\u00E1ad\u00E1sa"
+   },
+   "Add_Identity": {
+      "message": "Identit\u00E1s hozz\u00E1ad\u00E1sa"
+   },
+   "Add_New_Site": {
+      "message": "\u00DAj webhely hozz\u00E1ad\u00E1sa"
+   },
+   "Add_Profile": {
+      "message": "Profil hozz\u00E1ad\u00E1sa"
+   },
+   "Add_Secure_Note": {
+      "message": "Biztons\u00E1gos jegyzet hozz\u00E1ad\u00E1sa"
+   },
+   "Add_Site": {
+      "message": "Webhely hozz\u00E1ad\u00E1sa"
+   },
+   "Add_another_custom_field": {
+      "message": "\u00DAjabb egy\u00E9ni mez\u00F5 hozz\u00E1ad\u00E1sa"
+   },
+   "Address": {
+      "message": "C\u00EDm"
+   },
+   "Address_1": {
+      "message": "C\u00EDm 1"
+   },
+   "Address_2": {
+      "message": "C\u00EDm 2"
+   },
+   "Address_3": {
+      "message": "C\u00EDm 3"
+   },
+   "Advanced": {
+      "message": "R\u00E9szletes"
+   },
+   "All": {
+      "message": "\u00D6sszes"
+   },
+   "Allow_LastPass_to_find_insecure_data_on_your_computer_": {
+      "message": "Engedi, hogy a LastPass nem biztons\u00E1gos adatokat keressen ezen a sz\u00E1m\u00EDt\u00F3g\u00E9pen?"
+   },
+   "Alt": {
+      "message": "Alt"
+   },
+   "Alter_the_below_information_to_edit_the_Credit_Card_profile": {
+      "message": "M\u00F3dos\u00EDtsa az al\u00E1bbi inform\u00E1ci\u00F3t a hitelk\u00E1rtya profil szerkeszt\u00E9s\u00E9hez"
+   },
+   "Alter_the_below_information_to_edit_the_Form_Fill_profile": {
+      "message": "M\u00F3dos\u00EDtsa az al\u00E1bbi inform\u00E1ci\u00F3t az \u0171rlap kit\u00F6lt\u00E9si profil szerkeszt\u00E9s\u00E9hez"
+   },
+   "Always_Choose_Profile_and_Credit_Card": {
+      "message": "Mindig v\u00E1lasszon fi\u00F3kot \u00E9s hitelk\u00E1rty\u00E1t"
+   },
+   "An_Update_is_Available__Would_you_like_to_install_": {
+      "message": "El\u00E9rhet\u0151 egy friss\u00EDt\u00E9s. Szeretn\u00E9 telep\u00EDteni?"
+   },
+   "An_error_has_been_encountered_while_loading_your_sites__Please_relogin_": {
+      "message": "Egy hiba l\u00E9pett fel a webhely bet\u00F6lt\u00E9se k\u00F6zben. K\u00E9rem, jelentkezzen be \u00FAjra."
+   },
+   "An_error_occurred": {
+      "message": "Hiba l\u00E9pett fel"
+   },
+   "An_error_occurred_while_importing_your_Google_Chrome_passwords_": {
+      "message": "A Google Chrome jelszavak import\u00E1l\u00E1sa sor\u00E1n hiba t\u00F6rt\u00E9nt."
+   },
+   "Appearance": {
+      "message": "Megjelen\u00E9s"
+   },
+   "April": {
+      "message": "\u00C1prilis"
+   },
+   "Arbitrary_notes_to_store_along_with_this_Form_Fill_profile": {
+      "message": "Tetsz\u0151leges megjegyz\u00E9sek t\u00E1rol\u00E1sa ezzel az \u0171rlap kit\u00F6lt\u00E9si profillal."
+   },
+   "Are_you_sure_you_want_to_have_LastPass_remember_your_password___This_will_significantly_decrease_the_security_of_your_LastPass_account_": {
+      "message": "Biztos benne, hogy a LastPass megjegyezze a jelszav\u00E1t? Ez nagy m\u00E9rt\u00E9kben cs\u00F6kkenti az \u00F6n LastPass hozz\u00E1f\u00E9r\u00E9s\u00E9nek a biztons\u00E1g\u00E1t!"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_field_": {
+      "message": "Biztos, hogy t\u00F6r\u00F6lni akarod ezt a mez\u0151t?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_form_fill_profile_": {
+      "message": "Biztos, hogy t\u00F6r\u00F6lni akarod ezt az \u00FCrlapot?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_generated_password_": {
+      "message": "Biztos, hogy t\u00F6r\u00F6lni akarod ezt a gener\u00E1lt jelsz\u00F3t?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_group_": {
+      "message": "Biztos benne, hogy szeretn\u00E9 t\u00F6r\u00F6lni ezt a csoportot?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_never_URL_": {
+      "message": "Biztos benne, hogy szeretn\u00E9 t\u00F6r\u00F6lni ezt a tiltott URL-t?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_secure_note_": {
+      "message": "Biztos, hogy t\u00F6r\u00F6lni szeretn\u00E9d ezt a biztons\u00E1gos jegyzetet?"
+   },
+   "Are_you_sure_you_would_like_to_delete_this_site_": {
+      "message": "Biztosan t\u00F6r\u00F6lni szeretn\u00E9d ezt a weboldalt?"
+   },
+   "August": {
+      "message": "Augusztus"
+   },
+   "Authenticate": {
+      "message": "Hiteles\u00EDt"
+   },
+   "Authentication_Failed_": {
+      "message": "Hiteles\u00EDt\u00E9s nem siker\u00FClt."
+   },
+   "AutoFill": {
+      "message": "Automatikus kit\u00F6lt\u00E9s"
+   },
+   "AutoLogin": {
+      "message": "Bel\u00E9pek"
+   },
+   "Automatically_Fill_Login_Information": {
+      "message": "Bejelentkez\u00E9si adatok automatikus kit\u00F6lt\u00E9se"
+   },
+   "Automatically_Logoff_after_idle__mins_": {
+      "message": "Automatikus kijelentkez\u00E9s t\u00E9tlen \u00E1llapot miatt (perc)"
+   },
+   "Automatically_Logoff_when_all_browsers_are_closed_and_Chrome_has_been_closed_for__mins_": {
+      "message": "Automatikus kijelentkez\u00E9s, amikor az \u00F6sszes b\u00F6ng\u00E9sz\u0151 z\u00E1rva \u00E9s Chrome bez\u00E1rva (perc)"
+   },
+   "Automatically_login_to_sites_if_time_since_last_login____seconds_": {
+      "message": "Automatikus bel\u00E9p\u00E9s az oldalra a LastPass bel\u00E9p\u00E9s ut\u00E1n \u003E (m\u00E1sodperc)"
+   },
+   "Avoid_Ambiguous_Characters": {
+      "message": "Nem egy\u00E9rtelm\u0171 karakterek ker\u00FCl\u00E9se"
+   },
+   "Bank_account": {
+      "message": "Banksz\u00E1mla"
+   },
+   "Bank_name": {
+      "message": "Bank neve"
+   },
+   "Binary_Component_": {
+      "message": "Bin\u00E1ris komponens:"
+   },
+   "Birthday": {
+      "message": "Sz\u00FClet\u00E9snap"
+   },
+   "Blacklist": {
+      "message": "Fi\u00F3kj\u00E1t ideiglenesen felf\u00FCggesztett\u00E9k (5 percig), a t\u00FAl sok sikertelen bejelentkez\u00E9s miatt."
+   },
+   "Blog": {
+      "message": "Blog"
+   },
+   "Browse_the_web_as_you_normally_would_and_LastPass_will_automatically_remember_passwords_as_you_enter_them_": {
+      "message": "B\u00F6ng\u00E9szed a webet, ahogy eddig \u00E9s a LastPass automatikusan megjegyzi a jelszavakat amiket be\u00EDrsz."
+   },
+   "Built_": {
+      "message": "K\u00E9sz\u00FClt:"
+   },
+   "But_I_m_a_forgetful_person___what_should_I_do_if_I_forget_my_password_": {
+      "message": "De \u00E9n egy feled\u00E9keny ember vagyok... mit tegyek ha elfelejtem ezt a jelszavam?"
+   },
+   "Can_t_find_hidden_LastPass_window": {
+      "message": "Nem tal\u00E1lhat\u00F3 rejtett LastPass ablak."
+   },
+   "Cancel": {
+      "message": "M\u00E9gse"
+   },
+   "Change": {
+      "message": "V\u00E1ltoztat\u00E1s"
+   },
+   "Change_Password": {
+      "message": "Jelsz\u00F3 m\u00F3dos\u00EDt\u00E1sa"
+   },
+   "Check_For_Updates": {
+      "message": "Friss\u00EDt\u00E9sek keres\u00E9se"
+   },
+   "Checkbox": {
+      "message": "Jel\u00F6l\u0151n\u00E9gyzet"
+   },
+   "Checking_For_Updates___": {
+      "message": "Friss\u00EDt\u00E9sek keres\u00E9se..."
+   },
+   "Choose_Profile_and_Credit_Card": {
+      "message": "Fi\u00F3k \u00E9s hitelk\u00E1rtya v\u00E1lt\u00E1sa"
+   },
+   "City___Town": {
+      "message": "V\u00E1ros"
+   },
+   "Clear": {
+      "message": "\u00DCres"
+   },
+   "Clear_Clipboard_after_use__seconds_": {
+      "message": "Haszn\u00E1latot k\u00F6vet\u0151en letiltja a v\u00E1g\u00F3lapot (mp)"
+   },
+   "Clear_Forms": {
+      "message": "\u0170rlapok t\u00F6rl\u00E9se"
+   },
+   "Clear_Local_Cache": {
+      "message": "Helyi gyors\u00EDt\u00F3t\u00E1r \u00FCr\u00EDt\u00E9se"
+   },
+   "Clear_Recent": {
+      "message": "T\u00F6r\u00F6lje ezt"
+   },
+   "Click_Continue_to_start_using_LastPass_": {
+      "message": "Kattintson a Folytat\u00E1s gombra a LastPass haszn\u00E1lat\u00E1nak megkezd\u00E9s\u00E9hez."
+   },
+   "Click_here_to_launch_account_settings": {
+      "message": "Kattintson ide a fi\u00F3k be\u00E1ll\u00EDt\u00E1sok megnyit\u00E1s\u00E1hoz."
+   },
+   "Click_here_to_launch_feedback": {
+      "message": "Kattintson ide a visszajelz\u00E9s megnyit\u00E1s\u00E1hoz."
+   },
+   "Click_here_to_watch_a_video_on_basic_usage_": {
+      "message": "Kattintson ide az alapvet\u0151 haszn\u00E1latot bemutat\u00F3 vide\u00F3 megtekint\u00E9s\u00E9hez."
+   },
+   "Close": {
+      "message": "Bez\u00E1r\u00E1s"
+   },
+   "Close_this_window": {
+      "message": "Z\u00E1rja be ezt az ablakot"
+   },
+   "Collapse_All": {
+      "message": "\u00D6sszes becsuk\u00E1sa"
+   },
+   "Company": {
+      "message": "C\u00E9g"
+   },
+   "Complete_the_below_information_to_add_a_new_Credit_Card_profile": {
+      "message": "T\u00F6ltse ki az al\u00E1bbi adatokat egy \u00FAj hitelk\u00E1rtya profil hozz\u00E1ad\u00E1s\u00E1hoz"
+   },
+   "Complete_the_below_information_to_add_a_new_Form_Fill_profile": {
+      "message": "T\u00F6ltse ki az al\u00E1bbi adatokat egy \u00FAj \u0171rlap kit\u00F6lt\u0151 profil hozz\u00E1ad\u00E1s\u00E1hoz"
+   },
+   "Configure_Form_Fill": {
+      "message": "\u0170rlap kit\u00F6lt\u00E9s konfigur\u00E1l\u00E1sa"
+   },
+   "Confirm": {
+      "message": "Meger\u0151s\u00EDt\u00E9s"
+   },
+   "Confirm_Password": {
+      "message": "Jelsz\u00F3 meger\u0151s\u00EDt\u00E9se"
+   },
+   "Congratulations": {
+      "message": "Gratul\u00E1lunk"
+   },
+   "Contact": {
+      "message": "Kapcsolat"
+   },
+   "Continue": {
+      "message": "Folytat\u00E1s"
+   },
+   "Copy": {
+      "message": "M\u00E1sol\u00E1s"
+   },
+   "Copy_Password": {
+      "message": "Jelsz\u00F3 m\u00E1sol\u00E1sa"
+   },
+   "Copy_Username": {
+      "message": "Felhaszn\u00E1l\u00F3n\u00E9v m\u00E1sol\u00E1sa"
+   },
+   "Copyright_2008_LastPass__All_Rights_Reserved__Portions_of_this_software_were_licensed_from_third_parties_as_described_at_": {
+      "message": "Copyright 2008 LastPass. Minden jog fenntartva.\nE szoftver egyes r\u00E9szei felett harmadik szem\u00E9lyek rendelkeznek joggal az al\u00E1bbiak szerint:"
+   },
+   "Country": {
+      "message": "Orsz\u00E1g"
+   },
+   "County": {
+      "message": "Megye"
+   },
+   "Create_Account": {
+      "message": "Fi\u00F3k l\u00E9trehoz\u00E1sa"
+   },
+   "Create_Sub_Group": {
+      "message": "Alcsoport l\u00E9trehoz\u00E1sa"
+   },
+   "Create_an_Account": {
+      "message": "\u00DAj fi\u00F3k l\u00E9trehoz\u00E1sa"
+   },
+   "Creating_Account___": {
+      "message": "Fi\u00F3k l\u00E9trehoz\u00E1sa..."
+   },
+   "Credit_card": {
+      "message": "Hitelk\u00E1rtya"
+   },
+   "Credit_card_number": {
+      "message": "Hitelk\u00E1rtya sz\u00E1ma"
+   },
+   "Ctrl": {
+      "message": "Ctrl"
+   },
+   "Custom_Value": {
+      "message": "Egy\u00E9ni \u00E9rt\u00E9k"
+   },
+   "Custom_field__": {
+      "message": "Egy\u00E9ni mez\u00F5 #"
+   },
+   "Custom_fields": {
+      "message": "Egy\u00E9ni mez\u0151k"
+   },
+   "December": {
+      "message": "December"
+   },
+   "Default_Form_Fill_Profile": {
+      "message": "Alap\u00E9rtelmezett \u0171rlap kit\u00F6lt\u00E9si profil"
+   },
+   "Delete": {
+      "message": "T\u00F6rl\u00E9s"
+   },
+   "Delete_Group": {
+      "message": "Csoport t\u00F6rl\u00E9se"
+   },
+   "Disable_Insecure_Chrome_Password_Manager": {
+      "message": "Letiltja a Chrome nem biztons\u00E1gos jelsz\u00F3kezel\u0151j\u00E9t."
+   },
+   "Disable_Multifactor_Authentication": {
+      "message": "Letiltja a Multifactor hiteles\u00EDt\u00E9st."
+   },
+   "Disable_Single_factor_Authentication": {
+      "message": "Egyfaktoros hiteles\u00EDt\u00E9s letilt\u00E1s."
+   },
+   "Discard_changes_and_close_this_window": {
+      "message": "V\u00E1ltoz\u00E1sok elvet\u00E9se \u00E9s ennek az ablaknak becsuk\u00E1sa"
+   },
+   "Do_not_overwrite_fields_that_are_already_filled": {
+      "message": "Ne \u00EDrja fel\u00FCl a m\u00E1r kit\u00F6lt\u00F6tt mez\u0151ket."
+   },
+   "Do_not_re_prompt_for_": {
+      "message": "Ne adjon \u00FAj kezdm\u00E9nyez\u00E9st"
+   },
+   "Do_you_really_want_to_quit___You_cannot_use_LastPass_without_creating_an_account_": {
+      "message": "Val\u00F3ban ki akar l\u00E9pni? Fi\u00F3k l\u00E9trehoz\u00E1sa n\u00E9lk\u00FCl nem haszn\u00E1lhatja a LastPass-t."
+   },
+   "Down": {
+      "message": "Le"
+   },
+   "Dr": {
+      "message": "Dr."
+   },
+   "Dutch": {
+      "message": "Holland"
+   },
+   "Edit": {
+      "message": "Szerkeszt\u00E9s"
+   },
+   "Edit_Credit_Card_profile": {
+      "message": "Hitelk\u00E1rtya profil szerkeszt\u00E9se"
+   },
+   "Edit_Form_Fields": {
+      "message": "\u0170rlap mez\u0151inek szerkeszt\u00E9se"
+   },
+   "Edit_Form_Fill_profile": {
+      "message": "\u0170rlap kit\u00F6lt\u00E9si profil szerkeszt\u00E9se"
+   },
+   "Email": {
+      "message": "E-mail"
+   },
+   "Email_address": {
+      "message": "E-mail c\u00EDm"
+   },
+   "Email_already_in_use__have_you_forgotten_your_password_": {
+      "message": "Ez az Email c\u00EDm m\u00E1r foglalt, esetleg elfelejtetted a jelszavad?"
+   },
+   "End": {
+      "message": "V\u00E9ge"
+   },
+   "English": {
+      "message": "Angol"
+   },
+   "Enter_arbitrary_notes": {
+      "message": "Tetsz\u0151leges jegyzet bevitele"
+   },
+   "ErrorGetAcctsMsg": {
+      "message": "Hiba t\u00F6rt\u00E9nt az \u00F6n LastPass oldalainak lek\u00E9r\u00E9se k\u00F6zben. Pr\u00F3b\u00E1lj meg \u00FAjra bejelentkezni az oldalak lek\u00E9r\u00E9s\u00E9hez."
+   },
+   "ErrorLoginMsg": {
+      "message": "Hiba t\u00F6rt\u00E9nt a LastPass bejelentkez\u00E9se k\u00F6zben. K\u00E9rj\u00FCk, ellen\u0151rizze az internetkapcsolatot."
+   },
+   "ErrorSendingMsg": {
+      "message": "Hiba t\u00F6rt\u00E9nt, mik\u00F6zben megpr\u00F3b\u00E1lta felvenni a kapcsolatot a szerverrel. K\u00E9rj\u00FCk, ellen\u0151rizze az internetkapcsolatot."
+   },
+   "ErrorSessionMsg": {
+      "message": "LastPass peri\u00F3dusa lej\u00E1rt. K\u00E9rj\u00FCk, l\u00E9pjen be \u00FAjra."
+   },
+   "Evening_number": {
+      "message": "Esti sz\u00E1m"
+   },
+   "ExistingUsersOTPPrompt": {
+      "message": "A LastPass most el tud t\u00E1rolni egy Egyszeri Jelsz\u00F3t (OneTimePassword=OTP), mely a fi\u00F3k helyre\u00E1ll\u00EDt\u00E1s\u00E1ra szolg\u00E1l, ha elfelejtette a LastPass mester jelszav\u00E1t. Ez a jelsz\u00F3 mindaddig tiltva marad, am\u00EDg a szerveren nem aktiv\u00E1lj\u00E1k.\n\nK\u00EDv\u00E1nja aktiv\u00E1lni a fi\u00F3k helyre\u00E1ll\u00EDt\u00E1st?"
+   },
+   "Expand_All": {
+      "message": "\u00D6sszes kibont\u00E1sa"
+   },
+   "Expiration_date": {
+      "message": "Lej\u00E1rati id\u0151"
+   },
+   "Export_To": {
+      "message": "Export\u00E1l\u00E1s mint.."
+   },
+   "Favorite": {
+      "message": "Kedvenc"
+   },
+   "Fax_number": {
+      "message": "Faxsz\u00E1m"
+   },
+   "February": {
+      "message": "Febru\u00E1r"
+   },
+   "Feedback": {
+      "message": "Visszajelz\u00E9s"
+   },
+   "Female": {
+      "message": "N\u0151"
+   },
+   "Fields_": {
+      "message": "Mez\u0151k"
+   },
+   "Fill_Current": {
+      "message": "Aktu\u00E1lis kit\u00F6lt\u00E9se"
+   },
+   "Fill_Form": {
+      "message": "Kit\u00F6lt\u00E9s"
+   },
+   "Fill_Forms": {
+      "message": "\u0170rlapok kit\u00F6lt\u00E9se"
+   },
+   "Fill_In_Default_Form_Fill_Profile": {
+      "message": "T\u00F6ltse ki az alap\u00E9rtelmezett \u0171rlap kit\u00F6lt\u00E9si profilt."
+   },
+   "Fill_In_Next_Login__When_Multiple_": {
+      "message": "T\u00F6ltse ki a k\u00F6vetkez\u0151 bejelentkez\u00E9st (ha t\u00F6bb van)"
+   },
+   "Fill_In_Previous_Login__When_Multiple_": {
+      "message": "T\u00F6ltse ki az el\u0151z\u0151 bejelentkez\u00E9st (ha t\u00F6bb van)"
+   },
+   "FillableFormDetected": {
+      "message": "Ezen a lapon egy kit\u00F6lthet\u0151 \u0171rlap van."
+   },
+   "Find_a_site": {
+      "message": "Weblap keres\u00E9se"
+   },
+   "Firefox_Password_Manager": {
+      "message": "Firefox jelsz\u00F3kezel\u0151"
+   },
+   "First_3_digits_of_your_phone_number": {
+      "message": "Telefonsz\u00E1m\u00E1nak els\u0151 h\u00E1rom sz\u00E1mjegye"
+   },
+   "First_name": {
+      "message": "Keresztn\u00E9v"
+   },
+   "For_each_coordinate_listed_below__find_the_value_on_your_grid_and_enter_the_value_": {
+      "message": "Az egyes felsorolt koordin\u00E1t\u00E1\u00E9khoz keresse meg az \u00E9rt\u00E9k\u00E9t a h\u00E1l\u00F3zat\u00E1n \u00E9s adja meg az \u00E9rt\u00E9k\u00E9t"
+   },
+   "Form_Fill": {
+      "message": "Formanyomtatv\u00E1ny kit\u00F6lt\u00E9se"
+   },
+   "Form_Name_": {
+      "message": "\u0170rlap neve:"
+   },
+   "Forums": {
+      "message": "F\u00F3rumok"
+   },
+   "Gender": {
+      "message": "Nem"
+   },
+   "General": {
+      "message": "\u00C1ltal\u00E1nos"
+   },
+   "Generate": {
+      "message": "Gener\u00E1l\u00E1s"
+   },
+   "GeneratePassword": {
+      "message": "Ha egy \u00FAj fi\u00F3kot l\u00E9tes\u00EDt vagy megv\u00E1ltoztat egy jelsz\u00F3t, kattintson a gener\u00E1l\u00E1sra egyedi \u00E9s biztons\u00E1gos jelsz\u00F3 l\u00E9trehoz\u00E1s\u00E1hoz a LastPass seg\u00EDts\u00E9g\u00E9vel. "
+   },
+   "Generate_Secure_Password": {
+      "message": "Biztons\u00E1gi jelsz\u00F3 gener\u00E1l\u00E1sa"
+   },
+   "Generated_Password_for": {
+      "message": "Gener\u00E1lt jelsz\u00F3 ehhez:"
+   },
+   "Generic_CSV_File": {
+      "message": "Sima CSV f\u00E1jl"
+   },
+   "Go_Premium_": {
+      "message": "V\u00E1lassza a Premiumot!"
+   },
+   "Go_to_URL": {
+      "message": "Ugr\u00E1s URL-re"
+   },
+   "Google_Chrome": {
+      "message": "Google Chrome"
+   },
+   "Google_Chrome_Password_Manager": {
+      "message": "Google Chrome Password Manager"
+   },
+   "Group_": {
+      "message": "Csoport:"
+   },
+   "Help_Translate": {
+      "message": "Seg\u00EDts ford\u00EDtani!"
+   },
+   "Help___": {
+      "message": "S\u00FAg\u00F3..."
+   },
+   "Highlight_input_boxes": {
+      "message": "Beviteli mez\u0151k kiemel\u00E9se"
+   },
+   "History": {
+      "message": "Eddigi esem\u00E9nyek"
+   },
+   "Home": {
+      "message": "Otthon"
+   },
+   "HotKeys": {
+      "message": "Gyorsgombok"
+   },
+   "IMPORT_": {
+      "message": "IMPORT?"
+   },
+   "IT_IS_CRITICAL_THAT_YOU_NEVER_FORGET_YOUR_NEW_LASTPASS_PASSWORD_": {
+      "message": "NAGYON FONTOS, HOGY SOHA NE FELEJTSD EL \u00DAJ LASTPASS JELSZAVAD!"
+   },
+   "I_forgot_my_password__Help_": {
+      "message": "Elfelejtettem a jelszavam, S\u00FAg\u00F3"
+   },
+   "I_have_read_and_agree_with_the": {
+      "message": "Elolvastam \u00E9s elfogadom a(z)"
+   },
+   "I_understand_that_my_encrypted_data_will_be_sent_to_LastPass": {
+      "message": "Tudom\u00E1sul veszem, hogy az \u00E9n titkos\u00EDtott adataimat k\u00FCldi el a LastPass-hoz."
+   },
+   "Identities": {
+      "message": "Identit\u00E1sok"
+   },
+   "Identity": {
+      "message": "Identit\u00E1s"
+   },
+   "If_checked__you_will_be_asked_to_re_enter_your_master_password_before_being_able_to_access_this_Form_Fill_profile": {
+      "message": "Ha be van jel\u00F6lve, k\u00E9rni fogja, hogy ism\u00E9telje meg mester jelszav\u00E1t, miel\u0151tt hozz\u00E1f\u00E9rhetne ehhez az \u0171rlap kit\u00F6lt\u00E9si profilhoz"
+   },
+   "If_you_already_have_a_LastPass_account_you_can_close_this_window_and_login_": {
+      "message": "Ha m\u00E1r van LastPass fi\u00F3kja, bez\u00E1rhatja ezt az ablakot \u00E9s bejelentkezhet."
+   },
+   "If_you_do_end_up_forgetting_your_LastPass_master_password_": {
+      "message": "Ha val\u00F3ban befejezi a LastPass mesterjelsz\u00F3t elfelejtve,"
+   },
+   "If_you_lost_your_Sesame_device__click_here_to_disable_Sesame_authentication": {
+      "message": "Ha elvesztette Sesame eszk\u00F6z\u00E9t, kattintson ide, hogy letilthassa Sesame hiteles\u00EDt\u00E9s\u00E9t."
+   },
+   "If_you_lost_your_YubiKey_device__click_here_to_disable_YubiKey_authentication": {
+      "message": "Ha elvesztette YubiKey k\u00E9sz\u00FCl\u00E9k\u00E9t, kattintson ide, hogy letiltsa YubiKey igazol\u00E1s\u00E1t "
+   },
+   "If_you_lost_your_grid__click_here_to_disable_grid_authentication": {
+      "message": "Ha elvesztette a h\u00E1l\u00F3zat\u00E1t, kattintson ide a h\u00E1l\u00F3zat hiteles\u00EDt\u00E9s\u00E9nek letilt\u00E1s\u00E1hoz "
+   },
+   "Import": {
+      "message": "Import\u00E1l\u00E1s"
+   },
+   "Import_From": {
+      "message": "Import\u00E1l\u00E1s"
+   },
+   "Import_Your_Data": {
+      "message": "Saj\u00E1t adatok import\u00E1l\u00E1sa"
+   },
+   "Importing_your_data_to_your_LastPass_vault_will_secure_it_and_protect_you_against_identity_theft__All_imported_data_remains_COMPLETELY_confidential__the_only_person_who_can_view_YOUR_data_is_YOU_": {
+      "message": "Adatainak LastPass sz\u00E9fj\u00E9be import\u00E1l\u00E1s\u00E1val biztons\u00E1gba helyezi azokat \u00E9s meg\u00F3vja az azonoss\u00E1g eltulajdon\u00EDt\u00E1s\u00E1t\u00F3l. Valamennyi import\u00E1lt adat TELJESEN bizalmas marad: az egyetlen szem\u00E9ly, ak az \u00D6N adatait l\u00E1thatja, az \u00D6N."
+   },
+   "Install_the_binary_version_of_LastPass_for_Chrome_to_enable_automatic_logoff_after_idle": {
+      "message": "Telep\u00EDtse a LastPass bin\u00E1ris v\u00E1ltozat\u00E1t a Chrome-hoz, hogy enged\u00E9lyezni lehessen az automatikus kijelentkez\u00E9st, ha nem haszn\u00E1lj\u00E1k."
+   },
+   "Install_the_binary_version_of_LastPass_for_Chrome_to_enable_importing_passwords_from_Google_Chrome_password_manager": {
+      "message": "Telep\u00EDtse a LastPass Chrome v\u00E1ltozat\u00E1nak bin\u00E1ris verzi\u00F3j\u00E1t, hogy import\u00E1lni tudja jelszavait a Google Chrome jelsz\u00F3kezel\u0151j\u00E9b\u0151l."
+   },
+   "Install_the_binary_version_of_LastPass_for_Chrome_to_enable_sharing_login_state_between_other_browsers": {
+      "message": "Telep\u00EDtse a LastPass bin\u00E1ris v\u00E1ltozat\u00E1t a Chrome-hoz, hogy enged\u00E9lyezni lehessen a megoszt\u00E1sos bejelentkez\u00E9st m\u00E1s b\u00F6ng\u00E9sz\u0151k k\u00F6z\u00F6tt."
+   },
+   "Instructions": {
+      "message": "Utas\u00EDt\u00E1sok"
+   },
+   "Invalid_Password_": {
+      "message": "\u00C9rv\u00E9nytelen jelsz\u00F3."
+   },
+   "Invalid_email_address__try_again": {
+      "message": "\u00C9rv\u00E9nytelen e-mail c\u00EDm, pr\u00F3b\u00E1lkozz \u00FAjra"
+   },
+   "Issue_number": {
+      "message": "Kibocs\u00E1t\u00E1si sz\u00E1m"
+   },
+   "January": {
+      "message": "Janu\u00E1r"
+   },
+   "July": {
+      "message": "J\u00FAlius"
+   },
+   "June": {
+      "message": "J\u00FAnius"
+   },
+   "KeePass": {
+      "message": "KeePass"
+   },
+   "Keep_a_history_of_my_logins_and_form_fills": {
+      "message": "Napl\u00F3zza az \u00E9n bel\u00E9p\u00E9seimet \u00E9s az \u0171rlapkit\u00F6lt\u00E9seket"
+   },
+   "Language": {
+      "message": "Nyelv"
+   },
+   "LastPass": {
+      "message": "LastPass"
+   },
+   "LastPass_CSV_File": {
+      "message": "LastPass CSV f\u00E1jl"
+   },
+   "LastPass_Chrome_Toolbar": {
+      "message": "LastPass Chrome Eszk\u00F6zt\u00E1r"
+   },
+   "LastPass_Encrypted_File": {
+      "message": "LastPass titkos\u00EDtott f\u00E1jl"
+   },
+   "LastPass_Grid_Multifactor_Authentication": {
+      "message": "LastPass Grid Multifactor hiteles\u00EDt\u00E9s"
+   },
+   "LastPass_can_automatically_fill_web_page_forms_with_a_single_click___Using_automatic__Form_Filling__will_not_only_save_you_time__but_will_also_enhance_your_security_when_shopping_online_": {
+      "message": "A LastPass egyetlen kattint\u00E1ssal, automatikusan kit\u00F6lti a weboldalon lev\u0151 \u0171rlapokat. Az automatikus 'nyomtatv\u00E1nyok kit\u00F6lt\u00E9s' funkci\u00F3val nem csak id\u0151t takar\u00EDt meg, hanem n\u00F6velni fogja on-line v\u00E1s\u00E1rl\u00E1sai biztons\u00E1g\u00E1t."
+   },
+   "LastPass_cannot_login_until_cookies_are_allowed_from_lastpass_com": {
+      "message": "A LastPass mindaddig nem tud bel\u00E9pni, am\u00EDg a cookie-k enged\u00E9lyezve vannak a lastpass.com-b\u00F3l."
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_like_to_continue_": {
+      "message": "A LastPass egy nem biztons\u00E1gos bel\u00E9p\u00E9si form\u00E1t \u00E9szlelt. K\u00EDv\u00E1nja folytatni?"
+   },
+   "LastPass_detected_a_login_form_that_is_insecure___Would_you_still_like_LastPass_to_fill_the_form_": {
+      "message": "A LastPass egy nem biztons\u00E1gos bel\u00E9p\u00E9si form\u00E1t \u00E9szlelt. Tov\u00E1bbra is szeretn\u00E9, ha a LastPass t\u00F6lteni ki az \u0171rlapot?"
+   },
+   "LastPass_detected_a_password_change_for": {
+      "message": "A LastPass jelsz\u00F3 v\u00E1ltoz\u00E1st \u00E9szlelt."
+   },
+   "LastPass_detected_a_password_change_for_domain_": {
+      "message": "A LastPass jelsz\u00F3 v\u00E1ltoz\u00E1st \u00E9szlelt a tartom\u00E1nyban:"
+   },
+   "LastPass_detected_a_password_change_for_user_": {
+      "message": "A LastPass felhaszn\u00E1l\u00F3i jelsz\u00F3 v\u00E1ltoz\u00E1st \u00E9szlelt:"
+   },
+   "LastPass_has_filled_your_login_information_into_the_form_on_this_page_": {
+      "message": "A LastPass bet\u00F6lt\u00F6tte az \u00D6n bel\u00E9p\u00E9si adatait az oldalon lev\u0151 \u0171rlapon."
+   },
+   "LastPass_is_fully_installed___When_you_install_LastPass_on_other_computers_you_will_not_have_to_go_through_this_process_again__you_ll_simply_be_able_to_login____Do_not_share_your_Master_Password_with_anyone__including_LastPass_employees__we_ll_never_ask_for_it___LastPass_encrypts_your_sensitive_data_locally_so_even_LastPass_employees_do_not_have_access_to_it___You_can_get_help_by_clicking_on_the_LastPass_icon_and_going_to_Help_": {
+      "message": "A LastPass teljesen telep\u00EDtve van. Amikor a LastPass-t egy m\u00E1sik sz\u00E1m\u00EDt\u00F3g\u00E9pre telep\u00EDti, nem kell megism\u00E9telni a telep\u00EDt\u00E9si folyamatot, csak egyszer\u0171en be kell jelentkezni. Ne ossza meg senkivel a mester jelsz\u00F3t, bele\u00E9rtve a LastPass alkalmazottait is, mi soha nem fogjuk azt k\u00E9rdezni! A LastPass az \u00D6n \u00E9rz\u00E9keny adatait \u00D6nn\u00E9l helyben k\u00F3dolja, \u00EDgy m\u00E9g a LastPass alkalmazottai sem f\u00E9rhetnek hozz\u00E1. Seg\u00EDts\u00E9get a LastPass ikonra kattintva kaphat a Seg\u00EDts\u00E9g men\u00FCpont kiv\u00E1laszt\u00E1s\u00E1val."
+   },
+   "LastPass_is_the_last_password_you_ll_ever_have_to_remember___If_you_re_new_to_LastPass__we_ll_just_need_a_few_minutes_of_your_time_to_setup_your_account___You_ll_be_able_to_use_this_account_on_any_other_PC_you_use_to_always_keep_your_personal_data_in_sync___Hit_create_account_to_begin_": {
+      "message": "LastPass a legutols\u00F3 jelsz\u00F3, amit meg kell jegyeznie. Ha m\u00E9g nem ismeri a LastPass-t, csak n\u00E9h\u00E1ny percre van sz\u00FCks\u00E9g\u00FCnk az \u00D6n idej\u00E9b\u0151l, hogy elk\u00E9sz\u00EDts\u00FCk felhaszn\u00E1l\u00F3i fi\u00F3kj\u00E1t. Ezt a fi\u00F3kot b\u00E1rmelyik sz\u00E1m\u00EDt\u00F3g\u00E9pr\u0151l haszn\u00E1lhatja szem\u00E9lyes adatait szinkronban tartva. Kattintson a fi\u00F3k l\u00E9trehoz\u00E1sa gombra."
+   },
+   "Last_4_digits_of_your_phone_number": {
+      "message": "Telefonsz\u00E1m\u00E1nak utols\u00F3 n\u00E9gy sz\u00E1mjegye"
+   },
+   "Last_name": {
+      "message": "Vezet\u00E9kn\u00E9v"
+   },
+   "Left": {
+      "message": "Bal"
+   },
+   "LoggedInOffline": {
+      "message": "A LastPass nem tudott a bel\u00E9ptet\u0151 szerverrel kapcsolatba l\u00E9pni, ez\u00E9rt most \u00D6n kapcsolat n\u00E9lk\u00FCli \u00FCzemm\u00F3dban van. N\u00E9h\u00E1ny funkci\u00F3 korl\u00E1tozottan haszn\u00E1lhat\u00F3."
+   },
+   "Login": {
+      "message": "Bejelentkez\u00E9s"
+   },
+   "LoginError": {
+      "message": "Hiba a LastPassba val\u00F3 bel\u00E9p\u00E9skor.K\u00E9rj\u00FCk, pr\u00F3b\u00E1lja \u00FAjra. "
+   },
+   "Login_to_LastPass": {
+      "message": "Bel\u00E9p\u00E9s a LastPass-ba"
+   },
+   "Logoff": {
+      "message": "Kijelentkez\u00E9s"
+   },
+   "Logoff_": {
+      "message": "Kijelentkez\u00E9s"
+   },
+   "MSI_PasswordKeeper": {
+      "message": "MSI PasswordKeeper"
+   },
+   "Male": {
+      "message": "F\u00E9rfi"
+   },
+   "March": {
+      "message": "M\u00E1rcius"
+   },
+   "Master_Password": {
+      "message": "Mesterjelsz\u00F3"
+   },
+   "May": {
+      "message": "M\u00E1jus"
+   },
+   "Meta": {
+      "message": "Meta"
+   },
+   "Middle_3_digits_of_your_phone_number": {
+      "message": "Telefonsz\u00E1m\u00E1nak k\u00F6z\u00E9ps\u0151 h\u00E1rom sz\u00E1mjegye"
+   },
+   "Middle_name": {
+      "message": "K\u00F6z\u00E9ps\u0151 n\u00E9v"
+   },
+   "Minimum_Digit_Count": {
+      "message": "Sz\u00E1mjegyek minim\u00E1lis sz\u00E1ma"
+   },
+   "Mobile_number": {
+      "message": "Mobiltelefon sz\u00E1m"
+   },
+   "More": {
+      "message": "T\u00F6bb"
+   },
+   "Move_to_Group": {
+      "message": "Vigye a csoporthoz."
+   },
+   "Mr": {
+      "message": "\u00FAr"
+   },
+   "Mrs": {
+      "message": "asszony"
+   },
+   "Ms": {
+      "message": "kisasszony"
+   },
+   "MyPasswordSafe": {
+      "message": "MyPasswordSafe"
+   },
+   "My_LastPass_Vault": {
+      "message": "Saj\u00E1t LastPass sz\u00E9fem"
+   },
+   "NAME": {
+      "message": "N\u00C9V"
+   },
+   "Name_": {
+      "message": "N\u00E9v:"
+   },
+   "Name_on_card": {
+      "message": "N\u00E9v a k\u00E1rty\u00E1n"
+   },
+   "Nameproper": {
+      "message": "N\u00E9v"
+   },
+   "Never_Add_Site": {
+      "message": "Soha se adjon weblapot"
+   },
+   "Never_AutoFill": {
+      "message": "Sohase t\u00F6ltse ki automatikusan."
+   },
+   "Never_AutoLogin": {
+      "message": "Soha ne legyen automatikus bejelentkez\u00E9s."
+   },
+   "Never_Fill_Forms": {
+      "message": "Soha se t\u00F6lts\u00F6n ki \u0171rlapokat."
+   },
+   "Never_For_This_Domain": {
+      "message": "Ehhez a domain-hez soha"
+   },
+   "Never_For_This_Page": {
+      "message": "Ezen a weblapon soha"
+   },
+   "Never_For_This_Site": {
+      "message": "Soha ezen az oldalon"
+   },
+   "Never_Generate_Password": {
+      "message": "Soha ne gener\u00E1ljon jelsz\u00F3t."
+   },
+   "Never___": {
+      "message": "Soha..."
+   },
+   "New_Master_Password": {
+      "message": "\u00DAj mester jelsz\u00F3"
+   },
+   "No": {
+      "message": "Nem"
+   },
+   "No_Thanks": {
+      "message": "K\u00F6sz\u00F6n\u00F6m, nem"
+   },
+   "No_Updates_Are_Available": {
+      "message": "Nincs el\u00E9rhet\u0151 friss\u00EDt\u00E9s"
+   },
+   "No__I_do_not_want_LastPass_to_help_me_fill_forms_automatically": {
+      "message": "Nem, nem szeretn\u00E9m ha a LastPass kit\u00F6lten\u00E9 automatikusan"
+   },
+   "No__do_not_import_any_of_my_insecure_items": {
+      "message": "Nem, ne import\u00E1lja egyik nem biztons\u00E1gos adatomat se."
+   },
+   "None_Available": {
+      "message": "Nincs el\u00E9rhet\u0151"
+   },
+   "Not_Now": {
+      "message": "Nem most"
+   },
+   "Notes": {
+      "message": "Megjegyz\u00E9sek"
+   },
+   "Notes_": {
+      "message": "Megjegyz\u00E9s:"
+   },
+   "Notifications": {
+      "message": "\u00C9rtes\u00EDt\u00E9sek"
+   },
+   "November": {
+      "message": "November"
+   },
+   "OK": {
+      "message": "OK"
+   },
+   "October": {
+      "message": "Okt\u00F3ber"
+   },
+   "Offer_to_Generate_Secure_Passwords": {
+      "message": "Biztons\u00E1gos jelsz\u00F3 k\u00E9sz\u00EDt\u00E9s\u00E9nek felaj\u00E1nl\u00E1sa"
+   },
+   "Old_Password": {
+      "message": "R\u00E9gi jelsz\u00F3"
+   },
+   "Open_All": {
+      "message": "Mindet megynyit"
+   },
+   "Open_Favorites": {
+      "message": "Kedvencek megnyit\u00E1sa"
+   },
+   "Open_My_LastPass_Vault": {
+      "message": "Saj\u00E1t LastPass sz\u00E9f megnyit\u00E1sa"
+   },
+   "Open_New_Pages_in": {
+      "message": "Nyisson lapokat..."
+   },
+   "Open_login_dialog_when_start_browser": {
+      "message": "Bejelentkez\u0151 ablak mutat\u00E1sa a b\u00F6ng\u00E9sz\u0151 indul\u00E1sakor"
+   },
+   "Other": {
+      "message": "M\u00E1s"
+   },
+   "Other_Sessions": {
+      "message": "Egy\u00E9b munkaf\u00E1zisok"
+   },
+   "PASSWORDupper": {
+      "message": "JELSZ\u00D3"
+   },
+   "Page_Down": {
+      "message": "Oldal mozg\u00E1s lefel\u00E9."
+   },
+   "Page_Up": {
+      "message": "Oldal mozg\u00E1s felfel\u00E9."
+   },
+   "Passpack": {
+      "message": "Passpack"
+   },
+   "Password": {
+      "message": "Jelsz\u00F3"
+   },
+   "Password_": {
+      "message": "Jelsz\u00F3:"
+   },
+   "Password_Agent": {
+      "message": "Password Agent"
+   },
+   "Password_Keeper": {
+      "message": "Password Keeper"
+   },
+   "Password_Length": {
+      "message": "Jelsz\u00F3 hossza"
+   },
+   "Password_Reminder": {
+      "message": "Jelsz\u00F3 eml\u00E9keztet\u0151"
+   },
+   "Password_Safe": {
+      "message": "Password Safe"
+   },
+   "Password_reminder_cannot_match_password": {
+      "message": "A jelsz\u00F3 eml\u00E9keztet\u0151 nem egyezhet a jelsz\u00F3val"
+   },
+   "Password_updated_": {
+      "message": "Jelsz\u00F3 friss\u00EDtve!"
+   },
+   "Personal": {
+      "message": "Szem\u00E9lyes"
+   },
+   "Phone_number": {
+      "message": "Telefonsz\u00E1m"
+   },
+   "Please_Make_a_Selection": {
+      "message": "K\u00E9rj\u00FCk v\u00E1lasszon."
+   },
+   "Please_enter_a_Password_Reminder": {
+      "message": "Adjon meg egy jelsz\u00F3 eml\u00E9keztet\u0151t"
+   },
+   "Please_provide_this_computer_a_name": {
+      "message": "K\u00E9rj\u00FCk, adjon nevet ennek a sz\u00E1m\u00EDt\u00F3g\u00E9pnek"
+   },
+   "Please_select": {
+      "message": "K\u00E9rj\u00FCk, v\u00E1lasszon"
+   },
+   "Please_select_which_sites_you_wish_to_apply_this_change_": {
+      "message": "K\u00E9rj\u00FCk v\u00E1lassza ki, mely oldalak eset\u00E9ben k\u00EDv\u00E1nja alkalmazni ezeket a v\u00E1ltoz\u00E1sokat."
+   },
+   "Please_visit_https___lastpass_com_to_create_an_account_at_a_later_time_": {
+      "message": "K\u00E9rj\u00FCk, l\u00E1togasson el a https://lastpass.com honlapra, ha k\u00E9s\u0151bb k\u00EDv\u00E1n fi\u00F3kot l\u00E9trehozni."
+   },
+   "Poll_Server_for_account_changes__mins_": {
+      "message": "Poll szerver a fi\u00F3kv\u00E1ltoz\u00E1sokhoz (perc)"
+   },
+   "Preferences": {
+      "message": "Be\u00E1ll\u00EDt\u00E1sok"
+   },
+   "Print": {
+      "message": "Nyomtat\u00E1s"
+   },
+   "Profile": {
+      "message": "Profil"
+   },
+   "Profile_language": {
+      "message": "Profil nyelv"
+   },
+   "Profile_name": {
+      "message": "Profil n\u00E9v"
+   },
+   "Re_enter_Password": {
+      "message": "Jelsz\u00F3 \u00FAjra"
+   },
+   "Recently_Used": {
+      "message": "Legut\u00F3bb haszn\u00E1lt"
+   },
+   "Recheck_Page": {
+      "message": "Oldal \u00FAjraellen\u0151rz\u00E9se"
+   },
+   "Refresh_Sites": {
+      "message": "Oldalak friss\u00EDt\u00E9se"
+   },
+   "Reject": {
+      "message": "Elutas\u00EDt\u00E1s"
+   },
+   "Remember_Email": {
+      "message": "E-mail megjegyz\u00E9se"
+   },
+   "Remember_Password": {
+      "message": "Jelsz\u00F3 megjegyz\u00E9se"
+   },
+   "Rename_Group": {
+      "message": "Csoport \u00E1tnevez\u00E9se"
+   },
+   "Replace_Existing_Site": {
+      "message": "Megl\u00E9v\u0151 oldal cser\u00E9je"
+   },
+   "Require_Every_Character_Type": {
+      "message": "Minden karaktert\u00EDpust ig\u00E9nyel."
+   },
+   "Require_Password_Reprompt": {
+      "message": "Id\u0151z\u00E1ras jelsz\u00F3t ig\u00E9nyel"
+   },
+   "Respect_AutoComplete_off__allow_websites_to_disable_AutoFill": {
+      "message": "AutoKit\u00F6lt\u00E9s=ki elfogadva: lehet\u0151v\u00E9 teszi, hogy a weblapokon ne legyen automatikus kit\u00F6lt\u00E9s."
+   },
+   "Right": {
+      "message": "Jobb"
+   },
+   "RoboForm": {
+      "message": "RoboForm"
+   },
+   "Routing_number": {
+      "message": "Ir\u00E1ny\u00EDt\u00E1si sz\u00E1m"
+   },
+   "SITE": {
+      "message": "HONLAP"
+   },
+   "Save": {
+      "message": "Ment\u00E9s"
+   },
+   "Save_All_Entered_Data": {
+      "message": "Bevitt adatok ment\u00E9se"
+   },
+   "Save_Credit_Card_profile": {
+      "message": "Hitelk\u00E1rtya profil ment\u00E9se"
+   },
+   "Save_Form_Fill_profile": {
+      "message": "\u0170rlap kit\u00F6lt\u00E9si profil ment\u00E9se"
+   },
+   "Save_New_Site": {
+      "message": "\u00DAj oldal ment\u00E9se"
+   },
+   "Save_Site": {
+      "message": "Oldal ment\u00E9se"
+   },
+   "Save_a_disabled_One_Time_Password_locally_for_Account_Recovery": {
+      "message": "Mentsen el egy nem enged\u00E9lyzett Egyszeri Jelsz\u00F3t a fi\u00F3k helyre\u00E1ll\u00EDt\u00E1s\u00E1hoz"
+   },
+   "Save_your_changes_and_close_this_window": {
+      "message": "Mentse el a v\u00E1ltoz\u00E1sokat \u00E9s z\u00E1rja be ezt az ablakot"
+   },
+   "Search": {
+      "message": "Keres\u00E9s"
+   },
+   "Secure_Notes": {
+      "message": "Biztons\u00E1gos jegyzet"
+   },
+   "Security": {
+      "message": "Biztons\u00E1g"
+   },
+   "Security_Check": {
+      "message": "Biztons\u00E1gi ellen\u0151rz\u00E9s"
+   },
+   "Security_code": {
+      "message": "Biztons\u00E1gi k\u00F3d"
+   },
+   "Select": {
+      "message": "V\u00E1lassz"
+   },
+   "Select_All": {
+      "message": "Mindet kijel\u00F6l"
+   },
+   "Send_anonymous_error_reporting_data_to_help_improve_LastPass": {
+      "message": "K\u00FCldj n\u00E9vtelen hiba\u00FCzenetet, ezzel seg\u00EDted a LastPass-t jobb\u00E1 tenni"
+   },
+   "September": {
+      "message": "Szeptember"
+   },
+   "SesameWrongButton": {
+      "message": "Kapcsolat n\u00E9lk\u00FCli \u00E1llapotban az adatok megn\u00E9z\u00E9s\u00E9hez futtatni kell a Sesame-ot \u00E9s az 'Offline jelsz\u00F3 m\u00E1sol\u00E1s' gombot kell megnyomni az 'Egyszer haszn\u00E1latos jelsz\u00F3 gener\u00E1l\u00E1sa' gomb helyett."
+   },
+   "Sesame_Multifactor_Authentication": {
+      "message": "Sesame Multifactor hiteles\u00EDt\u00E9s"
+   },
+   "Set_up_custom_form_fields": {
+      "message": "Egyedi \u0171rlap mez\u0151k l\u00E9trehoz\u00E1sa"
+   },
+   "Share": {
+      "message": "Megoszt"
+   },
+   "Share_login_state_between_other_browsers": {
+      "message": "Ossza meg m\u00E1s b\u00F6ng\u00E9sz\u0151kkel a bel\u00E9p\u00E9si \u00E1llapotot."
+   },
+   "Share_offer_from": {
+      "message": "Aj\u00E1nlat megoszt\u00E1sa"
+   },
+   "Shift": {
+      "message": "Shift"
+   },
+   "Should_LastPass_remember_this_password_": {
+      "message": "Eml\u00E9kezzen a LastPass erre a jelsz\u00F3ra?"
+   },
+   "Should_LastPass_remember_this_password__": {
+      "message": "Eml\u00E9kezzen a LastPass erre a jelsz\u00F3ra?"
+   },
+   "Show": {
+      "message": "Mutat"
+   },
+   "Show_Advanced_Options": {
+      "message": "Halad\u00F3 be\u00E1ll\u00EDt\u00E1sok mutat\u00E1sa"
+   },
+   "Show_Change_Password_Notification_Bar": {
+      "message": "Mutassa a Jelsz\u00F3v\u00E1ltoz\u00E1s \u00E9rtes\u00EDt\u0151 s\u00E1vot."
+   },
+   "Show_Deleted_Sites": {
+      "message": "T\u00F6r\u00F6lt oldalak megtekint\u00E9se"
+   },
+   "Show_Fill_Notification_Bar": {
+      "message": "Mutassa a kit\u00F6lt\u00E9si \u00E9rtes\u00EDt\u0151 s\u00E1vot"
+   },
+   "Show_Form_Fill_Notifications": {
+      "message": "Kit\u00F6lt\u00E9si \u00E9rtes\u00EDt\u00E9sek mutat\u00E1sa"
+   },
+   "Show_My_LastPass_Vault_After_Login": {
+      "message": "Saj\u00E1t sz\u00E9fem megnyit\u00E1sa bejelentkez\u00E9s ut\u00E1n"
+   },
+   "Show_Notifications": {
+      "message": "\u00C9rtes\u00EDt\u00E9sek mutat\u00E1sa"
+   },
+   "Show_Save_Site_Notification_Bar": {
+      "message": "Mutassa az oldal ment\u00E9si s\u00E1vot."
+   },
+   "Show_Save_Site_Notifications": {
+      "message": "Oldal ment\u00E9s \u00E9rtes\u00EDt\u00E9sek mutat\u00E1sa"
+   },
+   "Show_Sites_in_Groups": {
+      "message": "Webhelyek csoportokban"
+   },
+   "Show_all_sites": {
+      "message": "Mutassa az \u00F6sszes lapot"
+   },
+   "Show_certain_notifications_only_after_click": {
+      "message": "Csak kattint\u00E1skor mutasson egyes \u00E9rtes\u00EDt\u00E9seket"
+   },
+   "Shows_another_custom_field_entry": {
+      "message": "Mentsen el egy m\u00E1sik egyedi mez\u0151 bevitelt"
+   },
+   "Simplify_your_life__Use_LastPass_to_autofill_in_this_site_s_login_info_": {
+      "message": "Egyszer\u0171s\u00EDtse \u00E9let\u00E9t: Haszn\u00E1lja a LastPass-t az oldalra val\u00F3 bel\u00E9p\u00E9s adatainak automatikus kit\u00F6lt\u00E9s\u00E9hez!"
+   },
+   "Site_Search": {
+      "message": "Oldal keres\u00E9se"
+   },
+   "Sites": {
+      "message": "Webhelyek"
+   },
+   "Social_security_number": {
+      "message": "T\u00E1rsadalombiztos\u00EDt\u00E1si sz\u00E1m"
+   },
+   "Special": {
+      "message": "K\u00FCl\u00F6nleges"
+   },
+   "Start_date": {
+      "message": "Kezd\u00E9si id\u0151pont"
+   },
+   "State___Province": {
+      "message": "\u00C1llam / tartom\u00E1ny / megye"
+   },
+   "Submit_Form": {
+      "message": "\u0170rlap kibocs\u00E1t\u00E1sa."
+   },
+   "Swipe_finger": {
+      "message": "H\u00FAzza v\u00E9gig az ujj\u00E1t"
+   },
+   "Swipe_your_finger_on_the_fingerprint_sensor": {
+      "message": "H\u00FAzza v\u00E9gig az ujj\u00E1t az ujjlenyomat \u00E9rz\u00E9kel\u0151n."
+   },
+   "Tabs": {
+      "message": "Cimk\u00E9k"
+   },
+   "Text": {
+      "message": "Sz\u00F6veg"
+   },
+   "Text_to_find": {
+      "message": "Keresend\u0151 sz\u00F6veg"
+   },
+   "The_4_digit_year_the_credit_card_was_issued": {
+      "message": "A hitelk\u00E1rtya kibocs\u00E1t\u00E1si \u00E9ve 4 sz\u00E1mjeggyel"
+   },
+   "The_LastPass_master_password_you_reentered_does_not_match": {
+      "message": "A LastPass k\u00E9t mesterjelszava nem egyezik"
+   },
+   "The__Old_Password__you_entered_is_not_your_correct_LastPass_master_password": {
+      "message": "A bevitt 'R\u00E9gi jelsz\u00F3' nem az \u00D6n helyes mester jelszava"
+   },
+   "The_credit_card_number": {
+      "message": "A hitelk\u00E1rtya sz\u00E1ma"
+   },
+   "The_credit_card_s_4_digit_expiration_year": {
+      "message": "A hitelk\u00E1rtya lej\u00E1rati \u00E9ve 4 sz\u00E1mjeggyel"
+   },
+   "The_credit_card_s_expiration_month": {
+      "message": "A hitelk\u00E1rtya lej\u00E1rati h\u00F3napja"
+   },
+   "The_credit_card_s_issue_number__Only_applicable_to_certain_European_brands_of_debit_cards__such_as_Maestro_": {
+      "message": "A hitelk\u00E1rtya kibocs\u00E1t\u00E1si sz\u00E1ma. Csak bizonyos eur\u00F3pai hitelk\u00E1rtya eset\u00E9n \u00E9rv\u00E9nyes, mint pl. a Maestro."
+   },
+   "The_credit_card_s_security_code__For_most_credit_cards__this_is_the_last_3_digits_of_a_number_printed_on_the_back_of_the_card__For_American_Express_credit_cards__it_is_the_last_4_digits_of_a_number_printed_in_small_print_on_the_front_of_the_card_": {
+      "message": "A hitelk\u00E1rtya biztons\u00E1gi k\u00F3dja.\nA legt\u00F6bb hitelk\u00E1rtya eset\u00E9ben ez a k\u00E1rtya h\u00E1toldal\u00E1ra nyomtatott sz\u00E1m utols\u00F3 3 sz\u00E1mjegye.\nAz American Express hitelk\u00E1rtya eset\u00E9ben a k\u00E1rtya elej\u00E9re apr\u00F3 bet\u0171kkel nyomtatott sz\u00E1m utols\u00F3 4 sz\u00E1mjegye."
+   },
+   "The_full_name_printed_on_the_credit_card": {
+      "message": "A hitelk\u00E1rty\u00E1ra nyomtatott teljes n\u00E9v"
+   },
+   "The_language_of_the_Web_sites_where_this_Form_Fill_profile_will_be_used": {
+      "message": "A weboldalak nyelve, ahol ezt az \u0171rlap kit\u00F6lt\u0151 profilt haszn\u00E1lni fogj\u00E1k"
+   },
+   "The_month_the_credit_card_was_issued": {
+      "message": "A h\u00F3nap, amikor a hitelk\u00E1rty\u00E1t kiadt\u00E1k"
+   },
+   "The_name_of_the_Form_Fill_profile": {
+      "message": "Az \u0171rlap kit\u00F6lt\u0151 profil neve"
+   },
+   "The_name_of_your_bank": {
+      "message": "Az \u00D6n bankj\u00E1nak a neve"
+   },
+   "The_text_beside_the_name_of__or_the_id_of_the_form_field_to_be_filled__If_multiple_items_are_to_be_matched__specify_each_match_on_a_separate_line_": {
+      "message": "A kit\u00F6ltend\u0151 mez\u0151 sz\u00F6vege, neve vagy azonos\u00EDt\u00F3ja. Ha t\u00F6bbsz\u00F6r\u00F6s t\u00E9telnek kell megfelelni, hat\u00E1rozza meg k\u00FCl\u00F6n sorban azokat."
+   },
+   "The_value_to_be_filled": {
+      "message": "A be\u00EDrand\u00F3 \u00E9rt\u00E9k"
+   },
+   "The_version_of_Chrome_you_are_currently_running_does_not_have_HTML5_database_support_enabled___As_such__this_login_page_will_not_remember_your_email_and_password__and_other_features_such_as_automatic_login_on_browser_restart_will_not_work___You_may_be_able_to_fix_this_by_adding___enable_databases_as_a_parameter_to_your_Google_Chrome_browser_shortcut_": {
+      "message": "Az \u00E9ppen fut\u00F3 Chrome v\u00E1ltozatnak nincs HTML5 adatb\u00E1zis t\u00E1mogat\u00E1s enged\u00E9lyezve. \u00CDgy eza bel\u00E9p\u00E9si oldal nem fog az \u00D6n e-mail-j\u00E9re \u00E9s jelszav\u00E1ra eml\u00E9kezni tov\u00E1bb\u00E1 az olyan fukci\u00F3k, mint a honlap \u00FAjraind\u00EDt\u00E1s\u00E1t k\u00F6vet\u0151 automatikus bel\u00E9p\u00E9s, nem fognak m\u0171k\u00F6dni. Megoldhatja ezt a probl\u00E9m\u00E1t az adatb\u00E1zis enged\u00E9lyez\u00E9si param\u00E9ter hozz\u00E1ad\u00E1s\u00E1t a Google Chrome b\u00F6ng\u00E9sz\u0151 shortcut f\u00E1jlj\u00E1ban."
+   },
+   "This_computer_is_trusted__do_not_require_a_second_form_of_authentication_": {
+      "message": "Ez a sz\u00E1m\u00EDt\u00F3g\u00E9p megb\u00EDzhat\u00F3, nincs sz\u00FCks\u00E9g egy m\u00E1sodik hiteles\u00EDt\u00E9sre."
+   },
+   "This_is_a_shared_site__You_are_not_permitted_to_view_the_password_": {
+      "message": "Ez egy megosztott oldal. A jelsz\u00F3 megtekint\u00E9se nem enged\u00E9lyezett."
+   },
+   "Time_Zone": {
+      "message": "Id\u0151 z\u00F3na"
+   },
+   "Title": {
+      "message": "C\u00EDm"
+   },
+   "To_create_your_account__please_re_enter_your_LastPass_master_password": {
+      "message": "A fi\u00F3k l\u00E9trehoz\u00E1s\u00E1hoz \u00EDrja be m\u00E9gegyszer a LastPass mesterjelsz\u00F3t"
+   },
+   "To_get_started_with_LastPass__you_will_need_to_add_sites_to_your_account_": {
+      "message": "A LastPass elind\u00EDt\u00E1s\u00E1hoz m\u00E1soljon oldalakat a fi\u00F3kj\u00E1ba."
+   },
+   "To_protect_your_privacy_and_keep_your_data_confidential_": {
+      "message": "Titkainak meg\u0151rz\u00E9s\u00E9hez tartsa adatait biztons\u00E1gos helyen."
+   },
+   "Tools": {
+      "message": "Eszk\u00F6z\u00F6k"
+   },
+   "Try_Again": {
+      "message": "Pr\u00F3b\u00E1ld \u00FAjra"
+   },
+   "TurboPasswords": {
+      "message": "TurboPasswords"
+   },
+   "Type_": {
+      "message": "T\u00EDpus:"
+   },
+   "URL_": {
+      "message": "URL:"
+   },
+   "USERNAME": {
+      "message": "FELHASZN\u00C1L\u00D3 N\u00C9V"
+   },
+   "Unselect_All": {
+      "message": "Kijel\u00F6l\u00E9sek visszavon\u00E1sa"
+   },
+   "Up": {
+      "message": "Fel"
+   },
+   "User_name": {
+      "message": "Felhaszn\u00E1l\u00F3n\u00E9v"
+   },
+   "Username_": {
+      "message": "Felhaszn\u00E1l\u00F3n\u00E9v:"
+   },
+   "Value_to_fill": {
+      "message": "Kit\u00F6ltend\u0151 \u00E9rt\u00E9k"
+   },
+   "Version_": {
+      "message": "Verzi\u00F3:"
+   },
+   "Warn_before_filling_insecure_forms": {
+      "message": "Figyelmeztet\u00E9s nem biztons\u00E1gos \u0171rlapok kit\u00F6lt\u00E9se el\u0151tt"
+   },
+   "Watch_a_video_on_basic_usage": {
+      "message": "Vide\u00F3 megtekint\u00E9se az alapvet\u0151 haszn\u00E1latr\u00F3l"
+   },
+   "We_also_DO_NOT_keep_a_copy_or_backup_of_it_": {
+      "message": "NEK\u00DCNK NINCS m\u00E1solatunk err\u0151l."
+   },
+   "Welcome_to_LastPass_": {
+      "message": "\u00DCdv\u00F6z\u00F6l a LastPass!"
+   },
+   "Windows": {
+      "message": "Windows"
+   },
+   "Would_you_like_to_set_up_a_Form_Filling_profile_now_": {
+      "message": "Szeretne most l\u00E9trehozni egy \u0171rlapkit\u00F6lt\u0151 profilt?"
+   },
+   "Yes": {
+      "message": "Igen"
+   },
+   "Yes__let_me_choose_which_items_I_want_imported_into_LastPass": {
+      "message": "Igen, engedje, hogy eld\u00F6ntsem mely adatokat akarom a LastPass-ba import\u00E1lni."
+   },
+   "Yes__let_me_enter_and_review_data_that_will_be_used_when_filling_forms": {
+      "message": "Igen, engedje meg, hogy bevigyem \u00E9s fel\u00FClvizsg\u00E1ljam az \u0171rlap kit\u00F6lt\u00E9se sor\u00E1n haszn\u00E1land\u00F3 adatokat."
+   },
+   "You_cannot_assign_more_than_one_HotKey_the_same_value_": {
+      "message": "Ugyanahhoz a Gyorsbillenty\u0171h\u00F6z csak egy \u00E9rt\u00E9k rendelhet\u0151 hozz\u00E1."
+   },
+   "You_currently_have_LastPass_set_to_remember_your_password___Doing_so_essentially_makes_the_automatically_logoff_options_you_ve_chosen_useless___Would_you_like_LastPass_to_stop_remembering_your_password_": {
+      "message": "Pillanatnyilag \u00FAgy \u00E1ll\u00EDtotta be a Lastpass-t, hogy az eml\u00E9kezzen az \u00D6n jelszav\u00E1ra. Ezzel a be\u00E1ll\u00EDtott automatikus kijelentkez\u00E9s haszn\u00E1lhatatlann\u00E1 v\u00E1lt. K\u00EDv\u00E1nja, hogy a LastPass ne eml\u00E9kezzen a jelszav\u00E1ra?"
+   },
+   "You_have_not_yet_chosen_a_default_form_fill_profile___Would_you_like_to_choose_one_now_": {
+      "message": "\u00D6n m\u00E9g nem v\u00E1lasztott alap\u00E9rtelmezett \u0171rlap kit\u00F6lt\u00E9se profilt. Szeretne v\u00E1lasztan most?"
+   },
+   "You_may_also_be_blocking_all_cookies__which_causes_Chrome_to_disallow_HTML5_database_access_": {
+      "message": "\u00D6n is blokkolja az \u00F6sszes cookie-t, ami miatt a Chrome, nem engedi a HTML5 adatb\u00E1zis-hozz\u00E1f\u00E9r\u00E9st."
+   },
+   "You_must_agree_to_send_your_encrypted_data_to_LastPass_com___LastPass_com_encrypts_your_data_and_sends_it_to_its_secure_servers__No_one_at_LastPass_can_read_your_confidential_data_since_it_is_encrypted_using_your_secret_password_and_you_are_the_only_one_who_knows_your_password_": {
+      "message": "Bele kell egyeznie, hogy k\u00F3dolt adatait elk\u00FCldi a LastPass.com-hoz.\n\nA LastPass.com k\u00F3dolja adatait \u00E9s tov\u00E1bb\u00EDtja biztons\u00E1gos szervereire. A LastPass-n\u00E1l senki sem tudja elolvasni bizalmas adatait, mivel azok az \u00D6n titkos jelszav\u00E1val vannak k\u00F3dolva \u00E9s \u00D6n az egyetlen, aki ismeri a jelsz\u00F3t."
+   },
+   "You_must_agree_to_the_terms_to_continue": {
+      "message": "El kell fogadnia a felt\u00E9teleket, hogy tov\u00E1bb l\u00E9pjen"
+   },
+   "You_must_enter_a_name_": {
+      "message": "Meg kell adnod egy nevet."
+   },
+   "You_must_enter_a_unique_name_": {
+      "message": "Meg kell adnod egy egyedi nevet."
+   },
+   "You_must_restart_Chrome_or_logoff_and_back_in_to_get_logoff_on_browser_close_changes_to_be_reflected": {
+      "message": "\u00DAjra kell ind\u00EDtani a Chrome-ot vagy ki- \u00E9s be kell jelentkezni a b\u00F6ng\u00E9sz\u0151beli v\u00E1ltoz\u00E1sok \u00E9rv\u00E9nyes\u00EDt\u00E9s\u00E9hez."
+   },
+   "You_must_restart_your_browser_before_all_of_the_changes_will_take_effect_": {
+      "message": "\u00DAjra kell ind\u00EDtani a b\u00F6ng\u00E9sz\u0151t, miel\u0151tt a v\u00E1ltoz\u00E1sok \u00E9rv\u00E9nybe l\u00E9pnek."
+   },
+   "Your_4_digit_birth_year": {
+      "message": "Az \u00D6n sz\u00FClet\u00E9si \u00E9ve 4 sz\u00E1mjeggyel"
+   },
+   "Your_Google_Chrome_passwords_have_been_imported_successfully_": {
+      "message": "Google Chrome jelszavainak import\u00E1l\u00E1sa sikeres volt."
+   },
+   "Your_ZIP_or_postal_code": {
+      "message": "Az \u00D6n ir\u00E1ny\u00EDt\u00F3sz\u00E1ma"
+   },
+   "Your_address_information": {
+      "message": "C\u00EDm adatok"
+   },
+   "Your_bank_account_information": {
+      "message": "Banksz\u00E1mla inform\u00E1ci\u00F3"
+   },
+   "Your_bank_account_number__This_number_can_typically_be_found_to_the_right_of_the_routing_number_on_your_personal_checks_": {
+      "message": "Az \u00D6n banksz\u00E1mlasz\u00E1ma.\nEz a sz\u00E1m jellemz\u0151en a banki ir\u00E1ny\u00EDt\u00F3sz\u00E1mt\u00F3l jobbra tal\u00E1lhat\u00F3 a csekken."
+   },
+   "Your_bank_s_routing_number__This_9_digit_number_can_typically_be_found_on_your_personal_checks_in_the_bottom_left_corner_": {
+      "message": "Az \u00D6n banki ir\u00E1ny\u00EDt\u00F3sz\u00E1ma.\nEz a 9 jegy\u0171 sz\u00E1m a csekk bal als\u00F3 sark\u00E1ban tal\u00E1lhat\u00F3."
+   },
+   "Your_birth_day": {
+      "message": "Az \u00D6n sz\u00FClet\u00E9snapja"
+   },
+   "Your_birth_month": {
+      "message": "Az \u00D6n sz\u00FClet\u00E9si h\u00F3napja"
+   },
+   "Your_city_name": {
+      "message": "Az \u00D6n v\u00E1ros\u00E1nak neve"
+   },
+   "Your_company_s_name": {
+      "message": "C\u00E9g\u00E9nek neve"
+   },
+   "Your_contact_information": {
+      "message": "Az \u00D6n el\u00E9rhet\u0151s\u00E9ge"
+   },
+   "Your_country_name": {
+      "message": "Az orsz\u00E1ga neve"
+   },
+   "Your_county_name": {
+      "message": "A megye neve"
+   },
+   "Your_credit_card_information": {
+      "message": "Hitelk\u00E1rty\u00E1ja adatai"
+   },
+   "Your_current_settings_require_you_to_enter_your_LastPass_password_to_complete_this_action_": {
+      "message": "A jelenlegi be\u00E1ll\u00EDt\u00E1sok miatt be kell \u00EDrnia LastPass jelszav\u00E1t a m\u0171velet befejez\u00E9se \u00E9rdek\u00E9ben."
+   },
+   "Your_email_address": {
+      "message": "Az \u00D6n e-mail c\u00EDme"
+   },
+   "Your_first_name": {
+      "message": "Az \u00D6n keresztneve"
+   },
+   "Your_government_ID_number": {
+      "message": "Korm\u00E1nyzati azonos\u00EDt\u00F3 sz\u00E1ma"
+   },
+   "Your_last_name": {
+      "message": "Az \u00D6n vezet\u00E9kneve"
+   },
+   "Your_middle_name": {
+      "message": "Az \u00D6n k\u00F6z\u00E9ps\u0151 neve"
+   },
+   "Your_password_can_not_be_the_same_as_your_email_": {
+      "message": "A jelsz\u00F3 nem egyezhet meg az e-mail c\u00EDmmel."
+   },
+   "Your_password_is_easily_guessable_": {
+      "message": "Az \u00D6n jelszava k\u00F6nnyen kital\u00E1lhat\u00F3."
+   },
+   "Your_password_is_too_short__It_must_be_at_least_6_characters_long": {
+      "message": "A jelsz\u00F3 t\u00FAl r\u00F6vid. Legal\u00E1bb 6 karakter hossz\u00FAnak kell lennie"
+   },
+   "Your_password_reminder_serves_to_remind_you_of_what_your": {
+      "message": "A jelsz\u00F3 eml\u00E9keztet\u0151 arra szolg\u00E1l, hogy eml\u00E9keztessen, mi ..."
+   },
+   "Your_passwords_did_not_match_": {
+      "message": "Jelszavak nem egyeznek."
+   },
+   "Your_personal_information": {
+      "message": "Szem\u00E9lyes adatai"
+   },
+   "Your_phone_number": {
+      "message": "Az \u00D6n telefonsz\u00E1ma"
+   },
+   "Your_phone_number_extension": {
+      "message": "Telefonmell\u00E9k"
+   },
+   "Your_prefix_or_title": {
+      "message": "K\u00F6rzetsz\u00E1m"
+   },
+   "Your_sex": {
+      "message": "Az \u00D6n neme"
+   },
+   "Your_state_or_province_name": {
+      "message": "\u00C1llam vagy tartom\u00E1ny neve"
+   },
+   "Your_street_address": {
+      "message": "Utca, h\u00E1zsz\u00E1m"
+   },
+   "Your_time_zone": {
+      "message": "Id\u0151z\u00F3na"
+   },
+   "Your_username_when_signing_into_Web_sites": {
+      "message": "Felhaszn\u00E1l\u00F3n\u00E9v a honlapra val\u00F3 bejelentkez\u00E9skor"
+   },
+   "YubiKey_Multifactor_Authentication": {
+      "message": "YubiKey Multifactor hiteles\u00EDt\u00E9s"
+   },
+   "ZIP___Postal_code": {
+      "message": "Ir\u00E1ny\u00EDt\u00F3sz\u00E1m"
+   },
+   "_Hide_": {
+      "message": "[Elt\u00FCntet]"
+   },
+   "_New_Pending_Share_Offers_": {
+      "message": "\u00DAj, f\u00FCgg\u0151 megoszt\u00E1si aj\u00E1nl\u00E1sok"
+   },
+   "_Show_": {
+      "message": "[N\u00E9zet]"
+   },
+   "_domain_": {
+      "message": "(tartom\u00E1ny)"
+   },
+   "_none_": {
+      "message": "(nincs)"
+   },
+   "a_zlower": {
+      "message": "a-z"
+   },
+   "actual_password_is__while_still_maintaining_its_secrecy_": {
+      "message": "... az aktu\u00E1lis jelsz\u00F3, mik\u00F6zben titkoss\u00E1g\u00E1t meg\u0151rzi."
+   },
+   "and": {
+      "message": "\u00E9s"
+   },
+   "contact_us_and_we_will_email_you_your_password_reminder_": {
+      "message": "l\u00E9pjen kapcsolatba vel\u00FCnk \u00E9s elfogjuk k\u00FCldeni e-mail-ben a jelsz\u00F3 eml\u00E9keztet\u0151t."
+   },
+   "dummy": {
+      "message": "dummy, leave this here so we don't mess up the trailing comma"
+   },
+   "ext_": {
+      "message": "telefonmell\u00E9k"
+   },
+   "favorites": {
+      "message": "kedvencek"
+   },
+   "hour": {
+      "message": "\u00F3ra"
+   },
+   "hours": {
+      "message": "\u00F3ra"
+   },
+   "minutes": {
+      "message": "perc"
+   },
+   "privacy_statement": {
+      "message": "adatv\u00E9delmi nyilatkozat"
+   },
+   "recently_usedlower": {
+      "message": "utolj\u00E1ra haszn\u00E1lt"
+   },
+   "seconds": {
+      "message": "m\u00E1sodperc"
+   },
+   "terms_of_service": {
+      "message": "szolg\u00E1ltat\u00E1si felt\u00E9telek"
+   },
+   "the_current_tab": {
+      "message": "A jelenlegi c\u00EDmke."
+   },
+   "we_DO_NOT_know_what_your_LastPass_password_is_": {
+      "message": "NEM TUDJUK a LastPass jelszavad."
+   }
+}

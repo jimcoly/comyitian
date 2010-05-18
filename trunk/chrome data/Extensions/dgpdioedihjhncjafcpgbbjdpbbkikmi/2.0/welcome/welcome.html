@@ -1,0 +1,168 @@
+<html>
+<head>
+    <title>Speed Dial - Welcome!</title>
+    <style>
+	  body {
+	    padding:0px;
+		margin:0px;
+	  }
+      #main {
+	    width: 800px;
+		text-align:left;
+		margin-top:30px;
+	  }
+      #main-text {
+	    xwidth: 400px;
+		text-align:left;
+
+	  }
+
+
+	  #main-title {
+		float:left;
+		margin-bottom:15px;
+		padding-bottom:3px;
+		border-bottom:1px solid #d3d3d3;
+	  }
+	  #main-title h3{
+		float:left;
+		margin-top:11px;
+		margin-left:14px;
+	  }
+	  #icon {
+		float:left;
+
+	  }
+	  h3{
+		margin:0px;
+		padding:0px;
+		margin-top:5px;
+		color:#d92583;
+		font-size:24px;
+		font-family:arial;
+		font-weight:normal;
+	  }
+
+	  h4 {
+		margin:0px;
+		padding:0px;
+		margin-top:12px;
+		margin-bottom:6px;
+		color:#d92583;
+		font-size:18px;
+		font-family:arial;
+		font-weight:normal;
+	  }
+	  h5 {
+		margin:0px;
+		padding:0px;
+		margin-top:12px;
+		margin-bottom:4px;
+		color:#2554d9;
+		font-size:16px;
+		font-family:arial;
+		font-weight:normal;
+	  }		
+	.text {
+		font-family:arial;
+		font-size:13px;
+		color:#2e2e2e;
+	}
+	#extensions {
+		width:600px;
+		margin-top:14px;
+	}
+	.extension{
+		float:left;
+		margin-bottom:20px;
+		padding-bottom:20px;
+		border-bottom:1px solid #eaeaea;
+	}
+	.extension .ext-icon {
+		float:left;
+	}
+	.ext-title {
+	    float:left;
+		font-size:18px;
+		font-family:arial;
+		font-weight:normal;	
+		color:#2554d9;
+		margin-left:10px;
+		margin-top:3px;
+	}
+	.description {
+	    float:left;
+		clear:both;
+		margin-top:5px;
+		font-family:arial;
+		font-size:13px;
+		color:#2e2e2e;	
+	}
+	</style>
+	<script type="text/javascript">
+		function onLoad() {
+			 var backgroundPage = chrome.extension.getBackgroundPage()
+			 //backgroundPage.loadInAllTabs();
+		}
+	</script>
+</head>
+
+<body onLoad="onLoad();">
+   <center>
+   <div id="main">
+	  <div id="main-title">
+			<img id="icon" src="48.png" width="48" height="48">
+			<h3>Thank you for installing Speed Dial</h3>
+	  </div>
+	  
+	  <div id="main-text" class="text">
+		  <table>
+		    <tr>
+			  <td valign="top">
+				 <img src="main_image.jpg" width="323" height="248" style="border:1px solid #dcdada">
+			  </td>
+			 <td width="640" class="text" valign="top" style="padding-left:15px">
+
+				  <h5 style="margin-top:1px">Welcome!</h5>
+					 Speed Dial replace the Chrome's new tab page with your predefined visual bookmarks.
+				     <h5>Getting Started</h5>
+					 Well, Speed dial is very easy to use.<br>
+					 To add a web page, just click on the Speed Dial toolbar button and select "Add this page". from this menu you can also open the Speed dial page to access your visual bookmarks.<br>
+					 When you're on the Speed Dial page, you can use drag-n-drop to change the thumbnail position.<br>
+					 Speed Dial let you customize the page look and feel by a predefined themes. You can also set a background image.
+			  </td>
+			 </tr>
+		   </table>
+	  </div>
+
+	  <h4 style="margin-top:15px">What other extensions we have made?</h4>
+	  <div id="extensions">
+		<div class="extension">
+			<img class="ext-icon" src="ietab.png" width="25" height="25"/>
+			<a href="https://chrome.google.com/extensions/detail/miedgcmlgpmdagojnnbemlkgidepfjfi" class="ext-title" target="_blank">IE Tab Classic</a>
+			<div class="description">
+			   IE Tab lets you use Internet Explorer inside Chrome. Some websites are still not compatible with standard browsers, so if you need access to those websites, this extension will assist you.
+			</div>
+		</div>
+		<div class="extension">
+			<img class="ext-icon" src="icon.png" width="25" height="25"/>
+			<a href="https://chrome.google.com/extensions/detail/gofhjkjmkpinhpoiabjplobcaignabnl" class="ext-title" target="_blank">FlashBlock</a>
+			<div class="description">
+			    This extension automatically blocks all the flash contents on any webpage.
+				Each flash element is being replaced with a placeholder that allows you to load only selected elements on a given page.
+				You can also manage a whitelist of allowed websites via a configuration panel.
+			</div>
+		</div>
+		<div class="extension">
+			<img class="ext-icon" src="flags.png" width="25" height="25"/>
+			<a href="https://chrome.google.com/extensions/detail/jhejngphiacapbgllhagbpdkkdieeaej" class="ext-title" target="_blank">Chrome Flags</a>
+			<div class="description">
+			    Chrome Flags displays a country flag indicating about the physical location of the websites you're visiting.
+				The extension also provides access to detailed information regarding the website's servers, owners, traffic and trustworthiness.
+			</div>
+		</div>
+	  </div>
+   </div>
+</body>
+</html>
+

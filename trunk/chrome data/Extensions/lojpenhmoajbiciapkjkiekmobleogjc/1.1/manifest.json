@@ -1,0 +1,22 @@
+{
+   "background_page": "background.html",
+   "content_scripts": [ {
+      "exclude_globs": [ "http://www.google.com/reader/*", "https://www.google.com/reader/*" ],
+      "js": [ "js/content_script.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "icons": {
+      "48": "png/logo.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCjvF5pjuK8gRaw/2LoRYi37QqRd48B/FeO9yFtT6ueY84z/u0NrJ/xbPFc9OCGBi8RKIblVvcbY0ySGqdmp0QsUr/oXN0b06GL4iB8rMhlO082HhMzrClV8OKRJ+eJNhNBl8viwmtJs3MN0x9ljA4HQLaAPBA9a14IUKLjP0pWuwIDAQAB",
+   "name": "Chrome Reader",
+   "page_action": {
+      "default_icon": "png/page_action.png",
+      "default_title": "Chrome Reader",
+      "popup": "popup.html",
+      "type": "tab"
+   },
+   "permissions": [ "tabs", "http://www.google.com/reader/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.1"
+}

@@ -1,0 +1,14 @@
+{
+   "content_scripts": [ {
+      "js": [ "gdocs.js" ],
+      "matches": [ "http://*/*" ]
+   } ],
+   "description": "Replace link with pdf/tiff/ppt files to google docs and open as html",
+   "icons": {
+      "128": "128.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDWQjuTjWdPjuiBOGOFmQZPNBpuRP54fMGXVUR04IOJd7aNlhcDTo8+K3uyVwphjVYq8xF1G8/LI4FAGsnVjf+Q90L5StgjHBi53NR0tnzIHUWsIcop4mROCFpz6P1KLroQG5MczLD/YyHMbavcmEMfAEzGKOXWBLctxuKMFuhsgwIDAQAB",
+   "name": "GDocs.",
+   "update_url": "http://chromeplugins.googlecode.com/files/update.xml",
+   "version": "1.0"
+}

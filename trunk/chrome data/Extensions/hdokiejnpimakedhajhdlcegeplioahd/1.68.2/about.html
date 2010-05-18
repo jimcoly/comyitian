@@ -1,0 +1,9 @@
+<html><head><link rel="stylesheet" type="text/css" href="general.css">
+<script type='text/javascript' src="lpfulllib.js"></script>
+</head><body><img src='logo_big.png'/><br/><br/><br/>
+<script>document.write(gs("LastPass Chrome Toolbar"));</script><br/><br/>
+<script>document.write(gs("Version:"));</script> <script>document.write(lpversion);</script><br/>
+<script>document.write(gs("Built:"));</script> <script>document.write(build_date);</script><br/>
+<script>document.write(gs("Binary Component:"));</script> <script>document.write(getBG().have_nplastpass()?"true":"false");</script><br/><br/>
+<script>var lic=gs("Copyright 2008 LastPass. All Rights Reserved.\nPortions of this software were licensed from third parties as described at:");lic+=' <a href="https://lastpass.com/docs/licenses.php">https://lastpass.com/docs/licenses.php</a>';lic=lic.replace(" 2008 "," 2008-"+(new Date()).getFullYear()+" ");lic=lic.replace("\n","<br/>");document.write(lic);</script>
+</body></html>

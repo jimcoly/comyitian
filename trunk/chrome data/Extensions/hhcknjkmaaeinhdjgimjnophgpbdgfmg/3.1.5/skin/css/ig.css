@@ -1,0 +1,135 @@
+/*
+ * MyTheme transparent modified for iGoogle Theme + anchors
+ * 
+ * Replace  
+ *  _a_ with { 
+ *  _z_ with }
+ * 
+ */
+html{
+	background: transparent;
+}
+html.ig_tiled {
+	background: url(_a_header_tile_z_) _a_header_bg_color_z_ repeat-x 50% 0%;
+}
+body{
+	background: transparent;
+}
+body.ig_fixed {
+	background: url(_a_header_fixe_z_) _a_body_bg_color_z_ no-repeat fixed top center;
+}
+
+#logo {
+    display: none;
+}
+
+#main{
+	top:140px!important;
+}
+#gbar, #guser{
+	height:175px;
+}
+
+body,#gbar, #guser, .text, .gbh, #explore-promo, #tips, #overview-footer, .viewer-page, 
+#lhn-selectors,#quick-add-success, .friend-interruption, 
+#directory-box .tab-group, #directory-box .tab-contents, #directory-contents .tab-header, 
+.tab-group-contents, #featured-bundles-container, #discover-table td, 
+.bundle-container th, #friends-tree .friends-tree-following-info, 
+#directory-welcome-conversion, .date-tooltip td, .date-tooltip, .text-tooltip, 
+.text-tooltip td {
+    color: _a_text_color_z_ !important;
+    border: 0 !important;
+}
+
+#gbar a, #gbar a:visited, #guser a, #guser a:visited{
+	color: _a_header_link_color_z_;
+}
+a.gb1, a.gb2, a.gb3, a.gb4, #gbg a, #gbg a:visited{
+	color: _a_link_color_z_ !important;
+}
+
+a,a:visited,.link{
+    color: _a_link_color_z_ !important;
+}
+
+#overview .item-snippet, #team-messages .body, #overview .label, p, dl, multicol, 
+.overview-item-link, address, blockquote, body, caption, center, col, colgroup, dd, dir, 
+div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, html, isindex, li, listing, map, 
+marquee, menu, noframes, ol, p, plaintext, pre, table, tbody, td, tfoot, th, thead, tr, 
+ul, xmp ,#recent-activity #recent-activity-kept-unread h4, 
+#recent-activity #recent-activity-read h4, #explore-promo-new, 
+#recent-activity .recent-stream-title {
+    color: _a_text_color_z_ !important;
+}
+
+#current-entry.read .entry-container .entry-body, .read .entry-container .entry-body {
+    color: _a_text_color_z_ !important;
+}
+
+#chrome,#chrome-header{
+	 background: transparent !important;
+}
+
+.email-active, .item-link-active, .lhn-section, 
+.scroll-tree li, .scroll-tree li a .name,.scroll-tree li a .name-unread
+#chrome-title, #viewer-header, #viewer-footer, .card-common{
+    background: _a_nav_bg_color_z_ !important;
+    color: _a_nav_text_color_z_ !important;
+}
+
+.card-common{
+	border-color:_a_border_color_z_ !important;
+}
+
+#chrome-title{
+	display:inline!important;
+}
+
+#viewer-container,.collapsed,
+#chrome-view-links, 
+#loading,#loading-area,
+#no-entries-msg,.message-area-text-container,.offscreen,.hover-form,
+ .action-area,.email-this-area, .preview-interruption{
+	background-color: _a_header_bg_color_z_!important;
+}
+
+.message-area-text-container{
+	background-color: transparent !important;
+}
+
+/*
+#entries,#entries .entry{
+	background-color: #ffffff !important;
+}
+*/
+
+/*
+.section-button,.section-menubutton{
+	background-color: _a_header_bg_color_z_!important;
+}
+*/
+.card-actions,.entry-actions,
+.card-common .card-actions a, .card-common .card-actions .link,
+.tree-link-selected, .tree-link-selected span{
+	background-color: _a_bg_action_z_!important;
+	color: _a_txt_action_z_!important;
+}
+
+
+.entry-container, .card-content, .entry-likers{
+	background-color: _a_entry_color_z_!important;
+}
+
+#entries.list .read .collapsed{
+	border:0 !important;
+}
+
+/**
+ * Hover
+ */
+.scroll-tree li a:hover,.scroll-tree li a:hover span, 
+.scroll-tree li a.menu-open:hover, a:hover .tree-item-action-container,
+#lhn-selectors .selected, #lhn-selectors .selector:hover, #lhn-selectors .selector:hover span{
+	background-color: _a_nav_bg_color_hover_z_ !important;
+	color: _a_nav_text_color_hover_z_ !important;
+}

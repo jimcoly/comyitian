@@ -1,0 +1,26 @@
+{
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "icon.png",
+      "default_title": "Toggle Google Tasks",
+      "popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "css": [ "contentstyles.css" ],
+      "js": [ "jquery.js", "contentscripts.js" ],
+      "matches": [ "http://*/*" ]
+   } ],
+   "description": "Access Google Tasks directly from within Chrome.",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "48": "icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDHqwBVzmV4VnRMyWpOML4vivMiGLkVUdToIyFdCceuSiDclXdGDQvo+QKeNrCKUCDiIxxCTtCtrb+xom7aL1X9cp9UyevwNzbBneckWQw0I7dY5ApY6CNf+qdzrI504HQZJmqf3S0snTIV1mgnTw+w+dhlhNHjFxhWAucCz2cn7QIDAQAB",
+   "name": "Google Tasks",
+   "options_page": "options.html",
+   "permissions": [ "https://mail.google.com/*", "tabs" ],
+   "update_url": "http://www.joestrong.co.uk/chrome-extensions/updates.xml",
+   "version": "0.4"
+}

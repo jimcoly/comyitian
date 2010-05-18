@@ -1,0 +1,1704 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/jquery.autocomplete.css" />
+  <link rel="stylesheet" type="text/css" href="css/evernote.css" />
+  
+  <!-- 3rd party libs -->
+  <script type="text/javascript" src="libs/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="libs/jquery.scrollTo-1.4.2-min.js"></script>
+  <script type="text/javascript" src="libs/jquery.autocomplete.pack.js"></script>
+  <script type="text/javascript" src="libs/jquery.validate.pack.js"></script>
+  <script type="text/javascript" src="libs/jquery.validate.methods.js"></script>
+  <script type="text/javascript" src="libs/jquery.observeform.js"></script>
+  <script type="text/javascript" src="libs/jquery-ui-1.8.fx.min.js"></script>
+  <script type="text/javascript" src="libs/jquery.ascrollable.js"></script>
+  <script type="text/javascript" src="libs/json2.js"></script>
+  <script type="text/javascript" src="libs/simpledateformat.js"></script>
+  
+  <!-- Evernote essential libs -->
+  <script type="text/javascript" src="libs/FunctionOverrides.js"></script>
+  <script type="text/javascript" src="constants.js"></script>
+  <script type="text/javascript" src="utils.js"></script>
+  <!-- Make some types available before hand -->
+  <script type="text/javascript">
+      var LOG = chrome.extension.getBackgroundPage().LOG;
+      Utils.importConstructs(chrome.extension.getBackgroundPage(), window, ["Logger", "LoggerImpl", "LoggerImplFactory", "LocalStore"]);
+  </script>
+
+  <!-- Evernote libs -->
+  <script type="text/javascript" src="models/AppModel.js"></script>
+  <script type="text/javascript" src="models/AppDataModel.js"></script>
+  <script type="text/javascript" src="models/User.js"></script>
+  <script type="text/javascript" src="models/SyncState.js"></script>
+  <script type="text/javascript" src="models/SyncChunk.js"></script>
+  <script type="text/javascript" src="models/ClipNote.js"></script>
+  <script type="text/javascript" src="models/Note.js"></script>
+  <script type="text/javascript" src="models/NoteAttributes.js"></script>
+  <script type="text/javascript" src="models/Notebook.js"></script>
+  <script type="text/javascript" src="models/Tag.js"></script>
+  <script type="text/javascript" src="models/SavedSearch.js"></script>
+  <script type="text/javascript" src="models/NoteFilter.js"></script>
+  <script type="text/javascript" src="models/NoteList.js"></script>
+  <script type="text/javascript" src="evernote.js"></script>
+
+  <!-- Evernote for Chrome libs -->
+  <script type="text/javascript" src="viewManager.js"></script>
+  <script type="text/javascript" src="models/ModelForm.js"></script>
+  <script type="text/javascript" src="models/AbstractNoteForm.js"></script>
+  <script type="text/javascript" src="models/ClipNoteForm.js"></script>
+  <script type="text/javascript" src="models/NoteForm.js"></script>
+  <script type="text/javascript" src="models/Options.js"></script>
+  <script type="text/javascript" src="models/AppState.js"></script>
+  <script type="text/javascript">
+      var currentTab = null;
+      var DEFAULT_TIMEOUT = 300;
+      var AUTO_SAVE_DELAY = 600;
+      var VIEW_TRANSITION_TIME = 100;
+      var NOTELIST_PAYLOAD_SIZE = 20;
+      var NOTELIST_PAGE_SIZE = 6;
+      var NOTELIST_ITEM_HEIGHT = 92;
+      var NOTELIST_FETCH_TIMEOUT = 400;
+      var NOTELIST_SCROLLTO_DELAY = 200;
+      var CLIP_PAGE_CONTENT_TIMEOUT = 10000;
+      var CONTENT_SCRIPT_TIMEOUT = CLIP_PAGE_CONTENT_TIMEOUT;
+      var LOADING_THUMB_IMG_URL = "/images/spinner.gif";
+      // whether to allow multiple selection of auto-complete things
+      // when typing query for note search
+      var NOTELIST_AC_MULTIPLE = false;
+      var options = null;
+      var contentScriptTimer = null;
+      var loginValidator = null;
+      var quickNoteValidator = null;
+      var fileNoteValidator = null;
+      var quickNoteForm = null;
+      var fileNoteForm = null;
+      var notesSearchForm = null;
+      var syncStateProc = null;
+      var loginProc = null;
+      var findProc = null;
+      var noteList = null;
+      var searchQueryPopulated = false;
+      var fileNoteChanged = false;
+      var noteListScrollTimer = null;
+      var quickNoteSubmitWait = null;
+
+      /**************** Initialization ****************/
+      function init() {
+        LOG.debug("Initializing...");
+        initContext();
+        initOptions();
+        initRemote();
+        initListeners();
+        LOG.debug("Clipper initialized...");
+      };
+      function initContext() {
+        LOG.debug("Popup.initContext");
+        try {
+          if (getContext().store == null && chrome.extension.getBackgroundPage().LOCAL_STORE) {
+            LOG.debug("Initializing local store");
+            getContext().store = chrome.extension.getBackgroundPage().LOCAL_STORE;
+          }
+          if (getContext().store) {
+            LOG.debug("Local storage initialized");
+          } else {
+            LOG.warn("Could not initialize local storage");
+          }
+          // make sure we instantly save changes to state
+          $(window).bind(AppState.CHANGE_EVENT_NAME, function(event, newState) {
+            if (newState instanceof AppState) {
+              getContext().setState(newState);
+            }
+          })
+        } catch (e) {
+          LOG.error("Error initializing context: " + e.message);
+        }
+      };
+      function initOptions() {
+        LOG.debug("Popup.initOptions");
+        options = getContext().options;
+        if (options instanceof Options) {
+          LOG.level = options.debugLevel;
+        }
+      };
+      function initRemote() {
+        LOG.debug("Popup.initRemote");
+        getContext().getRemote().setDataMarshaller(function(data) {
+          LOG.debug("Remote is marshalling data (" + (typeof data) + ")");
+          AppModel.marshall(data);
+        });
+        getContext().getRemote().setDataUnmarshaller(function(result) {
+          LOG.debug("Unmarshalling response result (" + typeof result + ")");
+          if (typeof result == 'object') {
+            for (var resultKey in result) {
+              LOG.debug("Unmarshalling " + resultKey);
+              if (result[resultKey] != null) {
+                var model = AppModel.unmarshall(result[resultKey]);
+                result[resultKey] = model;
+              } else {
+                var model = null;
+              }
+              try {
+                switch(resultKey) {
+                  case "authenticationResult":
+                    LOG.debug(">>> AUTH RESULT: " + JSON.stringify(model));
+                    if (typeof model["user"] != "undefined"){
+                      LOG.debug("Remembering received user");
+                      getContext().setUser(model["user"]);
+                    }
+                    break;
+                  case "user":
+                    LOG.debug("Remembering received user");
+                    getContext().setUser(model);
+                    break;
+                  case "notebooks": 
+                    LOG.debug("Remembering received notebooks");
+                    getContext().setNotebooks(model); 
+                    break;
+                  case "tags": 
+                    LOG.debug("Remembering received tags");
+                    getContext().setTags(model); 
+                    break;
+                  case "searches":
+                    LOG.debug("Remembering received searches");
+                    getContext().setSearches(model);
+                  case "syncState": 
+                    LOG.debug("Remembering received syncState");
+                    getContext().setSyncState(model); 
+                    break;
+                  case "syncChunk":
+                    LOG.debug("Updating from SyncChunk");
+                    getContext().processSyncChunk(model);
+                    break;
+                }
+              } catch (e) {
+                LOG.error("Failed to unmarshall result: " + e.message);
+                try {
+                  getContext().resetSyncState();
+                } catch (e) {
+                  LOG.error("Failed to reset syncState");
+                }
+                ViewManager.showError(chrome.i18n.getMessage("syncError", e));
+              }
+            }
+          }
+          LOG.debug("Done unmarshalling...");
+          return result;
+        });
+      };
+      function initListeners() {
+        LOG.debug("Popup.initListeners");
+        chrome.extension.onRequest.addListener(requestListener);
+      };
+
+      /**************** Listeners and Request Handlers ****************/
+      function requestListener(request, sender, sendResponse) {
+        LOG.debug("Popup.requestListener");
+        //ViewManager.clearWait();
+        var requestType = Utils.getKeyFrom(request, REQUEST_TYPE, 'number', RequestType.UNKNOWN);
+        if (requestType == RequestType.PAGE_CLIP_SUCCESS) {
+          handlePageClipSuccess(request, sender, sendResponse);
+        } else if (requestType == RequestType.PAGE_CLIP_CONTENT_SUCCESS) {
+          handlePageClipContentSuccess(request, sender, sendResponse);
+        } else if (requestType == RequestType.PAGE_CLIP_CONTENT_FAILURE) {
+          handlePageClipContentFailure(request, sender, sendResponse);
+        } else if (requestType == RequestType.PAGE_CLIP_FAILURE) {
+          handlePageClipFailure(request, sender, sendResponse);
+        } else if (requestType == RequestType.CANCEL_PAGE_CLIP_TIMER) {
+          handleCancelPageClipTimer(request, sender, sendResponse);
+        } else {
+          LOG.info("Popup ignores request: " + requestType);
+        }
+      };
+
+      function handlePageClipSuccess(request, sender, sendResponse) {
+        ViewManager.clearWait();
+        LOG.info("Popup.handlePageClipSuccess");
+        var clipNote = new ClipNote(request);
+        LOG.debug("Popup received request from extension with clipNote: " + clipNote.toString());
+        var options = getContext().options;
+        if (clipNote.fullPage 
+            && options.autoSaveClipNote == Options.AUTO_SAVE_CLIPNOTE_OPTIONS.ALWAYS
+            && getContext().autoSavedNote instanceof ClipNote) {
+          LOG.info("Resuming from saved note...");
+          clipNote = getContext().autoSavedNote;
+          ViewManager.switchView("quickNoteView", {
+            clipNote: clipNote, 
+            options: {
+              saveUrl: false, 
+              fullPage: false, 
+              notebookGuid: clipNote.notebookGuid,
+              saveUrlEnabled: false, 
+              fullPageEnabled: false
+            }});
+          $("#quickNoteView").addClass("autoSaved");
+          $("#quickNoteView input[name=cancel]").val(chrome.i18n.getMessage("quickNote_discard"));
+          LOG.info("Trying to determine if active tab's URL has changed");
+          chrome.tabs.getSelected(null, function(tab) {
+            if (tab && tab.url == clipNote.url) {
+              LOG.info("Active tab's URL hasn't changed, allowing to save URL");
+              quickNoteForm.content = clipNote.content;
+              quickNoteForm.enableSaveUrl();
+              quickNoteForm.enableFullPage();
+              quickNoteForm.saveUrl = clipNote.saveUrl;
+              quickNoteForm.fullPage = clipNote.fullPage;
+            }
+          });
+        } else if (clipNote.fullPage) {
+          LOG.info("Prompting for filing info for full page clip");
+          clipNote.fullPage = false;
+          ViewManager.switchView("quickNoteView", {"clipNote": clipNote});
+          $("#quickNoteView").removeClass("autoSaved");
+          $("#quickNoteView input[name=cancel]").val(chrome.i18n.getMessage("quickNote_cancel"));
+        } else {
+          LOG.info("Submitting partial-page clip to the server");
+          var preferredNotebook = getContext().getPreferredNotebook();
+          if (preferredNotebook instanceof Notebook) {
+            clipNote.notebookGuid = preferredNotebook.guid;
+          }
+          remoteClipNote(clipNote, function(response, textStatus) {
+            var note = (typeof response.result["note"] != 'undefined' && response.result.note instanceof Note) ? response.result.note : null;
+            if (note) {
+              LOG.info("Received successful response from the server after clipping the note");
+              ViewManager.switchView("fileView", {"note": note});
+            } else {
+              LOG.warn("Cannot recognize a note in response after clipping the note: " + note);
+              ViewManager.showError(new Error(EDAMResponseErrorCode.INVALID_RESPONSE));
+              ViewManager.switchView("quickNoteView", {"clipNote": new ClipNote()});
+            }
+          }, function(response, textStatus) {
+            LOG.error("Failed to clip selection");
+            if (response.errors.length > 1)
+              ViewManager.showErrors(response.errors);
+            else
+              ViewManager.showError(response.errors[0]);
+            dismissPopup();
+          });
+        }
+      };
+      function handlePageClipContentSuccess(request, sender, sendResponse) {
+        LOG.debug("Popup.handlePageClipContentSuccess");
+        var clipNote = new ClipNote(request);
+        LOG.debug("Clip length: " + clipNote.length);
+        if (quickNoteForm) {
+          LOG.debug("Setting retrieved content on quickNoteForm");
+          quickNoteForm.content = clipNote.content;
+          if (quickNoteSubmitWait == null && quickNoteForm.form.hasClass("changed")) {
+            LOG.debug("Auto-saving since form was modified");
+            autoSaveQuickNote();
+          } else if (quickNoteSubmitWait != null) {
+            clearTimeout(quickNoteSubmitWait);
+            quickNoteSubmitWait = null;
+            submitQuickNoteForm();
+          }
+        }
+      };
+      function handlePageClipContentFailure(request, sender, sendResponse) {
+        LOG.debug("Popup.handlePageClipContentFailure");
+        var clipNote = new ClipNote(request);
+        LOG.debug("Clip length: " + clipNote.length);
+        if (request[REQUEST_MESSAGE]) {
+          ViewManager.showError(request[REQUEST_MESSAGE]);
+        } else {
+          ViewManager.showError(chrome.i18n.getMessage("fullPageClipFailure"));
+        }
+        if (quickNoteForm) {
+          quickNoteForm.fullPage = false;
+          quickNoteForm.disableFullPage();
+        }
+        // clear submit timeout
+        if (quickNoteSubmitWait != null) {
+          clearTimeout(quickNoteSubmitWait);
+          quickNoteSubmitWait = null;
+        }
+      };
+      function handlePageClipFailure(request, sender, sendResponse) {
+        LOG.info("Popup received request with failed page clip");
+        ViewManager.showError(request[REQUEST_MESSAGE]);
+        // check if we can at least capture the URL of the current tab,
+        // and if so, fake a ClipNote
+        var currentTab = null;
+        chrome.tabs.getSelected(null, function(t) {
+          if (currentTab == null) {
+            currentTab = t;
+          } else {
+            return;
+          }
+          if (!currentTab.url || currentTab.url.indexOf("http") != 0) {
+            if (!currentTab.url) {
+              LOG.info("Tried to clip page without a URL");
+            } else {
+              LOG.info("Tried to clip page with invalid or unsupported URL: " + currentTab.url);
+            }
+            ViewManager.showError(new EvernoteError({errorCode: EDAMErrorCode.BAD_DATA_FORMAT, parameter: 'url'}));
+          } else {
+            LOG.info("Salvaging unclippable page");
+            var clipNote = new ClipNote({
+              url: currentTab.url,
+              fullPage: false
+              });
+            if (currentTab.title)
+              clipNote.title = currentTab.title;
+            if (LOG.isDebugEnabled())
+              LOG.debug("Faking ClipNote: " + JSON.stringify(clipNote));
+            ViewManager.switchView("quickNoteView", {"clipNote": clipNote});
+            if (quickNoteForm) {
+              quickNoteForm.disableFullPage();
+            }
+          }
+        });
+      };
+      function handleCancelPageClipTimer(request, sender, sendResponse) {
+        if (contentScriptTimer) {
+          LOG.debug("Cancelling page clip timer");
+          clearTimeout(contentScriptTimer);
+          contentScriptTimer = null;
+        } else {
+          LOG.debug("Ignoring request to cancel page clip timer for there isn't one...");
+        }
+      };
+
+
+      /**************** Convinience methods ****************/
+      function getContext() {
+        return Evernote.getContext();
+      }
+      function resetContext() {
+        getContext().destroy();
+      }
+      function loadContentScript(callback, tabId) {
+        if (typeof tabId != 'number')
+          tabId = null;
+        LOG.debug("Popup.loadContentScript");
+        LOG.debug("Injecting constants.js");
+        chrome.tabs.executeScript(tabId, {
+          file: "constants.js",
+        }, function() {
+          LOG.debug("Starting page clip timer");
+          contentScriptTimer = setTimeout(function() {
+            LOG.debug("Signalling failed page clip...");
+            var r = {};
+            r[REQUEST_TYPE] = RequestType.PAGE_CLIP_FAILURE;
+            r[REQUEST_MESSAGE] = chrome.i18n.getMessage("unclippablePage");
+            requestListener(r, this, null);
+          }, CONTENT_SCRIPT_TIMEOUT);
+          LOG.debug("Injecting contentscript.js");
+          chrome.tabs.executeScript(tabId, {
+            file: "contentscript.js"
+          }, callback);
+        });
+      }
+      function executeContentScript(code, callback, tabId) {
+        if (typeof tabId != 'number')
+          tabId = null;
+        LOG.debug("Popup.executeContentScript");
+        loadContentScript(function() {
+          LOG.debug("Executing code in tab");
+          chrome.tabs.executeScript(tabId, {
+            code: code
+          }, callback);
+        }, tabId);
+      }
+      function getSelection(fullPage, tabId) {
+        LOG.debug("Popup.getSelection");
+        if (typeof tab != 'number')
+          tabId = null;
+        ViewManager.wait(chrome.i18n.getMessage("clippingPageContent"));
+        var stylingStrategy = getStylingStrategyType();
+        var code = (fullPage) ? "main(true, "+stylingStrategy+")" : "main(false, "+stylingStrategy+")";
+        LOG.debug("Getting selection via: " + code);
+        executeContentScript(code, function() {
+          LOG.debug("Popup's request for page clip completed");
+        }, tabId);
+        LOG.debug("Waiting for page clip...");
+      }
+      function getStylingStrategyType() {
+        LOG.debug("Popup.getStylingStrategyType");
+        var stylingStrategy = null;
+        var options = getContext().options;
+        if (options.clipStyle == Options.CLIP_STYLE_OPTIONS.FULL) {
+          stylingStrategy = "ClipFullStylingStrategy";
+        } else if (options.clipStyle == Options.CLIP_STYLE_OPTIONS.TEXT) {
+          stylingStrategy = "ClipTextStylingStrategy";
+        }
+        LOG.debug("Strategy type: " + stylingStrategy);
+        return stylingStrategy;
+      }
+      function dismissPopup(instant) {
+        if (typeof instant != 'undefined' && instant) {
+          window.close();
+        } else {
+          setTimeout(function() {
+            window.close();
+          }, DEFAULT_TIMEOUT);
+        }
+      }
+      function goRegister() {
+        chrome.windows.create({url: getContext().getRegistrationUrl()});
+      }
+      function goHome() {
+        if (quickNoteForm && (quickNoteForm.content.length > 0 || quickNoteForm.tagNames.length > 0)) {
+          autoSaveQuickNote();
+        }
+        chrome.tabs.executeScript(null, {
+          code: "document.location='" + getContext().getHomeUrl() + "';"
+        });
+        window.close();
+      }
+      function openNoteWindow(noteUrl) {
+        chrome.windows.create({url: noteUrl, width: 800, height: 550});
+      } 
+      
+      /**************** Utilities ****************/
+      function localizePopup() {
+        LOG.debug("Popup.localizePopup");
+        var allViews = $("body");
+        for (var i=0; i<allViews.length; i++) {
+          var v = $(allViews.get(i));
+          Utils.localizeBlock(v);
+        }
+      }
+      
+      function populateNotebookSelection(sel) {
+        LOG.debug("Popup.populateNotebookSelection");
+        var notebooks = getContext().getNotebooks();
+        if (sel instanceof jQuery && notebooks instanceof Array) {
+          LOG.debug("Updating notebook selection with " + notebooks.length + " notebooks");
+          sel.empty();
+          var preferredNotebook = getContext().getPreferredNotebook();
+          for (var i=0; i<notebooks.length; i++) {
+            var n = notebooks[i];
+            var nName = $("<div/>").text(n.name).html();
+            var opt = $("<option value='"+n.guid+"'>"+nName+"</option>");
+            if (n == preferredNotebook) {
+              opt.attr("selected", "selected");
+            }
+            sel.append(opt);
+          }
+          //sel.unbind("change");
+          sel.bind("change", function(event) {
+            LOG.debug(">>> SAVING NOTEBOOKGUID STATE: " + sel.val());
+            getContext().state.notebookGuid = sel.val();
+          });
+        } else {
+          LOG.debug("Nothing to update");
+        }
+      }
+
+      function populateTagSelection(sel) {
+        LOG.debug("Popup.populateTagSelection");
+        var tags = getContext().getTags();
+        if (tags && tags.length > 0) {
+          if (sel instanceof jQuery && tags instanceof Array) {
+            LOG.debug("Populating tag selection");
+            sel.autocomplete(tags, {
+              formatItem: function(tag) {
+                return $("<div/>").text(tag.name).html();
+              },
+              multiple: true
+            }).result(function(event, data, formatter) {
+              if (ViewManager.currentView && ViewManager.currentView.attr("id") == "quickNoteView") {
+                setTimeout(function() {
+                  autoSaveQuickNote();
+                }, 100);
+              }
+            });
+          }
+        }
+      }
+
+      function populateSearchQueries(sel) {
+        LOG.debug("Popup.populateSearchQueries");
+        if (sel instanceof jQuery) {
+          var searches = new Array();
+          if (getContext().getTags() instanceof Array) {
+            if (LOG.isDebugEnabled())
+              LOG.debug("Adding " + getContext().getTags().length + " tags to searches");
+            searches = searches.concat(getContext().getTags());
+          }
+          if (getContext().getSearches() instanceof Array) {
+            if (LOG.isDebugEnabled())
+              LOG.debug("Adding " + getContext().getSearches().length + " saved searches to searches");
+            searches = searches.concat(getContext().getSearches());
+          }
+          if (getContext().getNotebooks() instanceof Array) {
+            if (LOG.isDebugEnabled())
+              LOG.debug("Adding " + getContext().getNotebooks().length + " notebooks to searches");
+            searches = searches.concat(getContext().getNotebooks());
+          }
+          LOG.debug("There are now " + searches.length + " searches");
+          var noteFilter = getContext().noteFilter;
+          sel.autocomplete(searches, {
+            formatItem: function(item, row, total) {
+              var iconSrc = null;
+              if (item instanceof Tag) {
+                iconSrc = "images/browse_tags_icon.png";
+              } else if (item instanceof Notebook) {
+                iconSrc = "images/browse_books_icon.png";
+              } else if (item instanceof SavedSearch) {
+                iconSrc = "images/browse_search_icon.png";
+              }
+              if (iconSrc) {
+                return $("<div/>").text(item.name).html() + "<img src='"+iconSrc+"' class='listIcons'/>";
+              } else {
+                return $("<div/>").text(item.name).html();
+              }
+            },
+            formatResult: function(item, row, total) {
+              if (item instanceof SavedSearch && noteFilter instanceof NoteFilter) {
+                noteFilter.fuzzy = false;
+              } else if (noteFilter instanceof NoteFilter) {
+                noteFilter.fuzzy = true;
+              }
+              if (item instanceof Tag) {
+                return "tag:" + NoteFilter.formatWord(item.name);
+              } else if (item instanceof Notebook) {
+                return "notebook:" + NoteFilter.formatWord(item.name);
+              } else if (item instanceof SavedSearch) {
+                return item.query;
+              } else {
+                return NoteFilter.formatWord(item.name);
+              }
+            },
+            selectFirst: (!NOTELIST_AC_MULTIPLE),
+            multiple: NOTELIST_AC_MULTIPLE,
+            multipleSeparator: NoteFilter.WORD_SEPARATOR
+          });
+        }
+      }
+
+      function createNoteListItem(note, searchWords) {
+        var id = "";
+        var cssClass = "noteListItem";
+        if (note.guid && note.guid.length > 0) {
+          id = "id='noteListItem_"+note.guid+"'";
+        } else {
+          cssClass += " noteListItemPlaceholder";
+        }
+        var noteItem = $("<div "+id+" class='"+cssClass+"'></div>");
+        noteItem.css({width: "100%"});
+        var thumbUrl = (note instanceof Note) ? note.getThumbnailUrl(getContext().getShardedUrl()) : null;
+        if (thumbUrl) {
+          noteItem.append($("<div class='noteListItemThumb'><img src='"+thumbUrl+"' class='noteThumb'/></div>"));
+        } else {
+          noteItem.append($("<div class='noteListItemThumb'><img src='"+LOADING_THUMB_IMG_URL+"' class='noteThumb noteThumbPlaceholder'/></div>"));
+        }
+        // note info
+        var noteInfo = $("<div class='noteListItemInfo'></div>");
+        noteItem.append(noteInfo);
+        // note title
+        var noteTitle = (note.title) ? $("<div/>").text(note.title).html() : "";
+        noteInfo.append($("<div class='noteListItemTitle'>"+noteTitle+"</div>"));
+        var sortField = getContext().options.noteSortOrder.type.toLowerCase();
+        // note date
+        var noteDate = null;
+        if (typeof note[sortField] == 'number') {
+          var f = new SimpleDateFormat("M/d/yy HH:mm a");
+          noteDate = f.format(new Date(note[sortField]));
+        }
+        if (noteDate) {
+          noteInfo.append($("<div class='noteListItemDate'>"+ noteDate +"</div>"));
+        }
+        // note tags
+        if (note.tagGuids) {
+          var tagNames = [];
+          for (var t=0; t<note.tagGuids.length; t++) {
+            var tag = getContext().getTagByGuid(note.tagGuids[t]);
+            if (tag) {
+              tagNames.push(tag.name);
+            }
+          }
+          if (tagNames.length > 0) {
+            noteInfo.append("<div class='noteListItemTags'>"+$("<div/>").text(tagNames.join(", ")).html()+"</div>");
+          }
+        }
+        // note source url
+        if (note.attributes && typeof note.attributes.sourceURL == 'string' && note.attributes.sourceURL.length > 0) {
+          var urlStr = note.attributes.sourceURL.replace(/^[^:]+:\/\/([^\/]+).*$/, "$1");
+          var l = (note.attributes.sourceURL.indexOf(urlStr) + urlStr.length);
+          if (note.attributes.sourceURL.length > l+1) {
+            urlStr += "/...";
+          }
+          var urlAnchor = $("<a href='#'>"+urlStr+"</a>");
+          urlAnchor.click(function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            chrome.tabs.getSelected(null, function(tab) {
+              chrome.tabs.create({index: (tab.index+1), url: note.attributes.sourceURL});
+            });
+          });
+          var urlWrapper = $("<div class='noteListItemUrl'></div>");
+          urlWrapper.append(urlAnchor);
+          noteInfo.append(urlWrapper);
+        }
+        if (note.guid) {
+          noteItem.bind("click", function() {
+            openNoteWindow(note.getNoteUrl(getContext().getSecureServiceUrl(), getContext().getShardId(), searchWords));
+          });
+        }
+        return noteItem;
+      }
+
+      function bindViews() {
+        LOG.debug("Popup.bindViews");
+        $("#header").bind("show", function(event, data){
+          LOG.debug("#header.onShow");
+          var user = getContext().getUser();
+          if (user) {
+            $("#headerUsername").text(user.username);
+            $("#headerUser").show();
+            $("#headerNoUser").hide();
+          } else {
+            $("#headerUser").hide();
+            $("#headerNoUser").show();
+          }
+        });
+        // Bind loginView to focus on username field
+        $("#loginView").bind("show", function(event, data) {
+          LOG.debug("#loginView.onShow");
+          ViewManager.showBlock($("#header"));
+          var view = $("#loginView");
+          var loginForm = view.find("form[name=loginForm]");
+          // populate with data or present clean form if no data
+          if (typeof data == 'object' && data != null) {
+            if (typeof data["username"] != 'undefined') {
+              loginForm.find("input[name=username]").val(data["username"]);
+            }
+            if (typeof data["password"] != 'undefined') {
+              loginForm.find("input[name=password]").val(data["password"]);
+            }
+          } else {
+            loginForm.find("input[type=password]").val("");
+          }
+          // focus and select appropriate field
+          loginForm.find("input[name=username]").focus();
+          loginValidator.focusInvalid();
+        });
+        $("#loginView").bind("hide", function(event) {
+          LOG.debug("#loginView.onHide");
+          ViewManager.hideBlock($("#header"));
+        });
+        // Bind fileView to populate forms
+        $("#fileView").bind("show", function(event, data) {
+          LOG.debug("#fileView.onShow");
+          ViewManager.showBlock($("#header"));
+          var view = $("#fileView");
+          // populate notebook selection
+          populateNotebookSelection(view.find("select[name=notebookGuid]"));
+          populateTagSelection(view.find("input[name=tagNames]"));
+          // populate note fields
+          if (typeof data == 'object' && typeof data["note"] != "undefined"){
+            var note = (data["note"] instanceof Note) ? data["note"] : new Note(data["note"]);
+            if (note && fileNoteForm){
+              if (LOG.isDebugEnabled())
+                LOG.debug("Populating fileView with Note data: " + JSON.stringify(note));
+              fileNoteForm.populateWith(getContext(), note);
+            } else {
+              LOG.warn("Cannot populate fileView with Note. Either no Note or no NoteForm is present");
+            }
+          }
+          // focus on first tab element
+          $("#fileView *[tabindex=1]").focus();
+        });
+        $("#fileView").bind("hide", function(event) {
+          LOG.debug("#fileView.onHide");
+          ViewManager.hideBlock($("#header"));
+        });
+        // bind quickNoteView to populate forms
+        $("#quickNoteView").bind("show", function(event, data) {
+          LOG.debug("#quickNoteView.onShow");
+          ViewManager.showBlock($("#header"));
+          
+          //ViewManager.updateBodyHeight();
+          var view = $("#quickNoteView");
+          // populate notebook selection
+          populateNotebookSelection(view.find("select[name=notebookGuid]"));
+          populateTagSelection(view.find("input[name=tagNames]"));
+          // populate note fields
+          if (typeof data == 'object' && typeof data["clipNote"] != "undefined") {
+            var clipNote = (data["clipNote"] instanceof ClipNote) ? data["clipNote"] : new ClipNote(data["clipNote"]);
+            if (clipNote && quickNoteForm) {
+              LOG.debug("Populating quickNoteView with ClipNote data");
+              if (!clipNote.notebookGuid && getContext().getDefaultNotebook()) {
+                clipNote.notebookGuid = getContext().getDefaultNotebook().guid;
+              }
+              quickNoteForm.populateWith(getContext(), clipNote);
+            }
+            if (getContext().getPreferredNotebook()) {
+              quickNoteForm.notebookGuid = getContext().getPreferredNotebook().guid;
+            }
+          } else {
+            LOG.info("No ClipNote passed. Utilizing as Quick Note");
+          }
+          // make sure we honor options
+          if (getContext().options.fullPage == Options.FULL_PAGE_OPTIONS.ALWAYS
+              || (getContext().options.fullPage == Options.FULL_PAGE_OPTIONS.REMEMBER && getContext().state.fullPage)) {
+            quickNoteForm.fullPage = true;
+          } else {
+            quickNoteForm.fullPage = false;
+          }
+          // force override options (this is mainly used to restore auto-saved note
+          if (typeof data == 'object' && data != null && typeof data["options"] == 'object' && data["options"] != null) {
+            for (var opt in data["options"]) {
+              if (typeof quickNoteForm[opt] != 'undefined') {
+                quickNoteForm[opt] = data["options"][opt];
+              }
+            }
+          } 
+          // toggle drawer if it was opened last time and we like it that way
+          if (getContext().options.noteList == Options.NOTE_LIST_OPTIONS.ALWAYS 
+              || (getContext().options.noteList == Options.NOTE_LIST_OPTIONS.REMEMBER && getContext().state.noteList)) {
+            setTimeout(function() {
+              toggleDrawer();
+            }, 100);
+          }
+          // focus on first tab element
+          $("#quickNoteView *[tabindex=1]").focus();
+        });
+        $("#quickNoteView").bind("hide", function(event) {
+          LOG.debug("#quickNoteView.onHide");
+          ViewManager.hideBlock($("#header"));
+        });
+        $(".viewWithDrawer").bind("show", function(event) {
+          ViewManager.showBlock($("#notesView"));
+          doNoteSearch();
+        });
+        $(".viewWithDrawer").bind("hide", function(event) {
+          ViewManager.hideBlock($("#notesView"));
+        });
+        // SEARCH QUERY BINDINGS
+        var searchQueryField = $("#notesSearchQuery");
+        // make sure to set NoteFilter to fuzzy mode when first focused.
+        searchQueryField.focus(function(event) {
+          getContext().noteFilter.fuzzy = true;
+        });
+        // make sure we hide autocomplete popup on ENTER
+        searchQueryField.keyup(function(event) {
+          if (event.keyCode == 13) {
+            $(".ac_results").hide();
+            if (!NOTELIST_AC_MULTIPLE) {
+              submitNotesSearchForm();
+            }
+          }
+        });
+        $("#notesView").bind("show", function(event) {
+          ViewManager.showBlock($("#notesSearchHandle"));
+        });
+        $("#notesView").bind("hide", function(event) {
+          ViewManager.hideBlock($("#notesSearchHandle"));
+        });
+        // bind drawer sliding events
+        $(".drawerHandle").click(toggleDrawer);
+      }
+
+      function toggleDrawer() {
+        LOG.debug("Popup.toggleDrawer");
+        var drawerWasOpen = $("#notesView").hasClass("openDrawer");
+        LOG.debug("Drawer was" + ((drawerWasOpen) ? "" : " not") + " open");
+        if (!drawerWasOpen) {
+          // if opening drawer, toggle class on body first
+          // otherwise do this at the end
+          $("body").toggleClass("openDrawer", VIEW_TRANSITION_TIME);
+          getContext().state.noteList = true;
+        } else {
+          getContext().state.noteList = false;
+        }
+        
+        if (ViewManager.currentView) {
+          LOG.debug("Handling previously opened view...");
+          if (drawerWasOpen) {
+            setTimeout(function() {
+              ViewManager.currentView.show();
+            }, VIEW_TRANSITION_TIME/2);
+          } else {
+            setTimeout(function() {
+              ViewManager.currentView.hide();
+            }, VIEW_TRANSITION_TIME/2);
+            if (!searchQueryPopulated) {
+              populateSearchQueries($("#notesSearchQuery"));
+              searchQueryPopulated = true;
+              $("#notesSearchQuery").focus();
+            }
+          }
+        }
+        $("#notesView").toggleClass("openDrawer closedDrawer", VIEW_TRANSITION_TIME, function() {
+          if (!drawerWasOpen) {
+            $("#notesSearchQuery").focus();
+            $("#notesSearchQuery").select();
+          }
+        });
+        $("#notesSearchHandle").toggleClass("openDrawer closedDrawer", VIEW_TRANSITION_TIME);
+        // if closing the drawer toggle class on body last
+        if (drawerWasOpen) {
+          $("body").toggleClass("openDrawer", VIEW_TRANSITION_TIME);
+        }
+        if (!drawerWasOpen && getContext().state.noteListScrollTop) {
+          console.log("<<< SCROLLING TO : " + getContext().state.noteListScrollTop);
+          setTimeout(function() {
+            $("#notesList").scrollTo(getContext().state.noteListScrollTop);
+          }, NOTELIST_SCROLLTO_DELAY);
+        }
+      }
+      
+      function bindForms() {
+        LOG.debug("Adding expression method");
+        // adding regex validation method
+        $.validator.addMethod("mask", $.fn.validate.methods.mask, chrome.i18n.getMessage("invalidMask"));
+        
+        // trim function - replaces value with trimmed value
+        $.validator.addMethod("trim", $.fn.validate.methods.trim, "trim error");
+        
+        // separates value into parts and checks if total number of parts is within given range
+        $.validator.addMethod("totalPartsRange", $.fn.validate.methods.totalPartsRange, chrome.i18n.getMessage("totalPartsNotInRange"));
+        
+        // separates value into parts and checks whether individual parts are within given range in length
+        $.validator.addMethod("partLengthRange", $.fn.validate.methods.partLengthRange, chrome.i18n.getMessage("partLengthNotInRange"));
+        
+        // separates value into parts and checks whether individual parts match given mask
+        $.validator.addMethod("partMask", $.fn.validate.methods.partMask);
+
+        // custom callback validator. Useful for transforms...
+        $.validator.addMethod("toLowerCase", $.fn.validate.methods.toLowerCase);
+        
+        // duck punching invalidate method
+        $.validator.prototype.invalidate = function(fieldName, errorMessage) {
+          var thisErr = {};
+          thisErr[fieldName] = errorMessage;
+          this.showErrors(thisErr);
+        };
+        
+        // bind individual forms
+        bindLoginForm();
+        bindFileForm();
+        bindQuickNoteForm();
+      }
+
+      function bindLoginForm() {
+        LOG.debug("Popup.bindLoginForm");
+        var form = $("form[name=loginForm]");
+        if (form.length == 0) {
+          LOG.warn("Could not find login form");
+          return;
+        }
+        var opts = {
+          submitHandler: function(form) {
+            submitLoginForm();
+          },
+          errorClass: ViewManager.FORM_FIELD_ERROR_MESSAGE_CLASS,
+          errorElement: "div",
+          onkeyup: false,
+          onfocusout: false,
+          invalidHandler: function() {
+            ViewManager.updateBodyHeight();
+          },
+          success: function() {
+            ViewManager.updateBodyHeight();
+          },
+          rules: {
+            username: {
+              required: true,
+              toLowerCase: true,
+              minlength: Limits.EDAM_USER_USERNAME_LEN_MIN,
+              maxlength: Limits.EDAM_USER_USERNAME_LEN_MAX,
+              mask: Limits.EDAM_USER_USERNAME_REGEX
+            },
+            password: {
+              required: true,
+              minlength: Limits.EDAM_USER_PASSWORD_LEN_MIN,
+              maxlength: Limits.EDAM_USER_PASSWORD_LEN_MAX,
+              mask: Limits.EDAM_USER_PASSWORD_REGEX
+            }
+          },
+          messages: {
+            username: {
+              required: chrome.i18n.getMessage("valueNotPresent", chrome.i18n.getMessage("loginForm_username")),
+              minlength: chrome.i18n.getMessage("valueTooShort", [chrome.i18n.getMessage("loginForm_username"), Limits.EDAM_USER_USERNAME_LEN_MIN]),
+              maxlength: chrome.i18n.getMessage("valueTooLong", [chrome.i18n.getMessage("loginForm_username"), Limits.EDAM_USER_USERNAME_LEN_MAX]),
+              mask: chrome.i18n.getMessage("invalidUsername")
+            },
+            password: {
+              required: chrome.i18n.getMessage("valueNotPresent", chrome.i18n.getMessage("loginForm_password")),
+              minlength: chrome.i18n.getMessage("valueTooShort", [chrome.i18n.getMessage("loginForm_password"), Limits.EDAM_USER_PASSWORD_LEN_MIN]),
+              maxlength: chrome.i18n.getMessage("valueTooLong", [chrome.i18n.getMessage("loginForm_password"), Limits.EDAM_USER_PASSWORD_LEN_MAX]),
+              mask: chrome.i18n.getMessage("invalidPassword")
+            }
+          }
+        }
+        LOG.debug("Setting up validation on login form");
+        loginValidator = form.validate(opts);
+      }
+
+      function bindQuickNoteForm() {
+        LOG.debug("Popup.bindQuickNoteForm");
+        var form = $("form[name=quickNoteForm]");
+        if (form.length == 0) {
+          LOG.warn("Could not find quickNoteForm");
+          return;
+        }
+        var opts = {
+          submitHandler: function(form) {
+            console.log(">>> SUBMITTING FORM");
+            submitQuickNoteForm();
+          },
+          errorClass: ViewManager.FORM_FIELD_ERROR_MESSAGE_CLASS,
+          errorElement: "div",
+          onkeyup: false,
+          onfocusout: false,
+          rules: {
+            title: {
+              trim: true,
+              rangelength: [Limits.EDAM_NOTE_TITLE_LEN_MIN, Limits.EDAM_NOTE_TITLE_LEN_MAX],
+              mask: Limits.EDAM_NOTE_TITLE_REGEX
+            },
+            tagNames: {
+              totalPartsRange: [Limits.EDAM_NOTE_TAGS_MIN, Limits.EDAM_NOTE_TAGS_MAX],
+              partLengthRange: [Limits.EDAM_TAG_NAME_LEN_MIN, Limits.EDAM_TAG_NAME_LEN_MAX],
+              partMask: Limits.EDAM_TAG_NAME_REGEX
+            }
+          },
+          messages: {
+            title: {
+              rangelength: chrome.i18n.getMessage("valueNotInRange", [chrome.i18n.getMessage("quickNote_title"), Limits.EDAM_NOTE_TITLE_LEN_MIN, Limits.EDAM_NOTE_TITLE_LEN_MAX]),
+              mask: chrome.i18n.getMessage("invalidTitle")
+            },
+            tagNames: {
+              totalPartsRange: chrome.i18n.getMessage("tagNamesNotInRange", [Limits.EDAM_NOTE_TAGS_MIN, Limits.EDAM_NOTE_TAGS_MAX]),
+              partLengthRange: chrome.i18n.getMessage("tagNameNotInRange", [Limits.EDAM_TAG_NAME_LEN_MIN, Limits.EDAM_TAG_NAME_LEN_MAX]),
+              partMask: chrome.i18n.getMessage("invalidTagName")
+            }
+          }
+        }
+        LOG.debug("Setting up validation on quicknote form");
+        quickNoteValidator = form.validate(opts);
+        $(quickNoteForm.getField(quickNoteForm.fullPageFieldName)).click(function() {
+          getContext().state.fullPage = quickNoteForm.fullPage;
+        });
+        $("form[name=quickNoteForm]").observeform({
+          freezeSubmit: false,
+          changeKeyboardDelay: AUTO_SAVE_DELAY,
+          onChange: function() {
+            $("form[name=quickNoteForm]").addClass("changed");
+            autoSaveQuickNote();
+          }
+        });
+      }
+
+      function bindFileForm() {
+        LOG.debug("Popup.bindFileForm");
+        var form = $("form[name=fileForm]");
+        if (form.length == 0) {
+          LOG.warn("Could not find quickNoteForm");
+          return;
+        }
+        var opts = {
+          submitHandler: function(form) {
+            submitFileForm();
+          },
+          errorClass: ViewManager.FORM_FIELD_ERROR_MESSAGE_CLASS,
+          errorElement: "div",
+          onkeyup: false,
+          onfocusout: false,
+          rules: {
+            title: {
+              trim: true,
+              rangelength: [Limits.EDAM_NOTE_TITLE_LEN_MIN, Limits.EDAM_NOTE_TITLE_LEN_MAX],
+              mask: Limits.EDAM_NOTE_TITLE_REGEX
+            },
+            tagNames: {
+              totalPartsRange: [Limits.EDAM_NOTE_TAGS_MIN, Limits.EDAM_NOTE_TAGS_MAX],
+              partLengthRange: [Limits.EDAM_TAG_NAME_LEN_MIN, Limits.EDAM_TAG_NAME_LEN_MAX],
+              partMask: Limits.EDAM_TAG_NAME_REGEX
+            }
+          },
+          messages: {
+            title: {
+              rangelength: chrome.i18n.getMessage("valueNotInRange", [chrome.i18n.getMessage("quickNote_title"), Limits.EDAM_NOTE_TITLE_LEN_MIN, Limits.EDAM_NOTE_TITLE_LEN_MAX]),
+              mask: chrome.i18n.getMessage("invalidTitle")
+            },
+            tagNames: {
+              totalPartsRange: chrome.i18n.getMessage("tagNamesNotInRange", [Limits.EDAM_NOTE_TAGS_MIN, Limits.EDAM_NOTE_TAGS_MAX]),
+              partLengthRange: chrome.i18n.getMessage("tagNameNotInRange", [Limits.EDAM_TAG_NAME_LEN_MIN, Limits.EDAM_TAG_NAME_LEN_MAX]),
+              partMask: chrome.i18n.getMessage("invalidTagName")
+            }
+          }
+        }
+        LOG.debug("Setting up validation on file form");
+        fileNoteValidator = form.validate(opts);
+        $("form[name=fileForm]").observeform({
+          freezeSubmit: false,
+          changeKeyboardDelay: AUTO_SAVE_DELAY,
+          onChange: function() {
+            LOG.debug("File note changed...");
+            fileNoteChanged = true;
+          }
+        });
+      }
+
+      function autoSaveQuickNote() {
+        var options = getContext().options;
+        if (options && options.autoSaveClipNote == Options.AUTO_SAVE_CLIPNOTE_OPTIONS.ALWAYS) {
+          var clipNote = quickNoteForm.asClipNote();
+          if (clipNote instanceof ClipNote) {
+            LOG.info("Auto-saving clipNote...");
+            $("#quickNoteAutoSaveIndicator").show();
+            try {
+              getContext().autoSavedNote = clipNote;
+            } catch(e) {
+              LOG.error("Popup could not auto-save quick note: " + e);
+            }
+            $("#quickNoteAutoSaveIndicator").fadeOut(300);
+          } else {
+            LOG.warn("Not auto-saving note because it is not a clipNote");
+          }
+        }
+      }
+      
+      function login(form) {
+        LOG.debug("Popup.login");
+        if (typeof form == 'object') {
+          var username = form.find("[name=username]").val().toLowerCase();
+          var password = form.find("[name=password]").val();
+          var rememberMe = form.find("[name=rememberMe]").val();
+          ViewManager.wait(chrome.i18n.getMessage("loggingIn"));
+          LOG.info("Authenticating with remote as: " + username);
+          loginProc = getContext().getRemote().authenticate(username, password, rememberMe, function(response, textStatus, xhr) {
+            LOG.info("Authentication response received...");
+            ViewManager.clearWait();
+            if (response.isError()) {
+              var userErrors = response.selectErrors(function(e) {
+                if ((e instanceof EDAMUserException || e instanceof ValidationError) 
+                    && (e.errorCode == EDAMErrorCode.INVALID_AUTH 
+                        || e.errorCode == EDAMErrorCode.DATA_REQUIRED 
+                        || e.errorCode == EDAMErrorCode.BAD_DATA_FORMAT)) {
+                  return true;
+                }
+              });
+              if (userErrors) {
+                LOG.info("Authentication invalid");
+                loginValidator.resetForm();
+                ViewManager.showFormErrors(form, userErrors, function(fieldName, errorMessage) {
+                  loginValidator.invalidate(fieldName, errorMessage);
+                });
+              } else {
+                LOG.warn("Unexpected response during login");
+                ViewManager.showErrors(response.errors);
+              }
+              ViewManager.showView("loginView", {username: username, password: ""});
+            } else {
+              LOG.info("Successfully logged in");
+              ViewManager.hideView("loginView");
+              if (getContext().getSyncState() != null) {
+                LOG.info("Got syncState, continuing with clipping");
+                startUp();
+              } else {
+                LOG.info("Didn't get syncState, acquiring one...");
+                remoteSyncState(function() {
+                  LOG.info("Got syncState after login, continuing with clipping")
+                  startUp();
+                }); 
+              }
+            }
+          }, function(xhr, textStatus, error) {
+            LOG.error("Failed to authenticate due to transport problems (" + ( (xhr && typeof xhr['status'] != 'undefined') ? xhr.status : 'UNKNOWN') + ")");
+            ViewManager.clearWait();
+            ViewManager.showHttpError(xhr, textStatus, error);
+          }, true);
+        }
+      }
+
+      function logout() {
+        LOG.debug("Popup.logout");
+        ViewManager.wait(chrome.i18n.getMessage("loggingOut"));
+        LOG.info("Logging out...");
+        var logoutProc = getContext().getRemote().logout(function(response, textStatus) {
+          ViewManager.clearWait();
+          if (response.isResult()) {
+            LOG.info("Successfully logged out");
+            resetContext();
+            window.close();
+          } else if (result.isError()) {
+            LOG.warn("Error logging out")
+            ViewManager.showErrors(response.errors);
+          } else {
+            LOG.error("Got garbage response when tried to logout");
+          }
+        }, function(xhr, textStatus, error) {
+          LOG.error("Failed to log out due to transport errors (" + ( (xhr && typeof xhr['status'] != 'undefined') ? xhr.status : 'UNKNOWN') + ")");
+          ViewManager.clearWait();
+          ViewManager.showHttpError(xhr, textStatus, error);
+        }, true);
+      }
+
+      function remoteFileNote(note, success, failure) {
+        LOG.debug("Popup.remoteFileNote");
+        if (!(note instanceof Note)) {
+          LOG.error("Tried to file non-Note");
+          return;
+        }
+        ViewManager.wait(chrome.i18n.getMessage("filing"));
+        LOG.info("Filing note...");
+        var fileProc = getContext().getRemote().file(note, function(response, textStatus) {
+          ViewManager.clearWait();
+          LOG.debug("Popup got response from server regarding filed note");
+          if (response.isResult()) {
+            LOG.info("Successfully filed clipped note");
+            if (typeof success == 'function') {
+              success(response, textStatus);
+            }
+          } else if (response.isError()) {
+            LOG.warn("Problem filing clipped note");
+            if (typeof failure == 'function') {
+              failure(response, textStatus);
+            }
+          } else {
+            LOG.error("Unrecognized response when tried to file previously clipped note");
+          }
+        }, function(xhr, textStatus, error) {
+          LOG.error("Failed to file clipped note due to transport errors (" + ( (xhr && typeof xhr['status'] != 'undefined') ? xhr.status : 'UNKNOWN') + ")");
+          ViewManager.clearWait();
+          ViewManager.showHttpError(xhr, textStatus, error);
+        }, true);
+        return fileProc;
+      }
+
+      function remoteDeleteNote(note, success, failure) {
+        LOG.debug("Popup.remoteDeleteNote");
+        if (!(note instanceof Note)) {
+          LOG.error("Tried to delete non-Note");
+          return;
+        }
+        ViewManager.wait(chrome.i18n.getMessage("deleting"));
+        LOG.info("Deleting previously clipped note...");
+        var deleteProc = getContext().getRemote().deleteNote(note, function(response, textStatus) {
+          ViewManager.clearWait();
+          LOG.debug("Popup got response from the server regarding deletion of note");
+          if (response.isResult()) {
+            LOG.info("Successfully deleted previously clipped note")
+            if (typeof success == 'function') { 
+              success(response, textStatus);
+            }
+          } else if (response.isError()) {
+            LOG.warn("Failed to delete previously clipped note");
+            if (typeof failure == 'function') {
+              failure(response, textStatus);
+            }
+          } else {
+            LOG.error("Unrecognized response when tried to delete previously clipped note");
+          }
+        }, function(xhr, textStatus, error) {
+          LOG.error("Failed to delete previously clipped note due to transport errors (" + ( (xhr && typeof xhr['status'] != 'undefined') ? xhr.status : 'UNKNOWN') + ")");
+          ViewManager.clearWait();
+          ViewManager.showHttpError(xhr, textStatus, error);
+        }, true);
+        return deleteProc;
+      }
+
+      function remoteClipNote(clipNote, success, failure) {
+        LOG.debug("Popup.remoteClipNote");
+        if (!(clipNote instanceof ClipNote)) {
+          LOG.error("Tried to clip invalid object");
+          return;
+        }
+        ViewManager.wait(chrome.i18n.getMessage("clippingToEvernote"));
+        LOG.info("Sending clip to the server");
+        var clipProc = getContext().getRemote().clip(clipNote, function(response, textStatus) {
+          ViewManager.clearWait();
+          LOG.debug("Popup got response from the server regarding clipped note");
+          if (response.isResult()) {
+            LOG.info("Successfully sent clip to the server");
+            if (typeof success == 'function') { 
+              success(response, textStatus);
+            }
+          } else if (response.isError()) {
+            LOG.warn("Failed to send clip to the server");
+            if (typeof failure == 'function') {
+              failure(response, textStatus);
+            }
+          } else {
+            LOG.error("Unrecognized response when tried to send clip to the server");
+          }
+        }, function(xhr, textStatus, error) {
+          LOG.error("Failed to send clip to server due to transport errors (" + ( (xhr && typeof xhr['status'] != 'undefined') ? xhr.status : 'UNKNOWN') + ")");
+          ViewManager.clearWait();
+          ViewManager.showHttpError(xhr, textStatus, error);
+        }, true);
+        return clipProc;
+      }
+
+      function remoteFindNotes(filter, offset, maxNotes, success, failure) {
+        LOG.debug("Popup.findNotes");
+        if (!(filter instanceof NoteFilter)) {
+          LOG.error("Tried to find notes without valid NoteFilter");
+          return;
+        }
+        //ViewManager.wait(chrome.i18n.getMessage("findingNotes"));
+        LOG.info("Searching notes: " + JSON.stringify(filter));
+        var findProc = getContext().getRemote().findNotes(filter, offset, maxNotes, function(response, textStatus) {
+          //ViewManager.clearWait();
+          LOG.debug("Popup got response from the server regarding note search");
+          if (response.isResult()) {
+            LOG.info("Successfully retreived note search results");
+            if (typeof success == 'function') {
+              success(response, textStatus);
+            }
+          } else if (response.isError()) {
+            LOG.warn("Failed to find notes");
+            if (typeof failure == 'function') {
+              failure(response, textStatus);
+            }
+          } else {
+            LOG.error("Unrecognized response when tried to find notes on the server");
+          }
+        }, function(xhr, textStatus, error) {
+          LOG.error("Failed to find notes due to transport errors ("  + ( (xhr && typeof xhr['status'] != 'undefined') ? xhr.status : 'UNKNOWN') + ")");
+          //ViewManager.clearWait();
+          ViewManager.showHttpError(xhr, textStatus, error);
+        }, true);
+        return findProc;
+      }
+
+      function remoteSyncState(success) {
+        LOG.debug("Popup.remoteSyncState");
+        ViewManager.wait(chrome.i18n.getMessage("synchronizing"));
+        LOG.info("Asking server for sync state");
+        return getContext().getRemote().getSyncState(null, function(response, textStatus) {
+          ViewManager.clearWait();
+          if (response.isResult()) {
+            LOG.info("Got successful result on sync");
+            if (!getContext().getSyncState()) {
+              LOG.warn("Somehow we're out of sync...");
+              return;
+            }
+            if (typeof success == 'function') {
+              success(response, textStatus);
+            }
+          } else if (response.isError() && response.hasErrorCode(EDAMErrorCode.PERMISSION_DENIED)) {
+            LOG.warn("Permission denied to obtain syncState...");
+            resetContext();
+            ViewManager.switchView("loginView");
+          } else if (response.isError()) {
+            LOG.warn("Unexpected error");
+            ViewManager.showErrors(response.errors);
+          } else {
+            LOG.error("Unexpected response when syncing");
+            var err = new Exception(EDAMErrorCode.UNKNOWN, chrome.i18n.getMessage("Error_"+EDAMErrorCode.UNKNOWN));
+            ViewManager.showError(err);
+          }
+        }, function(xhr, textStatus, error){
+          LOG.error("Failed to acquire sync state due to transport errors (" + ( (xhr && typeof xhr['status'] != 'undefined') ? xhr.status : 'UNKNOWN') + ")");
+          ViewManager.clearWait();
+          ViewManager.showHttpError(xhr, textStatus, error);
+        }, true);
+      }
+
+      function submitLoginForm() {
+        LOG.debug("Popup.submitLoginForm");
+        var form = $("form[name=loginForm]");
+        ViewManager.hideErrors();
+        ViewManager.clearFormArtifacts(form); 
+        login(form);
+      }
+
+      function submitFileForm() {
+        LOG.debug("Popup.submitFileForm"); 
+        if (fileNoteForm) {
+          if (!fileNoteChanged) {
+            LOG.info("No changes to file...");
+            dismissPopup();
+            return;
+          }
+          LOG.info("Filing changes...");
+          ViewManager.hideErrors();
+          ViewManager.clearFormArtifacts(fileNoteForm.form);
+          LOG.debug("Grabbing data from form");
+          var note = fileNoteForm.asNote();
+          LOG.debug("Sending this to remote: " + note.toString());
+          ViewManager.hideView("fileView");
+          var fileProc = remoteFileNote(note, function(response, textStatus) {
+            ViewManager.showMessage(chrome.i18n.getMessage("fileSuccess"));
+            dismissPopup();
+          }, function(response, textStatus) {
+            if (response.errors.length > 1) {
+              ViewManager.showErrors(response.errors);
+            } else {
+              ViewManager.showError(response.errors[0]);
+            }
+            ViewManager.showView("fileView", {note: note});
+          });
+        } else {
+          LOG.debug("Nothing to file...");
+        }
+      }
+
+      function submitDeleteForm() {
+        LOG.debug("Popup.submitDeleteForm");
+        if (fileNoteForm) {
+          LOG.debug("Grabbing data from form");
+          ViewManager.hideErrors();
+          var note = fileNoteForm.asNote();
+          if (LOG.isDebugEnabled())
+            LOG.debug("Sending this to remote: " + note.toString());
+          ViewManager.hideView("fileView");
+          var fileProc = remoteDeleteNote(note, function(response, textStatus) {
+            ViewManager.showMessage(chrome.i18n.getMessage("deleteSuccess"));
+            dismissPopup();
+          }, function(response, textStatus) {
+            ViewManager.showView("fileView", {note: note});
+          });
+        } else {
+          LOG.debug("Nothing to delete");
+        }
+      }
+
+      function submitQuickNoteForm() {
+        LOG.debug("Popup.submitQuickNoteForm");
+        if (quickNoteForm) {
+          LOG.debug("Grabbing data from form");
+          ViewManager.hideErrors();
+          var clipNote = quickNoteForm.asClipNote();
+          ViewManager.hideView("quickNoteView");
+          if (LOG.isDebugEnabled())
+            LOG.debug("Sending this to remote: " + clipNote.toString());
+          // if clipping full page but there's no content yet - then wait for it
+          if (clipNote.fullPage && clipNote.content.length == 0) {
+            if (quickNoteSubmitWait == null) {
+              ViewManager.wait(chrome.i18n.getMessage("clippingPageContent"));
+              quickNoteSubmitWait = setTimeout(function() {
+                submitQuickNoteForm();
+              }, CLIP_PAGE_CONTENT_TIMEOUT);
+              return;
+            } else {
+              ViewManager.switchView("quickNoteView");
+              quickNoteForm.fullPage = false;
+              quickNoteForm.disableFullPage();
+              ViewManager.showError(chrome.i18n.getMessage("fullPageClipFailure"));
+              quickNoteSubmitWait = null;
+              return;
+            }
+          }
+          // clear waiting process
+          if (quickNoteSubmitWait) {
+            clearTimeout(quickNoteSubmitWait);
+            quickNoteSubmitWait = null;
+          }
+          // clear content before submitting if not full page
+          // if there will be an error with submitting the note to the server,
+          // we'll replace the content
+          var origContent = clipNote.content;
+          if (!clipNote.fullPage && clipNote.content.length > 0) {
+            clipNote.content = "";
+          }
+          var clipProc = remoteClipNote(clipNote, function(response, textStatus) {
+            ViewManager.showMessage(chrome.i18n.getMessage("quickNoteSuccess"));
+            resetQuickNote();
+            dismissPopup();
+          }, function(response, textStatus) {
+            if (response.errors.length == 1) {
+              ViewManager.showError(response.errors[0])
+            } else {
+              ViewManager.showErrors(response.errors);
+            }
+            // replace previously removed content to be consistent
+            clipNote.content = origContent;
+            ViewManager.switchView("quickNoteView", {clipNote: clipNote});
+          });
+        } else {
+          LOG.debug("Nothing to clip...");
+        }
+      }
+
+      function cancelQuickNoteForm() {
+        LOG.debug("Popup.cancelQuickNoteForm");
+        resetQuickNote();
+        dismissPopup();
+        //window.close();
+      }
+
+      function resetQuickNote() {
+        getContext().autoSavedNote = null;
+      }
+
+      function submitNotesSearchForm() {
+        LOG.debug("Popup.submitNotesSearchForm");
+        if (notesSearchForm) {
+          var q = notesSearchForm.notesSearchQuery;
+          var noteFilter = getContext().noteFilter;
+          noteFilter.resetQuery();
+          noteFilter.words = q;
+          getContext().noteFilter = noteFilter;
+          LOG.info("Searching for: " + JSON.stringify(noteFilter.toStorable()));
+          $("#notesListItems").empty();
+          getContext().state.noteListScrollTop = null;
+          doNoteSearch();
+        } else {
+          LOG.debug("No search query...");
+        }
+      }
+
+      function doNoteSearch() {
+        var noteFilter = getContext().noteFilter;
+        if (noteFilter.words) {
+          $("#notesSearchQuery").val(noteFilter.words);
+        }
+        $("#notesList").ascrollable({
+          debug: true,
+          pageSize: NOTELIST_PAYLOAD_SIZE,
+          pageBuffer: NOTELIST_PAGE_SIZE,
+          itemHeight: NOTELIST_ITEM_HEIGHT,
+          loadProcTimeout: NOTELIST_FETCH_TIMEOUT,
+          debug: false,
+          placeholderItem: createNoteListItem(new Note(), (noteFilter) ? noteFilter.words : null),
+          loadingContainer: $("#notesListLoadingContainer"),
+          emptyContainer: $("#notesListEmptyContainer"),
+          onScroll: function(event) {
+            if (noteListScrollTimer)
+              clearTimeout(noteListScrollTimer);
+            noteListScrollTimer = setTimeout(function() {
+              var pos = event.target.scrollTop;
+              LOG.debug("Remembering scrollTop: " + pos);
+              getContext().state.noteListScrollTop = pos;
+              noteListScrollTimer = null;
+            }, 600);
+          },
+          onEmpty: function() {
+            if (!noteFilter.isEmpty()) {
+              $("#notesList > *").hide();
+              $("#notesListEmptyContainer").show();
+            } else {
+              $("#notesList > *").hide();
+              $("#notesList").addClass("notesListEmpty");
+            }
+          },
+          totalItems: function() {
+            return (noteList) ? noteList.totalNotes : 0;
+          },
+          onLoadPage: function(pageIndex, pageSize, totalPages) {
+            //console.log("*** Fetching pageIndex=" + pageIndex + "; pageSize=" + pageSize + "; totalPages=" + totalPages); // XXX
+            findProc = remoteFindNotes(getContext().noteFilter, (pageIndex*pageSize), (pageSize*totalPages), function(response, textStatus) {
+              findProc = null;
+              noteList = response.result.noteList;
+              $("#notesSearchTitle").html(chrome.i18n.getMessage("notes_titleWithCount", [noteList.totalNotes]));
+              //console.log("Triggering afterLoadPage " + pageIndex + ", " + pageSize + ", " + totalPages); // XXX
+              $("#notesList").trigger("afterLoadPage", [pageIndex, pageSize, totalPages]);
+            }, function(response, textStatus) {
+              findProc = null;
+              if (response.errors.length == 1) {
+                ViewManager.showError(response.errors[0]);
+              } else {
+                ViewManager.showErrors(response.errors);
+              }
+            });
+            return false;
+          },
+          onAfterLoadPage: function(pageIndex, pageSize, totalPages) {
+            if (pageIndex == 0 && getContext().state.noteListScrollTop) {
+              setTimeout(function() {
+                $("#notesList").scrollTo(getContext().state.noteListScrollTop);
+              }, NOTELIST_SCROLLTO_DELAY);
+            }
+          },
+          items: function() {
+            var items = new Array();
+            if (noteList) {
+              for (var i=0; i<noteList.notes.length; i++) {
+                items[noteList.startIndex+i] = (createNoteListItem(noteList.notes[i], (noteFilter) ? noteFilter.words : null));
+              }
+            }
+            return items;
+          }
+        });
+      }
+
+      function startUp() {
+        LOG.debug("Popup.startUp");
+        var fullPage = true;
+        if (options.autoSaveClipNote == Options.AUTO_SAVE_CLIPNOTE_OPTIONS.ALWAYS
+            || options.autoSaveClipNote == Options.AUTO_SAVE_CLIPNOTE_OPTIONS.REMEMBER) {
+          var savedNote = getContext().autoSavedNote;
+          if (savedNote instanceof ClipNote && (!savedNote.fullPage || (savedNote.content && savedNote.content.length > 0))) {
+            fullPage = false;
+          }
+        }
+        getSelection(fullPage);
+      }
+      
+			$(document).ready(function() {
+        init();
+        ViewManager.globalErrorMessage = new ViewManager.SimpleMessage($("#globalErrorMessage"));
+        ViewManager.globalMessage = new ViewManager.StackableMessage($("#globalMessage"));
+        localizePopup();
+        quickNoteForm = ClipNoteForm.onForm($("form[name=quickNoteForm]"));
+        fileNoteForm = NoteForm.onForm($("form[name=fileForm]"));
+        notesSearchForm = ModelForm.onForm($("form[name=notesSearchForm]"));
+        bindViews();
+        bindForms();
+        ViewManager.wait(chrome.i18n.getMessage("loading"));
+        setTimeout(function(){
+          remoteSyncState(function() {
+            startUp();
+          });
+        }, 300);
+			});
+		</script>
+</head>
+<body class="popup">
+  <div id="spinner" class="spinner banner">
+    <div id="spinnerMessage"></div>
+  </div>
+  <div id="globalErrorMessage" class="globalErrorMessage banner">
+  </div>
+  <div id="globalMessage" class="globalMessage banner">
+  </div>
+  <div id="header" style="display: none;">
+    <div id="headerLogo">
+      <a href="javascript:goHome();" tabindex="-1"><img src="images/logo-30.gif"/></a>
+    </div>
+    <div id="headerUser" class="headerLinks">
+      <a id="headerSignout" message="signout" href="javascript:logout();" tabindex="100"></a> (<span id="headerUsername"></span>)
+    </div>
+    <div id="headerNoUser" class="headerLinks">
+    </div>
+  </div>
+  <div id="loginView" class="view">
+    <h2 message="loginToEvernote"></h2>
+    <form name="loginForm" action="#">
+      <table class="formTable">
+        <tr>
+          <td><label for="username" message="loginForm_username"></label></td> 
+          <td><input type="text" name="username" maxlength="64" style="text-transform: lowercase" tabindex="1"/> </td>
+        </tr>
+        <tr>
+          <td><label for="password" message="loginForm_password"></label></td> 
+          <td><input type="password" name="password" maxlength="64" tabindex="2"/> </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td><input type="checkbox" name="rememberMe" tabindex="3"/>&nbsp;<label for="rememberMe" message="loginForm_rememberMe"></label></td>
+        </tr>
+        <tr class="actionControlRow">
+          <td>&nbsp;</td>
+          <td>
+            <input type="submit" name="login" message="loginForm_login" style="margin-bottom: 8px;" tabindex="4"/><br/>
+            <a id="headerRegister" message="header_register" href="javascript:goRegister();" tabindex="5"></a>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  <div id="fileView" class="view viewWithDrawer">
+    <h2 message="contentClipped"></h2><br/>
+    <form name="fileForm" action="#">
+      <span class="description" message="fileForm_sourceURL"></span>&nbsp;<span class="description" name="url"></span>
+      <table class="neatFormTable" cellpadding="0" cellspacing="0">
+        <tr class="firstRow separator"><td>
+          <label for="title" message="fileForm_title"></label> 
+        </td><td colspan="2">
+          <input type="text" name="title" maxlength="255" tabindex="1"/>
+        </td></tr>
+      
+        <tr class="separator"><td>
+          <label for="notebookGuid" message="fileForm_notebook"></label> 
+        </td><td>
+          <select class="notebookSelect" name="notebookGuid" tabindex="2"></select><br />
+        </td><td rowspan="3" class="noteThumbnail">
+          <a href="javascript:openNoteWindow(fileNoteForm.noteUrl)" tabindex="-1"><img name="thumbnailUrl" src=""/></a><br/>
+          <div class="paddedVertical"><a href="javascript:openNoteWindow(fileNoteForm.noteUrl);" class="noteLink" message="fileForm_viewInEvernote" tabindex="5"></a></div>
+          <input type="hidden" name="noteUrl"/>
+        </td></tr>
+        
+        <tr><td>
+          <label for="tagNames" message="fileForm_tagNames"></label> 
+        </td><td>
+          <input type="text" name="tagNames" maxlength="10100" tabindex="3"/><br />
+        </td></tr>
+      
+        <tr><td>
+          <label for="comment" message="fileForm_comment"></label> 
+        </td><td>
+          <textarea name="comment" rows="6" tabindex="4"></textarea><br/>
+        </td></tr>
+        
+        <tr class="actionControlRow lastRow separator"><td colspan="3">
+          <input type="submit" name="file" message="fileForm_done" tabindex="6"/>&nbsp;
+          <input type="button" name="cancel" message="fileForm_delete" tabindex="7" onClick="javascript:ViewManager.clearFormArtifacts($(this)); submitDeleteForm(); return false;"/>
+        </td></tr>      
+      </table>
+      <input type="hidden" name="guid"/>
+    </form>
+  </div>
+  <div id="quickNoteView" class="view viewWithDrawer">
+    <img class="needsSyncIndicator" src="images/needsSync.png"/><h2 message="quickNote"></h2>&nbsp;<span class="description" message="quickNoteDescription"></span><span class="description autoSaved" message="quickNoteAutoSavedDescription"></span>
+    <form name="quickNoteForm" action="#">
+      <table class="compactFormTable">
+        <tr class="firstRow separator"><td colspan="2">        
+          <label for="title" message="quickNote_title"></label>
+          <input type="text" name="title" maxlength="255" tabindex="1"/><br />
+        </td></tr>
+      
+        <tr><td width="240">
+          <label for="tagNames" message="quickNote_tagNames"></label> 
+          <input type="text" name="tagNames" maxlength="10100" tabindex="2"/><br />
+        </td><td>
+          <label for="notebookGuid" message="quickNote_notebook"></label> 
+          <select class="notebookSelect" name="notebookGuid" tabindex="3"></select><br/> 
+        </td></tr>
+        
+        <tr><td colspan="2">
+          <label for="comment" message="quickNote_comment"></label> 
+          <textarea name="comment" rows="8" tabindex="4"></textarea><br />
+        </td></tr>
+      
+        <tr><td colspan="2">
+          <input type="checkbox" name="saveUrl" tabindex="5"/> 
+          <label for="saveUrl" message="quickNote_saveUrl"></label>&nbsp;
+          <input type="checkbox" name="fullPage" tabindex="6"/> 
+          <label for="fullPage" message="quickNote_fullPage"></label><br/>
+        </td></tr>
+
+        <tr class="actionControlRow lastRow separator"><td colspan="2">
+          <input type="submit" name="quickNote" message="quickNote_submit" tabindex="7"/>&nbsp;
+          <input type="button" name="cancel" message="quickNote_cancel" onClick="cancelQuickNoteForm();" tabindex="8"/>&nbsp;
+          <span id="quickNoteAutoSaveIndicator" class="autoSaveIndicator" style="display: none;" message="autoSaving"></span>
+        </td></tr>      
+      </table>
+      <textarea name="content" style="display: none;"></textarea>
+      <input type="hidden" name="url" />
+    </form>
+  </div>
+  <div class="drawerHandle closedDrawer" id="notesSearchHandle" style="display: none;">
+    <div class="drawerHandleTitle" id="notesSearchTitle" message="notes_title"></div>
+  </div>
+  <div id="notesView" class="drawer closedDrawer" style="display: none;">
+    <div id="notesSearch" class="drawerContent">
+      <form name="notesSearchForm" class="drawerComponent" action="#" onSubmit="submitNotesSearchForm(); return false;">
+        <table id="notesSearchQueryTable">
+          <tbody>
+          <tr>
+            <td>
+              <input type="text" id="notesSearchQuery" name="notesSearchQuery"/>
+            </td><td>
+              <input type="submit" value="search" message="notesSearch_submit"/>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </form>
+      <div id="notesList" class="scrollable vertical drawerComponent" style="position: relative">
+        <div id="notesListItems" class='items' style="position: absolute; display: none;"></div>
+        <div id="notesListLoadingContainer" style="display: none;">
+          <div id="notesListLoadingIndicator">
+            <img src='images/spinner.gif'/>
+            <div message="notesList_loading"></div>
+          </div>
+        </div>
+        <div id="notesListEmptyContainer" style="display: none;">
+          <div id="notesListEmptyIndicator">
+            <div message="noteList_nothingFound"></div>
+            <small message="noteList_modifySearch"></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

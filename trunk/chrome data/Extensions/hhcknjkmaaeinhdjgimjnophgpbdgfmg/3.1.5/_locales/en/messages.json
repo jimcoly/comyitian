@@ -1,0 +1,17 @@
+{
+   "browser_action_tooltip_default": {
+      "message": "Reader Plus Preferences"
+   },
+   "extension_description": {
+      "message": "Enhance Google Reader by adding missing favicons and a collection of others features"
+   },
+   "extension_language": {
+      "message": "English"
+   },
+   "extension_name": {
+      "message": "Reader Plus"
+   },
+   "extension_summary": {
+      "message": "Enhance Google Reader by adding missing favicons, fixing missing images in enclosures, better unread counter, better viewing on wider screens, fullscreen, preview, colored list view, filtering, multi columns display, jump top bottom, close entry, fit height, open in background tab, read by mouse, share news on Facebook, Twitter, Instapaper, ReadItLater, mark all as read, simple advertising remover, replacer items for comic strips, automatic translation, and more....\nYou can choose your favorite theme in the different available skins, use your own background picture or choose one from iGoogle themes.\nShortcuts can be easily customizable.\nThis extension supports translations (english, french, russian, chinese).\nDon't hesitate to help me to translate in your language [http://goo.gl/HjiG]\n\nYou can add the optional button in the chrome toolbar here :\nhttps://chrome.google.com/extensions/detail/ecpcafinfpjgabomoamkhkgnpgpmdmeo"
+   }
+}
