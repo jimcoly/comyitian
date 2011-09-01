@@ -52,7 +52,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions);</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -119,6 +119,7 @@
     <ClInclude Include="..\ExcelW\CWorksheet.h" />
     <ClInclude Include="..\ExcelW\CWorksheets.h" />
     <ClInclude Include="..\ExcelW\ExcelWrapper.h" />
+    <ClInclude Include="Address.h" />
     <ClInclude Include="ConfigurationDlg.h" />
     <ClInclude Include="DataCenter.h" />
     <ClInclude Include="DlgProxy.h" />
@@ -126,9 +127,11 @@
     <ClInclude Include="ForlijiaEx.h" />
     <ClInclude Include="ForlijiaExDlg.h" />
     <ClInclude Include="MatchAddress.h" />
+    <ClInclude Include="Peisong.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="TipDlg.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\AddressW\AddressData.cpp" />
@@ -138,6 +141,7 @@
     <ClCompile Include="..\AddressW\StringList.cpp" />
     <ClCompile Include="..\AddressW\utitily .cpp" />
     <ClCompile Include="..\ExcelW\ExcelWrapper.cpp" />
+    <ClCompile Include="Address.cpp" />
     <ClCompile Include="ConfigurationDlg.cpp" />
     <ClCompile Include="DataCenter.cpp" />
     <ClCompile Include="DlgProxy.cpp" />
@@ -145,10 +149,12 @@
     <ClCompile Include="ForlijiaEx.cpp" />
     <ClCompile Include="ForlijiaExDlg.cpp" />
     <ClCompile Include="MatchAddress.cpp" />
+    <ClCompile Include="Peisong.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TipDlg.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Midl Include="ForlijiaEx.idl" />

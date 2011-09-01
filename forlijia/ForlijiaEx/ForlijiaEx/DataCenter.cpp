@@ -64,8 +64,8 @@ void DataCenter::Insert( StreetData sdata,PortData pdata )
 PortData DataCenter::process( std::wstring address )
 {
 	PortData pd;
-	static FilterAddress fa;
-	fa.process(address);
+	//static FilterAddress fa;
+	//fa.process(address);
 
 	std::set<std::wstring> aset=getKeyAddress(address);
 	for (auto iter=aset.begin();iter!=aset.end();iter++)

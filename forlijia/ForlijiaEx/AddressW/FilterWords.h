@@ -1,5 +1,6 @@
 #include "StringList.h"
 #pragma once
+#include "config.h"
 
 class FilterWords
 {
@@ -7,98 +8,144 @@ public:
 	FilterWords(StringList sl,std::wstring word):m_sl(sl),m_word(word){};
 	~FilterWords(void);
 
-	bool process(std::wstring& str)
-	{
-		std::wstring::size_type pos=str.find(m_word);
-		if (pos==std::wstring::npos){
-			return RemoveStr(str);
-		}
-		else
-		{
-			return RemoveStr(str,m_word);
-		}
-	}
+	std::wstring process(std::wstring& str);
 
-	bool RemoveStr( std::wstring &str ,std::wstring word=L"")
-	{
-		StringList::iterator iter;
-		if (m_sl.empty()){
-			return true;
-		}
-		for(iter=m_sl.begin();iter!=m_sl.end();iter++)
-		{
-			std::wstring removalStr=(*iter)+word;
-			int pos1=str.find(removalStr.c_str());
-			if (pos1!=0)	{
-				continue;
-			}
-			else
-			{
-				str=str.substr(removalStr.size(),(str.size()-removalStr.size()));
-				return true;
-			}
-		}
-		return false;
-	}
+	std::wstring RemoveStr( std::wstring &str ,std::wstring word=L"");
+private:
 	StringList m_sl;
 	std::wstring m_word;
 };
+class ProvinceFilter
+{
+public:
+	ProvinceFilter():m_Filter(config::getinstance()->shenglist,L"省"){}
+	~ProvinceFilter(){}
+public:
+	std::wstring Filter(std::wstring& str)
+	{
+		return m_Filter.process(str);
+	}
 
+private:
+	FilterWords m_Filter;
+};
+class CityFilter
+{
+public:
+	CityFilter():m_Filter(config::getinstance()->shilist,L"市"){}
+	~CityFilter(){}
+public:
+	std::wstring Filter(std::wstring& str)
+	{
+		return m_Filter.process(str);
+	}
+
+private:
+	FilterWords m_Filter;
+};
+class CountyFilter
+{
+public:
+	CountyFilter():m_Filter(config::getinstance()->xianlist,L"县"){}
+	~CountyFilter(){}
+public:
+	std::wstring Filter(std::wstring& str)
+	{
+		return m_Filter.process(str);
+	}
+
+private:
+	FilterWords m_Filter;
+};
+class AreaFilter
+{
+public:
+	AreaFilter():m_Filter(config::getinstance()->qulist,L"区"){}
+	~AreaFilter(){}
+public:
+	std::wstring Filter(std::wstring& str)
+	{
+		return m_Filter.process(str);
+	}
+
+private:
+	FilterWords m_Filter;
+};
+class TownFilter
+{
+public:
+	TownFilter():m_Filter(config::getinstance()->zhenlist,L"镇"){}
+	~TownFilter(){}
+public:
+	std::wstring Filter(std::wstring& str)
+	{
+		return m_Filter.process(str);
+	}
+
+private:
+	FilterWords m_Filter;
+};
+class OtherFilter
+{
+public:
+	OtherFilter();
+	~OtherFilter(){}
+public:
+	std::wstring Filter(std::wstring& str)
+	{
+		return m_Filter.process(str);
+	}
+
+private:
+	FilterWords m_Filter;
+};
+
+class KeyAddressFilter
+{
+public:
+	KeyAddressFilter() {}
+	~KeyAddressFilter(){}
+public:
+	std::vector<std::wstring> Filter(std::wstring &orgaddress)
+	{ 
+		std::vector<std::wstring> keySet;
+		std::wstring returnStr;
+		while (returnStr!=orgaddress)
+		{
+			returnStr=FilterString(orgaddress);
+			if (!returnStr.empty())
+			{
+				keySet.push_back(returnStr);
+			}
+		}
+		return keySet;
+	}
+	std::wstring FilterString(std::wstring &orgaddress)
+	{
+		config *theconfig=config::getinstance();
+		StringList keywordList=theconfig->addresskeywordlist;
+		std::vector<std::wstring> keySet;
+		for (auto iter=keywordList.begin();iter!=keywordList.end();iter++)
+		{
+			size_t pos=orgaddress.find(*iter);
+			if(pos!=std::wstring::npos){
+				std::wstring str=orgaddress.substr(0,pos+iter->size());
+				orgaddress=orgaddress.substr(pos+iter->size());
+				return str;
+			} 
+		}
+		return orgaddress;
+	}
+
+};
 class NumFilterWords
 {
 public:
-	NumFilterWords(StringList sl):m_sl(sl){};
+	NumFilterWords():m_sl(config::getinstance()->numlist){};
 	~NumFilterWords(void){};
 
-	bool process(std::wstring& str)
-	{
-		WCHAR c1=L'1';
-		WCHAR c2=L'9';
-		int pos=0;
-		std::wstring::iterator iter;
-		int numcount=0;
-		for( iter=str.begin();iter!=str.end();iter++,pos++)
-		{
-			WCHAR chr=*iter;
-			bool s=(chr>47/*L'0'-1*/ && chr<58 /*L'9'+1*/) ;
-			if(s) 
-			{
-				numcount++;
-			}
-			else
-			{
-				numcount=0;
-				continue;
-			}
-			std::wstring houstr=str.substr(pos+1);
-			if (FindStr(houstr) || pos==str.size()-1)
-			{
-				str.resize(pos-(numcount-1));
-				return true;
-			} 
-		}
-		return false;
+	std::wstring process(std::wstring& str);
 
-	}
-
-	bool FindStr( std::wstring &str )
-	{
-		StringList::iterator iter;
-		if (m_sl.empty()){
-			return true;
-		}
-		for(iter=m_sl.begin();iter!=m_sl.end();iter++)
-		{ 
-			int pos1=str.find(*iter);
-			if (pos1==0)	{
-				return true;
-			}
-			else
-			{
-				continue;
-			}
-		}
-		return false;
-	}
+	bool FindStr( std::wstring &str );
 	StringList m_sl;
 };

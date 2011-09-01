@@ -20,7 +20,7 @@ class CForlijiaExDlg : public CDialogEx
 	friend class CForlijiaExDlgAutoProxy;
 
 // Construction
-public:
+public://
 	CForlijiaExDlg(CWnd* pParent = NULL);	// standard constructor
 	virtual ~CForlijiaExDlg();
 
@@ -50,14 +50,14 @@ protected:
 public:
 	afx_msg void OnBnClickedButtonconfig();
 	afx_msg void OnBnClickedButtonLoad();
-public:
+public: 
 	typedef std::map<StreetData,PortData> addressDataList;
 
 	afx_msg void OnBnClickedButtonsave();
 	afx_msg void OnBnClickedButtonslect();
 	void Process();
 
-	std::list<PortData> _Process( ExlDistribution::addressDataListexl &getdataList );
+	//std::list<PortData> _Process( ExlDistribution::addressDataListexl &getdataList );
 	DataCenter m_dataCenter;
 
 

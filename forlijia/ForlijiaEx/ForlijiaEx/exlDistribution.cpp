@@ -28,7 +28,7 @@ ExlDistribution::addressDataListexl ExlDistribution::get_data_list()
 	} 
 
 	int row=m_ew.GetRowCount(); 
-	for(int i=3;i<row;i++)
+	for(int i=3;i<=row;i++)
 	{ 
 		CString saddress,swaifu,srelease,sunrealse;
 		saddress=m_ew.GetCell(i,ADDRESSCOlUMN);
@@ -67,7 +67,7 @@ bool ExlDistribution::set_data_port(  std::list<PortData> &pdatalist)
 		return false;
 	} 
 	int row=m_ew.GetRowCount(); 
-	if(pdatalist.size()!=row-3)
+	if(pdatalist.size()!=row-2)
 	{
 		return false;
 	}

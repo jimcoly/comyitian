@@ -33,7 +33,8 @@ public:
 	void SetCell(int iRow, int iColumn,CString valuestr);
 	int GetRowCount();
 	int GetColumnCount();
-
+	COleSafeArray GetRange( CString Cell1,CString Cell2);
+	void SetRange( CString Cell1,CString Cell2,COleSafeArray array);
 private:
 	static CApplication ExcelApp;
 	CWorkbook m_Book;
