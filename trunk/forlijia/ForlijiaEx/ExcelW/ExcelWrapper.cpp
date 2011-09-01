@@ -109,7 +109,6 @@ void ExcelWrapper::InitExcel()
 
 void ExcelWrapper::ReleaseExcel()
 {
-
 	ExcelApp.Quit();
 	ExcelApp.ReleaseDispatch();
 }
@@ -191,12 +190,12 @@ bool ExcelWrapper::LoadSheet( int iIndex )
 	return true;
 }
 
-int ExcelWrapper::GetRowCount()
+int ExcelWrapper::GetRowCount()//行
 {
 	CRange oRange=m_Sheet.get_UsedRange();//得到使用的
-	CRange RowRange=oRange.get_Rows();//得到列
+	CRange RowRange=oRange.get_Rows();//得到
 
-	int cout=RowRange.get_Count();//得到列数量
+	int cout=RowRange.get_Count();//得到数量
 	oRange.DetachDispatch();
 	RowRange.DetachDispatch();
 	return cout;
@@ -222,6 +221,19 @@ CString ExcelWrapper::GetCell( int iRow, int iColumn )
 	rang=var.pdispVal;
 	str=VariantToCString(rang.get_Value2());
 	return str;
+}
+COleSafeArray  ExcelWrapper::GetRange( CString Cell1,CString Cell2)
+{
+	COleVariant covOptional(DISP_E_PARAMNOTFOUND,VT_ERROR);
+	CRange oRange = m_Range.get_Range(COleVariant(Cell1),COleVariant(Cell2)); 
+	COleSafeArray saRet(oRange.get_Value(covOptional));
+	return saRet;
+}
+void  ExcelWrapper::SetRange( CString Cell1,CString Cell2,COleSafeArray array)
+{
+	COleVariant covOptional(DISP_E_PARAMNOTFOUND,VT_ERROR);
+	CRange oRange = m_Range.get_Range(COleVariant(Cell1),COleVariant(Cell2));  
+	oRange.put_Value(covOptional,COleVariant(array));
 }
 
 void ExcelWrapper::SetCell( int iRow, int iColumn,CString valuestr )

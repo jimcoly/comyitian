@@ -4,7 +4,7 @@
 
 
  /* File created by MIDL compiler version 7.00.0555 */
-/* at Tue May 11 23:03:30 2010
+/* at Tue Nov 09 17:04:19 2010
  */
 /* Compiler settings for ForlijiaEx.idl:
     Oicf, W1, Zp8, env=Win32 (32b run), target_arch=X86 7.00.0555 

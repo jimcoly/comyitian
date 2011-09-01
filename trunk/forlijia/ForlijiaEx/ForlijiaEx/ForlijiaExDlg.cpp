@@ -15,7 +15,8 @@
 #include "..\ExcelW\ExcelWrapper.h"
 #include "exlDistribution.h"
 #include "..\AddressW\FilterAddress.h"
-
+#include "TipDlg.h" 
+#include "Peisong.h"
 
 using namespace std;
 
@@ -77,6 +78,7 @@ CForlijiaExDlg::~CForlijiaExDlg()
 	//  the dialog has been deleted.
 	if (m_pAutoProxy != NULL)
 		m_pAutoProxy->m_pDialog = NULL;
+	ExcelWrapper::ReleaseExcel();
 }
 
 void CForlijiaExDlg::DoDataExchange(CDataExchange* pDX)
@@ -265,111 +267,141 @@ std::wstring Ansi2Wchar( std::string str )
 }
 void CForlijiaExDlg::OnBnClickedButtonLoad()
 {
-	// TODO: Add your control notification handler code here
-	m_dataCenter.Load();
+	//// TODO: Add your control notification handler code here
+	//m_dataCenter.Load();
 }
 
 
 void CForlijiaExDlg::OnBnClickedButtonsave()
 {
-	// TODO: Add your control notification handler code here
-	for (auto iter=m_addaddressList.begin();iter!=m_addaddressList.end();iter++)
-	{
-		m_dataCenter.Insert(iter->first,iter->second);
+	//// TODO: Add your control notification handler code here
+	//for (auto iter=m_addaddressList.begin();iter!=m_addaddressList.end();iter++)
+	//{
+	//	m_dataCenter.Insert(iter->first,iter->second);
 
-	}
-	m_dataCenter.Save();
+	//}
+	//m_dataCenter.Save();
 }
 
 
-void CForlijiaExDlg::OnBnClickedButtonslect()
+void CForlijiaExDlg::OnBnClickedButtonslect()//读取更新用的
 {		
-	FilterAddress fa;
-	// TODO: Add your control notification handler code here
-	WCHAR Filter[]=L"excel(*.xls)|*.xls||";
-	CFileDialog dlgOpen(TRUE,0,0,OFN_HIDEREADONLY|OFN_FILEMUSTEXIST,(LPCTSTR)Filter,NULL);
-	if(dlgOpen.DoModal()==IDOK)
-	{
-		CString filePathname=dlgOpen.GetPathName();
-		ExlDistribution ed;
-		if (!ed.Open(filePathname.GetString()))
-		{
-			MessageBox(L"打开失败");
-		}
-		addressDataList getdataList=ed.get_sep_list();
-		for (addressDataList::iterator iter=getdataList.begin();iter!=getdataList.end();iter++)
-		{
-			std::wstring addressstr=iter->first.m_address;
-			fa.just_filter_sheng_and_Num(addressstr);	
-			StreetData sd(addressstr);
-			if (!m_dataCenter.IsOther(iter->second.m_UninstallPorts) 
-				&& !m_dataCenter.IsTiaojian(addressstr)
-				&& m_dataCenter.check(sd) )
-			{
-				m_addaddressList.insert(std::make_pair(sd,iter->second));
-			}
-		}
-		ed.Close();
+	//FilterAddress fa;
+	//// TODO: Add your control notification handler code here
+	//WCHAR Filter[]=L"excel(*.xls)|*.xls||";
+	//CFileDialog dlgOpen(TRUE,0,0,OFN_HIDEREADONLY|OFN_FILEMUSTEXIST,(LPCTSTR)Filter,NULL);
+	//if(dlgOpen.DoModal()==IDOK)
+	//{
+	//	CString filePathname=dlgOpen.GetPathName();
+	//	ExlDistribution ed;
+	//	if (!ed.Open(filePathname.GetString()))
+	//	{
+	//		MessageBox(L"打开失败");
+	//	}
+	//	addressDataList getdataList=ed.get_sep_list();
+	//	for (addressDataList::iterator iter=getdataList.begin();iter!=getdataList.end();iter++)
+	//	{
+	//		std::wstring addressstr=iter->first.m_address;
+	//		fa.just_filter_sheng_and_Num(addressstr);	
+	//		StreetData sd(addressstr);
+	//		if (!m_dataCenter.IsOther(iter->second.m_UninstallPorts) 
+	//			&& !m_dataCenter.IsTiaojian(addressstr)
+	//			&& m_dataCenter.check(sd) )
+	//		{
+	//			m_addaddressList.insert(std::make_pair(sd,iter->second));
+	//		}
+	//	}
+	//	ed.Close();
 
-		SetDlgItemInt(IDC_STATIC_totalcount,getdataList.size());
-		SetDlgItemInt(IDC_STATIC_addcount,m_addaddressList.size());
-	}
-	else 
-	{
-		return ;
-	}
+	//	SetDlgItemInt(IDC_STATIC_addcount,m_addaddressList.size());
+	//	SetDlgItemInt(IDC_STATIC_totalcount,getdataList.size());
+	//}
+	//else 
+	//{
+	//	return ;
+	//}
 }
 void CForlijiaExDlg::Process()
-{
+{	
+#ifdef _MYTest
+	Peisong ps;
+	ps.Process();
+#else
+	CTipDlg *tipDlg=new CTipDlg(this);
 	WCHAR Filter[]=L"excel(*.xls)|*.xls||";
 	CFileDialog dlgOpen(TRUE,0,0,OFN_HIDEREADONLY|OFN_FILEMUSTEXIST,(LPCTSTR)Filter,NULL);
 	if(dlgOpen.DoModal()==IDOK)
 	{
+		tipDlg->Create(IDD_DIALOG_TIP,this);
+		tipDlg->ShowWindow(SW_SHOW);
+		tipDlg->SetTipText(L"处理中...");
 		CString filePathname=dlgOpen.GetPathName();
-		ExlDistribution ed;
-		if (!ed.Open(filePathname.GetString()))
-		{
-			MessageBox(L"打开失败");
-			return;
-		}
-		ExlDistribution::addressDataListexl getdataList=ed.get_data_list();
-		if (!ed.check_Port_is_empty(getdataList))
-		{
-			MessageBox(L"已经有数据");
-			return;
-		}
-		else
-		{
-			std::list<PortData> pset=_Process(getdataList);
-			ed.set_data_port(pset);
-		}
-		
-		ed.Save_And_Close();
+		CString GetPath=dlgOpen.GetFolderPath();
+		Peisong ps;
+		ps.Open(filePathname.GetString());
+		ps.Process();
+		ps.Save_And_Close(GetPath+L"\\");
+		tipDlg->CloseWindow();
+		delete tipDlg;
 	}
-	else 
-	{
-		return ;
-	}
+#endif
+	//CTipDlg *tipDlg=new CTipDlg(this);
+	//WCHAR Filter[]=L"excel(*.xls)|*.xls||";
+	//CFileDialog dlgOpen(TRUE,0,0,OFN_HIDEREADONLY|OFN_FILEMUSTEXIST,(LPCTSTR)Filter,NULL);
+	//if(dlgOpen.DoModal()==IDOK)
+	//{
+	//	CString filePathname=dlgOpen.GetPathName();
+	//	ExlDistribution ed;
+	//	if (!ed.Open(filePathname.GetString()))
+	//	{
+	//		MessageBox(L"打开失败");
+	//		return;
+	//	}		
+	//	tipDlg->Create(IDD_DIALOG_TIP,this);
+	//	tipDlg->ShowWindow(SW_SHOW);
+	//	tipDlg->SetTipText(L"正在初始化...");
+	//	m_dataCenter.Load();
+	//	tipDlg->SetTipText(L"正在读取excel数据...");
+	//	ExlDistribution::addressDataListexl getdataList=ed.get_data_list();
+	//	if (!ed.check_Port_is_empty(getdataList))
+	//	{
+	//		MessageBox(L"已经有数据");
+	//		return;
+	//	}
+	//	else
+	//	{
+	//		tipDlg->SetTipText(L"正在处理...");
+	//		std::list<PortData> pset=_Process(getdataList);
+	//		ed.set_data_port(pset);
+	//	}
+	//	tipDlg->CloseWindow();
+	//	delete tipDlg;
+	//	ExcelWrapper::ReleaseExcel();
+	//}
+	//else 
+	//{
+	//	return ;
+	//}
 }
-std::list<PortData> CForlijiaExDlg::_Process( ExlDistribution::addressDataListexl &getdataList )
-{
-	std::list<PortData> portdataList;
-	for (auto iter=getdataList.begin();iter!=getdataList.end();iter++)
-	{
-		PortData pdata;
-		//外敷处理
-		if(m_dataCenter.Tiaojian(iter->sd.m_address,pdata))
-		{
-			//continue;
-		}
-		else
-		{
-			pdata=m_dataCenter.process(iter->sd.m_address);
-		}
-		portdataList.push_back(pdata);
-	}
-	return portdataList;
-}
+//std::list<PortData> CForlijiaExDlg::_Process( ExlDistribution::addressDataListexl &getdataList )
+//{
+//	//std::list<PortData> portdataList;
+//	//for (auto iter=getdataList.begin();iter!=getdataList.end();iter++)
+//	//{
+//	//	PortData pdata;
+//	//	//外敷处理
+//	//	if(m_dataCenter.Tiaojian(iter->sd.m_address,pdata))
+//	//	{
+//	//		//continue;
+//	//	}
+//	//	else
+//	//	{
+//	//		pdata=m_dataCenter.process(iter->sd.m_address);
+//	//	}
+//	//	portdataList.push_back(pdata);
+//	//}
+//	//return portdataList;
+//}
 void CForlijiaExDlg::OnBnClickedButtonProcess()
 {
 	// TODO: Add your control notification handler code here
@@ -382,40 +414,40 @@ void CForlijiaExDlg::OnBnClickedButtonProcess()
 void CForlijiaExDlg::OnBnClickedButtontest()
 {
 	// TODO: Add your control notification handler code here
-	std::wstring str1=L"成都市城区通锦路";
-	std::wstring str2=L"四川省成都市武侯区四川大学望江校区财务处";
-	std::wstring str3=L"四川省成都市金牛区蜀汉路520号天河馨城4栋1单元1302室";
-	std::wstring str4=L"四川省成都市金牛区荷花池市场东1区C排29号";
-	std::wstring str5=L"四川省成都市成华区荷花池市场童装市场2期B做 临街30号";
-	std::wstring str6=L"四川省成都市锦江区静居寺帕丽湾1栋1单元305";
-	std::wstring str7=L"四川省成都市锦江区东大街澳龙名城 10栋1单元3305";
-	std::wstring str8=L"四川省成都市青羊区通惠门路锦都花园2栋1单元603";
-	std::wstring str9=L"四川省成都市青羊区家园南街成都花园上层3栋3单元903";
-	std::wstring str10=L"四川省成都市青羊区通惠门路锦都花园2栋1单元603";
-	std::wstring str11=L"四川省成都市金牛区站西桥西街16号3单元31";
+	//std::wstring str1=L"成都市城区通锦路";
+	//std::wstring str2=L"四川省成都市武侯区四川大学望江校区财务处";
+	//std::wstring str3=L"四川省成都市金牛区蜀汉路520号天河馨城4栋1单元1302室";
+	//std::wstring str4=L"四川省成都市金牛区荷花池市场东1区C排29号";
+	//std::wstring str5=L"四川省成都市成华区荷花池市场童装市场2期B做 临街30号";
+	//std::wstring str6=L"四川省成都市锦江区静居寺帕丽湾1栋1单元305";
+	//std::wstring str7=L"四川省成都市锦江区东大街澳龙名城 10栋1单元3305";
+	//std::wstring str8=L"四川省成都市青羊区通惠门路锦都花园2栋1单元603";
+	//std::wstring str9=L"四川省成都市青羊区家园南街成都花园上层3栋3单元903";
+	//std::wstring str10=L"四川省成都市青羊区通惠门路锦都花园2栋1单元603";
+	//std::wstring str11=L"四川省成都市金牛区站西桥西街16号3单元31";
 
-	ExlDistribution::addressDataListexl getdataList;
-	ExlDistribution::exldata ed1={StreetData(str1),PortData()};
-	getdataList.push_back(ed1);
-	ExlDistribution::exldata ed2={StreetData(str2),PortData()};
-	getdataList.push_back(ed2);
-	ExlDistribution::exldata ed3={StreetData(str3),PortData()};
-	getdataList.push_back(ed3);
-	ExlDistribution::exldata ed4={StreetData(str4),PortData()};
-	getdataList.push_back(ed4);
-	ExlDistribution::exldata ed5={StreetData(str5),PortData()};
-	getdataList.push_back(ed5);
-	ExlDistribution::exldata ed6={StreetData(str6),PortData()};
-	getdataList.push_back(ed6);
-	ExlDistribution::exldata ed7={StreetData(str7),PortData()};
-	getdataList.push_back(ed7);
-	ExlDistribution::exldata ed8={StreetData(str8),PortData()};
-	getdataList.push_back(ed8);
-	ExlDistribution::exldata ed9={StreetData(str9),PortData()};
-	getdataList.push_back(ed9);
-	ExlDistribution::exldata ed10={StreetData(str10),PortData()};
-	getdataList.push_back(ed10);
-	ExlDistribution::exldata ed11={StreetData(str11),PortData()};
-	getdataList.push_back(ed11);
-	_Process(getdataList);
+	//ExlDistribution::addressDataListexl getdataList;
+	//ExlDistribution::exldata ed1={StreetData(str1),PortData()};
+	//getdataList.push_back(ed1);
+	//ExlDistribution::exldata ed2={StreetData(str2),PortData()};
+	//getdataList.push_back(ed2);
+	//ExlDistribution::exldata ed3={StreetData(str3),PortData()};
+	//getdataList.push_back(ed3);
+	//ExlDistribution::exldata ed4={StreetData(str4),PortData()};
+	//getdataList.push_back(ed4);
+	//ExlDistribution::exldata ed5={StreetData(str5),PortData()};
+	//getdataList.push_back(ed5);
+	//ExlDistribution::exldata ed6={StreetData(str6),PortData()};
+	//getdataList.push_back(ed6);
+	//ExlDistribution::exldata ed7={StreetData(str7),PortData()};
+	//getdataList.push_back(ed7);
+	//ExlDistribution::exldata ed8={StreetData(str8),PortData()};
+	//getdataList.push_back(ed8);
+	//ExlDistribution::exldata ed9={StreetData(str9),PortData()};
+	//getdataList.push_back(ed9);
+	//ExlDistribution::exldata ed10={StreetData(str10),PortData()};
+	//getdataList.push_back(ed10);
+	//ExlDistribution::exldata ed11={StreetData(str11),PortData()};
+	//getdataList.push_back(ed11);
+	//_Process(getdataList);
 }
